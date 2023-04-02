@@ -1,6 +1,5 @@
 {
   "name": "notion-component",
-  "private": true,
   "version": "1.0.0",
   "type": "module",
   "main": "./dist/index.umd.cjs",
