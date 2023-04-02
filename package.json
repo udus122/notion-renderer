@@ -21,7 +21,8 @@
     "prepare": "husky install",
     "semantic-release": "semantic-release",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "example": "npm run build && (cd example && npm run example)"
   },
   "dependencies": {
     "@notionhq/client": "^2.2.3",
