@@ -1,2 +1,2 @@
-import { Divider } from "./components/block/Divider";
+import { Divider } from "./components/Block/Divider";
 export { Divider };

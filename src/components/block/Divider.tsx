@@ -1,6 +1,5 @@
-import { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-
 import type { BlockComponentProps } from "@/types";
+import type { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentProps, FC } from "react";
 
 type Props = ComponentProps<"hr"> &
