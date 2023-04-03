@@ -14,14 +14,14 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "",
-    "lint:js": "eslint '**/*.@(js|ts|tsx)'",
+    "lint:js": "eslint src --ext .jsx,.js,.tsx,.ts",
     "lint:css": ":",
     "check": "tsc && prettier --list-different . && npm run lint:js && npm run lint:css && npm run test",
     "format": "prettier --write . && npm run lint:js -- --fix && npm run lint:css -- --fix",
     "prepare": "husky install",
     "semantic-release": "semantic-release",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
+    "sb": "storybook dev -p 6006",
+    "build-sb": "storybook build",
     "example": "npm run build && (cd example && npm run example)"
   },
   "dependencies": {
