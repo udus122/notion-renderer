@@ -1,7 +1,8 @@
 import { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
-import { InlineEquation } from "./InlineEquation";
-import InlineEquationObject from "./InlineEquation.json";
+import InlineEquationObject from "./index.json";
+
+import { InlineEquation } from "./index";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
