@@ -1,4 +1,4 @@
-import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
 import { Link } from "./Link";
 import LinkRichText from "./Link.json";
@@ -6,7 +6,7 @@ import LinkRichText from "./Link.json";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Link> = {
-  title: "RichTexts/Annotation/Link",
+  title: "RichTexts/Text/Link",
   component: Link,
   tags: ["autodocs"],
 };
@@ -17,7 +17,7 @@ type Story = StoryObj<typeof Link>;
 
 export const Default: Story = {
   args: {
-    richTextItem: LinkRichText as RichTextItemResponse,
+    richTextItem: LinkRichText as TextRichTextItemResponse,
     children: "link text",
   },
 };
