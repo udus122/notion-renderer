@@ -10,6 +10,11 @@
   "plugins": [
     "unused-imports"
   ],
+  "settings": {
+    "import/resolver": {
+      "typescript": []
+    }
+  },
   "rules": {
     "@typescript-eslint/no-unused-vars": "off",
     "unused-imports/no-unused-imports": "warn",
