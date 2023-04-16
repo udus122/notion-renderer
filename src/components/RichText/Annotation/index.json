@@ -1,0 +1,17 @@
+{
+  "type": "text",
+  "text": {
+    "content": "rich text with all",
+    "link": { "url": "https://example.com" }
+  },
+  "annotations": {
+    "bold": true,
+    "italic": true,
+    "strikethrough": true,
+    "underline": true,
+    "code": true,
+    "color": "brown"
+  },
+  "plain_text": "rich text with all",
+  "href": null
+}
