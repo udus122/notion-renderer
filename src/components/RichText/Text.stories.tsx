@@ -6,7 +6,7 @@ import TextObject from "./Text.json";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Text> = {
-  title: "RichText/Annotation/Text",
+  title: "RichText/Text",
   component: Text,
   tags: ["autodocs"],
 };

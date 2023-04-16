@@ -7,7 +7,7 @@ import { RichTextAnnotation } from "./index";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof RichTextAnnotation> = {
-  title: "RichText/Annotation/RichTextAnnotation",
+  title: "RichText/Annotation",
   component: RichTextAnnotation,
   tags: ["autodocs"],
 };
