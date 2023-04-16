@@ -1,8 +1,9 @@
 import { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
-import { Mention } from "./Mention";
-import MentionDatabaseRichTextObject from "./Mention.database.json";
-import MentionPageRichTextObject from "./Mention.page.json";
+import MentionDatabaseRichTextObject from "./index.database.json";
+import MentionPageRichTextObject from "./index.page.json";
+
+import { Mention } from "./index";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
