@@ -5,6 +5,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 const meta: Meta<typeof Divider> = {
   title: "Blocks/Divider",
   component: Divider,
+  tags: ["autodocs"],
 };
 
 export default meta;
