@@ -2,7 +2,6 @@ import { Bold } from "./Bold";
 import { Color } from "./Color";
 import { InlineCode } from "./InlineCode";
 import { Italic } from "./Italic";
-import { Link } from "./Link";
 import { Strikethrough } from "./Strikethrough";
 import { Underline } from "./Underline";
 
@@ -15,7 +14,6 @@ const defaultAnnotationMapper = {
   strikethrough: Strikethrough,
   underline: Underline,
   code: InlineCode,
-  link: Link,
 };
 
 // FIXME: cannot customize annotation order
@@ -67,12 +65,6 @@ export const RichTextAnnotation: React.FC<{
     const ColorAnnotation = annotationMapper["color"];
     element = (
       <ColorAnnotation richTextItem={richTextItem}>{element}</ColorAnnotation>
-    );
-  }
-  if (richTextItem.href) {
-    const LinkAnnotation = annotationMapper["link"];
-    element = (
-      <LinkAnnotation richTextItem={richTextItem}>{element}</LinkAnnotation>
     );
   }
   return <>{element}</>;
