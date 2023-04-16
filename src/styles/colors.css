@@ -1,0 +1,106 @@
+:root {
+  --color_default: #ffffffe6;
+  --color_gray: #979a9bf2;
+  --color_brown: #937264;
+  --color_orange: #ffa344;
+  --color_yellow: #ffdc49;
+  --color_green: #4dab9a;
+  --color_blue: #529cca;
+  --color_purple: #9a6dd7;
+  --color_pink: #e255a1;
+  --color_red: #ff7369;
+
+  --color_default_background: #2f3437;
+  --color_gray_background: #454b4e;
+  --color_brown_background: #434040;
+  --color_orange_background: #594a3a;
+  --color_yellow_background: #59563b;
+  --color_green_background: #354c4b;
+  --color_blue_background: #364954;
+  --color_purple_background: #443f57;
+  --color_pink_background: #533b4c;
+  --color_red_background: #594141;
+
+  --color_inline_code: #eb5757;
+  --color_border_default: var(--color-gray, #454b4e);
+}
+
+.color_default {
+  color: unset;
+}
+
+.color_gray {
+  color: var(--color_gray);
+}
+
+.color_brown {
+  color: var(--color_brown);
+}
+
+.color_orange {
+  color: var(--color_orange);
+}
+
+.color_yellow {
+  color: var(--color_yellow);
+}
+
+.color_green {
+  color: var(--color_green);
+}
+
+.color_blue {
+  color: var(--color_blue);
+}
+
+.color_purple {
+  color: var(--color_purple);
+}
+
+.color_pink {
+  color: var(--color_pink);
+}
+
+.color_red {
+  color: var(--color_red);
+}
+
+.color_default_background {
+  background-color: unset;
+}
+
+.color_gray_background {
+  background-color: var(--color_gray_background);
+}
+
+.color_brown_background {
+  background-color: var(--color_brown_background);
+}
+
+.color_orange_background {
+  background-color: var(--color_orange_background);
+}
+
+.color_yellow_background {
+  background-color: var(--color_yellow_background);
+}
+
+.color_green_background {
+  background-color: var(--color_green_background);
+}
+
+.color_blue_background {
+  background-color: var(--color_blue_background);
+}
+
+.color_purple_background {
+  background-color: var(--color_purple_background);
+}
+
+.color_pink_background {
+  background-color: var(--color_pink_background);
+}
+
+.color_red_background {
+  background-color: var(--color_red_background);
+}
