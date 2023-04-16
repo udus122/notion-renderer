@@ -1,0 +1,14 @@
+{
+  "type": "text",
+  "text": { "content": "Strike through", "link": null },
+  "annotations": {
+    "bold": false,
+    "italic": false,
+    "strikethrough": true,
+    "underline": false,
+    "code": false,
+    "color": "default"
+  },
+  "plain_text": "Strike through",
+  "href": null
+}
