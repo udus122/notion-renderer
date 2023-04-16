@@ -8,6 +8,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 const meta: Meta<typeof Bold> = {
   title: "RichText/Annotation/Bold",
   component: Bold,
+  tags: ["autodocs"],
 };
 
 export default meta;
