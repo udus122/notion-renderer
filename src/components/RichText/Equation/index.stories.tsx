@@ -2,19 +2,19 @@ import { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-end
 
 import InlineEquationObject from "./index.json";
 
-import { InlineEquation } from "./index";
+import { Equation } from "./index";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof InlineEquation> = {
-  title: "RichText/InlineEquation",
-  component: InlineEquation,
+const meta: Meta<typeof Equation> = {
+  title: "RichText/Equation",
+  component: Equation,
   tags: ["autodocs"],
 };
 
 export default meta;
 
-type Story = StoryObj<typeof InlineEquation>;
+type Story = StoryObj<typeof Equation>;
 
 export const Default: Story = {
   args: {
