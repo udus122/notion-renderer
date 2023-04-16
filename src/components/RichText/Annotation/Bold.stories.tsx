@@ -1,7 +1,7 @@
 import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
 import { Bold } from "./Bold";
-import blodRichText from "./Bold.json";
+import boldRichText from "./Bold.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -17,7 +17,7 @@ type Story = StoryObj<typeof Bold>;
 
 export const Default: Story = {
   args: {
-    richTextItem: blodRichText as RichTextItemResponse,
+    richTextItem: boldRichText as RichTextItemResponse,
     children: "This is bold text",
   },
 };
