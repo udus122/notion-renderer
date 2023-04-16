@@ -2,7 +2,7 @@ import { RichText } from "./RichText";
 
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
-export const RichTextList = ({
+export const RichTexts = ({
   richText,
   customRichTextComponentMapper = {},
 }: {
