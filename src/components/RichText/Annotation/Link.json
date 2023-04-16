@@ -1,0 +1,17 @@
+{
+  "type": "text",
+  "text": {
+    "content": "text with link",
+    "link": { "url": "https://example.com" }
+  },
+  "annotations": {
+    "bold": false,
+    "italic": false,
+    "strikethrough": false,
+    "underline": false,
+    "code": false,
+    "color": "default"
+  },
+  "plain_text": "text with link",
+  "href": "https://example.com"
+}
