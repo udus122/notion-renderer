@@ -1,48 +1,43 @@
-import { Annotation } from "./Annotation";
-import { InlineEquation } from "./InlineEquation";
+import { Equation } from "./Equation";
 import { Mention } from "./Mention";
 import { Text } from "./Text";
 
-import type {
-  EquationRichTextItemResponse,
-  MentionRichTextItemResponse,
-  RichTextItemResponse,
-  TextRichTextItemResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+
+const defaultRichTextComponentMapper = {
+  text: Text,
+  equation: Equation,
+  mention: Mention,
+};
 
 export const RichText = ({
-  richText,
+  richTextItem,
+  customRichTextComponentMapper = {},
 }: {
-  richText: RichTextItemResponse[] | undefined;
+  richTextItem: RichTextItemResponse | undefined;
+  customRichTextComponentMapper?: object;
 }) => {
-  if (!richText) return null;
+  if (!richTextItem) return null;
   const richTextComponentMapper = {
-    text: ({ richTextItem }: { richTextItem: RichTextItemResponse }) => (
-      <Text richTextItem={richTextItem as TextRichTextItemResponse} />
-    ),
-    equation: ({ richTextItem }: { richTextItem: RichTextItemResponse }) => (
-      <InlineEquation
-        richTextItem={richTextItem as EquationRichTextItemResponse}
-      />
-    ),
-    mention: ({ richTextItem }: { richTextItem: RichTextItemResponse }) => (
-      <Mention richTextItem={richTextItem as MentionRichTextItemResponse} />
-    ),
+    ...defaultRichTextComponentMapper,
+    ...customRichTextComponentMapper,
   };
-  return (
-    <>
-      {richText.map((richTextItem, index) => {
-        if (!richTextItem) return null;
-        const RichTextComponent = richTextComponentMapper[richTextItem.type];
-        return (
-          <Annotation
-            richTextItem={richTextItem}
-            key={`${index}_${richTextItem.plain_text}`}
-          >
-            <RichTextComponent richTextItem={richTextItem} />
-          </Annotation>
-        );
-      })}
-    </>
-  );
+
+  if (!richTextItem) return null;
+  switch (richTextItem.type) {
+    case "text": {
+      const TypeText = richTextComponentMapper[richTextItem.type];
+      return <TypeText richTextItem={richTextItem} />;
+    }
+    case "equation": {
+      const TypeEquation = richTextComponentMapper[richTextItem.type];
+      return <TypeEquation richTextItem={richTextItem} />;
+    }
+    case "mention": {
+      const TypeMention = richTextComponentMapper[richTextItem.type];
+      return <TypeMention richTextItem={richTextItem} />;
+    }
+    default:
+      return null;
+  }
 };

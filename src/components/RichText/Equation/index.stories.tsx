@@ -1,6 +1,6 @@
 import { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
-import InlineEquationObject from "./index.json";
+import EquationObject from "./index.json";
 
 import { Equation } from "./index";
 
@@ -18,6 +18,6 @@ type Story = StoryObj<typeof Equation>;
 
 export const Default: Story = {
   args: {
-    richTextItem: InlineEquationObject as EquationRichTextItemResponse,
+    richTextItem: EquationObject as EquationRichTextItemResponse,
   },
 };

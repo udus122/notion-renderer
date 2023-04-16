@@ -1,5 +1,7 @@
 import * as React from "react";
 
+import { Annotation } from "../Annotation";
+
 import { Link } from "./Link";
 
 import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
@@ -25,7 +27,11 @@ export const Text: React.FC<Props> = ({ richTextItem, customMapper }) => {
     const LinkAnnotation = annotationMapper["link"];
     text = <LinkAnnotation richTextItem={richTextItem}>{text}</LinkAnnotation>;
   }
-  return <span className="notion_rich_text_type_text">{text}</span>;
+  return (
+    <span className="notion_rich_text_type_text">
+      <Annotation richTextItem={richTextItem}>{text}</Annotation>
+    </span>
+  );
 };
 
 function breakTextRichTextItem(richTextItem: TextRichTextItemResponse) {
