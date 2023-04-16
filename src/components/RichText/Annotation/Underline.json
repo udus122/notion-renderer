@@ -1,0 +1,14 @@
+{
+  "type": "text",
+  "text": { "content": "underline text", "link": null },
+  "annotations": {
+    "bold": false,
+    "italic": false,
+    "strikethrough": false,
+    "underline": true,
+    "code": false,
+    "color": "default"
+  },
+  "plain_text": "underline text",
+  "href": null
+}
