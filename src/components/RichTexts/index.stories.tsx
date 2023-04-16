@@ -1,12 +1,13 @@
 import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
-import { RichTextList } from "./RichTextList";
-import RichTextListObject from "./RichTextList.json";
+import RichTextsObject from "./index.json";
+
+import { RichTextList } from ".";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof RichTextList> = {
-  title: "RichText",
+  title: "RichTexts",
   component: RichTextList,
   tags: ["autodocs"],
 };
@@ -17,6 +18,6 @@ type Story = StoryObj<typeof RichTextList>;
 
 export const Default: Story = {
   args: {
-    richText: RichTextListObject as RichTextItemResponse[],
+    richText: RichTextsObject as RichTextItemResponse[],
   },
 };

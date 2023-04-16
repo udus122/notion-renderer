@@ -6,7 +6,7 @@ import StrikethroughRichText from "./Strikethrough.json";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Strikethrough> = {
-  title: "RichText/Annotation/Strikethrough",
+  title: "RichTexts/Annotation/Strikethrough",
   component: Strikethrough,
   tags: ["autodocs"],
 };

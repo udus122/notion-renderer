@@ -6,7 +6,7 @@ import UnderlineRichText from "./Underline.json";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Underline> = {
-  title: "RichText/Annotation/Underline",
+  title: "RichTexts/Annotation/Underline",
   component: Underline,
   tags: ["autodocs"],
 };

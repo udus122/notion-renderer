@@ -8,7 +8,7 @@ import { Mention } from "./index";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Mention> = {
-  title: "RichText/Mention",
+  title: "RichTexts/Mention",
   component: Mention,
   tags: ["autodocs"],
 };
