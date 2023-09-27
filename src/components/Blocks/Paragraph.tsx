@@ -8,9 +8,7 @@ import type { ParagraphBlockObjectResponse } from "@notionhq/client/build/src/ap
 
 type Props = BlockComponentProps<ParagraphBlockObjectResponse>;
 
-export const Paragraph: React.FC<Props> = ({ block, children }) => {
-  if (!block) return null;
-
+const Paragraph: React.FC<Props> = ({ block }) => {
   const blockType = "notion_paragraph";
   const blockColor = generateBlockColorClass(block.paragraph.color);
   return (
@@ -18,7 +16,12 @@ export const Paragraph: React.FC<Props> = ({ block, children }) => {
       <p>
         <RichTexts richText={block.paragraph.rich_text} />
       </p>
-      <div className={`${blockType}__children`}>{children}</div>
+      <div className={`${blockType}__children`}>
+        {/* TODO: 子要素を再帰的にレンダリングするようにする
+        <Blocks blocks={children}></Blocks> */}
+      </div>
     </div>
   );
 };
+
+export default Paragraph;
