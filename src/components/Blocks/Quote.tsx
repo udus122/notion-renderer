@@ -24,9 +24,11 @@ const Quote: React.FC<Props> = ({ block }) => {
       className={clsx("notion_block", "notion_quote", blockColor)}
     >
       <RichTexts richText={block.quote.rich_text} />
-      <div className={"notion_quote_children"}>
-        {block?.children && <Blocks blocks={block.children} />}
-      </div>
+      {block?.children && (
+        <div className={"notion_quote_children"}>
+          <Blocks blocks={block.children} />{" "}
+        </div>
+      )}
     </blockquote>
   );
 };
