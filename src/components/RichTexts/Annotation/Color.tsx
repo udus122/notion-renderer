@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import { generateBlockColorClass } from "@/libs";
 
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";

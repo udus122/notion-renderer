@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
 type Props = React.ComponentProps<"del"> & {

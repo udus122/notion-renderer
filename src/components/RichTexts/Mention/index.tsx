@@ -1,6 +1,6 @@
-import { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
-
 import { Annotation } from "../Annotation";
+
+import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
 type Props = {
   richTextItem: MentionRichTextItemResponse;

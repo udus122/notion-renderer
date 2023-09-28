@@ -1,5 +1,3 @@
-import * as React from "react";
-
 import { Annotation } from "../Annotation";
 
 import { Link } from "./Link";
