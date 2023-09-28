@@ -4,6 +4,7 @@ import Heading2 from "./Heading2";
 import Heading3 from "./Heading3";
 import Paragraph from "./Paragraph";
 import Quote from "./Quote";
+import ToDo from "./ToDo";
 
 import type { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
@@ -25,6 +26,8 @@ const Block: React.FC<Props> = ({ block }) => {
       return <Paragraph block={block} />;
     case "quote":
       return <Quote block={block} />;
+    case "to_do":
+      return <ToDo block={block} />;
     case "divider":
       return <Divider block={block} />;
     default:

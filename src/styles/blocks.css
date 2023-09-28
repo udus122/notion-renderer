@@ -8,3 +8,50 @@
   padding-inline-start: 0.5rem;
   padding-block: 3px;
 }
+
+.notion_to_do_content {
+  display: flex;
+  padding-block: 3px;
+}
+
+.notion_to_do_icon {
+  display: inline-flex;
+  width: 1.5em;
+  height: 1.5em;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.notion_checkbox {
+  display: inline-flex;
+  align-items: center;
+}
+.notion_checkbox > svg {
+  width: 1rem;
+  height: 1rem;
+  fill: inherit;
+}
+.notion_checkbox.checked {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1rem;
+  height: 1rem;
+  background: #364954;
+}
+.notion_checkbox.checked > svg {
+  width: 0.75em;
+  height: 0.75em;
+  fill: #fff;
+}
+.notion_to_do_text {
+  display: inline-flex;
+  align-items: center;
+}
+.notion_to_do_text.checked {
+  opacity: 0.5;
+  text-decoration: line-through;
+}
+.notion_to_do_children {
+  margin-inline-start: 1.5rem;
+}
