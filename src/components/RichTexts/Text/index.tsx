@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 import { Annotation } from "../Annotation";
 
 import { Link } from "./Link";
@@ -40,11 +42,11 @@ function breakTextRichTextItem(richTextItem: TextRichTextItemResponse) {
         return content;
       }
       return (
-        <React.Fragment key={`${content}-${i}`}>
+        <Fragment key={`${content}-${i}`}>
           {acc}
           <br />
           {content}
-        </React.Fragment>
+        </Fragment>
       );
     }, "");
   return text_content;
