@@ -1,15 +1,18 @@
 import Block from "./Block";
 
-import type { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { ListBlockChildrenResponseEx } from "notionate";
 
 type Props = {
-  blocks: Array<BlockObjectResponse>;
+  blocks: ListBlockChildrenResponseEx;
 };
 
 const Blocks: React.FC<Props> = function ({ blocks }) {
   return (
     <>
-      {blocks.map((block) => {
+      {blocks.results.map((block) => {
+        // Exclude PatialBlockObjectResponse and return null if "type" is not present in block
+        if (!("type" in block)) return null;
+
         return <Block key={block.id} block={block} />;
       })}
     </>
