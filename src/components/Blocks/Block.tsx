@@ -1,4 +1,5 @@
 import Divider from "./Divider";
+import Heading1 from "./Heading1";
 import Paragraph from "./Paragraph";
 import Quote from "./Quote";
 
@@ -12,6 +13,8 @@ const Block: React.FC<Props> = ({ block }) => {
   if (!("type" in block)) return null;
 
   switch (block.type) {
+    case "heading_1":
+      return <Heading1 block={block} />;
     case "paragraph":
       return <Paragraph block={block} />;
     case "quote":
