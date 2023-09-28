@@ -26,7 +26,6 @@ const Paragraph: React.FC<Props> = ({ block }) => {
       <p>
         <RichTexts richText={block.paragraph.rich_text} />
       </p>
-
       {block.children && (
         <div className={"notion_paragraph_children"}>
           <Blocks blocks={block.children} />
