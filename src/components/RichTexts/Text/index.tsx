@@ -36,7 +36,7 @@ export const Text: React.FC<Props> = ({ richTextItem, customMapper }) => {
 
 function breakTextRichTextItem(richTextItem: TextRichTextItemResponse) {
   const text_content = richTextItem.text.content
-    .split("\\n")
+    .split(/\n|\\n/)
     .reduce((acc: React.ReactNode | string, content: string, i: number) => {
       if (i === 0) {
         return content;
