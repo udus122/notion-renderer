@@ -1,5 +1,2 @@
 @import "./colors.css";
-
-.notion_children_block {
-  padding-inline-start: var(--indent-size, 1.5em);
-}
+@import "./blocks.css";

@@ -1,0 +1,9 @@
+.notion_paragraph__children {
+  padding-inline-start: 1.5rem;
+}
+
+.notion_quote {
+  margin-block-start: 1rem;
+  border-inline-start: 3px solid currentcolor;
+  padding-inline-start: 1rem;
+}
