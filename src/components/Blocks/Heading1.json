@@ -23,7 +23,7 @@
       {
         "type": "text",
         "text": {
-          "content": "H1\nline break",
+          "content": "This is Heading1 block.",
           "link": null
         },
         "annotations": {
@@ -34,7 +34,7 @@
           "code": false,
           "color": "default"
         },
-        "plain_text": "H1\nline break",
+        "plain_text": "This is Heading1 block.",
         "href": null
       }
     ],

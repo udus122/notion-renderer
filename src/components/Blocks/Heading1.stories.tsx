@@ -1,8 +1,7 @@
-import { Heading1BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-
 import Heading1 from "./Heading1";
 import Heading1Object from "./Heading1.json";
 
+import type { Heading1BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Heading1> = {
