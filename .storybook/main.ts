@@ -7,6 +7,7 @@ const config: StorybookConfig = {
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
     "@storybook/addon-mdx-gfm",
+    "@storybook/addon-console",
   ],
 
   framework: {
@@ -19,7 +20,7 @@ const config: StorybookConfig = {
   },
 
   core: {
-    disableWhatsNewNotifications: true
-  }
+    disableWhatsNewNotifications: true,
+  },
 };
 export default config;
