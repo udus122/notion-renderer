@@ -1,5 +1,6 @@
 import Divider from "./Divider";
 import Paragraph from "./Paragraph";
+import Quote from "./Quote";
 
 import type { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
@@ -13,6 +14,8 @@ const Block: React.FC<Props> = ({ block }) => {
   switch (block.type) {
     case "paragraph":
       return <Paragraph block={block} />;
+    case "quote":
+      return <Quote block={block} />;
     case "divider":
       return <Divider block={block} />;
     default:
