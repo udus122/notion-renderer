@@ -1,12 +1,9 @@
 import Block from "./Block";
 
-import type {
-  BlockObjectResponse,
-  PartialBlockObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+import type { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 type Props = {
-  blocks: Array<PartialBlockObjectResponse | BlockObjectResponse>;
+  blocks: Array<BlockObjectResponse>;
 };
 
 const Blocks: React.FC<Props> = function ({ blocks }) {

@@ -1,13 +1,10 @@
 import Divider from "./Divider";
 import Paragraph from "./Paragraph";
 
-import type {
-  BlockObjectResponse,
-  PartialBlockObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+import type { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 type Props = {
-  block: PartialBlockObjectResponse | BlockObjectResponse;
+  block: BlockObjectResponse;
 };
 
 const Block: React.FC<Props> = ({ block }) => {
