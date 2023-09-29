@@ -1,5 +1,3 @@
-import { clsx } from "clsx";
-
 import { BlockComponentProps } from "@/types";
 
 import RichTexts from "../RichTexts";
@@ -20,13 +18,13 @@ const ToDo: React.FC<Props> = ({ block }) => {
   return (
     <div
       id={block.id}
-      className={`notion_block notion_to_do notion_${block.to_do.color}`}
+      className={`notion_block notion_to_do notion_color_$${block.to_do.color}`}
     >
       <div className="notion_to_do_content">
         <span className="notion_to_do_icon">
           {isChecked ? <CheckedBox /> : <CheckBox />}
         </span>
-        <span className={clsx("notion_to_do_text", isChecked && "checked")}>
+        <span className={`notion_to_do_text ${isChecked ? "checked" : ""}`}>
           <RichTexts richText={block.to_do.rich_text} />
         </span>
       </div>

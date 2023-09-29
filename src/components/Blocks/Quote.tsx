@@ -16,7 +16,7 @@ const Quote: React.FC<Props> = ({ block }) => {
   return (
     <blockquote
       id={block.id}
-      className={`notion_block notion_quote notion_${block.quote.color}`}
+      className={`notion_block notion_quote notion_color_$${block.quote.color}`}
     >
       <RichTexts richText={block.quote.rich_text} />
       {block?.children && (

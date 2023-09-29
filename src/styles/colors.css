@@ -25,82 +25,82 @@
   --color_border_default: var(--color-gray, #454b4e);
 }
 
-.color_default {
+.notion_color_default {
   color: unset;
 }
 
-.color_gray {
+.notion_color_gray {
   color: var(--color_gray);
 }
 
-.color_brown {
+.notion_color_brown {
   color: var(--color_brown);
 }
 
-.color_orange {
+.notion_color_orange {
   color: var(--color_orange);
 }
 
-.color_yellow {
+.notion_color_yellow {
   color: var(--color_yellow);
 }
 
-.color_green {
+.notion_color_green {
   color: var(--color_green);
 }
 
-.color_blue {
+.notion_color_blue {
   color: var(--color_blue);
 }
 
-.color_purple {
+.notion_color_purple {
   color: var(--color_purple);
 }
 
-.color_pink {
+.notion_color_pink {
   color: var(--color_pink);
 }
 
-.color_red {
+.notion_color_red {
   color: var(--color_red);
 }
 
-.color_default_background {
+.notion_color_default_background {
   background-color: unset;
 }
 
-.color_gray_background {
+.notion_color_gray_background {
   background-color: var(--color_gray_background);
 }
 
-.color_brown_background {
+.notion_color_brown_background {
   background-color: var(--color_brown_background);
 }
 
-.color_orange_background {
+.notion_color_orange_background {
   background-color: var(--color_orange_background);
 }
 
-.color_yellow_background {
+.notion_color_yellow_background {
   background-color: var(--color_yellow_background);
 }
 
-.color_green_background {
+.notion_color_green_background {
   background-color: var(--color_green_background);
 }
 
-.color_blue_background {
+.notion_color_blue_background {
   background-color: var(--color_blue_background);
 }
 
-.color_purple_background {
+.notion_color_purple_background {
   background-color: var(--color_purple_background);
 }
 
-.color_pink_background {
+.notion_color_pink_background {
   background-color: var(--color_pink_background);
 }
 
-.color_red_background {
+.notion_color_red_background {
   background-color: var(--color_red_background);
 }

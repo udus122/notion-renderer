@@ -6,7 +6,7 @@ type Props = React.ComponentProps<"span"> & {
 
 const Color: React.FC<Props> = ({ richTextItem, children }) => {
   return (
-    <span className={`notion_${richTextItem.annotations.color}`}>
+    <span className={`notion_color_${richTextItem.annotations.color}`}>
       {children}
     </span>
   );
