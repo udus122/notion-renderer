@@ -1,7 +1,3 @@
-import { clsx } from "clsx";
-
-import { generateBlockColorClass } from "@/libs";
-
 import { RichTexts } from "../RichTexts";
 
 import Blocks from ".";
@@ -17,11 +13,10 @@ type Props = BlockComponentProps<
 >;
 
 const Quote: React.FC<Props> = ({ block }) => {
-  const blockColor = generateBlockColorClass(block.quote.color);
   return (
     <blockquote
       id={block.id}
-      className={clsx("notion_block", "notion_quote", blockColor)}
+      className={`notion_block notion_quote notion_${block.quote.color}`}
     >
       <RichTexts richText={block.quote.rich_text} />
       {block?.children && (

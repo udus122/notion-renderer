@@ -12,7 +12,10 @@ type Props = BlockComponentProps<
 
 const Heading2: React.FC<Props> = ({ block }) => {
   return (
-    <h2 id={block.id} className="notion_block notion_heading notion_heading_2">
+    <h2
+      id={block.id}
+      className={`notion_block notion_heading notion_heading_1 notion_${block.heading_2.color}`}
+    >
       <RichTexts richText={block.heading_2.rich_text} />
     </h2>
   );

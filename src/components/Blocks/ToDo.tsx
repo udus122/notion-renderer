@@ -1,6 +1,5 @@
 import { clsx } from "clsx";
 
-import { generateBlockColorClass } from "@/libs";
 import { BlockComponentProps } from "@/types";
 
 import { RichTexts } from "../RichTexts";
@@ -18,11 +17,10 @@ type Props = BlockComponentProps<
 
 const ToDo: React.FC<Props> = ({ block }) => {
   const isChecked = block.to_do.checked;
-  const blockColor = generateBlockColorClass(block.to_do.color);
   return (
     <div
       id={block.id}
-      className={clsx("notion_block", "notion_to_do", blockColor)}
+      className={`notion_block notion_to_do notion_${block.to_do.color}`}
     >
       <div className="notion_to_do_content">
         <span className="notion_to_do_icon">
