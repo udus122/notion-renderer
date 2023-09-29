@@ -1,5 +1,7 @@
 import RichTexts from "../RichTexts";
 
+import Blocks from "./Blocks";
+
 import type {
   BlockComponentProps,
   Heading1BlockObjectResponseWithChildren,

@@ -1,6 +1,6 @@
 import RichTexts from "@/components/RichTexts";
 
-import Blocks from ".";
+import Blocks from "./Blocks";
 
 import type {
   BlockComponentProps,

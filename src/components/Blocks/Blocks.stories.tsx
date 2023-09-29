@@ -1,6 +1,5 @@
-import BlocksObject from "./index.json";
-
-import Blocks from "./index";
+import Blocks from "./Blocks";
+import BlocksObject from "./Blocks.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
 import type { ListBlockChildrenResponseEx } from "notionate";
