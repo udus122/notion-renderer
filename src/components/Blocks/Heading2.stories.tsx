@@ -1,5 +1,6 @@
 import Heading2 from "./Heading2";
 import Heading2Object from "./Heading2.json";
+import Heading2Toggleable from "./Heading2.Toggleable.json";
 
 import type { Heading2BlockObjectResponseWithChildren } from "@/types";
 import type { Meta, StoryObj } from "@storybook/react";
@@ -17,5 +18,11 @@ type Story = StoryObj<typeof Heading2>;
 export const Default: Story = {
   args: {
     block: Heading2Object as Heading2BlockObjectResponseWithChildren,
+  },
+};
+
+export const Toggleable: Story = {
+  args: {
+    block: Heading2Toggleable as Heading2BlockObjectResponseWithChildren,
   },
 };

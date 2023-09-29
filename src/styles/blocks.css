@@ -55,6 +55,12 @@
 .notion_toggle_summary {
   cursor: pointer;
 }
+.notion_toggle_summary > h1,
+h2,
+h3 {
+  display: inline;
+  vertical-align: middle;
+}
 .notion_toggle_details {
   padding-inline-start: 1.5rem;
 }
