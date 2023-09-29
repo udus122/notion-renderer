@@ -1,17 +1,13 @@
-import { ToggleBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import { ListBlockChildrenResponseEx } from "notionate";
-
 import RichTexts from "../RichTexts";
 
 import Blocks from ".";
 
-import type { BlockComponentProps } from "@/types";
+import type {
+  BlockComponentProps,
+  ToggleBlockObjectResponseWithChildren,
+} from "@/types";
 
-type Props = BlockComponentProps<
-  ToggleBlockObjectResponse & {
-    children?: ListBlockChildrenResponseEx;
-  }
->;
+type Props = BlockComponentProps<ToggleBlockObjectResponseWithChildren>;
 
 const Toggle: React.FC<Props> = ({ block }) => {
   return (

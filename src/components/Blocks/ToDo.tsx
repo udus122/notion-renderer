@@ -1,17 +1,13 @@
-import { BlockComponentProps } from "@/types";
-
 import RichTexts from "../RichTexts";
 
 import Blocks from ".";
 
-import type { ToDoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import type { ListBlockChildrenResponseEx } from "notionate";
+import type {
+  BlockComponentProps,
+  ToDoBlockObjectResponseWithChildren,
+} from "@/types";
 
-type Props = BlockComponentProps<
-  ToDoBlockObjectResponse & {
-    children?: ListBlockChildrenResponseEx;
-  }
->;
+type Props = BlockComponentProps<ToDoBlockObjectResponseWithChildren>;
 
 const ToDo: React.FC<Props> = ({ block }) => {
   const isChecked = block.to_do.checked;

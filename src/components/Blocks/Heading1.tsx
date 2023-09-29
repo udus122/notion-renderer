@@ -1,14 +1,11 @@
 import RichTexts from "../RichTexts";
 
-import type { BlockComponentProps } from "@/types";
-import type { Heading1BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import type { ListBlockChildrenResponseEx } from "notionate";
+import type {
+  BlockComponentProps,
+  Heading1BlockObjectResponseWithChildren,
+} from "@/types";
 
-type Props = BlockComponentProps<
-  Heading1BlockObjectResponse & {
-    children?: ListBlockChildrenResponseEx;
-  }
->;
+type Props = BlockComponentProps<Heading1BlockObjectResponseWithChildren>;
 
 const Heading1: React.FC<Props> = ({ block }) => {
   return (

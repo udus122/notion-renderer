@@ -2,15 +2,12 @@ import RichTexts from "@/components/RichTexts";
 
 import Blocks from ".";
 
-import type { BlockComponentProps } from "@/types";
-import type { ParagraphBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-import type { ListBlockChildrenResponseEx } from "notionate";
+import type {
+  BlockComponentProps,
+  ParagraphBlockObjectResponseWithChildren,
+} from "@/types";
 
-type Props = BlockComponentProps<
-  ParagraphBlockObjectResponse & {
-    children?: ListBlockChildrenResponseEx;
-  }
->;
+type Props = BlockComponentProps<ParagraphBlockObjectResponseWithChildren>;
 
 const Paragraph: React.FC<Props> = ({ block }) => {
   return (
