@@ -4,7 +4,7 @@ import {
   EquationRichTextItemResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 
-import { RichText } from "./RichText";
+import RichText from "./RichText";
 import EquationRichTextObject from "./RichText.equation.json";
 import MentionRichTextObject from "./RichText.mention.json";
 import TextRichTextObject from "./RichText.text.json";

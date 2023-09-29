@@ -1,7 +1,7 @@
 import "katex/dist/katex.min.css";
 import { InlineMath } from "react-katex";
 
-import { Annotation } from "../Annotation";
+import Annotation from "../Annotation";
 
 import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 

@@ -1,4 +1,4 @@
-import { RichTexts } from "../RichTexts";
+import RichTexts from "../RichTexts";
 
 import type { BlockComponentProps } from "@/types";
 import type { Heading2BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";

@@ -1,6 +1,6 @@
 import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
-import { Color } from "./Color";
+import Color from "./Color";
 import ColorObject from "./Color.json";
 
 import type { Meta, StoryObj } from "@storybook/react";

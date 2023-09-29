@@ -2,7 +2,7 @@ import { clsx } from "clsx";
 
 import { BlockComponentProps } from "@/types";
 
-import { RichTexts } from "../RichTexts";
+import RichTexts from "../RichTexts";
 
 import Blocks from ".";
 

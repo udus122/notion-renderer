@@ -1,7 +1,7 @@
 import { ToggleBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import { ListBlockChildrenResponseEx } from "notionate";
 
-import { RichTexts } from "../RichTexts";
+import RichTexts from "../RichTexts";
 
 import Blocks from ".";
 

@@ -1,4 +1,4 @@
-import { Annotation } from "../Annotation";
+import Annotation from "../Annotation";
 
 import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 

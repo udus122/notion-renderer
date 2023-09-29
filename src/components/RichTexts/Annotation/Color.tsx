@@ -4,10 +4,12 @@ type Props = React.ComponentProps<"span"> & {
   richTextItem: RichTextItemResponse;
 };
 
-export const Color: React.FC<Props> = ({ richTextItem, children }) => {
+const Color: React.FC<Props> = ({ richTextItem, children }) => {
   return (
     <span className={`notion_${richTextItem.annotations.color}`}>
       {children}
     </span>
   );
 };
+
+export default Color;

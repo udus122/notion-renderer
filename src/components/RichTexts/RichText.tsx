@@ -10,7 +10,7 @@ const defaultRichTextComponentMapper = {
   mention: Mention,
 };
 
-export const RichText = ({
+const RichText = ({
   richTextItem,
   customRichTextComponentMapper = {},
 }: {
@@ -41,3 +41,5 @@ export const RichText = ({
       return null;
   }
 };
+
+export default RichText;

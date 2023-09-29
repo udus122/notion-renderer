@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import { Annotation } from "../Annotation";
+import Annotation from "../Annotation";
 
 import { Link } from "./Link";
 
