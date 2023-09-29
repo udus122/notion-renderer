@@ -7,6 +7,7 @@ import Heading3 from "./Heading3";
 import Paragraph from "./Paragraph";
 import Quote from "./Quote";
 import ToDo from "./ToDo";
+import Toggle from "./Toggle";
 
 import type {
   BlockObjectResponse,
@@ -21,6 +22,8 @@ const Block: React.FC<Props> = ({ block }) => {
   if (!isFullBlock(block)) return null;
 
   switch (block.type) {
+    case "divider":
+      return <Divider block={block} />;
     case "heading_1":
       return <Heading1 block={block} />;
     case "heading_2":
@@ -33,8 +36,8 @@ const Block: React.FC<Props> = ({ block }) => {
       return <Quote block={block} />;
     case "to_do":
       return <ToDo block={block} />;
-    case "divider":
-      return <Divider block={block} />;
+    case "toggle":
+      return <Toggle block={block} />;
     default:
       console.warn(`${block.type} is not supported`);
       return null;
