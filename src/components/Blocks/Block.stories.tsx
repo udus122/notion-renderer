@@ -1,12 +1,9 @@
-import {
-  DividerBlockObjectResponse,
-  ParagraphBlockObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
-
 import Block from "./Block";
 import DividerObject from "./Block.Divider.json";
 import ParagraphObject from "./Block.Paragraph.json";
 
+import type { ParagraphBlockObjectResponseWithChildren } from "@/types";
+import type { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Block> = {
@@ -27,6 +24,6 @@ export const Divider: Story = {
 
 export const Paragraph: Story = {
   args: {
-    block: ParagraphObject as ParagraphBlockObjectResponse,
+    block: ParagraphObject as ParagraphBlockObjectResponseWithChildren,
   },
 };

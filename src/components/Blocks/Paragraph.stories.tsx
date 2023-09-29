@@ -1,9 +1,8 @@
-import { ParagraphBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-
 import Paragraph from "./Paragraph";
 import ParagraphObject from "./Paragraph.json";
 import ParagraphWithChildrenObject from "./Paragraph.WithChildren.json";
 
+import type { ParagraphBlockObjectResponseWithChildren } from "@/types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Paragraph> = {
@@ -18,12 +17,13 @@ type Story = StoryObj<typeof Paragraph>;
 
 export const Default: Story = {
   args: {
-    block: ParagraphObject as ParagraphBlockObjectResponse,
+    block: ParagraphObject as ParagraphBlockObjectResponseWithChildren,
   },
 };
 
 export const WithChildren: Story = {
   args: {
-    block: ParagraphWithChildrenObject as ParagraphBlockObjectResponse,
+    block:
+      ParagraphWithChildrenObject as ParagraphBlockObjectResponseWithChildren,
   },
 };

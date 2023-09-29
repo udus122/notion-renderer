@@ -1,8 +1,8 @@
 import Toggle from "./Toggle";
 import ToggleObject from "./Toggle.json";
 
+import type { ToggleBlockObjectResponseWithChildren } from "@/types";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { ToggleBlockObjectResponse } from "notionate";
 
 const meta: Meta<typeof Toggle> = {
   title: "Blocks/Toggle",
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Toggle>;
 
 export const Default: Story = {
   args: {
-    block: ToggleObject as ToggleBlockObjectResponse,
+    block: ToggleObject as ToggleBlockObjectResponseWithChildren,
   },
 };
