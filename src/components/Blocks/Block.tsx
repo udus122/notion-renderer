@@ -1,3 +1,5 @@
+import { isFullBlock } from "@notionhq/client";
+
 import Divider from "./Divider";
 import Heading1 from "./Heading1";
 import Heading2 from "./Heading2";
@@ -6,14 +8,17 @@ import Paragraph from "./Paragraph";
 import Quote from "./Quote";
 import ToDo from "./ToDo";
 
-import type { BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type {
+  BlockObjectResponse,
+  PartialBlockObjectResponse,
+} from "@notionhq/client/build/src/api-endpoints";
 
 type Props = {
-  block: BlockObjectResponse;
+  block: BlockObjectResponse | PartialBlockObjectResponse;
 };
 
 const Block: React.FC<Props> = ({ block }) => {
-  if (!("type" in block)) return null;
+  if (!isFullBlock(block)) return null;
 
   switch (block.type) {
     case "heading_1":
