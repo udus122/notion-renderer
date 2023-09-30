@@ -22,7 +22,6 @@
   --color_red_background: #594141;
 
   --color_inline_code: #eb5757;
-  --color_border_default: var(--color-gray, #454b4e);
 }
 
 .notion_color_default {

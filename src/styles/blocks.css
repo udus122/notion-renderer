@@ -1,12 +1,15 @@
+/* paragraph block */
 .notion_paragraph_children {
   padding-inline-start: 1.5rem;
 }
+/* quote block */
 .notion_quote {
   margin: 0 1rem 0 0;
   border-inline-start: 3px solid currentcolor;
   padding-inline-start: 0.5rem;
   padding-block: 3px;
 }
+/* to_do block */
 .notion_to_do_content {
   display: flex;
   padding-block: 3px;
@@ -52,6 +55,7 @@
 .notion_to_do_children {
   padding-inline-start: 1.5rem;
 }
+/* toogle block */
 .notion_toggle_summary {
   cursor: pointer;
 }
