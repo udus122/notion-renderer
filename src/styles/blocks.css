@@ -1,3 +1,7 @@
+/* common */
+.notion_block {
+  padding: 3px 2px;
+}
 /* paragraph block */
 .notion_paragraph_children {
   padding-inline-start: 1.5rem;
@@ -62,7 +66,7 @@
 .notion_toggle_summary > h1,
 h2,
 h3 {
-  display: inline;
+  display: inline-block;
   vertical-align: middle;
 }
 .notion_toggle_details {
