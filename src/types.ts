@@ -2,6 +2,7 @@ import { ListBlockChildrenResponseEx } from "notionate";
 
 import type {
   BlockObjectResponse,
+  CalloutBlockObjectResponse,
   Heading1BlockObjectResponse,
   Heading2BlockObjectResponse,
   Heading3BlockObjectResponse,
@@ -14,6 +15,11 @@ import type {
 export type BlockComponentProps<T extends BlockObjectResponse> = {
   block: T;
 };
+
+export type CalloutBlockObjectResponseWithChildren =
+  CalloutBlockObjectResponse & {
+    children?: ListBlockChildrenResponseEx;
+  };
 
 export type Heading1BlockObjectResponseWithChildren =
   Heading1BlockObjectResponse & {

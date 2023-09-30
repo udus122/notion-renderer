@@ -64,3 +64,20 @@ h3 {
 .notion_toggle_details {
   padding-inline-start: 1.5rem;
 }
+/* callout block */
+.notion_callout {
+  display: flex;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: none;
+}
+.notion_callout_content {
+  display: flex;
+  flex-direction: column;
+  margin-inline-start: 8px;
+  overflow: hidden;
+  width: 100%;
+}
