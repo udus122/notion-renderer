@@ -16,7 +16,7 @@ const Paragraph: React.FC<Props> = ({ block }) => {
       className={`notion_block notion_paragraph notion_color_${block.paragraph.color}`}
     >
       <p>
-        <RichTexts richText={block.paragraph.rich_text} />
+        <RichTexts richTexts={block.paragraph.rich_text} />
       </p>
       {block.children && (
         <div className={"notion_paragraph_children"}>

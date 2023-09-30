@@ -3,17 +3,17 @@ import RichText from "./RichText";
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
 const RichTexts = ({
-  richText,
+  richTexts,
   customRichTextComponentMapper = {},
 }: {
-  richText: RichTextItemResponse[] | undefined;
+  richTexts: RichTextItemResponse[] | undefined;
   customRichTextComponentMapper?: object;
 }) => {
-  if (!richText) return null;
+  if (!richTexts) return null;
 
   return (
     <>
-      {richText.map((richTextItem, index) => (
+      {richTexts.map((richTextItem, index) => (
         <RichText
           richTextItem={richTextItem}
           customRichTextComponentMapper={customRichTextComponentMapper}

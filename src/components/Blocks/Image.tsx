@@ -22,7 +22,7 @@ const Image: React.FC<Props> = ({ block }) => {
       />
       {block.image.caption && (
         <span className="notion_image_caption">
-          <RichTexts richText={block.image.caption} />
+          <RichTexts richTexts={block.image.caption} />
         </span>
       )}
     </div>

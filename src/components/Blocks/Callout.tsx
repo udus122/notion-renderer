@@ -18,7 +18,7 @@ const Callout: React.FC<Props> = ({ block }) => {
       <CalloutIcon icon={block.callout.icon} />
       <div className="notion_callout_content">
         <span>
-          <RichTexts richText={block.callout.rich_text} />
+          <RichTexts richTexts={block.callout.rich_text} />
         </span>
         {block.children && <Blocks blocks={block.children} />}
       </div>
