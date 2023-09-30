@@ -85,3 +85,22 @@ h3 {
   overflow: hidden;
   width: 100%;
 }
+/* image block */
+.notion_image img {
+  display: block;
+  max-inline-size: 100%;
+  object-fit: contain;
+  border-radius: 1px;
+}
+.notion_image_caption {
+  max-inline-size: 100%;
+  white-space: pre-wrap;
+  word-break: break-word;
+  caret-color: rgba(255, 255, 255, 0.81);
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.443);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 2px;
+}

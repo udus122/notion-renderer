@@ -6,6 +6,7 @@ import type {
   Heading1BlockObjectResponse,
   Heading2BlockObjectResponse,
   Heading3BlockObjectResponse,
+  ImageBlockObjectResponse,
   ParagraphBlockObjectResponse,
   QuoteBlockObjectResponse,
   ToDoBlockObjectResponse,
@@ -35,6 +36,10 @@ export type Heading3BlockObjectResponseWithChildren =
   Heading3BlockObjectResponse & {
     children?: ListBlockChildrenResponseEx;
   };
+
+export type ImageBlockObjectResponseWithChildren = ImageBlockObjectResponse & {
+  children?: ListBlockChildrenResponseEx;
+};
 
 export type ParagraphBlockObjectResponseWithChildren =
   ParagraphBlockObjectResponse & {
