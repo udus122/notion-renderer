@@ -1,13 +1,12 @@
 import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
-import RichTextsObject from "./index.json";
-
-import RichTexts from "./index";
+import RichTexts from "./RichTexts";
+import RichTextsObject from "./RichTexts.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof RichTexts> = {
-  title: "RichTexts/index",
+  title: "RichTexts/RichTexts",
   component: RichTexts,
   tags: ["autodocs"],
 };

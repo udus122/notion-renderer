@@ -1,4 +1,4 @@
-import RichTexts from "../RichTexts";
+import RichTexts from "../RichTexts/RichTexts";
 
 import Blocks from "./Blocks";
 
