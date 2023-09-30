@@ -13,7 +13,7 @@ const Toggle: React.FC<Props> = ({ block }) => {
   return (
     <details
       id={block.id}
-      className={`notion_block notion_toggle notion_color_$${block.toggle.color}`}
+      className={`notion_block notion_toggle notion_color_${block.toggle.color}`}
     >
       <summary className="notion_toggle_summary">
         <RichTexts richText={block.toggle.rich_text} />
