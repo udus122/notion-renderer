@@ -9,6 +9,8 @@ import type {
   ImageBlockObjectResponse,
   ParagraphBlockObjectResponse,
   QuoteBlockObjectResponse,
+  TableBlockObjectResponse,
+  TableRowBlockObjectResponse,
   ToDoBlockObjectResponse,
   ToggleBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
@@ -49,6 +51,15 @@ export type ParagraphBlockObjectResponseWithChildren =
 export type QuoteBlockObjectResponseWithChildren = QuoteBlockObjectResponse & {
   children?: ListBlockChildrenResponseEx;
 };
+
+export type TableBlockObjectResponseWithChildren = TableBlockObjectResponse & {
+  children?: ListBlockChildrenResponseEx;
+};
+
+export type TableRowBlockObjectResponseWithChildren =
+  TableRowBlockObjectResponse & {
+    children?: ListBlockChildrenResponseEx;
+  };
 
 export type ToDoBlockObjectResponseWithChildren = ToDoBlockObjectResponse & {
   children?: ListBlockChildrenResponseEx;
