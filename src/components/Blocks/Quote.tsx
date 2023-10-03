@@ -2,12 +2,9 @@ import RichTexts from "../RichTexts/RichTexts";
 
 import Blocks from "./Blocks";
 
-import type {
-  BlockComponentProps,
-  QuoteBlockObjectResponseWithChildren,
-} from "@/types";
+import type { BlockComponentProps, QuoteComponentBlockObject } from "@/types";
 
-type Props = BlockComponentProps<QuoteBlockObjectResponseWithChildren>;
+type Props = BlockComponentProps<QuoteComponentBlockObject>;
 
 const Quote: React.FC<Props> = ({ block }) => {
   return (

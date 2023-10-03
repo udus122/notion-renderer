@@ -1,7 +1,7 @@
 import Image from "./Image";
 import ImageObject from "./Image.json";
 
-import type { ImageBlockObjectResponseWithChildren } from "@/types";
+import type { ImageComponentBlockObject } from "@/types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Image> = {
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Image>;
 
 export const Default: Story = {
   args: {
-    block: ImageObject as ImageBlockObjectResponseWithChildren,
+    block: ImageObject as ImageComponentBlockObject,
   },
 };

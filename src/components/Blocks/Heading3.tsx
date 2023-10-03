@@ -4,10 +4,10 @@ import Blocks from "./Blocks";
 
 import type {
   BlockComponentProps,
-  Heading3BlockObjectResponseWithChildren,
+  Heading3ComponentBlockObject,
 } from "@/types";
 
-type Props = BlockComponentProps<Heading3BlockObjectResponseWithChildren>;
+type Props = BlockComponentProps<Heading3ComponentBlockObject>;
 
 const Heading2: React.FC<Props> = ({ block }) => {
   return (

@@ -2,12 +2,9 @@ import RichTexts from "../RichTexts/RichTexts";
 
 import Blocks from "./Blocks";
 
-import type {
-  BlockComponentProps,
-  ToggleBlockObjectResponseWithChildren,
-} from "@/types";
+import type { BlockComponentProps, ToggleComponentBlockObject } from "@/types";
 
-type Props = BlockComponentProps<ToggleBlockObjectResponseWithChildren>;
+type Props = BlockComponentProps<ToggleComponentBlockObject>;
 
 const Toggle: React.FC<Props> = ({ block }) => {
   return (

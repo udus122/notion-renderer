@@ -1,11 +1,8 @@
-import {
-  BlockComponentProps,
-  TableBlockObjectResponseWithChildren,
-} from "@/types";
+import { BlockComponentProps, TableComponentBlockObject } from "@/types";
 
 import Blocks from "./Blocks";
 
-type Props = BlockComponentProps<TableBlockObjectResponseWithChildren>;
+type Props = BlockComponentProps<TableComponentBlockObject>;
 
 const Table: React.FC<Props> = ({ block }) => {
   const has_column_header = block.table.has_column_header;

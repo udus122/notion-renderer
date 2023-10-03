@@ -1,11 +1,8 @@
-import {
-  BlockComponentProps,
-  TableRowBlockObjectResponseWithChildren,
-} from "@/types";
+import { BlockComponentProps, TableRowComponentBlockObject } from "@/types";
 
 import RichTexts from "../RichTexts/RichTexts";
 
-type Props = BlockComponentProps<TableRowBlockObjectResponseWithChildren>;
+type Props = BlockComponentProps<TableRowComponentBlockObject>;
 
 const TableRow: React.FC<Props> = ({ block }) => {
   return (

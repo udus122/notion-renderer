@@ -2,7 +2,7 @@ import ToDo from "./ToDo";
 import ToDoCheckedObject from "./ToDo.Checked.json";
 import ToDoObject from "./Todo.json";
 
-import type { ToDoBlockObjectResponseWithChildren } from "@/types";
+import type { ToDoComponentBlockObject } from "@/types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof ToDo> = {
@@ -17,12 +17,12 @@ type Story = StoryObj<typeof ToDo>;
 
 export const Default: Story = {
   args: {
-    block: ToDoObject as ToDoBlockObjectResponseWithChildren,
+    block: ToDoObject as ToDoComponentBlockObject,
   },
 };
 
 export const Checked: Story = {
   args: {
-    block: ToDoCheckedObject as ToDoBlockObjectResponseWithChildren,
+    block: ToDoCheckedObject as ToDoComponentBlockObject,
   },
 };

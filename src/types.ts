@@ -1,7 +1,6 @@
 import { ListBlockChildrenResponseEx } from "notionate";
 
 import type {
-  BlockObjectResponse,
   CalloutBlockObjectResponse,
   Heading1BlockObjectResponse,
   Heading2BlockObjectResponse,
@@ -15,63 +14,69 @@ import type {
   ToggleBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 
-export type BlockComponentProps<T extends BlockObjectResponse> = {
+export type BlockComponentProps<T extends ComponentBlockObject> = {
   block: T;
 };
 
-export type CalloutBlockObjectResponseWithChildren =
-  CalloutBlockObjectResponse & {
-    children?: ListBlockChildrenResponseEx;
-  };
+export type ComponentBlockObject =
+  | CalloutComponentBlockObject
+  | Heading1ComponentBlockObject
+  | Heading2ComponentBlockObject
+  | Heading3ComponentBlockObject
+  | ImageComponentBlockObject
+  | ParagraphComponentBlockObject
+  | QuoteComponentBlockObject
+  | TableComponentBlockObject
+  | TableRowComponentBlockObject
+  | ToDoComponentBlockObject
+  | ToggleComponentBlockObject;
 
-export type Heading1BlockObjectResponseWithChildren =
-  Heading1BlockObjectResponse & {
-    children?: ListBlockChildrenResponseEx;
-  };
-
-export type Heading2BlockObjectResponseWithChildren =
-  Heading2BlockObjectResponse & {
-    children?: ListBlockChildrenResponseEx;
-  };
-
-export type Heading3BlockObjectResponseWithChildren =
-  Heading3BlockObjectResponse & {
-    children?: ListBlockChildrenResponseEx;
-  };
-
-export type ImageBlockObjectResponseWithChildren = ImageBlockObjectResponse & {
+export type CalloutComponentBlockObject = CalloutBlockObjectResponse & {
   children?: ListBlockChildrenResponseEx;
 };
 
-export type ParagraphBlockObjectResponseWithChildren =
-  ParagraphBlockObjectResponse & {
-    children?: ListBlockChildrenResponseEx;
-  };
-
-export type QuoteBlockObjectResponseWithChildren = QuoteBlockObjectResponse & {
+export type Heading1ComponentBlockObject = Heading1BlockObjectResponse & {
   children?: ListBlockChildrenResponseEx;
 };
 
-export type TableBlockObjectResponseWithChildren = TableBlockObjectResponse & {
+export type Heading2ComponentBlockObject = Heading2BlockObjectResponse & {
   children?: ListBlockChildrenResponseEx;
 };
 
-export type TableRowBlockObjectResponseWithChildren =
-  TableRowBlockObjectResponse & {
-    children?: ListBlockChildrenResponseEx;
-  };
-
-export type ToDoBlockObjectResponseWithChildren = ToDoBlockObjectResponse & {
+export type Heading3ComponentBlockObject = Heading3BlockObjectResponse & {
   children?: ListBlockChildrenResponseEx;
 };
 
-export type ToggleBlockObjectResponseWithChildren =
-  ToggleBlockObjectResponse & {
-    children?: ListBlockChildrenResponseEx;
-  };
+export type ImageComponentBlockObject = ImageBlockObjectResponse & {
+  children?: ListBlockChildrenResponseEx;
+};
 
-export type TogglableBlockObjectResponseWithChildren =
-  | ToggleBlockObjectResponseWithChildren
-  | Heading1BlockObjectResponseWithChildren
-  | Heading2BlockObjectResponseWithChildren
-  | Heading3BlockObjectResponseWithChildren;
+export type ParagraphComponentBlockObject = ParagraphBlockObjectResponse & {
+  children?: ListBlockChildrenResponseEx;
+};
+
+export type QuoteComponentBlockObject = QuoteBlockObjectResponse & {
+  children?: ListBlockChildrenResponseEx;
+};
+
+export type TableComponentBlockObject = TableBlockObjectResponse & {
+  children?: ListBlockChildrenResponseEx;
+};
+
+export type TableRowComponentBlockObject = TableRowBlockObjectResponse & {
+  children?: ListBlockChildrenResponseEx;
+};
+
+export type ToDoComponentBlockObject = ToDoBlockObjectResponse & {
+  children?: ListBlockChildrenResponseEx;
+};
+
+export type ToggleComponentBlockObject = ToggleBlockObjectResponse & {
+  children?: ListBlockChildrenResponseEx;
+};
+
+export type TogglableComponentBlockObject =
+  | ToggleComponentBlockObject
+  | Heading1ComponentBlockObject
+  | Heading2ComponentBlockObject
+  | Heading3ComponentBlockObject;

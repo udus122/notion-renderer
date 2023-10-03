@@ -4,10 +4,10 @@ import Blocks from "./Blocks";
 
 import type {
   BlockComponentProps,
-  ParagraphBlockObjectResponseWithChildren,
+  ParagraphComponentBlockObject,
 } from "@/types";
 
-type Props = BlockComponentProps<ParagraphBlockObjectResponseWithChildren>;
+type Props = BlockComponentProps<ParagraphComponentBlockObject>;
 
 const Paragraph: React.FC<Props> = ({ block }) => {
   return (
