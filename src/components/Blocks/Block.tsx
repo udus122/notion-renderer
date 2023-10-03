@@ -115,7 +115,7 @@ const Block: React.FC<Props> = ({ block }) => {
       return null;
     default:
       // @ts-expect-error: to log when an unexpected 'block.type' is encountered, which is not in the type.
-      console.warn(`${block.type} is unknown.`);
+      console.warn(`${block.type} is unknown type.`);
       return null;
   }
 };
