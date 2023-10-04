@@ -1,4 +1,4 @@
-import { ListBlockChildrenResponseEx } from "notionate";
+import { EmptyObject, ListBlockChildrenResponseEx } from "notionate";
 
 import type {
   CalloutBlockObjectResponse,
@@ -6,6 +6,7 @@ import type {
   Heading2BlockObjectResponse,
   Heading3BlockObjectResponse,
   ImageBlockObjectResponse,
+  ListBlockChildrenResponse,
   ParagraphBlockObjectResponse,
   QuoteBlockObjectResponse,
   TableBlockObjectResponse,
@@ -60,12 +61,22 @@ export type QuoteComponentBlockObject = QuoteBlockObjectResponse & {
 };
 
 export type TableComponentBlockObject = TableBlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
+  children?: {
+    type: "block";
+    block: EmptyObject;
+    object: "list";
+    next_cursor: string | null;
+    has_more: boolean;
+    results: Array<TableRowBlockObjectResponse>;
+    children?: ListBlockChildrenResponse;
+    last_edited_time?: string;
+  };
 };
 
-export type TableRowComponentBlockObject = TableRowBlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
-};
+export type TableRowComponentBlockObject = TableRowBlockObjectResponse;
+
+export type TableCellComponentBlockObject =
+  TableRowComponentBlockObject["table_row"]["cells"][number];
 
 export type ToDoComponentBlockObject = ToDoBlockObjectResponse & {
   children?: ListBlockChildrenResponseEx;

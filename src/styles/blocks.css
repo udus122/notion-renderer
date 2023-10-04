@@ -108,3 +108,30 @@ h3 {
   padding-bottom: 6px;
   padding-left: 2px;
 }
+/* table block */
+.notion_table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+.notion_table th {
+  border: 1px solid #e5e5e5;
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0.3rem;
+  font-weight: 500;
+  text-align: left;
+  /* dark mode */
+  border-color: rgb(47, 47, 47);
+  background-color: rgba(255, 255, 255, 0.03);
+}
+.notion_table td {
+  border: 1px solid #e5e5e5;
+  margin: 0;
+  padding: 0.3rem;
+  /* dark mode */
+  border-color: rgb(47, 47, 47);
+}
+.notion_table th,
+td > * {
+  padding: 0.2rem 0.8rem;
+}
