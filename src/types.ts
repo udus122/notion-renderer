@@ -37,6 +37,12 @@ import type {
   VideoBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 
+export type Overwrite<T, U extends { [Key in keyof T]?: unknown }> = Omit<
+  T,
+  keyof U
+> &
+  U;
+
 export type BlockComponentProps<T extends ComponentBlockObject> = {
   block: T;
 };
@@ -153,16 +159,14 @@ export type QuoteComponentBlockObject = QuoteBlockObjectResponse & {
 export type SyncedBlockComponentBlockObject = SyncedBlockBlockObjectResponse;
 
 export type TableComponentBlockObject = TableBlockObjectResponse & {
-  children?: {
-    type: "block";
-    block: EmptyObject;
-    object: "list";
-    next_cursor: string | null;
-    has_more: boolean;
-    results: Array<TableRowBlockObjectResponse>;
-    children?: ListBlockChildrenResponse;
-    last_edited_time?: string;
-  };
+  children?: Overwrite<
+    ListBlockChildrenResponse,
+    {
+      results: Array<TableRowBlockObjectResponse>;
+      children?: ListBlockChildrenResponse;
+      last_edited_time?: string;
+    }
+  >;
 };
 
 export type TableOfContentsComponentBlockObject =
