@@ -1,24 +1,24 @@
 import { isFullBlock } from "@notionhq/client";
 
+import { ComponentBlockObject } from "@/types";
+
 import Callout from "./Callout";
+import Code from "./Code";
 import ColumnList from "./ColumnList";
 import Divider from "./Divider";
+import Equation from "./Equation";
 import Heading1 from "./Heading1";
 import Heading2 from "./Heading2";
 import Heading3 from "./Heading3";
 import Image from "./Image";
 import Paragraph from "./Paragraph";
 import Quote from "./Quote";
+import Table from "./Table";
 import ToDo from "./ToDo";
 import Toggle from "./Toggle";
 
-import type {
-  BlockObjectResponse,
-  PartialBlockObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
-
 type Props = {
-  block: BlockObjectResponse | PartialBlockObjectResponse;
+  block: ComponentBlockObject;
 };
 
 const Block: React.FC<Props> = ({ block }) => {
@@ -46,8 +46,7 @@ const Block: React.FC<Props> = ({ block }) => {
       console.warn(`${block.type} is not supported`);
       return null;
     case "code":
-      console.warn(`${block.type} is not supported`);
-      return null;
+      return <Code block={block} />;
     case "column":
       console.warn(
         `top level column block is not supported. column block must be child of column_list block.`
@@ -61,8 +60,7 @@ const Block: React.FC<Props> = ({ block }) => {
       console.warn(`${block.type} is not supported`);
       return null;
     case "equation":
-      console.warn(`${block.type} is not supported`);
-      return null;
+      return <Equation block={block} />;
     case "file":
       console.warn(`${block.type} is not supported`);
       return null;
@@ -94,8 +92,7 @@ const Block: React.FC<Props> = ({ block }) => {
       console.warn(`${block.type} is not supported`);
       return null;
     case "table":
-      console.warn(`${block.type} is not supported`);
-      return null;
+      return <Table block={block} />;
     case "table_of_contents":
       console.warn(`${block.type} is not supported`);
       return null;
