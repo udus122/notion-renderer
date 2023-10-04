@@ -1,5 +1,3 @@
-import { EmptyObject, ListBlockChildrenResponseEx } from "notionate";
-
 import type {
   AudioBlockObjectResponse,
   BookmarkBlockObjectResponse,
@@ -47,6 +45,15 @@ export type BlockComponentProps<T extends ComponentBlockObject> = {
   block: T;
 };
 
+export type ListComponentBlockChildrenResponse = Overwrite<
+  ListBlockChildrenResponse,
+  {
+    results: Array<ComponentBlockObject>;
+    children?: ListComponentBlockChildrenResponse;
+    last_edited_time?: string;
+  }
+>;
+
 export type ComponentBlockObject =
   | AudioComponentBlockObject
   | BookmarkComponentBlockObject
@@ -92,7 +99,7 @@ export type BulletedListItemComponentBlockObject =
   BulletedListItemBlockObjectResponse;
 
 export type CalloutComponentBlockObject = CalloutBlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
+  children?: ListComponentBlockChildrenResponse;
 };
 
 export type ChildDatabaseComponentBlockObject =
@@ -101,16 +108,16 @@ export type ChildDatabaseComponentBlockObject =
 export type ChildPageComponentBlockObject = ChildPageBlockObjectResponse;
 
 export type CodeComponentBlockObject = CodeBlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
+  children?: ListComponentBlockChildrenResponse;
 };
 
 export type ColumnComponentBlockObject = ColumnBlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
+  children?: ListComponentBlockChildrenResponse;
 };
 
 export type ColumnListComponentBlockObject = ColumnListBlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
-  columns: Array<ListBlockChildrenResponseEx>;
+  children?: ListComponentBlockChildrenResponse;
+  columns: Array<ListComponentBlockChildrenResponse>;
 };
 
 export type DividerComponentBlockObject = DividerBlockObjectResponse;
@@ -118,25 +125,25 @@ export type DividerComponentBlockObject = DividerBlockObjectResponse;
 export type EmbedComponentBlockObject = EmbedBlockObjectResponse;
 
 export type EquationComponentBlockObject = EquationBlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
+  children?: ListComponentBlockChildrenResponse;
 };
 
 export type FileComponentBlockObject = FileBlockObjectResponse;
 
 export type Heading1ComponentBlockObject = Heading1BlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
+  children?: ListComponentBlockChildrenResponse;
 };
 
 export type Heading2ComponentBlockObject = Heading2BlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
+  children?: ListComponentBlockChildrenResponse;
 };
 
 export type Heading3ComponentBlockObject = Heading3BlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
+  children?: ListComponentBlockChildrenResponse;
 };
 
 export type ImageComponentBlockObject = ImageBlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
+  children?: ListComponentBlockChildrenResponse;
 };
 
 export type LinkPreviewComponentBlockObject = LinkPreviewBlockObjectResponse;
@@ -147,13 +154,13 @@ export type NumberedListItemComponentBlockObject =
   NumberedListItemBlockObjectResponse;
 
 export type ParagraphComponentBlockObject = ParagraphBlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
+  children?: ListComponentBlockChildrenResponse;
 };
 
 export type PdfComponentBlockObject = PdfBlockObjectResponse;
 
 export type QuoteComponentBlockObject = QuoteBlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
+  children?: ListComponentBlockChildrenResponse;
 };
 
 export type SyncedBlockComponentBlockObject = SyncedBlockBlockObjectResponse;
@@ -180,11 +187,11 @@ export type TableCellComponentBlockObject =
 export type TemplateComponentBlockObject = TemplateBlockObjectResponse;
 
 export type ToDoComponentBlockObject = ToDoBlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
+  children?: ListComponentBlockChildrenResponse;
 };
 
 export type ToggleComponentBlockObject = ToggleBlockObjectResponse & {
-  children?: ListBlockChildrenResponseEx;
+  children?: ListComponentBlockChildrenResponse;
 };
 
 export type TogglableComponentBlockObject =

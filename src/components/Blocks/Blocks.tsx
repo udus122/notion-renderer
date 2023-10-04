@@ -1,9 +1,9 @@
+import { ListComponentBlockChildrenResponse } from "@/types";
+
 import Block from "./Block";
 
-import type { ListBlockChildrenResponseEx } from "notionate";
-
 type Props = {
-  blocks: ListBlockChildrenResponseEx;
+  blocks: ListComponentBlockChildrenResponse;
 };
 
 const Blocks: React.FC<Props> = function ({ blocks }) {
