@@ -14,6 +14,7 @@ import Image from "./Image";
 import Paragraph from "./Paragraph";
 import Quote from "./Quote";
 import Table from "./Table";
+import TableOfContents from "./TableOfContents";
 import ToDo from "./ToDo";
 import Toggle from "./Toggle";
 
@@ -92,8 +93,7 @@ const Block: React.FC<Props> = ({ block, blocks }) => {
     case "table":
       return <Table block={block} />;
     case "table_of_contents":
-      console.warn(`${block.type} is not supported`);
-      return null;
+      return <TableOfContents block={block} blocks={blocks} />;
     case "table_row":
       console.warn(
         `top level table_row block is not supported. table_row block must be child of table block.`

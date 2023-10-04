@@ -160,3 +160,26 @@ td > * {
 .notion_column_list > .notion_column {
   flex-grow: 1;
 }
+/* table_of_contents block */
+.notion_table_of_contents > * + * {
+  padding-top: 0.2rem;
+}
+.notion_table_of_contents_item {
+  padding-inline-start: 2px;
+  transition: background-color 20ms ease-in 0s;
+}
+.notion_table_of_contents_item a {
+  border-block-end: 1px solid #ffffff20;
+}
+.notion_table_of_contents_item:hover {
+  background-color: #ffffff10;
+}
+.notion_table_of_contents_item > .notion_table_of_contents_item_heading_1 {
+  padding-inline-start: calc(1rem * 0);
+}
+.notion_table_of_contents_item > .notion_table_of_contents_item_heading_2 {
+  padding-inline-start: calc(1rem * 1);
+}
+.notion_table_of_contents_item > .notion_table_of_contents_item_heading_3 {
+  padding-inline-start: calc(1rem * 2);
+}

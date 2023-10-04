@@ -40,3 +40,7 @@ p {
   margin: 0;
   padding: 1px;
 }
+a {
+  color: inherit;
+  text-decoration-line: none;
+}
