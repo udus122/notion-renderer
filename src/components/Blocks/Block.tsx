@@ -1,6 +1,6 @@
 import { isFullBlock } from "@notionhq/client";
 
-import { ComponentBlockObject } from "@/types";
+import { BlockComponentProps, ComponentBlockObject } from "@/types";
 
 import Callout from "./Callout";
 import Code from "./Code";
@@ -17,11 +17,9 @@ import Table from "./Table";
 import ToDo from "./ToDo";
 import Toggle from "./Toggle";
 
-type Props = {
-  block: ComponentBlockObject;
-};
+type Props = BlockComponentProps<ComponentBlockObject>;
 
-const Block: React.FC<Props> = ({ block }) => {
+const Block: React.FC<Props> = ({ block, blocks }) => {
   if (!isFullBlock(block)) return null;
 
   switch (block.type) {

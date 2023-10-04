@@ -1,8 +1,8 @@
 import Blocks from "./Blocks";
 import BlocksObject from "./Blocks.json";
 
+import type { ListComponentBlockChildrenResponse } from "@/types";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { ListBlockChildrenResponseEx } from "notionate";
 
 const meta: Meta<typeof Blocks> = {
   title: "Blocks/Blocks",
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Blocks>;
 
 export const Default: Story = {
   args: {
-    blocks: BlocksObject as ListBlockChildrenResponseEx,
+    blocks: BlocksObject as ListComponentBlockChildrenResponse,
   },
 };
