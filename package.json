@@ -30,7 +30,8 @@
     "notionate": "^9.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-katex": "^3.0.1"
+    "react-katex": "^3.0.1",
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
@@ -49,6 +50,7 @@
     "@types/react": "^18.2.23",
     "@types/react-dom": "^18.2.8",
     "@types/react-katex": "^3.0.1",
+    "@types/react-syntax-highlighter": "^15.5.7",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vitejs/plugin-react-swc": "^3.4.0",

@@ -2,6 +2,23 @@
 .notion_block {
   padding: 3px 2px;
 }
+.notion_code {
+  display: flex;
+  flex-direction: column;
+}
+.notion_code_header {
+  background-color: rgba(255, 255, 255, 0.03);
+  display: flex;
+}
+.notion_code .notion_code_langage {
+  padding: 0.5rem 0 0 0.5rem;
+  color: #999;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
+.notion_code_pre {
+  margin: 0;
+}
 /* paragraph block */
 .notion_paragraph_children {
   padding-inline-start: 1.5rem;
