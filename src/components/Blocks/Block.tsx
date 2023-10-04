@@ -98,7 +98,9 @@ const Block: React.FC<Props> = ({ block }) => {
       console.warn(`${block.type} is not supported`);
       return null;
     case "table_row":
-      console.warn(`${block.type} is not supported`);
+      console.warn(
+        `top level table_row block is not supported. table_row block must be child of table block.`
+      );
       return null;
     case "template":
       console.warn(`${block.type} is not supported`);
