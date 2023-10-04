@@ -3,6 +3,8 @@ import { EmptyObject, ListBlockChildrenResponseEx } from "notionate";
 import type {
   CalloutBlockObjectResponse,
   CodeBlockObjectResponse,
+  ColumnBlockObjectResponse,
+  ColumnListBlockObjectResponse,
   EquationBlockObjectResponse,
   Heading1BlockObjectResponse,
   Heading2BlockObjectResponse,
@@ -24,6 +26,8 @@ export type BlockComponentProps<T extends ComponentBlockObject> = {
 export type ComponentBlockObject =
   | CalloutComponentBlockObject
   | CodeComponentBlockObject
+  | ColumnComponentBlockObject
+  | ColumnListComponentBlockObject
   | EquationComponentBlockObject
   | Heading1ComponentBlockObject
   | Heading2ComponentBlockObject
@@ -41,6 +45,15 @@ export type CalloutComponentBlockObject = CalloutBlockObjectResponse & {
 
 export type CodeComponentBlockObject = CodeBlockObjectResponse & {
   children?: ListBlockChildrenResponseEx;
+};
+
+export type ColumnComponentBlockObject = ColumnBlockObjectResponse & {
+  children?: ListBlockChildrenResponseEx;
+};
+
+export type ColumnListComponentBlockObject = ColumnListBlockObjectResponse & {
+  children?: ListBlockChildrenResponseEx;
+  columns: Array<ListBlockChildrenResponseEx>;
 };
 
 export type EquationComponentBlockObject = EquationBlockObjectResponse & {

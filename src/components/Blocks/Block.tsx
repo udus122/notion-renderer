@@ -1,6 +1,7 @@
 import { isFullBlock } from "@notionhq/client";
 
 import Callout from "./Callout";
+import ColumnList from "./ColumnList";
 import Divider from "./Divider";
 import Heading1 from "./Heading1";
 import Heading2 from "./Heading2";
@@ -48,11 +49,12 @@ const Block: React.FC<Props> = ({ block }) => {
       console.warn(`${block.type} is not supported`);
       return null;
     case "column":
-      console.warn(`${block.type} is not supported`);
+      console.warn(
+        `top level column block is not supported. column block must be child of column_list block.`
+      );
       return null;
     case "column_list":
-      console.warn(`${block.type} is not supported`);
-      return null;
+      return <ColumnList block={block} />;
     case "divider":
       return <Divider block={block} />;
     case "embed":
