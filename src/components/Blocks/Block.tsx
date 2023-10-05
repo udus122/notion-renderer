@@ -2,6 +2,8 @@ import { isFullBlock } from "@notionhq/client";
 
 import { BlockComponentProps, ComponentBlockObject } from "@/types";
 
+import BulletedList from "./BulletedList";
+import BulletedListItem from "./BulletedListItem";
 import Callout from "./Callout";
 import Code from "./Code";
 import ColumnList from "./ColumnList";
@@ -11,6 +13,8 @@ import Heading1 from "./Heading1";
 import Heading2 from "./Heading2";
 import Heading3 from "./Heading3";
 import Image from "./Image";
+import NumberedList from "./NumberedList";
+import NumberedListItem from "./NumberedListItem";
 import Paragraph from "./Paragraph";
 import Quote from "./Quote";
 import Table from "./Table";

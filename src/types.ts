@@ -46,19 +46,20 @@ export type BlockComponentProps<T extends ComponentBlockObject> = {
   blocks?: ListComponentBlockChildrenResponse;
 };
 
-export type ListComponentBlockChildrenResponse = Overwrite<
-  ListBlockChildrenResponse,
-  {
-    results: Array<ComponentBlockObject>;
-    children?: ListComponentBlockChildrenResponse;
-    last_edited_time?: string;
-  }
->;
+export type ListComponentBlockChildrenResponse<T = ComponentBlockObject> =
+  Overwrite<
+    ListBlockChildrenResponse,
+    {
+      results: Array<T>;
+      last_edited_time?: string;
+    }
+  >;
 
 export type ComponentBlockObject =
   | AudioComponentBlockObject
   | BookmarkComponentBlockObject
   | BreadcrumbComponentBlockObject
+  | BulletedListComponentBlockObject
   | BulletedListItemComponentBlockObject
   | CalloutComponentBlockObject
   | ChildDatabaseComponentBlockObject
@@ -73,6 +74,7 @@ export type ComponentBlockObject =
   | Heading1ComponentBlockObject
   | Heading2ComponentBlockObject
   | Heading3ComponentBlockObject
+  | NumberedListComponentBlockObject
   | NumberedListItemComponentBlockObject
   | ImageComponentBlockObject
   | LinkPreviewComponentBlockObject
@@ -96,8 +98,16 @@ export type BookmarkComponentBlockObject = BookmarkBlockObjectResponse;
 
 export type BreadcrumbComponentBlockObject = BreadcrumbBlockObjectResponse;
 
+export type BulletedListComponentBlockObject = {
+  id: string;
+  items: Array<BulletedListItemComponentBlockObject>;
+  type: "bulleted_list";
+};
+
 export type BulletedListItemComponentBlockObject =
-  BulletedListItemBlockObjectResponse;
+  BulletedListItemBlockObjectResponse & {
+    children?: ListComponentBlockChildrenResponse;
+  };
 
 export type CalloutComponentBlockObject = CalloutBlockObjectResponse & {
   children?: ListComponentBlockChildrenResponse;
@@ -117,7 +127,8 @@ export type ColumnComponentBlockObject = ColumnBlockObjectResponse & {
 };
 
 export type ColumnListComponentBlockObject = ColumnListBlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse;
+  children?: ListComponentBlockChildrenResponse<ColumnComponentBlockObject>;
+  // NOTE: 本当は、columnsはchildren[number]['children']に入るべき
   columns: Array<ListComponentBlockChildrenResponse>;
 };
 
@@ -151,8 +162,16 @@ export type LinkPreviewComponentBlockObject = LinkPreviewBlockObjectResponse;
 
 export type LinkToPageComponentBlockObject = LinkToPageBlockObjectResponse;
 
+export type NumberedListComponentBlockObject = {
+  id: string;
+  items: Array<NumberedListItemComponentBlockObject>;
+  type: "numbered_list";
+};
+
 export type NumberedListItemComponentBlockObject =
-  NumberedListItemBlockObjectResponse;
+  NumberedListItemBlockObjectResponse & {
+    children?: ListComponentBlockChildrenResponse;
+  };
 
 export type ParagraphComponentBlockObject = ParagraphBlockObjectResponse & {
   children?: ListComponentBlockChildrenResponse;
