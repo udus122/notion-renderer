@@ -4,12 +4,6 @@ import { Text } from "./Text";
 
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
-const defaultRichTextComponentMapper = {
-  text: Text,
-  equation: Equation,
-  mention: Mention,
-};
-
 const RichText = ({
   richTextItem,
   customRichTextComponentMapper = {},
@@ -19,7 +13,9 @@ const RichText = ({
 }) => {
   if (!richTextItem) return null;
   const richTextComponentMapper = {
-    ...defaultRichTextComponentMapper,
+    text: Text,
+    equation: Equation,
+    mention: Mention,
     ...customRichTextComponentMapper,
   };
 
