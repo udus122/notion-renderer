@@ -1,7 +1,6 @@
-import type { BlockComponentProps } from "@/types";
-import type { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { BlockComponentProps, DividerBlockObjectComponent } from "@/types";
 
-type Props = BlockComponentProps<DividerBlockObjectResponse>;
+type Props = BlockComponentProps<DividerBlockObjectComponent>;
 
 const Divider: React.FC<Props> = ({ block }) => {
   return <hr id={block.id} className="notion_divider" />;

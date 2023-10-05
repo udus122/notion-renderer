@@ -2,9 +2,9 @@ import RichTexts from "../RichTexts/RichTexts";
 
 import Blocks from "./Blocks";
 
-import type { BlockComponentProps, CalloutComponentBlockObject } from "@/types";
+import type { BlockComponentProps, CalloutBlockObjectComponent } from "@/types";
 
-type Props = BlockComponentProps<CalloutComponentBlockObject>;
+type Props = BlockComponentProps<CalloutBlockObjectComponent>;
 
 const Callout: React.FC<Props> = ({ block }) => {
   return (
@@ -28,7 +28,7 @@ export default Callout;
 export const CalloutIcon = ({
   icon,
 }: {
-  icon: CalloutComponentBlockObject["callout"]["icon"];
+  icon: CalloutBlockObjectComponent["callout"]["icon"];
 }) => {
   if (!icon) return null;
 

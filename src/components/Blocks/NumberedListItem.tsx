@@ -4,11 +4,11 @@ import Blocks from "./Blocks";
 
 import type {
   BlockComponentProps,
-  NumberedListItemComponentBlockObject,
+  NumberedListItemBlockObjectComponent,
 } from "@/types";
 
 const NumberedListItem: React.FC<
-  BlockComponentProps<NumberedListItemComponentBlockObject>
+  BlockComponentProps<NumberedListItemBlockObjectComponent>
 > = ({ block }) => {
   return (
     <li

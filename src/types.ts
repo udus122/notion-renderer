@@ -41,186 +41,185 @@ export type Overwrite<T, U extends { [Key in keyof T]?: unknown }> = Omit<
 > &
   U;
 
-export type BlockComponentProps<T extends ComponentBlockObject> = {
+export type BlockComponentProps<T extends BlockObjectComponent> = {
   block: T;
-  blocks?: ListComponentBlockChildrenResponse;
+  blocks?: ListBlockChildrenComponent;
   customBlockComponentMapper?: object;
 };
 
-export type ListComponentBlockChildrenResponse<T = ComponentBlockObject> =
-  Overwrite<
-    ListBlockChildrenResponse,
-    {
-      results: Array<T>;
-      last_edited_time?: string;
-    }
-  >;
+export type ListBlockChildrenComponent<T = BlockObjectComponent> = Overwrite<
+  ListBlockChildrenResponse,
+  {
+    results: Array<T>;
+    last_edited_time?: string;
+  }
+>;
 
-export type ComponentBlockObject =
-  | AudioComponentBlockObject
-  | BookmarkComponentBlockObject
-  | BreadcrumbComponentBlockObject
-  | BulletedListComponentBlockObject
-  | BulletedListItemComponentBlockObject
-  | CalloutComponentBlockObject
-  | ChildDatabaseComponentBlockObject
-  | ChildPageComponentBlockObject
-  | CodeComponentBlockObject
-  | ColumnComponentBlockObject
-  | ColumnListComponentBlockObject
-  | DividerComponentBlockObject
-  | EmbedComponentBlockObject
-  | EquationComponentBlockObject
-  | FileComponentBlockObject
-  | Heading1ComponentBlockObject
-  | Heading2ComponentBlockObject
-  | Heading3ComponentBlockObject
-  | NumberedListComponentBlockObject
-  | NumberedListItemComponentBlockObject
-  | ImageComponentBlockObject
-  | LinkPreviewComponentBlockObject
-  | LinkToPageComponentBlockObject
-  | ParagraphComponentBlockObject
-  | PdfComponentBlockObject
-  | QuoteComponentBlockObject
-  | SyncedBlockComponentBlockObject
-  | TableComponentBlockObject
-  | TableOfContentsComponentBlockObject
-  | TableRowComponentBlockObject
-  | TemplateComponentBlockObject
-  | ToDoComponentBlockObject
-  | ToggleComponentBlockObject
-  | UnsupportedComponentBlockObject
-  | VideoComponentBlockObject;
+export type BlockObjectComponent =
+  | AudioBlockObjectComponent
+  | BookmarkBlockObjectComponent
+  | BreadcrumbBlockObjectComponent
+  | BulletedListBlockObjectComponent
+  | BulletedListItemBlockObjectComponent
+  | CalloutBlockObjectComponent
+  | ChildDatabaseBlockObjectComponent
+  | ChildPageBlockObjectComponent
+  | CodeBlockObjectComponent
+  | ColumnBlockObjectComponent
+  | ColumnListBlockObjectComponent
+  | DividerBlockObjectComponent
+  | EmbedBlockObjectComponent
+  | EquationBlockObjectComponent
+  | FileBlockObjectComponent
+  | Heading1BlockObjectComponent
+  | Heading2BlockObjectComponent
+  | Heading3BlockObjectComponent
+  | NumberedListBlockObjectComponent
+  | NumberedListItemBlockObjectComponent
+  | ImageBlockObjectComponent
+  | LinkPreviewBlockObjectComponent
+  | LinkToPageBlockObjectComponent
+  | ParagraphBlockObjectComponent
+  | PdfBlockObjectComponent
+  | QuoteBlockObjectComponent
+  | SyncedBlockBlockObjectComponent
+  | TableBlockObjectComponent
+  | TableOfContentsBlockObjectComponent
+  | TableRowBlockObjectComponent
+  | TemplateBlockObjectComponent
+  | ToDoBlockObjectComponent
+  | ToggleBlockObjectComponent
+  | UnsupportedBlockObjectComponent
+  | VideoBlockObjectComponent;
 
-export type AudioComponentBlockObject = AudioBlockObjectResponse;
+export type AudioBlockObjectComponent = AudioBlockObjectResponse;
 
-export type BookmarkComponentBlockObject = BookmarkBlockObjectResponse;
+export type BookmarkBlockObjectComponent = BookmarkBlockObjectResponse;
 
-export type BreadcrumbComponentBlockObject = BreadcrumbBlockObjectResponse;
+export type BreadcrumbBlockObjectComponent = BreadcrumbBlockObjectResponse;
 
-export type BulletedListComponentBlockObject = {
+export type BulletedListBlockObjectComponent = {
   id: string;
-  items: Array<BulletedListItemComponentBlockObject>;
+  items: Array<BulletedListItemBlockObjectComponent>;
   type: "bulleted_list";
 };
 
-export type BulletedListItemComponentBlockObject =
+export type BulletedListItemBlockObjectComponent =
   BulletedListItemBlockObjectResponse & {
-    children?: ListComponentBlockChildrenResponse;
+    children?: ListBlockChildrenComponent;
   };
 
-export type CalloutComponentBlockObject = CalloutBlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse;
+export type CalloutBlockObjectComponent = CalloutBlockObjectResponse & {
+  children?: ListBlockChildrenComponent;
 };
 
-export type ChildDatabaseComponentBlockObject =
+export type ChildDatabaseBlockObjectComponent =
   ChildDatabaseBlockObjectResponse;
 
-export type ChildPageComponentBlockObject = ChildPageBlockObjectResponse;
+export type ChildPageBlockObjectComponent = ChildPageBlockObjectResponse;
 
-export type CodeComponentBlockObject = CodeBlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse;
+export type CodeBlockObjectComponent = CodeBlockObjectResponse & {
+  children?: ListBlockChildrenComponent;
 };
 
-export type ColumnComponentBlockObject = ColumnBlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse;
+export type ColumnBlockObjectComponent = ColumnBlockObjectResponse & {
+  children?: ListBlockChildrenComponent;
 };
 
-export type ColumnListComponentBlockObject = ColumnListBlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse<ColumnComponentBlockObject>;
+export type ColumnListBlockObjectComponent = ColumnListBlockObjectResponse & {
+  children?: ListBlockChildrenComponent<ColumnBlockObjectComponent>;
   // NOTE: 本当は、columnsはchildren[number]['children']に入るべき
-  columns: Array<ListComponentBlockChildrenResponse>;
+  columns: Array<ListBlockChildrenComponent>;
 };
 
-export type DividerComponentBlockObject = DividerBlockObjectResponse;
+export type DividerBlockObjectComponent = DividerBlockObjectResponse;
 
-export type EmbedComponentBlockObject = EmbedBlockObjectResponse;
+export type EmbedBlockObjectComponent = EmbedBlockObjectResponse;
 
-export type EquationComponentBlockObject = EquationBlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse;
+export type EquationBlockObjectComponent = EquationBlockObjectResponse & {
+  children?: ListBlockChildrenComponent;
 };
 
-export type FileComponentBlockObject = FileBlockObjectResponse;
+export type FileBlockObjectComponent = FileBlockObjectResponse;
 
-export type Heading1ComponentBlockObject = Heading1BlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse;
+export type Heading1BlockObjectComponent = Heading1BlockObjectResponse & {
+  children?: ListBlockChildrenComponent;
 };
 
-export type Heading2ComponentBlockObject = Heading2BlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse;
+export type Heading2BlockObjectComponent = Heading2BlockObjectResponse & {
+  children?: ListBlockChildrenComponent;
 };
 
-export type Heading3ComponentBlockObject = Heading3BlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse;
+export type Heading3BlockObjectComponent = Heading3BlockObjectResponse & {
+  children?: ListBlockChildrenComponent;
 };
 
-export type ImageComponentBlockObject = ImageBlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse;
+export type ImageBlockObjectComponent = ImageBlockObjectResponse & {
+  children?: ListBlockChildrenComponent;
 };
 
-export type LinkPreviewComponentBlockObject = LinkPreviewBlockObjectResponse;
+export type LinkPreviewBlockObjectComponent = LinkPreviewBlockObjectResponse;
 
-export type LinkToPageComponentBlockObject = LinkToPageBlockObjectResponse;
+export type LinkToPageBlockObjectComponent = LinkToPageBlockObjectResponse;
 
-export type NumberedListComponentBlockObject = {
+export type NumberedListBlockObjectComponent = {
   id: string;
-  items: Array<NumberedListItemComponentBlockObject>;
+  items: Array<NumberedListItemBlockObjectComponent>;
   type: "numbered_list";
 };
 
-export type NumberedListItemComponentBlockObject =
+export type NumberedListItemBlockObjectComponent =
   NumberedListItemBlockObjectResponse & {
-    children?: ListComponentBlockChildrenResponse;
+    children?: ListBlockChildrenComponent;
   };
 
-export type ParagraphComponentBlockObject = ParagraphBlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse;
+export type ParagraphBlockObjectComponent = ParagraphBlockObjectResponse & {
+  children?: ListBlockChildrenComponent;
 };
 
-export type PdfComponentBlockObject = PdfBlockObjectResponse;
+export type PdfBlockObjectComponent = PdfBlockObjectResponse;
 
-export type QuoteComponentBlockObject = QuoteBlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse;
+export type QuoteBlockObjectComponent = QuoteBlockObjectResponse & {
+  children?: ListBlockChildrenComponent;
 };
 
-export type SyncedBlockComponentBlockObject = SyncedBlockBlockObjectResponse;
+export type SyncedBlockBlockObjectComponent = SyncedBlockBlockObjectResponse;
 
-export type TableComponentBlockObject = TableBlockObjectResponse & {
+export type TableBlockObjectComponent = TableBlockObjectResponse & {
   children?: Overwrite<
-    ListBlockChildrenResponse,
+    ListBlockChildrenComponent,
     {
       results: Array<TableRowBlockObjectResponse>;
-      children?: ListBlockChildrenResponse;
+      children?: ListBlockChildrenComponent;
       last_edited_time?: string;
     }
   >;
 };
 
-export type TableOfContentsComponentBlockObject =
+export type TableOfContentsBlockObjectComponent =
   TableOfContentsBlockObjectResponse;
 
-export type TableRowComponentBlockObject = TableRowBlockObjectResponse;
+export type TableRowBlockObjectComponent = TableRowBlockObjectResponse;
 
-export type TableCellComponentBlockObject =
-  TableRowComponentBlockObject["table_row"]["cells"][number];
+export type TableCellBlockObjectComponent =
+  TableRowBlockObjectComponent["table_row"]["cells"][number];
 
-export type TemplateComponentBlockObject = TemplateBlockObjectResponse;
+export type TemplateBlockObjectComponent = TemplateBlockObjectResponse;
 
-export type ToDoComponentBlockObject = ToDoBlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse;
+export type ToDoBlockObjectComponent = ToDoBlockObjectResponse & {
+  children?: ListBlockChildrenComponent;
 };
 
-export type ToggleComponentBlockObject = ToggleBlockObjectResponse & {
-  children?: ListComponentBlockChildrenResponse;
+export type ToggleBlockObjectComponent = ToggleBlockObjectResponse & {
+  children?: ListBlockChildrenComponent;
 };
 
-export type TogglableComponentBlockObject =
-  | ToggleComponentBlockObject
-  | Heading1ComponentBlockObject
-  | Heading2ComponentBlockObject
-  | Heading3ComponentBlockObject;
+export type TogglableBlockObjectComponent =
+  | ToggleBlockObjectComponent
+  | Heading1BlockObjectComponent
+  | Heading2BlockObjectComponent
+  | Heading3BlockObjectComponent;
 
-export type UnsupportedComponentBlockObject = UnsupportedBlockObjectResponse;
+export type UnsupportedBlockObjectComponent = UnsupportedBlockObjectResponse;
 
-export type VideoComponentBlockObject = VideoBlockObjectResponse;
+export type VideoBlockObjectComponent = VideoBlockObjectResponse;

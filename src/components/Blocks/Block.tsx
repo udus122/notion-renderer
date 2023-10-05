@@ -1,4 +1,4 @@
-import { BlockComponentProps, ComponentBlockObject } from "@/types";
+import { BlockComponentProps, BlockObjectComponent } from "@/types";
 
 import BulletedList from "./BulletedList";
 import BulletedListItem from "./BulletedListItem";
@@ -21,7 +21,7 @@ import ToDo from "./ToDo";
 import Toggle from "./Toggle";
 import Unsupported from "./Unsupported";
 
-type Props = BlockComponentProps<ComponentBlockObject>;
+type Props = BlockComponentProps<BlockObjectComponent>;
 
 const Block: React.FC<Props> = ({
   block,

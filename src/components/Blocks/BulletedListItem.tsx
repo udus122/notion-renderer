@@ -4,11 +4,11 @@ import Blocks from "./Blocks";
 
 import type {
   BlockComponentProps,
-  BulletedListItemComponentBlockObject,
+  BulletedListItemBlockObjectComponent,
 } from "@/types";
 
 const BulletedListItem: React.FC<
-  BlockComponentProps<BulletedListItemComponentBlockObject>
+  BlockComponentProps<BulletedListItemBlockObjectComponent>
 > = ({ block }) => {
   return (
     <li

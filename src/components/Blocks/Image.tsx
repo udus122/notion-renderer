@@ -1,8 +1,8 @@
 import RichTexts from "../RichTexts/RichTexts";
 
-import type { BlockComponentProps, ImageComponentBlockObject } from "@/types";
+import type { BlockComponentProps, ImageBlockObjectComponent } from "@/types";
 
-type Props = BlockComponentProps<ImageComponentBlockObject>;
+type Props = BlockComponentProps<ImageBlockObjectComponent>;
 
 const Image: React.FC<Props> = ({ block }) => {
   return (

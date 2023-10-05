@@ -1,7 +1,7 @@
 import Table from "./Table";
 import TableObject from "./Table.json";
 
-import type { TableComponentBlockObject } from "@/types";
+import type { TableBlockObjectComponent } from "@/types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Table> = {
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Table>;
 
 export const Default: Story = {
   args: {
-    block: TableObject as TableComponentBlockObject,
+    block: TableObject as TableBlockObjectComponent,
   },
 };

@@ -3,10 +3,10 @@ import { BlockMath } from "react-katex";
 
 import type {
   BlockComponentProps,
-  EquationComponentBlockObject,
+  EquationBlockObjectComponent,
 } from "@/types";
 
-type Props = BlockComponentProps<EquationComponentBlockObject>;
+type Props = BlockComponentProps<EquationBlockObjectComponent>;
 
 const Equation: React.FC<Props> = ({ block }) => {
   return (

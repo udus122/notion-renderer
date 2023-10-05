@@ -1,7 +1,7 @@
 import Code from "./Code";
 import CodeObject from "./Code.json";
 
-import type { CodeComponentBlockObject } from "@/types";
+import type { CodeBlockObjectComponent } from "@/types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Code> = {
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Code>;
 
 export const Default: Story = {
   args: {
-    block: CodeObject as CodeComponentBlockObject,
+    block: CodeObject as CodeBlockObjectComponent,
   },
 };

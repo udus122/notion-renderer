@@ -1,13 +1,13 @@
 import {
   BlockComponentProps,
-  TableCellComponentBlockObject,
-  TableComponentBlockObject,
-  TableRowComponentBlockObject,
+  TableBlockObjectComponent,
+  TableCellBlockObjectComponent,
+  TableRowBlockObjectComponent,
 } from "@/types";
 
 import RichTexts from "../RichTexts/RichTexts";
 
-type Props = BlockComponentProps<TableComponentBlockObject>;
+type Props = BlockComponentProps<TableBlockObjectComponent>;
 
 const Table: React.FC<Props> = ({ block }) => {
   return (
@@ -31,7 +31,7 @@ const Table: React.FC<Props> = ({ block }) => {
 export default Table;
 
 const TableRowRowHeader: React.FC<{
-  table_row: TableRowComponentBlockObject;
+  table_row: TableRowBlockObjectComponent;
 }> = ({ table_row }) => {
   return (
     <tr id={table_row.id} className="notion_table_row">
@@ -43,7 +43,7 @@ const TableRowRowHeader: React.FC<{
 };
 
 const TableRowColumnHeader: React.FC<{
-  table_row: TableRowComponentBlockObject;
+  table_row: TableRowBlockObjectComponent;
 }> = ({ table_row }) => {
   return (
     <tr id={table_row.id} className="notion_table_row">
@@ -55,7 +55,7 @@ const TableRowColumnHeader: React.FC<{
 };
 
 const TableRowNoHeader: React.FC<{
-  table_row: TableRowComponentBlockObject;
+  table_row: TableRowBlockObjectComponent;
 }> = ({ table_row }) => {
   return (
     <tr id={table_row.id} className="notion_table_row">
@@ -67,7 +67,7 @@ const TableRowNoHeader: React.FC<{
 };
 
 const Th: React.FC<{
-  cell: TableCellComponentBlockObject;
+  cell: TableCellBlockObjectComponent;
 }> = ({ cell }) => {
   return (
     <th>
@@ -77,7 +77,7 @@ const Th: React.FC<{
 };
 
 const Td: React.FC<{
-  cell: TableCellComponentBlockObject;
+  cell: TableCellBlockObjectComponent;
 }> = ({ cell }) => {
   return (
     <td>

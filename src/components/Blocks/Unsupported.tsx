@@ -1,6 +1,6 @@
-import type { BlockComponentProps, ComponentBlockObject } from "@/types";
+import type { BlockComponentProps, BlockObjectComponent } from "@/types";
 
-type Props = BlockComponentProps<ComponentBlockObject>;
+type Props = BlockComponentProps<BlockObjectComponent>;
 
 const Unsupported: React.FC<Props> = ({ block }) => {
   console.warn(`${block.type} is not supported`);

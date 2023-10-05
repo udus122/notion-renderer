@@ -1,7 +1,7 @@
 import Quote from "./Quote";
 import QuoteObject from "./Quote.json";
 
-import type { QuoteComponentBlockObject } from "@/types";
+import type { QuoteBlockObjectComponent } from "@/types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Quote> = {
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Quote>;
 
 export const Default: Story = {
   args: {
-    block: QuoteObject as QuoteComponentBlockObject,
+    block: QuoteObject as QuoteBlockObjectComponent,
   },
 };

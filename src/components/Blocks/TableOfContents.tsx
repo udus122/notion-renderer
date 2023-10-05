@@ -2,22 +2,22 @@ import RichTexts from "../RichTexts/RichTexts";
 
 import type {
   BlockComponentProps,
-  Heading1ComponentBlockObject,
-  Heading2ComponentBlockObject,
-  Heading3ComponentBlockObject,
-  TableOfContentsComponentBlockObject,
+  Heading1BlockObjectComponent,
+  Heading2BlockObjectComponent,
+  Heading3BlockObjectComponent,
+  TableOfContentsBlockObjectComponent,
 } from "@/types";
 
-type Props = BlockComponentProps<TableOfContentsComponentBlockObject>;
+type Props = BlockComponentProps<TableOfContentsBlockObjectComponent>;
 
 const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
   const headings = blocks?.results.filter(
     (
       block
     ): block is
-      | Heading1ComponentBlockObject
-      | Heading2ComponentBlockObject
-      | Heading3ComponentBlockObject =>
+      | Heading1BlockObjectComponent
+      | Heading2BlockObjectComponent
+      | Heading3BlockObjectComponent =>
       block.type === "heading_1" ||
       block.type === "heading_2" ||
       block.type === "heading_3"

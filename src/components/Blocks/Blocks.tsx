@@ -1,14 +1,14 @@
 import Block from "./Block";
 
 import type {
-  BulletedListComponentBlockObject,
-  ComponentBlockObject,
-  ListComponentBlockChildrenResponse,
-  NumberedListComponentBlockObject,
+  BulletedListBlockObjectComponent,
+  BlockObjectComponent,
+  NumberedListBlockObjectComponent,
+  ListBlockChildrenComponent,
 } from "@/types";
 
 type Props = {
-  blocks: ListComponentBlockChildrenResponse;
+  blocks: ListBlockChildrenComponent;
   customBlockComponentMapper?: object;
 };
 
@@ -18,9 +18,9 @@ const Blocks: React.FC<Props> = function ({
 }) {
   const wrappedList = blocks.results.reduce(
     (
-      prevList: Array<ComponentBlockObject>,
-      currBlock: ComponentBlockObject
-    ): Array<ComponentBlockObject> => {
+      prevList: Array<BlockObjectComponent>,
+      currBlock: BlockObjectComponent
+    ): Array<BlockObjectComponent> => {
       /* If the block.type is neither
        * 'bulleted_list_item' nor 'numbered_list_item' nor 'bulleted_list' nor 'numbered_list',
        * return the block as it is.
@@ -47,7 +47,7 @@ const Blocks: React.FC<Props> = function ({
           id,
           type: "bulleted_list",
           items: [currBlock],
-        } satisfies BulletedListComponentBlockObject;
+        } satisfies BulletedListBlockObjectComponent;
         return [...prevList, bulletedList];
       }
       if (
@@ -59,7 +59,7 @@ const Blocks: React.FC<Props> = function ({
           id,
           type: "numbered_list",
           items: [currBlock],
-        } satisfies NumberedListComponentBlockObject;
+        } satisfies NumberedListBlockObjectComponent;
         return [...prevList, numberedList];
       }
 

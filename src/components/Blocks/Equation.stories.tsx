@@ -1,7 +1,7 @@
 import Equation from "./Equation";
 import EquationObject from "./Equation.json";
 
-import type { EquationComponentBlockObject } from "@/types";
+import type { EquationBlockObjectComponent } from "@/types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Equation> = {
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Equation>;
 
 export const Default: Story = {
   args: {
-    block: EquationObject as EquationComponentBlockObject,
+    block: EquationObject as EquationBlockObjectComponent,
   },
 };

@@ -1,8 +1,7 @@
-import { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
-
 import Divider from "./Divider";
 import DividerObject from "./Divider.json";
 
+import type { DividerBlockObjectComponent } from "@/types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Divider> = {
@@ -16,6 +15,6 @@ type Story = StoryObj<typeof Divider>;
 
 export const Default: Story = {
   args: {
-    block: DividerObject as DividerBlockObjectResponse,
+    block: DividerObject as DividerBlockObjectComponent,
   },
 };

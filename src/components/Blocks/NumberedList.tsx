@@ -2,10 +2,10 @@ import NumberedListItem from "./NumberedListItem";
 
 import type {
   BlockComponentProps,
-  NumberedListComponentBlockObject,
+  NumberedListBlockObjectComponent,
 } from "@/types";
 
-type Props = BlockComponentProps<NumberedListComponentBlockObject>;
+type Props = BlockComponentProps<NumberedListBlockObjectComponent>;
 
 const NumberedList: React.FC<Props> = ({ block }) => {
   return (

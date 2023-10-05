@@ -2,10 +2,10 @@ import Blocks from "./Blocks";
 
 import type {
   BlockComponentProps,
-  ColumnListComponentBlockObject,
+  ColumnListBlockObjectComponent,
 } from "@/types";
 
-type Props = BlockComponentProps<ColumnListComponentBlockObject>;
+type Props = BlockComponentProps<ColumnListBlockObjectComponent>;
 
 const ColumnList: React.FC<Props> = ({ block }) => {
   return (

@@ -3,8 +3,8 @@ import TableOfContents from "./TableOfContents";
 import TableOfContentsObject from "./TableOfContents.json";
 
 import type {
-  ListComponentBlockChildrenResponse,
-  TableOfContentsComponentBlockObject,
+  ListBlockChildrenComponent,
+  TableOfContentsBlockObjectComponent,
 } from "@/types";
 import type { Meta, StoryObj } from "@storybook/react";
 
@@ -20,7 +20,7 @@ type Story = StoryObj<typeof TableOfContents>;
 
 export const Default: Story = {
   args: {
-    block: TableOfContentsObject as TableOfContentsComponentBlockObject,
-    blocks: BlocksObject as ListComponentBlockChildrenResponse,
+    block: TableOfContentsObject as TableOfContentsBlockObjectComponent,
+    blocks: BlocksObject as ListBlockChildrenComponent,
   },
 };
