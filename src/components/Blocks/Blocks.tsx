@@ -9,7 +9,7 @@ import type {
 
 type Props = {
   blocks: ListComponentBlockChildrenResponse;
-  customBlockComponentMapper: object;
+  customBlockComponentMapper?: object;
 };
 
 const Blocks: React.FC<Props> = function ({
