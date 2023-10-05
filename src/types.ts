@@ -44,6 +44,7 @@ export type Overwrite<T, U extends { [Key in keyof T]?: unknown }> = Omit<
 export type BlockComponentProps<T extends ComponentBlockObject> = {
   block: T;
   blocks?: ListComponentBlockChildrenResponse;
+  customBlockComponentMapper?: object;
 };
 
 export type ListComponentBlockChildrenResponse<T = ComponentBlockObject> =

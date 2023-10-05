@@ -9,10 +9,12 @@ import type {
 
 type Props = {
   blocks: ListComponentBlockChildrenResponse;
+  customBlockComponentMapper: object;
 };
 
 const Blocks: React.FC<Props> = function ({
   blocks,
+  customBlockComponentMapper = {},
 }) {
   const wrappedList = blocks.results.reduce(
     (
@@ -92,6 +94,7 @@ const Blocks: React.FC<Props> = function ({
             key={block.id}
             block={block}
             blocks={blocks}
+            customBlockComponentMapper={customBlockComponentMapper}
           />
         );
       })}
