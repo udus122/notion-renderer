@@ -1,9 +1,7 @@
-import { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import Equation from "./Equation";
+import EquationObject from "./Equation.json";
 
-import EquationObject from "./index.json";
-
-import { Equation } from "./index";
-
+import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Equation> = {

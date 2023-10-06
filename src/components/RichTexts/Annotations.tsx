@@ -17,7 +17,7 @@ const defaultAnnotationMapper = {
 };
 
 // FIXME: cannot customize annotation order
-const Annotation: React.FC<{
+const Annotations: React.FC<{
   richTextItem: RichTextItemResponse;
   children: React.ReactNode;
   customAnnotationMapper?: object;
@@ -74,4 +74,4 @@ const Annotation: React.FC<{
   return <>{element}</>;
 };
 
-export default Annotation;
+export default Annotations;

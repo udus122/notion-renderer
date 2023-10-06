@@ -1,4 +1,4 @@
-import Annotation from "../Annotation";
+import Annotations from "./Annotations";
 
 import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
@@ -6,14 +6,14 @@ type Props = {
   richTextItem: MentionRichTextItemResponse;
 };
 
-export const Mention: React.FC<Props> = ({ richTextItem }) => {
+const Mention: React.FC<Props> = ({ richTextItem }) => {
   switch (richTextItem.mention.type) {
     case "database":
       return (
         <span className="notion_rich_text_type_mention mention_type_database">
-          <Annotation richTextItem={richTextItem}>
+          <Annotations richTextItem={richTextItem}>
             {richTextItem.plain_text}
-          </Annotation>
+          </Annotations>
         </span>
       );
     case "date":
@@ -25,9 +25,9 @@ export const Mention: React.FC<Props> = ({ richTextItem }) => {
     case "page":
       return (
         <span className="notion_rich_text_type_mention mention_type_page">
-          <Annotation richTextItem={richTextItem}>
+          <Annotations richTextItem={richTextItem}>
             {richTextItem.plain_text}
-          </Annotation>
+          </Annotations>
         </span>
       );
     case "template_mention":
@@ -41,3 +41,5 @@ export const Mention: React.FC<Props> = ({ richTextItem }) => {
       return null;
   }
 };
+
+export default Mention;
