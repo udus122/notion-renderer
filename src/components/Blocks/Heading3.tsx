@@ -15,7 +15,7 @@ const Heading2: React.FC<Props> = ({ block }) => {
       {block.heading_3.is_toggleable ? (
         <details
           id={block.id}
-          className={`notion_block notion_heading notion_heading_3 notion_toggle notion_color_${block.heading_3.color}`}
+          className={`notion_heading notion_heading_3 notion_toggle notion_color_${block.heading_3.color}`}
         >
           <summary className="notion_toggle_summary">
             <h3>
@@ -29,7 +29,7 @@ const Heading2: React.FC<Props> = ({ block }) => {
       ) : (
         <h1
           id={block.id}
-          className={`notion_block notion_heading notion_heading_3 notion_color_${block.heading_3.color}`}
+          className={`notion_heading notion_heading_3 notion_color_${block.heading_3.color}`}
         >
           <RichTexts richTexts={block.heading_3.rich_text} />
         </h1>

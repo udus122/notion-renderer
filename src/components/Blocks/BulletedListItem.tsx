@@ -7,13 +7,13 @@ import type {
   BulletedListItemBlockObjectComponent,
 } from "@/types";
 
-const BulletedListItem: React.FC<
-  BlockComponentProps<BulletedListItemBlockObjectComponent>
-> = ({ block }) => {
+type Props = BlockComponentProps<BulletedListItemBlockObjectComponent>;
+
+const BulletedListItem: React.FC<Props> = ({ block }) => {
   return (
     <li
       id={block.id}
-      className={`notion_block notion_bulleted_list_item notion_color_${block.bulleted_list_item.color}`}
+      className={`notion_bulleted_list_item notion_color_${block.bulleted_list_item.color}`}
     >
       <RichTexts richTexts={block.bulleted_list_item.rich_text} />
       <div>{block.children && <Blocks blocks={block.children} />}</div>

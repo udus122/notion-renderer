@@ -9,7 +9,7 @@ type Props = BlockComponentProps<CodeBlockObjectComponent>;
 
 const Code: React.FC<Props> = ({ block }) => {
   return (
-    <div id={block.id} className="notion_block notion_code">
+    <div id={block.id} className="notion_code">
       <div className="notion_code_header">
         <div className="notion_code_langage">{block.code.language}</div>
       </div>

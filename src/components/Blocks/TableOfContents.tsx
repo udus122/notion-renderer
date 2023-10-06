@@ -25,7 +25,7 @@ const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
   return (
     <div
       id={block.id}
-      className={`notion_block notion_table_of_contents notion_color_${block.table_of_contents.color}`}
+      className={`notion_table_of_contents notion_color_${block.table_of_contents.color}`}
     >
       {headings &&
         headings.map((heading) => {

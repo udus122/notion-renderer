@@ -11,7 +11,7 @@ type Props = BlockComponentProps<TableBlockObjectComponent>;
 
 const Table: React.FC<Props> = ({ block }) => {
   return (
-    <table id={block.id} className="notion_block notion_table">
+    <table id={block.id} className="notion_table">
       <tbody>
         {block.children &&
           block.children.results.map((child, index) => {

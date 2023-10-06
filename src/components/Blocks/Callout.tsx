@@ -10,7 +10,7 @@ const Callout: React.FC<Props> = ({ block }) => {
   return (
     <div
       id={block.id}
-      className={`notion_block notion_callout notion_color_${block.callout.color}`}
+      className={`notion_callout notion_color_${block.callout.color}`}
     >
       <CalloutIcon icon={block.callout.icon} />
       <div className="notion_callout_content">

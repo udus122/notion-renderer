@@ -11,7 +11,7 @@ const ToDo: React.FC<Props> = ({ block }) => {
   return (
     <div
       id={block.id}
-      className={`notion_block notion_to_do notion_color_${block.to_do.color}`}
+      className={`notion_to_do notion_color_${block.to_do.color}`}
     >
       <div className="notion_to_do_content">
         <span className="notion_to_do_icon">

@@ -6,7 +6,7 @@ type Props = BlockComponentProps<ImageBlockObjectComponent>;
 
 const Image: React.FC<Props> = ({ block }) => {
   return (
-    <div id={block.id} className="notion_block notion_image">
+    <div id={block.id} className="notion_image">
       <img
         src={
           block.image.type == "external"
