@@ -6,7 +6,7 @@ import italicRichText from "./Italic.json";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Italic> = {
-  title: "RichTexts/Annotation/Italic",
+  title: "RichTexts/Italic",
   component: Italic,
   tags: ["autodocs"],
 };

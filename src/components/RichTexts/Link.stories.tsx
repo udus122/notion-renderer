@@ -6,7 +6,7 @@ import LinkRichText from "./Link.json";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Link> = {
-  title: "RichTexts/Text/Link",
+  title: "RichTexts/Link",
   component: Link,
   tags: ["autodocs"],
 };

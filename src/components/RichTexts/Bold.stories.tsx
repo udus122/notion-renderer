@@ -6,7 +6,7 @@ import boldRichText from "./Bold.json";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Bold> = {
-  title: "RichTexts/Annotation/Bold",
+  title: "RichTexts/Bold",
   component: Bold,
   tags: ["autodocs"],
 };

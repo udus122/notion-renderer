@@ -6,7 +6,7 @@ import ColorObject from "./Color.json";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Color> = {
-  title: "RichTexts/Annotation/Color",
+  title: "RichTexts/Color",
   component: Color,
   tags: ["autodocs"],
 };

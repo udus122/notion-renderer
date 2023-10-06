@@ -6,7 +6,7 @@ import inlineCodeRichText from "./InlineCode.json";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof InlineCode> = {
-  title: "RichTexts/Annotation/InlineCode",
+  title: "RichTexts/InlineCode",
   component: InlineCode,
   tags: ["autodocs"],
 };
