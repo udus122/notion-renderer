@@ -183,3 +183,8 @@ td > * {
 .notion_table_of_contents_item > .notion_table_of_contents_item_heading_3 {
   padding-inline-start: calc(1rem * 2);
 }
+/* video block */
+.notion_video > video {
+  block-size: auto;
+  max-inline-size: 100%;
+}

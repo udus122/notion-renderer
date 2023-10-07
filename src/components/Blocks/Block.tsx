@@ -20,6 +20,7 @@ import TableOfContents from "./TableOfContents";
 import ToDo from "./ToDo";
 import Toggle from "./Toggle";
 import Unsupported from "./Unsupported";
+import Video from "./Video";
 
 type Props = BlockComponentProps<BlockObjectComponent>;
 
@@ -63,7 +64,7 @@ const Block: React.FC<Props> = ({
     to_do: ToDo,
     toggle: Toggle,
     unsupported: Unsupported,
-    video: Unsupported,
+    video: Video,
     ...customBlockComponentMapper,
   };
 
