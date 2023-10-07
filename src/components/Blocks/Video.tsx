@@ -23,7 +23,8 @@ const Video: React.FC<Props> = ({ block }) => {
   return (
     <div id={block.id} className="notion_video">
       <video controls src={videoUrl}>
-        Your browser does not support HTML5 videos.
+        Your browser does not support HTML5 videos. You can download video file
+        <a href={videoUrl}>here</a>.
       </video>
       <div className="notion_video_caption">
         <RichTexts richTexts={block.video.caption} />
