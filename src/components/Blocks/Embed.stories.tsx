@@ -1,4 +1,5 @@
 import Embed from "./Embed";
+import EmbedObject from "./Embed.json";
 import EmbedTwitterObject from "./Embed.Twitter.json";
 
 import type { EmbedBlockObjectComponent } from "@/types";
@@ -15,6 +16,12 @@ export default meta;
 type Story = StoryObj<typeof Embed>;
 
 export const Default: Story = {
+  args: {
+    block: EmbedObject as EmbedBlockObjectComponent,
+  },
+};
+
+export const Twitter: Story = {
   args: {
     block: EmbedTwitterObject as EmbedBlockObjectComponent,
   },
