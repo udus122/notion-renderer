@@ -27,7 +27,7 @@ const Pdf: React.FC<Props> = ({ block }) => {
         Your browser does not support pdfs. You can download pdf file
         <a href={pdfUrl}>here</a>.
       </object>
-      <div className="notion_pdf_caption">
+      <div className="notion_caption notion_pdf_caption">
         <RichTexts richTexts={block.pdf.caption} />
       </div>
     </div>

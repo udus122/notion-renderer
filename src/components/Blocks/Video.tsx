@@ -26,7 +26,7 @@ const Video: React.FC<Props> = ({ block }) => {
         Your browser does not support HTML5 videos. You can download video file
         <a href={videoUrl}>here</a>.
       </video>
-      <div className="notion_video_caption">
+      <div className="notion_caption notion_video_caption">
         <RichTexts richTexts={block.video.caption} />
       </div>
     </div>

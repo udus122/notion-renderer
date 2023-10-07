@@ -17,7 +17,7 @@ const Image: React.FC<Props> = ({ block }) => {
         }
         alt={block.image.caption.map((b) => b.plain_text).join("")}
       />
-      <div className="notion_image_caption">
+      <div className="notion_caption notion_image_caption">
         <RichTexts richTexts={block.image.caption} />
       </div>
     </div>

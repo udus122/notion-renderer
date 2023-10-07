@@ -17,7 +17,7 @@ const Audio: React.FC<Props> = ({ block }) => {
         Your browser does not support HTML5 audios. You can download audio file
         <a href={audioUrl}>here</a>.
       </audio>
-      <div className="notion_audio_caption">
+      <div className="notion_caption notion_audio_caption">
         <RichTexts richTexts={block.audio.caption} />
       </div>
     </div>
