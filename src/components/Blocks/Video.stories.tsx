@@ -1,6 +1,6 @@
 import Video from "./Video";
+import VideoExternalObject from "./Video.External.json";
 import VideoFileObject from "./Video.File.json";
-import VideoObject from "./Video.json";
 import VideoYouTubeObject from "./Video.YouTube.json";
 
 import type { VideoBlockObjectComponent } from "@/types";
@@ -18,7 +18,13 @@ type Story = StoryObj<typeof Video>;
 
 export const Default: Story = {
   args: {
-    block: VideoObject as VideoBlockObjectComponent,
+    block: VideoExternalObject as VideoBlockObjectComponent,
+  },
+};
+
+export const External: Story = {
+  args: {
+    block: VideoExternalObject as VideoBlockObjectComponent,
   },
 };
 
