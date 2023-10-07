@@ -1,6 +1,7 @@
 import { BlockComponentProps, BlockObjectComponent } from "@/types";
 
 import Audio from "./Audio";
+import Bookmark from "./Bookmark";
 import BulletedList from "./BulletedList";
 import BulletedListItem from "./BulletedListItem";
 import Callout from "./Callout";
@@ -34,7 +35,7 @@ const Block: React.FC<Props> = ({
 }) => {
   const blockComponentMapper = {
     audio: Audio,
-    bookmark: Unsupported,
+    bookmark: Bookmark,
     breadcrumb: Unsupported,
     bulleted_list: BulletedList,
     bulleted_list_item: BulletedListItem,
