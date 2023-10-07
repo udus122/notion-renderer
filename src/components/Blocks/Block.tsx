@@ -1,5 +1,6 @@
 import { BlockComponentProps, BlockObjectComponent } from "@/types";
 
+import Audio from "./Audio";
 import BulletedList from "./BulletedList";
 import BulletedListItem from "./BulletedListItem";
 import Callout from "./Callout";
@@ -14,6 +15,7 @@ import Image from "./Image";
 import NumberedList from "./NumberedList";
 import NumberedListItem from "./NumberedListItem";
 import Paragraph from "./Paragraph";
+import Pdf from "./Pdf";
 import Quote from "./Quote";
 import Table from "./Table";
 import TableOfContents from "./TableOfContents";
@@ -30,7 +32,7 @@ const Block: React.FC<Props> = ({
   customBlockComponentMapper = {},
 }) => {
   const blockComponentMapper = {
-    audio: Unsupported,
+    audio: Audio,
     bookmark: Unsupported,
     breadcrumb: Unsupported,
     bulleted_list: BulletedList,
@@ -54,7 +56,7 @@ const Block: React.FC<Props> = ({
     numbered_list: NumberedList,
     numbered_list_item: NumberedListItem,
     paragraph: Paragraph,
-    pdf: Unsupported,
+    pdf: Pdf,
     quote: Quote,
     synced_block: Unsupported,
     table: Table,
