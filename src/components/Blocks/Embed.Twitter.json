@@ -1,0 +1,25 @@
+{
+  "object": "block",
+  "id": "a7c9e11f-78ee-4f68-bdee-c19b2532bc4a",
+  "parent": {
+    "type": "page_id",
+    "page_id": "2712e341-754a-41ae-a9ce-4c0bb4b18c52"
+  },
+  "created_time": "2023-03-18T12:21:00.000Z",
+  "last_edited_time": "2023-03-18T12:21:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+  },
+  "has_children": false,
+  "archived": false,
+  "type": "embed",
+  "embed": {
+    "caption": [],
+    "url": "https://twitter.com/ydnjp/status/1604310734930071554"
+  }
+}

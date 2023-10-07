@@ -7,6 +7,7 @@ import Callout from "./Callout";
 import Code from "./Code";
 import ColumnList from "./ColumnList";
 import Divider from "./Divider";
+import Embed from "./Embed";
 import Equation from "./Equation";
 import Heading1 from "./Heading1";
 import Heading2 from "./Heading2";
@@ -44,7 +45,7 @@ const Block: React.FC<Props> = ({
     column: Unsupported,
     column_list: ColumnList,
     divider: Divider,
-    embed: Unsupported,
+    embed: Embed,
     equation: Equation,
     file: Unsupported,
     heading_1: Heading1,
