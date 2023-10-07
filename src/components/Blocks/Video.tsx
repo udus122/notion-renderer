@@ -25,9 +25,9 @@ const Video: React.FC<Props> = ({ block }) => {
       <video controls src={videoUrl}>
         Your browser does not support HTML5 videos.
       </video>
-      <span className="notion_video_caption">
+      <div className="notion_video_caption">
         <RichTexts richTexts={block.video.caption} />
-      </span>
+      </div>
     </div>
   );
 };
