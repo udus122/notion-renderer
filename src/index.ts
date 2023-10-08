@@ -1,2 +1,1 @@
-import { Divider } from "./components/Blocks/Divider";
-export { Divider };
+export { default as Blocks } from "./components/Blocks/Blocks";
