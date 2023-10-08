@@ -3,7 +3,7 @@ import RichTexts from "../RichTexts/RichTexts";
 import type {
   BlockComponentProps,
   BookmarkBlockObjectComponent,
-} from "@/types";
+} from "@/types/components";
 
 type Props = BlockComponentProps<BookmarkBlockObjectComponent>;
 

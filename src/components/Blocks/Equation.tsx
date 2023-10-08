@@ -4,7 +4,7 @@ import { BlockMath } from "react-katex";
 import type {
   BlockComponentProps,
   EquationBlockObjectComponent,
-} from "@/types";
+} from "@/types/components";
 
 type Props = BlockComponentProps<EquationBlockObjectComponent>;
 

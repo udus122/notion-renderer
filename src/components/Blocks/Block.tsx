@@ -1,4 +1,4 @@
-import { BlockComponentProps, BlockObjectComponent } from "@/types";
+import { BlockComponentProps, BlockObjectComponent } from "@/types/components";
 
 import Audio from "./Audio";
 import Bookmark from "./Bookmark";

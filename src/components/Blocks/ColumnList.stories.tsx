@@ -1,7 +1,7 @@
 import ColumnList from "./ColumnList";
 import ColumnListObject from "./ColumnList.json";
 
-import type { ColumnListBlockObjectComponent } from "@/types";
+import type { ColumnListBlockObjectComponent } from "@/types/components";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof ColumnList> = {

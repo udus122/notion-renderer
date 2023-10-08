@@ -5,7 +5,7 @@ import Blocks from "./Blocks";
 import type {
   BlockComponentProps,
   BulletedListItemBlockObjectComponent,
-} from "@/types";
+} from "@/types/components";
 
 type Props = BlockComponentProps<BulletedListItemBlockObjectComponent>;
 

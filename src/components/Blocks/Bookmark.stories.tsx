@@ -1,7 +1,7 @@
 import Bookmark from "./Bookmark";
 import BookmarkObject from "./Bookmark.json";
 
-import type { BookmarkBlockObjectComponent } from "@/types";
+import type { BookmarkBlockObjectComponent } from "@/types/components";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Bookmark> = {

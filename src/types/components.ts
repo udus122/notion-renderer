@@ -1,3 +1,5 @@
+import { Overwrite } from "./utils";
+
 import type {
   AudioBlockObjectResponse,
   BookmarkBlockObjectResponse,
@@ -34,12 +36,6 @@ import type {
   UnsupportedBlockObjectResponse,
   VideoBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
-
-export type Overwrite<T, U extends { [Key in keyof T]?: unknown }> = Omit<
-  T,
-  keyof U
-> &
-  U;
 
 export type BlockComponentProps<T extends BlockObjectComponent> = {
   block: T;

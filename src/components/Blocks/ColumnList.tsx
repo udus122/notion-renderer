@@ -3,7 +3,7 @@ import Blocks from "./Blocks";
 import type {
   BlockComponentProps,
   ColumnListBlockObjectComponent,
-} from "@/types";
+} from "@/types/components";
 
 type Props = BlockComponentProps<ColumnListBlockObjectComponent>;
 

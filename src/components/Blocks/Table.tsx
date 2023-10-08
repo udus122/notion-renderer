@@ -3,7 +3,7 @@ import {
   TableBlockObjectComponent,
   TableCellBlockObjectComponent,
   TableRowBlockObjectComponent,
-} from "@/types";
+} from "@/types/components";
 
 import RichTexts from "../RichTexts/RichTexts";
 

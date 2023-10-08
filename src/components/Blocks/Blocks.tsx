@@ -5,7 +5,7 @@ import type {
   BlockObjectComponent,
   NumberedListBlockObjectComponent,
   ListBlockChildrenComponent,
-} from "@/types";
+} from "@/types/components";
 
 type Props = {
   blocks: ListBlockChildrenComponent;

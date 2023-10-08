@@ -2,7 +2,10 @@ import YouTube from "react-youtube";
 
 import RichTexts from "../RichTexts/RichTexts";
 
-import type { BlockComponentProps, VideoBlockObjectComponent } from "@/types";
+import type {
+  BlockComponentProps,
+  VideoBlockObjectComponent,
+} from "@/types/components";
 
 type Props = BlockComponentProps<VideoBlockObjectComponent>;
 

@@ -2,7 +2,7 @@ import Audio from "./Audio";
 import AudioExternalObject from "./Audio.External.json";
 import AudioFileObject from "./Audio.File.json";
 
-import type { AudioBlockObjectComponent } from "@/types";
+import type { AudioBlockObjectComponent } from "@/types/components";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Audio> = {

@@ -2,7 +2,10 @@ import { TwitterTweetEmbed } from "react-twitter-embed";
 
 import RichTexts from "../RichTexts/RichTexts";
 
-import type { BlockComponentProps, EmbedBlockObjectComponent } from "@/types";
+import type {
+  BlockComponentProps,
+  EmbedBlockObjectComponent,
+} from "@/types/components";
 
 type Props = BlockComponentProps<EmbedBlockObjectComponent>;
 

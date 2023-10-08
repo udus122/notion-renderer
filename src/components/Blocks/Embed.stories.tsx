@@ -2,7 +2,7 @@ import Embed from "./Embed";
 import EmbedObject from "./Embed.json";
 import EmbedTwitterObject from "./Embed.Twitter.json";
 
-import type { EmbedBlockObjectComponent } from "@/types";
+import type { EmbedBlockObjectComponent } from "@/types/components";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Embed> = {

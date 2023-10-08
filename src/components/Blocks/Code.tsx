@@ -3,7 +3,10 @@ import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 import RichTexts from "../RichTexts/RichTexts";
 
-import type { BlockComponentProps, CodeBlockObjectComponent } from "@/types";
+import type {
+  BlockComponentProps,
+  CodeBlockObjectComponent,
+} from "@/types/components";
 
 type Props = BlockComponentProps<CodeBlockObjectComponent>;
 

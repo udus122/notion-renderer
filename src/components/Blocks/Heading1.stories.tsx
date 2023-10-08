@@ -2,7 +2,7 @@ import Heading1 from "./Heading1";
 import Heading1Object from "./Heading1.json";
 import Heading1Toggleable from "./Heading1.Toggleable.json";
 
-import type { Heading1BlockObjectComponent } from "@/types";
+import type { Heading1BlockObjectComponent } from "@/types/components";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Heading1> = {

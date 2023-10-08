@@ -5,7 +5,7 @@ import TableOfContentsObject from "./TableOfContents.json";
 import type {
   ListBlockChildrenComponent,
   TableOfContentsBlockObjectComponent,
-} from "@/types";
+} from "@/types/components";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof TableOfContents> = {

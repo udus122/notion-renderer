@@ -1,6 +1,9 @@
 import RichTexts from "../RichTexts/RichTexts";
 
-import type { BlockComponentProps, PdfBlockObjectComponent } from "@/types";
+import type {
+  BlockComponentProps,
+  PdfBlockObjectComponent,
+} from "@/types/components";
 
 type Props = BlockComponentProps<PdfBlockObjectComponent>;
 

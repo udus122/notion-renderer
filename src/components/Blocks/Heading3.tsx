@@ -5,7 +5,7 @@ import Blocks from "./Blocks";
 import type {
   BlockComponentProps,
   Heading3BlockObjectComponent,
-} from "@/types";
+} from "@/types/components";
 
 type Props = BlockComponentProps<Heading3BlockObjectComponent>;
 

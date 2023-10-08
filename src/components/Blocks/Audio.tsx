@@ -1,6 +1,9 @@
 import RichTexts from "../RichTexts/RichTexts";
 
-import type { BlockComponentProps, AudioBlockObjectComponent } from "@/types";
+import type {
+  BlockComponentProps,
+  AudioBlockObjectComponent,
+} from "@/types/components";
 
 type Props = BlockComponentProps<AudioBlockObjectComponent>;
 

@@ -1,6 +1,9 @@
 import RichTexts from "../RichTexts/RichTexts";
 
-import type { BlockComponentProps, ImageBlockObjectComponent } from "@/types";
+import type {
+  BlockComponentProps,
+  ImageBlockObjectComponent,
+} from "@/types/components";
 
 type Props = BlockComponentProps<ImageBlockObjectComponent>;
 

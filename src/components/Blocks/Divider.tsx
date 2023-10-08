@@ -1,4 +1,7 @@
-import type { BlockComponentProps, DividerBlockObjectComponent } from "@/types";
+import type {
+  BlockComponentProps,
+  DividerBlockObjectComponent,
+} from "@/types/components";
 
 type Props = BlockComponentProps<DividerBlockObjectComponent>;
 

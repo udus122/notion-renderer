@@ -1,7 +1,7 @@
 import Callout from "./Callout";
 import CalloutObject from "./Callout.json";
 
-import type { CalloutBlockObjectComponent } from "@/types";
+import type { CalloutBlockObjectComponent } from "@/types/components";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Callout> = {

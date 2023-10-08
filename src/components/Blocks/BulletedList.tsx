@@ -3,7 +3,7 @@ import BulletedListItem from "./BulletedListItem";
 import type {
   BlockComponentProps,
   BulletedListBlockObjectComponent,
-} from "@/types";
+} from "@/types/components";
 
 type Props = BlockComponentProps<BulletedListBlockObjectComponent>;
 

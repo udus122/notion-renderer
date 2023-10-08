@@ -2,7 +2,10 @@ import RichTexts from "../RichTexts/RichTexts";
 
 import Blocks from "./Blocks";
 
-import type { BlockComponentProps, ToggleBlockObjectComponent } from "@/types";
+import type {
+  BlockComponentProps,
+  ToggleBlockObjectComponent,
+} from "@/types/components";
 
 type Props = BlockComponentProps<ToggleBlockObjectComponent>;
 

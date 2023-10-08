@@ -2,7 +2,7 @@ import Pdf from "./Pdf";
 import PdfExternalObject from "./Pdf.External.json";
 import PdfFileObject from "./Pdf.File.json";
 
-import type { PdfBlockObjectComponent } from "@/types";
+import type { PdfBlockObjectComponent } from "@/types/components";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Pdf> = {

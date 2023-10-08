@@ -3,7 +3,7 @@ import NumberedListItem from "./NumberedListItem";
 import type {
   BlockComponentProps,
   NumberedListBlockObjectComponent,
-} from "@/types";
+} from "@/types/components";
 
 type Props = BlockComponentProps<NumberedListBlockObjectComponent>;
 
