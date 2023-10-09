@@ -34,6 +34,7 @@ const RichText = ({
       return <TypeMention richTextItem={richTextItem} />;
     }
     default:
+      console.warn(`${(richTextItem as { type: never }).type} is never.`);
       return null;
   }
 };
