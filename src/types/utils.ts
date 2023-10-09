@@ -4,7 +4,7 @@ export type Overwrite<T, U extends { [Key in keyof T]?: unknown }> = Omit<
 > &
   U;
 
-export type Result<T, E> =
+export type Result<T, E extends Error = Error> =
   | {
       payload: T;
       error?: undefined;
