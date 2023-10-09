@@ -29,6 +29,12 @@
   "include": [
     "src"
   ],
+  "ts-node": {
+    "esm": true,
+    "require": [
+      "tsconfig-paths/register"
+    ]
+  },
   "references": [
     {
       "path": "./tsconfig.node.json"
