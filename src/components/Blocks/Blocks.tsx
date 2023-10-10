@@ -46,7 +46,7 @@ const Blocks: React.FC<Props> = function ({
         const bulletedList = {
           id,
           type: "bulleted_list",
-          items: [currBlock],
+          bulleted_list: { items: [currBlock] },
         } satisfies BulletedListBlockObjectComponent;
         return [...prevList, bulletedList];
       }
@@ -58,7 +58,7 @@ const Blocks: React.FC<Props> = function ({
         const numberedList = {
           id,
           type: "numbered_list",
-          items: [currBlock],
+          numbered_list: { items: [currBlock] },
         } satisfies NumberedListBlockObjectComponent;
         return [...prevList, numberedList];
       }
@@ -70,14 +70,20 @@ const Blocks: React.FC<Props> = function ({
         currBlock.type === "bulleted_list_item" &&
         prevBlock?.type === "bulleted_list"
       ) {
-        prevBlock.items = [...prevBlock.items, currBlock];
+        prevBlock.bulleted_list.items = [
+          ...prevBlock.bulleted_list.items,
+          currBlock,
+        ];
       }
       if (
         // numbered_list_item
         currBlock.type === "numbered_list_item" &&
         prevBlock?.type === "numbered_list"
       ) {
-        prevBlock.items = [...prevBlock.items, currBlock];
+        prevBlock.numbered_list.items = [
+          ...prevBlock.numbered_list.items,
+          currBlock,
+        ];
       }
 
       // If the condition is not met, do not display/render.

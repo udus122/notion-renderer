@@ -3,12 +3,53 @@ import {
   isNotionClientError,
   APIErrorCode,
   ClientErrorCode,
+  isFullBlock,
 } from "@notionhq/client";
+import openGraphScraper from "open-graph-scraper";
 
+import type {
+  AudioBlockObjectComponent,
+  BlockObjectComponent,
+  BookmarkBlockObjectComponent,
+  BreadcrumbBlockObjectComponent,
+  BulletedListItemBlockObjectComponent,
+  CalloutBlockObjectComponent,
+  ChildDatabaseBlockObjectComponent,
+  ChildPageBlockObjectComponent,
+  CodeBlockObjectComponent,
+  ColumnBlockObjectComponent,
+  ColumnListBlockObjectComponent,
+  DividerBlockObjectComponent,
+  EmbedBlockObjectComponent,
+  EquationBlockObjectComponent,
+  FileBlockObjectComponent,
+  Heading1BlockObjectComponent,
+  Heading2BlockObjectComponent,
+  Heading3BlockObjectComponent,
+  ImageBlockObjectComponent,
+  LinkPreviewBlockObjectComponent,
+  LinkToPageBlockObjectComponent,
+  ListBlockChildrenResponseResults,
+  NumberedListItemBlockObjectComponent,
+  ParagraphBlockObjectComponent,
+  PdfBlockObjectComponent,
+  QuoteBlockObjectComponent,
+  SyncedBlockBlockObjectComponent,
+  TableBlockObjectComponent,
+  TableOfContentsBlockObjectComponent,
+  TableRowBlockObjectComponent,
+  TemplateBlockObjectComponent,
+  ToDoBlockObjectComponent,
+  ToggleBlockObjectComponent,
+  UnsupportedBlockObjectComponent,
+  VideoBlockObjectComponent,
+} from "@/types/components";
 import type { Result } from "@/types/utils";
 import type {
+  BlockObjectResponse,
   ListBlockChildrenParameters,
   ListBlockChildrenResponse,
+  PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 
 export const notion = new Client({
@@ -77,7 +118,7 @@ const callAPIWithBackOff = async <Args, Item>(
 
 export const listBlockChildren = async (
   args: ListBlockChildrenParameters
-): Promise<ListBlockChildrenResponse["results"]> => {
+): Promise<ListBlockChildrenResponseResults> => {
   const { payload, error } = await callAPIWithBackOff<
     ListBlockChildrenParameters,
     ListBlockChildrenResponse
@@ -96,3 +137,310 @@ export const listBlockChildren = async (
   }
   return [];
 };
+
+// TODO: utils.ts/helpers.tsへ移動させる
+export const notNull = <T>(v: T | null): v is T => {
+  return v !== null;
+};
+
+export const resolveBlockChildren = async (
+  blocks: ListBlockChildrenResponseResults
+): Promise<Array<BlockObjectComponent>> => {
+  const blockObjectComponents = await Promise.all(
+    blocks.map(
+      async (child_block) => await convertBlockToComponent(child_block)
+    )
+  );
+  const nonNullBlockObjectComponents = blockObjectComponents.filter(notNull);
+  return nonNullBlockObjectComponents;
+};
+
+export const fetchBlockComponents = async (blockId: string) => {
+  const childrenBlockResponses = await listBlockChildren({
+    block_id: blockId,
+  });
+  const childrenBlockComponents = await resolveBlockChildren(
+    childrenBlockResponses
+  );
+  return childrenBlockComponents;
+};
+
+export const convertBlockToComponent = async (
+  block: BlockObjectResponse | PartialBlockObjectResponse
+): Promise<BlockObjectComponent | null> => {
+  if (!isFullBlock(block)) {
+    return null;
+  }
+  switch (block.type) {
+    case "audio": {
+      return block as AudioBlockObjectComponent;
+    }
+    case "bookmark": {
+      // TODO: OGP取得して返す
+      const bookmarkObject = block as BookmarkBlockObjectComponent;
+      bookmarkObject.bookmark.og_meta = await scrapeOgMeta(block.bookmark.url);
+      return bookmarkObject;
+    }
+    case "breadcrumb": {
+      // TODO: Parent Pageの情報を取れるところまで取得して、返す
+      // NOTE: 権限でPageを取得できなかったなど判定できる?
+      const breadcrumbBlockObject = block as BreadcrumbBlockObjectComponent;
+      return breadcrumbBlockObject;
+    }
+    case "bulleted_list_item": {
+      if (block.has_children) {
+        const children = await fetchBlockComponents(block.id);
+        return {
+          ...block,
+          bulleted_list_item: {
+            ...block.bulleted_list_item,
+            children,
+          },
+        } satisfies BulletedListItemBlockObjectComponent;
+      }
+      return {
+        ...block,
+      } satisfies BulletedListItemBlockObjectComponent;
+    }
+    case "callout": {
+      if (block.has_children) {
+        const children = await fetchBlockComponents(block.id);
+        return {
+          ...block,
+          callout: {
+            ...block.callout,
+            children,
+          },
+        } satisfies CalloutBlockObjectComponent;
+      }
+      return {
+        ...block,
+      } satisfies CalloutBlockObjectComponent;
+    }
+    case "child_database": {
+      // TODO: datababaseを取得する
+      return block as ChildDatabaseBlockObjectComponent;
+    }
+    case "child_page": {
+      // TODO: pageを取得する
+      return block as ChildPageBlockObjectComponent;
+    }
+    case "code": {
+      return block as CodeBlockObjectComponent;
+    }
+    case "column": {
+      return block as ColumnBlockObjectComponent;
+    }
+    case "column_list": {
+      // TODO: childrenとcolumnsの整理をして返す
+      return block as ColumnListBlockObjectComponent;
+    }
+    case "divider": {
+      return block as DividerBlockObjectComponent;
+    }
+    case "embed": {
+      return block as EmbedBlockObjectComponent;
+    }
+    case "equation": {
+      return block as EquationBlockObjectComponent;
+    }
+    case "file": {
+      return block as FileBlockObjectComponent;
+    }
+    case "heading_1": {
+      if (block.has_children) {
+        const children = await fetchBlockComponents(block.id);
+        return {
+          ...block,
+          heading_1: {
+            ...block.heading_1,
+            children,
+          },
+        } satisfies Heading1BlockObjectComponent;
+      }
+      return {
+        ...block,
+      } satisfies Heading1BlockObjectComponent;
+    }
+    case "heading_2": {
+      if (block.has_children) {
+        const children = await fetchBlockComponents(block.id);
+        return {
+          ...block,
+          heading_2: {
+            ...block.heading_2,
+            children,
+          },
+        } satisfies Heading2BlockObjectComponent;
+      }
+      return {
+        ...block,
+      } satisfies Heading2BlockObjectComponent;
+    }
+    case "heading_3": {
+      if (block.has_children) {
+        const children = await fetchBlockComponents(block.id);
+        return {
+          ...block,
+          heading_3: {
+            ...block.heading_3,
+            children,
+          },
+        } satisfies Heading3BlockObjectComponent;
+      }
+      return {
+        ...block,
+      } satisfies Heading3BlockObjectComponent;
+    }
+    case "image": {
+      return block as ImageBlockObjectComponent;
+    }
+    case "link_preview": {
+      return block as LinkPreviewBlockObjectComponent;
+    }
+    case "link_to_page": {
+      // TODO: pageを取得する
+      return block as LinkToPageBlockObjectComponent;
+    }
+    case "numbered_list_item": {
+      if (block.has_children) {
+        const children = await fetchBlockComponents(block.id);
+        return {
+          ...block,
+          numbered_list_item: {
+            ...block.numbered_list_item,
+            children,
+          },
+        } satisfies NumberedListItemBlockObjectComponent;
+      }
+      return {
+        ...block,
+      } satisfies NumberedListItemBlockObjectComponent;
+    }
+    case "paragraph": {
+      if (block.has_children) {
+        const children = await fetchBlockComponents(block.id);
+        return {
+          ...block,
+          paragraph: {
+            ...block.paragraph,
+            children,
+          },
+        } satisfies ParagraphBlockObjectComponent;
+      }
+      return {
+        ...block,
+      } satisfies ParagraphBlockObjectComponent;
+    }
+    case "pdf": {
+      return block as PdfBlockObjectComponent;
+    }
+    case "quote": {
+      if (block.has_children) {
+        const children = await fetchBlockComponents(block.id);
+        return {
+          ...block,
+          quote: {
+            ...block.quote,
+            children,
+          },
+        } satisfies QuoteBlockObjectComponent;
+      }
+      return {
+        ...block,
+      } satisfies QuoteBlockObjectComponent;
+    }
+    case "synced_block": {
+      // TODO: blockを取得する
+      return block as SyncedBlockBlockObjectComponent;
+    }
+    case "table": {
+      // TODO: childrenを取得する
+      return block as TableBlockObjectComponent;
+    }
+    case "table_of_contents": {
+      return block as TableOfContentsBlockObjectComponent;
+    }
+    case "table_row": {
+      return block as TableRowBlockObjectComponent;
+    }
+    case "template": {
+      return block as TemplateBlockObjectComponent;
+    }
+    case "to_do": {
+      if (block.has_children) {
+        const children = await fetchBlockComponents(block.id);
+        return {
+          ...block,
+          to_do: {
+            ...block.to_do,
+            children,
+          },
+        } satisfies ToDoBlockObjectComponent;
+      }
+      return {
+        ...block,
+      } satisfies ToDoBlockObjectComponent;
+    }
+    case "toggle": {
+      if (block.has_children) {
+        const children = await fetchBlockComponents(block.id);
+        return {
+          ...block,
+          toggle: {
+            ...block.toggle,
+            children,
+          },
+        } satisfies ToggleBlockObjectComponent;
+      }
+      return {
+        ...block,
+      } satisfies ToggleBlockObjectComponent;
+    }
+    case "unsupported": {
+      return block as UnsupportedBlockObjectComponent;
+    }
+    case "video": {
+      return block as VideoBlockObjectComponent;
+    }
+    default: {
+      return null;
+    }
+  }
+};
+
+export const scrapeOgMeta = async (
+  url: string
+): Promise<
+  | {
+      title?: string;
+      description?: string;
+      image?: {
+        url: string;
+        type?: string;
+        width?: number;
+        height?: number;
+      };
+      icon?: string;
+    }
+  | undefined
+> => {
+  const { error, result } = await openGraphScraper({ url });
+  if (!error) {
+    const { ogTitle, ogDescription, ogImage, favicon } = result;
+    return {
+      title: ogTitle,
+      description: ogDescription,
+      image: ogImage ? ogImage[0] : undefined,
+      icon: favicon,
+    };
+  }
+  return undefined;
+};
+
+(async () => {
+  const og_meta = await scrapeOgMeta(
+    "https://zenn.dev/mongolyy/articles/61efb38c34bc3c"
+  );
+  console.log(og_meta);
+})();

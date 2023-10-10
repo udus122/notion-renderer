@@ -10,7 +10,7 @@ type Props = BlockComponentProps<BulletedListBlockObjectComponent>;
 const BulletedList: React.FC<Props> = ({ block }) => {
   return (
     <ul className="notion_bulleted_list">
-      {block.items.map((item) => {
+      {block.bulleted_list.items.map((item) => {
         return <BulletedListItem key={item.id} block={item} />;
       })}
     </ul>
