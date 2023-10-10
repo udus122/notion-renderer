@@ -10,6 +10,8 @@ import type {
   CodeBlockObjectResponse,
   ColumnBlockObjectResponse,
   ColumnListBlockObjectResponse,
+  CommentObjectResponse,
+  DatabaseObjectResponse,
   DividerBlockObjectResponse,
   EmbedBlockObjectResponse,
   EquationBlockObjectResponse,
@@ -22,6 +24,7 @@ import type {
   LinkToPageBlockObjectResponse,
   ListBlockChildrenResponse,
   NumberedListItemBlockObjectResponse,
+  PageObjectResponse,
   ParagraphBlockObjectResponse,
   PdfBlockObjectResponse,
   QuoteBlockObjectResponse,
@@ -38,6 +41,8 @@ import type {
 
 export type ListBlockChildrenResponseResults =
   ListBlockChildrenResponse["results"];
+
+export type IdRequest = string | string;
 
 export type BlockComponentProps<T extends BlockObjectComponent> = {
   block: T;
@@ -112,11 +117,14 @@ export type BookmarkBlockObjectComponent = BookmarkBlockObjectResponse & {
   };
 };
 
-export type BreadcrumbBlockObjectComponent = BreadcrumbBlockObjectResponse;
+export type BreadcrumbBlockObjectComponent = BreadcrumbBlockObjectResponse & {
+  breadcrumb: {
+    parents: Array<PageObjectResponse | DatabaseObjectResponse>;
+  };
+};
 
 export type BulletedListBlockObjectComponent = {
   id: string;
-  // items: Array<BulletedListItemBlockObjectComponent>;
   type: "bulleted_list";
   bulleted_list: {
     items: Array<BulletedListItemBlockObjectComponent>;
@@ -135,9 +143,17 @@ export type CalloutBlockObjectComponent = CalloutBlockObjectResponse & {
 };
 
 export type ChildDatabaseBlockObjectComponent =
-  ChildDatabaseBlockObjectResponse;
+  ChildDatabaseBlockObjectResponse & {
+    child_database: {
+      database?: DatabaseObjectResponse;
+    };
+  };
 
-export type ChildPageBlockObjectComponent = ChildPageBlockObjectResponse;
+export type ChildPageBlockObjectComponent = ChildPageBlockObjectResponse & {
+  child_page: {
+    page?: PageObjectResponse;
+  };
+};
 
 export type CodeBlockObjectComponent = CodeBlockObjectResponse;
 
@@ -173,7 +189,24 @@ export type ImageBlockObjectComponent = ImageBlockObjectResponse;
 
 export type LinkPreviewBlockObjectComponent = LinkPreviewBlockObjectResponse;
 
-export type LinkToPageBlockObjectComponent = LinkToPageBlockObjectResponse;
+export type LinkToPageBlockObjectComponent = LinkToPageBlockObjectResponse & {
+  link_to_page:
+    | {
+        type: "page_id";
+        page_id: IdRequest;
+        page: PageObjectResponse;
+      }
+    | {
+        type: "database_id";
+        database_id: IdRequest;
+        database: DatabaseObjectResponse;
+      }
+    | {
+        type: "comment_id";
+        comment_id: IdRequest;
+        comment: CommentObjectResponse;
+      };
+};
 
 export type NumberedListBlockObjectComponent = {
   id: string;
@@ -196,7 +229,15 @@ export type QuoteBlockObjectComponent = QuoteBlockObjectResponse & {
   quote: { children?: Array<BlockObjectComponent> };
 };
 
-export type SyncedBlockBlockObjectComponent = SyncedBlockBlockObjectResponse;
+export type SyncedBlockBlockObjectComponent = SyncedBlockBlockObjectResponse & {
+  synced_block: {
+    synced_from: {
+      type: "block_id";
+      block_id: IdRequest;
+      block: BlockObjectComponent;
+    } | null;
+  };
+};
 
 export type TableBlockObjectComponent = TableBlockObjectResponse & {
   children?: Overwrite<
