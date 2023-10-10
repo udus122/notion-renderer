@@ -118,9 +118,7 @@ export type CodeBlockObjectComponent = CodeBlockObjectResponse & {
   children?: ListBlockChildrenComponent;
 };
 
-export type ColumnBlockObjectComponent = ColumnBlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
-};
+export type ColumnBlockObjectComponent = ColumnBlockObjectResponse;
 
 export type ColumnListBlockObjectComponent = ColumnListBlockObjectResponse & {
   children?: ListBlockChildrenComponent<ColumnBlockObjectComponent>;
@@ -132,9 +130,7 @@ export type DividerBlockObjectComponent = DividerBlockObjectResponse;
 
 export type EmbedBlockObjectComponent = EmbedBlockObjectResponse;
 
-export type EquationBlockObjectComponent = EquationBlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
-};
+export type EquationBlockObjectComponent = EquationBlockObjectResponse;
 
 export type FileBlockObjectComponent = FileBlockObjectResponse;
 
@@ -150,9 +146,7 @@ export type Heading3BlockObjectComponent = Heading3BlockObjectResponse & {
   children?: ListBlockChildrenComponent;
 };
 
-export type ImageBlockObjectComponent = ImageBlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
-};
+export type ImageBlockObjectComponent = ImageBlockObjectResponse;
 
 export type LinkPreviewBlockObjectComponent = LinkPreviewBlockObjectResponse;
 
