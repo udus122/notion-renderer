@@ -19,7 +19,7 @@ const Toggle: React.FC<Props> = ({ block }) => {
         <RichTexts richTexts={block.toggle.rich_text} />
       </summary>
       <div className="notion_toggle_details">
-        {block.children && <Blocks blocks={block.children} />}
+        {block.toggle.children && <Blocks blocks={block.toggle.children} />}
       </div>
     </details>
   );

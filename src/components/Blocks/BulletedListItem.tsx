@@ -16,7 +16,11 @@ const BulletedListItem: React.FC<Props> = ({ block }) => {
       className={`notion_bulleted_list_item notion_color_${block.bulleted_list_item.color}`}
     >
       <RichTexts richTexts={block.bulleted_list_item.rich_text} />
-      <div>{block.children && <Blocks blocks={block.children} />}</div>
+      <div>
+        {block.bulleted_list_item.children && (
+          <Blocks blocks={block.bulleted_list_item.children} />
+        )}
+      </div>
     </li>
   );
 };

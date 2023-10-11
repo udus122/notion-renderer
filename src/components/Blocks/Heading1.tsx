@@ -23,7 +23,9 @@ const Heading1: React.FC<Props> = ({ block }) => {
             </h1>
           </summary>
           <div className="notion_toggle_details">
-            {block.children && <Blocks blocks={block.children} />}
+            {block.heading_1.children && (
+              <Blocks blocks={block.heading_1.children} />
+            )}
           </div>
         </details>
       ) : (

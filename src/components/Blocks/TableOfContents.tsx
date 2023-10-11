@@ -11,7 +11,7 @@ import type {
 type Props = BlockComponentProps<TableOfContentsBlockObjectComponent>;
 
 const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
-  const headings = blocks?.results.filter(
+  const headings = blocks?.filter(
     (
       block
     ): block is

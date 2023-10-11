@@ -20,7 +20,7 @@ const Callout: React.FC<Props> = ({ block }) => {
         <span>
           <RichTexts richTexts={block.callout.rich_text} />
         </span>
-        {block.children && <Blocks blocks={block.children} />}
+        {block.callout.children && <Blocks blocks={block.callout.children} />}
       </div>
     </div>
   );

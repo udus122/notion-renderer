@@ -24,9 +24,9 @@ const ToDo: React.FC<Props> = ({ block }) => {
           <RichTexts richTexts={block.to_do.rich_text} />
         </span>
       </div>
-      {block.children && (
+      {block.to_do.children && (
         <div className="notion_to_do_children">
-          <Blocks blocks={block.children} />
+          <Blocks blocks={block.to_do.children} />
         </div>
       )}
     </div>
