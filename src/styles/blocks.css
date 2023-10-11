@@ -99,6 +99,20 @@ h3 {
   border-radius: 3px;
   box-shadow: none;
 }
+.notion_callout_icon {
+  display: inline-flex;
+  width: 1.5em;
+  height: 1.5em;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.notion_callout_icon > img {
+  block-size: auto;
+  max-inline-size: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.25em;
+}
 .notion_callout_content {
   display: flex;
   flex-direction: column;
