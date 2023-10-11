@@ -5,6 +5,8 @@ import Bookmark from "./Bookmark";
 import BulletedList from "./BulletedList";
 import BulletedListItem from "./BulletedListItem";
 import Callout from "./Callout";
+import ChildDatabase from "./ChildDatabase";
+import ChildPage from "./ChildPage";
 import Code from "./Code";
 import ColumnList from "./ColumnList";
 import Divider from "./Divider";
@@ -14,11 +16,13 @@ import Heading1 from "./Heading1";
 import Heading2 from "./Heading2";
 import Heading3 from "./Heading3";
 import Image from "./Image";
+import LinkToPage from "./LinkToPage";
 import NumberedList from "./NumberedList";
 import NumberedListItem from "./NumberedListItem";
 import Paragraph from "./Paragraph";
 import Pdf from "./Pdf";
 import Quote from "./Quote";
+import SyncedBlock from "./SyncedBlock";
 import Table from "./Table";
 import TableOfContents from "./TableOfContents";
 import ToDo from "./ToDo";
@@ -58,8 +62,8 @@ const BlockComponent: React.FC<Props> = ({
     bulleted_list: BulletedList,
     bulleted_list_item: BulletedListItem,
     callout: Callout,
-    child_database: Unsupported,
-    child_page: Unsupported,
+    child_database: ChildDatabase,
+    child_page: ChildPage,
     code: Code,
     column: Unsupported,
     column_list: ColumnList,
@@ -72,13 +76,13 @@ const BlockComponent: React.FC<Props> = ({
     heading_3: Heading3,
     image: Image,
     link_preview: Unsupported,
-    link_to_page: Unsupported,
+    link_to_page: LinkToPage,
     numbered_list: NumberedList,
     numbered_list_item: NumberedListItem,
     paragraph: Paragraph,
     pdf: Pdf,
     quote: Quote,
-    synced_block: Unsupported,
+    synced_block: SyncedBlock,
     table: Table,
     table_of_contents: TableOfContents,
     table_row: Unsupported,

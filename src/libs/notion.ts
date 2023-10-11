@@ -595,16 +595,30 @@ export const convertBlockToComponent = async (
       } satisfies QuoteBlockObjectComponent;
     }
     case "synced_block": {
-      if (block.synced_block.synced_from) {
-        const duplicatedBlock =
-          (await fetchBlockComponent(
-            block.synced_block.synced_from.block_id
-          )) ?? undefined;
+      if (block.has_children) {
+        const children = await fetchBlockComponents(block.id);
+        if (block.synced_block.synced_from) {
+          const duplicatedBlock =
+            (await fetchBlockComponent(
+              block.synced_block.synced_from.block_id
+            )) ?? undefined;
+          return {
+            ...block,
+            synced_block: {
+              ...block.synced_block,
+              synced_from: {
+                ...block.synced_block.synced_from,
+                block: duplicatedBlock,
+              },
+              children: children.length === 0 ? undefined : children,
+            },
+          } satisfies SyncedBlockBlockObjectComponent;
+        }
         return {
           ...block,
           synced_block: {
             ...block.synced_block,
-            block: duplicatedBlock,
+            children,
           },
         } satisfies SyncedBlockBlockObjectComponent;
       }

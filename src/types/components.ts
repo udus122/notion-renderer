@@ -258,8 +258,9 @@ export type SyncedBlockBlockObjectComponent = SyncedBlockBlockObjectResponse & {
     synced_from: {
       type: "block_id";
       block_id: IdRequest;
+      block?: BlockObjectComponent;
     } | null;
-    block?: BlockObjectComponent;
+    children?: Array<BlockObjectComponent>;
   };
 };
 
