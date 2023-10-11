@@ -232,7 +232,7 @@ export const fetchDatabase = async (databaseId: string) => {
   return database;
 };
 
-export const fetchpage = async (pageId: string) => {
+export const fetchPage = async (pageId: string) => {
   const page = await retrievePage({ page_id: pageId });
   if (!page) {
     return;
@@ -240,6 +240,7 @@ export const fetchpage = async (pageId: string) => {
   if (!isFullPage(page)) {
     return;
   }
+  // TODO: propertiesをすべて取得する
   return page;
 };
 
@@ -422,7 +423,7 @@ export const convertBlockToComponent = async (
       } satisfies ChildDatabaseBlockObjectComponent;
     }
     case "child_page": {
-      const childPage = await retrievePage({ page_id: block.id });
+      const childPage = await fetchPage(block.id);
       return {
         ...block,
         child_page: {
