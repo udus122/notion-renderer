@@ -51,6 +51,8 @@ import type {
 import type { Result } from "@/types/utils";
 import type {
   BlockObjectResponse,
+  GetBlockParameters,
+  GetBlockResponse,
   ListBlockChildrenParameters,
   ListBlockChildrenResponse,
   PartialBlockObjectResponse,
@@ -284,10 +286,14 @@ export const convertBlockToComponent = async (
       return block as AudioBlockObjectComponent;
     }
     case "bookmark": {
-      // TODO: OGP取得して返す
-      const bookmarkObject = block as BookmarkBlockObjectComponent;
-      bookmarkObject.bookmark.og_meta = await scrapeOgMeta(block.bookmark.url);
-      return bookmarkObject;
+      const ogMeta = await scrapeOgMeta(block.bookmark.url);
+      return {
+        ...block,
+        bookmark: {
+          ...block.bookmark,
+          og_meta: ogMeta,
+        },
+      } satisfies BookmarkBlockObjectComponent;
     }
     case "breadcrumb": {
       // TODO: Parent Pageの情報を取れるところまで取得して、返す
