@@ -364,7 +364,7 @@ export const convertBlockToComponent = async (
   }
   switch (block.type) {
     case "audio": {
-      return block as AudioBlockObjectComponent;
+      return { ...block } satisfies AudioBlockObjectComponent;
     }
     case "bookmark": {
       const ogMeta = await scrapeOgMeta(block.bookmark.url);
@@ -433,26 +433,26 @@ export const convertBlockToComponent = async (
       } satisfies ChildPageBlockObjectComponent;
     }
     case "code": {
-      return block as CodeBlockObjectComponent;
+      return { ...block } satisfies CodeBlockObjectComponent;
     }
     case "column": {
-      return block as ColumnBlockObjectComponent;
+      return { ...block } satisfies ColumnBlockObjectComponent;
     }
     case "column_list": {
       // TODO: childrenとcolumnsの整理をして返す
-      return block as ColumnListBlockObjectComponent;
+      return { ...block } as ColumnListBlockObjectComponent;
     }
     case "divider": {
-      return block as DividerBlockObjectComponent;
+      return { ...block } satisfies DividerBlockObjectComponent;
     }
     case "embed": {
-      return block as EmbedBlockObjectComponent;
+      return { ...block } satisfies EmbedBlockObjectComponent;
     }
     case "equation": {
-      return block as EquationBlockObjectComponent;
+      return { ...block } satisfies EquationBlockObjectComponent;
     }
     case "file": {
-      return block as FileBlockObjectComponent;
+      return { ...block } satisfies FileBlockObjectComponent;
     }
     case "heading_1": {
       if (block.has_children) {
@@ -500,10 +500,10 @@ export const convertBlockToComponent = async (
       } satisfies Heading3BlockObjectComponent;
     }
     case "image": {
-      return block as ImageBlockObjectComponent;
+      return { ...block } satisfies ImageBlockObjectComponent;
     }
     case "link_preview": {
-      return block as LinkPreviewBlockObjectComponent;
+      return { ...block } satisfies LinkPreviewBlockObjectComponent;
     }
     case "link_to_page": {
       switch (block.link_to_page.type) {
@@ -577,7 +577,7 @@ export const convertBlockToComponent = async (
       } satisfies ParagraphBlockObjectComponent;
     }
     case "pdf": {
-      return block as PdfBlockObjectComponent;
+      return { ...block } satisfies PdfBlockObjectComponent;
     }
     case "quote": {
       if (block.has_children) {
@@ -644,13 +644,13 @@ export const convertBlockToComponent = async (
       } satisfies TableBlockObjectComponent;
     }
     case "table_of_contents": {
-      return block as TableOfContentsBlockObjectComponent;
+      return { ...block } satisfies TableOfContentsBlockObjectComponent;
     }
     case "table_row": {
       return { ...block } satisfies TableRowBlockObjectComponent;
     }
     case "template": {
-      return block as TemplateBlockObjectComponent;
+      return { ...block } satisfies TemplateBlockObjectComponent;
     }
     case "to_do": {
       if (block.has_children) {
@@ -683,10 +683,10 @@ export const convertBlockToComponent = async (
       } satisfies ToggleBlockObjectComponent;
     }
     case "unsupported": {
-      return block as UnsupportedBlockObjectComponent;
+      return { ...block } satisfies UnsupportedBlockObjectComponent;
     }
     case "video": {
-      return block as VideoBlockObjectComponent;
+      return { ...block } satisfies VideoBlockObjectComponent;
     }
     default: {
       return;
