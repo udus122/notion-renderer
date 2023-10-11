@@ -412,7 +412,7 @@ export const convertBlockToComponent = async (
       } satisfies CalloutBlockObjectComponent;
     }
     case "child_database": {
-      const childDatabase = await retrieveDatabase({ database_id: block.id });
+      const childDatabase = await fetchDatabase(block.id);
       return {
         ...block,
         child_database: {
@@ -531,7 +531,7 @@ export const convertBlockToComponent = async (
           } satisfies LinkToPageBlockObjectComponent;
         }
         case "comment_id": {
-          const linkedComments = await retrieveComment({
+          const linkedComments = await listComments({
             block_id: block.link_to_page.comment_id,
           });
           return {
