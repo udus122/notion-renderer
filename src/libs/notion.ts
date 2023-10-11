@@ -437,10 +437,3 @@ export const scrapeOgMeta = async (
   }
   return undefined;
 };
-
-(async () => {
-  const og_meta = await scrapeOgMeta(
-    "https://zenn.dev/mongolyy/articles/61efb38c34bc3c"
-  );
-  console.log(og_meta);
-})();
