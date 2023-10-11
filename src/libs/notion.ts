@@ -55,8 +55,12 @@ import type {
   GetBlockResponse,
   GetDatabaseParameters,
   GetDatabaseResponse,
+  GetPageParameters,
+  GetPageResponse,
   ListBlockChildrenParameters,
   ListBlockChildrenResponse,
+  ListCommentsParameters,
+  ListCommentsResponse,
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 
@@ -150,6 +154,34 @@ export const retrieveDatabase = async (
     GetDatabaseParameters,
     GetDatabaseResponse
   >(notion.databases.retrieve, args);
+
+  if (!error) {
+    return payload;
+  }
+  return;
+};
+
+export const retrievePage = async (
+  args: GetPageParameters
+): Promise<GetPageResponse | undefined> => {
+  const { payload, error } = await callAPIWithBackOff<
+    GetPageParameters,
+    GetPageResponse
+  >(notion.pages.retrieve, args);
+
+  if (!error) {
+    return payload;
+  }
+  return;
+};
+
+export const retrieveComment = async (
+  args: ListCommentsParameters
+): Promise<ListCommentsResponse | undefined> => {
+  const { payload, error } = await callAPIWithBackOff<
+    ListCommentsParameters,
+    ListCommentsResponse
+  >(notion.comments.list, args);
 
   if (!error) {
     return payload;
@@ -348,12 +380,24 @@ export const convertBlockToComponent = async (
       } satisfies CalloutBlockObjectComponent;
     }
     case "child_database": {
-      // TODO: datababaseを取得する
-      return block as ChildDatabaseBlockObjectComponent;
+      const childDatabase = await retrieveDatabase({ database_id: block.id });
+      return {
+        ...block,
+        child_database: {
+          ...block.child_database,
+          database: childDatabase,
+        },
+      } satisfies ChildDatabaseBlockObjectComponent;
     }
     case "child_page": {
-      // TODO: pageを取得する
-      return block as ChildPageBlockObjectComponent;
+      const childPage = await retrievePage({ page_id: block.id });
+      return {
+        ...block,
+        child_page: {
+          ...block.child_page,
+          page: childPage,
+        },
+      } satisfies ChildPageBlockObjectComponent;
     }
     case "code": {
       return block as CodeBlockObjectComponent;
@@ -429,8 +473,47 @@ export const convertBlockToComponent = async (
       return block as LinkPreviewBlockObjectComponent;
     }
     case "link_to_page": {
-      // TODO: pageを取得する
-      return block as LinkToPageBlockObjectComponent;
+      switch (block.link_to_page.type) {
+        case "database_id": {
+          const linkedDatabase = await retrieveDatabase({
+            database_id: block.link_to_page.database_id,
+          });
+          return {
+            ...block,
+            link_to_page: {
+              ...block.link_to_page,
+              database: linkedDatabase,
+            },
+          } satisfies LinkToPageBlockObjectComponent;
+        }
+        case "page_id": {
+          const linkedPage = await retrievePage({
+            page_id: block.link_to_page.page_id,
+          });
+          return {
+            ...block,
+            link_to_page: {
+              ...block.link_to_page,
+              page: linkedPage,
+            },
+          } satisfies LinkToPageBlockObjectComponent;
+        }
+        case "comment_id": {
+          const linkedComments = await retrieveComment({
+            block_id: block.link_to_page.comment_id,
+          });
+          return {
+            ...block,
+            link_to_page: {
+              ...block.link_to_page,
+              comments: linkedComments,
+            },
+          } satisfies LinkToPageBlockObjectComponent;
+        }
+        default: {
+          return;
+        }
+      }
     }
     case "numbered_list_item": {
       if (block.has_children) {
@@ -579,3 +662,9 @@ export const scrapeOgMeta = async (
   }
   return undefined;
 };
+import "dotenv/config";
+
+(async () => {
+  const res = await fetchBlockComponents("2712e341754a41aea9ce4c0bb4b18c52");
+  console.log(JSON.stringify(res, null, 2));
+})();

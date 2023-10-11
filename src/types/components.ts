@@ -10,12 +10,13 @@ import type {
   CodeBlockObjectResponse,
   ColumnBlockObjectResponse,
   ColumnListBlockObjectResponse,
-  CommentObjectResponse,
   DatabaseObjectResponse,
   DividerBlockObjectResponse,
   EmbedBlockObjectResponse,
   EquationBlockObjectResponse,
   FileBlockObjectResponse,
+  GetDatabaseResponse,
+  GetPageResponse,
   Heading1BlockObjectResponse,
   Heading2BlockObjectResponse,
   Heading3BlockObjectResponse,
@@ -23,6 +24,7 @@ import type {
   LinkPreviewBlockObjectResponse,
   LinkToPageBlockObjectResponse,
   ListBlockChildrenResponse,
+  ListCommentsResponse,
   NumberedListItemBlockObjectResponse,
   PageObjectResponse,
   ParagraphBlockObjectResponse,
@@ -145,13 +147,13 @@ export type CalloutBlockObjectComponent = CalloutBlockObjectResponse & {
 export type ChildDatabaseBlockObjectComponent =
   ChildDatabaseBlockObjectResponse & {
     child_database: {
-      database?: DatabaseObjectResponse;
+      database?: GetDatabaseResponse;
     };
   };
 
 export type ChildPageBlockObjectComponent = ChildPageBlockObjectResponse & {
   child_page: {
-    page?: PageObjectResponse;
+    page?: GetPageResponse;
   };
 };
 
@@ -194,17 +196,17 @@ export type LinkToPageBlockObjectComponent = LinkToPageBlockObjectResponse & {
     | {
         type: "page_id";
         page_id: IdRequest;
-        page: PageObjectResponse;
+        page?: GetPageResponse;
       }
     | {
         type: "database_id";
         database_id: IdRequest;
-        database: DatabaseObjectResponse;
+        database?: GetDatabaseResponse;
       }
     | {
         type: "comment_id";
         comment_id: IdRequest;
-        comment: CommentObjectResponse;
+        comments?: ListCommentsResponse;
       };
 };
 
