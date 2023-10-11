@@ -6,6 +6,7 @@ import {
   APIErrorCode,
   ClientErrorCode,
   isFullBlock,
+  isFullDatabase,
 } from "@notionhq/client";
 import openGraphScraper from "open-graph-scraper";
 
@@ -209,6 +210,17 @@ export const listBlockChildren = async (
     return payload.results;
   }
   return [];
+};
+
+export const fetchDatabase = async (databaseId: string) => {
+  const database = await retrieveDatabase({ database_id: databaseId });
+  if (!database) {
+    return;
+  }
+  if (!isFullDatabase(database)) {
+    return;
+  }
+  return database;
 };
 
 export const fetchBlockComponent = async (blockId: string) => {
