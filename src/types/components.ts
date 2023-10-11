@@ -46,7 +46,7 @@ export type IdRequest = string | string;
 
 export type BlockComponentProps<T extends BlockObjectComponent> = {
   block: T;
-  blocks?: ListBlockChildrenComponent;
+  blocks?: Array<BlockObjectComponent>;
   customBlockComponentMapper?: object;
 };
 
