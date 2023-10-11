@@ -7,24 +7,29 @@ type Props = {
 const Icon: React.FC<Props> = ({ icon }) => {
   if (!icon) return <DefaultIcon />;
 
-  switch (icon.type) {
-    case "emoji":
-      return <span className="notion_icon_emoji">{icon.emoji}</span>;
-    case "external":
-      return (
-        <span className="notion_icon_external">
-          <img src={icon.external.url} alt="notion callout icon" />
-        </span>
-      );
-    case "file":
-      return (
-        <span className="notion_icon_file">
-          <img src={icon.file.url} alt="notion callout icon" />
-        </span>
-      );
-    default:
-      return <DefaultIcon />;
-  }
+  return (
+    <div className="notion_icon">
+      {!icon ? (
+        <DefaultIcon />
+      ) : icon.type === "emoji" ? (
+        <span className="notion_icon_emoji">{icon.emoji}</span>
+      ) : icon.type === "external" ? (
+        <img
+          className="notion_icon_external"
+          src={icon.external.url}
+          alt="notion callout icon"
+        />
+      ) : icon.type === "file" ? (
+        <img
+          className="notion_icon_file"
+          src={icon.file.url}
+          alt="notion callout icon"
+        />
+      ) : (
+        <DefaultIcon />
+      )}
+    </div>
+  );
 };
 
 export default Icon;
