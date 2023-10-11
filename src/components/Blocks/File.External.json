@@ -1,0 +1,28 @@
+{
+  "object": "block",
+  "id": "931ed129-67e6-4a8f-bbc6-1619ec41d58c",
+  "parent": {
+    "type": "page_id",
+    "page_id": "2712e341-754a-41ae-a9ce-4c0bb4b18c52"
+  },
+  "created_time": "2023-10-11T09:39:00.000Z",
+  "last_edited_time": "2023-10-11T09:39:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+  },
+  "has_children": false,
+  "archived": false,
+  "type": "file",
+  "file": {
+    "caption": [],
+    "type": "external",
+    "external": {
+      "url": "http://www.nomadworks.co.jp/htmlsample/archive/win/sec2/info01.zip"
+    }
+  }
+}

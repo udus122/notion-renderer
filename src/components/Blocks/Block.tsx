@@ -12,6 +12,7 @@ import ColumnList from "./ColumnList";
 import Divider from "./Divider";
 import Embed from "./Embed";
 import Equation from "./Equation";
+import File from "./File";
 import Heading1 from "./Heading1";
 import Heading2 from "./Heading2";
 import Heading3 from "./Heading3";
@@ -70,7 +71,7 @@ const BlockComponent: React.FC<Props> = ({
     divider: Divider,
     embed: Embed,
     equation: Equation,
-    file: Unsupported,
+    file: File,
     heading_1: Heading1,
     heading_2: Heading2,
     heading_3: Heading3,
