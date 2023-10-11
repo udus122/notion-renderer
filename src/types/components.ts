@@ -181,13 +181,21 @@ export type ChildPageBlockObjectComponent = ChildPageBlockObjectResponse & {
 
 export type CodeBlockObjectComponent = CodeBlockObjectResponse;
 
-export type ColumnBlockObjectComponent = ColumnBlockObjectResponse;
+export type ColumnBlockObjectComponent = Overwrite<
+  ColumnBlockObjectResponse,
+  {
+    column: { children?: Array<BlockObjectComponent> };
+  }
+>;
 
-export type ColumnListBlockObjectComponent = ColumnListBlockObjectResponse & {
-  children?: ListBlockChildrenComponent<ColumnBlockObjectComponent>;
-  // NOTE: 本当は、columnsはchildren[number]['children']に入るべき
-  columns: Array<ListBlockChildrenComponent>;
-};
+export type ColumnListBlockObjectComponent = Overwrite<
+  ColumnListBlockObjectResponse,
+  {
+    column_list: {
+      columns?: Array<ColumnBlockObjectComponent>;
+    };
+  }
+>;
 
 export type DividerBlockObjectComponent = DividerBlockObjectResponse;
 

@@ -436,11 +436,36 @@ export const convertBlockToComponent = async (
       return { ...block } satisfies CodeBlockObjectComponent;
     }
     case "column": {
+      if (block.has_children) {
+        const children = await fetchBlockComponents(block.id);
+        return {
+          ...block,
+          column: {
+            ...block.column,
+            children,
+          },
+        };
+      }
       return { ...block } satisfies ColumnBlockObjectComponent;
     }
     case "column_list": {
-      // TODO: childrenとcolumnsの整理をして返す
-      return { ...block } as ColumnListBlockObjectComponent;
+      if (block.has_children) {
+        const blocks = await fetchBlockComponents(block.id);
+        const columns = blocks.filter(
+          (block): block is ColumnBlockObjectComponent =>
+            block.type === "column"
+        );
+        return {
+          ...block,
+          column_list: {
+            ...block.column_list,
+            columns,
+          },
+        } satisfies ColumnListBlockObjectComponent;
+      }
+      return {
+        ...block,
+      } satisfies ColumnListBlockObjectComponent;
     }
     case "divider": {
       return { ...block } satisfies DividerBlockObjectComponent;
