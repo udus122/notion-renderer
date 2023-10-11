@@ -15,7 +15,6 @@ import type {
   AudioBlockObjectComponent,
   BlockObjectComponent,
   BookmarkBlockObjectComponent,
-  BreadcrumbBlockObjectComponent,
   BulletedListBlockObjectComponent,
   BulletedListItemBlockObjectComponent,
   CalloutBlockObjectComponent,
@@ -53,6 +52,7 @@ import type {
 import type { Result } from "@/types/utils";
 import type {
   BlockObjectResponse,
+  DatabaseObjectResponse,
   GetBlockParameters,
   GetBlockResponse,
   GetDatabaseParameters,
@@ -63,6 +63,7 @@ import type {
   ListBlockChildrenResponse,
   ListCommentsParameters,
   ListCommentsResponse,
+  PageObjectResponse,
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 
@@ -263,6 +264,78 @@ export const fetchBlockComponents = async (blockId: string) => {
   return childrenBlockComponents;
 };
 
+export const fetchParent = async (
+  parent:
+    | BlockObjectResponse["parent"]
+    | PageObjectResponse["parent"]
+    | DatabaseObjectResponse["parent"]
+) => {
+  if (parent.type === "block_id") {
+    const parentBlock = await retrieveBlock({ block_id: parent.block_id });
+    return parentBlock;
+  } else if (parent.type === "page_id") {
+    const parentPage = await retrievePage({ page_id: parent.page_id });
+    return parentPage;
+  } else if (parent.type === "database_id") {
+    const parentDatabase = await retrieveDatabase({
+      database_id: parent.database_id,
+    });
+    return parentDatabase;
+  }
+  return;
+};
+
+export const fetchParentBlockObject = async (
+  parent:
+    | BlockObjectResponse["parent"]
+    | PageObjectResponse["parent"]
+    | DatabaseObjectResponse["parent"]
+) => {
+  if (parent.type === "block_id") {
+    const parentBlock = await retrieveBlock({ block_id: parent.block_id });
+    if (parentBlock && isFullBlock(parentBlock)) {
+      return await parentBlock;
+    }
+  } else if (parent.type === "page_id") {
+    const parentPage = await retrievePage({ page_id: parent.page_id });
+    if (parentPage && isFullPage(parentPage)) {
+      return parentPage;
+    }
+  } else if (parent.type === "database_id") {
+    const parentDatabase = await retrieveDatabase({
+      database_id: parent.database_id,
+    });
+    if (parentDatabase && isFullDatabase(parentDatabase)) {
+      return parentDatabase;
+    }
+  }
+  return;
+};
+
+export const fetchAllParents = async (
+  parent:
+    | BlockObjectResponse["parent"]
+    | PageObjectResponse["parent"]
+    | DatabaseObjectResponse["parent"],
+  parentList: Array<PageObjectResponse | DatabaseObjectResponse> = []
+): Promise<Array<PageObjectResponse | DatabaseObjectResponse>> => {
+  const parentBlockObject = await fetchParentBlockObject(parent);
+  if (!parentBlockObject) {
+    return parentList;
+  }
+  if (
+    parentBlockObject.object === "page" ||
+    parentBlockObject.object === "database"
+  ) {
+    parentList.push(parentBlockObject);
+    return await fetchAllParents(parentBlockObject.parent, parentList);
+  }
+  if (parentBlockObject.object === "block") {
+    return await fetchAllParents(parentBlockObject.parent, parentList);
+  }
+  return parentList;
+};
+
 export const resolveBlockChildren = async (
   blocks: ListBlockChildrenResponseResults
 ): Promise<Array<BlockObjectComponent>> => {
@@ -378,9 +451,14 @@ export const convertBlockToComponent = async (
     }
     case "breadcrumb": {
       // TODO: Parent Pageの情報を取れるところまで取得して、返す
-      // NOTE: 権限でPageを取得できなかったなど判定できる?
-      const breadcrumbBlockObject = block as BreadcrumbBlockObjectComponent;
-      return breadcrumbBlockObject;
+      const parents = await fetchAllParents(block.parent);
+      return {
+        ...block,
+        breadcrumb: {
+          ...block.breadcrumb,
+          parents,
+        },
+      };
     }
     case "bulleted_list_item": {
       if (block.has_children) {
@@ -747,9 +825,3 @@ export const scrapeOgMeta = async (
   }
   return undefined;
 };
-import "dotenv/config";
-
-(async () => {
-  const res = await fetchBlockComponents("2712e341754a41aea9ce4c0bb4b18c52");
-  console.log(JSON.stringify(res, null, 2));
-})();

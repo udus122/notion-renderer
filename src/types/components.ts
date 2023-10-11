@@ -141,11 +141,14 @@ export type BookmarkBlockObjectComponent = BookmarkBlockObjectResponse & {
   };
 };
 
-export type BreadcrumbBlockObjectComponent = BreadcrumbBlockObjectResponse & {
-  breadcrumb: {
-    parents: Array<PageObjectResponse | DatabaseObjectResponse>;
-  };
-};
+export type BreadcrumbBlockObjectComponent = Overwrite<
+  BreadcrumbBlockObjectResponse,
+  {
+    breadcrumb: {
+      parents: Array<PageObjectResponse | DatabaseObjectResponse>;
+    };
+  }
+>;
 
 export type BulletedListBlockObjectComponent = {
   id: string;
