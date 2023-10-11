@@ -196,12 +196,16 @@ td > * {
   max-inline-size: 100%;
 }
 /* bookmark block */
-.notion_bookmark_content {
+.notion_bookmark_container {
+  display: flex;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
-  padding: 1rem;
-  flex: 4 1 180px;
+  padding-inline-start: 1rem;
   overflow: hidden;
+}
+.notion_bookmark_content {
+  flex: 4 1 180px;
+  padding-block: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -227,6 +231,7 @@ td > * {
 .notion_bookmark_url {
   display: flex;
   align-items: center;
+  margin-block-start: auto;
 }
 .notion_bookmark_favicon {
   display: inline-flex;
@@ -235,9 +240,22 @@ td > * {
   align-items: center;
   justify-content: center;
 }
+.notion_bookmark_favicon > img {
+  max-inline-size: 100%;
+}
 .notion_bookmark_link_url {
   font-size: 0.75rem;
   margin-inline-start: 0.5rem;
+}
+.notion_bookmark_cover {
+  max-block-size: 100%;
+  max-inline-size: 100%;
+  flex: 1 1 180px;
+}
+.notion_bookmark_cover > img {
+  block-size: 100%;
+  max-inline-size: 100%;
+  object-fit: cover;
 }
 
 /* caption */

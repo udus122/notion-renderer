@@ -99,7 +99,7 @@ export type AudioBlockObjectComponent = AudioBlockObjectResponse;
 
 export type OgMeta = {
   title?: string;
-  desc?: string;
+  description?: string;
   image?: OgpImage;
   icon?: string;
 };

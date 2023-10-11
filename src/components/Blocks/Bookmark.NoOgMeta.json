@@ -1,6 +1,6 @@
 {
   "object": "block",
-  "id": "0ef6015c-4d37-4922-9014-fe40b526c7e3",
+  "id": "0d2f6e7c-c77f-40f6-a7dc-429d62e265ef",
   "parent": {
     "type": "page_id",
     "page_id": "2712e341-754a-41ae-a9ce-4c0bb4b18c52"
@@ -38,15 +38,9 @@
         "href": null
       }
     ],
-    "url": "https://developers.notion.com/reference/block#block-type-objects",
+    "url": "https://example.com",
     "og_meta": {
-      "title": "Start building with the Notion API",
-      "description": "Connect Notion pages and databases to the tools you use every day, creating powerful workflows.",
-      "image": {
-        "url": "https://files.readme.io/a507683-developer-portal-meta.png",
-        "type": "png"
-      },
-      "icon": "https://files.readme.io/4029db5-favicon.ico"
+      "title": "Example Domain"
     }
   }
 }

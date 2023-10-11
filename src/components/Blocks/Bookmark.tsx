@@ -10,24 +10,45 @@ type Props = BlockComponentProps<BookmarkBlockObjectComponent>;
 const Bookmark: React.FC<Props> = ({ block }) => {
   return (
     <div className="notion_bookmark">
-      <div className="notion_bookmark_content">
-        <a href={block.bookmark.url} target="_blank" rel="noopener noreferrer">
-          <div className="notion_bookmark_title">{block.bookmark.url}</div>
-          <div className="notion_bookmark_description">
-            {block.bookmark.url}
+      <a href={block.bookmark.url} target="_blank" rel="noopener noreferrer">
+        <div className="notion_bookmark_container">
+          <div className="notion_bookmark_content">
+            <div className="notion_bookmark_title">
+              {block.bookmark?.og_meta?.title
+                ? block.bookmark.og_meta.title
+                : block.bookmark.url}
+            </div>
+            <div className="notion_bookmark_description">
+              {block.bookmark?.og_meta?.description
+                ? block.bookmark.og_meta.description
+                : block.bookmark.url}
+            </div>
+            <div className="notion_bookmark_url">
+              <span className="notion_bookmark_favicon">
+                <img
+                  src={
+                    block.bookmark?.og_meta?.icon
+                      ? block.bookmark.og_meta?.icon
+                      : `https://www.google.com/s2/favicons?domain=${block.bookmark.url}`
+                  }
+                />
+              </span>
+              <span className="notion_bookmark_link_url">
+                {block.bookmark.url}
+              </span>
+            </div>
           </div>
-          <div className="notion_bookmark_url">
-            <span className="notion_bookmark_favicon">
+          {block.bookmark?.og_meta?.image && (
+            <div className="notion_bookmark_cover">
               <img
-                src={`https://www.google.com/s2/favicons?domain=${block.bookmark.url}`}
+                src={block.bookmark.og_meta.image.url}
+                width={block.bookmark.og_meta.image.width}
+                height={block.bookmark.og_meta.image.height}
               />
-            </span>
-            <span className="notion_bookmark_link_url">
-              {block.bookmark.url}
-            </span>
-          </div>
-        </a>
-      </div>
+            </div>
+          )}
+        </div>
+      </a>
       <div className="notion_caption notion_bookmark_caption">
         <RichTexts richTexts={block.bookmark.caption} />
       </div>
