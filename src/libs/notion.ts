@@ -625,14 +625,29 @@ export const convertBlockToComponent = async (
       return { ...block } satisfies SyncedBlockBlockObjectComponent;
     }
     case "table": {
-      // TODO: childrenを取得する
-      return block as TableBlockObjectComponent;
+      if (block.has_children) {
+        const blocks = await fetchBlockComponents(block.id);
+        const table_rows = blocks.filter(
+          (block): block is TableRowBlockObjectComponent =>
+            block.type === "table_row"
+        );
+        return {
+          ...block,
+          table: {
+            ...block.table,
+            table_rows,
+          },
+        } satisfies TableBlockObjectComponent;
+      }
+      return {
+        ...block,
+      } satisfies TableBlockObjectComponent;
     }
     case "table_of_contents": {
       return block as TableOfContentsBlockObjectComponent;
     }
     case "table_row": {
-      return block as TableRowBlockObjectComponent;
+      return { ...block } satisfies TableRowBlockObjectComponent;
     }
     case "template": {
       return block as TemplateBlockObjectComponent;

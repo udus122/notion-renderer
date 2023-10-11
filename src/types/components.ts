@@ -265,15 +265,7 @@ export type SyncedBlockBlockObjectComponent = SyncedBlockBlockObjectResponse & {
 };
 
 export type TableBlockObjectComponent = TableBlockObjectResponse & {
-  children?: Overwrite<
-    ListBlockChildrenComponent,
-    {
-      results: Array<TableRowBlockObjectResponse>;
-      children?: Array<BlockObjectComponent>;
-
-      last_edited_time?: string;
-    }
-  >;
+  table: { table_rows?: Array<TableRowBlockObjectComponent> };
 };
 
 export type TableOfContentsBlockObjectComponent =
