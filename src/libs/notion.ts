@@ -143,8 +143,8 @@ export const listBlockChildren = async (
 };
 
 // TODO: utils.ts/helpers.tsへ移動させる
-export const notNull = <T>(v: T | null): v is T => {
-  return v !== null;
+export const notNullNorUndefined = <T>(v: T | null | undefined): v is T => {
+  return v !== null && v !== undefined;
 };
 
 export const resolveBlockChildren = async (
@@ -155,7 +155,8 @@ export const resolveBlockChildren = async (
       async (child_block) => await convertBlockToComponent(child_block)
     )
   );
-  const nonNullBlockObjectComponents = blockObjectComponents.filter(notNull);
+  const nonNullBlockObjectComponents =
+    blockObjectComponents.filter(notNullNorUndefined);
   return wrapListItems(nonNullBlockObjectComponents);
 };
 
@@ -251,9 +252,9 @@ export const fetchBlockComponents = async (blockId: string) => {
 
 export const convertBlockToComponent = async (
   block: BlockObjectResponse | PartialBlockObjectResponse
-): Promise<BlockObjectComponent | null> => {
+): Promise<BlockObjectComponent | undefined> => {
   if (!isFullBlock(block)) {
-    return null;
+    return;
   }
   switch (block.type) {
     case "audio": {
@@ -488,7 +489,7 @@ export const convertBlockToComponent = async (
       return block as VideoBlockObjectComponent;
     }
     default: {
-      return null;
+      return;
     }
   }
 };
