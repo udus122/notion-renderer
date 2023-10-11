@@ -177,20 +177,6 @@ export const retrievePage = async (
   return;
 };
 
-export const retrieveComment = async (
-  args: ListCommentsParameters
-): Promise<ListCommentsResponse | undefined> => {
-  const { payload, error } = await callAPIWithBackOff<
-    ListCommentsParameters,
-    ListCommentsResponse
-  >(notion.comments.list, args);
-
-  if (!error) {
-    return payload;
-  }
-  return;
-};
-
 export const listBlockChildren = async (
   args: ListBlockChildrenParameters
 ): Promise<ListBlockChildrenResponseResults> => {
@@ -202,6 +188,28 @@ export const listBlockChildren = async (
   if (!error) {
     if (payload.next_cursor) {
       const nextResults = await listBlockChildren({
+        ...args,
+        start_cursor: payload.next_cursor,
+      });
+      payload.results = [...payload.results, ...nextResults];
+    }
+
+    return payload.results;
+  }
+  return [];
+};
+
+export const listComments = async (
+  args: ListCommentsParameters
+): Promise<ListCommentsResponse["results"]> => {
+  const { payload, error } = await callAPIWithBackOff<
+    ListCommentsParameters,
+    ListCommentsResponse
+  >(notion.comments.list, args);
+
+  if (!error) {
+    if (payload.next_cursor) {
+      const nextResults = await listComments({
         ...args,
         start_cursor: payload.next_cursor,
       });
