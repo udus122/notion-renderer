@@ -7,6 +7,7 @@ import {
   ClientErrorCode,
   isFullBlock,
   isFullDatabase,
+  isFullPage,
 } from "@notionhq/client";
 import openGraphScraper from "open-graph-scraper";
 
@@ -221,6 +222,17 @@ export const fetchDatabase = async (databaseId: string) => {
     return;
   }
   return database;
+};
+
+export const fetchpage = async (pageId: string) => {
+  const page = await retrievePage({ page_id: pageId });
+  if (!page) {
+    return;
+  }
+  if (!isFullPage(page)) {
+    return;
+  }
+  return page;
 };
 
 export const fetchBlockComponent = async (blockId: string) => {
