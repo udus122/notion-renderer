@@ -53,10 +53,17 @@ import type {
   BlockObjectResponse,
   GetBlockParameters,
   GetBlockResponse,
+  GetDatabaseParameters,
+  GetDatabaseResponse,
   ListBlockChildrenParameters,
   ListBlockChildrenResponse,
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
+
+// TODO: utils.ts/helpers.tsへ移動させる
+export const notNullNorUndefined = <T>(v: T | null | undefined): v is T => {
+  return v !== null && v !== undefined;
+};
 
 export const notion = new Client({
   auth: process.env.NOTION_TOKEN,
@@ -136,6 +143,20 @@ export const retrieveBlock = async (
   return;
 };
 
+export const retrieveDatabase = async (
+  args: GetDatabaseParameters
+): Promise<GetDatabaseResponse | undefined> => {
+  const { payload, error } = await callAPIWithBackOff<
+    GetDatabaseParameters,
+    GetDatabaseResponse
+  >(notion.databases.retrieve, args);
+
+  if (!error) {
+    return payload;
+  }
+  return;
+};
+
 export const listBlockChildren = async (
   args: ListBlockChildrenParameters
 ): Promise<ListBlockChildrenResponseResults> => {
@@ -158,9 +179,23 @@ export const listBlockChildren = async (
   return [];
 };
 
-// TODO: utils.ts/helpers.tsへ移動させる
-export const notNullNorUndefined = <T>(v: T | null | undefined): v is T => {
-  return v !== null && v !== undefined;
+export const fetchBlockComponent = async (blockId: string) => {
+  const block = await retrieveBlock({ block_id: blockId });
+  if (block) {
+    const blockComponent = convertBlockToComponent(block);
+    return blockComponent;
+  }
+  return null;
+};
+
+export const fetchBlockComponents = async (blockId: string) => {
+  const childrenBlockResponses = await listBlockChildren({
+    block_id: blockId,
+  });
+  const childrenBlockComponents = await resolveBlockChildren(
+    childrenBlockResponses
+  );
+  return childrenBlockComponents;
 };
 
 export const resolveBlockChildren = async (
@@ -254,25 +289,6 @@ export const wrapListItems = (
     },
     []
   );
-};
-
-export const fetchBlockComponent = async (blockId: string) => {
-  const block = await retrieveBlock({ block_id: blockId });
-  if (block) {
-    const blockComponent = convertBlockToComponent(block);
-    return blockComponent;
-  }
-  return null;
-};
-
-export const fetchBlockComponents = async (blockId: string) => {
-  const childrenBlockResponses = await listBlockChildren({
-    block_id: blockId,
-  });
-  const childrenBlockComponents = await resolveBlockChildren(
-    childrenBlockResponses
-  );
-  return childrenBlockComponents;
 };
 
 export const convertBlockToComponent = async (
