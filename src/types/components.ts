@@ -15,8 +15,6 @@ import type {
   EmbedBlockObjectResponse,
   EquationBlockObjectResponse,
   FileBlockObjectResponse,
-  GetDatabaseResponse,
-  GetPageResponse,
   Heading1BlockObjectResponse,
   Heading2BlockObjectResponse,
   Heading3BlockObjectResponse,
@@ -220,12 +218,12 @@ export type LinkToPageBlockObjectComponent = LinkToPageBlockObjectResponse & {
     | {
         type: "page_id";
         page_id: IdRequest;
-        page?: GetPageResponse;
+        page?: PageObjectResponse;
       }
     | {
         type: "database_id";
         database_id: IdRequest;
-        database?: GetDatabaseResponse;
+        database?: DatabaseObjectResponse;
       }
     | {
         type: "comment_id";

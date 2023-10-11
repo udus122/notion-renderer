@@ -508,9 +508,9 @@ export const convertBlockToComponent = async (
     case "link_to_page": {
       switch (block.link_to_page.type) {
         case "database_id": {
-          const linkedDatabase = await retrieveDatabase({
-            database_id: block.link_to_page.database_id,
-          });
+          const linkedDatabase = await fetchDatabase(
+            block.link_to_page.database_id
+          );
           return {
             ...block,
             link_to_page: {
@@ -520,9 +520,7 @@ export const convertBlockToComponent = async (
           } satisfies LinkToPageBlockObjectComponent;
         }
         case "page_id": {
-          const linkedPage = await retrievePage({
-            page_id: block.link_to_page.page_id,
-          });
+          const linkedPage = await fetchPage(block.link_to_page.page_id);
           return {
             ...block,
             link_to_page: {
