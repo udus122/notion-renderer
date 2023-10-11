@@ -1,6 +1,50 @@
 [
   {
     "object": "block",
+    "id": "29328ce8-f217-4ab8-b250-c1f261aebdb2",
+    "parent": {
+      "type": "page_id",
+      "page_id": "2712e341-754a-41ae-a9ce-4c0bb4b18c52"
+    },
+    "created_time": "2023-10-11T02:44:00.000Z",
+    "last_edited_time": "2023-10-11T02:44:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+    },
+    "has_children": false,
+    "archived": false,
+    "type": "code",
+    "code": {
+      "caption": [],
+      "rich_text": [
+        {
+          "type": "text",
+          "text": {
+            "content": "import \"dotenv/config\";\n\n(async () => {\n  const res = await fetchBlockComponents(\"2712e341754a41aea9ce4c0bb4b18c52\");\n  console.log(JSON.stringify(res, null, 2));\n})();",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "import \"dotenv/config\";\n\n(async () => {\n  const res = await fetchBlockComponents(\"2712e341754a41aea9ce4c0bb4b18c52\");\n  console.log(JSON.stringify(res, null, 2));\n})();",
+          "href": null
+        }
+      ],
+      "language": "typescript"
+    }
+  },
+  {
+    "object": "block",
     "id": "6fe6e904-3109-4614-9abd-a3e42968b6a9",
     "parent": {
       "type": "page_id",
@@ -3702,7 +3746,7 @@
       "color": "default",
       "children": [
         {
-          "id": "501e6ea9-5e3b-45a9-8768-ded5b78bea1a",
+          "id": "a6d0e789-330b-490b-b674-c45b06237b00",
           "type": "bulleted_list",
           "bulleted_list": {
             "items": [
@@ -4419,7 +4463,7 @@
     }
   },
   {
-    "id": "f70d90dc-bf40-4f45-a844-c25acdd514d5",
+    "id": "1f460b64-b96e-415b-915f-ae2c2d5aaed4",
     "type": "bulleted_list",
     "bulleted_list": {
       "items": [
@@ -4466,7 +4510,7 @@
             "color": "default",
             "children": [
               {
-                "id": "16399dfc-8142-4459-956e-be0a74092bca",
+                "id": "7d48f7ba-2dac-409f-a859-bcea9e3d755c",
                 "type": "bulleted_list",
                 "bulleted_list": {
                   "items": [
@@ -4740,7 +4784,7 @@
             "color": "default",
             "children": [
               {
-                "id": "a31a3de0-8b51-4b45-ab17-af504d19c4dc",
+                "id": "3cd6c648-412d-4c18-a568-261ebf4e220d",
                 "type": "bulleted_list",
                 "bulleted_list": {
                   "items": [
@@ -4787,7 +4831,7 @@
                         "color": "default",
                         "children": [
                           {
-                            "id": "fec0b262-6143-4e69-91ca-3c9b898f9756",
+                            "id": "d8524ffb-eb2e-4ebe-9d54-2fadfe224e2c",
                             "type": "numbered_list",
                             "numbered_list": {
                               "items": [
@@ -4932,7 +4976,7 @@
             "color": "default",
             "children": [
               {
-                "id": "79c71e0f-466f-4e4e-b0cb-628faf842c6d",
+                "id": "14c52377-9a91-4985-84fe-5e5e07083a52",
                 "type": "bulleted_list",
                 "bulleted_list": {
                   "items": [
@@ -5026,7 +5070,7 @@
                 }
               },
               {
-                "id": "99cd5e5e-ea86-47dd-9b92-55163e16fc3f",
+                "id": "15ec0e20-adb8-4118-88a8-f0984ba68199",
                 "type": "bulleted_list",
                 "bulleted_list": {
                   "items": [
@@ -5120,7 +5164,7 @@
                 }
               },
               {
-                "id": "f2d05fd3-5be3-4d66-a689-e3ec0792e456",
+                "id": "4defb612-9547-4d6f-8577-ddc8ac1debd1",
                 "type": "numbered_list",
                 "numbered_list": {
                   "items": [
@@ -5257,7 +5301,7 @@
                 }
               },
               {
-                "id": "8f9d158a-a636-4e87-add3-6fb5e3b20489",
+                "id": "a49537bf-59e1-48e0-8660-b39684c269e6",
                 "type": "numbered_list",
                 "numbered_list": {
                   "items": [
@@ -5314,7 +5358,7 @@
     }
   },
   {
-    "id": "bbfdd721-d24a-45c2-a3b7-df751bcf1a7a",
+    "id": "e864d2e7-3790-4ca6-a5f3-2a82313fe034",
     "type": "numbered_list",
     "numbered_list": {
       "items": [
@@ -5361,7 +5405,7 @@
             "color": "default",
             "children": [
               {
-                "id": "99fc4871-e33f-460a-b8c4-17fb85b1f978",
+                "id": "95fc276e-354b-4798-9c27-eeb6372f5582",
                 "type": "numbered_list",
                 "numbered_list": {
                   "items": [
@@ -5408,7 +5452,7 @@
                         "color": "default",
                         "children": [
                           {
-                            "id": "7a371e27-80c9-4dec-8a26-ad233b585bd6",
+                            "id": "36d8af03-d13e-4a9b-8ab2-6f65d8308b31",
                             "type": "numbered_list",
                             "numbered_list": {
                               "items": [
@@ -5510,7 +5554,7 @@
             "color": "default",
             "children": [
               {
-                "id": "58b5bef6-9f12-4802-9d83-6d526f64a6a3",
+                "id": "5680d5fc-9c47-46bc-b321-366e016b9637",
                 "type": "numbered_list",
                 "numbered_list": {
                   "items": [
@@ -5600,7 +5644,7 @@
                         "color": "default",
                         "children": [
                           {
-                            "id": "71a10df3-fb6c-4c42-b7a2-a97cce3f0646",
+                            "id": "65b99808-59d0-49e8-bad6-d58d1e0eb0ac",
                             "type": "bulleted_list",
                             "bulleted_list": {
                               "items": [
@@ -6346,6 +6390,31 @@
       "synced_from": {
         "type": "block_id",
         "block_id": "804a2d12-226a-4cf9-b696-977a8352a94f"
+      },
+      "block": {
+        "object": "block",
+        "id": "804a2d12-226a-4cf9-b696-977a8352a94f",
+        "parent": {
+          "type": "page_id",
+          "page_id": "2712e341-754a-41ae-a9ce-4c0bb4b18c52"
+        },
+        "created_time": "2023-03-18T12:21:00.000Z",
+        "last_edited_time": "2023-03-18T12:21:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+        },
+        "has_children": true,
+        "archived": false,
+        "type": "synced_block",
+        "synced_block": {
+          "synced_from": null
+        },
+        "request_id": "da159a98-bad0-4c11-bfc1-169b5ff9a6b8"
       }
     }
   },
@@ -6683,8 +6752,8 @@
       "icon": {
         "type": "file",
         "file": {
-          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/da8dc9fd-77ac-4597-8c35-df32f04bdd4a/a6fb2f50-0571-4b1c-ac4c-9749c4833f8a/Code.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T014342Z&X-Amz-Expires=3600&X-Amz-Signature=fbb6d82e41a8ba9b109e18ed84433a11b3d1a43caeefef095585076a9a342923&X-Amz-SignedHeaders=host&x-id=GetObject",
-          "expiry_time": "2023-10-11T02:43:42.021Z"
+          "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/da8dc9fd-77ac-4597-8c35-df32f04bdd4a/a6fb2f50-0571-4b1c-ac4c-9749c4833f8a/Code.jpeg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T024501Z&X-Amz-Expires=3600&X-Amz-Signature=85f9807155f35cb8905cecce05b0ba95831bd4659933173baa46d75c44780ee3&X-Amz-SignedHeaders=host&x-id=GetObject",
+          "expiry_time": "2023-10-11T03:45:01.805Z"
         }
       },
       "color": "gray_background",
@@ -6987,8 +7056,8 @@
       ],
       "type": "file",
       "file": {
-        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/da8dc9fd-77ac-4597-8c35-df32f04bdd4a/d816df3a-1356-43b7-9834-02546f69596c/mov_hts-samp003.mp4_-_Free_Movie_Material.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T014342Z&X-Amz-Expires=3600&X-Amz-Signature=a18e33104fef9b5183f61f6853a128c6318fb8ada04cc3953a05b88f5b19bdfe&X-Amz-SignedHeaders=host&x-id=GetObject",
-        "expiry_time": "2023-10-11T02:43:42.033Z"
+        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/da8dc9fd-77ac-4597-8c35-df32f04bdd4a/d816df3a-1356-43b7-9834-02546f69596c/mov_hts-samp003.mp4_-_Free_Movie_Material.mp4?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T024501Z&X-Amz-Expires=3600&X-Amz-Signature=8be86d79ffd39e097ec21247b0606ae09f4d71472f66da9988bad3968cd38003&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-10-11T03:45:01.796Z"
       }
     }
   },
@@ -7767,8 +7836,8 @@
       "caption": [],
       "type": "file",
       "file": {
-        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/da8dc9fd-77ac-4597-8c35-df32f04bdd4a/80e28242-11b2-48be-ab84-a663256eaa96/ifudoudou.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T014342Z&X-Amz-Expires=3600&X-Amz-Signature=89843e0d0ab0bb93ecefe2673bbfeb6533b99137d861d14e3d460c13bdd329e4&X-Amz-SignedHeaders=host&x-id=GetObject",
-        "expiry_time": "2023-10-11T02:43:42.008Z"
+        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/da8dc9fd-77ac-4597-8c35-df32f04bdd4a/80e28242-11b2-48be-ab84-a663256eaa96/ifudoudou.mp3?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T024501Z&X-Amz-Expires=3600&X-Amz-Signature=ff6c2521b947832f5771fc587e23ff2d480bd4febd240d44048e839d4e0a5307&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-10-11T03:45:01.778Z"
       }
     }
   },
@@ -7910,8 +7979,8 @@
       "caption": [],
       "type": "file",
       "file": {
-        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/da8dc9fd-77ac-4597-8c35-df32f04bdd4a/862b685f-6207-4091-a7a1-94559f969d58/adobe_pdf_sample.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T014342Z&X-Amz-Expires=3600&X-Amz-Signature=5f23e78308fea4b5a7a42b6287a94f32ec51c27240f6be4c9b36a6b2e5d39f25&X-Amz-SignedHeaders=host&x-id=GetObject",
-        "expiry_time": "2023-10-11T02:43:42.007Z"
+        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/da8dc9fd-77ac-4597-8c35-df32f04bdd4a/862b685f-6207-4091-a7a1-94559f969d58/adobe_pdf_sample.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231011%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231011T024501Z&X-Amz-Expires=3600&X-Amz-Signature=947dca48d83d26b276e6825afefc67416392a29950cb2fc14d9f84e7e86f263b&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-10-11T03:45:01.778Z"
       }
     }
   },

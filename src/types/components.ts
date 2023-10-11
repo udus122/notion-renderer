@@ -235,7 +235,7 @@ export type SyncedBlockBlockObjectComponent = SyncedBlockBlockObjectResponse & {
       type: "block_id";
       block_id: IdRequest;
     } | null;
-    block: BlockObjectComponent;
+    block?: BlockObjectComponent;
   };
 };
 

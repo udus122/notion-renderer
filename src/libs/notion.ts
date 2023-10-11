@@ -120,6 +120,20 @@ const callAPIWithBackOff = async <Args, Item>(
   };
 };
 
+export const retrieveBlock = async (
+  args: GetBlockParameters
+): Promise<GetBlockResponse | undefined> => {
+  const { payload, error } = await callAPIWithBackOff<
+    GetBlockParameters,
+    GetBlockResponse
+  >(notion.blocks.retrieve, args);
+
+  if (!error) {
+    return payload;
+  }
+  return;
+};
+
 export const listBlockChildren = async (
   args: ListBlockChildrenParameters
 ): Promise<ListBlockChildrenResponseResults> => {
@@ -238,6 +252,15 @@ export const wrapListItems = (
     },
     []
   );
+};
+
+export const fetchBlockComponent = async (blockId: string) => {
+  const block = await retrieveBlock({ block_id: blockId });
+  if (block) {
+    const blockComponent = convertBlockToComponent(block);
+    return blockComponent;
+  }
+  return null;
 };
 
 export const fetchBlockComponents = async (blockId: string) => {
@@ -437,6 +460,19 @@ export const convertBlockToComponent = async (
     }
     case "synced_block": {
       // TODO: blockを取得する
+      if (block.synced_block.synced_from) {
+        const duplicatedBlock =
+          (await fetchBlockComponent(
+            block.synced_block.synced_from.block_id
+          )) ?? undefined;
+        return {
+          ...block,
+          synced_block: {
+            ...block.synced_block,
+            block: duplicatedBlock,
+          },
+        };
+      }
       return block as SyncedBlockBlockObjectComponent;
     }
     case "table": {
