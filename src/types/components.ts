@@ -46,6 +46,30 @@ export type ListBlockChildrenResponseResults =
 
 export type IdRequest = string | string;
 
+export type EmojiRequest = string;
+
+export type TextRequest = string;
+
+export type Icon =
+  | {
+      type: "emoji";
+      emoji: EmojiRequest;
+    }
+  | {
+      type: "external";
+      external: {
+        url: TextRequest;
+      };
+    }
+  | {
+      type: "file";
+      file: {
+        url: string;
+        expiry_time: string;
+      };
+    }
+  | null;
+
 export type BlockComponentProps<T extends BlockObjectComponent> = {
   block: T;
   blocks?: Array<BlockObjectComponent>;

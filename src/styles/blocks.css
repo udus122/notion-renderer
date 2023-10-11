@@ -108,14 +108,6 @@ h3 {
   border-radius: 3px;
   box-shadow: none;
 }
-.notion_callout_icon {
-  display: inline-flex;
-  width: 1.5em;
-  height: 1.5em;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
 .notion_callout_icon > img {
   block-size: auto;
   max-inline-size: 100%;
@@ -266,7 +258,15 @@ td > * {
   max-inline-size: 100%;
   object-fit: cover;
 }
-
+/* icon */
+.notion_icon {
+  display: inline-flex;
+  width: 1.5em;
+  height: 1.5em;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
 /* caption */
 .notion_caption {
   max-inline-size: 100%;
