@@ -481,7 +481,6 @@ export const convertBlockToComponent = async (
       } satisfies QuoteBlockObjectComponent;
     }
     case "synced_block": {
-      // TODO: blockを取得する
       if (block.synced_block.synced_from) {
         const duplicatedBlock =
           (await fetchBlockComponent(
@@ -493,9 +492,9 @@ export const convertBlockToComponent = async (
             ...block.synced_block,
             block: duplicatedBlock,
           },
-        };
+        } satisfies SyncedBlockBlockObjectComponent;
       }
-      return block as SyncedBlockBlockObjectComponent;
+      return { ...block } satisfies SyncedBlockBlockObjectComponent;
     }
     case "table": {
       // TODO: childrenを取得する
