@@ -177,7 +177,7 @@ export type ChildDatabaseBlockObjectComponent =
 
 export type ChildPageBlockObjectComponent = ChildPageBlockObjectResponse & {
   child_page: {
-    page?: GetPageResponse;
+    page?: PageObjectResponse;
   };
 };
 
