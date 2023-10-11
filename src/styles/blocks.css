@@ -2,6 +2,15 @@
 .notion_block {
   padding: 3px 2px;
 }
+/* child_database block */
+.notion_child_database {
+  display: flex;
+  align-items: center;
+}
+.notion_child_database_title {
+  margin-inline-start: 0.25rem;
+}
+/* code block */
 .notion_code {
   display: flex;
   flex-direction: column;

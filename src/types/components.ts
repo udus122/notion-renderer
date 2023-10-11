@@ -147,7 +147,7 @@ export type CalloutBlockObjectComponent = CalloutBlockObjectResponse & {
 export type ChildDatabaseBlockObjectComponent =
   ChildDatabaseBlockObjectResponse & {
     child_database: {
-      database?: GetDatabaseResponse;
+      database?: DatabaseObjectResponse;
     };
   };
 
@@ -206,7 +206,7 @@ export type LinkToPageBlockObjectComponent = LinkToPageBlockObjectResponse & {
     | {
         type: "comment_id";
         comment_id: IdRequest;
-        comments?: ListCommentsResponse;
+        comments?: ListCommentsResponse["results"];
       };
 };
 
