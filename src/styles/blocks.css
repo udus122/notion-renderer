@@ -8,6 +8,95 @@
   transition: border-color 0.1s ease-in, opacity 0.1s ease-in;
   text-decoration-line: underline;
 }
+/* icon */
+.notion_icon {
+  display: inline-flex;
+  width: 1.5em;
+  height: 1.5em;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+.notion_icon img {
+  block-size: auto;
+  max-inline-size: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.25em;
+}
+/* caption */
+.notion_caption {
+  max-inline-size: 100%;
+  white-space: pre-wrap;
+  word-break: break-word;
+  caret-color: rgba(255, 255, 255, 0.81);
+  font-size: 14px;
+  line-height: 1.4;
+  color: rgba(255, 255, 255, 0.443);
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 2px;
+}
+/* bookmark block */
+.notion_bookmark_container {
+  display: flex;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  padding-inline-start: 1rem;
+  overflow: hidden;
+}
+.notion_bookmark_content {
+  flex: 4 1 180px;
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.notion_bookmark_title {
+  margin: 0 0 2px;
+  line-height: 1.25rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-block-end: 0.75rem;
+}
+.notion_bookmark_description {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  opacity: 0.7;
+  height: 2rem;
+  overflow: hidden;
+}
+.notion_bookmark_url {
+  display: flex;
+  align-items: center;
+  margin-block-start: auto;
+}
+.notion_bookmark_favicon {
+  display: inline-flex;
+  width: 0.75em;
+  height: 0.75em;
+  align-items: center;
+  justify-content: center;
+}
+.notion_bookmark_favicon > img {
+  max-inline-size: 100%;
+}
+.notion_bookmark_link_url {
+  font-size: 0.75rem;
+  margin-inline-start: 0.5rem;
+}
+.notion_bookmark_cover {
+  max-block-size: 100%;
+  max-inline-size: 100%;
+  flex: 1 1 180px;
+}
+.notion_bookmark_cover > img {
+  block-size: 100%;
+  max-inline-size: 100%;
+  object-fit: cover;
+}
 /* breadcrumb block */
 .notion_breadcrumb {
   display: flex;
@@ -53,6 +142,67 @@
 }
 .notion_code_pre {
   margin: 0;
+}
+/* link_preview block */
+.notion_link_preview_container {
+  display: flex;
+  border: 1px solid #e5e5e5;
+  border-radius: 3px;
+  padding-inline-start: 1rem;
+  overflow: hidden;
+}
+.notion_link_preview_content {
+  flex: 4 1 180px;
+  padding-block: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.notion_link_preview_title {
+  margin: 0 0 2px;
+  line-height: 1.25rem;
+  font-size: 1rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-block-end: 0.75rem;
+}
+.notion_link_preview_description {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  opacity: 0.7;
+  height: 2rem;
+  overflow: hidden;
+}
+.notion_link_preview_url {
+  display: flex;
+  align-items: center;
+  margin-block-start: auto;
+}
+.notion_link_preview_favicon {
+  display: inline-flex;
+  width: 0.75em;
+  height: 0.75em;
+  align-items: center;
+  justify-content: center;
+}
+.notion_link_preview_favicon > img {
+  max-inline-size: 100%;
+}
+.notion_link_preview_link_url {
+  font-size: 0.75rem;
+  margin-inline-start: 0.5rem;
+}
+.notion_link_preview_cover {
+  max-block-size: 100%;
+  max-inline-size: 100%;
+  flex: 1 1 180px;
+}
+.notion_link_preview_cover > img {
+  block-size: 100%;
+  max-inline-size: 100%;
+  object-fit: cover;
 }
 /* paragraph block */
 .notion_paragraph_children {
@@ -221,94 +371,4 @@ td > * {
 .notion_pdf > object {
   block-size: auto;
   max-inline-size: 100%;
-}
-/* bookmark block */
-.notion_bookmark_container {
-  display: flex;
-  border: 1px solid #e5e5e5;
-  border-radius: 3px;
-  padding-inline-start: 1rem;
-  overflow: hidden;
-}
-.notion_bookmark_content {
-  flex: 4 1 180px;
-  padding-block: 1rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.notion_bookmark_title {
-  margin: 0 0 2px;
-  line-height: 1.25rem;
-  font-size: 1rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  margin-block-end: 0.75rem;
-}
-
-.notion_bookmark_description {
-  font-size: 0.75rem;
-  line-height: 1rem;
-  opacity: 0.7;
-  height: 2rem;
-  overflow: hidden;
-}
-.notion_bookmark_url {
-  display: flex;
-  align-items: center;
-  margin-block-start: auto;
-}
-.notion_bookmark_favicon {
-  display: inline-flex;
-  width: 0.75em;
-  height: 0.75em;
-  align-items: center;
-  justify-content: center;
-}
-.notion_bookmark_favicon > img {
-  max-inline-size: 100%;
-}
-.notion_bookmark_link_url {
-  font-size: 0.75rem;
-  margin-inline-start: 0.5rem;
-}
-.notion_bookmark_cover {
-  max-block-size: 100%;
-  max-inline-size: 100%;
-  flex: 1 1 180px;
-}
-.notion_bookmark_cover > img {
-  block-size: 100%;
-  max-inline-size: 100%;
-  object-fit: cover;
-}
-/* icon */
-.notion_icon {
-  display: inline-flex;
-  width: 1.5em;
-  height: 1.5em;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-.notion_icon img {
-  block-size: auto;
-  max-inline-size: 100%;
-  aspect-ratio: 1;
-  border-radius: 0.25em;
-}
-/* caption */
-.notion_caption {
-  max-inline-size: 100%;
-  white-space: pre-wrap;
-  word-break: break-word;
-  caret-color: rgba(255, 255, 255, 0.81);
-  font-size: 14px;
-  line-height: 1.4;
-  color: rgba(255, 255, 255, 0.443);
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 2px;
 }

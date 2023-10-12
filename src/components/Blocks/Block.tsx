@@ -18,6 +18,7 @@ import Heading1 from "./Heading1";
 import Heading2 from "./Heading2";
 import Heading3 from "./Heading3";
 import Image from "./Image";
+import LinkPreview from "./LinkPreview";
 import LinkToPage from "./LinkToPage";
 import NumberedList from "./NumberedList";
 import NumberedListItem from "./NumberedListItem";
@@ -77,7 +78,7 @@ const BlockComponent: React.FC<Props> = ({
     heading_2: Heading2,
     heading_3: Heading3,
     image: Image,
-    link_preview: Unsupported,
+    link_preview: LinkPreview,
     link_to_page: LinkToPage,
     numbered_list: NumberedList,
     numbered_list_item: NumberedListItem,
