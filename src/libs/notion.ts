@@ -317,23 +317,30 @@ export const fetchAllParents = async (
     | BlockObjectResponse["parent"]
     | PageObjectResponse["parent"]
     | DatabaseObjectResponse["parent"],
-  parentList: Array<PageObjectResponse | DatabaseObjectResponse> = []
-): Promise<Array<PageObjectResponse | DatabaseObjectResponse>> => {
-  const parentBlockObject = await fetchParentBlockObject(parent);
-  if (!parentBlockObject) {
+  parentList: Array<
+    BlockObjectResponse | PageObjectResponse | DatabaseObjectResponse
+  > = []
+): Promise<
+  Array<BlockObjectResponse | PageObjectResponse | DatabaseObjectResponse>
+> => {
+  const parentObjectResponse = await fetchParentBlockObject(parent);
+  if (!parentObjectResponse) {
     return parentList;
   }
-  if (
-    parentBlockObject.object === "page" ||
-    parentBlockObject.object === "database"
-  ) {
-    parentList.push(parentBlockObject);
-    return await fetchAllParents(parentBlockObject.parent, parentList);
-  }
-  if (parentBlockObject.object === "block") {
-    return await fetchAllParents(parentBlockObject.parent, parentList);
-  }
-  return parentList;
+  // if (
+  // parentObjectResponse.object === "page" ||
+  // parentObjectResponse.object === "database"
+  // ) {
+  // parentList.push(parentObjectResponse);
+  return await fetchAllParents(parentObjectResponse.parent, [
+    ...parentList,
+    parentObjectResponse,
+  ]);
+  // }
+  // if (parentObjectResponse.object === "block") {
+  // return await fetchAllParents(parentObjectResponse.parent, parentList);
+  // }
+  // return parentList;
 };
 
 export const resolveBlockChildren = async (
@@ -450,8 +457,12 @@ export const convertBlockToComponent = async (
       } satisfies BookmarkBlockObjectComponent;
     }
     case "breadcrumb": {
-      // TODO: Parent Pageの情報を取れるところまで取得して、返す
-      const parents = await fetchAllParents(block.parent);
+      const allParents = await fetchAllParents(block.parent);
+      const parents = allParents.filter(
+        (parent): parent is PageObjectResponse | DatabaseObjectResponse =>
+          parent.object === "page" || parent.object === "database"
+      );
+
       return {
         ...block,
         breadcrumb: {
