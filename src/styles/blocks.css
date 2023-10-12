@@ -8,6 +8,18 @@
   transition: border-color 0.1s ease-in, opacity 0.1s ease-in;
   text-decoration-line: underline;
 }
+/* breadcrumb block */
+.notion_breadcrumb {
+  display: flex;
+  align-items: center;
+}
+.notion_breadcrumb_title {
+  display: flex;
+  align-items: center;
+}
+.notion_breadcrumb_separator {
+  margin-inline: 0.25rem;
+}
 /* child_database block */
 .notion_child_database {
   display: flex;
