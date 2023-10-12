@@ -19,5 +19,5 @@ export function extractTitleProperty(
       > => property.type === "title"
     )[0].title;
   }
-  return;
+  return [];
 }

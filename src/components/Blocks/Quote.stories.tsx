@@ -1,4 +1,4 @@
-import Quote from "./Quote";
+import { Quote } from "./Quote";
 import QuoteObject from "./Quote.json";
 
 import type { QuoteBlockObjectComponent } from "@/types/components";

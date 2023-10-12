@@ -39,7 +39,7 @@
       }
     ],
     "url": "https://example.com",
-    "og_meta": {
+    "site_info": {
       "title": "Example Domain"
     }
   }

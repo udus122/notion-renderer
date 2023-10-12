@@ -1,7 +1,7 @@
-import type { Icon } from "@/types/components";
+import type { Icon as IconType } from "@/types/components";
 
 type Props = {
-  icon: Icon;
+  icon: IconType;
 };
 
 export const Icon: React.FC<Props> = ({ icon }) => {

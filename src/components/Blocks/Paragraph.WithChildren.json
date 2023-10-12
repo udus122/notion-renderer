@@ -1,12 +1,12 @@
 {
   "object": "block",
-  "id": "6fe6e904-3109-4614-9abd-a3e42968b6a9",
+  "id": "1c032e60-0158-41ff-856f-80ffcc9c0e83",
   "parent": {
     "type": "page_id",
     "page_id": "2712e341-754a-41ae-a9ce-4c0bb4b18c52"
   },
-  "created_time": "2023-03-18T12:21:00.000Z",
-  "last_edited_time": "2023-03-18T12:21:00.000Z",
+  "created_time": "2023-03-29T10:45:00.000Z",
+  "last_edited_time": "2023-03-29T10:45:00.000Z",
   "created_by": {
     "object": "user",
     "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
@@ -23,7 +23,7 @@
       {
         "type": "text",
         "text": {
-          "content": "parent block",
+          "content": "gray background ",
           "link": null
         },
         "annotations": {
@@ -34,24 +34,21 @@
           "code": false,
           "color": "default"
         },
-        "plain_text": "parent block",
+        "plain_text": "gray background ",
         "href": null
       }
     ],
-    "color": "default"
-  },
-  "children": {
-    "object": "list",
-    "results": [
+    "color": "gray_background",
+    "children": [
       {
         "object": "block",
-        "id": "62853766-526d-4297-86e1-221bbbf3b550",
+        "id": "3e0e331a-4c00-4164-8acb-58a49f636615",
         "parent": {
           "type": "block_id",
-          "block_id": "def209ca-bd4c-4e7d-82f2-5d47c7a82495"
+          "block_id": "1c032e60-0158-41ff-856f-80ffcc9c0e83"
         },
-        "created_time": "2023-03-18T12:21:00.000Z",
-        "last_edited_time": "2023-03-18T12:21:00.000Z",
+        "created_time": "2023-03-29T10:45:00.000Z",
+        "last_edited_time": "2023-03-29T10:45:00.000Z",
         "created_by": {
           "object": "user",
           "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
@@ -68,7 +65,7 @@
             {
               "type": "text",
               "text": {
-                "content": "child block",
+                "content": "gray background child",
                 "link": null
               },
               "annotations": {
@@ -79,18 +76,13 @@
                 "code": false,
                 "color": "default"
               },
-              "plain_text": "child block",
+              "plain_text": "gray background child",
               "href": null
             }
           ],
           "color": "default"
         }
       }
-    ],
-    "next_cursor": null,
-    "has_more": false,
-    "type": "block",
-    "block": {},
-    "last_edited_time": "2023-03-18T12:21:00.000Z"
+    ]
   }
 }

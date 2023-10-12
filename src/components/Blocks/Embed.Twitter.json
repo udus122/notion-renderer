@@ -19,25 +19,7 @@
   "archived": false,
   "type": "embed",
   "embed": {
-    "caption": [
-      {
-        "type": "text",
-        "text": {
-          "content": "Currently only content that can be drawn with frame is supported.",
-          "link": null
-        },
-        "annotations": {
-          "bold": false,
-          "italic": false,
-          "strikethrough": false,
-          "underline": false,
-          "code": false,
-          "color": "default"
-        },
-        "plain_text": "Currently only content that can be drawn with frame is supported.",
-        "href": null
-      }
-    ],
+    "caption": [],
     "url": "https://twitter.com/ydnjp/status/1604310734930071554"
   }
 }
