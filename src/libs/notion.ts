@@ -327,20 +327,10 @@ export const fetchAllParents = async (
   if (!parentObjectResponse) {
     return parentList;
   }
-  // if (
-  // parentObjectResponse.object === "page" ||
-  // parentObjectResponse.object === "database"
-  // ) {
-  // parentList.push(parentObjectResponse);
   return await fetchAllParents(parentObjectResponse.parent, [
-    ...parentList,
     parentObjectResponse,
+    ...parentList,
   ]);
-  // }
-  // if (parentObjectResponse.object === "block") {
-  // return await fetchAllParents(parentObjectResponse.parent, parentList);
-  // }
-  // return parentList;
 };
 
 export const resolveBlockChildren = async (
@@ -836,3 +826,9 @@ export const scrapeOgMeta = async (
   }
   return undefined;
 };
+import "dotenv/config";
+
+(async () => {
+  const res = await fetchBlockComponents("2712e341754a41aea9ce4c0bb4b18c52");
+  console.log(JSON.stringify(res, null, 2));
+})();
