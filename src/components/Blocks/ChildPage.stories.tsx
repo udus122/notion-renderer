@@ -1,4 +1,4 @@
-import ChildPage from "./ChildPage";
+import { ChildPage } from "./ChildPage";
 import ChildPageObject from "./ChildPage.json";
 
 import type { ChildPageBlockObjectComponent } from "@/types/components";

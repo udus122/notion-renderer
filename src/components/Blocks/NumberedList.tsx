@@ -1,4 +1,4 @@
-import NumberedListItem from "./NumberedListItem";
+import { NumberedListItem } from "./NumberedListItem";
 
 import type {
   BlockComponentProps,
@@ -7,7 +7,7 @@ import type {
 
 type Props = BlockComponentProps<NumberedListBlockObjectComponent>;
 
-const NumberedList: React.FC<Props> = ({ block }) => {
+export const NumberedList: React.FC<Props> = ({ block }) => {
   return (
     <ol className="notion_numbered_list">
       {block.numbered_list.items.map((item) => {
@@ -16,5 +16,3 @@ const NumberedList: React.FC<Props> = ({ block }) => {
     </ol>
   );
 };
-
-export default NumberedList;

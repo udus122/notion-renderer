@@ -5,11 +5,11 @@ import {
   TableRowBlockObjectComponent,
 } from "@/types/components";
 
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
 type Props = BlockComponentProps<TableBlockObjectComponent>;
 
-const Table: React.FC<Props> = ({ block }) => {
+export const Table: React.FC<Props> = ({ block }) => {
   return (
     <table id={block.id} className="notion_table">
       <tbody>
@@ -27,8 +27,6 @@ const Table: React.FC<Props> = ({ block }) => {
     </table>
   );
 };
-
-export default Table;
 
 const TableRowRowHeader: React.FC<{
   table_row: TableRowBlockObjectComponent;

@@ -1,8 +1,8 @@
 import { extractTitleProperty } from "@/libs/utils";
 
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
-import Icon from "./Icon";
+import { Icon } from "./Icon";
 
 import type {
   BlockComponentProps,
@@ -11,7 +11,7 @@ import type {
 
 type Props = BlockComponentProps<LinkToPageBlockObjectComponent>;
 
-const LinkToPage: React.FC<Props> = ({ block }) => {
+export const LinkToPage: React.FC<Props> = ({ block }) => {
   if (block.link_to_page.type === "page_id" && block.link_to_page.page) {
     const titleProperty = extractTitleProperty(block.link_to_page.page);
     return (
@@ -52,5 +52,3 @@ const LinkToPage: React.FC<Props> = ({ block }) => {
 
   return null;
 };
-
-export default LinkToPage;

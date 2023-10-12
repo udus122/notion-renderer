@@ -4,8 +4,6 @@ type Props = React.ComponentProps<"em"> & {
   richTextItem: RichTextItemResponse;
 };
 
-const Italic: React.FC<Props> = ({ children }) => {
+export const Italic: React.FC<Props> = ({ children }) => {
   return <em className="notion_italic">{children}</em>;
 };
-
-export default Italic;

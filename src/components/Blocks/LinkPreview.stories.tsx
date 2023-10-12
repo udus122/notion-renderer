@@ -1,4 +1,4 @@
-import LinkPreview from "./LinkPreview";
+import { LinkPreview } from "./LinkPreview";
 import LinkPreviewObject from "./LinkPreview.json";
 
 import type { LinkPreviewBlockObjectComponent } from "@/types/components";

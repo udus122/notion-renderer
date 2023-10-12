@@ -1,4 +1,4 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
 import type {
   BlockComponentProps,
@@ -7,7 +7,7 @@ import type {
 
 type Props = BlockComponentProps<BookmarkBlockObjectComponent>;
 
-const Bookmark: React.FC<Props> = ({ block }) => {
+export const Bookmark: React.FC<Props> = ({ block }) => {
   return (
     <div className="notion_bookmark">
       <a href={block.bookmark.url} target="_blank" rel="noopener noreferrer">
@@ -55,5 +55,3 @@ const Bookmark: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default Bookmark;

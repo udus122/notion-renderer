@@ -1,4 +1,4 @@
-import Breadcrumb from "./Breadcrumb";
+import { Breadcrumb } from "./Breadcrumb";
 import BreadcrumbObject from "./Breadcrumb.json";
 
 import type { BreadcrumbBlockObjectComponent } from "@/types/components";

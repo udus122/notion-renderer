@@ -1,13 +1,13 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks";
 
 import type {
   BlockComponentProps,
   NumberedListItemBlockObjectComponent,
 } from "@/types/components";
 
-const NumberedListItem: React.FC<
+export const NumberedListItem: React.FC<
   BlockComponentProps<NumberedListItemBlockObjectComponent>
 > = ({ block }) => {
   return (
@@ -24,5 +24,3 @@ const NumberedListItem: React.FC<
     </li>
   );
 };
-
-export default NumberedListItem;

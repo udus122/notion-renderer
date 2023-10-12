@@ -1,4 +1,4 @@
-import ToDo from "./ToDo";
+import { ToDo } from "./ToDo";
 import ToDoCheckedObject from "./ToDo.Checked.json";
 import ToDoObject from "./Todo.json";
 

@@ -1,5 +1,5 @@
 import BlocksObject from "./Blocks.json";
-import TableOfContents from "./TableOfContents";
+import { TableOfContents } from "./TableOfContents";
 import TableOfContentsObject from "./TableOfContents.json";
 
 import type {

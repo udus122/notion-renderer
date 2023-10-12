@@ -5,8 +5,6 @@ import type {
 
 type Props = BlockComponentProps<DividerBlockObjectComponent>;
 
-const Divider: React.FC<Props> = ({ block }) => {
+export const Divider: React.FC<Props> = ({ block }) => {
   return <hr id={block.id} className="notion_divider" />;
 };
-
-export default Divider;

@@ -1,4 +1,4 @@
-import Icon from "./Icon";
+import { Icon } from "./Icon";
 
 import type {
   BlockComponentProps,
@@ -7,7 +7,7 @@ import type {
 
 type Props = BlockComponentProps<ChildPageBlockObjectComponent>;
 
-const ChildPage: React.FC<Props> = ({ block }) => {
+export const ChildPage: React.FC<Props> = ({ block }) => {
   return (
     <a className="notion_link" href={`/${block.id}`}>
       <div id={block.id} className="notion_child_page">
@@ -21,5 +21,3 @@ const ChildPage: React.FC<Props> = ({ block }) => {
     </a>
   );
 };
-
-export default ChildPage;

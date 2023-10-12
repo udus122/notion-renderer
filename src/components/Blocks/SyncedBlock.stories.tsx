@@ -1,4 +1,4 @@
-import SyncedBlock from "./SyncedBlock";
+import { SyncedBlock } from "./SyncedBlock";
 import SyncedBlockDuplicatedObject from "./SyncedBlock.Duplicated.json";
 import SyncedBlockOriginalObject from "./SyncedBlock.Original.json";
 

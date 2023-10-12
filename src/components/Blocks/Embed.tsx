@@ -1,6 +1,6 @@
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
 import type {
   BlockComponentProps,
@@ -9,7 +9,7 @@ import type {
 
 type Props = BlockComponentProps<EmbedBlockObjectComponent>;
 
-const Embed: React.FC<Props> = ({ block }) => {
+export const Embed: React.FC<Props> = ({ block }) => {
   const tweetId = getTweetId(block.embed.url);
   if (tweetId) {
     return <TwitterTweetEmbed options={{ theme: "dark" }} tweetId={tweetId} />;
@@ -24,8 +24,6 @@ const Embed: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default Embed;
 
 /* https://qiita.com/ATTACK3500/items/091bedc2bf0596e08f17 */
 const getTweetId = (url: string) => {

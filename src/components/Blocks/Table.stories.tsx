@@ -1,4 +1,4 @@
-import Table from "./Table";
+import { Table } from "./Table";
 import TableObject from "./Table.json";
 
 import type { TableBlockObjectComponent } from "@/types/components";

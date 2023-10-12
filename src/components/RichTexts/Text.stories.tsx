@@ -1,6 +1,6 @@
 import { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
-import Text from "./Text";
+import { Text } from "./Text";
 import TextObject from "./Text.json";
 
 import type { Meta, StoryObj } from "@storybook/react";

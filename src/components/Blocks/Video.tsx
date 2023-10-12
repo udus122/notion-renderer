@@ -1,6 +1,6 @@
 import YouTube from "react-youtube";
 
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
 import type {
   BlockComponentProps,
@@ -9,7 +9,7 @@ import type {
 
 type Props = BlockComponentProps<VideoBlockObjectComponent>;
 
-const Video: React.FC<Props> = ({ block }) => {
+export const Video: React.FC<Props> = ({ block }) => {
   const videoUrl =
     block.video.type == "external"
       ? block.video.external.url
@@ -35,8 +35,6 @@ const Video: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default Video;
 
 const getYouTubeId = (url: string) => {
   const arr = url.split(/(vi\/|v%3D|v=|\/v\/|youtu\.be\/|\/embed\/)/);

@@ -1,4 +1,4 @@
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks";
 import BlocksObject from "./Blocks.json";
 
 import type { ListBlockChildrenComponent } from "@/types/components";

@@ -1,4 +1,4 @@
-import ColumnList from "./ColumnList";
+import { ColumnList } from "./ColumnList";
 import ColumnListObject from "./ColumnList.json";
 
 import type { ColumnListBlockObjectComponent } from "@/types/components";

@@ -1,4 +1,4 @@
-import Callout from "./Callout";
+import { Callout } from "./Callout";
 import CalloutObject from "./Callout.json";
 
 import type { CalloutBlockObjectComponent } from "@/types/components";

@@ -5,7 +5,7 @@ import type {
 
 type Props = BlockComponentProps<LinkPreviewBlockObjectComponent>;
 
-const LinkPreview: React.FC<Props> = ({ block }) => {
+export const LinkPreview: React.FC<Props> = ({ block }) => {
   return (
     <div className="notion_link_preview">
       <a
@@ -54,5 +54,3 @@ const LinkPreview: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default LinkPreview;

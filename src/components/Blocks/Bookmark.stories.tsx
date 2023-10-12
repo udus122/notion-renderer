@@ -1,4 +1,4 @@
-import Bookmark from "./Bookmark";
+import { Bookmark } from "./Bookmark";
 import BookmarkObject from "./Bookmark.json";
 import BookmarkNoOgMetaObject from "./Bookmark.NoOgMeta.json";
 

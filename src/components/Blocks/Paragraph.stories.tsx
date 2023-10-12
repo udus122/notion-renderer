@@ -1,4 +1,4 @@
-import Paragraph from "./Paragraph";
+import { Paragraph } from "./Paragraph";
 import ParagraphObject from "./Paragraph.json";
 import ParagraphWithChildrenObject from "./Paragraph.WithChildren.json";
 

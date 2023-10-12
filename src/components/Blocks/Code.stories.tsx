@@ -1,4 +1,4 @@
-import Code from "./Code";
+import { Code } from "./Code";
 import CodeObject from "./Code.json";
 
 import type { CodeBlockObjectComponent } from "@/types/components";

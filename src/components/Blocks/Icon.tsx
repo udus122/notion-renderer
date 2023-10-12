@@ -4,7 +4,7 @@ type Props = {
   icon: Icon;
 };
 
-const Icon: React.FC<Props> = ({ icon }) => {
+export const Icon: React.FC<Props> = ({ icon }) => {
   if (!icon) return <DefaultIcon />;
 
   return (
@@ -31,8 +31,6 @@ const Icon: React.FC<Props> = ({ icon }) => {
     </div>
   );
 };
-
-export default Icon;
 
 const DefaultIcon = () => {
   return (

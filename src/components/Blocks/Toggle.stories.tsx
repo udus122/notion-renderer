@@ -1,4 +1,4 @@
-import Toggle from "./Toggle";
+import { Toggle } from "./Toggle";
 import ToggleObject from "./Toggle.json";
 
 import type { ToggleBlockObjectComponent } from "@/types/components";

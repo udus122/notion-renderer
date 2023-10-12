@@ -1,6 +1,6 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks";
 
 import type {
   BlockComponentProps,
@@ -9,7 +9,7 @@ import type {
 
 type Props = BlockComponentProps<ToggleBlockObjectComponent>;
 
-const Toggle: React.FC<Props> = ({ block }) => {
+export const Toggle: React.FC<Props> = ({ block }) => {
   return (
     <details
       id={block.id}
@@ -24,5 +24,3 @@ const Toggle: React.FC<Props> = ({ block }) => {
     </details>
   );
 };
-
-export default Toggle;

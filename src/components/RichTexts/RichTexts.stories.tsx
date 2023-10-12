@@ -1,6 +1,6 @@
 import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
-import RichTexts from "./RichTexts";
+import { RichTexts } from "./RichTexts";
 import RichTextsObject from "./RichTexts.json";
 
 import type { Meta, StoryObj } from "@storybook/react";

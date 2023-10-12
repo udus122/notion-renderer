@@ -1,4 +1,4 @@
-import Video from "./Video";
+import { Video } from "./Video";
 import VideoExternalObject from "./Video.External.json";
 import VideoFileObject from "./Video.File.json";
 import VideoYouTubeObject from "./Video.YouTube.json";

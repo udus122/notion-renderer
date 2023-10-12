@@ -1,4 +1,4 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
 import type {
   BlockComponentProps,
@@ -7,7 +7,7 @@ import type {
 
 type Props = BlockComponentProps<PdfBlockObjectComponent>;
 
-const Pdf: React.FC<Props> = ({ block }) => {
+export const Pdf: React.FC<Props> = ({ block }) => {
   const pdfUrl =
     block.pdf.type == "external"
       ? block.pdf.external.url
@@ -36,5 +36,3 @@ const Pdf: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default Pdf;

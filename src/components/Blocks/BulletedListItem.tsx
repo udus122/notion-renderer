@@ -1,6 +1,6 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks";
 
 import type {
   BlockComponentProps,
@@ -9,7 +9,7 @@ import type {
 
 type Props = BlockComponentProps<BulletedListItemBlockObjectComponent>;
 
-const BulletedListItem: React.FC<Props> = ({ block }) => {
+export const BulletedListItem: React.FC<Props> = ({ block }) => {
   return (
     <li
       id={block.id}
@@ -24,5 +24,3 @@ const BulletedListItem: React.FC<Props> = ({ block }) => {
     </li>
   );
 };
-
-export default BulletedListItem;

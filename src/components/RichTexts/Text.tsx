@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import Annotations from "./Annotations";
+import { Annotations } from "./Annotations";
 import { Link } from "./Link";
 
 import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
@@ -16,7 +16,7 @@ type Props = {
 /**
  * text.contentの内容を受け取って、改行とリンクを含めてspan要素で囲んで返すコンポーネント
  */
-const Text: React.FC<Props> = ({ richTextItem, customMapper }) => {
+export const Text: React.FC<Props> = ({ richTextItem, customMapper }) => {
   const annotationMapper = {
     ...defaultAnnotationMapper,
     ...customMapper,
@@ -32,8 +32,6 @@ const Text: React.FC<Props> = ({ richTextItem, customMapper }) => {
     </span>
   );
 };
-
-export default Text;
 
 function breakTextRichTextItem(richTextItem: TextRichTextItemResponse) {
   const text_content = richTextItem.text.content

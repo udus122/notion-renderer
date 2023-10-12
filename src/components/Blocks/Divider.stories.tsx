@@ -1,4 +1,4 @@
-import Divider from "./Divider";
+import { Divider } from "./Divider";
 import DividerObject from "./Divider.json";
 
 import type { DividerBlockObjectComponent } from "@/types/components";

@@ -1,8 +1,8 @@
-import RichText from "./RichText";
+import { RichText } from "./RichText";
 
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
-const RichTexts = ({
+export const RichTexts = ({
   richTexts,
   customRichTextComponentMapper = {},
 }: {
@@ -23,5 +23,3 @@ const RichTexts = ({
     </>
   );
 };
-
-export default RichTexts;

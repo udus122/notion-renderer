@@ -1,41 +1,41 @@
 import { BlockComponentProps, BlockObjectComponent } from "@/types/components";
 
-import Audio from "./Audio";
-import Bookmark from "./Bookmark";
-import Breadcrumb from "./Breadcrumb";
-import BulletedList from "./BulletedList";
-import BulletedListItem from "./BulletedListItem";
-import Callout from "./Callout";
-import ChildDatabase from "./ChildDatabase";
-import ChildPage from "./ChildPage";
-import Code from "./Code";
-import ColumnList from "./ColumnList";
-import Divider from "./Divider";
-import Embed from "./Embed";
-import Equation from "./Equation";
-import File from "./File";
-import Heading1 from "./Heading1";
-import Heading2 from "./Heading2";
-import Heading3 from "./Heading3";
-import Image from "./Image";
-import LinkPreview from "./LinkPreview";
-import LinkToPage from "./LinkToPage";
-import NumberedList from "./NumberedList";
-import NumberedListItem from "./NumberedListItem";
-import Paragraph from "./Paragraph";
-import Pdf from "./Pdf";
-import Quote from "./Quote";
-import SyncedBlock from "./SyncedBlock";
-import Table from "./Table";
-import TableOfContents from "./TableOfContents";
-import ToDo from "./ToDo";
-import Toggle from "./Toggle";
-import Unsupported from "./Unsupported";
-import Video from "./Video";
+import { Audio } from "./Audio";
+import { Bookmark } from "./Bookmark";
+import { Breadcrumb } from "./Breadcrumb";
+import { BulletedList } from "./BulletedList";
+import { BulletedListItem } from "./BulletedListItem";
+import { Callout } from "./Callout";
+import { ChildDatabase } from "./ChildDatabase";
+import { ChildPage } from "./ChildPage";
+import { Code } from "./Code";
+import { ColumnList } from "./ColumnList";
+import { Divider } from "./Divider";
+import { Embed } from "./Embed";
+import { Equation } from "./Equation";
+import { File } from "./File";
+import { Heading1 } from "./Heading1";
+import { Heading2 } from "./Heading2";
+import { Heading3 } from "./Heading3";
+import { Image } from "./Image";
+import { LinkPreview } from "./LinkPreview";
+import { LinkToPage } from "./LinkToPage";
+import { NumberedList } from "./NumberedList";
+import { NumberedListItem } from "./NumberedListItem";
+import { Paragraph } from "./Paragraph";
+import { Pdf } from "./Pdf";
+import { Quote } from "./Quote";
+import { SyncedBlock } from "./SyncedBlock";
+import { Table } from "./Table";
+import { TableOfContents } from "./TableOfContents";
+import { ToDo } from "./ToDo";
+import { Toggle } from "./Toggle";
+import { Unsupported } from "./Unsupported";
+import { Video } from "./Video";
 
 type Props = BlockComponentProps<BlockObjectComponent>;
 
-const Block: React.FC<Props> = ({
+export const Block: React.FC<Props> = ({
   block,
   blocks,
   customBlockComponentMapper = {},
@@ -50,8 +50,6 @@ const Block: React.FC<Props> = ({
     </div>
   );
 };
-
-export default Block;
 
 const BlockComponent: React.FC<Props> = ({
   block,

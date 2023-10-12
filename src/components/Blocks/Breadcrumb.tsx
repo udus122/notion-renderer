@@ -1,6 +1,6 @@
 import { extractTitleProperty } from "@/libs/utils";
 
-import Icon from "./Icon";
+import { Icon } from "./Icon";
 
 import type {
   BlockComponentProps,
@@ -9,7 +9,7 @@ import type {
 
 type Props = BlockComponentProps<BreadcrumbBlockObjectComponent>;
 
-const Breadcrumb: React.FC<Props> = ({ block }) => {
+export const Breadcrumb: React.FC<Props> = ({ block }) => {
   return (
     <div id={block.id} className="notion_breadcrumb">
       {block.breadcrumb.parents.map((pageOrDatabase, index, array) => {
@@ -32,5 +32,3 @@ const Breadcrumb: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default Breadcrumb;

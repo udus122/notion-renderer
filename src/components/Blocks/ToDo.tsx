@@ -1,6 +1,6 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks";
 
 import type {
   BlockComponentProps,
@@ -9,7 +9,7 @@ import type {
 
 type Props = BlockComponentProps<ToDoBlockObjectComponent>;
 
-const ToDo: React.FC<Props> = ({ block }) => {
+export const ToDo: React.FC<Props> = ({ block }) => {
   const isChecked = block.to_do.checked;
   return (
     <div
@@ -48,5 +48,3 @@ const CheckedBox = () => (
     </svg>
   </span>
 );
-
-export default ToDo;

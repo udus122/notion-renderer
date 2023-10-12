@@ -1,4 +1,4 @@
-import Equation from "./Equation";
+import { Equation } from "./Equation";
 import EquationObject from "./Equation.json";
 
 import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";

@@ -1,6 +1,6 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks";
 
 import type {
   BlockComponentProps,
@@ -9,7 +9,7 @@ import type {
 
 type Props = BlockComponentProps<Heading1BlockObjectComponent>;
 
-const Heading1: React.FC<Props> = ({ block }) => {
+export const Heading1: React.FC<Props> = ({ block }) => {
   return (
     <>
       {block.heading_1.is_toggleable ? (
@@ -39,5 +39,3 @@ const Heading1: React.FC<Props> = ({ block }) => {
     </>
   );
 };
-
-export default Heading1;

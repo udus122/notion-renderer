@@ -1,4 +1,4 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
 import type {
   BlockComponentProps,
@@ -10,7 +10,7 @@ import type {
 
 type Props = BlockComponentProps<TableOfContentsBlockObjectComponent>;
 
-const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
+export const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
   const headings = blocks?.filter(
     (
       block
@@ -43,5 +43,3 @@ const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
     </div>
   );
 };
-
-export default TableOfContents;

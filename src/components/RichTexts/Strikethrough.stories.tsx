@@ -1,6 +1,6 @@
 import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
-import Strikethrough from "./Strikethrough";
+import { Strikethrough } from "./Strikethrough";
 import StrikethroughRichText from "./Strikethrough.json";
 
 import type { Meta, StoryObj } from "@storybook/react";

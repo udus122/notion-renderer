@@ -1,7 +1,7 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
 import type {
   BlockComponentProps,
@@ -10,7 +10,7 @@ import type {
 
 type Props = BlockComponentProps<CodeBlockObjectComponent>;
 
-const Code: React.FC<Props> = ({ block }) => {
+export const Code: React.FC<Props> = ({ block }) => {
   return (
     <div id={block.id} className="notion_code">
       <div className="notion_code_header">
@@ -35,5 +35,3 @@ const Code: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default Code;

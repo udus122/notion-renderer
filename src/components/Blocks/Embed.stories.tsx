@@ -1,4 +1,4 @@
-import Embed from "./Embed";
+import { Embed } from "./Embed";
 import EmbedObject from "./Embed.json";
 import EmbedTwitterObject from "./Embed.Twitter.json";
 

@@ -1,4 +1,4 @@
-import BulletedList from "./BulletedList";
+import { BulletedList } from "./BulletedList";
 import BulletedListObject from "./BulletedList.json";
 
 import type { BulletedListBlockObjectComponent } from "@/types/components";

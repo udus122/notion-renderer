@@ -1,4 +1,4 @@
-import BulletedListItem from "./BulletedListItem";
+import { BulletedListItem } from "./BulletedListItem";
 
 import type {
   BlockComponentProps,
@@ -7,7 +7,7 @@ import type {
 
 type Props = BlockComponentProps<BulletedListBlockObjectComponent>;
 
-const BulletedList: React.FC<Props> = ({ block }) => {
+export const BulletedList: React.FC<Props> = ({ block }) => {
   return (
     <ul className="notion_bulleted_list">
       {block.bulleted_list.items.map((item) => {
@@ -16,5 +16,3 @@ const BulletedList: React.FC<Props> = ({ block }) => {
     </ul>
   );
 };
-
-export default BulletedList;

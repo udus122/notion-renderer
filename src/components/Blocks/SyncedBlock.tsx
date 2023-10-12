@@ -1,5 +1,5 @@
-import Block from "./Block";
-import Blocks from "./Blocks";
+import { Block } from "./Block";
+import { Blocks } from "./Blocks";
 
 import type {
   BlockComponentProps,
@@ -8,7 +8,7 @@ import type {
 
 type Props = BlockComponentProps<SyncedBlockBlockObjectComponent>;
 
-const SyncedBlock: React.FC<Props> = ({ block }) => {
+export const SyncedBlock: React.FC<Props> = ({ block }) => {
   return (
     <div className="notion_synced_block">
       {block.synced_block.synced_from === null
@@ -25,5 +25,3 @@ const SyncedBlock: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default SyncedBlock;

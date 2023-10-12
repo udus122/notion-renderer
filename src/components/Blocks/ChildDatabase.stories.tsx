@@ -1,4 +1,4 @@
-import ChildDatabase from "./ChildDatabase";
+import { ChildDatabase } from "./ChildDatabase";
 import ChildDatabaseObject from "./ChildDatabase.json";
 
 import type { ChildDatabaseBlockObjectComponent } from "@/types/components";

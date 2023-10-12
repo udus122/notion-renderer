@@ -8,12 +8,10 @@ import type {
 
 type Props = BlockComponentProps<EquationBlockObjectComponent>;
 
-const Equation: React.FC<Props> = ({ block }) => {
+export const Equation: React.FC<Props> = ({ block }) => {
   return (
     <div id={block.id} className="notion_equation">
       <BlockMath math={block.equation.expression} />
     </div>
   );
 };
-
-export default Equation;

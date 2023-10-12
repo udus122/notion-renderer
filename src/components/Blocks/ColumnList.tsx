@@ -1,4 +1,4 @@
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks";
 
 import type {
   BlockComponentProps,
@@ -7,7 +7,7 @@ import type {
 
 type Props = BlockComponentProps<ColumnListBlockObjectComponent>;
 
-const ColumnList: React.FC<Props> = ({ block }) => {
+export const ColumnList: React.FC<Props> = ({ block }) => {
   return (
     <div id={block.id} className="notion_column_list">
       {block.column_list.columns &&
@@ -22,5 +22,3 @@ const ColumnList: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default ColumnList;

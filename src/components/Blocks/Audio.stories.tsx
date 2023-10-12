@@ -1,4 +1,4 @@
-import Audio from "./Audio";
+import { Audio } from "./Audio";
 import AudioExternalObject from "./Audio.External.json";
 import AudioFileObject from "./Audio.File.json";
 

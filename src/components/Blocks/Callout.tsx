@@ -1,7 +1,7 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
-import Blocks from "./Blocks";
-import Icon from "./Icon";
+import { Blocks } from "./Blocks";
+import { Icon } from "./Icon";
 
 import type {
   BlockComponentProps,
@@ -10,7 +10,7 @@ import type {
 
 type Props = BlockComponentProps<CalloutBlockObjectComponent>;
 
-const Callout: React.FC<Props> = ({ block }) => {
+export const Callout: React.FC<Props> = ({ block }) => {
   return (
     <div
       id={block.id}
@@ -28,5 +28,3 @@ const Callout: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default Callout;

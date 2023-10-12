@@ -1,6 +1,6 @@
 import { isFullUser } from "@notionhq/client";
 
-import Annotations from "./Annotations";
+import { Annotations } from "./Annotations";
 
 import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
@@ -8,7 +8,7 @@ type Props = {
   richTextItem: MentionRichTextItemResponse;
 };
 
-const Mention: React.FC<Props> = ({ richTextItem }) => {
+export const Mention: React.FC<Props> = ({ richTextItem }) => {
   switch (richTextItem.mention.type) {
     case "database":
       return (
@@ -75,5 +75,3 @@ const Mention: React.FC<Props> = ({ richTextItem }) => {
       return null;
   }
 };
-
-export default Mention;

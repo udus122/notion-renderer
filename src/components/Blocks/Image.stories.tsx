@@ -1,4 +1,4 @@
-import Image from "./Image";
+import { Image } from "./Image";
 import ImageObject from "./Image.json";
 
 import type { ImageBlockObjectComponent } from "@/types/components";

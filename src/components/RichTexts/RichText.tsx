@@ -1,10 +1,10 @@
-import Equation from "./Equation";
-import Mention from "./Mention";
-import Text from "./Text";
+import { Equation } from "./Equation";
+import { Mention } from "./Mention";
+import { Text } from "./Text";
 
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
-const RichText = ({
+export const RichText = ({
   richTextItem,
   customRichTextComponentMapper = {},
 }: {
@@ -38,5 +38,3 @@ const RichText = ({
       return null;
   }
 };
-
-export default RichText;

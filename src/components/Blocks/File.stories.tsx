@@ -1,4 +1,4 @@
-import File from "./File";
+import { File } from "./File";
 import FileExternalObject from "./File.External.json";
 import FileFileObject from "./File.File.json";
 

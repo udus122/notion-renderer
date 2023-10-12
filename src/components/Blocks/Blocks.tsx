@@ -1,4 +1,4 @@
-import Block from "./Block";
+import { Block } from "./Block";
 
 import type { BlockObjectComponent } from "@/types/components";
 
@@ -7,7 +7,7 @@ type Props = {
   customBlockComponentMapper?: object;
 };
 
-const Blocks: React.FC<Props> = function ({
+export const Blocks: React.FC<Props> = function ({
   blocks,
   customBlockComponentMapper = {},
 }) {
@@ -26,5 +26,3 @@ const Blocks: React.FC<Props> = function ({
     </>
   );
 };
-
-export default Blocks;

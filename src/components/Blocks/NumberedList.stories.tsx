@@ -1,4 +1,4 @@
-import NumberedList from "./NumberedList";
+import { NumberedList } from "./NumberedList";
 import NumberedListObject from "./NumberedList.json";
 
 import type { NumberedListBlockObjectComponent } from "@/types/components";

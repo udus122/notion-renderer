@@ -1,4 +1,4 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
 import type {
   BlockComponentProps,
@@ -7,7 +7,7 @@ import type {
 
 type Props = BlockComponentProps<ImageBlockObjectComponent>;
 
-const Image: React.FC<Props> = ({ block }) => {
+export const Image: React.FC<Props> = ({ block }) => {
   return (
     <div id={block.id} className="notion_image">
       <img
@@ -26,5 +26,3 @@ const Image: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default Image;

@@ -1,6 +1,6 @@
-import RichTexts from "@/components/RichTexts/RichTexts";
+import { RichTexts } from "@/components/RichTexts/RichTexts";
 
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks";
 
 import type {
   BlockComponentProps,
@@ -9,7 +9,7 @@ import type {
 
 type Props = BlockComponentProps<ParagraphBlockObjectComponent>;
 
-const Paragraph: React.FC<Props> = ({ block }) => {
+export const Paragraph: React.FC<Props> = ({ block }) => {
   return (
     <div
       id={block.id}
@@ -26,5 +26,3 @@ const Paragraph: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default Paragraph;

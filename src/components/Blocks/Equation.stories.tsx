@@ -1,4 +1,4 @@
-import Equation from "./Equation";
+import { Equation } from "./Equation";
 import EquationObject from "./Equation.json";
 
 import type { EquationBlockObjectComponent } from "@/types/components";

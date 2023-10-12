@@ -1,4 +1,4 @@
-import Mention from "./Mention";
+import { Mention } from "./Mention";
 import MentionDatabaseRichTextObject from "./Mention.database.json";
 import MentionPageRichTextObject from "./Mention.page.json";
 

@@ -1,6 +1,6 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks";
 
 import type {
   BlockComponentProps,
@@ -9,7 +9,7 @@ import type {
 
 type Props = BlockComponentProps<QuoteBlockObjectComponent>;
 
-const Quote: React.FC<Props> = ({ block }) => {
+export const Quote: React.FC<Props> = ({ block }) => {
   return (
     <blockquote
       id={block.id}
@@ -24,5 +24,3 @@ const Quote: React.FC<Props> = ({ block }) => {
     </blockquote>
   );
 };
-
-export default Quote;

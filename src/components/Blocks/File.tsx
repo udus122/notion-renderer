@@ -1,4 +1,4 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts";
 
 import type {
   BlockComponentProps,
@@ -7,7 +7,7 @@ import type {
 
 type Props = BlockComponentProps<FileBlockObjectComponent>;
 
-const File: React.FC<Props> = ({ block }) => {
+export const File: React.FC<Props> = ({ block }) => {
   const fileUrl =
     block.file.type == "external"
       ? block.file.external.url
@@ -39,5 +39,3 @@ const File: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default File;

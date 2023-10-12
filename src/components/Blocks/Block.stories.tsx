@@ -1,4 +1,4 @@
-import Block from "./Block";
+import { Block } from "./Block";
 import DividerObject from "./Block.Divider.json";
 import ParagraphObject from "./Block.Paragraph.json";
 

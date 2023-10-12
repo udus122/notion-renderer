@@ -1,4 +1,4 @@
-import Pdf from "./Pdf";
+import { Pdf } from "./Pdf";
 import PdfExternalObject from "./Pdf.External.json";
 import PdfFileObject from "./Pdf.File.json";
 
