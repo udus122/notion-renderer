@@ -121,14 +121,14 @@ export type BlockObjectComponent =
 
 export type AudioBlockObjectComponent = AudioBlockObjectResponse;
 
-export type OgMeta = {
+export type SiteInfo = {
   title?: string;
   description?: string;
-  image?: OgpImage;
+  image?: OgImage;
   icon?: string;
 };
 
-export type OgpImage = {
+export type OgImage = {
   url: string;
   type?: string;
   width?: number;
@@ -137,7 +137,7 @@ export type OgpImage = {
 
 export type BookmarkBlockObjectComponent = BookmarkBlockObjectResponse & {
   bookmark: {
-    og_meta?: OgMeta;
+    site_info?: SiteInfo;
   };
 };
 
@@ -222,7 +222,11 @@ export type Heading3BlockObjectComponent = Heading3BlockObjectResponse & {
 
 export type ImageBlockObjectComponent = ImageBlockObjectResponse;
 
-export type LinkPreviewBlockObjectComponent = LinkPreviewBlockObjectResponse;
+export type LinkPreviewBlockObjectComponent = LinkPreviewBlockObjectResponse & {
+  link_preview: {
+    site_info?: SiteInfo;
+  };
+};
 
 export type LinkToPageBlockObjectComponent = LinkToPageBlockObjectResponse & {
   link_to_page:

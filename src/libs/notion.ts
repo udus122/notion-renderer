@@ -437,12 +437,12 @@ export const convertBlockToComponent = async (
       return { ...block } satisfies AudioBlockObjectComponent;
     }
     case "bookmark": {
-      const ogMeta = await scrapeOgMeta(block.bookmark.url);
+      const site_info = await scrapeOgMeta(block.bookmark.url);
       return {
         ...block,
         bookmark: {
           ...block.bookmark,
-          og_meta: ogMeta,
+          site_info,
         },
       } satisfies BookmarkBlockObjectComponent;
     }
@@ -607,7 +607,14 @@ export const convertBlockToComponent = async (
       return { ...block } satisfies ImageBlockObjectComponent;
     }
     case "link_preview": {
-      return { ...block } satisfies LinkPreviewBlockObjectComponent;
+      const site_info = await scrapeOgMeta(block.link_preview.url);
+      return {
+        ...block,
+        link_preview: {
+          ...block.link_preview,
+          site_info,
+        },
+      } satisfies LinkPreviewBlockObjectComponent;
     }
     case "link_to_page": {
       switch (block.link_to_page.type) {
