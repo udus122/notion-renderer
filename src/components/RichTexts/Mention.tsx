@@ -1,3 +1,5 @@
+import { isFullUser } from "@notionhq/client";
+
 import Annotations from "./Annotations";
 
 import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
@@ -14,7 +16,7 @@ const Mention: React.FC<Props> = ({ richTextItem }) => {
           className="notion_link"
           href={`/${richTextItem.mention.database.id}`}
         >
-          <span className="notion_rich_text_type_mention mention_type_database">
+          <span className="notion_rich_text_type_mention_type_database">
             <Annotations richTextItem={richTextItem}>
               {richTextItem.plain_text}
             </Annotations>
@@ -23,7 +25,7 @@ const Mention: React.FC<Props> = ({ richTextItem }) => {
       );
     case "date":
       return (
-        <span className="notion_rich_text_type_mention mention_type_date">
+        <span className="notion_rich_text_type_mention_type_date">
           <Annotations richTextItem={richTextItem}>
             {richTextItem.plain_text}
           </Annotations>
@@ -32,7 +34,7 @@ const Mention: React.FC<Props> = ({ richTextItem }) => {
     case "link_preview":
       return (
         <a className="notion_link" href={richTextItem.mention.link_preview.url}>
-          <span className="notion_rich_text_type_mention mention_type_link_preview">
+          <span className="notion_rich_text_type_mention_type_link_preview">
             <Annotations richTextItem={richTextItem}>
               {richTextItem.plain_text}
             </Annotations>
@@ -42,7 +44,7 @@ const Mention: React.FC<Props> = ({ richTextItem }) => {
     case "page":
       return (
         <a className="notion_link" href={`/${richTextItem.mention.page.id}`}>
-          <span className="notion_rich_text_type_mention mention_type_page">
+          <span className="notion_rich_text_type_mention_type_page">
             <Annotations richTextItem={richTextItem}>
               {richTextItem.plain_text}
             </Annotations>
@@ -54,9 +56,17 @@ const Mention: React.FC<Props> = ({ richTextItem }) => {
       return null;
     case "user":
       return (
-        <span className="notion_rich_text_type_mention mention_type_user notion_link">
+        <span className="notion_rich_text_type_mention_type_user">
+          {isFullUser(richTextItem.mention.user) ? (
+            <img
+              className="notion_rich_text_type_mention_type_user_avatar"
+              src={richTextItem.mention.user.avatar_url ?? undefined}
+            />
+          ) : (
+            "@"
+          )}
           <Annotations richTextItem={richTextItem}>
-            {richTextItem.plain_text}
+            {richTextItem.plain_text.replace("@", "")}
           </Annotations>
         </span>
       );

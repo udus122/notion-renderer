@@ -372,3 +372,12 @@ td > * {
   block-size: auto;
   max-inline-size: 100%;
 }
+/* user mention type rich text */
+.notion_rich_text_type_mention_type_user_avatar {
+  block-size: 1rem;
+  inline-size: 1rem;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  margin-inline-end: 0.2rem;
+  vertical-align: text-top;
+}
