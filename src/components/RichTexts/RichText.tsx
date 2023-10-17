@@ -1,4 +1,4 @@
-import { Equation } from "./Equation";
+import { InlineEquation } from "./InlineEquation";
 import { Mention } from "./Mention";
 import { Text } from "./Text";
 
@@ -14,7 +14,7 @@ export const RichText = ({
   if (!richTextItem) return null;
   const richTextComponentMapper = {
     text: Text,
-    equation: Equation,
+    equation: InlineEquation,
     mention: Mention,
     ...customRichTextComponentMapper,
   };

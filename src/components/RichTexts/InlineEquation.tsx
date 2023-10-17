@@ -9,7 +9,7 @@ type Props = {
   richTextItem: EquationRichTextItemResponse;
 };
 
-export const Equation: React.FC<Props> = ({ richTextItem }) => (
+export const InlineEquation: React.FC<Props> = ({ richTextItem }) => (
   <span className="notion_rich_text_type_equation">
     <Annotations richTextItem={richTextItem}>
       <InlineMath math={richTextItem.equation.expression} />
