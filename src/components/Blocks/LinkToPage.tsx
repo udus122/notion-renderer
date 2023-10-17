@@ -1,4 +1,4 @@
-import { extractTitleProperty } from "@/libs/utils";
+import { extractTitleProperty } from "@/utils";
 
 import { RichTexts } from "../RichTexts/RichTexts";
 

@@ -11,6 +11,8 @@ import {
 } from "@notionhq/client";
 import openGraphScraper from "open-graph-scraper";
 
+import { notNullNorUndefined } from "../utils";
+
 import type {
   AudioBlockObjectComponent,
   BlockObjectComponent,
@@ -66,11 +68,6 @@ import type {
   PageObjectResponse,
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints";
-
-// TODO: utils.ts/helpers.tsへ移動させる
-export const notNullNorUndefined = <T>(v: T | null | undefined): v is T => {
-  return v !== null && v !== undefined;
-};
 
 export const notion = new Client({
   auth: process.env.NOTION_TOKEN,
@@ -835,7 +832,5 @@ export const scrapeOgMeta = async (
 };
 import "dotenv/config";
 
-(async () => {
-  const res = await fetchBlockComponents("2712e341754a41aea9ce4c0bb4b18c52");
-  console.log(JSON.stringify(res, null, 2));
-})();
+const res = await fetchBlockComponents("2712e341754a41aea9ce4c0bb4b18c52");
+console.log(JSON.stringify(res, null, 2));

@@ -21,3 +21,7 @@ export function extractTitleProperty(
   }
   return [];
 }
+
+export const notNullNorUndefined = <T>(v: T | null | undefined): v is T => {
+  return v !== null && v !== undefined;
+};
