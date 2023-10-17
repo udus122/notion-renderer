@@ -3,15 +3,36 @@
   "version": "1.0.0-alpha.4",
   "type": "module",
   "license": "MIT",
-  "main": "./dist/index.umd.cjs",
-  "module": "./dist/index.js",
+  "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "exports": {
+    "./components": {
+      "import": "./dist/components/index.js",
+      "types": "./dist/components/index.d.ts"
+    },
+    "./libs": {
+      "import": "./dist/libs/index.js",
+      "types": "./dist/libs/index.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "components": [
+        "dist/components/index.d.ts"
+      ],
+      "libs": [
+        "dist/libs/index.d.ts"
+      ]
+    }
+  },
   "files": [
     "/dist"
   ],
   "scripts": {
+    "clean": "rimraf dist",
+    "prebuild": "npm run clean",
+    "build": "tsc",
     "dev": "vite --open",
-    "build": "tsc && vite build",
     "preview": "vite preview",
     "test": "vitest",
     "lint:js": "eslint src --ext .jsx,.js,.tsx,.ts",
@@ -68,6 +89,7 @@
     "husky": "^8.0.3",
     "prettier": "^2.8.8",
     "prop-types": "^15.8.1",
+    "rimraf": "^5.0.5",
     "semantic-release": "^21.1.2",
     "storybook": "^7.4.6",
     "ts-node": "^10.9.1",

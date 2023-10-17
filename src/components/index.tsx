@@ -1,1 +1,2 @@
-export { Blocks } from "./Blocks";
+export * from "./Blocks";
+export * from "./RichTexts";

@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "ESNext",
+    "target": "ES2022",
     "useDefineForClassFields": true,
     "lib": [
       "DOM",
@@ -9,15 +9,16 @@
     ],
     "allowJs": false,
     "skipLibCheck": true,
-    "esModuleInterop": false,
-    "allowSyntheticDefaultImports": true,
+    "esModuleInterop": true,
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "module": "ESNext",
     "moduleResolution": "Node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "declaration": true,
+    "declarationMap": true,
+    "outDir": "./dist",
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
@@ -28,6 +29,9 @@
   },
   "include": [
     "src"
+  ],
+  "exclude": [
+    "**/*.json"
   ],
   "ts-node": {
     "esm": true,
