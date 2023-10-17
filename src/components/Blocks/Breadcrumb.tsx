@@ -1,4 +1,4 @@
-import { extractTitleProperty } from "@/utils";
+import { extractTitleProperty } from "@/libs/utils";
 
 import { Icon } from "./Icon";
 

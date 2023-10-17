@@ -11,7 +11,7 @@ import {
 } from "@notionhq/client";
 import openGraphScraper from "open-graph-scraper";
 
-import { notNullNorUndefined } from "../utils";
+import { notNullNorUndefined } from "./utils";
 
 import type {
   AudioBlockObjectComponent,
