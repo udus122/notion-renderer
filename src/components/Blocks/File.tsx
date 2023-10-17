@@ -20,18 +20,16 @@ export const File: React.FC<Props> = ({ block }) => {
 
   return (
     <div id={block.id} className="notion_file">
-      <a
-        className="notion_link"
-        href={fileUrl}
-        style={{ display: "flex", alignItems: "center" }}
-      >
-        <img
-          src="https://www.notion.so/icons/document_gray.svg"
-          alt="File icon in a file block"
-          width={20}
-          height={20}
-        />{" "}
-        {filename}
+      <a className="notion_link" href={fileUrl}>
+        <div className="notion_file_title">
+          <img
+            src="https://www.notion.so/icons/document_gray.svg"
+            alt="File icon in a file block"
+            width={20}
+            height={20}
+          />{" "}
+          {filename}
+        </div>
       </a>
       <div className="notion_caption notion_file_caption">
         <RichTexts richTexts={block.file.caption} />

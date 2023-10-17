@@ -61,6 +61,7 @@ export const Mention: React.FC<Props> = ({ richTextItem }) => {
             <img
               className="notion_rich_text_type_mention_type_user_avatar"
               src={richTextItem.mention.user.avatar_url ?? undefined}
+              alt="user avater"
             />
           ) : (
             "@"

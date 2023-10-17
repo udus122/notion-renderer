@@ -33,6 +33,7 @@ export const LinkPreview: React.FC<Props> = ({ block }) => {
                       ? block.link_preview.site_info?.icon
                       : `https://www.google.com/s2/favicons?domain=${block.link_preview.url}`
                   }
+                  alt="link preview favicon"
                 />
               </span>
               <span className="notion_link_preview_link_url">
@@ -46,6 +47,7 @@ export const LinkPreview: React.FC<Props> = ({ block }) => {
                 src={block.link_preview.site_info.image.url}
                 width={block.link_preview.site_info.image.width}
                 height={block.link_preview.site_info.image.height}
+                alt="link preview og image"
               />
             </div>
           )}

@@ -31,6 +31,7 @@ export const Bookmark: React.FC<Props> = ({ block }) => {
                       ? block.bookmark.site_info?.icon
                       : `https://www.google.com/s2/favicons?domain=${block.bookmark.url}`
                   }
+                  alt="bookmark favicon"
                 />
               </span>
               <span className="notion_bookmark_link_url">
@@ -44,6 +45,7 @@ export const Bookmark: React.FC<Props> = ({ block }) => {
                 src={block.bookmark.site_info.image.url}
                 width={block.bookmark.site_info.image.width}
                 height={block.bookmark.site_info.image.height}
+                alt="bookmark og image"
               />
             </div>
           )}
