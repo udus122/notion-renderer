@@ -17,7 +17,6 @@ export const Pdf: React.FC<Props> = ({ block }) => {
   return (
     <div id={block.id} className="notion_pdf">
       <object
-        style={{ blockSize: "100rem", inlineSize: "100%" }}
         type="application/pdf"
         data={
           block.pdf.type == "external"

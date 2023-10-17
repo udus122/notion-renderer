@@ -208,6 +208,10 @@
 .notion_paragraph_children {
   padding-inline-start: 1.5rem;
 }
+/* pdf block */
+.notion_pdf object {
+  inline-size: 100%;
+}
 /* quote block */
 .notion_quote {
   margin: 0 1rem 0 0;
@@ -303,6 +307,11 @@ h3 {
   max-inline-size: 100%;
   object-fit: contain;
   border-radius: 1px;
+}
+/* file block */
+.notion_file_title {
+  display: flex;
+  align-items: center;
 }
 /* table block */
 .notion_table {
