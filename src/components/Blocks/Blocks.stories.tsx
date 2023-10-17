@@ -1,7 +1,7 @@
 import { Blocks } from "./Blocks";
 import BlocksObject from "./Blocks.json";
 
-import type { ListBlockChildrenComponent } from "@/types/components";
+import type { BlockObjectComponent } from "@/types/components";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Blocks> = {
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Blocks>;
 
 export const Default: Story = {
   args: {
-    blocks: BlocksObject as ListBlockChildrenComponent,
+    blocks: BlocksObject as Array<BlockObjectComponent>,
   },
 };
