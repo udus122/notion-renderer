@@ -1,11 +1,11 @@
-import { RichTexts } from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
-import { Blocks } from "./Blocks";
+import { Blocks } from "./Blocks.js";
 
 import type {
   BlockComponentProps,
   BulletedListItemBlockObjectComponent,
-} from "@/types/components";
+} from "@/types/components.js";
 
 type Props = BlockComponentProps<BulletedListItemBlockObjectComponent>;
 

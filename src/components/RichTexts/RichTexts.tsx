@@ -1,6 +1,6 @@
-import { RichText } from "./RichText";
+import { RichText } from "./RichText.js";
 
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const RichTexts = ({
   richTexts,

@@ -1,4 +1,4 @@
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 type Props = React.ComponentProps<"span"> & {
   richTextItem: RichTextItemResponse;

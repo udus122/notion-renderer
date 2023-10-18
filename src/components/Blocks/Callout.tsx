@@ -1,12 +1,12 @@
-import { RichTexts } from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
-import { Blocks } from "./Blocks";
-import { Icon } from "./Icon";
+import { Blocks } from "./Blocks.js";
+import { Icon } from "./Icon.js";
 
 import type {
   BlockComponentProps,
   CalloutBlockObjectComponent,
-} from "@/types/components";
+} from "@/types/components.js";
 
 type Props = BlockComponentProps<CalloutBlockObjectComponent>;
 

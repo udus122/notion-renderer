@@ -1,8 +1,8 @@
-import { InlineEquation } from "./InlineEquation";
-import { Mention } from "./Mention";
-import { Text } from "./Text";
+import { InlineEquation } from "./InlineEquation.js";
+import { Mention } from "./Mention.js";
+import { Text } from "./Text.js";
 
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const RichText = ({
   richTextItem,

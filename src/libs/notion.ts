@@ -11,7 +11,7 @@ import {
 } from "@notionhq/client";
 import openGraphScraper from "open-graph-scraper";
 
-import { notNullNorUndefined } from "./utils";
+import { notNullNorUndefined } from "./utils.js";
 
 import type {
   AudioBlockObjectComponent,
@@ -50,8 +50,8 @@ import type {
   ToggleBlockObjectComponent,
   UnsupportedBlockObjectComponent,
   VideoBlockObjectComponent,
-} from "@/types/components";
-import type { Result } from "@/types/utils";
+} from "@/types/components.js";
+import type { Result } from "@/types/utils.js";
 import type {
   BlockObjectResponse,
   DatabaseObjectResponse,
@@ -67,7 +67,7 @@ import type {
   ListCommentsResponse,
   PageObjectResponse,
   PartialBlockObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+} from "@notionhq/client/build/src/api-endpoints.js";
 
 export const notion = new Client({
   auth: process.env.NOTION_TOKEN,
@@ -818,6 +818,7 @@ export const scrapeOgMeta = async (
     }
   | undefined
 > => {
+  // @ts-expect-error: because open-graph-scraper have type error with moduleResolution node16 but it works.
   const { error, result } = await openGraphScraper({ url });
   if (!error) {
     const { ogTitle, ogDescription, ogImage, favicon } = result;

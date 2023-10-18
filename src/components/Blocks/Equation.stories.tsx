@@ -1,7 +1,7 @@
-import { Equation } from "./Equation";
+import { Equation } from "./Equation.js";
 import EquationObject from "./Equation.json";
 
-import type { EquationBlockObjectComponent } from "@/types/components";
+import type { EquationBlockObjectComponent } from "@/types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Equation> = {

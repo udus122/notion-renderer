@@ -1,11 +1,11 @@
 import YouTube from "react-youtube";
 
-import { RichTexts } from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
 import type {
   BlockComponentProps,
   VideoBlockObjectComponent,
-} from "@/types/components";
+} from "@/types/components.js";
 
 type Props = BlockComponentProps<VideoBlockObjectComponent>;
 
@@ -20,6 +20,7 @@ export const Video: React.FC<Props> = ({ block }) => {
   const youTubeId = getYouTubeId(videoUrl);
 
   if (youTubeId) {
+    // @ts-expect-error: Error caused by being treated as a commonjs library because the library's package.json does not have "type": "module"
     return <YouTube videoId={youTubeId} />;
   }
 

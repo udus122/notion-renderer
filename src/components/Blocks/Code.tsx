@@ -1,12 +1,12 @@
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
-import { RichTexts } from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
 import type {
   BlockComponentProps,
   CodeBlockObjectComponent,
-} from "@/types/components";
+} from "@/types/components.js";
 
 type Props = BlockComponentProps<CodeBlockObjectComponent>;
 

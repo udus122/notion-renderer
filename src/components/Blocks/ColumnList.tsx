@@ -1,9 +1,9 @@
-import { Blocks } from "./Blocks";
+import { Blocks } from "./Blocks.js";
 
 import type {
   BlockComponentProps,
   ColumnListBlockObjectComponent,
-} from "@/types/components";
+} from "@/types/components.js";
 
 type Props = BlockComponentProps<ColumnListBlockObjectComponent>;
 

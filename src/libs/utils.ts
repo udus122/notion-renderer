@@ -1,7 +1,7 @@
 import type {
   PageObjectResponse,
   DatabaseObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+} from "@notionhq/client/build/src/api-endpoints.js";
 
 export function extractTitleProperty(
   page_or_database: PageObjectResponse | DatabaseObjectResponse

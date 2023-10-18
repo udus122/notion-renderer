@@ -1,11 +1,11 @@
 import BlocksObject from "./Blocks.json";
-import { TableOfContents } from "./TableOfContents";
+import { TableOfContents } from "./TableOfContents.js";
 import TableOfContentsObject from "./TableOfContents.json";
 
 import type {
   BlockObjectComponent,
   TableOfContentsBlockObjectComponent,
-} from "@/types/components";
+} from "@/types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof TableOfContents> = {

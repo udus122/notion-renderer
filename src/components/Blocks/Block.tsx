@@ -1,37 +1,40 @@
-import { BlockComponentProps, BlockObjectComponent } from "@/types/components";
+import { Audio } from "./Audio.js";
+import { Bookmark } from "./Bookmark.js";
+import { Breadcrumb } from "./Breadcrumb.js";
+import { BulletedList } from "./BulletedList.js";
+import { BulletedListItem } from "./BulletedListItem.js";
+import { Callout } from "./Callout.js";
+import { ChildDatabase } from "./ChildDatabase.js";
+import { ChildPage } from "./ChildPage.js";
+import { Code } from "./Code.js";
+import { ColumnList } from "./ColumnList.js";
+import { Divider } from "./Divider.js";
+import { Embed } from "./Embed.js";
+import { Equation } from "./Equation.js";
+import { File } from "./File.js";
+import { Heading1 } from "./Heading1.js";
+import { Heading2 } from "./Heading2.js";
+import { Heading3 } from "./Heading3.js";
+import { Image } from "./Image.js";
+import { LinkPreview } from "./LinkPreview.js";
+import { LinkToPage } from "./LinkToPage.js";
+import { NumberedList } from "./NumberedList.js";
+import { NumberedListItem } from "./NumberedListItem.js";
+import { Paragraph } from "./Paragraph.js";
+import { Pdf } from "./Pdf.js";
+import { Quote } from "./Quote.js";
+import { SyncedBlock } from "./SyncedBlock.js";
+import { Table } from "./Table.js";
+import { TableOfContents } from "./TableOfContents.js";
+import { ToDo } from "./ToDo.js";
+import { Toggle } from "./Toggle.js";
+import { Unsupported } from "./Unsupported.js";
+import { Video } from "./Video.js";
 
-import { Audio } from "./Audio";
-import { Bookmark } from "./Bookmark";
-import { Breadcrumb } from "./Breadcrumb";
-import { BulletedList } from "./BulletedList";
-import { BulletedListItem } from "./BulletedListItem";
-import { Callout } from "./Callout";
-import { ChildDatabase } from "./ChildDatabase";
-import { ChildPage } from "./ChildPage";
-import { Code } from "./Code";
-import { ColumnList } from "./ColumnList";
-import { Divider } from "./Divider";
-import { Embed } from "./Embed";
-import { Equation } from "./Equation";
-import { File } from "./File";
-import { Heading1 } from "./Heading1";
-import { Heading2 } from "./Heading2";
-import { Heading3 } from "./Heading3";
-import { Image } from "./Image";
-import { LinkPreview } from "./LinkPreview";
-import { LinkToPage } from "./LinkToPage";
-import { NumberedList } from "./NumberedList";
-import { NumberedListItem } from "./NumberedListItem";
-import { Paragraph } from "./Paragraph";
-import { Pdf } from "./Pdf";
-import { Quote } from "./Quote";
-import { SyncedBlock } from "./SyncedBlock";
-import { Table } from "./Table";
-import { TableOfContents } from "./TableOfContents";
-import { ToDo } from "./ToDo";
-import { Toggle } from "./Toggle";
-import { Unsupported } from "./Unsupported";
-import { Video } from "./Video";
+import type {
+  BlockComponentProps,
+  BlockObjectComponent,
+} from "@/types/components.js";
 
 type Props = BlockComponentProps<BlockObjectComponent>;
 

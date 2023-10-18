@@ -1,4 +1,4 @@
-import type { Overwrite } from "./utils";
+import type { Overwrite } from "./utils.js";
 import type {
   AudioBlockObjectResponse,
   BookmarkBlockObjectResponse,
@@ -37,7 +37,7 @@ import type {
   ToggleBlockObjectResponse,
   UnsupportedBlockObjectResponse,
   VideoBlockObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+} from "@notionhq/client/build/src/api-endpoints.js";
 
 export type ListBlockChildrenResponseResults =
   ListBlockChildrenResponse["results"];

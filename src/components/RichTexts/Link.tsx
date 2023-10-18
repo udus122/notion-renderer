@@ -1,4 +1,4 @@
-import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 type Props = React.ComponentProps<"a"> & {
   richTextItem: TextRichTextItemResponse;

@@ -1,6 +1,6 @@
-import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
-import { InlineCode } from "./InlineCode";
+import { InlineCode } from "./InlineCode.js";
 import inlineCodeRichText from "./InlineCode.json";
 
 import type { Meta, StoryObj } from "@storybook/react";

@@ -1,7 +1,7 @@
-import { InlineEquation } from "./InlineEquation";
+import { InlineEquation } from "./InlineEquation.js";
 import InlineEquationObject from "./InlineEquation.json";
 
-import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof InlineEquation> = {

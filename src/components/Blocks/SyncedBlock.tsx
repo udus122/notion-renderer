@@ -1,10 +1,10 @@
-import { Block } from "./Block";
-import { Blocks } from "./Blocks";
+import { Block } from "./Block.js";
+import { Blocks } from "./Blocks.js";
 
 import type {
   BlockComponentProps,
   SyncedBlockBlockObjectComponent,
-} from "@/types/components";
+} from "@/types/components.js";
 
 type Props = BlockComponentProps<SyncedBlockBlockObjectComponent>;
 

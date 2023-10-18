@@ -1,8 +1,8 @@
 import { isFullUser } from "@notionhq/client";
 
-import { Annotations } from "./Annotations";
+import { Annotations } from "./Annotations.js";
 
-import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 type Props = {
   richTextItem: MentionRichTextItemResponse;

@@ -1,7 +1,7 @@
-import { LinkPreview } from "./LinkPreview";
+import { LinkPreview } from "./LinkPreview.js";
 import LinkPreviewObject from "./LinkPreview.json";
 
-import type { LinkPreviewBlockObjectComponent } from "@/types/components";
+import type { LinkPreviewBlockObjectComponent } from "@/types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof LinkPreview> = {

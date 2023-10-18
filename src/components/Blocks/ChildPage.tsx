@@ -1,9 +1,9 @@
-import { Icon } from "./Icon";
+import { Icon } from "./Icon.js";
 
 import type {
   BlockComponentProps,
   ChildPageBlockObjectComponent,
-} from "@/types/components";
+} from "@/types/components.js";
 
 type Props = BlockComponentProps<ChildPageBlockObjectComponent>;
 

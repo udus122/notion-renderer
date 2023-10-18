@@ -1,9 +1,9 @@
 import { Fragment } from "react";
 
-import { Annotations } from "./Annotations";
-import { Link } from "./Link";
+import { Annotations } from "./Annotations.js";
+import { Link } from "./Link.js";
 
-import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 const defaultAnnotationMapper = {
   link: Link,

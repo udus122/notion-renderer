@@ -1,9 +1,9 @@
-import { NumberedListItem } from "./NumberedListItem";
+import { NumberedListItem } from "./NumberedListItem.js";
 
 import type {
   BlockComponentProps,
   NumberedListBlockObjectComponent,
-} from "@/types/components";
+} from "@/types/components.js";
 
 type Props = BlockComponentProps<NumberedListBlockObjectComponent>;
 

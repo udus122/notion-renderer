@@ -1,7 +1,7 @@
-import { LinkToPage } from "./LinkToPage";
+import { LinkToPage } from "./LinkToPage.js";
 import LinkToPageObject from "./LinkToPage.json";
 
-import type { LinkToPageBlockObjectComponent } from "@/types/components";
+import type { LinkToPageBlockObjectComponent } from "@/types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof LinkToPage> = {

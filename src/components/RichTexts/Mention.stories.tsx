@@ -1,8 +1,8 @@
-import { Mention } from "./Mention";
 import MentionDatabaseRichTextObject from "./Mention.database.json";
+import { Mention } from "./Mention.js";
 import MentionPageRichTextObject from "./Mention.page.json";
 
-import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Mention> = {

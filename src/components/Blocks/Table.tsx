@@ -3,9 +3,9 @@ import {
   TableBlockObjectComponent,
   TableCellBlockObjectComponent,
   TableRowBlockObjectComponent,
-} from "@/types/components";
+} from "@/types/components.js";
 
-import { RichTexts } from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
 type Props = BlockComponentProps<TableBlockObjectComponent>;
 

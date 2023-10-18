@@ -1,2 +1,2 @@
-export * from "./Blocks";
-export * from "./RichTexts";
+export * from "./Blocks/index.js";
+export * from "./RichTexts/index.js";

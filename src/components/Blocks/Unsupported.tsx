@@ -1,7 +1,7 @@
 import type {
   BlockComponentProps,
   BlockObjectComponent,
-} from "@/types/components";
+} from "@/types/components.js";
 
 type Props = BlockComponentProps<BlockObjectComponent>;
 

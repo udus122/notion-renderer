@@ -1,7 +1,7 @@
-import { Breadcrumb } from "./Breadcrumb";
+import { Breadcrumb } from "./Breadcrumb.js";
 import BreadcrumbObject from "./Breadcrumb.json";
 
-import type { BreadcrumbBlockObjectComponent } from "@/types/components";
+import type { BreadcrumbBlockObjectComponent } from "@/types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Breadcrumb> = {
