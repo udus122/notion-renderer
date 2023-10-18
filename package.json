@@ -1,10 +1,8 @@
 {
   "name": "@udus/notion-components",
   "version": "1.0.0-alpha.4",
-  "type": "module",
   "license": "MIT",
-  "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "type": "module",
   "exports": {
     "./components": {
       "import": "./dist/components/index.js",
@@ -13,6 +11,10 @@
     "./libs": {
       "import": "./dist/libs/index.js",
       "types": "./dist/libs/index.d.ts"
+    },
+    "./styles/*.css": {
+      "import": "./dist/styles/*.css",
+      "require": "./dist/styles/*.css"
     }
   },
   "typesVersions": {
