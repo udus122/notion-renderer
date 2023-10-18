@@ -5,7 +5,7 @@ import { Blocks } from "./Blocks.js";
 import type {
   BlockComponentProps,
   NumberedListItemBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 export const NumberedListItem: React.FC<
   BlockComponentProps<NumberedListItemBlockObjectComponent>

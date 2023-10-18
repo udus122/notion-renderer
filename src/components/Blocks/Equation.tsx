@@ -1,10 +1,9 @@
-import "katex/dist/katex.min.css";
 import { BlockMath } from "react-katex";
 
 import type {
   BlockComponentProps,
   EquationBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<EquationBlockObjectComponent>;
 

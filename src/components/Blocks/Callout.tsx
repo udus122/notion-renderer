@@ -6,7 +6,7 @@ import { Icon } from "./Icon.js";
 import type {
   BlockComponentProps,
   CalloutBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<CalloutBlockObjectComponent>;
 

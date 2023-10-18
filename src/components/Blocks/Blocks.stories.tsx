@@ -1,7 +1,7 @@
 import { Blocks } from "./Blocks.js";
 import BlocksObject from "./Blocks.json";
 
-import type { BlockObjectComponent } from "@/types/components.js";
+import type { BlockObjectComponent } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Blocks> = {

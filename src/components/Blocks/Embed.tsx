@@ -5,7 +5,7 @@ import { RichTexts } from "../RichTexts/RichTexts.js";
 import type {
   BlockComponentProps,
   EmbedBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<EmbedBlockObjectComponent>;
 

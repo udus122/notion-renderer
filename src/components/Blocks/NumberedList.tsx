@@ -3,7 +3,7 @@ import { NumberedListItem } from "./NumberedListItem.js";
 import type {
   BlockComponentProps,
   NumberedListBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<NumberedListBlockObjectComponent>;
 

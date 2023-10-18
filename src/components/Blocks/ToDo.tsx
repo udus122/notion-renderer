@@ -5,7 +5,7 @@ import { Blocks } from "./Blocks.js";
 import type {
   BlockComponentProps,
   ToDoBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<ToDoBlockObjectComponent>;
 

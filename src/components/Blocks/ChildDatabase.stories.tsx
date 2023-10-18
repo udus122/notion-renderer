@@ -1,7 +1,7 @@
 import { ChildDatabase } from "./ChildDatabase.js";
 import ChildDatabaseObject from "./ChildDatabase.json";
 
-import type { ChildDatabaseBlockObjectComponent } from "@/types/components.js";
+import type { ChildDatabaseBlockObjectComponent } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof ChildDatabase> = {

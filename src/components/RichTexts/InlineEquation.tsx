@@ -1,4 +1,3 @@
-import "katex/dist/katex.min.css";
 import { InlineMath } from "react-katex";
 
 import { Annotations } from "./Annotations.js";

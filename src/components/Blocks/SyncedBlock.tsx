@@ -4,7 +4,7 @@ import { Blocks } from "./Blocks.js";
 import type {
   BlockComponentProps,
   SyncedBlockBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<SyncedBlockBlockObjectComponent>;
 

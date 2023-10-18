@@ -3,7 +3,7 @@ import {
   TableBlockObjectComponent,
   TableCellBlockObjectComponent,
   TableRowBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 import { RichTexts } from "../RichTexts/RichTexts.js";
 

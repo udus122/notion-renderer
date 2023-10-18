@@ -1,6 +1,6 @@
 import { Block } from "./Block.js";
 
-import type { BlockObjectComponent } from "@/types/components.js";
+import type { BlockObjectComponent } from "../../types/components.js";
 
 type Props = {
   blocks: Array<BlockObjectComponent>;

@@ -1,7 +1,7 @@
 import type {
   BlockComponentProps,
   LinkPreviewBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<LinkPreviewBlockObjectComponent>;
 

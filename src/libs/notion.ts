@@ -50,8 +50,8 @@ import type {
   ToggleBlockObjectComponent,
   UnsupportedBlockObjectComponent,
   VideoBlockObjectComponent,
-} from "@/types/components.js";
-import type { Result } from "@/types/utils.js";
+} from "../types/components.js";
+import type { Result } from "../types/utils.js";
 import type {
   BlockObjectResponse,
   DatabaseObjectResponse,

@@ -6,7 +6,7 @@ import type {
   Heading2BlockObjectComponent,
   Heading3BlockObjectComponent,
   TableOfContentsBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<TableOfContentsBlockObjectComponent>;
 

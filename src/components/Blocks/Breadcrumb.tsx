@@ -1,11 +1,11 @@
-import { extractTitleProperty } from "@/libs/utils.js";
+import { extractTitleProperty } from "../../libs/utils.js";
 
 import { Icon } from "./Icon.js";
 
 import type {
   BlockComponentProps,
   BreadcrumbBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<BreadcrumbBlockObjectComponent>;
 

@@ -3,7 +3,7 @@ import { Icon } from "./Icon.js";
 import type {
   BlockComponentProps,
   ChildDatabaseBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<ChildDatabaseBlockObjectComponent>;
 

@@ -3,7 +3,7 @@ import { RichTexts } from "../RichTexts/RichTexts.js";
 import type {
   BlockComponentProps,
   FileBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<FileBlockObjectComponent>;
 

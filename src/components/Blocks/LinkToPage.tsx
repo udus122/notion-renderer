@@ -1,5 +1,4 @@
-import { extractTitleProperty } from "@/libs/utils.js";
-
+import { extractTitleProperty } from "../../libs/utils.js";
 import { RichTexts } from "../RichTexts/RichTexts.js";
 
 import { Icon } from "./Icon.js";
@@ -7,7 +6,7 @@ import { Icon } from "./Icon.js";
 import type {
   BlockComponentProps,
   LinkToPageBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<LinkToPageBlockObjectComponent>;
 
