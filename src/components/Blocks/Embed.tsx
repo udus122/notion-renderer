@@ -1,4 +1,4 @@
-import { TwitterTweetEmbed } from "react-twitter-embed";
+// import { TwitterTweetEmbed } from "react-twitter-embed";
 
 import { RichTexts } from "../RichTexts/RichTexts.js";
 
@@ -12,7 +12,9 @@ type Props = BlockComponentProps<EmbedBlockObjectComponent>;
 export const Embed: React.FC<Props> = ({ block }) => {
   const tweetId = getTweetId(block.embed.url);
   if (tweetId) {
-    return <TwitterTweetEmbed options={{ theme: "dark" }} tweetId={tweetId} />;
+    // return <TwitterTweetEmbed options={{ theme: "dark" }} tweetId={tweetId} />;
+    // TODO: eEmbed APIによる描画に変更する
+    return null;
   }
 
   return (

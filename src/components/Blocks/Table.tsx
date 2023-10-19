@@ -15,12 +15,21 @@ export const Table: React.FC<Props> = ({ block }) => {
         {block.table.table_rows &&
           block.table.table_rows.map((table_row, index) => {
             if (block.table.has_row_header && index === 0) {
-              return <TableRowRowHeader table_row={table_row} />;
+              return (
+                <TableRowRowHeader key={table_row.id} table_row={table_row} />
+              );
             }
             if (block.table.has_column_header) {
-              return <TableRowColumnHeader table_row={table_row} />;
+              return (
+                <TableRowColumnHeader
+                  key={table_row.id}
+                  table_row={table_row}
+                />
+              );
             }
-            return <TableRowNoHeader table_row={table_row} />;
+            return (
+              <TableRowNoHeader key={table_row.id} table_row={table_row} />
+            );
           })}
       </tbody>
     </table>

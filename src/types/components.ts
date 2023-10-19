@@ -172,7 +172,7 @@ export type CalloutBlockObjectComponent = CalloutBlockObjectResponse & {
 export type ChildDatabaseBlockObjectComponent =
   ChildDatabaseBlockObjectResponse & {
     child_database: {
-      database?: DatabaseObjectResponse;
+      database?: DatabaseObjectResponse | null;
     };
   };
 
@@ -273,9 +273,9 @@ export type SyncedBlockBlockObjectComponent = SyncedBlockBlockObjectResponse & {
     synced_from: {
       type: "block_id";
       block_id: IdRequest;
-      block?: BlockObjectComponent;
+      block?: BlockObjectComponent | null;
     } | null;
-    children?: Array<BlockObjectComponent>;
+    children?: Array<BlockObjectComponent> | null;
   };
 };
 

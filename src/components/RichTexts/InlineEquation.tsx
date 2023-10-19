@@ -1,4 +1,4 @@
-import { InlineMath } from "react-katex";
+// import { InlineMath } from "react-katex";
 
 import { Annotations } from "./Annotations.js";
 
@@ -11,7 +11,7 @@ type Props = {
 export const InlineEquation: React.FC<Props> = ({ richTextItem }) => (
   <span className="notion_rich_text_type_equation">
     <Annotations richTextItem={richTextItem}>
-      <InlineMath math={richTextItem.equation.expression} />
+      {/* <InlineMath math={richTextItem.equation.expression} /> */}
     </Annotations>
   </span>
 );
