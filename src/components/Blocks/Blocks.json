@@ -7163,26 +7163,19 @@
                     "id": "281aff01-b6d0-4f29-b5db-206eae0e2419",
                     "name": "To-do",
                     "color": "gray",
-                    "option_ids": [
-                      "8985609c-d3ea-459f-9883-ce2abc15d852"
-                    ]
+                    "option_ids": ["8985609c-d3ea-459f-9883-ce2abc15d852"]
                   },
                   {
                     "id": "d69dd43e-71d7-4f72-b372-80d46ed9618d",
                     "name": "In progress",
                     "color": "blue",
-                    "option_ids": [
-                      "8209b3fa-f1f9-492c-aed8-667bc9a4547f"
-                    ]
+                    "option_ids": ["8209b3fa-f1f9-492c-aed8-667bc9a4547f"]
                   },
                   {
                     "id": "cc80b8e3-6964-4b18-b914-caff043cafe4",
                     "name": "Complete",
                     "color": "green",
-                    "option_ids": [
-                      "MicT",
-                      "SZ\\_"
-                    ]
+                    "option_ids": ["MicT", "SZ\\_"]
                   }
                 ]
               }

@@ -7,9 +7,7 @@
     "plugin:import/typescript",
     "prettier"
   ],
-  "plugins": [
-    "unused-imports"
-  ],
+  "plugins": ["unused-imports"],
   "settings": {
     "import/resolver": {
       "typescript": []
@@ -41,18 +39,13 @@
   },
   "overrides": [
     {
-      "files": [
-        "*.stories.tsx"
-      ],
+      "files": ["*.stories.tsx"],
       "rules": {
         "import/no-default-export": "off"
       }
     },
     {
-      "files": [
-        "*.test.ts",
-        "*.mock.ts"
-      ],
+      "files": ["*.test.ts", "*.mock.ts"],
       "rules": {
         "max-lines": "off"
       }
