@@ -1,5 +1,5 @@
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+// import SyntaxHighlighter from "react-syntax-highlighter";
+// import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
 import { RichTexts } from "../RichTexts/RichTexts.js";
 
@@ -16,8 +16,7 @@ export const Code: React.FC<Props> = ({ block }) => {
       <div className="notion_code_header">
         <div className="notion_code_langage">{block.code.language}</div>
       </div>
-      {/* TODO: create copy button */}
-      <SyntaxHighlighter
+      {/* <SyntaxHighlighter
         language={
           block.code.language === "plain text" ? "text" : block.code.language
         }
@@ -26,7 +25,7 @@ export const Code: React.FC<Props> = ({ block }) => {
         customStyle={{ backgroundColor: "rgba(255,255,255,0.03)" }}
       >
         {block.code.rich_text.map((t) => t.plain_text).join("")}
-      </SyntaxHighlighter>
+      </SyntaxHighlighter> */}
       {block.code.caption && (
         <div className="notion_caption">
           <RichTexts richTexts={block.code.caption} />
