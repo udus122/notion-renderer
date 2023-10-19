@@ -30,7 +30,7 @@ export const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
       {headings &&
         headings.map((heading) => {
           return (
-            <div className="notion_table_of_contents_item">
+            <div key={heading.id} className="notion_table_of_contents_item">
               <div className={`notion_table_of_contents_item_${heading.type}`}>
                 <a href={`#${heading.id}`}>
                   {/* @ts-expect-error: because heading objects always have a 'rich_text' property  */}

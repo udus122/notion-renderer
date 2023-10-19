@@ -14,7 +14,7 @@ export const ColumnList: React.FC<Props> = ({ block }) => {
         block.column_list.columns.map(
           (column) =>
             column.column.children && (
-              <div className="notion_column">
+              <div key={column.id} className="notion_column">
                 <Blocks blocks={column.column.children} />
               </div>
             )

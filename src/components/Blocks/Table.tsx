@@ -42,7 +42,7 @@ const TableRowRowHeader: React.FC<{
   return (
     <tr id={table_row.id} className="notion_table_row">
       {table_row.table_row.cells.map((cell) => (
-        <Th cell={cell} />
+        <Th key={table_row.id} cell={cell} />
       ))}
     </tr>
   );
@@ -54,7 +54,11 @@ const TableRowColumnHeader: React.FC<{
   return (
     <tr id={table_row.id} className="notion_table_row">
       {table_row.table_row.cells.map((cell, index) => {
-        return index === 0 ? <Th cell={cell} /> : <Td cell={cell} />;
+        return index === 0 ? (
+          <Th key={table_row.id} cell={cell} />
+        ) : (
+          <Td key={table_row.id} cell={cell} />
+        );
       })}
     </tr>
   );
@@ -66,7 +70,7 @@ const TableRowNoHeader: React.FC<{
   return (
     <tr id={table_row.id} className="notion_table_row">
       {table_row.table_row.cells.map((cell) => (
-        <Td cell={cell} />
+        <Td key={table_row.id} cell={cell} />
       ))}
     </tr>
   );

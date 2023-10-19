@@ -1,3 +1,5 @@
+import { Fragment } from "react";
+
 import { extractTitleProperty } from "../../libs/notion/util.js";
 
 import { Icon } from "./Icon.js";
@@ -14,7 +16,7 @@ export const Breadcrumb: React.FC<Props> = ({ block }) => {
     <div id={block.id} className="notion_breadcrumb">
       {block.breadcrumb.parents.map((pageOrDatabase, index, array) => {
         return (
-          <>
+          <Fragment key={pageOrDatabase.id}>
             <a href={`/${pageOrDatabase.id}`}>
               <span className="notion_breadcrumb_title">
                 <Icon icon={pageOrDatabase.icon} />{" "}
@@ -26,7 +28,7 @@ export const Breadcrumb: React.FC<Props> = ({ block }) => {
             {index !== array.length - 1 && (
               <span className="notion_breadcrumb_separator">/</span>
             )}
-          </>
+          </Fragment>
         );
       })}
     </div>
