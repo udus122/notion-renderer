@@ -170,3 +170,6 @@ dist
 *.vsix
 
 **/*.ud.*
+
+# Storybook
+/storybook-static
