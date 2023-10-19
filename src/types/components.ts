@@ -70,8 +70,8 @@ export type Icon =
 
 export type BlockComponentProps<T extends BlockObjectComponent> = {
   block: T;
-  blocks?: Array<BlockObjectComponent>;
-  customBlockComponentMapper?: object;
+  blocks: Array<BlockObjectComponent>;
+  mapper: object;
 };
 
 export type ListBlockChildrenComponent<T = BlockObjectComponent> = Overwrite<

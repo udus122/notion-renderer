@@ -9,7 +9,7 @@ import type {
 
 type Props = BlockComponentProps<ParagraphBlockObjectComponent>;
 
-export const Paragraph: React.FC<Props> = ({ block }) => {
+export const Paragraph: React.FC<Props> = ({ block, mapper }) => {
   return (
     <div
       id={block.id}
@@ -20,7 +20,7 @@ export const Paragraph: React.FC<Props> = ({ block }) => {
       </p>
       {block.paragraph.children && (
         <div className={"notion_paragraph_children"}>
-          <Blocks blocks={block.paragraph.children} />
+          <Blocks blocks={block.paragraph.children} mapper={mapper} />
         </div>
       )}
     </div>

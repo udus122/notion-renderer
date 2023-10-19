@@ -4,23 +4,15 @@ import type { BlockObjectComponent } from "../../types/components.js";
 
 type Props = {
   blocks: Array<BlockObjectComponent>;
-  customBlockComponentMapper?: object;
+  mapper?: object;
 };
 
-export const Blocks: React.FC<Props> = function ({
-  blocks,
-  customBlockComponentMapper = {},
-}) {
+export const Blocks: React.FC<Props> = function ({ blocks, mapper = {} }) {
   return (
     <>
       {blocks.map((block) => {
         return (
-          <Block
-            key={block.id}
-            block={block}
-            blocks={blocks}
-            customBlockComponentMapper={customBlockComponentMapper}
-          />
+          <Block key={block.id} block={block} blocks={blocks} mapper={mapper} />
         );
       })}
     </>

@@ -9,7 +9,7 @@ import type {
 
 type Props = BlockComponentProps<QuoteBlockObjectComponent>;
 
-export const Quote: React.FC<Props> = ({ block }) => {
+export const Quote: React.FC<Props> = ({ block, mapper }) => {
   return (
     <blockquote
       id={block.id}
@@ -18,7 +18,7 @@ export const Quote: React.FC<Props> = ({ block }) => {
       <RichTexts richTexts={block.quote.rich_text} />
       {block.quote.children && (
         <div className={"notion_quote_children"}>
-          <Blocks blocks={block.quote.children} />
+          <Blocks blocks={block.quote.children} mapper={mapper} />
         </div>
       )}
     </blockquote>

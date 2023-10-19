@@ -1,6 +1,5 @@
+import { Blocks } from "../Blocks/Blocks.js";
 import { RichTexts } from "../RichTexts/RichTexts.js";
-
-import { Blocks } from "./Blocks.js";
 
 import type {
   BlockComponentProps,
@@ -9,13 +8,14 @@ import type {
 
 type Props = BlockComponentProps<Heading1BlockObjectComponent>;
 
-export const Heading1: React.FC<Props> = ({ block, mapper }) => {
+export const OpenedHeading1: React.FC<Props> = ({ block, mapper }) => {
   return (
     <>
       {block.heading_1.is_toggleable ? (
         <details
           id={block.id}
           className={`notion_heading notion_heading_1 notion_toggle notion_color_${block.heading_1.color}`}
+          open
         >
           <summary className="notion_toggle_summary">
             <h1>

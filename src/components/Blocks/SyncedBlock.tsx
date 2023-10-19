@@ -8,7 +8,7 @@ import type {
 
 type Props = BlockComponentProps<SyncedBlockBlockObjectComponent>;
 
-export const SyncedBlock: React.FC<Props> = ({ block }) => {
+export const SyncedBlock: React.FC<Props> = ({ block, blocks, mapper }) => {
   return (
     <div className="notion_synced_block">
       {block.synced_block.synced_from === null
@@ -19,7 +19,11 @@ export const SyncedBlock: React.FC<Props> = ({ block }) => {
           )
         : block.synced_block.synced_from.block && (
             <div className={"notion_synced_block_duplicated"}>
-              <Block block={block.synced_block.synced_from.block} />
+              <Block
+                block={block.synced_block.synced_from.block}
+                blocks={blocks}
+                mapper={mapper}
+              />
             </div>
           )}
     </div>

@@ -9,7 +9,7 @@ import type {
 
 export const NumberedListItem: React.FC<
   BlockComponentProps<NumberedListItemBlockObjectComponent>
-> = ({ block }) => {
+> = ({ block, mapper }) => {
   return (
     <li
       id={block.id}
@@ -18,7 +18,7 @@ export const NumberedListItem: React.FC<
       <RichTexts richTexts={block.numbered_list_item.rich_text} />
       <div>
         {block.numbered_list_item.children && (
-          <Blocks blocks={block.numbered_list_item.children} />
+          <Blocks blocks={block.numbered_list_item.children} mapper={mapper} />
         )}
       </div>
     </li>

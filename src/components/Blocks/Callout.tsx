@@ -10,7 +10,7 @@ import type {
 
 type Props = BlockComponentProps<CalloutBlockObjectComponent>;
 
-export const Callout: React.FC<Props> = ({ block }) => {
+export const Callout: React.FC<Props> = ({ block, mapper }) => {
   return (
     <div
       id={block.id}
@@ -23,7 +23,9 @@ export const Callout: React.FC<Props> = ({ block }) => {
         <span>
           <RichTexts richTexts={block.callout.rich_text} />
         </span>
-        {block.callout.children && <Blocks blocks={block.callout.children} />}
+        {block.callout.children && (
+          <Blocks blocks={block.callout.children} mapper={mapper} />
+        )}
       </div>
     </div>
   );

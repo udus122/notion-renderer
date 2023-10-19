@@ -9,7 +9,7 @@ import type {
 
 type Props = BlockComponentProps<BulletedListItemBlockObjectComponent>;
 
-export const BulletedListItem: React.FC<Props> = ({ block }) => {
+export const BulletedListItem: React.FC<Props> = ({ block, mapper }) => {
   return (
     <li
       id={block.id}
@@ -18,7 +18,7 @@ export const BulletedListItem: React.FC<Props> = ({ block }) => {
       <RichTexts richTexts={block.bulleted_list_item.rich_text} />
       <div>
         {block.bulleted_list_item.children && (
-          <Blocks blocks={block.bulleted_list_item.children} />
+          <Blocks blocks={block.bulleted_list_item.children} mapper={mapper} />
         )}
       </div>
     </li>

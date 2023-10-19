@@ -9,7 +9,7 @@ import type {
 
 type Props = BlockComponentProps<ToDoBlockObjectComponent>;
 
-export const ToDo: React.FC<Props> = ({ block }) => {
+export const ToDo: React.FC<Props> = ({ block, mapper }) => {
   const isChecked = block.to_do.checked;
   return (
     <div
@@ -26,7 +26,7 @@ export const ToDo: React.FC<Props> = ({ block }) => {
       </div>
       {block.to_do.children && (
         <div className="notion_to_do_children">
-          <Blocks blocks={block.to_do.children} />
+          <Blocks blocks={block.to_do.children} mapper={mapper} />
         </div>
       )}
     </div>

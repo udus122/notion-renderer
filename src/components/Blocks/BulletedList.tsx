@@ -7,11 +7,18 @@ import type {
 
 type Props = BlockComponentProps<BulletedListBlockObjectComponent>;
 
-export const BulletedList: React.FC<Props> = ({ block }) => {
+export const BulletedList: React.FC<Props> = ({ block, blocks, mapper }) => {
   return (
     <ul className="notion_bulleted_list">
       {block.bulleted_list.items.map((item) => {
-        return <BulletedListItem key={item.id} block={item} />;
+        return (
+          <BulletedListItem
+            key={item.id}
+            block={item}
+            blocks={blocks}
+            mapper={mapper}
+          />
+        );
       })}
     </ul>
   );

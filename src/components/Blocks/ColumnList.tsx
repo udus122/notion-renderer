@@ -7,7 +7,7 @@ import type {
 
 type Props = BlockComponentProps<ColumnListBlockObjectComponent>;
 
-export const ColumnList: React.FC<Props> = ({ block }) => {
+export const ColumnList: React.FC<Props> = ({ block, mapper }) => {
   return (
     <div id={block.id} className="notion_column_list">
       {block.column_list.columns &&
@@ -15,7 +15,7 @@ export const ColumnList: React.FC<Props> = ({ block }) => {
           (column) =>
             column.column.children && (
               <div key={column.id} className="notion_column">
-                <Blocks blocks={column.column.children} />
+                <Blocks blocks={column.column.children} mapper={mapper} />
               </div>
             )
         )}

@@ -1,6 +1,5 @@
+import { Blocks } from "../Blocks/Blocks.js";
 import { RichTexts } from "../RichTexts/RichTexts.js";
-
-import { Blocks } from "./Blocks.js";
 
 import type {
   BlockComponentProps,
@@ -9,11 +8,12 @@ import type {
 
 type Props = BlockComponentProps<ToggleBlockObjectComponent>;
 
-export const Toggle: React.FC<Props> = ({ block, mapper }) => {
+export const OpenedToggle: React.FC<Props> = ({ block, mapper }) => {
   return (
     <details
       id={block.id}
       className={`notion_toggle notion_color_${block.toggle.color}`}
+      open
     >
       <summary className="notion_toggle_summary">
         <RichTexts richTexts={block.toggle.rich_text} />
