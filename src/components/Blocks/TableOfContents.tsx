@@ -1,4 +1,4 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
 import type {
   BlockComponentProps,
@@ -6,12 +6,12 @@ import type {
   Heading2BlockObjectComponent,
   Heading3BlockObjectComponent,
   TableOfContentsBlockObjectComponent,
-} from "@/types";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<TableOfContentsBlockObjectComponent>;
 
-const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
-  const headings = blocks?.results.filter(
+export const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
+  const headings = blocks?.filter(
     (
       block
     ): block is
@@ -43,5 +43,3 @@ const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
     </div>
   );
 };
-
-export default TableOfContents;

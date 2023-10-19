@@ -1,15 +1,15 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks.js";
 
 import type {
   BlockComponentProps,
   Heading2BlockObjectComponent,
-} from "@/types";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<Heading2BlockObjectComponent>;
 
-const Heading2: React.FC<Props> = ({ block }) => {
+export const Heading2: React.FC<Props> = ({ block }) => {
   return (
     <>
       {block.heading_2.is_toggleable ? (
@@ -23,7 +23,9 @@ const Heading2: React.FC<Props> = ({ block }) => {
             </h2>
           </summary>
           <div className="notion_toggle_details">
-            {block.children && <Blocks blocks={block.children} />}
+            {block.heading_2.children && (
+              <Blocks blocks={block.heading_2.children} />
+            )}
           </div>
         </details>
       ) : (
@@ -37,5 +39,3 @@ const Heading2: React.FC<Props> = ({ block }) => {
     </>
   );
 };
-
-export default Heading2;

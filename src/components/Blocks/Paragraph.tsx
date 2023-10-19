@@ -1,15 +1,15 @@
-import RichTexts from "@/components/RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks.js";
 
 import type {
   BlockComponentProps,
   ParagraphBlockObjectComponent,
-} from "@/types";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<ParagraphBlockObjectComponent>;
 
-const Paragraph: React.FC<Props> = ({ block }) => {
+export const Paragraph: React.FC<Props> = ({ block }) => {
   return (
     <div
       id={block.id}
@@ -18,13 +18,11 @@ const Paragraph: React.FC<Props> = ({ block }) => {
       <p>
         <RichTexts richTexts={block.paragraph.rich_text} />
       </p>
-      {block.children && (
+      {block.paragraph.children && (
         <div className={"notion_paragraph_children"}>
-          <Blocks blocks={block.children} />
+          <Blocks blocks={block.paragraph.children} />
         </div>
       )}
     </div>
   );
 };
-
-export default Paragraph;

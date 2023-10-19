@@ -39,17 +39,14 @@
       }
     ],
     "is_toggleable": true,
-    "color": "default"
-  },
-  "children": {
-    "object": "list",
-    "results": [
+    "color": "default",
+    "children": [
       {
         "object": "block",
-        "id": "62853766-526d-4297-86e1-221bbbf3b550",
+        "id": "d84c1078-b0c1-4225-848c-5c7900bc41a2",
         "parent": {
           "type": "block_id",
-          "block_id": "def209ca-bd4c-4e7d-82f2-5d47c7a82495"
+          "block_id": "19be4166-bf79-4412-8826-1b91323eeaba"
         },
         "created_time": "2023-03-18T12:21:00.000Z",
         "last_edited_time": "2023-03-18T12:21:00.000Z",
@@ -69,7 +66,7 @@
             {
               "type": "text",
               "text": {
-                "content": "child block",
+                "content": "child of toggle H1",
                 "link": null
               },
               "annotations": {
@@ -80,18 +77,13 @@
                 "code": false,
                 "color": "default"
               },
-              "plain_text": "child block",
+              "plain_text": "child of toggle H1",
               "href": null
             }
           ],
           "color": "default"
         }
       }
-    ],
-    "next_cursor": null,
-    "has_more": false,
-    "type": "block",
-    "block": {},
-    "last_edited_time": "2023-03-18T12:21:00.000Z"
+    ]
   }
 }

@@ -1,11 +1,9 @@
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 type Props = React.ComponentProps<"em"> & {
   richTextItem: RichTextItemResponse;
 };
 
-const Italic: React.FC<Props> = ({ children }) => {
+export const Italic: React.FC<Props> = ({ children }) => {
   return <em className="notion_italic">{children}</em>;
 };
-
-export default Italic;

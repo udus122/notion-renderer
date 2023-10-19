@@ -1,9 +1,9 @@
-import Video from "./Video";
 import VideoExternalObject from "./Video.External.json";
 import VideoFileObject from "./Video.File.json";
+import { Video } from "./Video.js";
 import VideoYouTubeObject from "./Video.YouTube.json";
 
-import type { VideoBlockObjectComponent } from "@/types";
+import type { VideoBlockObjectComponent } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Video> = {

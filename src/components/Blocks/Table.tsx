@@ -3,32 +3,29 @@ import {
   TableBlockObjectComponent,
   TableCellBlockObjectComponent,
   TableRowBlockObjectComponent,
-} from "@/types";
-
-import RichTexts from "../RichTexts/RichTexts";
+} from "../../types/components.js";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
 type Props = BlockComponentProps<TableBlockObjectComponent>;
 
-const Table: React.FC<Props> = ({ block }) => {
+export const Table: React.FC<Props> = ({ block }) => {
   return (
     <table id={block.id} className="notion_table">
       <tbody>
-        {block.children &&
-          block.children.results.map((child, index) => {
+        {block.table.table_rows &&
+          block.table.table_rows.map((table_row, index) => {
             if (block.table.has_row_header && index === 0) {
-              return <TableRowRowHeader table_row={child} />;
+              return <TableRowRowHeader table_row={table_row} />;
             }
             if (block.table.has_column_header) {
-              return <TableRowColumnHeader table_row={child} />;
+              return <TableRowColumnHeader table_row={table_row} />;
             }
-            return <TableRowNoHeader table_row={child} />;
+            return <TableRowNoHeader table_row={table_row} />;
           })}
       </tbody>
     </table>
   );
 };
-
-export default Table;
 
 const TableRowRowHeader: React.FC<{
   table_row: TableRowBlockObjectComponent;

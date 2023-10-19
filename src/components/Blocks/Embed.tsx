@@ -1,12 +1,15 @@
 import { TwitterTweetEmbed } from "react-twitter-embed";
 
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
-import type { BlockComponentProps, EmbedBlockObjectComponent } from "@/types";
+import type {
+  BlockComponentProps,
+  EmbedBlockObjectComponent,
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<EmbedBlockObjectComponent>;
 
-const Embed: React.FC<Props> = ({ block }) => {
+export const Embed: React.FC<Props> = ({ block }) => {
   const tweetId = getTweetId(block.embed.url);
   if (tweetId) {
     return <TwitterTweetEmbed options={{ theme: "dark" }} tweetId={tweetId} />;
@@ -14,15 +17,13 @@ const Embed: React.FC<Props> = ({ block }) => {
 
   return (
     <div id={block.id} className="notion_embed">
-      <iframe src={block.embed.url} />
+      <iframe src={block.embed.url} title="notion embed content" />
       <div className="notion_caption notion_embed_caption">
         <RichTexts richTexts={block.embed.caption} />
       </div>
     </div>
   );
 };
-
-export default Embed;
 
 /* https://qiita.com/ATTACK3500/items/091bedc2bf0596e08f17 */
 const getTweetId = (url: string) => {

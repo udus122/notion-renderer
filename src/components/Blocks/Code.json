@@ -6,7 +6,7 @@
     "page_id": "2712e341-754a-41ae-a9ce-4c0bb4b18c52"
   },
   "created_time": "2023-03-18T12:21:00.000Z",
-  "last_edited_time": "2023-03-18T12:21:00.000Z",
+  "last_edited_time": "2023-10-04T04:42:00.000Z",
   "created_by": {
     "object": "user",
     "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
@@ -42,7 +42,7 @@
       {
         "type": "text",
         "text": {
-          "content": "this is code block\nsecond line\nthird\n\nfifth",
+          "content": "console.log('Hello World')",
           "link": null
         },
         "annotations": {
@@ -53,10 +53,10 @@
           "code": false,
           "color": "default"
         },
-        "plain_text": "this is code block\nsecond line\nthird\n\nfifth",
+        "plain_text": "console.log('Hello World')",
         "href": null
       }
     ],
-    "language": "plain text"
+    "language": "javascript"
   }
 }

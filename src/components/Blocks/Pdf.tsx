@@ -1,10 +1,13 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
-import type { BlockComponentProps, PdfBlockObjectComponent } from "@/types";
+import type {
+  BlockComponentProps,
+  PdfBlockObjectComponent,
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<PdfBlockObjectComponent>;
 
-const Pdf: React.FC<Props> = ({ block }) => {
+export const Pdf: React.FC<Props> = ({ block }) => {
   const pdfUrl =
     block.pdf.type == "external"
       ? block.pdf.external.url
@@ -14,7 +17,6 @@ const Pdf: React.FC<Props> = ({ block }) => {
   return (
     <div id={block.id} className="notion_pdf">
       <object
-        style={{ blockSize: "100rem", inlineSize: "100%" }}
         type="application/pdf"
         data={
           block.pdf.type == "external"
@@ -33,5 +35,3 @@ const Pdf: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default Pdf;

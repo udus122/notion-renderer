@@ -168,3 +168,8 @@ dist
 
 # Built Visual Studio Code Extensions
 *.vsix
+
+**/*.ud.*
+
+# Storybook
+/storybook-static

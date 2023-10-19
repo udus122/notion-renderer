@@ -23,7 +23,7 @@
       {
         "type": "text",
         "text": {
-          "content": "Currently only content that can be drawn with frame is supported.",
+          "content": "this is caption.",
           "link": null
         },
         "annotations": {
@@ -34,7 +34,7 @@
           "code": false,
           "color": "default"
         },
-        "plain_text": "Currently only content that can be drawn with frame is supported.",
+        "plain_text": "this is caption.",
         "href": null
       }
     ],

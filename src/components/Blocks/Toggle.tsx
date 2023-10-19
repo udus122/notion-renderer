@@ -1,12 +1,15 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks.js";
 
-import type { BlockComponentProps, ToggleBlockObjectComponent } from "@/types";
+import type {
+  BlockComponentProps,
+  ToggleBlockObjectComponent,
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<ToggleBlockObjectComponent>;
 
-const Toggle: React.FC<Props> = ({ block }) => {
+export const Toggle: React.FC<Props> = ({ block }) => {
   return (
     <details
       id={block.id}
@@ -16,10 +19,8 @@ const Toggle: React.FC<Props> = ({ block }) => {
         <RichTexts richTexts={block.toggle.rich_text} />
       </summary>
       <div className="notion_toggle_details">
-        {block.children && <Blocks blocks={block.children} />}
+        {block.toggle.children && <Blocks blocks={block.toggle.children} />}
       </div>
     </details>
   );
 };
-
-export default Toggle;

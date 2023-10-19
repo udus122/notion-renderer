@@ -1,6 +1,6 @@
-import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
-import Italic from "./Italic";
+import { Italic } from "./Italic.js";
 import italicRichText from "./Italic.json";
 
 import type { Meta, StoryObj } from "@storybook/react";

@@ -1,6 +1,6 @@
-import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
-import Underline from "./Underline";
+import { Underline } from "./Underline.js";
 import UnderlineRichText from "./Underline.json";
 
 import type { Meta, StoryObj } from "@storybook/react";

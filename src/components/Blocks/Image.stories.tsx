@@ -1,7 +1,7 @@
-import Image from "./Image";
+import { Image } from "./Image.js";
 import ImageObject from "./Image.json";
 
-import type { ImageBlockObjectComponent } from "@/types";
+import type { ImageBlockObjectComponent } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Image> = {

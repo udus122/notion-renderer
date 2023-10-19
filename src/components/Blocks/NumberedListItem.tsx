@@ -1,13 +1,13 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks.js";
 
 import type {
   BlockComponentProps,
   NumberedListItemBlockObjectComponent,
-} from "@/types";
+} from "../../types/components.js";
 
-const NumberedListItem: React.FC<
+export const NumberedListItem: React.FC<
   BlockComponentProps<NumberedListItemBlockObjectComponent>
 > = ({ block }) => {
   return (
@@ -16,9 +16,11 @@ const NumberedListItem: React.FC<
       className={`notion_numbered_list_item notion_color_${block.numbered_list_item.color}`}
     >
       <RichTexts richTexts={block.numbered_list_item.rich_text} />
-      <div>{block.children && <Blocks blocks={block.children} />}</div>
+      <div>
+        {block.numbered_list_item.children && (
+          <Blocks blocks={block.numbered_list_item.children} />
+        )}
+      </div>
     </li>
   );
 };
-
-export default NumberedListItem;

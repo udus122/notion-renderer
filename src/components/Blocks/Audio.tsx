@@ -1,10 +1,13 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
-import type { BlockComponentProps, AudioBlockObjectComponent } from "@/types";
+import type {
+  BlockComponentProps,
+  AudioBlockObjectComponent,
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<AudioBlockObjectComponent>;
 
-const Audio: React.FC<Props> = ({ block }) => {
+export const Audio: React.FC<Props> = ({ block }) => {
   const audioUrl =
     block.audio.type == "external"
       ? block.audio.external.url
@@ -23,5 +26,3 @@ const Audio: React.FC<Props> = ({ block }) => {
     </div>
   );
 };
-
-export default Audio;

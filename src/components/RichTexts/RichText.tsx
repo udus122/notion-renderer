@@ -1,10 +1,10 @@
-import Equation from "./Equation";
-import Mention from "./Mention";
-import Text from "./Text";
+import { InlineEquation } from "./InlineEquation.js";
+import { Mention } from "./Mention.js";
+import { Text } from "./Text.js";
 
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
-const RichText = ({
+export const RichText = ({
   richTextItem,
   customRichTextComponentMapper = {},
 }: {
@@ -14,7 +14,7 @@ const RichText = ({
   if (!richTextItem) return null;
   const richTextComponentMapper = {
     text: Text,
-    equation: Equation,
+    equation: InlineEquation,
     mention: Mention,
     ...customRichTextComponentMapper,
   };
@@ -34,8 +34,7 @@ const RichText = ({
       return <TypeMention richTextItem={richTextItem} />;
     }
     default:
+      console.warn(`${(richTextItem as { type: never }).type} is never.`);
       return null;
   }
 };
-
-export default RichText;

@@ -1,3 +1,4 @@
+import type { Overwrite } from "./utils.js";
 import type {
   AudioBlockObjectResponse,
   BookmarkBlockObjectResponse,
@@ -9,6 +10,7 @@ import type {
   CodeBlockObjectResponse,
   ColumnBlockObjectResponse,
   ColumnListBlockObjectResponse,
+  DatabaseObjectResponse,
   DividerBlockObjectResponse,
   EmbedBlockObjectResponse,
   EquationBlockObjectResponse,
@@ -20,7 +22,9 @@ import type {
   LinkPreviewBlockObjectResponse,
   LinkToPageBlockObjectResponse,
   ListBlockChildrenResponse,
+  ListCommentsResponse,
   NumberedListItemBlockObjectResponse,
+  PageObjectResponse,
   ParagraphBlockObjectResponse,
   PdfBlockObjectResponse,
   QuoteBlockObjectResponse,
@@ -33,17 +37,40 @@ import type {
   ToggleBlockObjectResponse,
   UnsupportedBlockObjectResponse,
   VideoBlockObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+} from "@notionhq/client/build/src/api-endpoints.js";
 
-export type Overwrite<T, U extends { [Key in keyof T]?: unknown }> = Omit<
-  T,
-  keyof U
-> &
-  U;
+export type ListBlockChildrenResponseResults =
+  ListBlockChildrenResponse["results"];
+
+export type IdRequest = string | string;
+
+export type EmojiRequest = string;
+
+export type TextRequest = string;
+
+export type Icon =
+  | {
+      type: "emoji";
+      emoji: EmojiRequest;
+    }
+  | {
+      type: "external";
+      external: {
+        url: TextRequest;
+      };
+    }
+  | {
+      type: "file";
+      file: {
+        url: string;
+        expiry_time: string;
+      };
+    }
+  | null;
 
 export type BlockComponentProps<T extends BlockObjectComponent> = {
   block: T;
-  blocks?: ListBlockChildrenComponent;
+  blocks?: Array<BlockObjectComponent>;
   customBlockComponentMapper?: object;
 };
 
@@ -94,106 +121,166 @@ export type BlockObjectComponent =
 
 export type AudioBlockObjectComponent = AudioBlockObjectResponse;
 
-export type BookmarkBlockObjectComponent = BookmarkBlockObjectResponse;
+export type SiteInfo = {
+  title?: string;
+  description?: string;
+  image?: OgImage;
+  icon?: string;
+};
 
-export type BreadcrumbBlockObjectComponent = BreadcrumbBlockObjectResponse;
+export type OgImage = {
+  url: string;
+  type?: string;
+  width?: number;
+  height?: number;
+};
+
+export type BookmarkBlockObjectComponent = BookmarkBlockObjectResponse & {
+  bookmark: {
+    site_info?: SiteInfo;
+  };
+};
+
+export type BreadcrumbBlockObjectComponent = Overwrite<
+  BreadcrumbBlockObjectResponse,
+  {
+    breadcrumb: {
+      parents: Array<PageObjectResponse | DatabaseObjectResponse>;
+    };
+  }
+>;
 
 export type BulletedListBlockObjectComponent = {
   id: string;
-  items: Array<BulletedListItemBlockObjectComponent>;
   type: "bulleted_list";
+  bulleted_list: {
+    items: Array<BulletedListItemBlockObjectComponent>;
+  };
 };
 
 export type BulletedListItemBlockObjectComponent =
   BulletedListItemBlockObjectResponse & {
-    children?: ListBlockChildrenComponent;
+    bulleted_list_item: {
+      children?: Array<BlockObjectComponent>;
+    };
   };
 
 export type CalloutBlockObjectComponent = CalloutBlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
+  callout: { children?: Array<BlockObjectComponent> };
 };
 
 export type ChildDatabaseBlockObjectComponent =
-  ChildDatabaseBlockObjectResponse;
+  ChildDatabaseBlockObjectResponse & {
+    child_database: {
+      database?: DatabaseObjectResponse;
+    };
+  };
 
-export type ChildPageBlockObjectComponent = ChildPageBlockObjectResponse;
-
-export type CodeBlockObjectComponent = CodeBlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
+export type ChildPageBlockObjectComponent = ChildPageBlockObjectResponse & {
+  child_page: {
+    page?: PageObjectResponse;
+  };
 };
 
-export type ColumnBlockObjectComponent = ColumnBlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
-};
+export type CodeBlockObjectComponent = CodeBlockObjectResponse;
 
-export type ColumnListBlockObjectComponent = ColumnListBlockObjectResponse & {
-  children?: ListBlockChildrenComponent<ColumnBlockObjectComponent>;
-  // NOTE: 本当は、columnsはchildren[number]['children']に入るべき
-  columns: Array<ListBlockChildrenComponent>;
-};
+export type ColumnBlockObjectComponent = Overwrite<
+  ColumnBlockObjectResponse,
+  {
+    column: { children?: Array<BlockObjectComponent> };
+  }
+>;
+
+export type ColumnListBlockObjectComponent = Overwrite<
+  ColumnListBlockObjectResponse,
+  {
+    column_list: {
+      columns?: Array<ColumnBlockObjectComponent>;
+    };
+  }
+>;
 
 export type DividerBlockObjectComponent = DividerBlockObjectResponse;
 
 export type EmbedBlockObjectComponent = EmbedBlockObjectResponse;
 
-export type EquationBlockObjectComponent = EquationBlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
-};
+export type EquationBlockObjectComponent = EquationBlockObjectResponse;
 
 export type FileBlockObjectComponent = FileBlockObjectResponse;
 
 export type Heading1BlockObjectComponent = Heading1BlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
+  heading_1: { children?: Array<BlockObjectComponent> };
 };
 
 export type Heading2BlockObjectComponent = Heading2BlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
+  heading_2: { children?: Array<BlockObjectComponent> };
 };
 
 export type Heading3BlockObjectComponent = Heading3BlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
+  heading_3: { children?: Array<BlockObjectComponent> };
 };
 
-export type ImageBlockObjectComponent = ImageBlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
+export type ImageBlockObjectComponent = ImageBlockObjectResponse;
+
+export type LinkPreviewBlockObjectComponent = LinkPreviewBlockObjectResponse & {
+  link_preview: {
+    site_info?: SiteInfo;
+  };
 };
 
-export type LinkPreviewBlockObjectComponent = LinkPreviewBlockObjectResponse;
-
-export type LinkToPageBlockObjectComponent = LinkToPageBlockObjectResponse;
+export type LinkToPageBlockObjectComponent = LinkToPageBlockObjectResponse & {
+  link_to_page:
+    | {
+        type: "page_id";
+        page_id: IdRequest;
+        page?: PageObjectResponse;
+      }
+    | {
+        type: "database_id";
+        database_id: IdRequest;
+        database?: DatabaseObjectResponse;
+      }
+    | {
+        type: "comment_id";
+        comment_id: IdRequest;
+        comments?: ListCommentsResponse["results"];
+      };
+};
 
 export type NumberedListBlockObjectComponent = {
   id: string;
-  items: Array<NumberedListItemBlockObjectComponent>;
+  numbered_list: { items: Array<NumberedListItemBlockObjectComponent> };
   type: "numbered_list";
 };
 
 export type NumberedListItemBlockObjectComponent =
   NumberedListItemBlockObjectResponse & {
-    children?: ListBlockChildrenComponent;
+    numbered_list_item: { children?: Array<BlockObjectComponent> };
   };
 
 export type ParagraphBlockObjectComponent = ParagraphBlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
+  paragraph: { children?: Array<BlockObjectComponent> };
 };
 
 export type PdfBlockObjectComponent = PdfBlockObjectResponse;
 
 export type QuoteBlockObjectComponent = QuoteBlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
+  quote: { children?: Array<BlockObjectComponent> };
 };
 
-export type SyncedBlockBlockObjectComponent = SyncedBlockBlockObjectResponse;
+export type SyncedBlockBlockObjectComponent = SyncedBlockBlockObjectResponse & {
+  synced_block: {
+    synced_from: {
+      type: "block_id";
+      block_id: IdRequest;
+      block?: BlockObjectComponent;
+    } | null;
+    children?: Array<BlockObjectComponent>;
+  };
+};
 
 export type TableBlockObjectComponent = TableBlockObjectResponse & {
-  children?: Overwrite<
-    ListBlockChildrenComponent,
-    {
-      results: Array<TableRowBlockObjectResponse>;
-      children?: ListBlockChildrenComponent;
-      last_edited_time?: string;
-    }
-  >;
+  table: { table_rows?: Array<TableRowBlockObjectComponent> };
 };
 
 export type TableOfContentsBlockObjectComponent =
@@ -207,11 +294,11 @@ export type TableCellBlockObjectComponent =
 export type TemplateBlockObjectComponent = TemplateBlockObjectResponse;
 
 export type ToDoBlockObjectComponent = ToDoBlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
+  to_do: { children?: Array<BlockObjectComponent> };
 };
 
 export type ToggleBlockObjectComponent = ToggleBlockObjectResponse & {
-  children?: ListBlockChildrenComponent;
+  toggle: { children?: Array<BlockObjectComponent> };
 };
 
 export type TogglableBlockObjectComponent =

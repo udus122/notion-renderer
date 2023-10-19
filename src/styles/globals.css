@@ -1,5 +1,6 @@
 @import "./colors.css";
 @import "./blocks.css";
+/* @import "katex/dist/katex.min.css"; */
 
 :root {
   --color_default: #ffffffe6;

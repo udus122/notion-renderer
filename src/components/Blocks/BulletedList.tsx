@@ -1,20 +1,18 @@
-import BulletedListItem from "./BulletedListItem";
+import { BulletedListItem } from "./BulletedListItem.js";
 
 import type {
   BlockComponentProps,
   BulletedListBlockObjectComponent,
-} from "@/types";
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<BulletedListBlockObjectComponent>;
 
-const BulletedList: React.FC<Props> = ({ block }) => {
+export const BulletedList: React.FC<Props> = ({ block }) => {
   return (
     <ul className="notion_bulleted_list">
-      {block.items.map((item) => {
+      {block.bulleted_list.items.map((item) => {
         return <BulletedListItem key={item.id} block={item} />;
       })}
     </ul>
   );
 };
-
-export default BulletedList;

@@ -1,25 +1,26 @@
-import RichTexts from "../RichTexts/RichTexts";
+import { RichTexts } from "../RichTexts/RichTexts.js";
 
-import Blocks from "./Blocks";
+import { Blocks } from "./Blocks.js";
 
-import type { BlockComponentProps, QuoteBlockObjectComponent } from "@/types";
+import type {
+  BlockComponentProps,
+  QuoteBlockObjectComponent,
+} from "../../types/components.js";
 
 type Props = BlockComponentProps<QuoteBlockObjectComponent>;
 
-const Quote: React.FC<Props> = ({ block }) => {
+export const Quote: React.FC<Props> = ({ block }) => {
   return (
     <blockquote
       id={block.id}
       className={`notion_quote notion_color_${block.quote.color}`}
     >
       <RichTexts richTexts={block.quote.rich_text} />
-      {block?.children && (
+      {block.quote.children && (
         <div className={"notion_quote_children"}>
-          <Blocks blocks={block.children} />{" "}
+          <Blocks blocks={block.quote.children} />
         </div>
       )}
     </blockquote>
   );
 };
-
-export default Quote;

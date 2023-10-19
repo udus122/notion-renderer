@@ -1,11 +1,11 @@
-import Bold from "./Bold";
-import Color from "./Color";
-import InlineCode from "./InlineCode";
-import Italic from "./Italic";
-import Strikethrough from "./Strikethrough";
-import Underline from "./Underline";
+import { Bold } from "./Bold.js";
+import { Color } from "./Color.js";
+import { InlineCode } from "./InlineCode.js";
+import { Italic } from "./Italic.js";
+import { Strikethrough } from "./Strikethrough.js";
+import { Underline } from "./Underline.js";
 
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 const defaultAnnotationMapper = {
   color: Color,
@@ -17,7 +17,7 @@ const defaultAnnotationMapper = {
 };
 
 // FIXME: cannot customize annotation order
-const Annotations: React.FC<{
+export const Annotations: React.FC<{
   richTextItem: RichTextItemResponse;
   children: React.ReactNode;
   customAnnotationMapper?: object;
@@ -73,5 +73,3 @@ const Annotations: React.FC<{
   }
   return <>{element}</>;
 };
-
-export default Annotations;
