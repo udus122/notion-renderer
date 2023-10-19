@@ -127,21 +127,24 @@
 }
 /* code block */
 .notion_code {
-  display: flex;
-  flex-direction: column;
+  /* display: flex; */
+  /* flex-direction: column; */
+  position: relative;
 }
 .notion_code_header {
-  background-color: rgba(255, 255, 255, 0.03);
   display: flex;
 }
 .notion_code .notion_code_langage {
-  padding: 0.5rem 0 0 0.5rem;
+  position: absolute;
+  padding: 0.75rem 0 0 0.75rem;
   color: #999;
   font-size: 0.75rem;
   text-transform: capitalize;
 }
-.notion_code_pre {
+.notion_code_body {
   margin: 0;
+  padding-block-start: 1.75rem !important;
+  border-radius: 3px;
 }
 /* link_preview block */
 .notion_link_preview_container {

@@ -1,5 +1,5 @@
-// import SyntaxHighlighter from "react-syntax-highlighter";
-// import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { gruvboxDark as style } from "react-syntax-highlighter/dist/esm/styles/prism";
 
 import { RichTexts } from "../RichTexts/RichTexts.js";
 
@@ -16,16 +16,15 @@ export const Code: React.FC<Props> = ({ block }) => {
       <div className="notion_code_header">
         <div className="notion_code_langage">{block.code.language}</div>
       </div>
-      {/* <SyntaxHighlighter
+      <SyntaxHighlighter
         language={
           block.code.language === "plain text" ? "text" : block.code.language
         }
-        style={a11yDark}
-        className="notion_code_pre"
-        customStyle={{ backgroundColor: "rgba(255,255,255,0.03)" }}
+        style={style}
+        className="notion_code_body"
       >
         {block.code.rich_text.map((t) => t.plain_text).join("")}
-      </SyntaxHighlighter> */}
+      </SyntaxHighlighter>
       {block.code.caption && (
         <div className="notion_caption">
           <RichTexts richTexts={block.code.caption} />
