@@ -1,4 +1,4 @@
-import { extractTitleProperty } from "../../libs/utils.js";
+import { extractTitleProperty } from "../../libs/notion/util.js";
 import { RichTexts } from "../RichTexts/RichTexts.js";
 
 import { Icon } from "./Icon.js";
