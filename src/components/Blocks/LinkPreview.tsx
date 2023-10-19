@@ -16,21 +16,21 @@ export const LinkPreview: React.FC<Props> = ({ block }) => {
         <div className="notion_link_preview_container">
           <div className="notion_link_preview_content">
             <div className="notion_link_preview_title">
-              {block.link_preview?.site_info?.title
-                ? block.link_preview.site_info.title
+              {block.link_preview?.article_data?.title
+                ? block.link_preview.article_data.title
                 : block.link_preview.url}
             </div>
             <div className="notion_link_preview_description">
-              {block.link_preview?.site_info?.description
-                ? block.link_preview.site_info.description
+              {block.link_preview?.article_data?.description
+                ? block.link_preview.article_data.description
                 : block.link_preview.url}
             </div>
             <div className="notion_link_preview_url">
               <span className="notion_link_preview_favicon">
                 <img
                   src={
-                    block.link_preview?.site_info?.icon
-                      ? block.link_preview.site_info?.icon
+                    block.link_preview?.article_data?.favicon
+                      ? block.link_preview.article_data?.favicon
                       : `https://www.google.com/s2/favicons?domain=${block.link_preview.url}`
                   }
                   alt="link preview favicon"
@@ -41,12 +41,10 @@ export const LinkPreview: React.FC<Props> = ({ block }) => {
               </span>
             </div>
           </div>
-          {block.link_preview?.site_info?.image && (
+          {block.link_preview?.article_data?.image && (
             <div className="notion_link_preview_cover">
               <img
-                src={block.link_preview.site_info.image.url}
-                width={block.link_preview.site_info.image.width}
-                height={block.link_preview.site_info.image.height}
+                src={block.link_preview.article_data.image}
                 alt="link preview og image"
               />
             </div>

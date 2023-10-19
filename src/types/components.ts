@@ -1,4 +1,5 @@
 import type { Overwrite } from "./utils.js";
+import type { ArticleData } from "@extractus/article-extractor";
 import type {
   LinkTypeData,
   PhotoTypeData,
@@ -143,7 +144,7 @@ export type OgImage = {
 
 export type BookmarkBlockObjectComponent = BookmarkBlockObjectResponse & {
   bookmark: {
-    site_info?: SiteInfo;
+    article_data?: ArticleData;
   };
 };
 
@@ -234,7 +235,7 @@ export type ImageBlockObjectComponent = ImageBlockObjectResponse;
 
 export type LinkPreviewBlockObjectComponent = LinkPreviewBlockObjectResponse & {
   link_preview: {
-    site_info?: SiteInfo;
+    article_data?: ArticleData;
   };
 };
 

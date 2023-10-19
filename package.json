@@ -58,13 +58,13 @@
     "check": "tsc && prettier --list-different . && npm run lint:js && npm run lint:css && npm run test"
   },
   "dependencies": {
+    "@extractus/article-extractor": "^8.0.3",
     "@extractus/oembed-extractor": "^4.0.1",
     "@notionhq/client": "^2.2.13",
     "cpx2": "^5.0.0",
     "katex": "^0.16.9",
     "modern-normalize": "^1.1.0",
     "notionate": "^9.2.0",
-    "open-graph-scraper": "^6.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-katex": "^3.0.1",

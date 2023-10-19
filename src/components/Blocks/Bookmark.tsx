@@ -14,21 +14,21 @@ export const Bookmark: React.FC<Props> = ({ block }) => {
         <div className="notion_bookmark_container">
           <div className="notion_bookmark_content">
             <div className="notion_bookmark_title">
-              {block.bookmark?.site_info?.title
-                ? block.bookmark.site_info.title
+              {block.bookmark?.article_data?.title
+                ? block.bookmark.article_data.title
                 : block.bookmark.url}
             </div>
             <div className="notion_bookmark_description">
-              {block.bookmark?.site_info?.description
-                ? block.bookmark.site_info.description
+              {block.bookmark?.article_data?.description
+                ? block.bookmark.article_data.description
                 : block.bookmark.url}
             </div>
             <div className="notion_bookmark_url">
               <span className="notion_bookmark_favicon">
                 <img
                   src={
-                    block.bookmark?.site_info?.icon
-                      ? block.bookmark.site_info?.icon
+                    block.bookmark?.article_data?.favicon
+                      ? block.bookmark.article_data?.favicon
                       : `https://www.google.com/s2/favicons?domain=${block.bookmark.url}`
                   }
                   alt="bookmark favicon"
@@ -39,12 +39,10 @@ export const Bookmark: React.FC<Props> = ({ block }) => {
               </span>
             </div>
           </div>
-          {block.bookmark?.site_info?.image && (
+          {block.bookmark?.article_data?.image && (
             <div className="notion_bookmark_cover">
               <img
-                src={block.bookmark.site_info.image.url}
-                width={block.bookmark.site_info.image.width}
-                height={block.bookmark.site_info.image.height}
+                src={block.bookmark.article_data.image}
                 alt="bookmark og image"
               />
             </div>

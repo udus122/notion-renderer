@@ -4,6 +4,7 @@ import { isFullBlock } from "@notionhq/client";
 
 import {
   callAPIWithBackOff,
+  fetchArticleData,
   fetchOembedData,
   notNullNorUndefined,
 } from "../utils.js";
@@ -216,16 +217,19 @@ export const convertBlockToComponent = async (
       return { ...block } satisfies AudioBlockObjectComponent;
     }
     case "bookmark": {
-      // const site_info = await scrapeOgMeta(block.bookmark.url);
-      const site_info = null;
-      if (site_info) {
-        return {
-          ...block,
-          bookmark: {
-            ...block.bookmark,
-            site_info,
-          },
-        } satisfies BookmarkBlockObjectComponent;
+      const { payload: article_data, error } = await fetchArticleData(
+        block.bookmark.url
+      );
+      if (!error) {
+        if (article_data) {
+          return {
+            ...block,
+            bookmark: {
+              ...block.bookmark,
+              article_data: article_data,
+            },
+          } satisfies BookmarkBlockObjectComponent;
+        }
       }
       return {
         ...block,
@@ -421,16 +425,19 @@ export const convertBlockToComponent = async (
       return { ...block } satisfies ImageBlockObjectComponent;
     }
     case "link_preview": {
-      // const site_info = await scrapeOgMeta(block.link_preview.url);
-      const site_info = null;
-      if (site_info) {
-        return {
-          ...block,
-          link_preview: {
-            ...block.link_preview,
-            site_info,
-          },
-        } satisfies LinkPreviewBlockObjectComponent;
+      const { payload: article_data, error } = await fetchArticleData(
+        block.link_preview.url
+      );
+      if (!error) {
+        if (article_data) {
+          return {
+            ...block,
+            link_preview: {
+              ...block.link_preview,
+              article_data: article_data,
+            },
+          } satisfies LinkPreviewBlockObjectComponent;
+        }
       }
       return {
         ...block,

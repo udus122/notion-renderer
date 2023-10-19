@@ -1,5 +1,11 @@
 import {
-  extract,
+  extract as extractArticle,
+  type ArticleData,
+  type ParserOptions,
+  type FetchOptions,
+} from "@extractus/article-extractor";
+import {
+  extract as extractOembed,
   type LinkTypeData,
   type Params,
   type PhotoTypeData,
@@ -11,7 +17,6 @@ import {
   APIErrorCode,
   ClientErrorCode,
 } from "@notionhq/client";
-import openGraphScraper from "open-graph-scraper";
 
 import type { Result } from "../types/utils.js";
 
@@ -78,19 +83,21 @@ export const callAPIWithBackOff = async <Args, Item>(
 export const notNullNorUndefined = <T>(v: T | null | undefined): v is T => {
   return v !== null && v !== undefined;
 };
-export const scrapeOgMeta = async (url: string) => {
-  // @ts-expect-error: because open-graph-scraper have type error with moduleResolution node16 but it works.
-  const { error, result } = await openGraphScraper({ url });
-  if (!error) {
-    const { ogTitle, ogDescription, ogImage, favicon } = result;
-    return {
-      title: ogTitle ?? null,
-      description: ogDescription ?? null,
-      image: ogImage ? ogImage[0] : null,
-      icon: favicon ?? null,
-    };
+
+export const fetchArticleData = async (
+  url: string,
+  parserOptions?: ParserOptions | undefined,
+  fetchOptions?: FetchOptions | undefined
+): Promise<Result<ArticleData>> => {
+  try {
+    const article = await extractArticle(url, parserOptions, fetchOptions);
+    if (article) {
+      return { payload: article, error: undefined };
+    }
+  } catch (error) {
+    return { payload: undefined, error: error as Error };
   }
-  return undefined;
+  return { payload: undefined, error: new Error("article is null.") };
 };
 
 export const fetchOembedData = async (
@@ -100,7 +107,7 @@ export const fetchOembedData = async (
   Result<LinkTypeData | PhotoTypeData | VideoTypeData | RichTypeData>
 > => {
   try {
-    const oembedData = (await extract(url, params)) as
+    const oembedData = (await extractOembed(url, params)) as
       | LinkTypeData
       | PhotoTypeData
       | VideoTypeData

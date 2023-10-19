@@ -1,10 +1,11 @@
-import {
+import { RichTexts } from "../RichTexts/RichTexts.js";
+
+import type {
   BlockComponentProps,
   TableBlockObjectComponent,
   TableCellBlockObjectComponent,
   TableRowBlockObjectComponent,
 } from "../../types/components.js";
-import { RichTexts } from "../RichTexts/RichTexts.js";
 
 type Props = BlockComponentProps<TableBlockObjectComponent>;
 
