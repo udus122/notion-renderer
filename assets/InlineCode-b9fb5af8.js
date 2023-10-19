@@ -1,0 +1,2 @@
+import{j as t}from"./jsx-runtime-ffb262ed.js";const n=({children:e})=>t.jsx("code",{className:"notion_inline_code",children:e});try{n.displayName="InlineCode",n.__docgenInfo={description:"",displayName:"InlineCode",props:{richTextItem:{defaultValue:null,description:"",name:"richTextItem",required:!1,type:{name:"RichTextItemResponse"}}}}}catch{}export{n as I};
+//# sourceMappingURL=InlineCode-b9fb5af8.js.map
