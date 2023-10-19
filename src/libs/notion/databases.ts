@@ -1,9 +1,13 @@
 import { isFullDatabase } from "@notionhq/client";
-import { GetDatabaseParameters, GetDatabaseResponse } from "notionate";
 
 import { callAPIWithBackOff } from "../utils.js";
 
 import { notion } from "./auth.js";
+
+import type {
+  GetDatabaseParameters,
+  GetDatabaseResponse,
+} from "@notionhq/client/build/src/api-endpoints.js";
 
 export const retrieveDatabase = async (
   args: GetDatabaseParameters

@@ -1,18 +1,16 @@
 import { randomUUID } from "crypto";
 
 import { isFullBlock } from "@notionhq/client";
-import {
-  BlockObjectResponse,
-  DatabaseObjectResponse,
-  GetBlockParameters,
-  GetBlockResponse,
-  ListBlockChildrenParameters,
-  ListBlockChildrenResponse,
-  PageObjectResponse,
-  PartialBlockObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
 
-import {
+import { callAPIWithBackOff, notNullNorUndefined } from "../utils.js";
+
+import { notion } from "./auth.js";
+import { listComments } from "./comments.js";
+import { fetchDatabase } from "./databases.js";
+import { fetchPage } from "./pages.js";
+import { fetchAllParents } from "./parent.js";
+
+import type {
   AudioBlockObjectComponent,
   BlockObjectComponent,
   BookmarkBlockObjectComponent,
@@ -50,14 +48,16 @@ import {
   UnsupportedBlockObjectComponent,
   VideoBlockObjectComponent,
 } from "@/types/components.js";
-
-import { callAPIWithBackOff, notNullNorUndefined } from "../utils.js";
-
-import { notion } from "./auth.js";
-import { listComments } from "./comments.js";
-import { fetchDatabase } from "./databases.js";
-import { fetchPage } from "./pages.js";
-import { fetchAllParents } from "./parent.js";
+import type {
+  BlockObjectResponse,
+  DatabaseObjectResponse,
+  GetBlockParameters,
+  GetBlockResponse,
+  ListBlockChildrenParameters,
+  ListBlockChildrenResponse,
+  PageObjectResponse,
+  PartialBlockObjectResponse,
+} from "@notionhq/client/build/src/api-endpoints.js";
 
 export const retrieveBlock = async (
   args: GetBlockParameters

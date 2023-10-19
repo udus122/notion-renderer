@@ -1,9 +1,13 @@
 import { isFullPage } from "@notionhq/client";
-import { GetPageParameters, GetPageResponse } from "notionate";
 
 import { callAPIWithBackOff } from "../utils.js";
 
 import { notion } from "./auth.js";
+
+import type {
+  GetPageParameters,
+  GetPageResponse,
+} from "@notionhq/client/build/src/api-endpoints.js";
 
 export const retrievePage = async (
   args: GetPageParameters

@@ -1,8 +1,11 @@
-import { ListCommentsParameters, ListCommentsResponse } from "notionate";
-
 import { callAPIWithBackOff } from "../utils.js";
 
 import { notion } from "./auth.js";
+
+import type {
+  ListCommentsParameters,
+  ListCommentsResponse,
+} from "@notionhq/client/build/src/api-endpoints.js";
 
 export const listComments = async (
   args: ListCommentsParameters
