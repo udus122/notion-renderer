@@ -70,22 +70,7 @@ export const callAPIWithBackOff = async <Args, Item>(
 export const notNullNorUndefined = <T>(v: T | null | undefined): v is T => {
   return v !== null && v !== undefined;
 };
-export const scrapeOgMeta = async (
-  url: string
-): Promise<
-  | {
-      title?: string;
-      description?: string;
-      image?: {
-        url: string;
-        type?: string;
-        width?: number;
-        height?: number;
-      };
-      icon?: string;
-    }
-  | undefined
-> => {
+export const scrapeOgMeta = async (url: string) => {
   // @ts-expect-error: because open-graph-scraper have type error with moduleResolution node16 but it works.
   const { error, result } = await openGraphScraper({ url });
   if (!error) {
