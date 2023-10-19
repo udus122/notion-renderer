@@ -2,7 +2,11 @@ import { randomUUID } from "crypto";
 
 import { isFullBlock } from "@notionhq/client";
 
-import { callAPIWithBackOff, notNullNorUndefined } from "../utils.js";
+import {
+  callAPIWithBackOff,
+  fetchOembedData,
+  notNullNorUndefined,
+} from "../utils.js";
 
 import { notion } from "./auth.js";
 import { listComments } from "./comments.js";
@@ -350,6 +354,16 @@ export const convertBlockToComponent = async (
       return { ...block } satisfies DividerBlockObjectComponent;
     }
     case "embed": {
+      const { payload: oembed, error } = await fetchOembedData(block.embed.url);
+      if (!error) {
+        return {
+          ...block,
+          embed: {
+            ...block.embed,
+            oembed,
+          },
+        } satisfies EmbedBlockObjectComponent;
+      }
       return { ...block } satisfies EmbedBlockObjectComponent;
     }
     case "equation": {
@@ -605,6 +619,20 @@ export const convertBlockToComponent = async (
       return { ...block } satisfies UnsupportedBlockObjectComponent;
     }
     case "video": {
+      if (block.video.type === "external") {
+        const { payload: oembed, error } = await fetchOembedData(
+          block.video.external.url
+        );
+        if (!error) {
+          return {
+            ...block,
+            video: {
+              ...block.video,
+              oembed,
+            },
+          } satisfies VideoBlockObjectComponent;
+        }
+      }
       return { ...block } satisfies VideoBlockObjectComponent;
     }
     default: {

@@ -58,6 +58,7 @@
     "check": "tsc && prettier --list-different . && npm run lint:js && npm run lint:css && npm run test"
   },
   "dependencies": {
+    "@extractus/oembed-extractor": "^4.0.1",
     "@notionhq/client": "^2.2.13",
     "cpx2": "^5.0.0",
     "katex": "^0.16.9",

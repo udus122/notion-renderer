@@ -1,5 +1,11 @@
 import type { Overwrite } from "./utils.js";
 import type {
+  LinkTypeData,
+  PhotoTypeData,
+  RichTypeData,
+  VideoTypeData,
+} from "@extractus/oembed-extractor";
+import type {
   AudioBlockObjectResponse,
   BookmarkBlockObjectResponse,
   BreadcrumbBlockObjectResponse,
@@ -202,7 +208,11 @@ export type ColumnListBlockObjectComponent = Overwrite<
 
 export type DividerBlockObjectComponent = DividerBlockObjectResponse;
 
-export type EmbedBlockObjectComponent = EmbedBlockObjectResponse;
+export type EmbedBlockObjectComponent = EmbedBlockObjectResponse & {
+  embed: {
+    oembed?: LinkTypeData | PhotoTypeData | VideoTypeData | RichTypeData;
+  };
+};
 
 export type EquationBlockObjectComponent = EquationBlockObjectResponse;
 
@@ -309,4 +319,8 @@ export type TogglableBlockObjectComponent =
 
 export type UnsupportedBlockObjectComponent = UnsupportedBlockObjectResponse;
 
-export type VideoBlockObjectComponent = VideoBlockObjectResponse;
+export type VideoBlockObjectComponent = VideoBlockObjectResponse & {
+  video: {
+    oembed?: LinkTypeData | PhotoTypeData | VideoTypeData | RichTypeData;
+  };
+};

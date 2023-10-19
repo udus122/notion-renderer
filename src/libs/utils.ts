@@ -1,4 +1,12 @@
 import {
+  extract,
+  type LinkTypeData,
+  type Params,
+  type PhotoTypeData,
+  type RichTypeData,
+  type VideoTypeData,
+} from "@extractus/oembed-extractor";
+import {
   isNotionClientError,
   APIErrorCode,
   ClientErrorCode,
@@ -83,4 +91,25 @@ export const scrapeOgMeta = async (url: string) => {
     };
   }
   return undefined;
+};
+
+export const fetchOembedData = async (
+  url: string,
+  params: Params = {}
+): Promise<
+  Result<LinkTypeData | PhotoTypeData | VideoTypeData | RichTypeData>
+> => {
+  try {
+    const oembedData = (await extract(url, params)) as
+      | LinkTypeData
+      | PhotoTypeData
+      | VideoTypeData
+      | RichTypeData;
+    return { payload: oembedData, error: undefined };
+  } catch (error) {
+    return {
+      payload: undefined,
+      error: error as Error,
+    };
+  }
 };

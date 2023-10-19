@@ -16,7 +16,6 @@ const defaultAnnotationMapper = {
   code: InlineCode,
 };
 
-// FIXME: cannot customize annotation order
 export const Annotations: React.FC<{
   richTextItem: RichTextItemResponse;
   children: React.ReactNode;
