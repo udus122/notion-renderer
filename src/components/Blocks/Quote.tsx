@@ -2,8 +2,13 @@ import { RichTexts } from "../RichTexts/index.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { QuoteBlockObject } from "../../types/components.js";
+import type { BlockObject } from "./Block.js";
+import type { QuoteBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type QuoteBlockObject = QuoteBlockObjectResponse & {
+  quote: { children?: Array<BlockObject> };
+};
 
 type Props = BlockComponentProps<QuoteBlockObject>;
 

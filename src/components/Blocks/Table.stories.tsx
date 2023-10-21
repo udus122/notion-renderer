@@ -1,7 +1,6 @@
-import { Table } from "./Table.js";
+import { Table, type TableBlockObject } from "./Table.js";
 import TableObject from "./Table.json";
 
-import type { TableBlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Table> = {

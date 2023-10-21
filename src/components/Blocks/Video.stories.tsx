@@ -3,7 +3,7 @@ import VideoFileObject from "./Video.File.json";
 import { Video } from "./Video.js";
 import VideoYouTubeObject from "./Video.YouTube.json";
 
-import type { VideoBlockObject } from "../../types/components.js";
+import type { VideoBlockObject } from "./Video.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Video> = {

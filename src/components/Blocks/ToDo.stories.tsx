@@ -2,7 +2,7 @@ import ToDoCheckedObject from "./ToDo.Checked.json";
 import { ToDo } from "./ToDo.js";
 import ToDoObject from "./Todo.json";
 
-import type { ToDoBlockObject } from "../../types/components.js";
+import type { ToDoBlockObject } from "./ToDo.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof ToDo> = {

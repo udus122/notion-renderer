@@ -1,8 +1,20 @@
-import { Block } from "./Block.js";
+import { Block, type BlockObject } from "./Block.js";
 import { Blocks } from "./Blocks.js";
 
-import type { SyncedBlockBlockObject } from "../../types/components.js";
+import type { SyncedBlockBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { IdRequest } from "src/types/notion.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type SyncedBlockBlockObject = SyncedBlockBlockObjectResponse & {
+  synced_block: {
+    synced_from: {
+      type: "block_id";
+      block_id: IdRequest;
+      block?: BlockObject | null;
+    } | null;
+    children?: Array<BlockObject> | null;
+  };
+};
 
 type Props = BlockComponentProps<SyncedBlockBlockObject>;
 

@@ -2,8 +2,13 @@ import { RichTexts } from "../RichTexts/index.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { ToggleBlockObject } from "../../types/components.js";
+import type { BlockObject } from "./Block.js";
+import type { ToggleBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type ToggleBlockObject = ToggleBlockObjectResponse & {
+  toggle: { children?: Array<BlockObject> };
+};
 
 type Props = BlockComponentProps<ToggleBlockObject>;
 

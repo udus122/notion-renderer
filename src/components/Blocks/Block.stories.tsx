@@ -2,7 +2,7 @@ import DividerObject from "./Block.Divider.json";
 import { Block } from "./Block.js";
 import ParagraphObject from "./Block.Paragraph.json";
 
-import type { ParagraphBlockObject } from "../../types/components.js";
+import type { ParagraphBlockObject } from "./Paragraph.js";
 import type { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
 

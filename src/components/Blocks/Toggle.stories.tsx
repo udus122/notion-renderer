@@ -1,7 +1,7 @@
 import { Toggle } from "./Toggle.js";
 import ToggleObject from "./Toggle.json";
 
-import type { ToggleBlockObject } from "../../types/components.js";
+import type { ToggleBlockObject } from "./Toggle.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Toggle> = {

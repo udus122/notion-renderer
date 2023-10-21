@@ -2,8 +2,13 @@ import { RichTexts } from "../RichTexts/index.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { Heading1BlockObject } from "../../types/components.js";
+import type { BlockObject } from "./Block.js";
+import type { Heading1BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type Heading1BlockObject = Heading1BlockObjectResponse & {
+  heading_1: { children?: Array<BlockObject> };
+};
 
 type Props = BlockComponentProps<Heading1BlockObject>;
 

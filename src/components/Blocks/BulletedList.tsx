@@ -1,7 +1,17 @@
-import { BulletedListItem } from "./BulletedListItem.js";
+import {
+  BulletedListItem,
+  type BulletedListItemBlockObject,
+} from "./BulletedListItem.js";
 
-import type { BulletedListBlockObject } from "../../types/components.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type BulletedListBlockObject = {
+  id: string;
+  type: "bulleted_list";
+  bulleted_list: {
+    items: Array<BulletedListItemBlockObject>;
+  };
+};
 
 type Props = BlockComponentProps<BulletedListBlockObject>;
 

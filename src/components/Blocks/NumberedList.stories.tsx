@@ -1,7 +1,7 @@
 import { NumberedList } from "./NumberedList.js";
 import NumberedListObject from "./NumberedList.json";
 
-import type { NumberedListBlockObject } from "../../types/components.js";
+import type { NumberedListBlockObject } from "./NumberedList.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof NumberedList> = {

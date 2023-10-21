@@ -1,4 +1,4 @@
-import type { BlockObject } from "./components.js";
+import type { BlockObject } from "src/components/Blocks/Block.js";
 
 export type Overwrite<T, U extends { [Key in keyof T]?: unknown }> = Omit<
   T,

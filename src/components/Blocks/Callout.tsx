@@ -3,8 +3,13 @@ import { RichTexts } from "../RichTexts/index.js";
 import { Blocks } from "./Blocks.js";
 import { Icon } from "./Icon.js";
 
-import type { CalloutBlockObject } from "../../types/components.js";
+import type { BlockObject } from "./Block.js";
+import type { CalloutBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type CalloutBlockObject = CalloutBlockObjectResponse & {
+  callout: { children?: Array<BlockObject> };
+};
 
 type Props = BlockComponentProps<CalloutBlockObject>;
 

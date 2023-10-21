@@ -1,5 +1,12 @@
-import type { LinkPreviewBlockObject } from "../../types/components.js";
+import type { ArticleData } from "@extractus/article-extractor";
+import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type LinkPreviewBlockObject = LinkPreviewBlockObjectResponse & {
+  link_preview: {
+    article_data?: ArticleData;
+  };
+};
 
 type Props = BlockComponentProps<LinkPreviewBlockObject>;
 

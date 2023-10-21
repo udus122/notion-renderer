@@ -1,7 +1,9 @@
 import { RichTexts } from "../RichTexts/index.js";
 
-import type { AudioBlockObject } from "../../types/components.js";
+import type { AudioBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type AudioBlockObject = AudioBlockObjectResponse;
 
 type Props = BlockComponentProps<AudioBlockObject>;
 

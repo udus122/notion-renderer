@@ -2,8 +2,13 @@ import { RichTexts } from "../RichTexts/index.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { ToDoBlockObject } from "../../types/components.js";
+import type { BlockObject } from "./Block.js";
+import type { ToDoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type ToDoBlockObject = ToDoBlockObjectResponse & {
+  to_do: { children?: Array<BlockObject> };
+};
 
 type Props = BlockComponentProps<ToDoBlockObject>;
 

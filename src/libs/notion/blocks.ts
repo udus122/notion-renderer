@@ -16,43 +16,6 @@ import { fetchPage } from "./pages.js";
 import { fetchAllParents } from "./parent.js";
 
 import type {
-  AudioBlockObject,
-  BlockObject,
-  BookmarkBlockObject,
-  BulletedListBlockObject,
-  BulletedListItemBlockObject,
-  CalloutBlockObject,
-  ChildDatabaseBlockObject,
-  ChildPageBlockObject,
-  CodeBlockObject,
-  ColumnBlockObject,
-  ColumnListBlockObject,
-  DividerBlockObject,
-  EmbedBlockObject,
-  EquationBlockObject,
-  FileBlockObject,
-  Heading1BlockObject,
-  Heading2BlockObject,
-  Heading3BlockObject,
-  ImageBlockObject,
-  LinkPreviewBlockObject,
-  LinkToPageBlockObject,
-  NumberedListBlockObject,
-  NumberedListItemBlockObject,
-  ParagraphBlockObject,
-  PdfBlockObject,
-  QuoteBlockObject,
-  SyncedBlockBlockObject,
-  TableBlockObject,
-  TableOfContentsBlockObject,
-  TableRowBlockObject,
-  TemplateBlockObject,
-  ToDoBlockObject,
-  ToggleBlockObject,
-  UnsupportedBlockObject,
-  VideoBlockObject,
-} from "../../types/components.js";
-import type {
   BlockObjectResponse,
   DatabaseObjectResponse,
   GetBlockParameters,
@@ -62,6 +25,45 @@ import type {
   PageObjectResponse,
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
+import type { AudioBlockObject } from "src/components/Blocks/Audio.js";
+import type { BlockObject } from "src/components/Blocks/Block.js";
+import type { BookmarkBlockObject } from "src/components/Blocks/Bookmark.js";
+import type { BulletedListItemBlockObject } from "src/components/Blocks/BulletedListItem.js";
+import type { CalloutBlockObject } from "src/components/Blocks/Callout.js";
+import type { ChildDatabaseBlockObject } from "src/components/Blocks/ChildDatabase.js";
+import type { ChildPageBlockObject } from "src/components/Blocks/ChildPage.js";
+import type { CodeBlockObject } from "src/components/Blocks/Code.js";
+import type {
+  ColumnListBlockObject,
+  ColumnBlockObject,
+} from "src/components/Blocks/ColumnList.js";
+import type { DividerBlockObject } from "src/components/Blocks/Divider.js";
+import type { EmbedBlockObject } from "src/components/Blocks/Embed.js";
+import type { EquationBlockObject } from "src/components/Blocks/Equation.js";
+import type { FileBlockObject } from "src/components/Blocks/File.js";
+import type { Heading1BlockObject } from "src/components/Blocks/Heading1.js";
+import type { Heading2BlockObject } from "src/components/Blocks/Heading2.js";
+import type { Heading3BlockObject } from "src/components/Blocks/Heading3.js";
+import type { ImageBlockObject } from "src/components/Blocks/Image.js";
+import type { LinkPreviewBlockObject } from "src/components/Blocks/LinkPreview.js";
+import type { LinkToPageBlockObject } from "src/components/Blocks/LinkToPage.js";
+import type { NumberedListBlockObject } from "src/components/Blocks/NumberedList.js";
+import type { NumberedListItemBlockObject } from "src/components/Blocks/NumberedListItem.js";
+import type { ParagraphBlockObject } from "src/components/Blocks/Paragraph.js";
+import type { PdfBlockObject } from "src/components/Blocks/Pdf.js";
+import type { QuoteBlockObject } from "src/components/Blocks/Quote.js";
+import type { SyncedBlockBlockObject } from "src/components/Blocks/SyncedBlock.js";
+import type { TableOfContentsBlockObject } from "src/components/Blocks/TableOfContents.js";
+import type { TemplateBlockObject } from "src/components/Blocks/Template.js";
+import type { ToDoBlockObject } from "src/components/Blocks/ToDo.js";
+import type { ToggleBlockObject } from "src/components/Blocks/Toggle.js";
+import type { UnsupportedBlockObject } from "src/components/Blocks/Unsupported.js";
+import type { VideoBlockObject } from "src/components/Blocks/Video.js";
+import type {
+  BulletedListBlockObject,
+  TableRowBlockObject,
+  TableBlockObject,
+} from "src/index.js";
 import type { ListBlockChildrenResponseResults } from "src/types/notion.js";
 
 export const retrieveBlock = async (

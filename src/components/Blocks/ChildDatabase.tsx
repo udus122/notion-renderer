@@ -1,7 +1,16 @@
 import { Icon } from "./Icon.js";
 
-import type { ChildDatabaseBlockObject } from "../../types/components.js";
+import type {
+  ChildDatabaseBlockObjectResponse,
+  DatabaseObjectResponse,
+} from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type ChildDatabaseBlockObject = ChildDatabaseBlockObjectResponse & {
+  child_database: {
+    database?: DatabaseObjectResponse | null;
+  };
+};
 
 type Props = BlockComponentProps<ChildDatabaseBlockObject>;
 

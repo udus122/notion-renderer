@@ -1,7 +1,7 @@
 import { Blocks } from "../Blocks/Blocks.js";
 import { RichTexts } from "../RichTexts/index.js";
 
-import type { Heading3BlockObject } from "../../types/components.js";
+import type { Heading3BlockObject } from "../Blocks/Heading3.js";
 import type { BlockComponentProps } from "src/types/utils.js";
 
 type Props = BlockComponentProps<Heading3BlockObject>;

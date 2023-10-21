@@ -1,7 +1,9 @@
 import { RichTexts } from "../RichTexts/index.js";
 
-import type { FileBlockObject } from "../../types/components.js";
+import type { FileBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type FileBlockObject = FileBlockObjectResponse;
 
 type Props = BlockComponentProps<FileBlockObject>;
 

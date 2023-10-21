@@ -1,7 +1,15 @@
-import { NumberedListItem } from "./NumberedListItem.js";
+import {
+  NumberedListItem,
+  type NumberedListItemBlockObject,
+} from "./NumberedListItem.js";
 
-import type { NumberedListBlockObject } from "../../types/components.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type NumberedListBlockObject = {
+  id: string;
+  numbered_list: { items: Array<NumberedListItemBlockObject> };
+  type: "numbered_list";
+};
 
 type Props = BlockComponentProps<NumberedListBlockObject>;
 

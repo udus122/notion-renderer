@@ -6,7 +6,7 @@ import { OpenedToggle } from "../CustomBlocks/OpenedToggle.js";
 import { Blocks } from "./Blocks.js";
 import BlocksObject from "./Blocks.json";
 
-import type { BlockObject } from "../../types/components.js";
+import type { BlockObject } from "./Block.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Blocks> = {

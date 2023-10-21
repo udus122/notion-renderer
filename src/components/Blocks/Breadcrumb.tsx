@@ -4,9 +4,21 @@ import { extractTitleProperty } from "../../libs/notion/util.js";
 
 import { Icon } from "./Icon.js";
 
-import type { BreadcrumbBlockObject } from "../../types/components.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type {
+  BreadcrumbBlockObjectResponse,
+  PageObjectResponse,
+  DatabaseObjectResponse,
+} from "@notionhq/client/build/src/api-endpoints.js";
+import type { BlockComponentProps, Overwrite } from "src/types/utils.js";
 
+export type BreadcrumbBlockObject = Overwrite<
+  BreadcrumbBlockObjectResponse,
+  {
+    breadcrumb: {
+      parents: Array<PageObjectResponse | DatabaseObjectResponse>;
+    };
+  }
+>;
 type Props = BlockComponentProps<BreadcrumbBlockObject>;
 
 export const Breadcrumb: React.FC<Props> = ({ block }) => {

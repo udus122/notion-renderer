@@ -1,12 +1,12 @@
 import { RichTexts } from "../RichTexts/index.js";
 
-import type {
-  Heading1BlockObject,
-  Heading2BlockObject,
-  Heading3BlockObject,
-  TableOfContentsBlockObject,
-} from "../../types/components.js";
+import type { Heading1BlockObject } from "./Heading1.js";
+import type { Heading2BlockObject } from "./Heading2.js";
+import type { Heading3BlockObject } from "./Heading3.js";
+import type { TableOfContentsBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type TableOfContentsBlockObject = TableOfContentsBlockObjectResponse;
 
 type Props = BlockComponentProps<TableOfContentsBlockObject>;
 

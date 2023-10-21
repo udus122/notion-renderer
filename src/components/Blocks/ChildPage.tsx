@@ -1,7 +1,16 @@
 import { Icon } from "./Icon.js";
 
-import type { ChildPageBlockObject } from "../../types/components.js";
+import type {
+  ChildPageBlockObjectResponse,
+  PageObjectResponse,
+} from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type ChildPageBlockObject = ChildPageBlockObjectResponse & {
+  child_page: {
+    page?: PageObjectResponse;
+  };
+};
 
 type Props = BlockComponentProps<ChildPageBlockObject>;
 

@@ -1,7 +1,6 @@
-import { BulletedList } from "./BulletedList.js";
+import { BulletedList, type BulletedListBlockObject } from "./BulletedList.js";
 import BulletedListObject from "./BulletedList.json";
 
-import type { BulletedListBlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof BulletedList> = {

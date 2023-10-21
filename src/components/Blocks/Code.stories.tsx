@@ -1,7 +1,7 @@
 import { Code } from "./Code.js";
 import CodeObject from "./Code.json";
 
-import type { CodeBlockObject } from "../../types/components.js";
+import type { CodeBlockObject } from "./Code.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Code> = {

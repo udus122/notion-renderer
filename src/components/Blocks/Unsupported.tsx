@@ -1,5 +1,8 @@
-import type { BlockObject } from "../../types/components.js";
+import type { BlockObject } from "./Block.js";
+import type { UnsupportedBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type UnsupportedBlockObject = UnsupportedBlockObjectResponse;
 
 type Props = BlockComponentProps<BlockObject>;
 

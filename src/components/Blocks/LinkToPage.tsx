@@ -3,8 +3,33 @@ import { RichTexts } from "../RichTexts/index.js";
 
 import { Icon } from "./Icon.js";
 
-import type { LinkToPageBlockObject } from "../../types/components.js";
+import type {
+  LinkToPageBlockObjectResponse,
+  PageObjectResponse,
+  DatabaseObjectResponse,
+  ListCommentsResponse,
+} from "@notionhq/client/build/src/api-endpoints.js";
+import type { IdRequest } from "src/types/notion.js";
 import type { BlockComponentProps } from "src/types/utils.js";
+
+export type LinkToPageBlockObject = LinkToPageBlockObjectResponse & {
+  link_to_page:
+    | {
+        type: "page_id";
+        page_id: IdRequest;
+        page?: PageObjectResponse;
+      }
+    | {
+        type: "database_id";
+        database_id: IdRequest;
+        database?: DatabaseObjectResponse;
+      }
+    | {
+        type: "comment_id";
+        comment_id: IdRequest;
+        comments?: ListCommentsResponse["results"];
+      };
+};
 
 type Props = BlockComponentProps<LinkToPageBlockObject>;
 
