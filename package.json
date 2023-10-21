@@ -61,16 +61,13 @@
     "@extractus/article-extractor": "^8.0.3",
     "@extractus/oembed-extractor": "^4.0.1",
     "@notionhq/client": "^2.2.13",
-    "cpx2": "^5.0.0",
+    "dotenv": "^16.3.1",
     "katex": "^0.16.9",
     "modern-normalize": "^1.1.0",
-    "notionate": "^9.2.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-katex": "^3.0.1",
-    "react-syntax-highlighter": "^15.5.0",
-    "react-twitter-embed": "^4.0.4",
-    "react-youtube": "^10.1.0"
+    "react-syntax-highlighter": "^15.5.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
@@ -95,8 +92,8 @@
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vitejs/plugin-react-swc": "^3.4.0",
+    "cpx2": "^5.0.0",
     "cz-conventional-changelog": "3.3.0",
-    "dotenv": "^16.3.1",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^8.10.0",
     "eslint-import-resolver-typescript": "^3.6.1",

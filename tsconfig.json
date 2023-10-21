@@ -22,11 +22,6 @@
     "outDir": "./dist",
     "jsx": "react-jsx",
     "baseUrl": ".",
-    "paths": {
-      "@/*": [
-        "src/*"
-      ]
-    }
   },
   "include": [
     "src"
