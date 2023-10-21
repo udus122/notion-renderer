@@ -139,8 +139,6 @@
   font-size: 0.75rem;
   text-transform: capitalize;
 }
-.notion_code_body {
-}
 /* link_preview block */
 .notion_link_preview_container {
   display: flex;
@@ -378,13 +376,4 @@ td > * {
 .notion_pdf > object {
   block-size: auto;
   max-inline-size: 100%;
-}
-/* user mention type rich text */
-.notion_rich_text_type_mention_type_user_avatar {
-  block-size: 1rem;
-  inline-size: 1rem;
-  aspect-ratio: 1;
-  border-radius: 50%;
-  margin-inline-end: 0.2rem;
-  vertical-align: text-top;
 }
