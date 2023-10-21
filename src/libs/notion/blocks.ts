@@ -4,8 +4,8 @@ import { isFullBlock } from "@notionhq/client";
 
 import {
   callAPIWithBackOff,
-  fetchArticleData,
-  fetchOembedData,
+  fetchSiteMeta,
+  fetchOembed,
   notNullNorUndefined,
 } from "../utils.js";
 
@@ -228,7 +228,7 @@ export const convertBlockToComponent = async (
       return { ...block } satisfies AudioBlockObject;
     }
     case "bookmark": {
-      const { payload: site_meta, error } = await fetchArticleData(
+      const { payload: site_meta, error } = await fetchSiteMeta(
         block.bookmark.url
       );
       if (!error) {
@@ -368,7 +368,7 @@ export const convertBlockToComponent = async (
       return { ...block } satisfies DividerBlockObject;
     }
     case "embed": {
-      const { payload: oembed, error } = await fetchOembedData(block.embed.url);
+      const { payload: oembed, error } = await fetchOembed(block.embed.url);
       if (!error) {
         return {
           ...block,
@@ -435,7 +435,7 @@ export const convertBlockToComponent = async (
       return { ...block } satisfies ImageBlockObject;
     }
     case "link_preview": {
-      const { payload: site_meta, error } = await fetchArticleData(
+      const { payload: site_meta, error } = await fetchSiteMeta(
         block.link_preview.url
       );
       if (!error) {
@@ -636,7 +636,7 @@ export const convertBlockToComponent = async (
     }
     case "video": {
       if (block.video.type === "external") {
-        const { payload: oembed, error } = await fetchOembedData(
+        const { payload: oembed, error } = await fetchOembed(
           block.video.external.url,
           { maxwidth: 560, maxheight: 315 }
         );

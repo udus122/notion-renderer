@@ -1,5 +1,5 @@
 import {
-  extract as extractArticle,
+  extract as extractSiteMeta,
   type ArticleData,
   type ParserOptions,
   type FetchOptions,
@@ -84,13 +84,13 @@ export const notNullNorUndefined = <T>(v: T | null | undefined): v is T => {
   return v !== null && v !== undefined;
 };
 
-export const fetchArticleData = async (
+export const fetchSiteMeta = async (
   url: string,
   parserOptions?: ParserOptions | undefined,
   fetchOptions?: FetchOptions | undefined
 ): Promise<Result<ArticleData>> => {
   try {
-    const article = await extractArticle(url, parserOptions, fetchOptions);
+    const article = await extractSiteMeta(url, parserOptions, fetchOptions);
     if (article) {
       return { payload: article, error: undefined };
     }
@@ -100,19 +100,19 @@ export const fetchArticleData = async (
   return { payload: undefined, error: new Error("article is null.") };
 };
 
-export const fetchOembedData = async (
+export const fetchOembed = async (
   url: string,
   params: Params = {}
 ): Promise<
   Result<LinkTypeData | PhotoTypeData | VideoTypeData | RichTypeData>
 > => {
   try {
-    const oembedData = (await extractOembed(url, params)) as
+    const oembed = (await extractOembed(url, params)) as
       | LinkTypeData
       | PhotoTypeData
       | VideoTypeData
       | RichTypeData;
-    return { payload: oembedData, error: undefined };
+    return { payload: oembed, error: undefined };
   } catch (error) {
     return {
       payload: undefined,
