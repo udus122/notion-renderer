@@ -52,7 +52,7 @@ import { Toggle, type ToggleBlockObject } from "./Toggle.js";
 import { Unsupported, type UnsupportedBlockObject } from "./Unsupported.js";
 import { Video, type VideoBlockObject } from "./Video.js";
 
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type BlockObject =
   | AudioBlockObject
@@ -91,17 +91,25 @@ export type BlockObject =
   | UnsupportedBlockObject
   | VideoBlockObject;
 
-type Props = BlockComponentProps<BlockObject>;
+type Props = BlockProps<BlockObject>;
 
-export const Block: React.FC<Props> = ({ block, blocks = [], mapper = {} }) => {
+export const Block: React.FC<Props> = ({
+  block,
+  blocks = [],
+  richTextMapper: mapper = {},
+}) => {
   return (
     <div className="notion_block">
-      <BlockComponent block={block} blocks={blocks} mapper={mapper} />
+      <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
     </div>
   );
 };
 
-const BlockComponent: React.FC<Props> = ({ block, blocks, mapper = {} }) => {
+const BlockComponent: React.FC<Props> = ({
+  block,
+  blocks,
+  richTextMapper: mapper = {},
+}) => {
   const blockComponentMapper = {
     audio: Audio,
     bookmark: Bookmark,
@@ -144,149 +152,219 @@ const BlockComponent: React.FC<Props> = ({ block, blocks, mapper = {} }) => {
   switch (block.type) {
     case "audio": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "bookmark": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "breadcrumb": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "bulleted_list": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "bulleted_list_item": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "callout": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "child_database": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "child_page": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "code": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "column": {
       console.warn(
         `top level column block is not supported. column block must be child of column_list block.`
       );
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "column_list": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "divider": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "embed": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "equation": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "file": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "heading_1": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "heading_2": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "heading_3": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "image": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "link_preview": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "link_to_page": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "numbered_list": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "numbered_list_item": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "paragraph": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "pdf": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "quote": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "synced_block": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "table": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "table_of_contents": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "table_row": {
       console.warn(
         `top level table_row block is not supported. table_row block must be child of table block.`
       );
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "template": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "to_do": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "toggle": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "unsupported": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     case "video": {
       const BlockComponent = blockComponentMapper[block.type];
-      return <BlockComponent block={block} blocks={blocks} mapper={mapper} />;
+      return (
+        <BlockComponent block={block} blocks={blocks} richTextMapper={mapper} />
+      );
     }
     default: {
       // @ts-expect-error: to log when an unexpected 'block.type' is encountered, which is not in the type.

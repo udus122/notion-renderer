@@ -4,11 +4,11 @@ import type { Heading1BlockObject } from "./Heading1.js";
 import type { Heading2BlockObject } from "./Heading2.js";
 import type { Heading3BlockObject } from "./Heading3.js";
 import type { TableOfContentsBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type TableOfContentsBlockObject = TableOfContentsBlockObjectResponse;
 
-type Props = BlockComponentProps<TableOfContentsBlockObject>;
+type Props = BlockProps<TableOfContentsBlockObject>;
 
 export const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
   const headings = blocks?.filter(

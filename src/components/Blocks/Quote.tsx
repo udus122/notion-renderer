@@ -4,15 +4,15 @@ import { Blocks } from "./index.js";
 
 import type { BlockObject } from "./Block.js";
 import type { QuoteBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type QuoteBlockObject = QuoteBlockObjectResponse & {
   quote: { children?: Array<BlockObject> };
 };
 
-type Props = BlockComponentProps<QuoteBlockObject>;
+type Props = BlockProps<QuoteBlockObject>;
 
-export const Quote: React.FC<Props> = ({ block, mapper }) => {
+export const Quote: React.FC<Props> = ({ block, richTextMapper: mapper }) => {
   return (
     <blockquote
       id={block.id}

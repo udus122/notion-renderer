@@ -1,11 +1,11 @@
 import { RichTexts } from "../RichTexts/index.js";
 
 import type { CodeBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type CodeBlockObject = CodeBlockObjectResponse;
 
-type Props = BlockComponentProps<CodeBlockObject>;
+type Props = BlockProps<CodeBlockObject>;
 
 export const Code: React.FC<Props> = ({ block }) => {
   return (

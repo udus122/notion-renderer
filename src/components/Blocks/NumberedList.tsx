@@ -3,7 +3,7 @@ import {
   type NumberedListItemBlockObject,
 } from "./NumberedListItem.js";
 
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type NumberedListBlockObject = {
   id: string;
@@ -11,9 +11,13 @@ export type NumberedListBlockObject = {
   type: "numbered_list";
 };
 
-type Props = BlockComponentProps<NumberedListBlockObject>;
+type Props = BlockProps<NumberedListBlockObject>;
 
-export const NumberedList: React.FC<Props> = ({ block, blocks, mapper }) => {
+export const NumberedList: React.FC<Props> = ({
+  block,
+  blocks,
+  richTextMapper: mapper,
+}) => {
   return (
     <ol className="notion_numbered_list">
       {block.numbered_list.items.map((item) => {
@@ -22,7 +26,7 @@ export const NumberedList: React.FC<Props> = ({ block, blocks, mapper }) => {
             key={item.id}
             block={item}
             blocks={blocks}
-            mapper={mapper}
+            richTextMapper={mapper}
           ></NumberedListItem>
         );
       })}

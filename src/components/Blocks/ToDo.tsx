@@ -4,15 +4,15 @@ import { Blocks } from "./index.js";
 
 import type { BlockObject } from "./Block.js";
 import type { ToDoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type ToDoBlockObject = ToDoBlockObjectResponse & {
   to_do: { children?: Array<BlockObject> };
 };
 
-type Props = BlockComponentProps<ToDoBlockObject>;
+type Props = BlockProps<ToDoBlockObject>;
 
-export const ToDo: React.FC<Props> = ({ block, mapper }) => {
+export const ToDo: React.FC<Props> = ({ block, richTextMapper: mapper }) => {
   const isChecked = block.to_do.checked;
   return (
     <div

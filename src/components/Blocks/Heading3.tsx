@@ -4,15 +4,18 @@ import { Blocks } from "./index.js";
 
 import type { BlockObject } from "./Block.js";
 import type { Heading3BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type Heading3BlockObject = Heading3BlockObjectResponse & {
   heading_3: { children?: Array<BlockObject> };
 };
 
-type Props = BlockComponentProps<Heading3BlockObject>;
+type Props = BlockProps<Heading3BlockObject>;
 
-export const Heading3: React.FC<Props> = ({ block, mapper }) => {
+export const Heading3: React.FC<Props> = ({
+  block,
+  richTextMapper: mapper,
+}) => {
   return (
     <>
       {block.heading_3.is_toggleable ? (

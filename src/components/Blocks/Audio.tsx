@@ -1,11 +1,11 @@
 import { RichTexts } from "../RichTexts/index.js";
 
 import type { AudioBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type AudioBlockObject = AudioBlockObjectResponse;
 
-type Props = BlockComponentProps<AudioBlockObject>;
+type Props = BlockProps<AudioBlockObject>;
 
 export const Audio: React.FC<Props> = ({ block }) => {
   const audioUrl =

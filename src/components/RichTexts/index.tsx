@@ -16,7 +16,7 @@ export const RichTexts = ({
       {richTexts.map((richTextItem, index) => (
         <RichText
           richTextItem={richTextItem}
-          mapper={customRichTextComponentMapper}
+          richTextItemMapper={customRichTextComponentMapper}
           key={`${index}-${richTextItem.plain_text}`}
         />
       ))}

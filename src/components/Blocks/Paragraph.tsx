@@ -4,15 +4,18 @@ import { Blocks } from "./index.js";
 
 import type { BlockObject } from "./Block.js";
 import type { ParagraphBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type ParagraphBlockObject = ParagraphBlockObjectResponse & {
   paragraph: { children?: Array<BlockObject> };
 };
 
-type Props = BlockComponentProps<ParagraphBlockObject>;
+type Props = BlockProps<ParagraphBlockObject>;
 
-export const Paragraph: React.FC<Props> = ({ block, mapper }) => {
+export const Paragraph: React.FC<Props> = ({
+  block,
+  richTextMapper: mapper,
+}) => {
   return (
     <div
       id={block.id}

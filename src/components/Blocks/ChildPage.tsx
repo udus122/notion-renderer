@@ -4,7 +4,7 @@ import type {
   ChildPageBlockObjectResponse,
   PageObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type ChildPageBlockObject = ChildPageBlockObjectResponse & {
   child_page: {
@@ -12,7 +12,7 @@ export type ChildPageBlockObject = ChildPageBlockObjectResponse & {
   };
 };
 
-type Props = BlockComponentProps<ChildPageBlockObject>;
+type Props = BlockProps<ChildPageBlockObject>;
 
 export const ChildPage: React.FC<Props> = ({ block }) => {
   return (

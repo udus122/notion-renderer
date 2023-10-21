@@ -4,7 +4,7 @@ import { Blocks } from "./index.js";
 
 import type { BlockObject } from "./Block.js";
 import type { NumberedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type NumberedListItemBlockObject =
   NumberedListItemBlockObjectResponse & {
@@ -12,8 +12,8 @@ export type NumberedListItemBlockObject =
   };
 
 export const NumberedListItem: React.FC<
-  BlockComponentProps<NumberedListItemBlockObject>
-> = ({ block, mapper }) => {
+  BlockProps<NumberedListItemBlockObject>
+> = ({ block, richTextMapper: mapper }) => {
   return (
     <li
       id={block.id}

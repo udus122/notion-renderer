@@ -1,11 +1,11 @@
 import { RichTexts } from "../RichTexts/index.js";
 
 import type { FileBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type FileBlockObject = FileBlockObjectResponse;
 
-type Props = BlockComponentProps<FileBlockObject>;
+type Props = BlockProps<FileBlockObject>;
 
 export const File: React.FC<Props> = ({ block }) => {
   const fileUrl =

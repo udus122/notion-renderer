@@ -7,7 +7,7 @@ import type {
   RichTypeData,
 } from "@extractus/oembed-extractor";
 import type { EmbedBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type EmbedBlockObject = EmbedBlockObjectResponse & {
   embed: {
@@ -15,7 +15,7 @@ export type EmbedBlockObject = EmbedBlockObjectResponse & {
   };
 };
 
-type Props = BlockComponentProps<EmbedBlockObject>;
+type Props = BlockProps<EmbedBlockObject>;
 
 export const Embed: React.FC<Props> = ({ block }) => {
   if (block.embed.oembed) {

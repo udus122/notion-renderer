@@ -7,7 +7,7 @@ import type {
   RichTypeData,
 } from "@extractus/oembed-extractor";
 import type { VideoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type VideoBlockObject = VideoBlockObjectResponse & {
   video: {
@@ -15,7 +15,7 @@ export type VideoBlockObject = VideoBlockObjectResponse & {
   };
 };
 
-type Props = BlockComponentProps<VideoBlockObject>;
+type Props = BlockProps<VideoBlockObject>;
 
 export const Video: React.FC<Props> = ({ block }) => {
   const videoUrl =

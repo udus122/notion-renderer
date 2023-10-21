@@ -2,7 +2,7 @@ import { RichTexts } from "../RichTexts/index.js";
 
 import type { ArticleData } from "@extractus/article-extractor";
 import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type BookmarkBlockObject = BookmarkBlockObjectResponse & {
   bookmark: {
@@ -10,7 +10,7 @@ export type BookmarkBlockObject = BookmarkBlockObjectResponse & {
   };
 };
 
-type Props = BlockComponentProps<BookmarkBlockObject>;
+type Props = BlockProps<BookmarkBlockObject>;
 
 export const Bookmark: React.FC<Props> = ({ block }) => {
   return (

@@ -9,7 +9,7 @@ import type {
   PageObjectResponse,
   DatabaseObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps, Overwrite } from "src/types/utils.js";
+import type { BlockProps, Overwrite } from "src/types/utils.js";
 
 export type BreadcrumbBlockObject = Overwrite<
   BreadcrumbBlockObjectResponse,
@@ -19,7 +19,7 @@ export type BreadcrumbBlockObject = Overwrite<
     };
   }
 >;
-type Props = BlockComponentProps<BreadcrumbBlockObject>;
+type Props = BlockProps<BreadcrumbBlockObject>;
 
 export const Breadcrumb: React.FC<Props> = ({ block }) => {
   return (

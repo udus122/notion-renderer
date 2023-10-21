@@ -2,11 +2,14 @@ import { Blocks } from "../Blocks/index.js";
 import { RichTexts } from "../RichTexts/index.js";
 
 import type { Heading2BlockObject } from "../Blocks/Heading2.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<Heading2BlockObject>;
+type Props = BlockProps<Heading2BlockObject>;
 
-export const OpenedHeading2: React.FC<Props> = ({ block, mapper }) => {
+export const OpenedHeading2: React.FC<Props> = ({
+  block,
+  richTextMapper: mapper,
+}) => {
   return (
     <>
       {block.heading_2.is_toggleable ? (

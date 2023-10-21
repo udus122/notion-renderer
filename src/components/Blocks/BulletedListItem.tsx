@@ -5,7 +5,7 @@ import { Blocks } from "./index.js";
 import type { BlockObject } from "./Block.js";
 import type { BulletedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type React from "react";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type BulletedListItemBlockObject =
   BulletedListItemBlockObjectResponse & {
@@ -14,9 +14,12 @@ export type BulletedListItemBlockObject =
     };
   };
 
-type Props = BlockComponentProps<BulletedListItemBlockObject>;
+type Props = BlockProps<BulletedListItemBlockObject>;
 
-export const BulletedListItem: React.FC<Props> = ({ block, mapper }) => {
+export const BulletedListItem: React.FC<Props> = ({
+  block,
+  richTextMapper: mapper,
+}) => {
   return (
     <li
       id={block.id}

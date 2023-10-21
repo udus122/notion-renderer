@@ -2,11 +2,14 @@ import { Blocks } from "../Blocks/index.js";
 import { RichTexts } from "../RichTexts/index.js";
 
 import type { ToggleBlockObject } from "../Blocks/Toggle.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<ToggleBlockObject>;
+type Props = BlockProps<ToggleBlockObject>;
 
-export const OpenedToggle: React.FC<Props> = ({ block, mapper }) => {
+export const OpenedToggle: React.FC<Props> = ({
+  block,
+  richTextMapper: mapper,
+}) => {
   return (
     <details
       id={block.id}

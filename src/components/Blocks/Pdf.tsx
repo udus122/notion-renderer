@@ -1,11 +1,11 @@
 import { RichTexts } from "../RichTexts/index.js";
 
 import type { PdfBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type PdfBlockObject = PdfBlockObjectResponse;
 
-type Props = BlockComponentProps<PdfBlockObject>;
+type Props = BlockProps<PdfBlockObject>;
 
 export const Pdf: React.FC<Props> = ({ block }) => {
   const pdfUrl =

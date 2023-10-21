@@ -6,7 +6,7 @@ import type {
   ColumnListBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Overwrite } from "src/types/utils.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type ColumnListBlockObject = Overwrite<
   ColumnListBlockObjectResponse,
@@ -24,9 +24,12 @@ export type ColumnBlockObject = Overwrite<
   }
 >;
 
-type Props = BlockComponentProps<ColumnListBlockObject>;
+type Props = BlockProps<ColumnListBlockObject>;
 
-export const ColumnList: React.FC<Props> = ({ block, mapper }) => {
+export const ColumnList: React.FC<Props> = ({
+  block,
+  richTextMapper: mapper,
+}) => {
   return (
     <div id={block.id} className="notion_column_list">
       {block.column_list.columns &&

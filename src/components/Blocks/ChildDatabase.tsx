@@ -4,7 +4,7 @@ import type {
   ChildDatabaseBlockObjectResponse,
   DatabaseObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type ChildDatabaseBlockObject = ChildDatabaseBlockObjectResponse & {
   child_database: {
@@ -12,7 +12,7 @@ export type ChildDatabaseBlockObject = ChildDatabaseBlockObjectResponse & {
   };
 };
 
-type Props = BlockComponentProps<ChildDatabaseBlockObject>;
+type Props = BlockProps<ChildDatabaseBlockObject>;
 
 export const ChildDatabase: React.FC<Props> = ({ block }) => {
   return (

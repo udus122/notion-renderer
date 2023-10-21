@@ -4,7 +4,7 @@ import type {
   TableBlockObjectResponse,
   TableRowBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type TableBlockObject = TableBlockObjectResponse & {
   table: { table_rows?: Array<TableRowBlockObject> };
@@ -14,7 +14,7 @@ export type TableRowBlockObject = TableRowBlockObjectResponse;
 export type TableCellBlockObjectComponent =
   TableRowBlockObject["table_row"]["cells"][number];
 
-type Props = BlockComponentProps<TableBlockObject>;
+type Props = BlockProps<TableBlockObject>;
 
 export const Table: React.FC<Props> = ({ block }) => {
   return (

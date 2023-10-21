@@ -1,6 +1,6 @@
 import type { ArticleData } from "@extractus/article-extractor";
 import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type LinkPreviewBlockObject = LinkPreviewBlockObjectResponse & {
   link_preview: {
@@ -8,7 +8,7 @@ export type LinkPreviewBlockObject = LinkPreviewBlockObjectResponse & {
   };
 };
 
-type Props = BlockComponentProps<LinkPreviewBlockObject>;
+type Props = BlockProps<LinkPreviewBlockObject>;
 
 export const LinkPreview: React.FC<Props> = ({ block }) => {
   return (

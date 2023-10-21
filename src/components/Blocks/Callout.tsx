@@ -6,15 +6,15 @@ import { Blocks } from "./index.js";
 
 import type { BlockObject } from "./Block.js";
 import type { CalloutBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type CalloutBlockObject = CalloutBlockObjectResponse & {
   callout: { children?: Array<BlockObject> };
 };
 
-type Props = BlockComponentProps<CalloutBlockObject>;
+type Props = BlockProps<CalloutBlockObject>;
 
-export const Callout: React.FC<Props> = ({ block, mapper }) => {
+export const Callout: React.FC<Props> = ({ block, richTextMapper: mapper }) => {
   return (
     <div
       id={block.id}

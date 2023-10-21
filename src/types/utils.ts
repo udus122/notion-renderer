@@ -17,13 +17,18 @@ export type Result<T, E extends Error = Error> =
       error: E;
     };
 
-export type BlockComponentProps<T extends BlockObject> = {
+export type BlockProps<T extends BlockObject> = {
   block: T;
   blocks: Array<BlockObject>;
-  mapper?: object;
+  blockMapper?: object;
+  richTextMapper?: object;
+  annotationMapper?: object;
+  linkMapper?: object;
 };
 
-export type RichTextComponentProps<T extends RichTextItem> = {
+export type RichTextProps<T extends RichTextItem> = {
   richTextItem: T;
-  mapper?: object;
+  richTextItemMapper?: object;
+  annotationMapper?: object;
+  linkMapper?: object;
 };

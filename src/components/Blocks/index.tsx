@@ -10,7 +10,12 @@ export const Blocks: React.FC<Props> = function ({ blocks, mapper = {} }) {
     <>
       {blocks.map((block) => {
         return (
-          <Block key={block.id} block={block} blocks={blocks} mapper={mapper} />
+          <Block
+            key={block.id}
+            block={block}
+            blocks={blocks}
+            richTextMapper={mapper}
+          />
         );
       })}
     </>

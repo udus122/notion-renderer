@@ -10,7 +10,7 @@ import type {
   ListCommentsResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 import type { IdRequest } from "src/types/notion.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type LinkToPageBlockObject = LinkToPageBlockObjectResponse & {
   link_to_page:
@@ -31,7 +31,7 @@ export type LinkToPageBlockObject = LinkToPageBlockObjectResponse & {
       };
 };
 
-type Props = BlockComponentProps<LinkToPageBlockObject>;
+type Props = BlockProps<LinkToPageBlockObject>;
 
 export const LinkToPage: React.FC<Props> = ({ block }) => {
   if (block.link_to_page.type === "page_id" && block.link_to_page.page) {

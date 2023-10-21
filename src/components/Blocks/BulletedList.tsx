@@ -3,7 +3,7 @@ import {
   type BulletedListItemBlockObject,
 } from "./BulletedListItem.js";
 
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type BulletedListBlockObject = {
   id: string;
@@ -13,9 +13,13 @@ export type BulletedListBlockObject = {
   };
 };
 
-type Props = BlockComponentProps<BulletedListBlockObject>;
+type Props = BlockProps<BulletedListBlockObject>;
 
-export const BulletedList: React.FC<Props> = ({ block, blocks, mapper }) => {
+export const BulletedList: React.FC<Props> = ({
+  block,
+  blocks,
+  richTextMapper: mapper,
+}) => {
   return (
     <ul className="notion_bulleted_list">
       {block.bulleted_list.items.map((item) => {
@@ -24,7 +28,7 @@ export const BulletedList: React.FC<Props> = ({ block, blocks, mapper }) => {
             key={item.id}
             block={item}
             blocks={blocks}
-            mapper={mapper}
+            richTextMapper={mapper}
           />
         );
       })}

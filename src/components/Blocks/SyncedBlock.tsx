@@ -3,7 +3,7 @@ import { Blocks } from "./index.js";
 
 import type { SyncedBlockBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { IdRequest } from "src/types/notion.js";
-import type { BlockComponentProps } from "src/types/utils.js";
+import type { BlockProps } from "src/types/utils.js";
 
 export type SyncedBlockBlockObject = SyncedBlockBlockObjectResponse & {
   synced_block: {
@@ -16,9 +16,13 @@ export type SyncedBlockBlockObject = SyncedBlockBlockObjectResponse & {
   };
 };
 
-type Props = BlockComponentProps<SyncedBlockBlockObject>;
+type Props = BlockProps<SyncedBlockBlockObject>;
 
-export const SyncedBlock: React.FC<Props> = ({ block, blocks, mapper }) => {
+export const SyncedBlock: React.FC<Props> = ({
+  block,
+  blocks,
+  richTextMapper: mapper,
+}) => {
   return (
     <div className="notion_synced_block">
       {block.synced_block.synced_from === null
@@ -32,7 +36,7 @@ export const SyncedBlock: React.FC<Props> = ({ block, blocks, mapper }) => {
               <Block
                 block={block.synced_block.synced_from.block}
                 blocks={blocks}
-                mapper={mapper}
+                richTextMapper={mapper}
               />
             </div>
           )}
