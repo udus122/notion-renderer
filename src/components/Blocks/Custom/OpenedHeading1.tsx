@@ -1,12 +1,12 @@
-import { Blocks } from "../Blocks/Blocks.js";
-import { RichText } from "../RichText/RichText.js";
+import { RichText } from "../../RichText/RichText.js";
+import { Blocks } from "../Blocks.js";
 
-import type { Heading2BlockObject } from "../Blocks/Heading2.js";
+import type { Heading1BlockObject } from "../Heading1.js";
 import type { BlockProps } from "src/types/utils.js";
 
-type Props = BlockProps<Heading2BlockObject>;
+type Props = BlockProps<Heading1BlockObject>;
 
-export const OpenedHeading2: React.FC<Props> = ({
+export const OpenedHeading1: React.FC<Props> = ({
   block,
   blockMapper,
   richTextItemMapper,
@@ -15,26 +15,26 @@ export const OpenedHeading2: React.FC<Props> = ({
 }) => {
   return (
     <>
-      {block.heading_2.is_toggleable ? (
+      {block.heading_1.is_toggleable ? (
         <details
           id={block.id}
-          className={`notion_heading notion_heading_2 notion_toggle notion_color_${block.heading_2.color}`}
+          className={`notion_heading notion_heading_1 notion_toggle notion_color_${block.heading_1.color}`}
           open
         >
           <summary className="notion_toggle_summary">
-            <h2>
+            <h1>
               <RichText
-                richTextItems={block.heading_2.rich_text}
+                richTextItems={block.heading_1.rich_text}
                 richTextItemMapper={richTextItemMapper}
                 annotationMapper={annotationMapper}
                 LinkComponent={LinkComponent}
               />
-            </h2>
+            </h1>
           </summary>
           <div className="notion_toggle_details">
-            {block.heading_2.children && (
+            {block.heading_1.children && (
               <Blocks
-                blocks={block.heading_2.children}
+                blocks={block.heading_1.children}
                 blockMapper={blockMapper}
                 richTextItemMapper={richTextItemMapper}
                 annotationMapper={annotationMapper}
@@ -44,17 +44,17 @@ export const OpenedHeading2: React.FC<Props> = ({
           </div>
         </details>
       ) : (
-        <h2
+        <h1
           id={block.id}
-          className={`notion_heading notion_heading_2 notion_color_${block.heading_2.color}`}
+          className={`notion_heading notion_heading_1 notion_color_${block.heading_1.color}`}
         >
           <RichText
-            richTextItems={block.heading_2.rich_text}
+            richTextItems={block.heading_1.rich_text}
             richTextItemMapper={richTextItemMapper}
             annotationMapper={annotationMapper}
             LinkComponent={LinkComponent}
           />
-        </h2>
+        </h1>
       )}
     </>
   );

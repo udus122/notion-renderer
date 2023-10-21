@@ -1,10 +1,9 @@
-import { OpenedHeading1 } from "../CustomBlocks/OpenedHeading1.js";
-import { OpenedHeading2 } from "../CustomBlocks/OpenedHeading2.js";
-import { OpenedHeading3 } from "../CustomBlocks/OpenedHeading3.js";
-import { OpenedToggle } from "../CustomBlocks/OpenedToggle.js";
-
 import { Blocks } from "./Blocks.js";
 import BlocksObject from "./Blocks.json";
+import { OpenedHeading1 } from "./Custom/OpenedHeading1.js";
+import { OpenedHeading2 } from "./Custom/OpenedHeading2.js";
+import { OpenedHeading3 } from "./Custom/OpenedHeading3.js";
+import { OpenedToggle } from "./Custom/OpenedToggle.js";
 
 import type { BlockObject } from "./Block.js";
 import type { Meta, StoryObj } from "@storybook/react";

@@ -1,7 +1,7 @@
-import { Blocks } from "../Blocks/Blocks.js";
-import { RichText } from "../RichText/RichText.js";
+import { RichText } from "../../RichText/RichText.js";
+import { Blocks } from "../Blocks.js";
 
-import type { ToggleBlockObject } from "../Blocks/Toggle.js";
+import type { ToggleBlockObject } from "../Toggle.js";
 import type { BlockProps } from "src/types/utils.js";
 
 type Props = BlockProps<ToggleBlockObject>;
