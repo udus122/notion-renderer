@@ -52,7 +52,7 @@ import type {
   ToggleBlockObjectComponent,
   UnsupportedBlockObjectComponent,
   VideoBlockObjectComponent,
-} from "@/types/components.js";
+} from "../../types/components.js";
 import type {
   BlockObjectResponse,
   DatabaseObjectResponse,
@@ -77,6 +77,7 @@ export const retrieveBlock = async (
   }
   return;
 };
+
 export const listBlockChildren = async (
   args: ListBlockChildrenParameters
 ): Promise<ListBlockChildrenResponseResults> => {
@@ -98,7 +99,10 @@ export const listBlockChildren = async (
   }
   return [];
 };
-export const fetchBlockComponent = async (blockId: string) => {
+
+export const fetchBlockComponent = async (
+  blockId: string
+): Promise<BlockObjectComponent | null> => {
   const block = await retrieveBlock({ block_id: blockId });
   if (block) {
     const blockComponent = convertBlockToComponent(block);
@@ -106,7 +110,10 @@ export const fetchBlockComponent = async (blockId: string) => {
   }
   return null;
 };
-export const fetchBlockComponents = async (blockId: string) => {
+
+export const fetchBlockComponents = async (
+  blockId: string
+): Promise<BlockObjectComponent[]> => {
   const childrenBlockResponses = await listBlockChildren({
     block_id: blockId,
   });
@@ -115,6 +122,7 @@ export const fetchBlockComponents = async (blockId: string) => {
   );
   return childrenBlockComponents;
 };
+
 export const resolveBlockChildren = async (
   blocks: ListBlockChildrenResponseResults
 ): Promise<Array<BlockObjectComponent>> => {
@@ -127,6 +135,7 @@ export const resolveBlockChildren = async (
     blockObjectComponents.filter(notNullNorUndefined);
   return wrapListItems(nonNullBlockObjectComponents);
 };
+
 export const wrapListItems = (
   blocks: Array<BlockObjectComponent>
 ): Array<BlockObjectComponent> => {
@@ -628,7 +637,8 @@ export const convertBlockToComponent = async (
     case "video": {
       if (block.video.type === "external") {
         const { payload: oembed, error } = await fetchOembedData(
-          block.video.external.url
+          block.video.external.url,
+          { maxwidth: 560, maxheight: 315 }
         );
         if (!error) {
           return {
