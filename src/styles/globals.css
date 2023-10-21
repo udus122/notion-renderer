@@ -1,5 +1,6 @@
 @import "./colors.css";
 @import "./blocks.css";
+@import "./rich_texts.css";
 /* @import "katex/dist/katex.min.css"; */
 
 :root {

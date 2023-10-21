@@ -5,5 +5,5 @@ type Props = React.ComponentProps<"strong"> & {
 };
 
 export const Bold: React.FC<Props> = ({ children }) => {
-  return <strong className="notion_blod">{children}</strong>;
+  return <strong className="notion_bold">{children}</strong>;
 };

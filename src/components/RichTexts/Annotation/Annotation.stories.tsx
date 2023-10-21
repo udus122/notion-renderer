@@ -1,8 +1,7 @@
-import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import { Annotations } from "./Annotation.js";
+import RichTextAnnotationObject from "./Annotation.json";
 
-import { Annotations } from "./Annotations.js";
-import RichTextAnnotationObject from "./Annotations.json";
-
+import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Annotations> = {

@@ -1,8 +1,7 @@
-import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
-
 import { Bold } from "./Bold.js";
 import boldRichText from "./Bold.json";
 
+import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Bold> = {

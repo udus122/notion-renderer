@@ -1,6 +1,6 @@
 import { isFullUser } from "@notionhq/client";
 
-import { Annotations } from "./Annotations.js";
+import { Annotations } from "./Annotation/Annotation.js";
 
 import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

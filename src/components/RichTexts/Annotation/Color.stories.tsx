@@ -1,8 +1,7 @@
-import { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
-
 import { Color } from "./Color.js";
 import ColorObject from "./Color.json";
 
+import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Color> = {

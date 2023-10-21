@@ -1,5 +1,5 @@
 import { Blocks } from "../Blocks/Blocks.js";
-import { RichTexts } from "../RichTexts/RichTexts.js";
+import { RichTexts } from "../RichTexts/index.js";
 
 import type {
   BlockComponentProps,

@@ -1,6 +1,6 @@
 import { InlineEquation } from "./InlineEquation.js";
 import { Mention } from "./Mention.js";
-import { Text } from "./Text.js";
+import { Text } from "./Text/Text.js";
 
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
