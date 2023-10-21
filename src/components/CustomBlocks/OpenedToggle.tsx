@@ -1,4 +1,4 @@
-import { Blocks } from "../Blocks/Blocks.js";
+import { Blocks } from "../Blocks/index.js";
 import { RichTexts } from "../RichTexts/index.js";
 
 import type { ToggleBlockObject } from "../Blocks/Toggle.js";

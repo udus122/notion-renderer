@@ -1,4 +1,4 @@
-import { Blocks } from "../Blocks/Blocks.js";
+import { Blocks } from "../Blocks/index.js";
 import { RichTexts } from "../RichTexts/index.js";
 
 import type { Heading3BlockObject } from "../Blocks/Heading3.js";

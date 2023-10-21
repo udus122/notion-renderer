@@ -1,6 +1,6 @@
 import { RichTexts } from "../RichTexts/index.js";
 
-import { Blocks } from "./Blocks.js";
+import { Blocks } from "./index.js";
 
 import type { BlockObject } from "./Block.js";
 import type { ToggleBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
