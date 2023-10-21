@@ -26,7 +26,6 @@ import type {
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 import type { AudioBlockObject } from "src/components/Blocks/Audio.js";
-import type { BlockObject } from "src/components/Blocks/Block.js";
 import type { BookmarkBlockObject } from "src/components/Blocks/Bookmark.js";
 import type { BulletedListBlockObject } from "src/components/Blocks/BulletedList.js";
 import type { BulletedListItemBlockObject } from "src/components/Blocks/BulletedListItem.js";
@@ -64,6 +63,7 @@ import type { ToDoBlockObject } from "src/components/Blocks/ToDo.js";
 import type { ToggleBlockObject } from "src/components/Blocks/Toggle.js";
 import type { UnsupportedBlockObject } from "src/components/Blocks/Unsupported.js";
 import type { VideoBlockObject } from "src/components/Blocks/Video.js";
+import type { BlockObject } from "src/components/index.js";
 import type { ListBlockChildrenResponseResults } from "src/types/notion.js";
 
 export const retrieveBlock = async (

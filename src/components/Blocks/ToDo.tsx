@@ -2,7 +2,7 @@ import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { BlockObject } from "./Block.js";
+import type { BlockObject } from "../index.js";
 import type { ToDoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockProps } from "src/types/utils.js";
 
@@ -12,13 +12,7 @@ export type ToDoBlockObject = ToDoBlockObjectResponse & {
 
 type Props = BlockProps<ToDoBlockObject>;
 
-export const ToDo: React.FC<Props> = ({
-  block,
-  blockMapper,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const ToDo: React.FC<Props> = ({ block }) => {
   const isChecked = block.to_do.checked;
   return (
     <div
@@ -30,23 +24,12 @@ export const ToDo: React.FC<Props> = ({
           {isChecked ? <CheckedBox /> : <CheckBox />}
         </span>
         <span className={`notion_to_do_text ${isChecked ? "checked" : ""}`}>
-          <RichText
-            richTextItems={block.to_do.rich_text}
-            richTextItemMapper={richTextItemMapper}
-            annotationMapper={annotationMapper}
-            LinkComponent={LinkComponent}
-          />
+          <RichText richTextItems={block.to_do.rich_text} />
         </span>
       </div>
       {block.to_do.children && (
         <div className="notion_to_do_children">
-          <Blocks
-            blocks={block.to_do.children}
-            blockMapper={blockMapper}
-            richTextItemMapper={richTextItemMapper}
-            annotationMapper={annotationMapper}
-            LinkComponent={LinkComponent}
-          />
+          <Blocks blocks={block.to_do.children} />
         </div>
       )}
     </div>

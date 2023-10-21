@@ -20,17 +20,3 @@ export const Default: Story = {
     children: "text with all annotation",
   },
 };
-
-export const withCustomMapper: Story = {
-  args: {
-    richTextItem: RichTextAnnotationObject as RichTextItemResponse,
-    children: "text with all annotation with custom Bold(reset all style)",
-    annotationMapper: {
-      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-      // @ts-ignore
-      bold: ({ children }) => (
-        <span style={{ all: "initial" }}>{children}</span>
-      ),
-    },
-  },
-};

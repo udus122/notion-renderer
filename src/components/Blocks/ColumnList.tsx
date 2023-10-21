@@ -1,6 +1,6 @@
 import { Blocks } from "./Blocks.js";
 
-import type { BlockObject } from "./Block.js";
+import type { BlockObject } from "../index.js";
 import type {
   ColumnBlockObjectResponse,
   ColumnListBlockObjectResponse,
@@ -25,13 +25,7 @@ export type ColumnBlockObject = Overwrite<
 
 type Props = BlockProps<ColumnListBlockObject>;
 
-export const ColumnList: React.FC<Props> = ({
-  block,
-  blockMapper,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const ColumnList: React.FC<Props> = ({ block }) => {
   return (
     <div id={block.id} className="notion_column_list">
       {block.column_list.columns &&
@@ -39,13 +33,7 @@ export const ColumnList: React.FC<Props> = ({
           (column) =>
             column.column.children && (
               <div key={column.id} className="notion_column">
-                <Blocks
-                  blocks={column.column.children}
-                  blockMapper={blockMapper}
-                  richTextItemMapper={richTextItemMapper}
-                  annotationMapper={annotationMapper}
-                  LinkComponent={LinkComponent}
-                />
+                <Blocks blocks={column.column.children} />
               </div>
             )
         )}

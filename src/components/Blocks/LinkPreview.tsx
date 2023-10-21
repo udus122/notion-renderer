@@ -1,3 +1,5 @@
+import { useMapper } from "./mapper.js";
+
 import type { ArticleData } from "@extractus/article-extractor";
 import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockProps } from "src/types/utils.js";
@@ -10,10 +12,12 @@ export type LinkPreviewBlockObject = LinkPreviewBlockObjectResponse & {
 
 type Props = BlockProps<LinkPreviewBlockObject>;
 
-export const LinkPreview: React.FC<Props> = ({ block, LinkComponent }) => {
+export const LinkPreview: React.FC<Props> = ({ block }) => {
+  const { Link } = useMapper();
+
   return (
     <div className="notion_link_preview">
-      <LinkComponent href={block.link_preview.url}>
+      <Link href={block.link_preview.url}>
         <div className="notion_link_preview_container">
           <div className="notion_link_preview_content">
             <div className="notion_link_preview_title">
@@ -51,7 +55,7 @@ export const LinkPreview: React.FC<Props> = ({ block, LinkComponent }) => {
             </div>
           )}
         </div>
-      </LinkComponent>
+      </Link>
     </div>
   );
 };

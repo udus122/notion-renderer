@@ -2,7 +2,7 @@ import BlocksObject from "./Blocks.json";
 import { TableOfContents } from "./TableOfContents.js";
 import TableOfContentsObject from "./TableOfContents.json";
 
-import type { BlockObject } from "./Block.js";
+import type { BlockObject } from "../index.js";
 import type { TableOfContentsBlockObject } from "./TableOfContents.js";
 import type { Meta, StoryObj } from "@storybook/react";
 

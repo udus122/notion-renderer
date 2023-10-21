@@ -1,5 +1,7 @@
 import { RichText } from "../RichText/RichText.js";
 
+import { useMapper } from "./mapper.js";
+
 import type { ArticleData } from "@extractus/article-extractor";
 import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockProps } from "src/types/utils.js";
@@ -12,15 +14,11 @@ export type BookmarkBlockObject = BookmarkBlockObjectResponse & {
 
 type Props = BlockProps<BookmarkBlockObject>;
 
-export const Bookmark: React.FC<Props> = ({
-  block,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const Bookmark: React.FC<Props> = ({ block }) => {
+  const { Link } = useMapper();
   return (
     <div className="notion_bookmark">
-      <LinkComponent href={block.bookmark.url}>
+      <Link href={block.bookmark.url}>
         <div className="notion_bookmark_container">
           <div className="notion_bookmark_content">
             <div className="notion_bookmark_title">
@@ -58,14 +56,9 @@ export const Bookmark: React.FC<Props> = ({
             </div>
           )}
         </div>
-      </LinkComponent>
+      </Link>
       <div className="notion_caption notion_bookmark_caption">
-        <RichText
-          richTextItems={block.bookmark.caption}
-          richTextItemMapper={richTextItemMapper}
-          annotationMapper={annotationMapper}
-          LinkComponent={LinkComponent}
-        />
+        <RichText richTextItems={block.bookmark.caption} />
       </div>
     </div>
   );

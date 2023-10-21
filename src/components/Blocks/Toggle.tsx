@@ -2,7 +2,7 @@ import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { BlockObject } from "./Block.js";
+import type { BlockObject } from "../index.js";
 import type { ToggleBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockProps } from "src/types/utils.js";
 
@@ -12,36 +12,17 @@ export type ToggleBlockObject = ToggleBlockObjectResponse & {
 
 type Props = BlockProps<ToggleBlockObject>;
 
-export const Toggle: React.FC<Props> = ({
-  block,
-  blockMapper,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const Toggle: React.FC<Props> = ({ block }) => {
   return (
     <details
       id={block.id}
       className={`notion_toggle notion_color_${block.toggle.color}`}
     >
       <summary className="notion_toggle_summary">
-        <RichText
-          richTextItems={block.toggle.rich_text}
-          richTextItemMapper={richTextItemMapper}
-          annotationMapper={annotationMapper}
-          LinkComponent={LinkComponent}
-        />
+        <RichText richTextItems={block.toggle.rich_text} />
       </summary>
       <div className="notion_toggle_details">
-        {block.toggle.children && (
-          <Blocks
-            blocks={block.toggle.children}
-            blockMapper={blockMapper}
-            richTextItemMapper={richTextItemMapper}
-            annotationMapper={annotationMapper}
-            LinkComponent={LinkComponent}
-          />
-        )}
+        {block.toggle.children && <Blocks blocks={block.toggle.children} />}
       </div>
     </details>
   );

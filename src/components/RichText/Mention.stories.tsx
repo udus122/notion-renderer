@@ -1,5 +1,3 @@
-import { Link } from "../Link.js";
-
 import MentionDatabaseRichTextObject from "./Mention.database.json";
 import { Mention } from "./Mention.js";
 import MentionPageRichTextObject from "./Mention.page.json";
@@ -20,13 +18,11 @@ type Story = StoryObj<typeof Mention>;
 export const database: Story = {
   args: {
     richTextItem: MentionDatabaseRichTextObject as MentionRichTextItemResponse,
-    LinkComponent: Link,
   },
 };
 
 export const page: Story = {
   args: {
     richTextItem: MentionPageRichTextObject as MentionRichTextItemResponse,
-    LinkComponent: Link,
   },
 };

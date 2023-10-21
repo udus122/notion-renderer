@@ -1,6 +1,8 @@
-import { InlineEquation, type EquationRichTextItem } from "./InlineEquation.js";
-import { Mention, type MentionRichTextItem } from "./Mention.js";
-import { Text, type TextRichTextItem } from "./Text.js";
+import { useMapper } from "../Blocks/mapper.js";
+
+import { type EquationRichTextItem } from "./InlineEquation.js";
+import { type MentionRichTextItem } from "./Mention.js";
+import { type TextRichTextItem } from "./Text.js";
 
 import type { RichTextProps } from "src/types/utils.js";
 
@@ -20,49 +22,21 @@ export const RichTextItem: React.FC<Props> = (props) => {
   );
 };
 
-const RichTextItemContent: React.FC<Props> = ({
-  richTextItem,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
-  const mapper = {
-    text: Text,
-    equation: InlineEquation,
-    mention: Mention,
-    ...richTextItemMapper,
-  };
+const RichTextItemContent: React.FC<Props> = ({ richTextItem }) => {
+  const { richTextItemMapper } = useMapper();
 
   switch (richTextItem.type) {
     case "text": {
-      const TypeText = mapper[richTextItem.type];
-      return (
-        <TypeText
-          richTextItem={richTextItem}
-          annotationMapper={annotationMapper}
-          LinkComponent={LinkComponent}
-        />
-      );
+      const TypeText = richTextItemMapper[richTextItem.type];
+      return <TypeText richTextItem={richTextItem} />;
     }
     case "equation": {
-      const TypeEquation = mapper[richTextItem.type];
-      return (
-        <TypeEquation
-          richTextItem={richTextItem}
-          annotationMapper={annotationMapper}
-          LinkComponent={LinkComponent}
-        />
-      );
+      const TypeEquation = richTextItemMapper[richTextItem.type];
+      return <TypeEquation richTextItem={richTextItem} />;
     }
     case "mention": {
-      const TypeMention = mapper[richTextItem.type];
-      return (
-        <TypeMention
-          richTextItem={richTextItem}
-          annotationMapper={annotationMapper}
-          LinkComponent={LinkComponent}
-        />
-      );
+      const TypeMention = richTextItemMapper[richTextItem.type];
+      return <TypeMention richTextItem={richTextItem} />;
     }
     default:
       console.warn(`${(richTextItem as { type: never }).type} is never.`);

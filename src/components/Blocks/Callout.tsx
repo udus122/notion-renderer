@@ -1,10 +1,9 @@
 import { RichText } from "../RichText/RichText.js";
 
+import { Blocks } from "./Blocks.js";
 import { Icon } from "./Icon.js";
 
-import { Blocks } from "./Blocks.js";
-
-import type { BlockObject } from "./Block.js";
+import type { BlockObject } from "../index.js";
 import type { CalloutBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockProps } from "src/types/utils.js";
 
@@ -14,13 +13,7 @@ export type CalloutBlockObject = CalloutBlockObjectResponse & {
 
 type Props = BlockProps<CalloutBlockObject>;
 
-export const Callout: React.FC<Props> = ({
-  block,
-  blockMapper,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const Callout: React.FC<Props> = ({ block }) => {
   return (
     <div
       id={block.id}
@@ -31,22 +24,9 @@ export const Callout: React.FC<Props> = ({
       </span>
       <div className="notion_callout_content">
         <span>
-          <RichText
-            richTextItems={block.callout.rich_text}
-            richTextItemMapper={richTextItemMapper}
-            annotationMapper={annotationMapper}
-            LinkComponent={LinkComponent}
-          />
+          <RichText richTextItems={block.callout.rich_text} />
         </span>
-        {block.callout.children && (
-          <Blocks
-            blocks={block.callout.children}
-            blockMapper={blockMapper}
-            richTextItemMapper={richTextItemMapper}
-            annotationMapper={annotationMapper}
-            LinkComponent={LinkComponent}
-          />
-        )}
+        {block.callout.children && <Blocks blocks={block.callout.children} />}
       </div>
     </div>
   );

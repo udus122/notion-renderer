@@ -6,13 +6,7 @@ import type { BlockProps } from "src/types/utils.js";
 
 type Props = BlockProps<ToggleBlockObject>;
 
-export const OpenedToggle: React.FC<Props> = ({
-  block,
-  blockMapper,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const OpenedToggle: React.FC<Props> = ({ block }) => {
   return (
     <details
       id={block.id}
@@ -20,23 +14,10 @@ export const OpenedToggle: React.FC<Props> = ({
       open
     >
       <summary className="notion_toggle_summary">
-        <RichText
-          richTextItems={block.toggle.rich_text}
-          richTextItemMapper={richTextItemMapper}
-          annotationMapper={annotationMapper}
-          LinkComponent={LinkComponent}
-        />
+        <RichText richTextItems={block.toggle.rich_text} />
       </summary>
       <div className="notion_toggle_details">
-        {block.toggle.children && (
-          <Blocks
-            blocks={block.toggle.children}
-            blockMapper={blockMapper}
-            richTextItemMapper={richTextItemMapper}
-            annotationMapper={annotationMapper}
-            LinkComponent={LinkComponent}
-          />
-        )}
+        {block.toggle.children && <Blocks blocks={block.toggle.children} />}
       </div>
     </details>
   );

@@ -1,43 +1,29 @@
-import { Bold } from "./Bold.js";
-import { Color } from "./Color.js";
-import { InlineCode } from "./InlineCode.js";
-import { Italic } from "./Italic.js";
-import { Strikethrough } from "./Strikethrough.js";
-import { Underline } from "./Underline.js";
+import { useMapper } from "../../Blocks/mapper.js";
 
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const Annotation: React.FC<{
   richTextItem: RichTextItemResponse;
   children: React.ReactNode;
-  annotationMapper?: object;
-}> = ({ richTextItem, children, annotationMapper }) => {
-  const mapper = {
-    color: Color,
-    bold: Bold,
-    italic: Italic,
-    strikethrough: Strikethrough,
-    underline: Underline,
-    code: InlineCode,
-    ...annotationMapper,
-  };
+}> = ({ richTextItem, children }) => {
+  const { annotationMapper } = useMapper();
 
   let element = children;
-
+  // TODO: ここをObject.entriesとreduceで書き換える
   if (richTextItem.annotations.bold) {
-    const BoldAnnotation = mapper["bold"];
+    const BoldAnnotation = annotationMapper["bold"];
     element = (
       <BoldAnnotation richTextItem={richTextItem}>{element}</BoldAnnotation>
     );
   }
   if (richTextItem.annotations.italic) {
-    const ItalicAnnotation = mapper["italic"];
+    const ItalicAnnotation = annotationMapper["italic"];
     element = (
       <ItalicAnnotation richTextItem={richTextItem}>{element}</ItalicAnnotation>
     );
   }
   if (richTextItem.annotations.strikethrough) {
-    const StrikethroughAnnotation = mapper["strikethrough"];
+    const StrikethroughAnnotation = annotationMapper["strikethrough"];
     element = (
       <StrikethroughAnnotation richTextItem={richTextItem}>
         {element}
@@ -45,7 +31,7 @@ export const Annotation: React.FC<{
     );
   }
   if (richTextItem.annotations.underline) {
-    const UnderlineAnnotation = mapper["underline"];
+    const UnderlineAnnotation = annotationMapper["underline"];
     element = (
       <UnderlineAnnotation richTextItem={richTextItem}>
         {element}
@@ -53,7 +39,7 @@ export const Annotation: React.FC<{
     );
   }
   if (richTextItem.annotations.code) {
-    const InlineCodeAnnotation = mapper["code"];
+    const InlineCodeAnnotation = annotationMapper["code"];
     element = (
       <InlineCodeAnnotation richTextItem={richTextItem}>
         {element}
@@ -61,7 +47,7 @@ export const Annotation: React.FC<{
     );
   }
   if (richTextItem?.annotations.color) {
-    const ColorAnnotation = mapper["color"];
+    const ColorAnnotation = annotationMapper["color"];
     element = (
       <ColorAnnotation richTextItem={richTextItem}>{element}</ColorAnnotation>
     );

@@ -7,12 +7,7 @@ export type PdfBlockObject = PdfBlockObjectResponse;
 
 type Props = BlockProps<PdfBlockObject>;
 
-export const Pdf: React.FC<Props> = ({
-  block,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const Pdf: React.FC<Props> = ({ block }) => {
   const pdfUrl =
     block.pdf.type == "external"
       ? block.pdf.external.url
@@ -35,12 +30,7 @@ export const Pdf: React.FC<Props> = ({
         <a href={pdfUrl}>here</a>.
       </object>
       <div className="notion_caption notion_pdf_caption">
-        <RichText
-          richTextItems={block.pdf.caption}
-          richTextItemMapper={richTextItemMapper}
-          annotationMapper={annotationMapper}
-          LinkComponent={LinkComponent}
-        />
+        <RichText richTextItems={block.pdf.caption} />
       </div>
     </div>
   );

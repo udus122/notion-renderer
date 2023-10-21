@@ -1,3 +1,4 @@
+import { useMapper } from "./mapper.js";
 import { Icon } from "./Icon.js";
 
 import type {
@@ -14,17 +15,18 @@ export type ChildDatabaseBlockObject = ChildDatabaseBlockObjectResponse & {
 
 type Props = BlockProps<ChildDatabaseBlockObject>;
 
-export const ChildDatabase: React.FC<Props> = ({ block, LinkComponent }) => {
+export const ChildDatabase: React.FC<Props> = ({ block }) => {
+  const { Link } = useMapper();
   return (
     <div id={block.id} className="notion_child_database">
-      <LinkComponent href={`/${block.id}`}>
+      <Link href={`/${block.id}`}>
         <span className="notion_child_database_icon">
           {<Icon icon={block.child_database.database?.icon ?? null} />}
         </span>
         <span className="notion_child_database_title">
           {block.child_database.title || "Unknown database"}
         </span>
-      </LinkComponent>
+      </Link>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { BlockObject } from "./Block.js";
+import type { BlockObject } from "../index.js";
 import type { QuoteBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockProps } from "src/types/utils.js";
 
@@ -12,33 +12,16 @@ export type QuoteBlockObject = QuoteBlockObjectResponse & {
 
 type Props = BlockProps<QuoteBlockObject>;
 
-export const Quote: React.FC<Props> = ({
-  block,
-  blockMapper,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const Quote: React.FC<Props> = ({ block }) => {
   return (
     <blockquote
       id={block.id}
       className={`notion_quote notion_color_${block.quote.color}`}
     >
-      <RichText
-        richTextItems={block.quote.rich_text}
-        richTextItemMapper={richTextItemMapper}
-        annotationMapper={annotationMapper}
-        LinkComponent={LinkComponent}
-      />
+      <RichText richTextItems={block.quote.rich_text} />
       {block.quote.children && (
         <div className={"notion_quote_children"}>
-          <Blocks
-            blocks={block.quote.children}
-            blockMapper={blockMapper}
-            richTextItemMapper={richTextItemMapper}
-            annotationMapper={annotationMapper}
-            LinkComponent={LinkComponent}
-          />
+          <Blocks blocks={block.quote.children} />
         </div>
       )}
     </blockquote>

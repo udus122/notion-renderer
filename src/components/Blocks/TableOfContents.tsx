@@ -1,5 +1,7 @@
 import { RichText } from "../RichText/RichText.js";
 
+import { useMapper } from "./mapper.js";
+
 import type { Heading1BlockObject } from "./Heading1.js";
 import type { Heading2BlockObject } from "./Heading2.js";
 import type { Heading3BlockObject } from "./Heading3.js";
@@ -10,11 +12,8 @@ export type TableOfContentsBlockObject = TableOfContentsBlockObjectResponse;
 
 type Props = BlockProps<TableOfContentsBlockObject>;
 
-export const TableOfContents: React.FC<Props> = ({
-  block,
-  blocks,
-  LinkComponent,
-}) => {
+export const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
+  const { Link } = useMapper();
   const headings = blocks?.filter(
     (
       block
@@ -36,10 +35,10 @@ export const TableOfContents: React.FC<Props> = ({
           return (
             <div key={heading.id} className="notion_table_of_contents_item">
               <div className={`notion_table_of_contents_item_${heading.type}`}>
-                <LinkComponent href={`#${heading.id}`}>
+                <Link href={`#${heading.id}`}>
                   {/* @ts-expect-error: because heading objects always have a 'rich_text' property  */}
                   <RichText richTextItems={heading[heading.type].rich_text} />
-                </LinkComponent>
+                </Link>
               </div>
             </div>
           );

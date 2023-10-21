@@ -1,3 +1,5 @@
+import { useMapper } from "../Blocks/mapper.js";
+
 import { Annotation } from "./Annotation/Annotation.js";
 
 import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
@@ -7,21 +9,16 @@ export type TextRichTextItem = TextRichTextItemResponse;
 
 type Props = Omit<RichTextProps<TextRichTextItem>, "richTextItemMapper">;
 
-export const Text: React.FC<Props> = ({
-  richTextItem,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const Text: React.FC<Props> = ({ richTextItem }) => {
+  const { Link } = useMapper();
+
   return (
     <span className="notion_rich_text_type_text">
-      <Annotation
-        richTextItem={richTextItem}
-        annotationMapper={annotationMapper}
-      >
+      <Annotation richTextItem={richTextItem}>
         {richTextItem.text.link ? (
-          <LinkComponent href={richTextItem.text.link?.url}>
+          <Link href={richTextItem.text.link?.url}>
             {richTextItem.text.content}
-          </LinkComponent>
+          </Link>
         ) : (
           richTextItem.text.content
         )}

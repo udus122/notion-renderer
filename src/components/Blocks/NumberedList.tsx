@@ -13,28 +13,11 @@ export type NumberedListBlockObject = {
 
 type Props = BlockProps<NumberedListBlockObject>;
 
-export const NumberedList: React.FC<Props> = ({
-  block,
-  blocks,
-  blockMapper,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const NumberedList: React.FC<Props> = ({ block, blocks }) => {
   return (
     <ol className="notion_numbered_list">
       {block.numbered_list.items.map((item) => {
-        return (
-          <NumberedListItem
-            key={item.id}
-            block={item}
-            blocks={blocks}
-            blockMapper={blockMapper}
-            richTextItemMapper={richTextItemMapper}
-            annotationMapper={annotationMapper}
-            LinkComponent={LinkComponent}
-          />
-        );
+        return <NumberedListItem key={item.id} block={item} blocks={blocks} />;
       })}
     </ol>
   );

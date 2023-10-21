@@ -1,18 +1,8 @@
 import { RichTextItem } from "./RichTextItem.js";
 
-import type { RichTextProps } from "src/types/utils.js";
+type Props = { richTextItems: Array<RichTextItem> };
 
-type Props = { richTextItems: RichTextItem[] } & Omit<
-  RichTextProps<RichTextItem>,
-  "richTextItem"
->;
-
-export const RichText: React.FC<Props> = ({
-  richTextItems,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const RichText: React.FC<Props> = ({ richTextItems }) => {
   if (!richTextItems) return null;
 
   return (
@@ -21,9 +11,6 @@ export const RichText: React.FC<Props> = ({
         <RichTextItem
           key={`${index}-${richTextItem.plain_text}`}
           richTextItem={richTextItem}
-          richTextItemMapper={richTextItemMapper}
-          annotationMapper={annotationMapper}
-          LinkComponent={LinkComponent}
         />
       ))}
     </span>

@@ -6,13 +6,7 @@ import type { BlockProps } from "src/types/utils.js";
 
 type Props = BlockProps<Heading2BlockObject>;
 
-export const OpenedHeading2: React.FC<Props> = ({
-  block,
-  blockMapper,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const OpenedHeading2: React.FC<Props> = ({ block }) => {
   return (
     <>
       {block.heading_2.is_toggleable ? (
@@ -23,23 +17,12 @@ export const OpenedHeading2: React.FC<Props> = ({
         >
           <summary className="notion_toggle_summary">
             <h2>
-              <RichText
-                richTextItems={block.heading_2.rich_text}
-                richTextItemMapper={richTextItemMapper}
-                annotationMapper={annotationMapper}
-                LinkComponent={LinkComponent}
-              />
+              <RichText richTextItems={block.heading_2.rich_text} />
             </h2>
           </summary>
           <div className="notion_toggle_details">
             {block.heading_2.children && (
-              <Blocks
-                blocks={block.heading_2.children}
-                blockMapper={blockMapper}
-                richTextItemMapper={richTextItemMapper}
-                annotationMapper={annotationMapper}
-                LinkComponent={LinkComponent}
-              />
+              <Blocks blocks={block.heading_2.children} />
             )}
           </div>
         </details>
@@ -48,12 +31,7 @@ export const OpenedHeading2: React.FC<Props> = ({
           id={block.id}
           className={`notion_heading notion_heading_2 notion_color_${block.heading_2.color}`}
         >
-          <RichText
-            richTextItems={block.heading_2.rich_text}
-            richTextItemMapper={richTextItemMapper}
-            annotationMapper={annotationMapper}
-            LinkComponent={LinkComponent}
-          />
+          <RichText richTextItems={block.heading_2.rich_text} />
         </h2>
       )}
     </>

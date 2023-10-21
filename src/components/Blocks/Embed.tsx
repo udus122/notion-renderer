@@ -17,12 +17,7 @@ export type EmbedBlockObject = EmbedBlockObjectResponse & {
 
 type Props = BlockProps<EmbedBlockObject>;
 
-export const Embed: React.FC<Props> = ({
-  block,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const Embed: React.FC<Props> = ({ block }) => {
   if (block.embed.oembed) {
     return (
       <div>
@@ -40,12 +35,7 @@ export const Embed: React.FC<Props> = ({
     <div id={block.id} className="notion_embed">
       <iframe src={block.embed.url} title="notion embed content" />
       <div className="notion_caption notion_embed_caption">
-        <RichText
-          richTextItems={block.embed.caption}
-          richTextItemMapper={richTextItemMapper}
-          annotationMapper={annotationMapper}
-          LinkComponent={LinkComponent}
-        />
+        <RichText richTextItems={block.embed.caption} />
       </div>
     </div>
   );

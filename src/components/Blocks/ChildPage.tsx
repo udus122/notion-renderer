@@ -1,3 +1,4 @@
+import { useMapper } from "./mapper.js";
 import { Icon } from "./Icon.js";
 
 import type {
@@ -14,17 +15,18 @@ export type ChildPageBlockObject = ChildPageBlockObjectResponse & {
 
 type Props = BlockProps<ChildPageBlockObject>;
 
-export const ChildPage: React.FC<Props> = ({ block, LinkComponent }) => {
+export const ChildPage: React.FC<Props> = ({ block }) => {
+  const { Link } = useMapper();
   return (
     <div id={block.id} className="notion_child_page">
-      <LinkComponent href={`/${block.id}`}>
+      <Link href={`/${block.id}`}>
         <span className="notion_child_page_icon">
           {<Icon icon={block.child_page.page?.icon ?? null} />}
         </span>
         <span className="notion_child_page_title">
           {block.child_page.title || "Unknown page"}
         </span>
-      </LinkComponent>
+      </Link>
     </div>
   );
 };

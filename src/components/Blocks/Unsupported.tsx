@@ -1,4 +1,4 @@
-import type { BlockObject } from "./Block.js";
+import type { BlockObject } from "../index.js";
 import type { UnsupportedBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockProps } from "src/types/utils.js";
 

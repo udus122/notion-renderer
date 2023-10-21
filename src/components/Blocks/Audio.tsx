@@ -7,12 +7,7 @@ export type AudioBlockObject = AudioBlockObjectResponse;
 
 type Props = BlockProps<AudioBlockObject>;
 
-export const Audio: React.FC<Props> = ({
-  block,
-  richTextItemMapper,
-  annotationMapper,
-  LinkComponent,
-}) => {
+export const Audio: React.FC<Props> = ({ block }) => {
   const audioUrl =
     block.audio.type == "external"
       ? block.audio.external.url
@@ -26,12 +21,7 @@ export const Audio: React.FC<Props> = ({
         <a href={audioUrl}>here</a>.
       </audio>
       <div className="notion_caption notion_audio_caption">
-        <RichText
-          richTextItems={block.audio.caption}
-          richTextItemMapper={richTextItemMapper}
-          annotationMapper={annotationMapper}
-          LinkComponent={LinkComponent}
-        />
+        <RichText richTextItems={block.audio.caption} />
       </div>
     </div>
   );

@@ -1,7 +1,7 @@
 import { extractTitleProperty } from "../../libs/notion/util.js";
-import { Link } from "../Link.js";
 import { RichText } from "../RichText/RichText.js";
 
+import { useMapper } from "./mapper.js";
 import { Icon } from "./Icon.js";
 
 import type {
@@ -34,29 +34,21 @@ export type LinkToPageBlockObject = LinkToPageBlockObjectResponse & {
 
 type Props = BlockProps<LinkToPageBlockObject>;
 
-export const LinkToPage: React.FC<Props> = ({
-  block,
-  LinkComponent,
-  richTextItemMapper,
-  annotationMapper,
-}) => {
+export const LinkToPage: React.FC<Props> = ({ block }) => {
+  const { Link } = useMapper();
+
   if (block.link_to_page.type === "page_id" && block.link_to_page.page) {
     const titleRichText = extractTitleProperty(block.link_to_page.page);
     return (
       <div id={block.id} className="notion_link_to_page">
-        <LinkComponent href={`/${block.id}`}>
+        <Link href={`/${block.id}`}>
           <span className="notion_link_to_page_icon">
             {<Icon icon={block.link_to_page.page?.icon ?? null} />}
           </span>
           <span className="notion_link_to_page_title">
-            <RichText
-              richTextItems={titleRichText}
-              richTextItemMapper={richTextItemMapper}
-              annotationMapper={annotationMapper}
-              LinkComponent={LinkComponent}
-            />
+            <RichText richTextItems={titleRichText} />
           </span>
-        </LinkComponent>
+        </Link>
       </div>
     );
   }
@@ -72,12 +64,7 @@ export const LinkToPage: React.FC<Props> = ({
             {<Icon icon={block.link_to_page.database?.icon ?? null} />}
           </span>
           <span className="notion_link_to_page_title">
-            <RichText
-              richTextItems={titleRichTexts}
-              richTextItemMapper={richTextItemMapper}
-              annotationMapper={annotationMapper}
-              LinkComponent={LinkComponent}
-            />
+            <RichText richTextItems={titleRichTexts} />
           </span>
         </Link>
       </div>
