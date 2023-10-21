@@ -1,14 +1,13 @@
-import {
-  TextRichTextItemResponse,
-  MentionRichTextItemResponse,
-  EquationRichTextItemResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
-
 import EquationRichTextObject from "./RichText.equation.json";
 import { RichText } from "./RichText.js";
 import MentionRichTextObject from "./RichText.mention.json";
 import TextRichTextObject from "./RichText.text.json";
 
+import type {
+  TextRichTextItemResponse,
+  MentionRichTextItemResponse,
+  EquationRichTextItemResponse,
+} from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof RichText> = {
