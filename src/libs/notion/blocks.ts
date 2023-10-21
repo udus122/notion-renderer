@@ -228,16 +228,16 @@ export const convertBlockToComponent = async (
       return { ...block } satisfies AudioBlockObject;
     }
     case "bookmark": {
-      const { payload: article_data, error } = await fetchArticleData(
+      const { payload: site_meta, error } = await fetchArticleData(
         block.bookmark.url
       );
       if (!error) {
-        if (article_data) {
+        if (site_meta) {
           return {
             ...block,
             bookmark: {
               ...block.bookmark,
-              article_data: article_data,
+              site_meta: site_meta,
             },
           } satisfies BookmarkBlockObject;
         }
@@ -435,16 +435,16 @@ export const convertBlockToComponent = async (
       return { ...block } satisfies ImageBlockObject;
     }
     case "link_preview": {
-      const { payload: article_data, error } = await fetchArticleData(
+      const { payload: site_meta, error } = await fetchArticleData(
         block.link_preview.url
       );
       if (!error) {
-        if (article_data) {
+        if (site_meta) {
           return {
             ...block,
             link_preview: {
               ...block.link_preview,
-              article_data: article_data,
+              site_meta: site_meta,
             },
           } satisfies LinkPreviewBlockObject;
         }

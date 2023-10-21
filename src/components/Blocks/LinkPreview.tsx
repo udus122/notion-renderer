@@ -4,7 +4,7 @@ import type { BlockComponentProps } from "src/types/utils.js";
 
 export type LinkPreviewBlockObject = LinkPreviewBlockObjectResponse & {
   link_preview: {
-    article_data?: ArticleData;
+    site_meta?: ArticleData;
   };
 };
 
@@ -21,21 +21,21 @@ export const LinkPreview: React.FC<Props> = ({ block }) => {
         <div className="notion_link_preview_container">
           <div className="notion_link_preview_content">
             <div className="notion_link_preview_title">
-              {block.link_preview?.article_data?.title
-                ? block.link_preview.article_data.title
+              {block.link_preview?.site_meta?.title
+                ? block.link_preview.site_meta.title
                 : block.link_preview.url}
             </div>
             <div className="notion_link_preview_description">
-              {block.link_preview?.article_data?.description
-                ? block.link_preview.article_data.description
+              {block.link_preview?.site_meta?.description
+                ? block.link_preview.site_meta.description
                 : block.link_preview.url}
             </div>
             <div className="notion_link_preview_url">
               <span className="notion_link_preview_favicon">
                 <img
                   src={
-                    block.link_preview?.article_data?.favicon
-                      ? block.link_preview.article_data?.favicon
+                    block.link_preview?.site_meta?.favicon
+                      ? block.link_preview.site_meta?.favicon
                       : `https://www.google.com/s2/favicons?domain=${block.link_preview.url}`
                   }
                   alt="link preview favicon"
@@ -46,10 +46,10 @@ export const LinkPreview: React.FC<Props> = ({ block }) => {
               </span>
             </div>
           </div>
-          {block.link_preview?.article_data?.image && (
+          {block.link_preview?.site_meta?.image && (
             <div className="notion_link_preview_cover">
               <img
-                src={block.link_preview.article_data.image}
+                src={block.link_preview.site_meta.image}
                 alt="link preview og image"
               />
             </div>
