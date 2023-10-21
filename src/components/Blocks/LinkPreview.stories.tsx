@@ -1,7 +1,7 @@
 import { LinkPreview } from "./LinkPreview.js";
 import LinkPreviewObject from "./LinkPreview.json";
 
-import type { LinkPreviewBlockObjectComponent } from "../../types/components.js";
+import type { LinkPreviewBlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof LinkPreview> = {
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof LinkPreview>;
 
 export const Default: Story = {
   args: {
-    block: LinkPreviewObject as unknown as LinkPreviewBlockObjectComponent,
+    block: LinkPreviewObject as unknown as LinkPreviewBlockObject,
   },
 };

@@ -2,13 +2,11 @@ import { RichTexts } from "../RichTexts/index.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type {
-  BlockComponentProps,
-  NumberedListItemBlockObjectComponent,
-} from "../../types/components.js";
+import type { NumberedListItemBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
 export const NumberedListItem: React.FC<
-  BlockComponentProps<NumberedListItemBlockObjectComponent>
+  BlockComponentProps<NumberedListItemBlockObject>
 > = ({ block, mapper }) => {
   return (
     <li

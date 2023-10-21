@@ -2,12 +2,10 @@ import { RichTexts } from "../RichTexts/index.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type {
-  BlockComponentProps,
-  ParagraphBlockObjectComponent,
-} from "../../types/components.js";
+import type { ParagraphBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<ParagraphBlockObjectComponent>;
+type Props = BlockComponentProps<ParagraphBlockObject>;
 
 export const Paragraph: React.FC<Props> = ({ block, mapper }) => {
   return (

@@ -1,11 +1,9 @@
 import { RichTexts } from "../RichTexts/index.js";
 
-import type {
-  BlockComponentProps,
-  BookmarkBlockObjectComponent,
-} from "../../types/components.js";
+import type { BookmarkBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<BookmarkBlockObjectComponent>;
+type Props = BlockComponentProps<BookmarkBlockObject>;
 
 export const Bookmark: React.FC<Props> = ({ block }) => {
   return (

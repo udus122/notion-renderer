@@ -3,7 +3,7 @@ import VideoFileObject from "./Video.File.json";
 import { Video } from "./Video.js";
 import VideoYouTubeObject from "./Video.YouTube.json";
 
-import type { VideoBlockObjectComponent } from "../../types/components.js";
+import type { VideoBlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Video> = {
@@ -18,24 +18,24 @@ type Story = StoryObj<typeof Video>;
 
 export const Default: Story = {
   args: {
-    block: VideoExternalObject as VideoBlockObjectComponent,
+    block: VideoExternalObject as VideoBlockObject,
   },
 };
 
 export const External: Story = {
   args: {
-    block: VideoExternalObject as VideoBlockObjectComponent,
+    block: VideoExternalObject as VideoBlockObject,
   },
 };
 
 export const File: Story = {
   args: {
-    block: VideoFileObject as VideoBlockObjectComponent,
+    block: VideoFileObject as VideoBlockObject,
   },
 };
 
 export const YouTube: Story = {
   args: {
-    block: VideoYouTubeObject as VideoBlockObjectComponent,
+    block: VideoYouTubeObject as VideoBlockObject,
   },
 };

@@ -1,3 +1,4 @@
+import type { IdRequest } from "./notion.js";
 import type { Overwrite } from "./utils.js";
 import type { ArticleData } from "@extractus/article-extractor";
 import type {
@@ -28,7 +29,6 @@ import type {
   ImageBlockObjectResponse,
   LinkPreviewBlockObjectResponse,
   LinkToPageBlockObjectResponse,
-  ListBlockChildrenResponse,
   ListCommentsResponse,
   NumberedListItemBlockObjectResponse,
   PageObjectResponse,
@@ -46,109 +46,52 @@ import type {
   VideoBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 
-export type ListBlockChildrenResponseResults =
-  ListBlockChildrenResponse["results"];
+export type BlockObject =
+  | AudioBlockObject
+  | BookmarkBlockObject
+  | BreadcrumbBlockObject
+  | BulletedListBlockObject
+  | BulletedListItemBlockObject
+  | CalloutBlockObject
+  | ChildDatabaseBlockObject
+  | ChildPageBlockObject
+  | CodeBlockObject
+  | ColumnBlockObject
+  | ColumnListBlockObject
+  | DividerBlockObject
+  | EmbedBlockObject
+  | EquationBlockObject
+  | FileBlockObject
+  | Heading1BlockObject
+  | Heading2BlockObject
+  | Heading3BlockObject
+  | NumberedListBlockObject
+  | NumberedListItemBlockObject
+  | ImageBlockObject
+  | LinkPreviewBlockObject
+  | LinkToPageBlockObject
+  | ParagraphBlockObject
+  | PdfBlockObject
+  | QuoteBlockObject
+  | SyncedBlockBlockObject
+  | TableBlockObject
+  | TableOfContentsBlockObject
+  | TableRowBlockObject
+  | TemplateBlockObject
+  | ToDoBlockObject
+  | ToggleBlockObject
+  | UnsupportedBlockObject
+  | VideoBlockObject;
 
-export type IdRequest = string | string;
+export type AudioBlockObject = AudioBlockObjectResponse;
 
-export type EmojiRequest = string;
-
-export type TextRequest = string;
-
-export type Icon =
-  | {
-      type: "emoji";
-      emoji: EmojiRequest;
-    }
-  | {
-      type: "external";
-      external: {
-        url: TextRequest;
-      };
-    }
-  | {
-      type: "file";
-      file: {
-        url: string;
-        expiry_time: string;
-      };
-    }
-  | null;
-
-export type BlockComponentProps<T extends BlockObjectComponent> = {
-  block: T;
-  blocks: Array<BlockObjectComponent>;
-  mapper: object;
-};
-
-export type ListBlockChildrenComponent<T = BlockObjectComponent> = Overwrite<
-  ListBlockChildrenResponse,
-  {
-    results: Array<T>;
-    last_edited_time?: string;
-  }
->;
-
-export type BlockObjectComponent =
-  | AudioBlockObjectComponent
-  | BookmarkBlockObjectComponent
-  | BreadcrumbBlockObjectComponent
-  | BulletedListBlockObjectComponent
-  | BulletedListItemBlockObjectComponent
-  | CalloutBlockObjectComponent
-  | ChildDatabaseBlockObjectComponent
-  | ChildPageBlockObjectComponent
-  | CodeBlockObjectComponent
-  | ColumnBlockObjectComponent
-  | ColumnListBlockObjectComponent
-  | DividerBlockObjectComponent
-  | EmbedBlockObjectComponent
-  | EquationBlockObjectComponent
-  | FileBlockObjectComponent
-  | Heading1BlockObjectComponent
-  | Heading2BlockObjectComponent
-  | Heading3BlockObjectComponent
-  | NumberedListBlockObjectComponent
-  | NumberedListItemBlockObjectComponent
-  | ImageBlockObjectComponent
-  | LinkPreviewBlockObjectComponent
-  | LinkToPageBlockObjectComponent
-  | ParagraphBlockObjectComponent
-  | PdfBlockObjectComponent
-  | QuoteBlockObjectComponent
-  | SyncedBlockBlockObjectComponent
-  | TableBlockObjectComponent
-  | TableOfContentsBlockObjectComponent
-  | TableRowBlockObjectComponent
-  | TemplateBlockObjectComponent
-  | ToDoBlockObjectComponent
-  | ToggleBlockObjectComponent
-  | UnsupportedBlockObjectComponent
-  | VideoBlockObjectComponent;
-
-export type AudioBlockObjectComponent = AudioBlockObjectResponse;
-
-export type SiteInfo = {
-  title?: string;
-  description?: string;
-  image?: OgImage;
-  icon?: string;
-};
-
-export type OgImage = {
-  url: string;
-  type?: string;
-  width?: number;
-  height?: number;
-};
-
-export type BookmarkBlockObjectComponent = BookmarkBlockObjectResponse & {
+export type BookmarkBlockObject = BookmarkBlockObjectResponse & {
   bookmark: {
     article_data?: ArticleData;
   };
 };
 
-export type BreadcrumbBlockObjectComponent = Overwrite<
+export type BreadcrumbBlockObject = Overwrite<
   BreadcrumbBlockObjectResponse,
   {
     breadcrumb: {
@@ -157,89 +100,88 @@ export type BreadcrumbBlockObjectComponent = Overwrite<
   }
 >;
 
-export type BulletedListBlockObjectComponent = {
+export type BulletedListBlockObject = {
   id: string;
   type: "bulleted_list";
   bulleted_list: {
-    items: Array<BulletedListItemBlockObjectComponent>;
+    items: Array<BulletedListItemBlockObject>;
   };
 };
 
-export type BulletedListItemBlockObjectComponent =
+export type BulletedListItemBlockObject =
   BulletedListItemBlockObjectResponse & {
     bulleted_list_item: {
-      children?: Array<BlockObjectComponent>;
+      children?: Array<BlockObject>;
     };
   };
 
-export type CalloutBlockObjectComponent = CalloutBlockObjectResponse & {
-  callout: { children?: Array<BlockObjectComponent> };
+export type CalloutBlockObject = CalloutBlockObjectResponse & {
+  callout: { children?: Array<BlockObject> };
 };
 
-export type ChildDatabaseBlockObjectComponent =
-  ChildDatabaseBlockObjectResponse & {
-    child_database: {
-      database?: DatabaseObjectResponse | null;
-    };
+export type ChildDatabaseBlockObject = ChildDatabaseBlockObjectResponse & {
+  child_database: {
+    database?: DatabaseObjectResponse | null;
   };
+};
 
-export type ChildPageBlockObjectComponent = ChildPageBlockObjectResponse & {
+export type ChildPageBlockObject = ChildPageBlockObjectResponse & {
   child_page: {
     page?: PageObjectResponse;
   };
 };
 
-export type CodeBlockObjectComponent = CodeBlockObjectResponse;
+export type CodeBlockObject = CodeBlockObjectResponse;
 
-export type ColumnBlockObjectComponent = Overwrite<
+export type ColumnBlockObject = Overwrite<
   ColumnBlockObjectResponse,
   {
-    column: { children?: Array<BlockObjectComponent> };
+    column: { children?: Array<BlockObject> };
   }
 >;
 
-export type ColumnListBlockObjectComponent = Overwrite<
+export type ColumnListBlockObject = Overwrite<
   ColumnListBlockObjectResponse,
   {
     column_list: {
-      columns?: Array<ColumnBlockObjectComponent>;
+      columns?: Array<ColumnBlockObject>;
     };
   }
 >;
 
-export type DividerBlockObjectComponent = DividerBlockObjectResponse;
+export type DividerBlockObject = DividerBlockObjectResponse;
 
-export type EmbedBlockObjectComponent = EmbedBlockObjectResponse & {
+export type EmbedBlockObject = EmbedBlockObjectResponse & {
   embed: {
     oembed?: LinkTypeData | PhotoTypeData | VideoTypeData | RichTypeData;
   };
 };
 
-export type EquationBlockObjectComponent = EquationBlockObjectResponse;
+export type EquationBlockObject = EquationBlockObjectResponse;
 
-export type FileBlockObjectComponent = FileBlockObjectResponse;
+export type FileBlockObject = FileBlockObjectResponse;
 
-export type Heading1BlockObjectComponent = Heading1BlockObjectResponse & {
-  heading_1: { children?: Array<BlockObjectComponent> };
+export type Heading1BlockObject = Heading1BlockObjectResponse & {
+  heading_1: { children?: Array<BlockObject> };
 };
 
-export type Heading2BlockObjectComponent = Heading2BlockObjectResponse & {
-  heading_2: { children?: Array<BlockObjectComponent> };
+export type Heading2BlockObject = Heading2BlockObjectResponse & {
+  heading_2: { children?: Array<BlockObject> };
 };
 
-export type Heading3BlockObjectComponent = Heading3BlockObjectResponse & {
-  heading_3: { children?: Array<BlockObjectComponent> };
+export type Heading3BlockObject = Heading3BlockObjectResponse & {
+  heading_3: { children?: Array<BlockObject> };
 };
 
-export type ImageBlockObjectComponent = ImageBlockObjectResponse;
+export type ImageBlockObject = ImageBlockObjectResponse;
 
-export type LinkPreviewBlockObjectComponent = LinkPreviewBlockObjectResponse & {
+export type LinkPreviewBlockObject = LinkPreviewBlockObjectResponse & {
   link_preview: {
     article_data?: ArticleData;
   };
 };
 
-export type LinkToPageBlockObjectComponent = LinkToPageBlockObjectResponse & {
+export type LinkToPageBlockObject = LinkToPageBlockObjectResponse & {
   link_to_page:
     | {
         type: "page_id";
@@ -258,69 +200,68 @@ export type LinkToPageBlockObjectComponent = LinkToPageBlockObjectResponse & {
       };
 };
 
-export type NumberedListBlockObjectComponent = {
+export type NumberedListBlockObject = {
   id: string;
-  numbered_list: { items: Array<NumberedListItemBlockObjectComponent> };
+  numbered_list: { items: Array<NumberedListItemBlockObject> };
   type: "numbered_list";
 };
 
-export type NumberedListItemBlockObjectComponent =
+export type NumberedListItemBlockObject =
   NumberedListItemBlockObjectResponse & {
-    numbered_list_item: { children?: Array<BlockObjectComponent> };
+    numbered_list_item: { children?: Array<BlockObject> };
   };
 
-export type ParagraphBlockObjectComponent = ParagraphBlockObjectResponse & {
-  paragraph: { children?: Array<BlockObjectComponent> };
+export type ParagraphBlockObject = ParagraphBlockObjectResponse & {
+  paragraph: { children?: Array<BlockObject> };
 };
 
-export type PdfBlockObjectComponent = PdfBlockObjectResponse;
+export type PdfBlockObject = PdfBlockObjectResponse;
 
-export type QuoteBlockObjectComponent = QuoteBlockObjectResponse & {
-  quote: { children?: Array<BlockObjectComponent> };
+export type QuoteBlockObject = QuoteBlockObjectResponse & {
+  quote: { children?: Array<BlockObject> };
 };
 
-export type SyncedBlockBlockObjectComponent = SyncedBlockBlockObjectResponse & {
+export type SyncedBlockBlockObject = SyncedBlockBlockObjectResponse & {
   synced_block: {
     synced_from: {
       type: "block_id";
       block_id: IdRequest;
-      block?: BlockObjectComponent | null;
+      block?: BlockObject | null;
     } | null;
-    children?: Array<BlockObjectComponent> | null;
+    children?: Array<BlockObject> | null;
   };
 };
 
-export type TableBlockObjectComponent = TableBlockObjectResponse & {
-  table: { table_rows?: Array<TableRowBlockObjectComponent> };
+export type TableBlockObject = TableBlockObjectResponse & {
+  table: { table_rows?: Array<TableRowBlockObject> };
 };
 
-export type TableOfContentsBlockObjectComponent =
-  TableOfContentsBlockObjectResponse;
+export type TableOfContentsBlockObject = TableOfContentsBlockObjectResponse;
 
-export type TableRowBlockObjectComponent = TableRowBlockObjectResponse;
+export type TableRowBlockObject = TableRowBlockObjectResponse;
 
 export type TableCellBlockObjectComponent =
-  TableRowBlockObjectComponent["table_row"]["cells"][number];
+  TableRowBlockObject["table_row"]["cells"][number];
 
-export type TemplateBlockObjectComponent = TemplateBlockObjectResponse;
+export type TemplateBlockObject = TemplateBlockObjectResponse;
 
-export type ToDoBlockObjectComponent = ToDoBlockObjectResponse & {
-  to_do: { children?: Array<BlockObjectComponent> };
+export type ToDoBlockObject = ToDoBlockObjectResponse & {
+  to_do: { children?: Array<BlockObject> };
 };
 
-export type ToggleBlockObjectComponent = ToggleBlockObjectResponse & {
-  toggle: { children?: Array<BlockObjectComponent> };
+export type ToggleBlockObject = ToggleBlockObjectResponse & {
+  toggle: { children?: Array<BlockObject> };
 };
 
 export type TogglableBlockObjectComponent =
-  | ToggleBlockObjectComponent
-  | Heading1BlockObjectComponent
-  | Heading2BlockObjectComponent
-  | Heading3BlockObjectComponent;
+  | ToggleBlockObject
+  | Heading1BlockObject
+  | Heading2BlockObject
+  | Heading3BlockObject;
 
-export type UnsupportedBlockObjectComponent = UnsupportedBlockObjectResponse;
+export type UnsupportedBlockObject = UnsupportedBlockObjectResponse;
 
-export type VideoBlockObjectComponent = VideoBlockObjectResponse & {
+export type VideoBlockObject = VideoBlockObjectResponse & {
   video: {
     oembed?: LinkTypeData | PhotoTypeData | VideoTypeData | RichTypeData;
   };

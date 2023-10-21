@@ -4,12 +4,10 @@ import { extractTitleProperty } from "../../libs/notion/util.js";
 
 import { Icon } from "./Icon.js";
 
-import type {
-  BlockComponentProps,
-  BreadcrumbBlockObjectComponent,
-} from "../../types/components.js";
+import type { BreadcrumbBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<BreadcrumbBlockObjectComponent>;
+type Props = BlockComponentProps<BreadcrumbBlockObject>;
 
 export const Breadcrumb: React.FC<Props> = ({ block }) => {
   return (

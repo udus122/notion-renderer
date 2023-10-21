@@ -3,12 +3,10 @@ import { RichTexts } from "../RichTexts/index.js";
 import { Blocks } from "./Blocks.js";
 import { Icon } from "./Icon.js";
 
-import type {
-  BlockComponentProps,
-  CalloutBlockObjectComponent,
-} from "../../types/components.js";
+import type { CalloutBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<CalloutBlockObjectComponent>;
+type Props = BlockComponentProps<CalloutBlockObject>;
 
 export const Callout: React.FC<Props> = ({ block, mapper }) => {
   return (

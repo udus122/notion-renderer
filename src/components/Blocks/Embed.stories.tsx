@@ -2,7 +2,7 @@ import { Embed } from "./Embed.js";
 import EmbedObject from "./Embed.json";
 import EmbedTwitterObject from "./Embed.Twitter.json";
 
-import type { EmbedBlockObjectComponent } from "../../types/components.js";
+import type { EmbedBlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Embed> = {
@@ -17,12 +17,12 @@ type Story = StoryObj<typeof Embed>;
 
 export const Default: Story = {
   args: {
-    block: EmbedObject as EmbedBlockObjectComponent,
+    block: EmbedObject as EmbedBlockObject,
   },
 };
 
 export const Twitter: Story = {
   args: {
-    block: EmbedTwitterObject as EmbedBlockObjectComponent,
+    block: EmbedTwitterObject as EmbedBlockObject,
   },
 };

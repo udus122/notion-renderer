@@ -2,7 +2,7 @@ import SyncedBlockDuplicatedObject from "./SyncedBlock.Duplicated.json";
 import { SyncedBlock } from "./SyncedBlock.js";
 import SyncedBlockOriginalObject from "./SyncedBlock.Original.json";
 
-import type { SyncedBlockBlockObjectComponent } from "../../types/components.js";
+import type { SyncedBlockBlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof SyncedBlock> = {
@@ -17,18 +17,18 @@ type Story = StoryObj<typeof SyncedBlock>;
 
 export const Default: Story = {
   args: {
-    block: SyncedBlockOriginalObject as SyncedBlockBlockObjectComponent,
+    block: SyncedBlockOriginalObject as SyncedBlockBlockObject,
   },
 };
 
 export const Original: Story = {
   args: {
-    block: SyncedBlockOriginalObject as SyncedBlockBlockObjectComponent,
+    block: SyncedBlockOriginalObject as SyncedBlockBlockObject,
   },
 };
 
 export const Duplicated: Story = {
   args: {
-    block: SyncedBlockDuplicatedObject as SyncedBlockBlockObjectComponent,
+    block: SyncedBlockDuplicatedObject as SyncedBlockBlockObject,
   },
 };

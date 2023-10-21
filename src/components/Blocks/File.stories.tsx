@@ -2,7 +2,7 @@ import FileExternalObject from "./File.External.json";
 import FileFileObject from "./File.File.json";
 import { File } from "./File.js";
 
-import type { FileBlockObjectComponent } from "../../types/components.js";
+import type { FileBlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof File> = {
@@ -17,12 +17,12 @@ type Story = StoryObj<typeof File>;
 
 export const Default: Story = {
   args: {
-    block: FileFileObject as FileBlockObjectComponent,
+    block: FileFileObject as FileBlockObject,
   },
 };
 
 export const External: Story = {
   args: {
-    block: FileExternalObject as FileBlockObjectComponent,
+    block: FileExternalObject as FileBlockObject,
   },
 };

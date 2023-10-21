@@ -3,12 +3,10 @@ import { RichTexts } from "../RichTexts/index.js";
 
 import { Icon } from "./Icon.js";
 
-import type {
-  BlockComponentProps,
-  LinkToPageBlockObjectComponent,
-} from "../../types/components.js";
+import type { LinkToPageBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<LinkToPageBlockObjectComponent>;
+type Props = BlockComponentProps<LinkToPageBlockObject>;
 
 export const LinkToPage: React.FC<Props> = ({ block }) => {
   if (block.link_to_page.type === "page_id" && block.link_to_page.page) {

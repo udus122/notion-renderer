@@ -16,42 +16,41 @@ import { fetchPage } from "./pages.js";
 import { fetchAllParents } from "./parent.js";
 
 import type {
-  AudioBlockObjectComponent,
-  BlockObjectComponent,
-  BookmarkBlockObjectComponent,
-  BulletedListBlockObjectComponent,
-  BulletedListItemBlockObjectComponent,
-  CalloutBlockObjectComponent,
-  ChildDatabaseBlockObjectComponent,
-  ChildPageBlockObjectComponent,
-  CodeBlockObjectComponent,
-  ColumnBlockObjectComponent,
-  ColumnListBlockObjectComponent,
-  DividerBlockObjectComponent,
-  EmbedBlockObjectComponent,
-  EquationBlockObjectComponent,
-  FileBlockObjectComponent,
-  Heading1BlockObjectComponent,
-  Heading2BlockObjectComponent,
-  Heading3BlockObjectComponent,
-  ImageBlockObjectComponent,
-  LinkPreviewBlockObjectComponent,
-  LinkToPageBlockObjectComponent,
-  ListBlockChildrenResponseResults,
-  NumberedListBlockObjectComponent,
-  NumberedListItemBlockObjectComponent,
-  ParagraphBlockObjectComponent,
-  PdfBlockObjectComponent,
-  QuoteBlockObjectComponent,
-  SyncedBlockBlockObjectComponent,
-  TableBlockObjectComponent,
-  TableOfContentsBlockObjectComponent,
-  TableRowBlockObjectComponent,
-  TemplateBlockObjectComponent,
-  ToDoBlockObjectComponent,
-  ToggleBlockObjectComponent,
-  UnsupportedBlockObjectComponent,
-  VideoBlockObjectComponent,
+  AudioBlockObject,
+  BlockObject,
+  BookmarkBlockObject,
+  BulletedListBlockObject,
+  BulletedListItemBlockObject,
+  CalloutBlockObject,
+  ChildDatabaseBlockObject,
+  ChildPageBlockObject,
+  CodeBlockObject,
+  ColumnBlockObject,
+  ColumnListBlockObject,
+  DividerBlockObject,
+  EmbedBlockObject,
+  EquationBlockObject,
+  FileBlockObject,
+  Heading1BlockObject,
+  Heading2BlockObject,
+  Heading3BlockObject,
+  ImageBlockObject,
+  LinkPreviewBlockObject,
+  LinkToPageBlockObject,
+  NumberedListBlockObject,
+  NumberedListItemBlockObject,
+  ParagraphBlockObject,
+  PdfBlockObject,
+  QuoteBlockObject,
+  SyncedBlockBlockObject,
+  TableBlockObject,
+  TableOfContentsBlockObject,
+  TableRowBlockObject,
+  TemplateBlockObject,
+  ToDoBlockObject,
+  ToggleBlockObject,
+  UnsupportedBlockObject,
+  VideoBlockObject,
 } from "../../types/components.js";
 import type {
   BlockObjectResponse,
@@ -63,6 +62,7 @@ import type {
   PageObjectResponse,
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
+import type { ListBlockChildrenResponseResults } from "src/types/notion.js";
 
 export const retrieveBlock = async (
   args: GetBlockParameters
@@ -102,7 +102,7 @@ export const listBlockChildren = async (
 
 export const fetchBlockComponent = async (
   blockId: string
-): Promise<BlockObjectComponent | null> => {
+): Promise<BlockObject | null> => {
   const block = await retrieveBlock({ block_id: blockId });
   if (block) {
     const blockComponent = convertBlockToComponent(block);
@@ -113,7 +113,7 @@ export const fetchBlockComponent = async (
 
 export const fetchBlockComponents = async (
   blockId: string
-): Promise<BlockObjectComponent[]> => {
+): Promise<BlockObject[]> => {
   const childrenBlockResponses = await listBlockChildren({
     block_id: blockId,
   });
@@ -125,7 +125,7 @@ export const fetchBlockComponents = async (
 
 export const resolveBlockChildren = async (
   blocks: ListBlockChildrenResponseResults
-): Promise<Array<BlockObjectComponent>> => {
+): Promise<Array<BlockObject>> => {
   const blockObjectComponents = await Promise.all(
     blocks.map(
       async (child_block) => await convertBlockToComponent(child_block)
@@ -137,13 +137,13 @@ export const resolveBlockChildren = async (
 };
 
 export const wrapListItems = (
-  blocks: Array<BlockObjectComponent>
-): Array<BlockObjectComponent> => {
+  blocks: Array<BlockObject>
+): Array<BlockObject> => {
   return blocks.reduce(
     (
-      prevList: Array<BlockObjectComponent>,
-      currBlock: BlockObjectComponent
-    ): Array<BlockObjectComponent> => {
+      prevList: Array<BlockObject>,
+      currBlock: BlockObject
+    ): Array<BlockObject> => {
       /* If the block.type is neither
        * 'bulleted_list_item' nor 'numbered_list_item' nor 'bulleted_list' nor 'numbered_list',
        * return the block as it is.
@@ -170,7 +170,7 @@ export const wrapListItems = (
           id,
           type: "bulleted_list",
           bulleted_list: { items: [currBlock] },
-        } satisfies BulletedListBlockObjectComponent;
+        } satisfies BulletedListBlockObject;
         return [...prevList, bulletedList];
       }
       if (
@@ -182,7 +182,7 @@ export const wrapListItems = (
           id,
           type: "numbered_list",
           numbered_list: { items: [currBlock] },
-        } satisfies NumberedListBlockObjectComponent;
+        } satisfies NumberedListBlockObject;
         return [...prevList, numberedList];
       }
 
@@ -217,13 +217,13 @@ export const wrapListItems = (
 };
 export const convertBlockToComponent = async (
   block: BlockObjectResponse | PartialBlockObjectResponse
-): Promise<BlockObjectComponent | null> => {
+): Promise<BlockObject | null> => {
   if (!isFullBlock(block)) {
     return null;
   }
   switch (block.type) {
     case "audio": {
-      return { ...block } satisfies AudioBlockObjectComponent;
+      return { ...block } satisfies AudioBlockObject;
     }
     case "bookmark": {
       const { payload: article_data, error } = await fetchArticleData(
@@ -237,7 +237,7 @@ export const convertBlockToComponent = async (
               ...block.bookmark,
               article_data: article_data,
             },
-          } satisfies BookmarkBlockObjectComponent;
+          } satisfies BookmarkBlockObject;
         }
       }
       return {
@@ -245,7 +245,7 @@ export const convertBlockToComponent = async (
         bookmark: {
           ...block.bookmark,
         },
-      } satisfies BookmarkBlockObjectComponent;
+      } satisfies BookmarkBlockObject;
     }
     case "breadcrumb": {
       const allParents = await fetchAllParents(block.parent);
@@ -271,11 +271,11 @@ export const convertBlockToComponent = async (
             ...block.bulleted_list_item,
             children,
           },
-        } satisfies BulletedListItemBlockObjectComponent;
+        } satisfies BulletedListItemBlockObject;
       }
       return {
         ...block,
-      } satisfies BulletedListItemBlockObjectComponent;
+      } satisfies BulletedListItemBlockObject;
     }
     case "callout": {
       if (block.has_children) {
@@ -286,11 +286,11 @@ export const convertBlockToComponent = async (
             ...block.callout,
             children,
           },
-        } satisfies CalloutBlockObjectComponent;
+        } satisfies CalloutBlockObject;
       }
       return {
         ...block,
-      } satisfies CalloutBlockObjectComponent;
+      } satisfies CalloutBlockObject;
     }
     case "child_database": {
       const childDatabase = await fetchDatabase(block.id);
@@ -301,14 +301,14 @@ export const convertBlockToComponent = async (
             ...block.child_database,
             database: childDatabase ?? null,
           },
-        } satisfies ChildDatabaseBlockObjectComponent;
+        } satisfies ChildDatabaseBlockObject;
       }
       return {
         ...block,
         child_database: {
           ...block.child_database,
         },
-      } satisfies ChildDatabaseBlockObjectComponent;
+      } satisfies ChildDatabaseBlockObject;
     }
     case "child_page": {
       const childPage = await fetchPage(block.id);
@@ -319,17 +319,17 @@ export const convertBlockToComponent = async (
             ...block.child_page,
             page: childPage,
           },
-        } satisfies ChildPageBlockObjectComponent;
+        } satisfies ChildPageBlockObject;
       }
       return {
         ...block,
         child_page: {
           ...block.child_page,
         },
-      } satisfies ChildPageBlockObjectComponent;
+      } satisfies ChildPageBlockObject;
     }
     case "code": {
-      return { ...block } satisfies CodeBlockObjectComponent;
+      return { ...block } satisfies CodeBlockObject;
     }
     case "column": {
       if (block.has_children) {
@@ -342,14 +342,13 @@ export const convertBlockToComponent = async (
           },
         };
       }
-      return { ...block } satisfies ColumnBlockObjectComponent;
+      return { ...block } satisfies ColumnBlockObject;
     }
     case "column_list": {
       if (block.has_children) {
         const blocks = await fetchBlockComponents(block.id);
         const columns = blocks.filter(
-          (block): block is ColumnBlockObjectComponent =>
-            block.type === "column"
+          (block): block is ColumnBlockObject => block.type === "column"
         );
         return {
           ...block,
@@ -357,14 +356,14 @@ export const convertBlockToComponent = async (
             ...block.column_list,
             columns,
           },
-        } satisfies ColumnListBlockObjectComponent;
+        } satisfies ColumnListBlockObject;
       }
       return {
         ...block,
-      } satisfies ColumnListBlockObjectComponent;
+      } satisfies ColumnListBlockObject;
     }
     case "divider": {
-      return { ...block } satisfies DividerBlockObjectComponent;
+      return { ...block } satisfies DividerBlockObject;
     }
     case "embed": {
       const { payload: oembed, error } = await fetchOembedData(block.embed.url);
@@ -375,15 +374,15 @@ export const convertBlockToComponent = async (
             ...block.embed,
             oembed,
           },
-        } satisfies EmbedBlockObjectComponent;
+        } satisfies EmbedBlockObject;
       }
-      return { ...block } satisfies EmbedBlockObjectComponent;
+      return { ...block } satisfies EmbedBlockObject;
     }
     case "equation": {
-      return { ...block } satisfies EquationBlockObjectComponent;
+      return { ...block } satisfies EquationBlockObject;
     }
     case "file": {
-      return { ...block } satisfies FileBlockObjectComponent;
+      return { ...block } satisfies FileBlockObject;
     }
     case "heading_1": {
       if (block.has_children) {
@@ -394,11 +393,11 @@ export const convertBlockToComponent = async (
             ...block.heading_1,
             children,
           },
-        } satisfies Heading1BlockObjectComponent;
+        } satisfies Heading1BlockObject;
       }
       return {
         ...block,
-      } satisfies Heading1BlockObjectComponent;
+      } satisfies Heading1BlockObject;
     }
     case "heading_2": {
       if (block.has_children) {
@@ -409,11 +408,11 @@ export const convertBlockToComponent = async (
             ...block.heading_2,
             children,
           },
-        } satisfies Heading2BlockObjectComponent;
+        } satisfies Heading2BlockObject;
       }
       return {
         ...block,
-      } satisfies Heading2BlockObjectComponent;
+      } satisfies Heading2BlockObject;
     }
     case "heading_3": {
       if (block.has_children) {
@@ -424,14 +423,14 @@ export const convertBlockToComponent = async (
             ...block.heading_3,
             children,
           },
-        } satisfies Heading3BlockObjectComponent;
+        } satisfies Heading3BlockObject;
       }
       return {
         ...block,
-      } satisfies Heading3BlockObjectComponent;
+      } satisfies Heading3BlockObject;
     }
     case "image": {
-      return { ...block } satisfies ImageBlockObjectComponent;
+      return { ...block } satisfies ImageBlockObject;
     }
     case "link_preview": {
       const { payload: article_data, error } = await fetchArticleData(
@@ -445,7 +444,7 @@ export const convertBlockToComponent = async (
               ...block.link_preview,
               article_data: article_data,
             },
-          } satisfies LinkPreviewBlockObjectComponent;
+          } satisfies LinkPreviewBlockObject;
         }
       }
       return {
@@ -453,7 +452,7 @@ export const convertBlockToComponent = async (
         link_preview: {
           ...block.link_preview,
         },
-      } satisfies LinkPreviewBlockObjectComponent;
+      } satisfies LinkPreviewBlockObject;
     }
     case "link_to_page": {
       switch (block.link_to_page.type) {
@@ -467,7 +466,7 @@ export const convertBlockToComponent = async (
               ...block.link_to_page,
               database: linkedDatabase,
             },
-          } satisfies LinkToPageBlockObjectComponent;
+          } satisfies LinkToPageBlockObject;
         }
         case "page_id": {
           const linkedPage = await fetchPage(block.link_to_page.page_id);
@@ -477,7 +476,7 @@ export const convertBlockToComponent = async (
               ...block.link_to_page,
               page: linkedPage,
             },
-          } satisfies LinkToPageBlockObjectComponent;
+          } satisfies LinkToPageBlockObject;
         }
         case "comment_id": {
           const linkedComments = await listComments({
@@ -489,7 +488,7 @@ export const convertBlockToComponent = async (
               ...block.link_to_page,
               comments: linkedComments,
             },
-          } satisfies LinkToPageBlockObjectComponent;
+          } satisfies LinkToPageBlockObject;
         }
         default: {
           return null;
@@ -505,11 +504,11 @@ export const convertBlockToComponent = async (
             ...block.numbered_list_item,
             children,
           },
-        } satisfies NumberedListItemBlockObjectComponent;
+        } satisfies NumberedListItemBlockObject;
       }
       return {
         ...block,
-      } satisfies NumberedListItemBlockObjectComponent;
+      } satisfies NumberedListItemBlockObject;
     }
     case "paragraph": {
       if (block.has_children) {
@@ -520,14 +519,14 @@ export const convertBlockToComponent = async (
             ...block.paragraph,
             children,
           },
-        } satisfies ParagraphBlockObjectComponent;
+        } satisfies ParagraphBlockObject;
       }
       return {
         ...block,
-      } satisfies ParagraphBlockObjectComponent;
+      } satisfies ParagraphBlockObject;
     }
     case "pdf": {
-      return { ...block } satisfies PdfBlockObjectComponent;
+      return { ...block } satisfies PdfBlockObject;
     }
     case "quote": {
       if (block.has_children) {
@@ -538,11 +537,11 @@ export const convertBlockToComponent = async (
             ...block.quote,
             children,
           },
-        } satisfies QuoteBlockObjectComponent;
+        } satisfies QuoteBlockObject;
       }
       return {
         ...block,
-      } satisfies QuoteBlockObjectComponent;
+      } satisfies QuoteBlockObject;
     }
     case "synced_block": {
       if (block.has_children) {
@@ -561,7 +560,7 @@ export const convertBlockToComponent = async (
               },
               children: children.length === 0 ? null : children,
             },
-          } satisfies SyncedBlockBlockObjectComponent;
+          } satisfies SyncedBlockBlockObject;
         }
         return {
           ...block,
@@ -569,16 +568,15 @@ export const convertBlockToComponent = async (
             ...block.synced_block,
             children,
           },
-        } satisfies SyncedBlockBlockObjectComponent;
+        } satisfies SyncedBlockBlockObject;
       }
-      return { ...block } satisfies SyncedBlockBlockObjectComponent;
+      return { ...block } satisfies SyncedBlockBlockObject;
     }
     case "table": {
       if (block.has_children) {
         const blocks = await fetchBlockComponents(block.id);
         const table_rows = blocks.filter(
-          (block): block is TableRowBlockObjectComponent =>
-            block.type === "table_row"
+          (block): block is TableRowBlockObject => block.type === "table_row"
         );
         return {
           ...block,
@@ -586,20 +584,20 @@ export const convertBlockToComponent = async (
             ...block.table,
             table_rows,
           },
-        } satisfies TableBlockObjectComponent;
+        } satisfies TableBlockObject;
       }
       return {
         ...block,
-      } satisfies TableBlockObjectComponent;
+      } satisfies TableBlockObject;
     }
     case "table_of_contents": {
-      return { ...block } satisfies TableOfContentsBlockObjectComponent;
+      return { ...block } satisfies TableOfContentsBlockObject;
     }
     case "table_row": {
-      return { ...block } satisfies TableRowBlockObjectComponent;
+      return { ...block } satisfies TableRowBlockObject;
     }
     case "template": {
-      return { ...block } satisfies TemplateBlockObjectComponent;
+      return { ...block } satisfies TemplateBlockObject;
     }
     case "to_do": {
       if (block.has_children) {
@@ -610,11 +608,11 @@ export const convertBlockToComponent = async (
             ...block.to_do,
             children,
           },
-        } satisfies ToDoBlockObjectComponent;
+        } satisfies ToDoBlockObject;
       }
       return {
         ...block,
-      } satisfies ToDoBlockObjectComponent;
+      } satisfies ToDoBlockObject;
     }
     case "toggle": {
       if (block.has_children) {
@@ -625,14 +623,14 @@ export const convertBlockToComponent = async (
             ...block.toggle,
             children,
           },
-        } satisfies ToggleBlockObjectComponent;
+        } satisfies ToggleBlockObject;
       }
       return {
         ...block,
-      } satisfies ToggleBlockObjectComponent;
+      } satisfies ToggleBlockObject;
     }
     case "unsupported": {
-      return { ...block } satisfies UnsupportedBlockObjectComponent;
+      return { ...block } satisfies UnsupportedBlockObject;
     }
     case "video": {
       if (block.video.type === "external") {
@@ -647,10 +645,10 @@ export const convertBlockToComponent = async (
               ...block.video,
               oembed,
             },
-          } satisfies VideoBlockObjectComponent;
+          } satisfies VideoBlockObject;
         }
       }
-      return { ...block } satisfies VideoBlockObjectComponent;
+      return { ...block } satisfies VideoBlockObject;
     }
     default: {
       return null;

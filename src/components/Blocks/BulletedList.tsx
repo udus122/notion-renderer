@@ -1,11 +1,9 @@
 import { BulletedListItem } from "./BulletedListItem.js";
 
-import type {
-  BlockComponentProps,
-  BulletedListBlockObjectComponent,
-} from "../../types/components.js";
+import type { BulletedListBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<BulletedListBlockObjectComponent>;
+type Props = BlockComponentProps<BulletedListBlockObject>;
 
 export const BulletedList: React.FC<Props> = ({ block, blocks, mapper }) => {
   return (

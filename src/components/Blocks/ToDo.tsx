@@ -2,12 +2,10 @@ import { RichTexts } from "../RichTexts/index.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type {
-  BlockComponentProps,
-  ToDoBlockObjectComponent,
-} from "../../types/components.js";
+import type { ToDoBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<ToDoBlockObjectComponent>;
+type Props = BlockComponentProps<ToDoBlockObject>;
 
 export const ToDo: React.FC<Props> = ({ block, mapper }) => {
   const isChecked = block.to_do.checked;

@@ -1,11 +1,9 @@
 import { RichTexts } from "../RichTexts/index.js";
 
-import type {
-  BlockComponentProps,
-  VideoBlockObjectComponent,
-} from "../../types/components.js";
+import type { VideoBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<VideoBlockObjectComponent>;
+type Props = BlockComponentProps<VideoBlockObject>;
 
 export const Video: React.FC<Props> = ({ block }) => {
   const videoUrl =

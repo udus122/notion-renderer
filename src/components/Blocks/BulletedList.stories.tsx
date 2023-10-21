@@ -1,7 +1,7 @@
 import { BulletedList } from "./BulletedList.js";
 import BulletedListObject from "./BulletedList.json";
 
-import type { BulletedListBlockObjectComponent } from "../../types/components.js";
+import type { BulletedListBlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof BulletedList> = {
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof BulletedList>;
 
 export const Default: Story = {
   args: {
-    block: BulletedListObject as BulletedListBlockObjectComponent,
+    block: BulletedListObject as BulletedListBlockObject,
   },
 };

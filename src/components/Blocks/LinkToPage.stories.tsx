@@ -1,7 +1,7 @@
 import { LinkToPage } from "./LinkToPage.js";
 import LinkToPageObject from "./LinkToPage.json";
 
-import type { LinkToPageBlockObjectComponent } from "../../types/components.js";
+import type { LinkToPageBlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof LinkToPage> = {
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof LinkToPage>;
 
 export const Default: Story = {
   args: {
-    block: LinkToPageObject as LinkToPageBlockObjectComponent,
+    block: LinkToPageObject as LinkToPageBlockObject,
   },
 };

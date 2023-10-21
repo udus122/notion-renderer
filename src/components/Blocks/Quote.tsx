@@ -2,12 +2,10 @@ import { RichTexts } from "../RichTexts/index.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type {
-  BlockComponentProps,
-  QuoteBlockObjectComponent,
-} from "../../types/components.js";
+import type { QuoteBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<QuoteBlockObjectComponent>;
+type Props = BlockComponentProps<QuoteBlockObject>;
 
 export const Quote: React.FC<Props> = ({ block, mapper }) => {
   return (

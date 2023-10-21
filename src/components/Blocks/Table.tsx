@@ -1,13 +1,13 @@
 import { RichTexts } from "../RichTexts/index.js";
 
 import type {
-  BlockComponentProps,
-  TableBlockObjectComponent,
+  TableBlockObject,
   TableCellBlockObjectComponent,
-  TableRowBlockObjectComponent,
+  TableRowBlockObject,
 } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<TableBlockObjectComponent>;
+type Props = BlockComponentProps<TableBlockObject>;
 
 export const Table: React.FC<Props> = ({ block }) => {
   return (
@@ -38,7 +38,7 @@ export const Table: React.FC<Props> = ({ block }) => {
 };
 
 const TableRowRowHeader: React.FC<{
-  table_row: TableRowBlockObjectComponent;
+  table_row: TableRowBlockObject;
 }> = ({ table_row }) => {
   return (
     <tr id={table_row.id} className="notion_table_row">
@@ -50,7 +50,7 @@ const TableRowRowHeader: React.FC<{
 };
 
 const TableRowColumnHeader: React.FC<{
-  table_row: TableRowBlockObjectComponent;
+  table_row: TableRowBlockObject;
 }> = ({ table_row }) => {
   return (
     <tr id={table_row.id} className="notion_table_row">
@@ -66,7 +66,7 @@ const TableRowColumnHeader: React.FC<{
 };
 
 const TableRowNoHeader: React.FC<{
-  table_row: TableRowBlockObjectComponent;
+  table_row: TableRowBlockObject;
 }> = ({ table_row }) => {
   return (
     <tr id={table_row.id} className="notion_table_row">

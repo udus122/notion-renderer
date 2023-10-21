@@ -1,12 +1,10 @@
 import { Block } from "./Block.js";
 import { Blocks } from "./Blocks.js";
 
-import type {
-  BlockComponentProps,
-  SyncedBlockBlockObjectComponent,
-} from "../../types/components.js";
+import type { SyncedBlockBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<SyncedBlockBlockObjectComponent>;
+type Props = BlockComponentProps<SyncedBlockBlockObject>;
 
 export const SyncedBlock: React.FC<Props> = ({ block, blocks, mapper }) => {
   return (

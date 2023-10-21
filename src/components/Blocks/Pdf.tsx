@@ -1,11 +1,9 @@
 import { RichTexts } from "../RichTexts/index.js";
 
-import type {
-  BlockComponentProps,
-  PdfBlockObjectComponent,
-} from "../../types/components.js";
+import type { PdfBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<PdfBlockObjectComponent>;
+type Props = BlockComponentProps<PdfBlockObject>;
 
 export const Pdf: React.FC<Props> = ({ block }) => {
   const pdfUrl =

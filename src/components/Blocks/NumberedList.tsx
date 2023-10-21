@@ -1,11 +1,9 @@
 import { NumberedListItem } from "./NumberedListItem.js";
 
-import type {
-  BlockComponentProps,
-  NumberedListBlockObjectComponent,
-} from "../../types/components.js";
+import type { NumberedListBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<NumberedListBlockObjectComponent>;
+type Props = BlockComponentProps<NumberedListBlockObject>;
 
 export const NumberedList: React.FC<Props> = ({ block, blocks, mapper }) => {
   return (

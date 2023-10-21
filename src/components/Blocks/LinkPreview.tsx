@@ -1,9 +1,7 @@
-import type {
-  BlockComponentProps,
-  LinkPreviewBlockObjectComponent,
-} from "../../types/components.js";
+import type { LinkPreviewBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<LinkPreviewBlockObjectComponent>;
+type Props = BlockComponentProps<LinkPreviewBlockObject>;
 
 export const LinkPreview: React.FC<Props> = ({ block }) => {
   return (

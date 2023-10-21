@@ -6,7 +6,7 @@ import { OpenedToggle } from "../CustomBlocks/OpenedToggle.js";
 import { Blocks } from "./Blocks.js";
 import BlocksObject from "./Blocks.json";
 
-import type { BlockObjectComponent } from "../../types/components.js";
+import type { BlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Blocks> = {
@@ -21,13 +21,13 @@ type Story = StoryObj<typeof Blocks>;
 
 export const Default: Story = {
   args: {
-    blocks: BlocksObject as Array<BlockObjectComponent>,
+    blocks: BlocksObject as Array<BlockObject>,
   },
 };
 
 export const Custom: Story = {
   args: {
-    blocks: BlocksObject as Array<BlockObjectComponent>,
+    blocks: BlocksObject as Array<BlockObject>,
     mapper: {
       toggle: OpenedToggle,
       heading_1: OpenedHeading1,

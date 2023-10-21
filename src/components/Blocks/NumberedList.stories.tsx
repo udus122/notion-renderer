@@ -1,7 +1,7 @@
 import { NumberedList } from "./NumberedList.js";
 import NumberedListObject from "./NumberedList.json";
 
-import type { NumberedListBlockObjectComponent } from "../../types/components.js";
+import type { NumberedListBlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof NumberedList> = {
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof NumberedList>;
 
 export const Default: Story = {
   args: {
-    block: NumberedListObject as NumberedListBlockObjectComponent,
+    block: NumberedListObject as NumberedListBlockObject,
   },
 };

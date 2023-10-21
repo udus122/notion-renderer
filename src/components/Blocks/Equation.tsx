@@ -2,12 +2,10 @@
 
 import katex from "katex";
 
-import type {
-  BlockComponentProps,
-  EquationBlockObjectComponent,
-} from "../../types/components.js";
+import type { EquationBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<EquationBlockObjectComponent>;
+type Props = BlockComponentProps<EquationBlockObject>;
 
 export const Equation: React.FC<Props> = ({ block }) => {
   return (

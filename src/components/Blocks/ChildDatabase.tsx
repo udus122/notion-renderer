@@ -1,11 +1,9 @@
 import { Icon } from "./Icon.js";
 
-import type {
-  BlockComponentProps,
-  ChildDatabaseBlockObjectComponent,
-} from "../../types/components.js";
+import type { ChildDatabaseBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<ChildDatabaseBlockObjectComponent>;
+type Props = BlockComponentProps<ChildDatabaseBlockObject>;
 
 export const ChildDatabase: React.FC<Props> = ({ block }) => {
   return (

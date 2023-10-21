@@ -1,7 +1,7 @@
 import { Image } from "./Image.js";
 import ImageObject from "./Image.json";
 
-import type { ImageBlockObjectComponent } from "../../types/components.js";
+import type { ImageBlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Image> = {
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Image>;
 
 export const Default: Story = {
   args: {
-    block: ImageObject as ImageBlockObjectComponent,
+    block: ImageObject as ImageBlockObject,
   },
 };

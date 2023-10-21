@@ -1,11 +1,9 @@
 import { RichTexts } from "../RichTexts/index.js";
 
-import type {
-  BlockComponentProps,
-  AudioBlockObjectComponent,
-} from "../../types/components.js";
+import type { AudioBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<AudioBlockObjectComponent>;
+type Props = BlockComponentProps<AudioBlockObject>;
 
 export const Audio: React.FC<Props> = ({ block }) => {
   const audioUrl =

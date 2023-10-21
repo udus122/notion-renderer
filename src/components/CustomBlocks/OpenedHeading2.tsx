@@ -1,12 +1,10 @@
 import { Blocks } from "../Blocks/Blocks.js";
 import { RichTexts } from "../RichTexts/index.js";
 
-import type {
-  BlockComponentProps,
-  Heading2BlockObjectComponent,
-} from "../../types/components.js";
+import type { Heading2BlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<Heading2BlockObjectComponent>;
+type Props = BlockComponentProps<Heading2BlockObject>;
 
 export const OpenedHeading2: React.FC<Props> = ({ block, mapper }) => {
   return (

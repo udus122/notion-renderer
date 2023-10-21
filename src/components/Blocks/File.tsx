@@ -1,11 +1,9 @@
 import { RichTexts } from "../RichTexts/index.js";
 
-import type {
-  BlockComponentProps,
-  FileBlockObjectComponent,
-} from "../../types/components.js";
+import type { FileBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<FileBlockObjectComponent>;
+type Props = BlockComponentProps<FileBlockObject>;
 
 export const File: React.FC<Props> = ({ block }) => {
   const fileUrl =

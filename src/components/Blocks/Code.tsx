@@ -1,11 +1,9 @@
 import { RichTexts } from "../RichTexts/index.js";
 
-import type {
-  BlockComponentProps,
-  CodeBlockObjectComponent,
-} from "../../types/components.js";
+import type { CodeBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<CodeBlockObjectComponent>;
+type Props = BlockComponentProps<CodeBlockObject>;
 
 export const Code: React.FC<Props> = ({ block }) => {
   return (

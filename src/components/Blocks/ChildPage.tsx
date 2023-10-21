@@ -1,11 +1,9 @@
 import { Icon } from "./Icon.js";
 
-import type {
-  BlockComponentProps,
-  ChildPageBlockObjectComponent,
-} from "../../types/components.js";
+import type { ChildPageBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<ChildPageBlockObjectComponent>;
+type Props = BlockComponentProps<ChildPageBlockObject>;
 
 export const ChildPage: React.FC<Props> = ({ block }) => {
   return (

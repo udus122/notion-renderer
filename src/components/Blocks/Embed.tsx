@@ -1,11 +1,9 @@
 import { RichTexts } from "../RichTexts/index.js";
 
-import type {
-  BlockComponentProps,
-  EmbedBlockObjectComponent,
-} from "../../types/components.js";
+import type { EmbedBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<EmbedBlockObjectComponent>;
+type Props = BlockComponentProps<EmbedBlockObject>;
 
 export const Embed: React.FC<Props> = ({ block }) => {
   if (block.embed.oembed) {

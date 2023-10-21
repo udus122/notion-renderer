@@ -2,7 +2,7 @@ import { Paragraph } from "./Paragraph.js";
 import ParagraphObject from "./Paragraph.json";
 import ParagraphWithChildrenObject from "./Paragraph.WithChildren.json";
 
-import type { ParagraphBlockObjectComponent } from "../../types/components.js";
+import type { ParagraphBlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Paragraph> = {
@@ -17,12 +17,12 @@ type Story = StoryObj<typeof Paragraph>;
 
 export const Default: Story = {
   args: {
-    block: ParagraphObject as ParagraphBlockObjectComponent,
+    block: ParagraphObject as ParagraphBlockObject,
   },
 };
 
 export const WithChildren: Story = {
   args: {
-    block: ParagraphWithChildrenObject as ParagraphBlockObjectComponent,
+    block: ParagraphWithChildrenObject as ParagraphBlockObject,
   },
 };

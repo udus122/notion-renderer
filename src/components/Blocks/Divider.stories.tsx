@@ -1,7 +1,7 @@
 import { Divider } from "./Divider.js";
 import DividerObject from "./Divider.json";
 
-import type { DividerBlockObjectComponent } from "../../types/components.js";
+import type { DividerBlockObject } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Divider> = {
@@ -15,6 +15,6 @@ type Story = StoryObj<typeof Divider>;
 
 export const Default: Story = {
   args: {
-    block: DividerObject as DividerBlockObjectComponent,
+    block: DividerObject as DividerBlockObject,
   },
 };

@@ -1,11 +1,9 @@
 import { Blocks } from "./Blocks.js";
 
-import type {
-  BlockComponentProps,
-  ColumnListBlockObjectComponent,
-} from "../../types/components.js";
+import type { ColumnListBlockObject } from "../../types/components.js";
+import type { BlockComponentProps } from "src/types/utils.js";
 
-type Props = BlockComponentProps<ColumnListBlockObjectComponent>;
+type Props = BlockComponentProps<ColumnListBlockObject>;
 
 export const ColumnList: React.FC<Props> = ({ block, mapper }) => {
   return (
