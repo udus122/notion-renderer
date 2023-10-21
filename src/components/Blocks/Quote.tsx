@@ -1,6 +1,6 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
-import { Blocks } from "./index.js";
+import { Blocks } from "./Blocks.js";
 
 import type { BlockObject } from "./Block.js";
 import type { QuoteBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
@@ -24,7 +24,7 @@ export const Quote: React.FC<Props> = ({
       id={block.id}
       className={`notion_quote notion_color_${block.quote.color}`}
     >
-      <RichTexts
+      <RichText
         richTextItems={block.quote.rich_text}
         richTextItemMapper={richTextItemMapper}
         annotationMapper={annotationMapper}

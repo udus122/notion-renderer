@@ -1,4 +1,4 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
 import type { Heading1BlockObject } from "./Heading1.js";
 import type { Heading2BlockObject } from "./Heading2.js";
@@ -38,7 +38,7 @@ export const TableOfContents: React.FC<Props> = ({
               <div className={`notion_table_of_contents_item_${heading.type}`}>
                 <LinkComponent href={`#${heading.id}`}>
                   {/* @ts-expect-error: because heading objects always have a 'rich_text' property  */}
-                  <RichTexts richTextItems={heading[heading.type].rich_text} />
+                  <RichText richTextItems={heading[heading.type].rich_text} />
                 </LinkComponent>
               </div>
             </div>

@@ -1,5 +1,5 @@
-import { Blocks } from "../Blocks/index.js";
-import { RichTexts } from "../RichTexts/index.js";
+import { Blocks } from "../Blocks/Blocks.js";
+import { RichText } from "../RichText/RichText.js";
 
 import type { Heading1BlockObject } from "../Blocks/Heading1.js";
 import type { BlockProps } from "src/types/utils.js";
@@ -23,7 +23,7 @@ export const OpenedHeading1: React.FC<Props> = ({
         >
           <summary className="notion_toggle_summary">
             <h1>
-              <RichTexts
+              <RichText
                 richTextItems={block.heading_1.rich_text}
                 richTextItemMapper={richTextItemMapper}
                 annotationMapper={annotationMapper}
@@ -48,7 +48,7 @@ export const OpenedHeading1: React.FC<Props> = ({
           id={block.id}
           className={`notion_heading notion_heading_1 notion_color_${block.heading_1.color}`}
         >
-          <RichTexts
+          <RichText
             richTextItems={block.heading_1.rich_text}
             richTextItemMapper={richTextItemMapper}
             annotationMapper={annotationMapper}

@@ -1,4 +1,4 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
 import type {
   LinkTypeData,
@@ -48,7 +48,7 @@ export const Video: React.FC<Props> = ({
         <a href={videoUrl}>here</a>.
       </video>
       <div className="notion_caption notion_video_caption">
-        <RichTexts
+        <RichText
           richTextItems={block.video.caption}
           richTextItemMapper={richTextItemMapper}
           annotationMapper={annotationMapper}

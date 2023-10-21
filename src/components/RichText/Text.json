@@ -1,6 +1,9 @@
 {
   "type": "text",
-  "text": { "content": "text without link\\n↑linebreak here", "link": null },
+  "text": {
+    "content": "text without link\n↑linebreak here",
+    "link": null
+  },
   "annotations": {
     "bold": false,
     "italic": false,
@@ -9,6 +12,6 @@
     "code": false,
     "color": "default"
   },
-  "plain_text": "text without link\\n↑linebreak here",
+  "plain_text": "text without link\n↑linebreak here",
   "href": null
 }

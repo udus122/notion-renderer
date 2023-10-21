@@ -1,6 +1,6 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
-import { Blocks } from "./index.js";
+import { Blocks } from "./Blocks.js";
 
 import type { BlockObject } from "./Block.js";
 import type { Heading2BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
@@ -29,7 +29,7 @@ export const Heading2: React.FC<Props> = ({
         >
           <summary className="notion_toggle_summary">
             <h2>
-              <RichTexts
+              <RichText
                 richTextItems={block.heading_2.rich_text}
                 richTextItemMapper={richTextItemMapper}
                 annotationMapper={annotationMapper}
@@ -54,7 +54,7 @@ export const Heading2: React.FC<Props> = ({
           id={block.id}
           className={`notion_heading notion_heading_2 notion_color_${block.heading_2.color}`}
         >
-          <RichTexts
+          <RichText
             richTextItems={block.heading_2.rich_text}
             richTextItemMapper={richTextItemMapper}
             annotationMapper={annotationMapper}

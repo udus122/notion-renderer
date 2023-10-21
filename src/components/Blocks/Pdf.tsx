@@ -1,4 +1,4 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
 import type { PdfBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockProps } from "src/types/utils.js";
@@ -35,7 +35,7 @@ export const Pdf: React.FC<Props> = ({
         <a href={pdfUrl}>here</a>.
       </object>
       <div className="notion_caption notion_pdf_caption">
-        <RichTexts
+        <RichText
           richTextItems={block.pdf.caption}
           richTextItemMapper={richTextItemMapper}
           annotationMapper={annotationMapper}

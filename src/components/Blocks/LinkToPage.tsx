@@ -1,6 +1,6 @@
 import { extractTitleProperty } from "../../libs/notion/util.js";
 import { Link } from "../Link.js";
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
 import { Icon } from "./Icon.js";
 
@@ -49,7 +49,7 @@ export const LinkToPage: React.FC<Props> = ({
             {<Icon icon={block.link_to_page.page?.icon ?? null} />}
           </span>
           <span className="notion_link_to_page_title">
-            <RichTexts
+            <RichText
               richTextItems={titleRichText}
               richTextItemMapper={richTextItemMapper}
               annotationMapper={annotationMapper}
@@ -72,7 +72,7 @@ export const LinkToPage: React.FC<Props> = ({
             {<Icon icon={block.link_to_page.database?.icon ?? null} />}
           </span>
           <span className="notion_link_to_page_title">
-            <RichTexts
+            <RichText
               richTextItems={titleRichTexts}
               richTextItemMapper={richTextItemMapper}
               annotationMapper={annotationMapper}

@@ -5,7 +5,7 @@ import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoi
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Underline> = {
-  title: "RichTexts/Underline",
+  title: "Annotation/Underline",
   component: Underline,
   tags: ["autodocs"],
 };

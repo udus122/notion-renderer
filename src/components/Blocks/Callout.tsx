@@ -1,8 +1,8 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
 import { Icon } from "./Icon.js";
 
-import { Blocks } from "./index.js";
+import { Blocks } from "./Blocks.js";
 
 import type { BlockObject } from "./Block.js";
 import type { CalloutBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
@@ -31,7 +31,7 @@ export const Callout: React.FC<Props> = ({
       </span>
       <div className="notion_callout_content">
         <span>
-          <RichTexts
+          <RichText
             richTextItems={block.callout.rich_text}
             richTextItemMapper={richTextItemMapper}
             annotationMapper={annotationMapper}

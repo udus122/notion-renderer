@@ -1,4 +1,4 @@
-import { Annotations } from "./Annotation/Annotation.js";
+import { Annotation } from "./Annotation/Annotation.js";
 
 import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { RichTextProps } from "src/types/utils.js";
@@ -14,7 +14,7 @@ export const Text: React.FC<Props> = ({
 }) => {
   return (
     <span className="notion_rich_text_type_text">
-      <Annotations
+      <Annotation
         richTextItem={richTextItem}
         annotationMapper={annotationMapper}
       >
@@ -25,7 +25,7 @@ export const Text: React.FC<Props> = ({
         ) : (
           richTextItem.text.content
         )}
-      </Annotations>
+      </Annotation>
     </span>
   );
 };

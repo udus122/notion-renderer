@@ -1,4 +1,4 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
 import type { ImageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockProps } from "src/types/utils.js";
@@ -26,7 +26,7 @@ export const Image: React.FC<Props> = ({
         alt={block.image.caption.map((b) => b.plain_text).join("")}
       />
       <div className="notion_caption notion_image_caption">
-        <RichTexts
+        <RichText
           richTextItems={block.image.caption}
           richTextItemMapper={richTextItemMapper}
           annotationMapper={annotationMapper}

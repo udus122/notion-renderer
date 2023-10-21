@@ -1,6 +1,6 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
-import { Blocks } from "./index.js";
+import { Blocks } from "./Blocks.js";
 
 import type { BlockObject } from "./Block.js";
 import type { ParagraphBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
@@ -25,7 +25,7 @@ export const Paragraph: React.FC<Props> = ({
       className={`notion_paragraph notion_color_${block.paragraph.color}`}
     >
       <p>
-        <RichTexts
+        <RichText
           richTextItems={block.paragraph.rich_text}
           richTextItemMapper={richTextItemMapper}
           annotationMapper={annotationMapper}

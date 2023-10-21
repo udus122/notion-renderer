@@ -1,5 +1,5 @@
 import type { BlockObject } from "src/components/Blocks/Block.js";
-import type { RichTextItem } from "src/components/RichTexts/RichText.js";
+import type { RichTextItem } from "src/components/RichText/RichTextItem.js";
 import type { LinkProps } from "src/index.js";
 
 export type Overwrite<T, U extends { [Key in keyof T]?: unknown }> = Omit<

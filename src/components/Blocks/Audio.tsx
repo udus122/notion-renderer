@@ -1,4 +1,4 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
 import type { AudioBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockProps } from "src/types/utils.js";
@@ -26,7 +26,7 @@ export const Audio: React.FC<Props> = ({
         <a href={audioUrl}>here</a>.
       </audio>
       <div className="notion_caption notion_audio_caption">
-        <RichTexts
+        <RichText
           richTextItems={block.audio.caption}
           richTextItemMapper={richTextItemMapper}
           annotationMapper={annotationMapper}

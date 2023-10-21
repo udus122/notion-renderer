@@ -5,7 +5,7 @@ import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/ap
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof InlineEquation> = {
-  title: "RichTexts/InlineEquation",
+  title: "RichText/InlineEquation",
   component: InlineEquation,
   tags: ["autodocs"],
 };

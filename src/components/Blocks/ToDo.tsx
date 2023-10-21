@@ -1,6 +1,6 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
-import { Blocks } from "./index.js";
+import { Blocks } from "./Blocks.js";
 
 import type { BlockObject } from "./Block.js";
 import type { ToDoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
@@ -30,7 +30,7 @@ export const ToDo: React.FC<Props> = ({
           {isChecked ? <CheckedBox /> : <CheckBox />}
         </span>
         <span className={`notion_to_do_text ${isChecked ? "checked" : ""}`}>
-          <RichTexts
+          <RichText
             richTextItems={block.to_do.rich_text}
             richTextItemMapper={richTextItemMapper}
             annotationMapper={annotationMapper}

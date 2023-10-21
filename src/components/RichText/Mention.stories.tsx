@@ -1,3 +1,5 @@
+import { Link } from "../Link.js";
+
 import MentionDatabaseRichTextObject from "./Mention.database.json";
 import { Mention } from "./Mention.js";
 import MentionPageRichTextObject from "./Mention.page.json";
@@ -6,7 +8,7 @@ import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Mention> = {
-  title: "RichTexts/Mention",
+  title: "RichText/Mention",
   component: Mention,
   tags: ["autodocs"],
 };
@@ -18,11 +20,13 @@ type Story = StoryObj<typeof Mention>;
 export const database: Story = {
   args: {
     richTextItem: MentionDatabaseRichTextObject as MentionRichTextItemResponse,
+    LinkComponent: Link,
   },
 };
 
 export const page: Story = {
   args: {
     richTextItem: MentionPageRichTextObject as MentionRichTextItemResponse,
+    LinkComponent: Link,
   },
 };

@@ -11,20 +11,27 @@ export type RichTextItem =
 
 type Props = RichTextProps<RichTextItem>;
 
-export const RichText: React.FC<Props> = ({
+export const RichTextItem: React.FC<Props> = (props) => {
+  if (!props.richTextItem) return null;
+  return (
+    <span className="notion_rich_text_item">
+      <RichTextItemContent {...props} />
+    </span>
+  );
+};
+
+const RichTextItemContent: React.FC<Props> = ({
   richTextItem,
   richTextItemMapper,
   annotationMapper,
   LinkComponent,
 }) => {
-  if (!richTextItem) return null;
   const mapper = {
     text: Text,
     equation: InlineEquation,
     mention: Mention,
     ...richTextItemMapper,
   };
-  if (!richTextItem) return null;
 
   switch (richTextItem.type) {
     case "text": {

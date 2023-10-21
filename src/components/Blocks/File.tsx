@@ -1,5 +1,5 @@
 import { Link } from "../Link.js";
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
 import type { FileBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockProps } from "src/types/utils.js";
@@ -38,7 +38,7 @@ export const File: React.FC<Props> = ({
         </div>
       </Link>
       <div className="notion_caption notion_file_caption">
-        <RichTexts
+        <RichText
           richTextItems={block.file.caption}
           richTextItemMapper={richTextItemMapper}
           annotationMapper={annotationMapper}

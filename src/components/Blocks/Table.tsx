@@ -1,4 +1,4 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
 import type { LinkProps } from "../Link.js";
 import type {
@@ -146,7 +146,7 @@ const Th: React.FC<{
 }> = ({ cell, richTextItemMapper, annotationMapper, LinkComponent }) => {
   return (
     <th>
-      <RichTexts
+      <RichText
         richTextItems={cell}
         richTextItemMapper={richTextItemMapper}
         annotationMapper={annotationMapper}
@@ -164,7 +164,7 @@ const Td: React.FC<{
 }> = ({ cell, richTextItemMapper, annotationMapper, LinkComponent }) => {
   return (
     <td>
-      <RichTexts
+      <RichText
         richTextItems={cell}
         richTextItemMapper={richTextItemMapper}
         annotationMapper={annotationMapper}

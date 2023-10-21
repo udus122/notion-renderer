@@ -1,18 +1,18 @@
-import { Annotations } from "./Annotation.js";
+import { Annotation } from "./Annotation.js";
 import RichTextAnnotationObject from "./Annotation.json";
 
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof Annotations> = {
-  title: "RichTexts/Annotations",
-  component: Annotations,
+const meta: Meta<typeof Annotation> = {
+  title: "Annotation",
+  component: Annotation,
   tags: ["autodocs"],
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Annotations>;
+type Story = StoryObj<typeof Annotation>;
 
 export const Default: Story = {
   args: {

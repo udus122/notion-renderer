@@ -1,6 +1,6 @@
 import { isFullUser } from "@notionhq/client";
 
-import { Annotations } from "./Annotation/Annotation.js";
+import { Annotation } from "./Annotation/Annotation.js";
 
 import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { RichTextProps } from "src/types/utils.js";
@@ -17,53 +17,53 @@ export const Mention: React.FC<Props> = ({
   switch (richTextItem.mention.type) {
     case "database":
       return (
-        <LinkComponent href={`/${richTextItem.mention.database.id}`}>
-          <span className="notion_rich_text_type_mention_type_database">
-            <Annotations
+        <span className="notion_rich_text_type_mention_type_database">
+          <LinkComponent href={`/${richTextItem.mention.database.id}`}>
+            <Annotation
               richTextItem={richTextItem}
               annotationMapper={annotationMapper}
             >
               {richTextItem.plain_text}
-            </Annotations>
-          </span>
-        </LinkComponent>
+            </Annotation>
+          </LinkComponent>
+        </span>
       );
     case "date":
       return (
         <span className="notion_rich_text_type_mention_type_date">
-          <Annotations
+          <Annotation
             richTextItem={richTextItem}
             annotationMapper={annotationMapper}
           >
             {richTextItem.plain_text}
-          </Annotations>
+          </Annotation>
         </span>
       );
     case "link_preview":
       return (
-        <LinkComponent href={richTextItem.mention.link_preview.url}>
-          <span className="notion_rich_text_type_mention_type_link_preview">
-            <Annotations
+        <span className="notion_rich_text_type_mention_type_link_preview">
+          <LinkComponent href={richTextItem.mention.link_preview.url}>
+            <Annotation
               richTextItem={richTextItem}
               annotationMapper={annotationMapper}
             >
               {richTextItem.plain_text}
-            </Annotations>
-          </span>
-        </LinkComponent>
+            </Annotation>
+          </LinkComponent>
+        </span>
       );
     case "page":
       return (
-        <LinkComponent href={`/${richTextItem.mention.page.id}`}>
-          <span className="notion_rich_text_type_mention_type_page">
-            <Annotations
+        <span className="notion_rich_text_type_mention_type_page">
+          <LinkComponent href={`/${richTextItem.mention.page.id}`}>
+            <Annotation
               richTextItem={richTextItem}
               annotationMapper={annotationMapper}
             >
               {richTextItem.plain_text}
-            </Annotations>
-          </span>
-        </LinkComponent>
+            </Annotation>
+          </LinkComponent>
+        </span>
       );
     case "template_mention":
       console.warn(`${richTextItem.mention.type} is not supported yet.`);
@@ -80,12 +80,12 @@ export const Mention: React.FC<Props> = ({
           ) : (
             "@"
           )}
-          <Annotations
+          <Annotation
             richTextItem={richTextItem}
             annotationMapper={annotationMapper}
           >
             {richTextItem.plain_text.replace("@", "")}
-          </Annotations>
+          </Annotation>
         </span>
       );
     default:

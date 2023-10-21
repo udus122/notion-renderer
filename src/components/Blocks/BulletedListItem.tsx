@@ -1,6 +1,6 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
-import { Blocks } from "./index.js";
+import { Blocks } from "./Blocks.js";
 
 import type { BlockObject } from "./Block.js";
 import type { BulletedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
@@ -28,7 +28,7 @@ export const BulletedListItem: React.FC<Props> = ({
       id={block.id}
       className={`notion_bulleted_list_item notion_color_${block.bulleted_list_item.color}`}
     >
-      <RichTexts
+      <RichText
         richTextItems={block.bulleted_list_item.rich_text}
         richTextItemMapper={richTextItemMapper}
         annotationMapper={annotationMapper}

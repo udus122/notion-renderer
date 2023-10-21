@@ -1,5 +1,5 @@
-import { Blocks } from "../Blocks/index.js";
-import { RichTexts } from "../RichTexts/index.js";
+import { Blocks } from "../Blocks/Blocks.js";
+import { RichText } from "../RichText/RichText.js";
 
 import type { ToggleBlockObject } from "../Blocks/Toggle.js";
 import type { BlockProps } from "src/types/utils.js";
@@ -20,7 +20,7 @@ export const OpenedToggle: React.FC<Props> = ({
       open
     >
       <summary className="notion_toggle_summary">
-        <RichTexts
+        <RichText
           richTextItems={block.toggle.rich_text}
           richTextItemMapper={richTextItemMapper}
           annotationMapper={annotationMapper}

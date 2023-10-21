@@ -1,4 +1,4 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
 import type {
   LinkTypeData,
@@ -40,7 +40,7 @@ export const Embed: React.FC<Props> = ({
     <div id={block.id} className="notion_embed">
       <iframe src={block.embed.url} title="notion embed content" />
       <div className="notion_caption notion_embed_caption">
-        <RichTexts
+        <RichText
           richTextItems={block.embed.caption}
           richTextItemMapper={richTextItemMapper}
           annotationMapper={annotationMapper}

@@ -1,4 +1,4 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
 import type { CodeBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockProps } from "src/types/utils.js";
@@ -20,7 +20,7 @@ export const Code: React.FC<Props> = ({
       </div>
       <pre className="notion_code_body">
         <code>
-          <RichTexts
+          <RichText
             richTextItems={block.code.rich_text}
             richTextItemMapper={richTextItemMapper}
             annotationMapper={annotationMapper}
@@ -30,7 +30,7 @@ export const Code: React.FC<Props> = ({
       </pre>
       {block.code.caption && (
         <div className="notion_caption">
-          <RichTexts
+          <RichText
             richTextItems={block.code.caption}
             richTextItemMapper={richTextItemMapper}
             annotationMapper={annotationMapper}

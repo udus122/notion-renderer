@@ -7,7 +7,7 @@ import { Underline } from "./Underline.js";
 
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
-export const Annotations: React.FC<{
+export const Annotation: React.FC<{
   richTextItem: RichTextItemResponse;
   children: React.ReactNode;
   annotationMapper?: object;

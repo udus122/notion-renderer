@@ -5,7 +5,7 @@ import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-en
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Text> = {
-  title: "RichTexts/Text",
+  title: "RichText/Text",
   component: Text,
   tags: ["autodocs"],
 };

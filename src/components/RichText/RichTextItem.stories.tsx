@@ -1,7 +1,7 @@
-import EquationRichTextObject from "./RichText.equation.json";
-import { RichText } from "./RichText.js";
-import MentionRichTextObject from "./RichText.mention.json";
-import TextRichTextObject from "./RichText.text.json";
+import EquationRichTextObject from "./RichTextItem.equation.json";
+import { RichTextItem } from "./RichTextItem.js";
+import MentionRichTextObject from "./RichTextItem.mention.json";
+import TextRichTextObject from "./RichTextItem.text.json";
 
 import type {
   TextRichTextItemResponse,
@@ -10,15 +10,15 @@ import type {
 } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof RichText> = {
-  title: "RichTexts/RichText",
-  component: RichText,
+const meta: Meta<typeof RichTextItem> = {
+  title: "RichText/RichTextItem",
+  component: RichTextItem,
   tags: ["autodocs"],
 };
 
 export default meta;
 
-type Story = StoryObj<typeof RichText>;
+type Story = StoryObj<typeof RichTextItem>;
 
 export const Text: Story = {
   args: {

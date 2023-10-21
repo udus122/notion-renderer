@@ -1,6 +1,6 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
-import { Blocks } from "./index.js";
+import { Blocks } from "./Blocks.js";
 
 import type { BlockObject } from "./Block.js";
 import type { NumberedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
@@ -25,7 +25,7 @@ export const NumberedListItem: React.FC<
       id={block.id}
       className={`notion_numbered_list_item notion_color_${block.numbered_list_item.color}`}
     >
-      <RichTexts
+      <RichText
         richTextItems={block.numbered_list_item.rich_text}
         richTextItemMapper={richTextItemMapper}
         annotationMapper={annotationMapper}

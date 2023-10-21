@@ -1,4 +1,4 @@
-import { RichTexts } from "../RichTexts/index.js";
+import { RichText } from "../RichText/RichText.js";
 
 import type { ArticleData } from "@extractus/article-extractor";
 import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
@@ -60,7 +60,7 @@ export const Bookmark: React.FC<Props> = ({
         </div>
       </LinkComponent>
       <div className="notion_caption notion_bookmark_caption">
-        <RichTexts
+        <RichText
           richTextItems={block.bookmark.caption}
           richTextItemMapper={richTextItemMapper}
           annotationMapper={annotationMapper}

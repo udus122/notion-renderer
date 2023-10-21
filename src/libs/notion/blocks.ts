@@ -28,6 +28,7 @@ import type {
 import type { AudioBlockObject } from "src/components/Blocks/Audio.js";
 import type { BlockObject } from "src/components/Blocks/Block.js";
 import type { BookmarkBlockObject } from "src/components/Blocks/Bookmark.js";
+import type { BulletedListBlockObject } from "src/components/Blocks/BulletedList.js";
 import type { BulletedListItemBlockObject } from "src/components/Blocks/BulletedListItem.js";
 import type { CalloutBlockObject } from "src/components/Blocks/Callout.js";
 import type { ChildDatabaseBlockObject } from "src/components/Blocks/ChildDatabase.js";
@@ -53,17 +54,16 @@ import type { ParagraphBlockObject } from "src/components/Blocks/Paragraph.js";
 import type { PdfBlockObject } from "src/components/Blocks/Pdf.js";
 import type { QuoteBlockObject } from "src/components/Blocks/Quote.js";
 import type { SyncedBlockBlockObject } from "src/components/Blocks/SyncedBlock.js";
+import type {
+  TableRowBlockObject,
+  TableBlockObject,
+} from "src/components/Blocks/Table.js";
 import type { TableOfContentsBlockObject } from "src/components/Blocks/TableOfContents.js";
 import type { TemplateBlockObject } from "src/components/Blocks/Template.js";
 import type { ToDoBlockObject } from "src/components/Blocks/ToDo.js";
 import type { ToggleBlockObject } from "src/components/Blocks/Toggle.js";
 import type { UnsupportedBlockObject } from "src/components/Blocks/Unsupported.js";
 import type { VideoBlockObject } from "src/components/Blocks/Video.js";
-import type {
-  BulletedListBlockObject,
-  TableRowBlockObject,
-  TableBlockObject,
-} from "src/index.js";
 import type { ListBlockChildrenResponseResults } from "src/types/notion.js";
 
 export const retrieveBlock = async (

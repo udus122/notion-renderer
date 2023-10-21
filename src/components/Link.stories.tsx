@@ -4,7 +4,7 @@ import TextObject from "./Link.json";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Link> = {
-  title: "Link",
+  title: "Link/Link",
   component: Link,
   tags: ["autodocs"],
 };

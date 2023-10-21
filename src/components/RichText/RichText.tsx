@@ -1,4 +1,4 @@
-import { RichText, type RichTextItem } from "./RichText.js";
+import { RichTextItem } from "./RichTextItem.js";
 
 import type { RichTextProps } from "src/types/utils.js";
 
@@ -7,7 +7,7 @@ type Props = { richTextItems: RichTextItem[] } & Omit<
   "richTextItem"
 >;
 
-export const RichTexts: React.FC<Props> = ({
+export const RichText: React.FC<Props> = ({
   richTextItems,
   richTextItemMapper,
   annotationMapper,
@@ -16,9 +16,9 @@ export const RichTexts: React.FC<Props> = ({
   if (!richTextItems) return null;
 
   return (
-    <>
+    <span className="notion_rich_text">
       {richTextItems.map((richTextItem, index) => (
-        <RichText
+        <RichTextItem
           key={`${index}-${richTextItem.plain_text}`}
           richTextItem={richTextItem}
           richTextItemMapper={richTextItemMapper}
@@ -26,12 +26,6 @@ export const RichTexts: React.FC<Props> = ({
           LinkComponent={LinkComponent}
         />
       ))}
-    </>
+    </span>
   );
 };
-
-export * from "./Annotation/index.js";
-export * from "./Text.js";
-export * from "./InlineEquation.js";
-export * from "./Mention.js";
-export * from "./RichText.js";
