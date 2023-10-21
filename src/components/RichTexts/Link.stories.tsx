@@ -17,6 +17,5 @@ type Story = StoryObj<typeof Link>;
 export const Default: Story = {
   args: {
     richTextItem: LinkRichText as TextRichTextItemResponse,
-    children: "link text",
   },
 };

@@ -1,22 +1,17 @@
-import { Annotations } from "../Annotation/Annotation.js";
-
+import { Annotations } from "./Annotation/Annotation.js";
 import { Link } from "./Link.js";
 
 import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { RichTextComponentProps } from "src/types/utils.js";
 
-const defaultAnnotationMapper = {
-  link: Link,
-};
+export type TextRichTextItem = TextRichTextItemResponse;
 
-type Props = {
-  richTextItem: TextRichTextItemResponse;
-  customMapper?: object;
-};
+type Props = RichTextComponentProps<TextRichTextItem>;
 
-export const Text: React.FC<Props> = ({ richTextItem, customMapper }) => {
+export const Text: React.FC<Props> = ({ richTextItem, mapper = {} }) => {
   const annotationMapper = {
-    ...defaultAnnotationMapper,
-    ...customMapper,
+    link: Link,
+    ...mapper,
   };
 
   const LinkComponent = annotationMapper["link"];

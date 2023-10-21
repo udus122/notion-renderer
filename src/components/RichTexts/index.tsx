@@ -16,7 +16,7 @@ export const RichTexts = ({
       {richTexts.map((richTextItem, index) => (
         <RichText
           richTextItem={richTextItem}
-          customRichTextComponentMapper={customRichTextComponentMapper}
+          mapper={customRichTextComponentMapper}
           key={`${index}-${richTextItem.plain_text}`}
         />
       ))}
@@ -25,7 +25,8 @@ export const RichTexts = ({
 };
 
 export * from "./Annotation/index.js";
-export * from "./Text/index.js";
+export * from "./Text.js";
+export * from "./Link.js";
 export * from "./InlineEquation.js";
 export * from "./Mention.js";
 export * from "./RichText.js";

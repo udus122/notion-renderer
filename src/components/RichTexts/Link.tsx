@@ -1,8 +1,8 @@
-import { Annotations } from "../Annotation/Annotation.js";
+import { Annotations } from "./Annotation/Annotation.js";
 
 import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
-type Props = React.ComponentProps<"a"> & {
+type Props = {
   richTextItem: TextRichTextItemResponse;
 };
 

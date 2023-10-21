@@ -3,10 +3,11 @@ import katex from "katex";
 import { Annotations } from "./Annotation/Annotation.js";
 
 import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { RichTextComponentProps } from "src/types/utils.js";
 
-type Props = {
-  richTextItem: EquationRichTextItemResponse;
-};
+export type EquationRichTextItem = EquationRichTextItemResponse;
+
+type Props = RichTextComponentProps<EquationRichTextItem>;
 
 export const InlineEquation: React.FC<Props> = ({ richTextItem }) => (
   <span className="notion_rich_text_type_equation">

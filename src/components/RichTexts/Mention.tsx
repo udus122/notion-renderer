@@ -3,10 +3,11 @@ import { isFullUser } from "@notionhq/client";
 import { Annotations } from "./Annotation/Annotation.js";
 
 import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { RichTextComponentProps } from "src/types/utils.js";
 
-type Props = {
-  richTextItem: MentionRichTextItemResponse;
-};
+export type MentionRichTextItem = MentionRichTextItemResponse;
+
+type Props = RichTextComponentProps<MentionRichTextItem>;
 
 export const Mention: React.FC<Props> = ({ richTextItem }) => {
   switch (richTextItem.mention.type) {
