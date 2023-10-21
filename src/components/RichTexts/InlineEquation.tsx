@@ -7,11 +7,17 @@ import type { RichTextProps } from "src/types/utils.js";
 
 export type EquationRichTextItem = EquationRichTextItemResponse;
 
-type Props = RichTextProps<EquationRichTextItem>;
+type Props = Omit<RichTextProps<EquationRichTextItem>, "richTextItemMapper">;
 
-export const InlineEquation: React.FC<Props> = ({ richTextItem }) => (
+export const InlineEquation: React.FC<Props> = ({
+  richTextItem,
+  annotationMapper,
+}) => (
   <span className="notion_rich_text_type_equation">
-    <Annotations richTextItem={richTextItem}>
+    <Annotations
+      richTextItem={richTextItem}
+      annotationMapper={annotationMapper}
+    >
       <span
         dangerouslySetInnerHTML={{
           // eslint-disable-next-line import/no-named-as-default-member

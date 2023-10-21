@@ -1,5 +1,6 @@
 import type { BlockObject } from "src/components/Blocks/Block.js";
 import type { RichTextItem } from "src/components/RichTexts/RichText.js";
+import type { LinkProps } from "src/index.js";
 
 export type Overwrite<T, U extends { [Key in keyof T]?: unknown }> = Omit<
   T,
@@ -20,15 +21,15 @@ export type Result<T, E extends Error = Error> =
 export type BlockProps<T extends BlockObject> = {
   block: T;
   blocks: Array<BlockObject>;
-  blockMapper?: object;
-  richTextMapper?: object;
-  annotationMapper?: object;
-  linkMapper?: object;
+  blockMapper: object;
+  richTextItemMapper: object;
+  annotationMapper: object;
+  LinkComponent: React.ComponentType<LinkProps>;
 };
 
 export type RichTextProps<T extends RichTextItem> = {
   richTextItem: T;
-  richTextItemMapper?: object;
-  annotationMapper?: object;
-  linkMapper?: object;
+  richTextItemMapper: object;
+  annotationMapper: object;
+  LinkComponent: React.ComponentType<LinkProps>;
 };

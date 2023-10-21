@@ -12,10 +12,15 @@ export type BookmarkBlockObject = BookmarkBlockObjectResponse & {
 
 type Props = BlockProps<BookmarkBlockObject>;
 
-export const Bookmark: React.FC<Props> = ({ block }) => {
+export const Bookmark: React.FC<Props> = ({
+  block,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
+}) => {
   return (
     <div className="notion_bookmark">
-      <a href={block.bookmark.url} target="_blank" rel="noopener noreferrer">
+      <LinkComponent href={block.bookmark.url}>
         <div className="notion_bookmark_container">
           <div className="notion_bookmark_content">
             <div className="notion_bookmark_title">
@@ -53,9 +58,14 @@ export const Bookmark: React.FC<Props> = ({ block }) => {
             </div>
           )}
         </div>
-      </a>
+      </LinkComponent>
       <div className="notion_caption notion_bookmark_caption">
-        <RichTexts richTexts={block.bookmark.caption} />
+        <RichTexts
+          richTextItems={block.bookmark.caption}
+          richTextItemMapper={richTextItemMapper}
+          annotationMapper={annotationMapper}
+          LinkComponent={LinkComponent}
+        />
       </div>
     </div>
   );

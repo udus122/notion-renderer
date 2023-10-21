@@ -7,7 +7,12 @@ export type ImageBlockObject = ImageBlockObjectResponse;
 
 type Props = BlockProps<ImageBlockObject>;
 
-export const Image: React.FC<Props> = ({ block }) => {
+export const Image: React.FC<Props> = ({
+  block,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
+}) => {
   return (
     <div id={block.id} className="notion_image">
       <img
@@ -21,7 +26,12 @@ export const Image: React.FC<Props> = ({ block }) => {
         alt={block.image.caption.map((b) => b.plain_text).join("")}
       />
       <div className="notion_caption notion_image_caption">
-        <RichTexts richTexts={block.image.caption} />
+        <RichTexts
+          richTextItems={block.image.caption}
+          richTextItemMapper={richTextItemMapper}
+          annotationMapper={annotationMapper}
+          LinkComponent={LinkComponent}
+        />
       </div>
     </div>
   );

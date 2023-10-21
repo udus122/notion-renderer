@@ -17,7 +17,12 @@ export type VideoBlockObject = VideoBlockObjectResponse & {
 
 type Props = BlockProps<VideoBlockObject>;
 
-export const Video: React.FC<Props> = ({ block }) => {
+export const Video: React.FC<Props> = ({
+  block,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
+}) => {
   const videoUrl =
     block.video.type == "external"
       ? block.video.external.url
@@ -43,7 +48,12 @@ export const Video: React.FC<Props> = ({ block }) => {
         <a href={videoUrl}>here</a>.
       </video>
       <div className="notion_caption notion_video_caption">
-        <RichTexts richTexts={block.video.caption} />
+        <RichTexts
+          richTextItems={block.video.caption}
+          richTextItemMapper={richTextItemMapper}
+          annotationMapper={annotationMapper}
+          LinkComponent={LinkComponent}
+        />
       </div>
     </div>
   );

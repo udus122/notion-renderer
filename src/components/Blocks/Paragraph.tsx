@@ -14,7 +14,10 @@ type Props = BlockProps<ParagraphBlockObject>;
 
 export const Paragraph: React.FC<Props> = ({
   block,
-  richTextMapper: mapper,
+  blockMapper,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
 }) => {
   return (
     <div
@@ -22,11 +25,22 @@ export const Paragraph: React.FC<Props> = ({
       className={`notion_paragraph notion_color_${block.paragraph.color}`}
     >
       <p>
-        <RichTexts richTexts={block.paragraph.rich_text} />
+        <RichTexts
+          richTextItems={block.paragraph.rich_text}
+          richTextItemMapper={richTextItemMapper}
+          annotationMapper={annotationMapper}
+          LinkComponent={LinkComponent}
+        />
       </p>
       {block.paragraph.children && (
         <div className={"notion_paragraph_children"}>
-          <Blocks blocks={block.paragraph.children} mapper={mapper} />
+          <Blocks
+            blocks={block.paragraph.children}
+            blockMapper={blockMapper}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         </div>
       )}
     </div>

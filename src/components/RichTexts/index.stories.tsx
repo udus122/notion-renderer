@@ -17,6 +17,6 @@ type Story = StoryObj<typeof RichTexts>;
 
 export const Default: Story = {
   args: {
-    richTexts: RichTextsObject as RichTextItemResponse[],
+    richTextItems: RichTextsObject as RichTextItemResponse[],
   },
 };

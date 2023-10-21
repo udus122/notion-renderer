@@ -10,7 +10,11 @@ export type TableOfContentsBlockObject = TableOfContentsBlockObjectResponse;
 
 type Props = BlockProps<TableOfContentsBlockObject>;
 
-export const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
+export const TableOfContents: React.FC<Props> = ({
+  block,
+  blocks,
+  LinkComponent,
+}) => {
   const headings = blocks?.filter(
     (
       block
@@ -32,10 +36,10 @@ export const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
           return (
             <div key={heading.id} className="notion_table_of_contents_item">
               <div className={`notion_table_of_contents_item_${heading.type}`}>
-                <a href={`#${heading.id}`}>
+                <LinkComponent href={`#${heading.id}`}>
                   {/* @ts-expect-error: because heading objects always have a 'rich_text' property  */}
-                  <RichTexts richTexts={heading[heading.type].rich_text} />
-                </a>
+                  <RichTexts richTextItems={heading[heading.type].rich_text} />
+                </LinkComponent>
               </div>
             </div>
           );

@@ -29,7 +29,7 @@ export const Default: Story = {
 export const Custom: Story = {
   args: {
     blocks: BlocksObject as Array<BlockObject>,
-    mapper: {
+    blockMapper: {
       toggle: OpenedToggle,
       heading_1: OpenedHeading1,
       heading_2: OpenedHeading2,

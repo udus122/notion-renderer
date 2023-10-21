@@ -14,7 +14,13 @@ export type CalloutBlockObject = CalloutBlockObjectResponse & {
 
 type Props = BlockProps<CalloutBlockObject>;
 
-export const Callout: React.FC<Props> = ({ block, richTextMapper: mapper }) => {
+export const Callout: React.FC<Props> = ({
+  block,
+  blockMapper,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
+}) => {
   return (
     <div
       id={block.id}
@@ -25,10 +31,21 @@ export const Callout: React.FC<Props> = ({ block, richTextMapper: mapper }) => {
       </span>
       <div className="notion_callout_content">
         <span>
-          <RichTexts richTexts={block.callout.rich_text} />
+          <RichTexts
+            richTextItems={block.callout.rich_text}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         </span>
         {block.callout.children && (
-          <Blocks blocks={block.callout.children} mapper={mapper} />
+          <Blocks
+            blocks={block.callout.children}
+            blockMapper={blockMapper}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         )}
       </div>
     </div>

@@ -8,7 +8,10 @@ type Props = BlockProps<ToggleBlockObject>;
 
 export const OpenedToggle: React.FC<Props> = ({
   block,
-  richTextMapper: mapper,
+  blockMapper,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
 }) => {
   return (
     <details
@@ -17,11 +20,22 @@ export const OpenedToggle: React.FC<Props> = ({
       open
     >
       <summary className="notion_toggle_summary">
-        <RichTexts richTexts={block.toggle.rich_text} />
+        <RichTexts
+          richTextItems={block.toggle.rich_text}
+          richTextItemMapper={richTextItemMapper}
+          annotationMapper={annotationMapper}
+          LinkComponent={LinkComponent}
+        />
       </summary>
       <div className="notion_toggle_details">
         {block.toggle.children && (
-          <Blocks blocks={block.toggle.children} mapper={mapper} />
+          <Blocks
+            blocks={block.toggle.children}
+            blockMapper={blockMapper}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         )}
       </div>
     </details>

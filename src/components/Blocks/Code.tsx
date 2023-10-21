@@ -7,7 +7,12 @@ export type CodeBlockObject = CodeBlockObjectResponse;
 
 type Props = BlockProps<CodeBlockObject>;
 
-export const Code: React.FC<Props> = ({ block }) => {
+export const Code: React.FC<Props> = ({
+  block,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
+}) => {
   return (
     <div id={block.id} className="notion_code">
       <div className="notion_code_header">
@@ -15,12 +20,22 @@ export const Code: React.FC<Props> = ({ block }) => {
       </div>
       <pre className="notion_code_body">
         <code>
-          <RichTexts richTexts={block.code.rich_text} />
+          <RichTexts
+            richTextItems={block.code.rich_text}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         </code>
       </pre>
       {block.code.caption && (
         <div className="notion_caption">
-          <RichTexts richTexts={block.code.caption} />
+          <RichTexts
+            richTextItems={block.code.caption}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         </div>
       )}
     </div>

@@ -12,16 +12,33 @@ export type QuoteBlockObject = QuoteBlockObjectResponse & {
 
 type Props = BlockProps<QuoteBlockObject>;
 
-export const Quote: React.FC<Props> = ({ block, richTextMapper: mapper }) => {
+export const Quote: React.FC<Props> = ({
+  block,
+  blockMapper,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
+}) => {
   return (
     <blockquote
       id={block.id}
       className={`notion_quote notion_color_${block.quote.color}`}
     >
-      <RichTexts richTexts={block.quote.rich_text} />
+      <RichTexts
+        richTextItems={block.quote.rich_text}
+        richTextItemMapper={richTextItemMapper}
+        annotationMapper={annotationMapper}
+        LinkComponent={LinkComponent}
+      />
       {block.quote.children && (
         <div className={"notion_quote_children"}>
-          <Blocks blocks={block.quote.children} mapper={mapper} />
+          <Blocks
+            blocks={block.quote.children}
+            blockMapper={blockMapper}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         </div>
       )}
     </blockquote>

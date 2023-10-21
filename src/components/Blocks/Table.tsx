@@ -1,5 +1,6 @@
 import { RichTexts } from "../RichTexts/index.js";
 
+import type { LinkProps } from "../Link.js";
 import type {
   TableBlockObjectResponse,
   TableRowBlockObjectResponse,
@@ -16,7 +17,12 @@ export type TableCellBlockObjectComponent =
 
 type Props = BlockProps<TableBlockObject>;
 
-export const Table: React.FC<Props> = ({ block }) => {
+export const Table: React.FC<Props> = ({
+  block,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
+}) => {
   return (
     <table id={block.id} className="notion_table">
       <tbody>
@@ -24,7 +30,13 @@ export const Table: React.FC<Props> = ({ block }) => {
           block.table.table_rows.map((table_row, index) => {
             if (block.table.has_row_header && index === 0) {
               return (
-                <TableRowRowHeader key={table_row.id} table_row={table_row} />
+                <TableRowRowHeader
+                  key={table_row.id}
+                  table_row={table_row}
+                  richTextItemMapper={richTextItemMapper}
+                  annotationMapper={annotationMapper}
+                  LinkComponent={LinkComponent}
+                />
               );
             }
             if (block.table.has_column_header) {
@@ -32,11 +44,20 @@ export const Table: React.FC<Props> = ({ block }) => {
                 <TableRowColumnHeader
                   key={table_row.id}
                   table_row={table_row}
+                  richTextItemMapper={richTextItemMapper}
+                  annotationMapper={annotationMapper}
+                  LinkComponent={LinkComponent}
                 />
               );
             }
             return (
-              <TableRowNoHeader key={table_row.id} table_row={table_row} />
+              <TableRowNoHeader
+                key={table_row.id}
+                table_row={table_row}
+                richTextItemMapper={richTextItemMapper}
+                annotationMapper={annotationMapper}
+                LinkComponent={LinkComponent}
+              />
             );
           })}
       </tbody>
@@ -46,11 +67,20 @@ export const Table: React.FC<Props> = ({ block }) => {
 
 const TableRowRowHeader: React.FC<{
   table_row: TableRowBlockObject;
-}> = ({ table_row }) => {
+  richTextItemMapper: object;
+  annotationMapper: object;
+  LinkComponent: React.ComponentType<LinkProps>;
+}> = ({ table_row, richTextItemMapper, annotationMapper, LinkComponent }) => {
   return (
     <tr id={table_row.id} className="notion_table_row">
       {table_row.table_row.cells.map((cell) => (
-        <Th key={table_row.id} cell={cell} />
+        <Th
+          key={table_row.id}
+          cell={cell}
+          richTextItemMapper={richTextItemMapper}
+          annotationMapper={annotationMapper}
+          LinkComponent={LinkComponent}
+        />
       ))}
     </tr>
   );
@@ -58,14 +88,29 @@ const TableRowRowHeader: React.FC<{
 
 const TableRowColumnHeader: React.FC<{
   table_row: TableRowBlockObject;
-}> = ({ table_row }) => {
+  richTextItemMapper: object;
+  annotationMapper: object;
+  LinkComponent: React.ComponentType<LinkProps>;
+}> = ({ table_row, richTextItemMapper, annotationMapper, LinkComponent }) => {
   return (
     <tr id={table_row.id} className="notion_table_row">
       {table_row.table_row.cells.map((cell, index) => {
         return index === 0 ? (
-          <Th key={table_row.id} cell={cell} />
+          <Th
+            key={table_row.id}
+            cell={cell}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         ) : (
-          <Td key={table_row.id} cell={cell} />
+          <Td
+            key={table_row.id}
+            cell={cell}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         );
       })}
     </tr>
@@ -74,11 +119,20 @@ const TableRowColumnHeader: React.FC<{
 
 const TableRowNoHeader: React.FC<{
   table_row: TableRowBlockObject;
-}> = ({ table_row }) => {
+  richTextItemMapper: object;
+  annotationMapper: object;
+  LinkComponent: React.ComponentType<LinkProps>;
+}> = ({ table_row, richTextItemMapper, annotationMapper, LinkComponent }) => {
   return (
     <tr id={table_row.id} className="notion_table_row">
       {table_row.table_row.cells.map((cell) => (
-        <Td key={table_row.id} cell={cell} />
+        <Td
+          key={table_row.id}
+          cell={cell}
+          richTextItemMapper={richTextItemMapper}
+          annotationMapper={annotationMapper}
+          LinkComponent={LinkComponent}
+        />
       ))}
     </tr>
   );
@@ -86,20 +140,36 @@ const TableRowNoHeader: React.FC<{
 
 const Th: React.FC<{
   cell: TableCellBlockObjectComponent;
-}> = ({ cell }) => {
+  richTextItemMapper: object;
+  annotationMapper: object;
+  LinkComponent: React.ComponentType<LinkProps>;
+}> = ({ cell, richTextItemMapper, annotationMapper, LinkComponent }) => {
   return (
     <th>
-      <RichTexts richTexts={cell} />
+      <RichTexts
+        richTextItems={cell}
+        richTextItemMapper={richTextItemMapper}
+        annotationMapper={annotationMapper}
+        LinkComponent={LinkComponent}
+      />
     </th>
   );
 };
 
 const Td: React.FC<{
   cell: TableCellBlockObjectComponent;
-}> = ({ cell }) => {
+  richTextItemMapper: object;
+  annotationMapper: object;
+  LinkComponent: React.ComponentType<LinkProps>;
+}> = ({ cell, richTextItemMapper, annotationMapper, LinkComponent }) => {
   return (
     <td>
-      <RichTexts richTexts={cell} />
+      <RichTexts
+        richTextItems={cell}
+        richTextItemMapper={richTextItemMapper}
+        annotationMapper={annotationMapper}
+        LinkComponent={LinkComponent}
+      />
     </td>
   );
 };

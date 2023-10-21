@@ -1,4 +1,5 @@
 import { extractTitleProperty } from "../../libs/notion/util.js";
+import { Link } from "../Link.js";
 import { RichTexts } from "../RichTexts/index.js";
 
 import { Icon } from "./Icon.js";
@@ -33,20 +34,30 @@ export type LinkToPageBlockObject = LinkToPageBlockObjectResponse & {
 
 type Props = BlockProps<LinkToPageBlockObject>;
 
-export const LinkToPage: React.FC<Props> = ({ block }) => {
+export const LinkToPage: React.FC<Props> = ({
+  block,
+  LinkComponent,
+  richTextItemMapper,
+  annotationMapper,
+}) => {
   if (block.link_to_page.type === "page_id" && block.link_to_page.page) {
     const titleRichText = extractTitleProperty(block.link_to_page.page);
     return (
-      <a className="notion_link" href={`/${block.id}`}>
-        <div id={block.id} className="notion_link_to_page">
+      <div id={block.id} className="notion_link_to_page">
+        <LinkComponent href={`/${block.id}`}>
           <span className="notion_link_to_page_icon">
             {<Icon icon={block.link_to_page.page?.icon ?? null} />}
           </span>
           <span className="notion_link_to_page_title">
-            <RichTexts richTexts={titleRichText} />
+            <RichTexts
+              richTextItems={titleRichText}
+              richTextItemMapper={richTextItemMapper}
+              annotationMapper={annotationMapper}
+              LinkComponent={LinkComponent}
+            />
           </span>
-        </div>
-      </a>
+        </LinkComponent>
+      </div>
     );
   }
   if (
@@ -55,16 +66,21 @@ export const LinkToPage: React.FC<Props> = ({ block }) => {
   ) {
     const titleRichTexts = extractTitleProperty(block.link_to_page.database);
     return (
-      <a href={`/${block.id}`}>
-        <div id={block.id} className="notion_link_to_page">
+      <div id={block.id} className="notion_link_to_page">
+        <Link href={`/${block.id}`}>
           <span className="notion_link_to_page_icon">
             {<Icon icon={block.link_to_page.database?.icon ?? null} />}
           </span>
           <span className="notion_link_to_page_title">
-            <RichTexts richTexts={titleRichTexts} />
+            <RichTexts
+              richTextItems={titleRichTexts}
+              richTextItemMapper={richTextItemMapper}
+              annotationMapper={annotationMapper}
+              LinkComponent={LinkComponent}
+            />
           </span>
-        </div>
-      </a>
+        </Link>
+      </div>
     );
   }
   if (block.link_to_page.type === "comment_id" && block.link_to_page.comments) {

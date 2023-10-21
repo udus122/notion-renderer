@@ -1,3 +1,4 @@
+import { Link } from "../Link.js";
 import { RichTexts } from "../RichTexts/index.js";
 
 import type { FileBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
@@ -7,7 +8,12 @@ export type FileBlockObject = FileBlockObjectResponse;
 
 type Props = BlockProps<FileBlockObject>;
 
-export const File: React.FC<Props> = ({ block }) => {
+export const File: React.FC<Props> = ({
+  block,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
+}) => {
   const fileUrl =
     block.file.type == "external"
       ? block.file.external.url
@@ -20,7 +26,7 @@ export const File: React.FC<Props> = ({ block }) => {
 
   return (
     <div id={block.id} className="notion_file">
-      <a className="notion_link" href={fileUrl}>
+      <Link href={fileUrl}>
         <div className="notion_file_title">
           <img
             src="https://www.notion.so/icons/document_gray.svg"
@@ -30,9 +36,14 @@ export const File: React.FC<Props> = ({ block }) => {
           />{" "}
           {filename}
         </div>
-      </a>
+      </Link>
       <div className="notion_caption notion_file_caption">
-        <RichTexts richTexts={block.file.caption} />
+        <RichTexts
+          richTextItems={block.file.caption}
+          richTextItemMapper={richTextItemMapper}
+          annotationMapper={annotationMapper}
+          LinkComponent={LinkComponent}
+        />
       </div>
     </div>
   );

@@ -1,5 +1,4 @@
 import { InlineEquation, type EquationRichTextItem } from "./InlineEquation.js";
-import { Link } from "./Link.js";
 import { Mention, type MentionRichTextItem } from "./Mention.js";
 import { Text, type TextRichTextItem } from "./Text.js";
 
@@ -14,43 +13,47 @@ type Props = RichTextProps<RichTextItem>;
 
 export const RichText: React.FC<Props> = ({
   richTextItem,
-  richTextItemMapper = {},
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
 }) => {
   if (!richTextItem) return null;
-  const richTextComponentMapper = {
+  const mapper = {
     text: Text,
     equation: InlineEquation,
     mention: Mention,
-    link: Link,
     ...richTextItemMapper,
   };
   if (!richTextItem) return null;
 
   switch (richTextItem.type) {
     case "text": {
-      const TypeText = richTextComponentMapper[richTextItem.type];
+      const TypeText = mapper[richTextItem.type];
       return (
         <TypeText
           richTextItem={richTextItem}
-          richTextItemMapper={richTextItemMapper}
+          annotationMapper={annotationMapper}
+          LinkComponent={LinkComponent}
         />
       );
     }
     case "equation": {
-      const TypeEquation = richTextComponentMapper[richTextItem.type];
+      const TypeEquation = mapper[richTextItem.type];
       return (
         <TypeEquation
           richTextItem={richTextItem}
-          richTextItemMapper={richTextItemMapper}
+          annotationMapper={annotationMapper}
+          LinkComponent={LinkComponent}
         />
       );
     }
     case "mention": {
-      const TypeMention = richTextComponentMapper[richTextItem.type];
+      const TypeMention = mapper[richTextItem.type];
       return (
         <TypeMention
           richTextItem={richTextItem}
-          richTextItemMapper={richTextItemMapper}
+          annotationMapper={annotationMapper}
+          LinkComponent={LinkComponent}
         />
       );
     }

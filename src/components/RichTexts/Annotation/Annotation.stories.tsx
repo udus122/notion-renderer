@@ -25,7 +25,7 @@ export const withCustomMapper: Story = {
   args: {
     richTextItem: RichTextAnnotationObject as RichTextItemResponse,
     children: "text with all annotation with custom Bold(reset all style)",
-    customAnnotationMapper: {
+    annotationMapper: {
       // eslint-disable-next-line @typescript-eslint/ban-ts-comment
       // @ts-ignore
       bold: ({ children }) => (

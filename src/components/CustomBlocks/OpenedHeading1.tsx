@@ -8,7 +8,10 @@ type Props = BlockProps<Heading1BlockObject>;
 
 export const OpenedHeading1: React.FC<Props> = ({
   block,
-  richTextMapper: mapper,
+  blockMapper,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
 }) => {
   return (
     <>
@@ -20,12 +23,23 @@ export const OpenedHeading1: React.FC<Props> = ({
         >
           <summary className="notion_toggle_summary">
             <h1>
-              <RichTexts richTexts={block.heading_1.rich_text} />
+              <RichTexts
+                richTextItems={block.heading_1.rich_text}
+                richTextItemMapper={richTextItemMapper}
+                annotationMapper={annotationMapper}
+                LinkComponent={LinkComponent}
+              />
             </h1>
           </summary>
           <div className="notion_toggle_details">
             {block.heading_1.children && (
-              <Blocks blocks={block.heading_1.children} mapper={mapper} />
+              <Blocks
+                blocks={block.heading_1.children}
+                blockMapper={blockMapper}
+                richTextItemMapper={richTextItemMapper}
+                annotationMapper={annotationMapper}
+                LinkComponent={LinkComponent}
+              />
             )}
           </div>
         </details>
@@ -34,7 +48,12 @@ export const OpenedHeading1: React.FC<Props> = ({
           id={block.id}
           className={`notion_heading notion_heading_1 notion_color_${block.heading_1.color}`}
         >
-          <RichTexts richTexts={block.heading_1.rich_text} />
+          <RichTexts
+            richTextItems={block.heading_1.rich_text}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         </h1>
       )}
     </>

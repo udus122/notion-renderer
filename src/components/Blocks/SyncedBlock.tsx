@@ -1,4 +1,5 @@
 import { Block, type BlockObject } from "./Block.js";
+
 import { Blocks } from "./index.js";
 
 import type { SyncedBlockBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
@@ -21,14 +22,23 @@ type Props = BlockProps<SyncedBlockBlockObject>;
 export const SyncedBlock: React.FC<Props> = ({
   block,
   blocks,
-  richTextMapper: mapper,
+  blockMapper,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
 }) => {
   return (
     <div className="notion_synced_block">
       {block.synced_block.synced_from === null
         ? block.synced_block.children && (
             <div className={"notion_synced_block_original"}>
-              <Blocks blocks={block.synced_block.children} />
+              <Blocks
+                blocks={block.synced_block.children}
+                blockMapper={blockMapper}
+                richTextItemMapper={richTextItemMapper}
+                annotationMapper={annotationMapper}
+                LinkComponent={LinkComponent}
+              />
             </div>
           )
         : block.synced_block.synced_from.block && (
@@ -36,7 +46,10 @@ export const SyncedBlock: React.FC<Props> = ({
               <Block
                 block={block.synced_block.synced_from.block}
                 blocks={blocks}
-                richTextMapper={mapper}
+                blockMapper={blockMapper}
+                richTextItemMapper={richTextItemMapper}
+                annotationMapper={annotationMapper}
+                LinkComponent={LinkComponent}
               />
             </div>
           )}

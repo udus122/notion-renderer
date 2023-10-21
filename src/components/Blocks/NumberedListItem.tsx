@@ -13,16 +13,33 @@ export type NumberedListItemBlockObject =
 
 export const NumberedListItem: React.FC<
   BlockProps<NumberedListItemBlockObject>
-> = ({ block, richTextMapper: mapper }) => {
+> = ({
+  block,
+  blockMapper,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
+}) => {
   return (
     <li
       id={block.id}
       className={`notion_numbered_list_item notion_color_${block.numbered_list_item.color}`}
     >
-      <RichTexts richTexts={block.numbered_list_item.rich_text} />
+      <RichTexts
+        richTextItems={block.numbered_list_item.rich_text}
+        richTextItemMapper={richTextItemMapper}
+        annotationMapper={annotationMapper}
+        LinkComponent={LinkComponent}
+      />
       <div>
         {block.numbered_list_item.children && (
-          <Blocks blocks={block.numbered_list_item.children} mapper={mapper} />
+          <Blocks
+            blocks={block.numbered_list_item.children}
+            blockMapper={blockMapper}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         )}
       </div>
     </li>

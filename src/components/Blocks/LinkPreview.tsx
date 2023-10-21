@@ -10,14 +10,10 @@ export type LinkPreviewBlockObject = LinkPreviewBlockObjectResponse & {
 
 type Props = BlockProps<LinkPreviewBlockObject>;
 
-export const LinkPreview: React.FC<Props> = ({ block }) => {
+export const LinkPreview: React.FC<Props> = ({ block, LinkComponent }) => {
   return (
     <div className="notion_link_preview">
-      <a
-        href={block.link_preview.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <LinkComponent href={block.link_preview.url}>
         <div className="notion_link_preview_container">
           <div className="notion_link_preview_content">
             <div className="notion_link_preview_title">
@@ -55,7 +51,7 @@ export const LinkPreview: React.FC<Props> = ({ block }) => {
             </div>
           )}
         </div>
-      </a>
+      </LinkComponent>
     </div>
   );
 };

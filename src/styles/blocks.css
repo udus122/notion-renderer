@@ -102,6 +102,16 @@
   display: flex;
   align-items: center;
 }
+.notion_breadcrumb .notion_link {
+  opacity: unset;
+  transition: border-color 0.1s ease-in, opacity 0.1s ease-in;
+  text-decoration-line: unset;
+}
+.notion_breadcrumb .notion_link:hover {
+  opacity: 0.7;
+  transition: border-color 0.1s ease-in, opacity 0.1s ease-in;
+  text-decoration-line: unset;
+}
 .notion_breadcrumb_title {
   display: flex;
   align-items: center;
@@ -110,7 +120,7 @@
   margin-inline: 0.25rem;
 }
 /* child_database block */
-.notion_child_database {
+.notion_child_database > * {
   display: flex;
   align-items: center;
 }

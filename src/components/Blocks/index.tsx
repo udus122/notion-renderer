@@ -1,11 +1,18 @@
+import { Link } from "../Link.js";
+
 import { Block, type BlockObject } from "./Block.js";
 
-type Props = {
-  blocks: Array<BlockObject>;
-  mapper?: object;
-};
+import type { BlockProps } from "src/types/utils.js";
 
-export const Blocks: React.FC<Props> = function ({ blocks, mapper = {} }) {
+type Props = Omit<BlockProps<BlockObject>, "block">;
+
+export const Blocks: React.FC<Props> = function ({
+  blocks,
+  blockMapper = {},
+  richTextItemMapper: richTextMapper = {},
+  annotationMapper = {},
+  LinkComponent = Link,
+}) {
   return (
     <>
       {blocks.map((block) => {
@@ -14,7 +21,10 @@ export const Blocks: React.FC<Props> = function ({ blocks, mapper = {} }) {
             key={block.id}
             block={block}
             blocks={blocks}
-            richTextMapper={mapper}
+            blockMapper={blockMapper}
+            richTextItemMapper={richTextMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
           />
         );
       })}

@@ -12,7 +12,13 @@ export type ToDoBlockObject = ToDoBlockObjectResponse & {
 
 type Props = BlockProps<ToDoBlockObject>;
 
-export const ToDo: React.FC<Props> = ({ block, richTextMapper: mapper }) => {
+export const ToDo: React.FC<Props> = ({
+  block,
+  blockMapper,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
+}) => {
   const isChecked = block.to_do.checked;
   return (
     <div
@@ -24,12 +30,23 @@ export const ToDo: React.FC<Props> = ({ block, richTextMapper: mapper }) => {
           {isChecked ? <CheckedBox /> : <CheckBox />}
         </span>
         <span className={`notion_to_do_text ${isChecked ? "checked" : ""}`}>
-          <RichTexts richTexts={block.to_do.rich_text} />
+          <RichTexts
+            richTextItems={block.to_do.rich_text}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         </span>
       </div>
       {block.to_do.children && (
         <div className="notion_to_do_children">
-          <Blocks blocks={block.to_do.children} mapper={mapper} />
+          <Blocks
+            blocks={block.to_do.children}
+            blockMapper={blockMapper}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         </div>
       )}
     </div>

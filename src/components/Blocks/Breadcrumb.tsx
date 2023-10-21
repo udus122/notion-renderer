@@ -21,20 +21,20 @@ export type BreadcrumbBlockObject = Overwrite<
 >;
 type Props = BlockProps<BreadcrumbBlockObject>;
 
-export const Breadcrumb: React.FC<Props> = ({ block }) => {
+export const Breadcrumb: React.FC<Props> = ({ block, LinkComponent }) => {
   return (
     <div id={block.id} className="notion_breadcrumb">
       {block.breadcrumb.parents.map((pageOrDatabase, index, array) => {
         return (
           <Fragment key={pageOrDatabase.id}>
-            <a href={`/${pageOrDatabase.id}`}>
+            <LinkComponent href={`/${pageOrDatabase.id}`}>
               <span className="notion_breadcrumb_title">
                 <Icon icon={pageOrDatabase.icon} />{" "}
                 {extractTitleProperty(pageOrDatabase)
                   ?.map((t) => t.plain_text)
                   .join("")}
               </span>
-            </a>
+            </LinkComponent>
             {index !== array.length - 1 && (
               <span className="notion_breadcrumb_separator">/</span>
             )}

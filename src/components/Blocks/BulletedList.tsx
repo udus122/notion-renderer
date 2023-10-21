@@ -18,7 +18,10 @@ type Props = BlockProps<BulletedListBlockObject>;
 export const BulletedList: React.FC<Props> = ({
   block,
   blocks,
-  richTextMapper: mapper,
+  blockMapper,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
 }) => {
   return (
     <ul className="notion_bulleted_list">
@@ -28,7 +31,10 @@ export const BulletedList: React.FC<Props> = ({
             key={item.id}
             block={item}
             blocks={blocks}
-            richTextMapper={mapper}
+            blockMapper={blockMapper}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
           />
         );
       })}

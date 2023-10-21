@@ -16,7 +16,10 @@ type Props = BlockProps<NumberedListBlockObject>;
 export const NumberedList: React.FC<Props> = ({
   block,
   blocks,
-  richTextMapper: mapper,
+  blockMapper,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
 }) => {
   return (
     <ol className="notion_numbered_list">
@@ -26,8 +29,11 @@ export const NumberedList: React.FC<Props> = ({
             key={item.id}
             block={item}
             blocks={blocks}
-            richTextMapper={mapper}
-          ></NumberedListItem>
+            blockMapper={blockMapper}
+            richTextItemMapper={richTextItemMapper}
+            annotationMapper={annotationMapper}
+            LinkComponent={LinkComponent}
+          />
         );
       })}
     </ol>
