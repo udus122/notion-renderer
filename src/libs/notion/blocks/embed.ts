@@ -1,4 +1,4 @@
-import { fetchOembed } from "../../../index.js";
+import { fetchOembed } from "../../../libs/utils.js";
 import { convertResponseToRichText } from "../richText/richText.js";
 
 import type { RichTextItem } from "../richText/richTextItem.js";

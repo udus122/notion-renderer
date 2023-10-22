@@ -1,4 +1,4 @@
-import { fetchSiteMeta } from "../../../index.js";
+import { fetchSiteMeta } from "../../../libs/utils.js";
 import { convertResponseToRichText } from "../richText/richText.js";
 
 import type { RichTextItem } from "../richText/richTextItem.js";

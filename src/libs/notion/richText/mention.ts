@@ -1,6 +1,8 @@
 import { randomUUID } from "crypto";
 
-import { fetchDatabase, fetchPage, fetchSiteMeta } from "../../index.js";
+import { fetchSiteMeta } from "../../../libs/utils.js";
+import { fetchDatabase } from "../databases.js";
+import { fetchPage } from "../pages.js";
 
 import type { Overwrite } from "../../../types/utils.js";
 import type { ArticleData } from "@extractus/article-extractor";

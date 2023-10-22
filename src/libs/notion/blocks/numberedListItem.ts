@@ -1,6 +1,6 @@
 import { fetchBlocks } from "./blocks.js";
 
-import type { BlockObject } from "../../../index.js";
+import type { BlockObject } from "../../../components/index.js";
 import type { NumberedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export type NumberedListBlockObject = {

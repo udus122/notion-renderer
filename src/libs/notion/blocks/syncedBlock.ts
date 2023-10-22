@@ -1,6 +1,6 @@
 import { fetchBlocks, fetchBlock } from "./blocks.js";
 
-import type { BlockObject } from "../../../index.js";
+import type { BlockObject } from "../../../components/index.js";
 import type { IdRequest } from "../../../types/notion.js";
 import type { SyncedBlockBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
