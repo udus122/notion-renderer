@@ -1,5 +1,5 @@
-import { useMapper } from "./mapper.js";
 import { type BlockObject } from "../index.js";
+import { useMapper } from "../mapper.js";
 
 import type { BlockProps } from "src/types/utils.js";
 

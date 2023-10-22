@@ -1,6 +1,5 @@
+import { useMapper } from "../mapper.js";
 import { RichText } from "../RichText/RichText.js";
-
-import { useMapper } from "./mapper.js";
 
 import type { FileBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BlockProps } from "src/types/utils.js";

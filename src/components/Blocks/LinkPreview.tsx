@@ -1,4 +1,4 @@
-import { useMapper } from "./mapper.js";
+import { useMapper } from "../mapper.js";
 
 import type { ArticleData } from "@extractus/article-extractor";
 import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";

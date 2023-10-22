@@ -1,4 +1,5 @@
-import { useMapper } from "./mapper.js";
+import { useMapper } from "../mapper.js";
+
 import { Icon } from "./Icon.js";
 
 import type {

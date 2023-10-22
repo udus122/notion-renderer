@@ -1,4 +1,4 @@
-import { useMapper } from "../Blocks/mapper.js";
+import { useMapper } from "../mapper.js";
 
 import { type EquationRichTextItem } from "./InlineEquation.js";
 import { type MentionRichTextItem } from "./Mention.js";

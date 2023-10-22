@@ -1,8 +1,8 @@
 import { Fragment } from "react";
 
 import { extractTitleProperty } from "../../libs/notion/util.js";
+import { useMapper } from "../mapper.js";
 
-import { useMapper } from "./mapper.js";
 import { Icon } from "./Icon.js";
 
 import type {

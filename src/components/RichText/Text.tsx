@@ -1,4 +1,4 @@
-import { useMapper } from "../Blocks/mapper.js";
+import { useMapper } from "../mapper.js";
 
 import { Annotation } from "./Annotation/Annotation.js";
 

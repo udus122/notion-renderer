@@ -1,6 +1,5 @@
+import { useMapper } from "../mapper.js";
 import { RichText } from "../RichText/RichText.js";
-
-import { useMapper } from "./mapper.js";
 
 import type { ArticleData } from "@extractus/article-extractor";
 import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";

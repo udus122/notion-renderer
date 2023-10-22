@@ -1,6 +1,5 @@
+import { useMapper } from "../mapper.js";
 import { RichText } from "../RichText/RichText.js";
-
-import { useMapper } from "./mapper.js";
 
 import type { Heading1BlockObject } from "./Heading1.js";
 import type { Heading2BlockObject } from "./Heading2.js";

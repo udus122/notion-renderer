@@ -1,8 +1,6 @@
 import React from "react";
 
 import { type LinkProps } from "../Link.js";
-
-import { Block } from "./Block.js";
 import {
   defaultBlockMapper,
   LinkComponentMapper,
@@ -11,7 +9,9 @@ import {
   RichTextItemMapper,
   defaultRichTextItemMapper,
   BlockMapper,
-} from "./mapper.js";
+} from "../mapper.js";
+
+import { Block } from "./Block.js";
 
 import type { BlockObject } from "../index.js";
 

@@ -1,4 +1,4 @@
-import { useMapper } from "../../Blocks/mapper.js";
+import { useMapper } from "../../mapper.js";
 
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

@@ -1,6 +1,38 @@
 import React, { createContext, useContext } from "react";
 
-import { Link, type LinkProps } from "../Link.js";
+import { Audio } from "./Blocks/Audio.js";
+import { Bookmark } from "./Blocks/Bookmark.js";
+import { Breadcrumb } from "./Blocks/Breadcrumb.js";
+import { BulletedList } from "./Blocks/BulletedList.js";
+import { BulletedListItem } from "./Blocks/BulletedListItem.js";
+import { Callout } from "./Blocks/Callout.js";
+import { ChildDatabase } from "./Blocks/ChildDatabase.js";
+import { ChildPage } from "./Blocks/ChildPage.js";
+import { Code } from "./Blocks/Code.js";
+import { ColumnList } from "./Blocks/ColumnList.js";
+import { Divider } from "./Blocks/Divider.js";
+import { Embed } from "./Blocks/Embed.js";
+import { Equation } from "./Blocks/Equation.js";
+import { File } from "./Blocks/File.js";
+import { Heading1 } from "./Blocks/Heading1.js";
+import { Heading2 } from "./Blocks/Heading2.js";
+import { Heading3 } from "./Blocks/Heading3.js";
+import { Image } from "./Blocks/Image.js";
+import { LinkPreview } from "./Blocks/LinkPreview.js";
+import { LinkToPage } from "./Blocks/LinkToPage.js";
+import { NumberedList } from "./Blocks/NumberedList.js";
+import { NumberedListItem } from "./Blocks/NumberedListItem.js";
+import { Paragraph } from "./Blocks/Paragraph.js";
+import { Pdf } from "./Blocks/Pdf.js";
+import { Quote } from "./Blocks/Quote.js";
+import { SyncedBlock } from "./Blocks/SyncedBlock.js";
+import { Table } from "./Blocks/Table.js";
+import { TableOfContents } from "./Blocks/TableOfContents.js";
+import { ToDo } from "./Blocks/ToDo.js";
+import { Toggle } from "./Blocks/Toggle.js";
+import { Unsupported } from "./Blocks/Unsupported.js";
+import { Video } from "./Blocks/Video.js";
+import { Link, type LinkProps } from "./Link.js";
 import {
   Color,
   Bold,
@@ -11,40 +43,7 @@ import {
   InlineEquation,
   Mention,
   Text,
-} from "../RichText/index.js";
-
-import { Audio } from "./Audio.js";
-import { Bookmark } from "./Bookmark.js";
-import { Breadcrumb } from "./Breadcrumb.js";
-import { BulletedList } from "./BulletedList.js";
-import { BulletedListItem } from "./BulletedListItem.js";
-import { Callout } from "./Callout.js";
-import { ChildDatabase } from "./ChildDatabase.js";
-import { ChildPage } from "./ChildPage.js";
-import { Code } from "./Code.js";
-import { ColumnList } from "./ColumnList.js";
-import { Divider } from "./Divider.js";
-import { Embed } from "./Embed.js";
-import { Equation } from "./Equation.js";
-import { File } from "./File.js";
-import { Heading1 } from "./Heading1.js";
-import { Heading2 } from "./Heading2.js";
-import { Heading3 } from "./Heading3.js";
-import { Image } from "./Image.js";
-import { LinkPreview } from "./LinkPreview.js";
-import { LinkToPage } from "./LinkToPage.js";
-import { NumberedList } from "./NumberedList.js";
-import { NumberedListItem } from "./NumberedListItem.js";
-import { Paragraph } from "./Paragraph.js";
-import { Pdf } from "./Pdf.js";
-import { Quote } from "./Quote.js";
-import { SyncedBlock } from "./SyncedBlock.js";
-import { Table } from "./Table.js";
-import { TableOfContents } from "./TableOfContents.js";
-import { ToDo } from "./ToDo.js";
-import { Toggle } from "./Toggle.js";
-import { Unsupported } from "./Unsupported.js";
-import { Video } from "./Video.js";
+} from "./RichText/index.js";
 
 export const useMapper = () => {
   const blockMapper = useContext(BlockMapper);
