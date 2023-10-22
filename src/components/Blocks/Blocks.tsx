@@ -1,15 +1,15 @@
 import React from "react";
 
-import { Link, type LinkProps } from "../Link.js";
+import { type LinkProps } from "../Link.js";
 
 import { Block } from "./Block.js";
 import {
   defaultBlockMapper,
-  LinkMapper,
+  LinkComponentMapper,
   AnnotationMapper,
   defaultAnnotationMapper,
-  RichTextMapper,
-  defaultRichTextMapper,
+  RichTextItemMapper,
+  defaultRichTextItemMapper,
   BlockMapper,
 } from "./mapper.js";
 
@@ -28,26 +28,79 @@ export const Blocks: React.FC<Props> = function ({
   blockMapper,
   richTextItemMapper,
   annotationMapper,
-  LinkComponent = Link,
+  LinkComponent,
 }) {
   return (
-    // TODO: Blocksを重ねた時に、2回目のBlocksにはmapperを渡さなくても、エラーが出ないようにする
-    // ex. mapperがundefinedの場合は、Providerを外す
-    // Provider用のContainerコンポーネントを作って、そこで判定する
-    <BlockMapper.Provider value={{ ...defaultBlockMapper, ...blockMapper }}>
-      <RichTextMapper.Provider
-        value={{ ...defaultRichTextMapper, ...richTextItemMapper }}
-      >
-        <AnnotationMapper.Provider
-          value={{ ...defaultAnnotationMapper, ...annotationMapper }}
-        >
-          <LinkMapper.Provider value={LinkComponent}>
+    <BlockMapperProvider mapper={blockMapper}>
+      <RichTextItemMapperProvider mapper={richTextItemMapper}>
+        <AnnotationMapperProvider mapper={annotationMapper}>
+          <LinkComponentProvider component={LinkComponent}>
             {blocks.map((block) => {
               return <Block key={block.id} block={block} blocks={blocks} />;
             })}
-          </LinkMapper.Provider>
-        </AnnotationMapper.Provider>
-      </RichTextMapper.Provider>
+          </LinkComponentProvider>
+        </AnnotationMapperProvider>
+      </RichTextItemMapperProvider>
+    </BlockMapperProvider>
+  );
+};
+
+const BlockMapperProvider: React.FC<{
+  mapper?: object;
+  children: React.ReactNode;
+}> = ({ mapper, children }) => {
+  if (!mapper) {
+    return children;
+  }
+  return (
+    <BlockMapper.Provider value={{ ...defaultBlockMapper, ...mapper }}>
+      {children}
     </BlockMapper.Provider>
+  );
+};
+
+const RichTextItemMapperProvider: React.FC<{
+  mapper?: object;
+  children: React.ReactNode;
+}> = ({ mapper, children }) => {
+  if (!mapper) {
+    return children;
+  }
+  return (
+    <RichTextItemMapper.Provider
+      value={{ ...defaultRichTextItemMapper, ...mapper }}
+    >
+      {children}
+    </RichTextItemMapper.Provider>
+  );
+};
+
+const AnnotationMapperProvider: React.FC<{
+  mapper?: object;
+  children: React.ReactNode;
+}> = ({ mapper, children }) => {
+  if (!mapper) {
+    return children;
+  }
+  return (
+    <AnnotationMapper.Provider
+      value={{ ...defaultAnnotationMapper, ...mapper }}
+    >
+      {children}
+    </AnnotationMapper.Provider>
+  );
+};
+
+const LinkComponentProvider: React.FC<{
+  component?: React.ComponentType<LinkProps>;
+  children: React.ReactNode;
+}> = ({ component: value, children }) => {
+  if (!value) {
+    return children;
+  }
+  return (
+    <LinkComponentMapper.Provider value={value}>
+      {children}
+    </LinkComponentMapper.Provider>
   );
 };
