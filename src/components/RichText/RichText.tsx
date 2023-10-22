@@ -10,7 +10,10 @@ export const RichText: React.FC<Props> = ({ richText }) => {
   return (
     <span className="notion_rich_text">
       {richText.map((item, index) => (
-        <RichTextItem key={`${index}-${item.plain_text}`} richText={item} />
+        <RichTextItem
+          key={item?.id ?? `${index}-${item.plain_text}`}
+          richText={item}
+        />
       ))}
     </span>
   );
