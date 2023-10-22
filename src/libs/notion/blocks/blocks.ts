@@ -20,6 +20,7 @@ import { convertBulletedListItemResponseToBlock } from "./bulletedListItem.js";
 import { convertCalloutResponseToBlock } from "./callout.js";
 import { convertChildDatabaseResponseToBlock } from "./childDatabase.js";
 import { convertChildPageResponseToBlock } from "./childPage.js";
+import { convertCodeResponseToBlock } from "./code.js";
 
 import type {
   BlockObjectResponse,
@@ -30,7 +31,6 @@ import type {
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BulletedListBlockObject } from "src/components/Blocks/BulletedList.js";
-import type { CodeBlockObject } from "src/components/Blocks/Code.js";
 import type {
   ColumnListBlockObject,
   ColumnBlockObject,
@@ -243,7 +243,7 @@ export const convertResponseToBlock = async (
       return await convertChildPageResponseToBlock(block);
     }
     case "code": {
-      return { ...block } satisfies CodeBlockObject;
+      return await convertCodeResponseToBlock(block);
     }
     case "column": {
       if (block.has_children) {
