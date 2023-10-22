@@ -16,9 +16,9 @@ import { fetchPage } from "../pages.js";
 import { convertAudioResponseToBlock } from "./audio.js";
 import { convertBookmarkResponseToBlock } from "./bookmark.js";
 import { convertBreadcrumbResponseToBlock } from "./breadcrumb.js";
-import { convertBulletedListItemResponseToBlock } from "./bulleted_list_item.js";
+import { convertBulletedListItemResponseToBlock } from "./bulletedListItem.js";
 import { convertCalloutResponseToBlock } from "./callout.js";
-import { convertChildDatabaseResponseToBlock } from "./child_database.js";
+import { convertChildDatabaseResponseToBlock } from "./childDatabase.js";
 import { convertChildPageResponseToBlock } from "./childPage.js";
 
 import type {
