@@ -1,4 +1,4 @@
-import { fetchBlockComponents } from "./blocks.js";
+import { fetchBlocks } from "./blocks.js";
 
 import type { Heading2BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Heading2BlockObject } from "src/components/Blocks/Heading2.js";
@@ -7,7 +7,7 @@ export const convertHeading2ResponseToBlock = async (
   block: Heading2BlockObjectResponse
 ) => {
   if (block.has_children) {
-    const children = await fetchBlockComponents(block.id);
+    const children = await fetchBlocks(block.id);
     return {
       ...block,
       heading_2: {

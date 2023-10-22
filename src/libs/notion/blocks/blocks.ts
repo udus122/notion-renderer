@@ -88,7 +88,7 @@ export const listBlockChildren = async (
   return [];
 };
 
-export const fetchBlockComponent = async (
+export const fetchBlock = async (
   blockId: string
 ): Promise<BlockObject | null> => {
   const block = await retrieveBlock({ block_id: blockId });
@@ -99,9 +99,7 @@ export const fetchBlockComponent = async (
   return null;
 };
 
-export const fetchBlockComponents = async (
-  blockId: string
-): Promise<BlockObject[]> => {
+export const fetchBlocks = async (blockId: string): Promise<BlockObject[]> => {
   const childrenBlockResponses = await listBlockChildren({
     block_id: blockId,
   });

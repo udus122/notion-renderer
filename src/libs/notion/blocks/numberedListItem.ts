@@ -1,4 +1,4 @@
-import { fetchBlockComponents } from "./blocks.js";
+import { fetchBlocks } from "./blocks.js";
 
 import type { NumberedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { NumberedListItemBlockObject } from "src/components/Blocks/NumberedListItem.js";
@@ -7,7 +7,7 @@ export const convertNumberedListItemResponseToBlock = async (
   block: NumberedListItemBlockObjectResponse
 ) => {
   if (block.has_children) {
-    const children = await fetchBlockComponents(block.id);
+    const children = await fetchBlocks(block.id);
     return {
       ...block,
       numbered_list_item: {

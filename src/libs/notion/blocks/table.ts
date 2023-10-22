@@ -1,4 +1,4 @@
-import { fetchBlockComponents } from "./blocks.js";
+import { fetchBlocks } from "./blocks.js";
 
 import type { TableBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type {
@@ -10,7 +10,7 @@ export const convertTableResponseToBlock = async (
   block: TableBlockObjectResponse
 ) => {
   if (block.has_children) {
-    const blocks = await fetchBlockComponents(block.id);
+    const blocks = await fetchBlocks(block.id);
     const table_rows = blocks.filter(
       (block): block is TableRowBlockObject => block.type === "table_row"
     );

@@ -1,4 +1,4 @@
-import { fetchBlockComponents, fetchBlockComponent } from "./blocks.js";
+import { fetchBlocks, fetchBlock } from "./blocks.js";
 
 import type { SyncedBlockBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { SyncedBlockBlockObject } from "src/components/Blocks/SyncedBlock.js";
@@ -7,9 +7,9 @@ export const convertSyncedBlockResponseToBlock = async (
   block: SyncedBlockBlockObjectResponse
 ) => {
   if (block.has_children) {
-    const children = await fetchBlockComponents(block.id);
+    const children = await fetchBlocks(block.id);
     if (block.synced_block.synced_from) {
-      const duplicatedBlock = await fetchBlockComponent(
+      const duplicatedBlock = await fetchBlock(
         block.synced_block.synced_from.block_id
       );
       return {
