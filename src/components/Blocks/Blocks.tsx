@@ -13,7 +13,7 @@ import {
 
 import { Block } from "./Block.js";
 
-import type { BlockObject } from "../index.js";
+import type { BlockObject } from "../../libs/notion/blocks/blocks.js";
 
 type Props = {
   blocks: Array<BlockObject>;

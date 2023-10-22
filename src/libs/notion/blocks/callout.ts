@@ -2,7 +2,7 @@ import { convertResponseToRichText } from "../richText/richText.js";
 
 import { fetchBlocks } from "./blocks.js";
 
-import type { BlockObject } from "../../../components/index.js";
+import type { BlockObject } from "./blocks.js";
 import type { RichTextItem } from "../richText/richTextItem.js";
 import type { CalloutBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
