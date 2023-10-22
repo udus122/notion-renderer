@@ -1,10 +1,8 @@
 import { useMapper } from "../mapper.js";
 import { RichText } from "../RichText/RichText.js";
 
-import type { FileBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
-
-export type FileBlockObject = FileBlockObjectResponse;
+import type { FileBlockObject } from "../../libs/notion/blocks/file.js";
+import type { BlockProps } from "../../types/utils.js";
 
 type Props = BlockProps<FileBlockObject>;
 

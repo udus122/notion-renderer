@@ -2,17 +2,9 @@ import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { BlockObject } from "../index.js";
-import type { BulletedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { BulletedListItemBlockObject } from "../../libs/notion/blocks/bulletedListItem.js";
+import type { BlockProps } from "../../types/utils.js";
 import type React from "react";
-import type { BlockProps } from "src/types/utils.js";
-
-export type BulletedListItemBlockObject =
-  BulletedListItemBlockObjectResponse & {
-    bulleted_list_item: {
-      children?: Array<BlockObject>;
-    };
-  };
 
 type Props = BlockProps<BulletedListItemBlockObject>;
 

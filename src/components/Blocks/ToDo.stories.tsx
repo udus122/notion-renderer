@@ -2,8 +2,8 @@ import ToDoCheckedObject from "./ToDo.Checked.json";
 import { ToDo } from "./ToDo.js";
 import ToDoObject from "./Todo.json";
 
-import type { ToDoBlockObject } from "./ToDo.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { ToDoBlockObject } from "src/libs/notion/blocks/toDo.js";
 
 const meta: Meta<typeof ToDo> = {
   title: "Blocks/ToDo",

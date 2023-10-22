@@ -1,17 +1,9 @@
+import { type RichTextItem as RichTextItemType } from "../../libs/notion/richText/richTextItem.js";
 import { useMapper } from "../mapper.js";
 
-import { type EquationRichTextItem } from "./InlineEquation.js";
-import { type MentionRichTextItem } from "./Mention.js";
-import { type TextRichTextItem } from "./Text.js";
+import type { RichTextProps } from "../../types/utils.js";
 
-import type { RichTextProps } from "src/types/utils.js";
-
-export type RichTextItem =
-  | TextRichTextItem
-  | MentionRichTextItem
-  | EquationRichTextItem;
-
-type Props = RichTextProps<RichTextItem>;
+type Props = RichTextProps<RichTextItemType>;
 
 export const RichTextItem: React.FC<Props> = (props) => {
   if (!props.richTextItem) return null;

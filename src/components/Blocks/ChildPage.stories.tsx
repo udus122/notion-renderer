@@ -1,8 +1,8 @@
 import { ChildPage } from "./ChildPage.js";
 import ChildPageObject from "./ChildPage.json";
 
-import type { ChildPageBlockObject } from "./ChildPage.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { ChildPageBlockObject } from "src/libs/notion/blocks/childPage.js";
 
 const meta: Meta<typeof ChildPage> = {
   title: "Blocks/ChildPage",

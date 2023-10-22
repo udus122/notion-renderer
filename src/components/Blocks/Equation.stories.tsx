@@ -1,8 +1,8 @@
 import { Equation } from "./Equation.js";
 import EquationObject from "./Equation.json";
 
-import type { EquationBlockObject } from "./Equation.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { EquationBlockObject } from "src/libs/notion/blocks/equation.js";
 
 const meta: Meta<typeof Equation> = {
   title: "Blocks/Equation",

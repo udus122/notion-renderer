@@ -1,17 +1,7 @@
-import {
-  BulletedListItem,
-  type BulletedListItemBlockObject,
-} from "./BulletedListItem.js";
+import { BulletedListItem } from "./BulletedListItem.js";
 
+import type { BulletedListBlockObject } from "../../libs/notion/blocks/bulletedListItem.js";
 import type { BlockProps } from "src/types/utils.js";
-
-export type BulletedListBlockObject = {
-  id: string;
-  type: "bulleted_list";
-  bulleted_list: {
-    items: Array<BulletedListItemBlockObject>;
-  };
-};
 
 type Props = BlockProps<BulletedListBlockObject>;
 

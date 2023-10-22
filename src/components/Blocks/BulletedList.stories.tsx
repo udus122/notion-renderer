@@ -1,4 +1,6 @@
-import { BulletedList, type BulletedListBlockObject } from "./BulletedList.js";
+import { type BulletedListBlockObject } from "src/libs/notion/blocks/bulletedListItem.js";
+
+import { BulletedList } from "./BulletedList.js";
 import BulletedListObject from "./BulletedList.json";
 
 import type { Meta, StoryObj } from "@storybook/react";

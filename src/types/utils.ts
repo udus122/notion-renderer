@@ -1,5 +1,5 @@
-import type { BlockObject } from "src/components/index.js";
-import type { RichTextItem } from "src/components/RichText/RichTextItem.js";
+import type { BlockObject } from "../components/index.js";
+import type { RichTextItem } from "../libs/notion/richText/richTextItem.ts";
 
 export type Overwrite<T, U extends { [Key in keyof T]?: unknown }> = Omit<
   T,

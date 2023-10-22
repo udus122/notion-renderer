@@ -1,18 +1,11 @@
 import { RichText } from "../RichText/RichText.js";
 
+import type { TableBlockObject } from "../../libs/notion/blocks/table.js";
 import type {
-  TableBlockObjectResponse,
-  TableRowBlockObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
-
-export type TableBlockObject = TableBlockObjectResponse & {
-  table: { table_rows?: Array<TableRowBlockObject> };
-};
-export type TableRowBlockObject = TableRowBlockObjectResponse;
-
-export type TableCellBlockObjectComponent =
-  TableRowBlockObject["table_row"]["cells"][number];
+  TableCellBlockObjectComponent,
+  TableRowBlockObject,
+} from "../../libs/notion/blocks/table_row.js";
+import type { BlockProps } from "../../types/utils.js";
 
 type Props = BlockProps<TableBlockObject>;
 

@@ -1,7 +1,16 @@
-import { fetchSiteMeta } from "src/index.js";
+import { fetchSiteMeta } from "../../../index.js";
+import { convertResponseToRichText } from "../richText/richText.js";
 
+import type { RichTextItem } from "../richText/richTextItem.js";
+import type { ArticleData } from "@extractus/article-extractor";
 import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BookmarkBlockObject } from "src/components/Blocks/Bookmark.js";
+
+export type BookmarkBlockObject = BookmarkBlockObjectResponse & {
+  bookmark: {
+    site_meta?: ArticleData;
+    caption: Array<RichTextItem>;
+  };
+};
 
 export const convertBookmarkResponseToBlock = async (
   block: BookmarkBlockObjectResponse
@@ -14,6 +23,7 @@ export const convertBookmarkResponseToBlock = async (
         bookmark: {
           ...block.bookmark,
           site_meta: site_meta,
+          caption: await convertResponseToRichText(block.bookmark.caption),
         },
       } satisfies BookmarkBlockObject;
     }
@@ -22,6 +32,7 @@ export const convertBookmarkResponseToBlock = async (
     ...block,
     bookmark: {
       ...block.bookmark,
+      caption: await convertResponseToRichText(block.bookmark.caption),
     },
   } satisfies BookmarkBlockObject;
 };

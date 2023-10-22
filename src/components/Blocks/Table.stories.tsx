@@ -1,4 +1,6 @@
-import { Table, type TableBlockObject } from "./Table.js";
+import { type TableBlockObject } from "src/libs/notion/blocks/table.js";
+
+import { Table } from "./Table.js";
 import TableObject from "./Table.json";
 
 import type { Meta, StoryObj } from "@storybook/react";

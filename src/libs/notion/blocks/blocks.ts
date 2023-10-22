@@ -39,6 +39,10 @@ import { convertToggleResponseToBlock } from "./toggle.js";
 import { convertUnsupportedResponseToBlock } from "./unsupported.js";
 import { convertVideoResponseToBlock } from "./video.js";
 
+import type { BulletedListBlockObject } from "./bulletedListItem.js";
+import type { NumberedListBlockObject } from "./numberedListItem.js";
+import type { BlockObject } from "../../../components/index.js";
+import type { ListBlockChildrenResponseResults } from "../../../types/notion.js";
 import type {
   BlockObjectResponse,
   GetBlockParameters,
@@ -47,10 +51,6 @@ import type {
   ListBlockChildrenResponse,
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BulletedListBlockObject } from "src/components/Blocks/BulletedList.js";
-import type { NumberedListBlockObject } from "src/components/Blocks/NumberedList.js";
-import type { BlockObject } from "src/components/index.js";
-import type { ListBlockChildrenResponseResults } from "src/types/notion.js";
 
 export const retrieveBlock = async (
   args: GetBlockParameters
@@ -311,3 +311,6 @@ export const convertResponseToBlock = async (
     }
   }
 };
+
+const res = await fetchBlocks("2712e341754a41aea9ce4c0bb4b18c52");
+console.log(JSON.stringify(res, null, 2));

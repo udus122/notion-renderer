@@ -1,9 +1,7 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { CodeBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
-
-export type CodeBlockObject = CodeBlockObjectResponse;
+import type { CodeBlockObject } from "../../libs/notion/blocks/code.js";
+import type { BlockProps } from "../../types/utils.js";
 
 type Props = BlockProps<CodeBlockObject>;
 

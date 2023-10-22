@@ -5,6 +5,16 @@ import type {
   DatabaseObjectResponse,
   PageObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
+import type { Overwrite } from "src/types/utils.js";
+
+export type BreadcrumbBlockObject = Overwrite<
+  BreadcrumbBlockObjectResponse,
+  {
+    breadcrumb: {
+      parents: Array<PageObjectResponse | DatabaseObjectResponse>;
+    };
+  }
+>;
 
 export const convertBreadcrumbResponseToBlock = async (
   block: BreadcrumbBlockObjectResponse

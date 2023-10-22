@@ -1,13 +1,8 @@
 import katex from "katex";
 
-import type { EquationBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
+import type { EquationBlockObject } from "../../libs/notion/blocks/equation.js";
+import type { BlockProps } from "../../types/utils.js";
 
-export type EquationBlockObject = EquationBlockObjectResponse & {
-  equation: {
-    expression: string;
-  };
-};
 type Props = BlockProps<EquationBlockObject>;
 
 export const Equation: React.FC<Props> = ({ block }) => {

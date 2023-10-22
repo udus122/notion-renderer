@@ -1,10 +1,11 @@
 import { fetchBlocks } from "./blocks.js";
 
+import type { TableRowBlockObject } from "./table_row.js";
 import type { TableBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type {
-  TableRowBlockObject,
-  TableBlockObject,
-} from "src/components/Blocks/Table.js";
+
+export type TableBlockObject = TableBlockObjectResponse & {
+  table: { table_rows?: Array<TableRowBlockObject> };
+};
 
 export const convertTableResponseToBlock = async (
   block: TableBlockObjectResponse

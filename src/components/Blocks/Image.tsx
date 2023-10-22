@@ -1,9 +1,7 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { ImageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
-
-export type ImageBlockObject = ImageBlockObjectResponse;
+import type { ImageBlockObject } from "../../libs/notion/blocks/image.js";
+import type { BlockProps } from "../../types/utils.js";
 
 type Props = BlockProps<ImageBlockObject>;
 

@@ -2,18 +2,12 @@ import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { BlockObject } from "../index.js";
-import type { NumberedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
+import type { NumberedListItemBlockObject } from "../../libs/notion/blocks/numberedListItem.js";
+import type { BlockProps } from "../../types/utils.js";
 
-export type NumberedListItemBlockObject =
-  NumberedListItemBlockObjectResponse & {
-    numbered_list_item: { children?: Array<BlockObject> };
-  };
+type Props = BlockProps<NumberedListItemBlockObject>;
 
-export const NumberedListItem: React.FC<
-  BlockProps<NumberedListItemBlockObject>
-> = ({ block }) => {
+export const NumberedListItem: React.FC<Props> = ({ block }) => {
   return (
     <li
       id={block.id}

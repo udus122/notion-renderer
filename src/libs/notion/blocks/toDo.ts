@@ -1,7 +1,14 @@
+import { convertResponseToRichText } from "../richText/richText.js";
+
 import { fetchBlocks } from "./blocks.js";
 
+import type { BlockObject } from "../../../index.js";
+import type { RichTextItem } from "../richText/richTextItem.js";
 import type { ToDoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { ToDoBlockObject } from "src/components/Blocks/ToDo.js";
+
+export type ToDoBlockObject = ToDoBlockObjectResponse & {
+  to_do: { rich_text: Array<RichTextItem>; children?: Array<BlockObject> };
+};
 
 export const convertToDoResponseToBlock = async (
   block: ToDoBlockObjectResponse
@@ -12,11 +19,16 @@ export const convertToDoResponseToBlock = async (
       ...block,
       to_do: {
         ...block.to_do,
+        rich_text: await convertResponseToRichText(block.to_do.rich_text),
         children,
       },
     } satisfies ToDoBlockObject;
   }
   return {
     ...block,
+    to_do: {
+      ...block.to_do,
+      rich_text: await convertResponseToRichText(block.to_do.rich_text),
+    },
   } satisfies ToDoBlockObject;
 };

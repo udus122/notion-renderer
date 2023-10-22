@@ -1,8 +1,8 @@
 import { RichText } from "../../RichText/RichText.js";
 import { Blocks } from "../Blocks.js";
 
-import type { Heading2BlockObject } from "../Heading2.js";
-import type { BlockProps } from "src/types/utils.js";
+import type { Heading2BlockObject } from "../../../libs/notion/blocks/heading2.js";
+import type { BlockProps } from "../../../types/utils.js";
 
 type Props = BlockProps<Heading2BlockObject>;
 

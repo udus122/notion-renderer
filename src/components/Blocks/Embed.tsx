@@ -1,19 +1,7 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type {
-  LinkTypeData,
-  PhotoTypeData,
-  VideoTypeData,
-  RichTypeData,
-} from "@extractus/oembed-extractor";
-import type { EmbedBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
-
-export type EmbedBlockObject = EmbedBlockObjectResponse & {
-  embed: {
-    oembed?: LinkTypeData | PhotoTypeData | VideoTypeData | RichTypeData;
-  };
-};
+import type { EmbedBlockObject } from "../../libs/notion/blocks/embed.js";
+import type { BlockProps } from "../../types/utils.js";
 
 type Props = BlockProps<EmbedBlockObject>;
 

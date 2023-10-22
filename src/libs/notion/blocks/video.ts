@@ -1,7 +1,39 @@
-import { fetchOembed } from "src/index.js";
+import { fetchOembed } from "../../../index.js";
+import { convertResponseToRichText } from "../richText/richText.js";
 
+import type { RichTextItem } from "../richText/richTextItem.js";
+import type {
+  LinkTypeData,
+  PhotoTypeData,
+  VideoTypeData,
+  RichTypeData,
+} from "@extractus/oembed-extractor";
 import type { VideoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { VideoBlockObject } from "src/components/Blocks/Video.js";
+import type { TextRequest } from "src/types/notion.js";
+import type { Overwrite } from "src/types/utils.js";
+
+export type VideoBlockObject = Overwrite<
+  VideoBlockObjectResponse,
+  {
+    video:
+      | {
+          type: "external";
+          external: {
+            url: TextRequest;
+          };
+          caption: Array<RichTextItem>;
+          oembed?: LinkTypeData | PhotoTypeData | VideoTypeData | RichTypeData;
+        }
+      | {
+          type: "file";
+          file: {
+            url: string;
+            expiry_time: string;
+          };
+          caption: Array<RichTextItem>;
+        };
+  }
+>;
 
 export const convertVideoResponseToBlock = async (
   block: VideoBlockObjectResponse
@@ -16,10 +48,17 @@ export const convertVideoResponseToBlock = async (
         ...block,
         video: {
           ...block.video,
+          caption: await convertResponseToRichText(block.video.caption),
           oembed,
         },
       } satisfies VideoBlockObject;
     }
   }
-  return { ...block } satisfies VideoBlockObject;
+  return {
+    ...block,
+    video: {
+      ...block.video,
+      caption: await convertResponseToRichText(block.video.caption),
+    },
+  } satisfies VideoBlockObject;
 };

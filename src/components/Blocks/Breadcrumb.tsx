@@ -5,21 +5,9 @@ import { useMapper } from "../mapper.js";
 
 import { Icon } from "./Icon.js";
 
-import type {
-  BreadcrumbBlockObjectResponse,
-  PageObjectResponse,
-  DatabaseObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps, Overwrite } from "src/types/utils.js";
+import type { BreadcrumbBlockObject } from "../../libs/notion/blocks/breadcrumb.js";
+import type { BlockProps } from "src/types/utils.js";
 
-export type BreadcrumbBlockObject = Overwrite<
-  BreadcrumbBlockObjectResponse,
-  {
-    breadcrumb: {
-      parents: Array<PageObjectResponse | DatabaseObjectResponse>;
-    };
-  }
->;
 type Props = BlockProps<BreadcrumbBlockObject>;
 
 export const Breadcrumb: React.FC<Props> = ({ block }) => {

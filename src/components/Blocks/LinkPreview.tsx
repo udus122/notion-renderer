@@ -1,14 +1,7 @@
 import { useMapper } from "../mapper.js";
 
-import type { ArticleData } from "@extractus/article-extractor";
-import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
-
-export type LinkPreviewBlockObject = LinkPreviewBlockObjectResponse & {
-  link_preview: {
-    site_meta?: ArticleData;
-  };
-};
+import type { LinkPreviewBlockObject } from "../../libs/notion/blocks/linkPreview.js";
+import type { BlockProps } from "../../types/utils.js";
 
 type Props = BlockProps<LinkPreviewBlockObject>;
 

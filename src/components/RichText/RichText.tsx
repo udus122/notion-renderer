@@ -1,6 +1,8 @@
-import { RichTextItem } from "./RichTextItem.js";
+import { RichTextItem } from "./index.js";
 
-type Props = { richTextItems: Array<RichTextItem> };
+import type { RichTextItem as RichTextItemType } from "../../libs/notion/richText/richTextItem.js";
+
+type Props = { richTextItems: Array<RichTextItemType> };
 
 export const RichText: React.FC<Props> = ({ richTextItems }) => {
   if (!richTextItems) return null;

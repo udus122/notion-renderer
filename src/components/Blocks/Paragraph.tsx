@@ -2,13 +2,9 @@ import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { BlockObject } from "../index.js";
-import type { ParagraphBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
-
-export type ParagraphBlockObject = ParagraphBlockObjectResponse & {
-  paragraph: { children?: Array<BlockObject> };
-};
+import type { ParagraphBlockObject } from "../../libs/notion/blocks/paragraph.js";
+import type { BlockProps } from "../../types/utils.js";
+import type React from "react";
 
 type Props = BlockProps<ParagraphBlockObject>;
 

@@ -1,4 +1,6 @@
-import { Breadcrumb, type BreadcrumbBlockObject } from "./Breadcrumb.js";
+import { type BreadcrumbBlockObject } from "src/libs/notion/blocks/breadcrumb.js";
+
+import { Breadcrumb } from "./Breadcrumb.js";
 import BreadcrumbObject from "./Breadcrumb.json";
 
 import type { Meta, StoryObj } from "@storybook/react";

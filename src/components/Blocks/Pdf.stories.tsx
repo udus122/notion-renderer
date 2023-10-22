@@ -2,8 +2,8 @@ import PdfExternalObject from "./Pdf.External.json";
 import PdfFileObject from "./Pdf.File.json";
 import { Pdf } from "./Pdf.js";
 
-import type { PdfBlockObject } from "./Pdf.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { PdfBlockObject } from "src/libs/notion/blocks/pdf.js";
 
 const meta: Meta<typeof Pdf> = {
   title: "Blocks/Pdf",

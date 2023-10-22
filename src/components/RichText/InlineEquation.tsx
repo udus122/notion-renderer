@@ -1,11 +1,10 @@
 import katex from "katex";
 
+import { type EquationRichTextItem } from "../../libs/notion/richText/equation.js";
+
 import { Annotation } from "./Annotation/Annotation.js";
 
-import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { RichTextProps } from "src/types/utils.js";
-
-export type EquationRichTextItem = EquationRichTextItemResponse;
 
 type Props = Omit<RichTextProps<EquationRichTextItem>, "richTextItemMapper">;
 

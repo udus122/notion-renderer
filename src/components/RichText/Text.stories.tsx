@@ -1,8 +1,8 @@
 import { Text } from "./Text.js";
 import TextObject from "./Text.json";
 
-import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { TextRichTextItem } from "src/libs/notion/richText/text.js";
 
 const meta: Meta<typeof Text> = {
   title: "RichText/Text",
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Text>;
 
 export const Default: Story = {
   args: {
-    richTextItem: TextObject as TextRichTextItemResponse,
+    richTextItem: TextObject as TextRichTextItem,
   },
 };

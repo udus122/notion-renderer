@@ -1,5 +1,6 @@
 import type { TableOfContentsBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { TableOfContentsBlockObject } from "src/components/Blocks/TableOfContents.js";
+
+export type TableOfContentsBlockObject = TableOfContentsBlockObjectResponse;
 
 export const convertTableOfContentsResponseToBlock = async (
   block: TableOfContentsBlockObjectResponse

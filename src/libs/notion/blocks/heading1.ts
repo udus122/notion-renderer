@@ -1,7 +1,14 @@
+import { convertResponseToRichText } from "../richText/richText.js";
+
 import { fetchBlocks } from "./blocks.js";
 
+import type { BlockObject } from "../../../index.js";
+import type { RichTextItem } from "../richText/richTextItem.js";
 import type { Heading1BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { Heading1BlockObject } from "src/components/Blocks/Heading1.js";
+
+export type Heading1BlockObject = Heading1BlockObjectResponse & {
+  heading_1: { rich_text: Array<RichTextItem>; children?: Array<BlockObject> };
+};
 
 export const convertHeading1ResponseToBlock = async (
   block: Heading1BlockObjectResponse
@@ -12,11 +19,16 @@ export const convertHeading1ResponseToBlock = async (
       ...block,
       heading_1: {
         ...block.heading_1,
+        rich_text: await convertResponseToRichText(block.heading_1.rich_text),
         children,
       },
     } satisfies Heading1BlockObject;
   }
   return {
     ...block,
+    heading_1: {
+      ...block.heading_1,
+      rich_text: await convertResponseToRichText(block.heading_1.rich_text),
+    },
   } satisfies Heading1BlockObject;
 };

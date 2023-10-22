@@ -1,8 +1,8 @@
 import { InlineEquation } from "./InlineEquation.js";
 import InlineEquationObject from "./InlineEquation.json";
 
-import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { EquationRichTextItem } from "src/libs/notion/richText/equation.js";
 
 const meta: Meta<typeof InlineEquation> = {
   title: "RichText/InlineEquation",
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof InlineEquation>;
 
 export const Default: Story = {
   args: {
-    richTextItem: InlineEquationObject as EquationRichTextItemResponse,
+    richTextItem: InlineEquationObject as EquationRichTextItem,
   },
 };

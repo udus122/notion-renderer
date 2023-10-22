@@ -2,17 +2,8 @@ import { useMapper } from "../mapper.js";
 
 import { Icon } from "./Icon.js";
 
-import type {
-  ChildPageBlockObjectResponse,
-  PageObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
-
-export type ChildPageBlockObject = ChildPageBlockObjectResponse & {
-  child_page: {
-    page?: PageObjectResponse;
-  };
-};
+import type { ChildPageBlockObject } from "../../libs/notion/blocks/childPage.js";
+import type { BlockProps } from "../../types/utils.js";
 
 type Props = BlockProps<ChildPageBlockObject>;
 

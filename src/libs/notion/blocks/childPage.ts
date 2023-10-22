@@ -1,7 +1,15 @@
 import { fetchPage } from "../pages.js";
 
-import type { ChildPageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { ChildPageBlockObject } from "src/components/Blocks/ChildPage.js";
+import type {
+  ChildPageBlockObjectResponse,
+  PageObjectResponse,
+} from "@notionhq/client/build/src/api-endpoints.js";
+
+export type ChildPageBlockObject = ChildPageBlockObjectResponse & {
+  child_page: {
+    page?: PageObjectResponse;
+  };
+};
 
 export const convertChildPageResponseToBlock = async (
   block: ChildPageBlockObjectResponse

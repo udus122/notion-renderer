@@ -1,27 +1,7 @@
 import { Blocks } from "./Blocks.js";
 
-import type { BlockObject } from "../index.js";
-import type {
-  ColumnBlockObjectResponse,
-  ColumnListBlockObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
-import type { Overwrite, BlockProps } from "src/types/utils.js";
-
-export type ColumnListBlockObject = Overwrite<
-  ColumnListBlockObjectResponse,
-  {
-    column_list: {
-      columns?: Array<ColumnBlockObject>;
-    };
-  }
->;
-
-export type ColumnBlockObject = Overwrite<
-  ColumnBlockObjectResponse,
-  {
-    column: { children?: Array<BlockObject> };
-  }
->;
+import type { ColumnListBlockObject } from "../../libs/notion/blocks/columnList.js";
+import type { BlockProps } from "../../types/utils.js";
 
 type Props = BlockProps<ColumnListBlockObject>;
 

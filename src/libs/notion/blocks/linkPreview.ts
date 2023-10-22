@@ -1,7 +1,13 @@
-import { fetchSiteMeta } from "src/index.js";
+import { fetchSiteMeta } from "../../../index.js";
 
+import type { ArticleData } from "@extractus/article-extractor";
 import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { LinkPreviewBlockObject } from "src/components/Blocks/LinkPreview.js";
+
+export type LinkPreviewBlockObject = LinkPreviewBlockObjectResponse & {
+  link_preview: {
+    site_meta?: ArticleData;
+  };
+};
 
 export const convertLinkPreviewResponseToBlock = async (
   block: LinkPreviewBlockObjectResponse

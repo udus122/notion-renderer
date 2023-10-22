@@ -1,15 +1,8 @@
 import { useMapper } from "../mapper.js";
 import { RichText } from "../RichText/RichText.js";
 
-import type { ArticleData } from "@extractus/article-extractor";
-import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
-
-export type BookmarkBlockObject = BookmarkBlockObjectResponse & {
-  bookmark: {
-    site_meta?: ArticleData;
-  };
-};
+import type { BookmarkBlockObject } from "../../libs/notion/blocks/bookmark.js";
+import type { BlockProps } from "../../types/utils.js";
 
 type Props = BlockProps<BookmarkBlockObject>;
 

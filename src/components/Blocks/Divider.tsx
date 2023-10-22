@@ -1,7 +1,5 @@
-import type { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
-
-export type DividerBlockObject = DividerBlockObjectResponse;
+import type { DividerBlockObject } from "../../libs/notion/blocks/divider.js";
+import type { BlockProps } from "../../types/utils.js";
 
 type Props = BlockProps<DividerBlockObject>;
 

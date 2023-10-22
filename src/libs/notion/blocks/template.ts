@@ -1,5 +1,6 @@
 import type { TemplateBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { TemplateBlockObject } from "src/components/Blocks/Template.js";
+
+export type TemplateBlockObject = TemplateBlockObjectResponse;
 
 export const convertTemplateResponseToBlock = async (
   block: TemplateBlockObjectResponse

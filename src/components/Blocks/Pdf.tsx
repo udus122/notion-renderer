@@ -1,9 +1,7 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { PdfBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
-
-export type PdfBlockObject = PdfBlockObjectResponse;
+import type { PdfBlockObject } from "../../libs/notion/blocks/pdf.js";
+import type { BlockProps } from "../../types/utils.js";
 
 type Props = BlockProps<PdfBlockObject>;
 

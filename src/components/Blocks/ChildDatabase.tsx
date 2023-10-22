@@ -2,17 +2,8 @@ import { useMapper } from "../mapper.js";
 
 import { Icon } from "./Icon.js";
 
-import type {
-  ChildDatabaseBlockObjectResponse,
-  DatabaseObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
-import type { BlockProps } from "src/types/utils.js";
-
-export type ChildDatabaseBlockObject = ChildDatabaseBlockObjectResponse & {
-  child_database: {
-    database?: DatabaseObjectResponse | null;
-  };
-};
+import type { ChildDatabaseBlockObject } from "../../libs/notion/blocks/childDatabase.js";
+import type { BlockProps } from "../../types/utils.js";
 
 type Props = BlockProps<ChildDatabaseBlockObject>;
 
