@@ -33,7 +33,7 @@ export const File: React.FC<Props> = ({ block }) => {
         </div>
       </Link>
       <div className="notion_caption notion_file_caption">
-        <RichText richTextItems={block.file.caption} />
+        <RichText richText={block.file.caption} />
       </div>
     </div>
   );

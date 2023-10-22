@@ -2,18 +2,15 @@ import { RichTextItem } from "./index.js";
 
 import type { RichTextItem as RichTextItemType } from "../../libs/notion/richText/richTextItem.js";
 
-type Props = { richTextItems: Array<RichTextItemType> };
+type Props = { richText: Array<RichTextItemType> };
 
-export const RichText: React.FC<Props> = ({ richTextItems }) => {
-  if (!richTextItems) return null;
+export const RichText: React.FC<Props> = ({ richText }) => {
+  if (!richText) return null;
 
   return (
     <span className="notion_rich_text">
-      {richTextItems.map((richTextItem, index) => (
-        <RichTextItem
-          key={`${index}-${richTextItem.plain_text}`}
-          richTextItem={richTextItem}
-        />
+      {richText.map((item, index) => (
+        <RichTextItem key={`${index}-${item.plain_text}`} richText={item} />
       ))}
     </span>
   );

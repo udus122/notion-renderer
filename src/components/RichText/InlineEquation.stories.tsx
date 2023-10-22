@@ -16,6 +16,6 @@ type Story = StoryObj<typeof InlineEquation>;
 
 export const Default: Story = {
   args: {
-    richTextItem: InlineEquationObject as EquationRichTextItem,
+    richText: InlineEquationObject as EquationRichTextItem,
   },
 };

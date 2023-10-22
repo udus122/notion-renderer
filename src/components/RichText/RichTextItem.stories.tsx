@@ -20,16 +20,16 @@ type Story = StoryObj<typeof RichTextItem>;
 
 export const Text: Story = {
   args: {
-    richTextItem: TextRichTextObject as TextRichTextItem,
+    richText: TextRichTextObject as TextRichTextItem,
   },
 };
 export const Mention: Story = {
   args: {
-    richTextItem: MentionRichTextObject as MentionRichTextItem,
+    richText: MentionRichTextObject as MentionRichTextItem,
   },
 };
 export const Equation: Story = {
   args: {
-    richTextItem: EquationRichTextObject as EquationRichTextItem,
+    richText: EquationRichTextObject as EquationRichTextItem,
   },
 };

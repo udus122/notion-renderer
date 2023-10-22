@@ -9,7 +9,7 @@ import type { RichTextProps } from "src/types/utils.js";
 
 type Props = Omit<RichTextProps<MentionRichTextItem>, "richTextItemMapper">;
 
-export const Mention: React.FC<Props> = ({ richTextItem }) => {
+export const Mention: React.FC<Props> = ({ richText: richTextItem }) => {
   const { Link } = useMapper();
 
   switch (richTextItem.mention.type) {

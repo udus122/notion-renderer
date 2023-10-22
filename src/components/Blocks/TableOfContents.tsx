@@ -34,7 +34,7 @@ export const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
               <div className={`notion_table_of_contents_item_${heading.type}`}>
                 <Link href={`#${heading.id}`}>
                   {/* @ts-expect-error: because heading objects always have a 'rich_text' property  */}
-                  <RichText richTextItems={heading[heading.type].rich_text} />
+                  <RichText richText={heading[heading.type].rich_text} />
                 </Link>
               </div>
             </div>

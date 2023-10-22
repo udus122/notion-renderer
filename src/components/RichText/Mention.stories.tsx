@@ -17,12 +17,12 @@ type Story = StoryObj<typeof Mention>;
 
 export const database: Story = {
   args: {
-    richTextItem: MentionDatabaseRichTextObject as MentionRichTextItem,
+    richText: MentionDatabaseRichTextObject as MentionRichTextItem,
   },
 };
 
 export const page: Story = {
   args: {
-    richTextItem: MentionPageRichTextObject as MentionRichTextItem,
+    richText: MentionPageRichTextObject as MentionRichTextItem,
   },
 };

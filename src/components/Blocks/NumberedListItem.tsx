@@ -13,7 +13,7 @@ export const NumberedListItem: React.FC<Props> = ({ block }) => {
       id={block.id}
       className={`notion_numbered_list_item notion_color_${block.numbered_list_item.color}`}
     >
-      <RichText richTextItems={block.numbered_list_item.rich_text} />
+      <RichText richText={block.numbered_list_item.rich_text} />
       <div>
         {block.numbered_list_item.children && (
           <Blocks blocks={block.numbered_list_item.children} />

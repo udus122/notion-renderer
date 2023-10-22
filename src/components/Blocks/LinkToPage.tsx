@@ -21,7 +21,7 @@ export const LinkToPage: React.FC<Props> = ({ block }) => {
             {<Icon icon={block.link_to_page.page?.icon ?? null} />}
           </span>
           <span className="notion_link_to_page_title">
-            <RichText richTextItems={titleRichText} />
+            <RichText richText={titleRichText} />
           </span>
         </Link>
       </div>
@@ -39,7 +39,7 @@ export const LinkToPage: React.FC<Props> = ({ block }) => {
             {<Icon icon={block.link_to_page.database?.icon ?? null} />}
           </span>
           <span className="notion_link_to_page_title">
-            <RichText richTextItems={titleRichTexts} />
+            <RichText richText={titleRichTexts} />
           </span>
         </Link>
       </div>

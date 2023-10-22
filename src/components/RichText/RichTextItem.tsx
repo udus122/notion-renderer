@@ -6,7 +6,7 @@ import type { RichTextProps } from "../../types/utils.js";
 type Props = RichTextProps<RichTextItemType>;
 
 export const RichTextItem: React.FC<Props> = (props) => {
-  if (!props.richTextItem) return null;
+  if (!props.richText) return null;
   return (
     <span className="notion_rich_text_item">
       <RichTextItemContent {...props} />
@@ -14,21 +14,21 @@ export const RichTextItem: React.FC<Props> = (props) => {
   );
 };
 
-const RichTextItemContent: React.FC<Props> = ({ richTextItem }) => {
+const RichTextItemContent: React.FC<Props> = ({ richText: richTextItem }) => {
   const { richTextItemMapper } = useMapper();
 
   switch (richTextItem.type) {
     case "text": {
       const TypeText = richTextItemMapper[richTextItem.type];
-      return <TypeText richTextItem={richTextItem} />;
+      return <TypeText richText={richTextItem} />;
     }
     case "equation": {
       const TypeEquation = richTextItemMapper[richTextItem.type];
-      return <TypeEquation richTextItem={richTextItem} />;
+      return <TypeEquation richText={richTextItem} />;
     }
     case "mention": {
       const TypeMention = richTextItemMapper[richTextItem.type];
-      return <TypeMention richTextItem={richTextItem} />;
+      return <TypeMention richText={richTextItem} />;
     }
     default:
       console.warn(`${(richTextItem as { type: never }).type} is never.`);

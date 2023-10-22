@@ -7,7 +7,7 @@ import type { RichTextProps } from "src/types/utils.js";
 
 type Props = Omit<RichTextProps<TextRichTextItem>, "richTextItemMapper">;
 
-export const Text: React.FC<Props> = ({ richTextItem }) => {
+export const Text: React.FC<Props> = ({ richText: richTextItem }) => {
   const { Link } = useMapper();
 
   return (

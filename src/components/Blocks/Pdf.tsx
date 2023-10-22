@@ -28,7 +28,7 @@ export const Pdf: React.FC<Props> = ({ block }) => {
         <a href={pdfUrl}>here</a>.
       </object>
       <div className="notion_caption notion_pdf_caption">
-        <RichText richTextItems={block.pdf.caption} />
+        <RichText richText={block.pdf.caption} />
       </div>
     </div>
   );

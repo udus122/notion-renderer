@@ -19,7 +19,7 @@ export const Audio: React.FC<Props> = ({ block }) => {
         <a href={audioUrl}>here</a>.
       </audio>
       <div className="notion_caption notion_audio_caption">
-        <RichText richTextItems={block.audio.caption} />
+        <RichText richText={block.audio.caption} />
       </div>
     </div>
   );

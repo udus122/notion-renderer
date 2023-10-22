@@ -23,7 +23,7 @@ export const Embed: React.FC<Props> = ({ block }) => {
     <div id={block.id} className="notion_embed">
       <iframe src={block.embed.url} title="notion embed content" />
       <div className="notion_caption notion_embed_caption">
-        <RichText richTextItems={block.embed.caption} />
+        <RichText richText={block.embed.caption} />
       </div>
     </div>
   );

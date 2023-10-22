@@ -13,7 +13,7 @@ export const Quote: React.FC<Props> = ({ block }) => {
       id={block.id}
       className={`notion_quote notion_color_${block.quote.color}`}
     >
-      <RichText richTextItems={block.quote.rich_text} />
+      <RichText richText={block.quote.rich_text} />
       {block.quote.children && (
         <div className={"notion_quote_children"}>
           <Blocks blocks={block.quote.children} />

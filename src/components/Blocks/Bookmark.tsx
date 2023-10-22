@@ -50,7 +50,7 @@ export const Bookmark: React.FC<Props> = ({ block }) => {
         </div>
       </Link>
       <div className="notion_caption notion_bookmark_caption">
-        <RichText richTextItems={block.bookmark.caption} />
+        <RichText richText={block.bookmark.caption} />
       </div>
     </div>
   );

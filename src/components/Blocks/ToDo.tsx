@@ -19,7 +19,7 @@ export const ToDo: React.FC<Props> = ({ block }) => {
           {isChecked ? <CheckedBox /> : <CheckBox />}
         </span>
         <span className={`notion_to_do_text ${isChecked ? "checked" : ""}`}>
-          <RichText richTextItems={block.to_do.rich_text} />
+          <RichText richText={block.to_do.rich_text} />
         </span>
       </div>
       {block.to_do.children && (

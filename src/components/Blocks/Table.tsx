@@ -82,7 +82,7 @@ const Th: React.FC<{
 }> = ({ cell }) => {
   return (
     <th>
-      <RichText richTextItems={cell} />
+      <RichText richText={cell} />
     </th>
   );
 };
@@ -92,7 +92,7 @@ const Td: React.FC<{
 }> = ({ cell }) => {
   return (
     <td>
-      <RichText richTextItems={cell} />
+      <RichText richText={cell} />
     </td>
   );
 };

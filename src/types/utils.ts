@@ -23,5 +23,5 @@ export type BlockProps<T extends BlockObject> = {
 };
 
 export type RichTextProps<T extends RichTextItem> = {
-  richTextItem: T;
+  richText: T;
 };

@@ -13,12 +13,12 @@ export const Code: React.FC<Props> = ({ block }) => {
       </div>
       <pre className="notion_code_body">
         <code>
-          <RichText richTextItems={block.code.rich_text} />
+          <RichText richText={block.code.rich_text} />
         </code>
       </pre>
       {block.code.caption && (
         <div className="notion_caption">
-          <RichText richTextItems={block.code.caption} />
+          <RichText richText={block.code.caption} />
         </div>
       )}
     </div>

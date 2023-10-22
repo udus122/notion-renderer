@@ -17,7 +17,7 @@ export const Heading3: React.FC<Props> = ({ block }) => {
         >
           <summary className="notion_toggle_summary">
             <h3>
-              <RichText richTextItems={block.heading_3.rich_text} />
+              <RichText richText={block.heading_3.rich_text} />
             </h3>
           </summary>
           <div className="notion_toggle_details">
@@ -31,7 +31,7 @@ export const Heading3: React.FC<Props> = ({ block }) => {
           id={block.id}
           className={`notion_heading notion_heading_3 notion_color_${block.heading_3.color}`}
         >
-          <RichText richTextItems={block.heading_3.rich_text} />
+          <RichText richText={block.heading_3.rich_text} />
         </h1>
       )}
     </>

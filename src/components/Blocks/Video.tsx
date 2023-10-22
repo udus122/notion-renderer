@@ -31,7 +31,7 @@ export const Video: React.FC<Props> = ({ block }) => {
         <a href={videoUrl}>here</a>.
       </video>
       <div className="notion_caption notion_video_caption">
-        <RichText richTextItems={block.video.caption} />
+        <RichText richText={block.video.caption} />
       </div>
     </div>
   );
