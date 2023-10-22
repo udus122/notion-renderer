@@ -19,6 +19,7 @@ import { convertBreadcrumbResponseToBlock } from "./breadcrumb.js";
 import { convertBulletedListItemResponseToBlock } from "./bulleted_list_item.js";
 import { convertCalloutResponseToBlock } from "./callout.js";
 import { convertChildDatabaseResponseToBlock } from "./child_database.js";
+import { convertChildPageResponseToBlock } from "./childPage.js";
 
 import type {
   BlockObjectResponse,
@@ -29,7 +30,6 @@ import type {
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BulletedListBlockObject } from "src/components/Blocks/BulletedList.js";
-import type { ChildPageBlockObject } from "src/components/Blocks/ChildPage.js";
 import type { CodeBlockObject } from "src/components/Blocks/Code.js";
 import type {
   ColumnListBlockObject,
@@ -240,22 +240,7 @@ export const convertResponseToBlock = async (
       return await convertChildDatabaseResponseToBlock(block);
     }
     case "child_page": {
-      const childPage = await fetchPage(block.id);
-      if (childPage) {
-        return {
-          ...block,
-          child_page: {
-            ...block.child_page,
-            page: childPage,
-          },
-        } satisfies ChildPageBlockObject;
-      }
-      return {
-        ...block,
-        child_page: {
-          ...block.child_page,
-        },
-      } satisfies ChildPageBlockObject;
+      return await convertChildPageResponseToBlock(block);
     }
     case "code": {
       return { ...block } satisfies CodeBlockObject;
