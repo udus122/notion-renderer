@@ -1,5 +1,6 @@
-import { Block } from "./Block.js";
 import { type BlockObject } from "../index.js";
+
+import { Block } from "./Block.js";
 import { Blocks } from "./Blocks.js";
 
 import type { SyncedBlockBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";

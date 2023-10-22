@@ -2,16 +2,8 @@ import { randomUUID } from "crypto";
 
 import { isFullBlock } from "@notionhq/client";
 
-import {
-  callAPIWithBackOff,
-  fetchSiteMeta,
-  fetchOembed,
-  notNullNorUndefined,
-} from "../../utils.js";
+import { callAPIWithBackOff, notNullNorUndefined } from "../../utils.js";
 import { notion } from "../auth.js";
-import { listComments } from "../comments.js";
-import { fetchDatabase } from "../databases.js";
-import { fetchPage } from "../pages.js";
 
 import { convertAudioResponseToBlock } from "./audio.js";
 import { convertBookmarkResponseToBlock } from "./bookmark.js";
@@ -23,6 +15,29 @@ import { convertChildPageResponseToBlock } from "./childPage.js";
 import { convertCodeResponseToBlock } from "./code.js";
 import { convertColumnResponseToBlock } from "./column.js";
 import { convertColumnListResponseToBlock } from "./columnList.js";
+import { convertDividerResponseToBlock } from "./divider.js";
+import { convertEmbedResponseToBlock } from "./embed.js";
+import { convertEquationResponseToBlock } from "./equation.js";
+import { convertFileResponseToBlock } from "./file.js";
+import { convertHeading1ResponseToBlock } from "./heading1.js";
+import { convertHeading2ResponseToBlock } from "./heading2.js";
+import { convertHeading3ResponseToBlock } from "./heading3.js";
+import { convertImageResponseToBlock } from "./image.js";
+import { convertLinkPreviewResponseToBlock } from "./linkPreview.js";
+import { convertLinkToPageResponseToBlock } from "./linkToPage.js";
+import { convertNumberedListItemResponseToBlock } from "./numberedListItem.js";
+import { convertParagraphResponseToBlock } from "./paragraph.js";
+import { convertPdfResponseToBlock } from "./pdf.js";
+import { convertQuoteResponseToBlock } from "./quote.js";
+import { convertSyncedBlockResponseToBlock } from "./syncedBlock.js";
+import { convertTableResponseToBlock } from "./table.js";
+import { convertTableRowResponseToBlock } from "./table_row.js";
+import { convertTableOfContentsResponseToBlock } from "./tableOfContents.js";
+import { convertTemplateResponseToBlock } from "./template.js";
+import { convertToDoResponseToBlock } from "./toDo.js";
+import { convertToggleResponseToBlock } from "./toggle.js";
+import { convertUnsupportedResponseToBlock } from "./unsupported.js";
+import { convertVideoResponseToBlock } from "./video.js";
 
 import type {
   BlockObjectResponse,
@@ -33,32 +48,7 @@ import type {
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BulletedListBlockObject } from "src/components/Blocks/BulletedList.js";
-import type { DividerBlockObject } from "src/components/Blocks/Divider.js";
-import type { EmbedBlockObject } from "src/components/Blocks/Embed.js";
-import type { EquationBlockObject } from "src/components/Blocks/Equation.js";
-import type { FileBlockObject } from "src/components/Blocks/File.js";
-import type { Heading1BlockObject } from "src/components/Blocks/Heading1.js";
-import type { Heading2BlockObject } from "src/components/Blocks/Heading2.js";
-import type { Heading3BlockObject } from "src/components/Blocks/Heading3.js";
-import type { ImageBlockObject } from "src/components/Blocks/Image.js";
-import type { LinkPreviewBlockObject } from "src/components/Blocks/LinkPreview.js";
-import type { LinkToPageBlockObject } from "src/components/Blocks/LinkToPage.js";
 import type { NumberedListBlockObject } from "src/components/Blocks/NumberedList.js";
-import type { NumberedListItemBlockObject } from "src/components/Blocks/NumberedListItem.js";
-import type { ParagraphBlockObject } from "src/components/Blocks/Paragraph.js";
-import type { PdfBlockObject } from "src/components/Blocks/Pdf.js";
-import type { QuoteBlockObject } from "src/components/Blocks/Quote.js";
-import type { SyncedBlockBlockObject } from "src/components/Blocks/SyncedBlock.js";
-import type {
-  TableRowBlockObject,
-  TableBlockObject,
-} from "src/components/Blocks/Table.js";
-import type { TableOfContentsBlockObject } from "src/components/Blocks/TableOfContents.js";
-import type { TemplateBlockObject } from "src/components/Blocks/Template.js";
-import type { ToDoBlockObject } from "src/components/Blocks/ToDo.js";
-import type { ToggleBlockObject } from "src/components/Blocks/Toggle.js";
-import type { UnsupportedBlockObject } from "src/components/Blocks/Unsupported.js";
-import type { VideoBlockObject } from "src/components/Blocks/Video.js";
 import type { BlockObject } from "src/components/index.js";
 import type { ListBlockChildrenResponseResults } from "src/types/notion.js";
 
@@ -250,292 +240,73 @@ export const convertResponseToBlock = async (
       return await convertColumnListResponseToBlock(block);
     }
     case "divider": {
-      return { ...block } satisfies DividerBlockObject;
+      return await convertDividerResponseToBlock(block);
     }
     case "embed": {
-      const { payload: oembed, error } = await fetchOembed(block.embed.url);
-      if (!error) {
-        return {
-          ...block,
-          embed: {
-            ...block.embed,
-            oembed,
-          },
-        } satisfies EmbedBlockObject;
-      }
-      return { ...block } satisfies EmbedBlockObject;
+      return await convertEmbedResponseToBlock(block);
     }
     case "equation": {
-      return { ...block } satisfies EquationBlockObject;
+      return await convertEquationResponseToBlock(block);
     }
     case "file": {
-      return { ...block } satisfies FileBlockObject;
+      return await convertFileResponseToBlock(block);
     }
     case "heading_1": {
-      if (block.has_children) {
-        const children = await fetchBlockComponents(block.id);
-        return {
-          ...block,
-          heading_1: {
-            ...block.heading_1,
-            children,
-          },
-        } satisfies Heading1BlockObject;
-      }
-      return {
-        ...block,
-      } satisfies Heading1BlockObject;
+      return await convertHeading1ResponseToBlock(block);
     }
     case "heading_2": {
-      if (block.has_children) {
-        const children = await fetchBlockComponents(block.id);
-        return {
-          ...block,
-          heading_2: {
-            ...block.heading_2,
-            children,
-          },
-        } satisfies Heading2BlockObject;
-      }
-      return {
-        ...block,
-      } satisfies Heading2BlockObject;
+      return await convertHeading2ResponseToBlock(block);
     }
     case "heading_3": {
-      if (block.has_children) {
-        const children = await fetchBlockComponents(block.id);
-        return {
-          ...block,
-          heading_3: {
-            ...block.heading_3,
-            children,
-          },
-        } satisfies Heading3BlockObject;
-      }
-      return {
-        ...block,
-      } satisfies Heading3BlockObject;
+      return await convertHeading3ResponseToBlock(block);
     }
     case "image": {
-      return { ...block } satisfies ImageBlockObject;
+      return await convertImageResponseToBlock(block);
     }
     case "link_preview": {
-      const { payload: site_meta, error } = await fetchSiteMeta(
-        block.link_preview.url
-      );
-      if (!error) {
-        if (site_meta) {
-          return {
-            ...block,
-            link_preview: {
-              ...block.link_preview,
-              site_meta: site_meta,
-            },
-          } satisfies LinkPreviewBlockObject;
-        }
-      }
-      return {
-        ...block,
-        link_preview: {
-          ...block.link_preview,
-        },
-      } satisfies LinkPreviewBlockObject;
+      return await convertLinkPreviewResponseToBlock(block);
     }
     case "link_to_page": {
-      switch (block.link_to_page.type) {
-        case "database_id": {
-          const linkedDatabase = await fetchDatabase(
-            block.link_to_page.database_id
-          );
-          return {
-            ...block,
-            link_to_page: {
-              ...block.link_to_page,
-              database: linkedDatabase,
-            },
-          } satisfies LinkToPageBlockObject;
-        }
-        case "page_id": {
-          const linkedPage = await fetchPage(block.link_to_page.page_id);
-          return {
-            ...block,
-            link_to_page: {
-              ...block.link_to_page,
-              page: linkedPage,
-            },
-          } satisfies LinkToPageBlockObject;
-        }
-        case "comment_id": {
-          const linkedComments = await listComments({
-            block_id: block.link_to_page.comment_id,
-          });
-          return {
-            ...block,
-            link_to_page: {
-              ...block.link_to_page,
-              comments: linkedComments,
-            },
-          } satisfies LinkToPageBlockObject;
-        }
-        default: {
-          return null;
-        }
-      }
+      return await convertLinkToPageResponseToBlock(block);
     }
     case "numbered_list_item": {
-      if (block.has_children) {
-        const children = await fetchBlockComponents(block.id);
-        return {
-          ...block,
-          numbered_list_item: {
-            ...block.numbered_list_item,
-            children,
-          },
-        } satisfies NumberedListItemBlockObject;
-      }
-      return {
-        ...block,
-      } satisfies NumberedListItemBlockObject;
+      return await convertNumberedListItemResponseToBlock(block);
     }
     case "paragraph": {
-      if (block.has_children) {
-        const children = await fetchBlockComponents(block.id);
-        return {
-          ...block,
-          paragraph: {
-            ...block.paragraph,
-            children,
-          },
-        } satisfies ParagraphBlockObject;
-      }
-      return {
-        ...block,
-      } satisfies ParagraphBlockObject;
+      return await convertParagraphResponseToBlock(block);
     }
     case "pdf": {
-      return { ...block } satisfies PdfBlockObject;
+      return await convertPdfResponseToBlock(block);
     }
     case "quote": {
-      if (block.has_children) {
-        const children = await fetchBlockComponents(block.id);
-        return {
-          ...block,
-          quote: {
-            ...block.quote,
-            children,
-          },
-        } satisfies QuoteBlockObject;
-      }
-      return {
-        ...block,
-      } satisfies QuoteBlockObject;
+      return await convertQuoteResponseToBlock(block);
     }
     case "synced_block": {
-      if (block.has_children) {
-        const children = await fetchBlockComponents(block.id);
-        if (block.synced_block.synced_from) {
-          const duplicatedBlock = await fetchBlockComponent(
-            block.synced_block.synced_from.block_id
-          );
-          return {
-            ...block,
-            synced_block: {
-              ...block.synced_block,
-              synced_from: {
-                ...block.synced_block.synced_from,
-                block: duplicatedBlock,
-              },
-              children: children.length === 0 ? null : children,
-            },
-          } satisfies SyncedBlockBlockObject;
-        }
-        return {
-          ...block,
-          synced_block: {
-            ...block.synced_block,
-            children,
-          },
-        } satisfies SyncedBlockBlockObject;
-      }
-      return { ...block } satisfies SyncedBlockBlockObject;
+      return await convertSyncedBlockResponseToBlock(block);
     }
     case "table": {
-      if (block.has_children) {
-        const blocks = await fetchBlockComponents(block.id);
-        const table_rows = blocks.filter(
-          (block): block is TableRowBlockObject => block.type === "table_row"
-        );
-        return {
-          ...block,
-          table: {
-            ...block.table,
-            table_rows,
-          },
-        } satisfies TableBlockObject;
-      }
-      return {
-        ...block,
-      } satisfies TableBlockObject;
+      return await convertTableResponseToBlock(block);
     }
     case "table_of_contents": {
-      return { ...block } satisfies TableOfContentsBlockObject;
+      return await convertTableOfContentsResponseToBlock(block);
     }
     case "table_row": {
-      return { ...block } satisfies TableRowBlockObject;
+      return await convertTableRowResponseToBlock(block);
     }
     case "template": {
-      return { ...block } satisfies TemplateBlockObject;
+      return await convertTemplateResponseToBlock(block);
     }
     case "to_do": {
-      if (block.has_children) {
-        const children = await fetchBlockComponents(block.id);
-        return {
-          ...block,
-          to_do: {
-            ...block.to_do,
-            children,
-          },
-        } satisfies ToDoBlockObject;
-      }
-      return {
-        ...block,
-      } satisfies ToDoBlockObject;
+      return await convertToDoResponseToBlock(block);
     }
     case "toggle": {
-      if (block.has_children) {
-        const children = await fetchBlockComponents(block.id);
-        return {
-          ...block,
-          toggle: {
-            ...block.toggle,
-            children,
-          },
-        } satisfies ToggleBlockObject;
-      }
-      return {
-        ...block,
-      } satisfies ToggleBlockObject;
+      return await convertToggleResponseToBlock(block);
     }
     case "unsupported": {
-      return { ...block } satisfies UnsupportedBlockObject;
+      return await convertUnsupportedResponseToBlock(block);
     }
     case "video": {
-      if (block.video.type === "external") {
-        const { payload: oembed, error } = await fetchOembed(
-          block.video.external.url,
-          { maxwidth: 560, maxheight: 315 }
-        );
-        if (!error) {
-          return {
-            ...block,
-            video: {
-              ...block.video,
-              oembed,
-            },
-          } satisfies VideoBlockObject;
-        }
-      }
-      return { ...block } satisfies VideoBlockObject;
+      return await convertVideoResponseToBlock(block);
     }
     default: {
       return null;
