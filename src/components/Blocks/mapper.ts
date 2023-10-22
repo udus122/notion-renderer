@@ -48,9 +48,9 @@ import { Video } from "./Video.js";
 
 export const useMapper = () => {
   const blockMapper = useContext(BlockMapper);
-  const richTextItemMapper = useContext(RichTextMapper);
+  const richTextItemMapper = useContext(RichTextItemMapper);
   const annotationMapper = useContext(AnnotationMapper);
-  const Link = useContext(LinkMapper);
+  const Link = useContext(LinkComponentMapper);
   return {
     blockMapper,
     richTextItemMapper,
@@ -99,13 +99,13 @@ export const defaultBlockMapper = {
 
 export const BlockMapper = createContext(defaultBlockMapper);
 
-export const defaultRichTextMapper = {
+export const defaultRichTextItemMapper = {
   text: Text,
   equation: InlineEquation,
   mention: Mention,
 };
 
-export const RichTextMapper = createContext(defaultRichTextMapper);
+export const RichTextItemMapper = createContext(defaultRichTextItemMapper);
 
 export const defaultAnnotationMapper = {
   color: Color,
@@ -118,4 +118,5 @@ export const defaultAnnotationMapper = {
 
 export const AnnotationMapper = createContext(defaultAnnotationMapper);
 
-export const LinkMapper = createContext<React.ComponentType<LinkProps>>(Link);
+export const LinkComponentMapper =
+  createContext<React.ComponentType<LinkProps>>(Link);
