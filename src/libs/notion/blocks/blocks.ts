@@ -21,6 +21,7 @@ import { convertCalloutResponseToBlock } from "./callout.js";
 import { convertChildDatabaseResponseToBlock } from "./childDatabase.js";
 import { convertChildPageResponseToBlock } from "./childPage.js";
 import { convertCodeResponseToBlock } from "./code.js";
+import { convertColumnResponseToBlock } from "./column.js";
 
 import type {
   BlockObjectResponse,
@@ -246,17 +247,7 @@ export const convertResponseToBlock = async (
       return await convertCodeResponseToBlock(block);
     }
     case "column": {
-      if (block.has_children) {
-        const children = await fetchBlockComponents(block.id);
-        return {
-          ...block,
-          column: {
-            ...block.column,
-            children,
-          },
-        };
-      }
-      return { ...block } satisfies ColumnBlockObject;
+      return await convertColumnResponseToBlock(block);
     }
     case "column_list": {
       if (block.has_children) {
