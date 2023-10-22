@@ -22,6 +22,7 @@ import { convertChildDatabaseResponseToBlock } from "./childDatabase.js";
 import { convertChildPageResponseToBlock } from "./childPage.js";
 import { convertCodeResponseToBlock } from "./code.js";
 import { convertColumnResponseToBlock } from "./column.js";
+import { convertColumnListResponseToBlock } from "./columnList.js";
 
 import type {
   BlockObjectResponse,
@@ -32,10 +33,6 @@ import type {
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 import type { BulletedListBlockObject } from "src/components/Blocks/BulletedList.js";
-import type {
-  ColumnListBlockObject,
-  ColumnBlockObject,
-} from "src/components/Blocks/ColumnList.js";
 import type { DividerBlockObject } from "src/components/Blocks/Divider.js";
 import type { EmbedBlockObject } from "src/components/Blocks/Embed.js";
 import type { EquationBlockObject } from "src/components/Blocks/Equation.js";
@@ -250,22 +247,7 @@ export const convertResponseToBlock = async (
       return await convertColumnResponseToBlock(block);
     }
     case "column_list": {
-      if (block.has_children) {
-        const blocks = await fetchBlockComponents(block.id);
-        const columns = blocks.filter(
-          (block): block is ColumnBlockObject => block.type === "column"
-        );
-        return {
-          ...block,
-          column_list: {
-            ...block.column_list,
-            columns,
-          },
-        } satisfies ColumnListBlockObject;
-      }
-      return {
-        ...block,
-      } satisfies ColumnListBlockObject;
+      return await convertColumnListResponseToBlock(block);
     }
     case "divider": {
       return { ...block } satisfies DividerBlockObject;
