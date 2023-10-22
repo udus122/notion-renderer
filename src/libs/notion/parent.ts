@@ -1,6 +1,6 @@
 import { isFullBlock, isFullPage, isFullDatabase } from "@notionhq/client";
 
-import { retrieveBlock } from "./blocks.js";
+import { retrieveBlock } from "./blocks/blocks.js";
 import { retrieveDatabase } from "./databases.js";
 import { retrievePage } from "./pages.js";
 

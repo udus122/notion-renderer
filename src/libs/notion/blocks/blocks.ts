@@ -7,29 +7,27 @@ import {
   fetchSiteMeta,
   fetchOembed,
   notNullNorUndefined,
-} from "../utils.js";
+} from "../../utils.js";
+import { notion } from "../auth.js";
+import { listComments } from "../comments.js";
+import { fetchDatabase } from "../databases.js";
+import { fetchPage } from "../pages.js";
 
-import { notion } from "./auth.js";
-import { listComments } from "./comments.js";
-import { fetchDatabase } from "./databases.js";
-import { fetchPage } from "./pages.js";
-import { fetchAllParents } from "./parent.js";
+import { convertAudioResponseToBlock } from "./audio.js";
+import { convertBookmarkResponseToBlock } from "./bookmark.js";
+import { convertBreadcrumbResponseToBlock } from "./breadcrumb.js";
+import { convertBulletedListItemResponseToBlock } from "./bulleted_list_item.js";
+import { convertCalloutResponseToBlock } from "./callout.js";
 
 import type {
   BlockObjectResponse,
-  DatabaseObjectResponse,
   GetBlockParameters,
   GetBlockResponse,
   ListBlockChildrenParameters,
   ListBlockChildrenResponse,
-  PageObjectResponse,
   PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
-import type { AudioBlockObject } from "src/components/Blocks/Audio.js";
-import type { BookmarkBlockObject } from "src/components/Blocks/Bookmark.js";
 import type { BulletedListBlockObject } from "src/components/Blocks/BulletedList.js";
-import type { BulletedListItemBlockObject } from "src/components/Blocks/BulletedListItem.js";
-import type { CalloutBlockObject } from "src/components/Blocks/Callout.js";
 import type { ChildDatabaseBlockObject } from "src/components/Blocks/ChildDatabase.js";
 import type { ChildPageBlockObject } from "src/components/Blocks/ChildPage.js";
 import type { CodeBlockObject } from "src/components/Blocks/Code.js";
@@ -224,74 +222,19 @@ export const convertResponseToBlock = async (
   }
   switch (block.type) {
     case "audio": {
-      return { ...block } satisfies AudioBlockObject;
+      return await convertAudioResponseToBlock(block);
     }
     case "bookmark": {
-      const { payload: site_meta, error } = await fetchSiteMeta(
-        block.bookmark.url
-      );
-      if (!error) {
-        if (site_meta) {
-          return {
-            ...block,
-            bookmark: {
-              ...block.bookmark,
-              site_meta: site_meta,
-            },
-          } satisfies BookmarkBlockObject;
-        }
-      }
-      return {
-        ...block,
-        bookmark: {
-          ...block.bookmark,
-        },
-      } satisfies BookmarkBlockObject;
+      return await convertBookmarkResponseToBlock(block);
     }
     case "breadcrumb": {
-      const allParents = await fetchAllParents(block.parent);
-      const parents = allParents.filter(
-        (parent): parent is PageObjectResponse | DatabaseObjectResponse =>
-          parent.object === "page" || parent.object === "database"
-      );
-
-      return {
-        ...block,
-        breadcrumb: {
-          ...block.breadcrumb,
-          parents,
-        },
-      };
+      return await convertBreadcrumbResponseToBlock(block);
     }
     case "bulleted_list_item": {
-      if (block.has_children) {
-        const children = await fetchBlockComponents(block.id);
-        return {
-          ...block,
-          bulleted_list_item: {
-            ...block.bulleted_list_item,
-            children,
-          },
-        } satisfies BulletedListItemBlockObject;
-      }
-      return {
-        ...block,
-      } satisfies BulletedListItemBlockObject;
+      return await convertBulletedListItemResponseToBlock(block);
     }
     case "callout": {
-      if (block.has_children) {
-        const children = await fetchBlockComponents(block.id);
-        return {
-          ...block,
-          callout: {
-            ...block.callout,
-            children,
-          },
-        } satisfies CalloutBlockObject;
-      }
-      return {
-        ...block,
-      } satisfies CalloutBlockObject;
+      return await convertCalloutResponseToBlock(block);
     }
     case "child_database": {
       const childDatabase = await fetchDatabase(block.id);
