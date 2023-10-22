@@ -107,7 +107,7 @@ export const fetchBlockComponent = async (
 ): Promise<BlockObject | null> => {
   const block = await retrieveBlock({ block_id: blockId });
   if (block) {
-    const blockComponent = convertBlockToComponent(block);
+    const blockComponent = convertResponseToBlock(block);
     return blockComponent;
   }
   return null;
@@ -129,9 +129,7 @@ export const resolveBlockChildren = async (
   blocks: ListBlockChildrenResponseResults
 ): Promise<Array<BlockObject>> => {
   const blockObjectComponents = await Promise.all(
-    blocks.map(
-      async (child_block) => await convertBlockToComponent(child_block)
-    )
+    blocks.map(async (child_block) => await convertResponseToBlock(child_block))
   );
   const nonNullBlockObjectComponents =
     blockObjectComponents.filter(notNullNorUndefined);
@@ -217,7 +215,8 @@ export const wrapListItems = (
     []
   );
 };
-export const convertBlockToComponent = async (
+
+export const convertResponseToBlock = async (
   block: BlockObjectResponse | PartialBlockObjectResponse
 ): Promise<BlockObject | null> => {
   if (!isFullBlock(block)) {
