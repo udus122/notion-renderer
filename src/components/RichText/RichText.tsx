@@ -1,6 +1,10 @@
-import { RichTextItem } from "./index.js";
+import { RichTextItem } from "./RichTextItem.js";
 
 import type { RichTextItem as RichTextItemType } from "@udus/notion-libs";
+
+export type RichTextProps<T extends RichTextItemType> = {
+  richText: T;
+};
 
 type Props = { richText: Array<RichTextItemType> };
 

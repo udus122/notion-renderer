@@ -8,6 +8,6 @@ import { Blocks } from "./dist/components/Blocks/Blocks";
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
-    <Blocks blocks={blocks} mapper={{}} />
+    <Blocks blocks={blocks} />
   </React.StrictMode>
 );

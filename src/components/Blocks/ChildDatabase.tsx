@@ -2,7 +2,8 @@ import { useMapper } from "../mapper.js";
 
 import { Icon } from "./Icon.js";
 
-import type { BlockProps, ChildDatabaseBlockObject } from "@udus/notion-libs";
+import type { BlockProps } from "./Block.js";
+import type { ChildDatabaseBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<ChildDatabaseBlockObject>;
 

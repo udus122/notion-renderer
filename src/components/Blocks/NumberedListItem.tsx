@@ -2,10 +2,8 @@ import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type {
-  BlockProps,
-  NumberedListItemBlockObject,
-} from "@udus/notion-libs";
+import type { BlockProps } from "./Block.js";
+import type { NumberedListItemBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<NumberedListItemBlockObject>;
 

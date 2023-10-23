@@ -1,7 +1,8 @@
 import { useMapper } from "../mapper.js";
 import { RichText } from "../RichText/RichText.js";
 
-import type { BlockProps, BookmarkBlockObject } from "@udus/notion-libs";
+import type { BlockProps } from "./Block.js";
+import type { BookmarkBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<BookmarkBlockObject>;
 

@@ -1,6 +1,7 @@
 import { NumberedListItem } from "./NumberedListItem.js";
 
-import type { BlockProps, NumberedListBlockObject } from "@udus/notion-libs";
+import type { BlockProps } from "./Block.js";
+import type { NumberedListBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<NumberedListBlockObject>;
 

@@ -1,8 +1,8 @@
 import { useMapper } from "../mapper.js";
 import { RichText } from "../RichText/RichText.js";
 
+import type { BlockProps } from "./Block.js";
 import type {
-  BlockProps,
   TableOfContentsBlockObject,
   Heading3BlockObject,
   Heading2BlockObject,

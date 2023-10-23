@@ -1,4 +1,5 @@
-import type { BlockProps, DividerBlockObject } from "@udus/notion-libs";
+import type { BlockProps } from "./Block.js";
+import type { DividerBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<DividerBlockObject>;
 

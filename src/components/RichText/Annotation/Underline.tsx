@@ -1,6 +1,6 @@
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { RichTextItem } from "@udus/notion-libs";
 
-type Props = React.ComponentProps<"u"> & { richTextItem: RichTextItemResponse };
+type Props = React.ComponentProps<"u"> & { richTextItem: RichTextItem };
 
 export const Underline: React.FC<Props> = ({ children }) => {
   return <u className="notion_underline">{children}</u>;

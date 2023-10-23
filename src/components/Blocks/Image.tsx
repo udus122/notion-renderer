@@ -1,6 +1,7 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { BlockProps, ImageBlockObject } from "@udus/notion-libs";
+import type { BlockProps } from "./Block.js";
+import type { ImageBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<ImageBlockObject>;
 

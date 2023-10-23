@@ -1,6 +1,7 @@
 import { Blocks } from "./Blocks.js";
 
-import type { BlockProps, ColumnListBlockObject } from "@udus/notion-libs";
+import type { BlockProps } from "./Block.js";
+import type { ColumnListBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<ColumnListBlockObject>;
 

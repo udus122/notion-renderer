@@ -2,7 +2,8 @@ import { useMapper } from "../mapper.js";
 
 import { Icon } from "./Icon.js";
 
-import type { BlockProps, ChildPageBlockObject } from "@udus/notion-libs";
+import type { BlockProps } from "./Block.js";
+import type { ChildPageBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<ChildPageBlockObject>;
 

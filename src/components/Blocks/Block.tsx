@@ -1,6 +1,17 @@
 import { useMapper } from "../mapper.js";
 
-import type { BlockProps, BlockObject } from "@udus/notion-libs";
+import type {
+  BlockObject,
+  Heading1BlockObject,
+  Heading2BlockObject,
+  Heading3BlockObject,
+  ToggleBlockObject,
+} from "@udus/notion-libs";
+
+export type BlockProps<T extends BlockObject> = {
+  block: T;
+  blocks: Array<BlockObject>;
+};
 
 type Props = BlockProps<BlockObject>;
 
@@ -169,3 +180,8 @@ const BlockComponent: React.FC<Props> = ({ block, blocks }) => {
     }
   }
 };
+export type TogglableBlockObjectComponent =
+  | ToggleBlockObject
+  | Heading1BlockObject
+  | Heading2BlockObject
+  | Heading3BlockObject;
