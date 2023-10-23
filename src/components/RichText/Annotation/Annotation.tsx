@@ -1,9 +1,10 @@
 import { useMapper } from "../../mapper.js";
 
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { RichTextItem } from "@udus/notion-libs";
+import type React from "react";
 
 export const Annotation: React.FC<{
-  richTextItem: RichTextItemResponse;
+  richTextItem: RichTextItem;
   children: React.ReactNode;
 }> = ({ richTextItem, children }) => {
   const { annotationMapper } = useMapper();

@@ -2,7 +2,7 @@ import { LinkToPage } from "./LinkToPage.js";
 import LinkToPageObject from "./LinkToPage.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { LinkToPageBlockObject } from "src/libs/notion/blocks/linkToPage.js";
+import type { LinkToPageBlockObject } from "@udus/notion-libs";
 
 const meta: Meta<typeof LinkToPage> = {
   title: "Blocks/LinkToPage",

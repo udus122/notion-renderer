@@ -1,10 +1,9 @@
+import { type EquationRichTextItem } from "@udus/notion-libs";
 import katex from "katex";
-
-import { type EquationRichTextItem } from "../../libs/notion/richText/equation.js";
 
 import { Annotation } from "./Annotation/Annotation.js";
 
-import type { RichTextProps } from "src/types/utils.js";
+import type { RichTextProps } from "@udus/notion-libs";
 
 type Props = Omit<RichTextProps<EquationRichTextItem>, "richTextItemMapper">;
 

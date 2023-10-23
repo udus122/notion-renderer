@@ -1,6 +1,3 @@
-import type { BlockObject } from "../libs/notion/blocks/blocks.js";
-import type { RichTextItem } from "../libs/notion/richText/richTextItem.ts";
-
 export type Overwrite<T, U extends { [Key in keyof T]?: unknown }> = Omit<
   T,
   keyof U
@@ -16,12 +13,3 @@ export type Result<T, E extends Error = Error> =
       payload?: undefined;
       error: E;
     };
-
-export type BlockProps<T extends BlockObject> = {
-  block: T;
-  blocks: Array<BlockObject>;
-};
-
-export type RichTextProps<T extends RichTextItem> = {
-  richText: T;
-};

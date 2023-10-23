@@ -1,7 +1,6 @@
-import { type BlockObject } from "../../libs/notion/blocks/blocks.js";
 import { useMapper } from "../mapper.js";
 
-import type { BlockProps } from "../../types/utils.js";
+import type { BlockProps, BlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<BlockObject>;
 

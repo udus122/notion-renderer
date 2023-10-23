@@ -1,4 +1,4 @@
-import { type BreadcrumbBlockObject } from "src/libs/notion/blocks/breadcrumb.js";
+import { type BreadcrumbBlockObject } from "@udus/notion-libs";
 
 import { Breadcrumb } from "./Breadcrumb.js";
 import BreadcrumbObject from "./Breadcrumb.json";

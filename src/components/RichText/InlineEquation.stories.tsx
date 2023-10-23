@@ -2,7 +2,7 @@ import { InlineEquation } from "./InlineEquation.js";
 import InlineEquationObject from "./InlineEquation.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { EquationRichTextItem } from "src/libs/notion/richText/equation.js";
+import type { EquationRichTextItem } from "@udus/notion-libs";
 
 const meta: Meta<typeof InlineEquation> = {
   title: "RichText/InlineEquation",

@@ -1,8 +1,8 @@
 import { InlineCode } from "./InlineCode.js";
 import inlineCodeRichText from "./InlineCode.json";
 
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { RichTextItem } from "@udus/notion-libs";
 
 const meta: Meta<typeof InlineCode> = {
   title: "Annotation/InlineCode",
@@ -16,7 +16,7 @@ type Story = StoryObj<typeof InlineCode>;
 
 export const Default: Story = {
   args: {
-    richTextItem: inlineCodeRichText as RichTextItemResponse,
+    richTextItem: inlineCodeRichText as RichTextItem,
     children: "This is InlineCode text",
   },
 };

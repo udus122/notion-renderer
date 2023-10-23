@@ -1,11 +1,11 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { TableBlockObject } from "../../libs/notion/blocks/table.js";
 import type {
+  BlockProps,
   TableCellBlockObjectComponent,
   TableRowBlockObject,
-} from "../../libs/notion/blocks/table_row.js";
-import type { BlockProps } from "../../types/utils.js";
+  TableBlockObject,
+} from "@udus/notion-libs";
 
 type Props = BlockProps<TableBlockObject>;
 

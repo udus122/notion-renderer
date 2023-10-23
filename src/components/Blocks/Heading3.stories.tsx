@@ -3,7 +3,7 @@ import Heading3Object from "./Heading3.json";
 import Heading3Toggleable from "./Heading3.Toggleable.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { Heading3BlockObject } from "src/libs/notion/blocks/heading3.js";
+import type { Heading3BlockObject } from "@udus/notion-libs";
 
 const meta: Meta<typeof Heading3> = {
   title: "Blocks/Heading3",

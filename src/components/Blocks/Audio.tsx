@@ -1,7 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { AudioBlockObject } from "src/libs/notion/blocks/audio.js";
-import type { BlockProps } from "src/types/utils.js";
+import type { AudioBlockObject, BlockProps } from "@udus/notion-libs";
 
 type Props = BlockProps<AudioBlockObject>;
 

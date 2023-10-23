@@ -1,8 +1,7 @@
 import { RichText } from "../../RichText/RichText.js";
 import { Blocks } from "../Blocks.js";
 
-import type { Heading3BlockObject } from "../../../libs/notion/blocks/heading3.js";
-import type { BlockProps } from "../../../types/utils.js";
+import type { BlockProps, Heading3BlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<Heading3BlockObject>;
 

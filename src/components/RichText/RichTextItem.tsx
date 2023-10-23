@@ -1,7 +1,9 @@
-import { type RichTextItem as RichTextItemType } from "../../libs/notion/richText/richTextItem.js";
 import { useMapper } from "../mapper.js";
 
-import type { RichTextProps } from "../../types/utils.js";
+import type {
+  RichTextItem as RichTextItemType,
+  RichTextProps,
+} from "@udus/notion-libs";
 
 type Props = RichTextProps<RichTextItemType>;
 

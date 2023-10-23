@@ -2,7 +2,7 @@ import { Callout } from "./Callout.js";
 import CalloutObject from "./Callout.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { CalloutBlockObject } from "src/libs/notion/blocks/callout.js";
+import type { CalloutBlockObject } from "@udus/notion-libs";
 
 const meta: Meta<typeof Callout> = {
   title: "Blocks/Callout",

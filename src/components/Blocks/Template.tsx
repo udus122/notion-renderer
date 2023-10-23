@@ -1,7 +1,6 @@
 import { Unsupported } from "./Unsupported.js";
 
-import type { TemplateBlockObject } from "src/libs/notion/blocks/template.js";
-import type { BlockProps } from "src/types/utils.js";
+import type { TemplateBlockObject, BlockProps } from "@udus/notion-libs";
 
 type Props = BlockProps<TemplateBlockObject>;
 

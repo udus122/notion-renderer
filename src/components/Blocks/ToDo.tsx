@@ -2,8 +2,7 @@ import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { ToDoBlockObject } from "../../libs/notion/blocks/toDo.js";
-import type { BlockProps } from "../../types/utils.js";
+import type { BlockProps, ToDoBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<ToDoBlockObject>;
 

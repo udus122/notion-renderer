@@ -2,7 +2,7 @@ import { Divider } from "./Divider.js";
 import DividerObject from "./Divider.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { DividerBlockObject } from "src/libs/notion/blocks/divider.js";
+import type { DividerBlockObject } from "@udus/notion-libs";
 
 const meta: Meta<typeof Divider> = {
   title: "Blocks/Divider",

@@ -1,7 +1,7 @@
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { RichTextItem } from "@udus/notion-libs";
 
 type Props = React.ComponentProps<"em"> & {
-  richTextItem: RichTextItemResponse;
+  richTextItem: RichTextItem;
 };
 
 export const Italic: React.FC<Props> = ({ children }) => {

@@ -2,8 +2,10 @@ import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { BulletedListItemBlockObject } from "../../libs/notion/blocks/bulletedListItem.js";
-import type { BlockProps } from "../../types/utils.js";
+import type {
+  BlockProps,
+  BulletedListItemBlockObject,
+} from "@udus/notion-libs";
 import type React from "react";
 
 type Props = BlockProps<BulletedListItemBlockObject>;

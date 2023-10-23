@@ -1,7 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { VideoBlockObject } from "../../libs/notion/blocks/video.js";
-import type { BlockProps } from "../../types/utils.js";
+import type { BlockProps, VideoBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<VideoBlockObject>;
 

@@ -1,7 +1,6 @@
 import katex from "katex";
 
-import type { EquationBlockObject } from "../../libs/notion/blocks/equation.js";
-import type { BlockProps } from "../../types/utils.js";
+import type { BlockProps, EquationBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<EquationBlockObject>;
 

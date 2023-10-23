@@ -1,12 +1,11 @@
+import { extractTitleProperty } from "@udus/notion-libs";
 import { Fragment } from "react";
 
-import { extractTitleProperty } from "../../libs/notion/util.js";
 import { useMapper } from "../mapper.js";
 
 import { Icon } from "./Icon.js";
 
-import type { BreadcrumbBlockObject } from "../../libs/notion/blocks/breadcrumb.js";
-import type { BlockProps } from "src/types/utils.js";
+import type { BreadcrumbBlockObject, BlockProps } from "@udus/notion-libs";
 
 type Props = BlockProps<BreadcrumbBlockObject>;
 

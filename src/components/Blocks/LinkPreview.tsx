@@ -1,7 +1,6 @@
 import { useMapper } from "../mapper.js";
 
-import type { LinkPreviewBlockObject } from "../../libs/notion/blocks/linkPreview.js";
-import type { BlockProps } from "../../types/utils.js";
+import type { BlockProps, LinkPreviewBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<LinkPreviewBlockObject>;
 

@@ -1,7 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { EmbedBlockObject } from "../../libs/notion/blocks/embed.js";
-import type { BlockProps } from "../../types/utils.js";
+import type { BlockProps, EmbedBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<EmbedBlockObject>;
 

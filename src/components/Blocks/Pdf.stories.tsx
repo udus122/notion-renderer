@@ -3,7 +3,7 @@ import PdfFileObject from "./Pdf.File.json";
 import { Pdf } from "./Pdf.js";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { PdfBlockObject } from "src/libs/notion/blocks/pdf.js";
+import type { PdfBlockObject } from "@udus/notion-libs";
 
 const meta: Meta<typeof Pdf> = {
   title: "Blocks/Pdf",

@@ -1,11 +1,13 @@
 import { useMapper } from "../mapper.js";
 import { RichText } from "../RichText/RichText.js";
 
-import type { Heading1BlockObject } from "../../libs/notion/blocks/heading1.js";
-import type { Heading2BlockObject } from "../../libs/notion/blocks/heading2.js";
-import type { Heading3BlockObject } from "../../libs/notion/blocks/heading3.js";
-import type { TableOfContentsBlockObject } from "../../libs/notion/blocks/tableOfContents.js";
-import type { BlockProps } from "../../types/utils.js";
+import type {
+  BlockProps,
+  TableOfContentsBlockObject,
+  Heading3BlockObject,
+  Heading2BlockObject,
+  Heading1BlockObject,
+} from "@udus/notion-libs";
 
 type Props = BlockProps<TableOfContentsBlockObject>;
 

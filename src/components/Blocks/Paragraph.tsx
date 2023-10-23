@@ -2,8 +2,7 @@ import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { ParagraphBlockObject } from "../../libs/notion/blocks/paragraph.js";
-import type { BlockProps } from "../../types/utils.js";
+import type { BlockProps, ParagraphBlockObject } from "@udus/notion-libs";
 import type React from "react";
 
 type Props = BlockProps<ParagraphBlockObject>;

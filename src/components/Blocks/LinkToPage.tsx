@@ -1,11 +1,11 @@
-import { extractTitleProperty } from "../../libs/notion/util.js";
+import { extractTitleProperty } from "@udus/notion-libs";
+
 import { useMapper } from "../mapper.js";
 import { RichText } from "../RichText/RichText.js";
 
 import { Icon } from "./Icon.js";
 
-import type { LinkToPageBlockObject } from "../../libs/notion/blocks/linkToPage.js";
-import type { BlockProps } from "../../types/utils.js";
+import type { BlockProps, LinkToPageBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<LinkToPageBlockObject>;
 

@@ -3,8 +3,10 @@ import { TableOfContents } from "./TableOfContents.js";
 import TableOfContentsObject from "./TableOfContents.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { BlockObject } from "src/libs/notion/blocks/blocks.js";
-import type { TableOfContentsBlockObject } from "src/libs/notion/blocks/tableOfContents.js";
+import type {
+  TableOfContentsBlockObject,
+  BlockObject,
+} from "@udus/notion-libs";
 
 const meta: Meta<typeof TableOfContents> = {
   title: "Blocks/TableOfContents",

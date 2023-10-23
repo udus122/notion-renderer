@@ -2,8 +2,7 @@ import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type { QuoteBlockObject } from "../../libs/notion/blocks/quote.js";
-import type { BlockProps } from "../../types/utils.js";
+import type { BlockProps, QuoteBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<QuoteBlockObject>;
 

@@ -2,8 +2,8 @@ import { useMapper } from "../mapper.js";
 
 import { Annotation } from "./Annotation/Annotation.js";
 
-import type { TextRichTextItem } from "src/libs/notion/richText/text.js";
-import type { RichTextProps } from "src/types/utils.js";
+import type { TextRichTextItem } from "@udus/notion-libs";
+import type { RichTextProps } from "@udus/notion-libs";
 
 type Props = Omit<RichTextProps<TextRichTextItem>, "richTextItemMapper">;
 

@@ -1,8 +1,7 @@
 import { useMapper } from "../mapper.js";
 import { RichText } from "../RichText/RichText.js";
 
-import type { FileBlockObject } from "../../libs/notion/blocks/file.js";
-import type { BlockProps } from "../../types/utils.js";
+import type { BlockProps, FileBlockObject } from "@udus/notion-libs";
 
 type Props = BlockProps<FileBlockObject>;
 

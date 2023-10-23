@@ -1,7 +1,7 @@
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { RichTextItem } from "@udus/notion-libs";
 
 type Props = React.ComponentProps<"del"> & {
-  richTextItem: RichTextItemResponse;
+  richTextItem: RichTextItem;
 };
 
 export const Strikethrough: React.FC<Props> = ({ children }) => {
