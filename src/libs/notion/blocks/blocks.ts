@@ -380,9 +380,6 @@ export const convertResponseToBlock = async (
   }
 };
 
-const res = await fetchBlocks("2712e341754a41aea9ce4c0bb4b18c52");
-console.log(JSON.stringify(res, null, 2));
-
 export type BlockObject =
   | AudioBlockObject
   | BookmarkBlockObject
