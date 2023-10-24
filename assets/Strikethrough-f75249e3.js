@@ -1,2 +1,0 @@
-import{j as r}from"./jsx-runtime-ffb262ed.js";const t=({children:e})=>r.jsx("del",{className:"notion_strikethrough",children:e});try{t.displayName="Strikethrough",t.__docgenInfo={description:"",displayName:"Strikethrough",props:{richTextItem:{defaultValue:null,description:"",name:"richTextItem",required:!0,type:{name:"RichTextItemResponse"}}}}}catch{}export{t as S};
-//# sourceMappingURL=Strikethrough-f75249e3.js.map

@@ -1,2 +1,0 @@
-import{j as n}from"./jsx-runtime-ffb262ed.js";const r=({richTextItem:e,children:i})=>{var t;return n.jsx("a",{href:(t=e.text.link)==null?void 0:t.url,className:"notion_link",children:i})};try{r.displayName="Link",r.__docgenInfo={description:"",displayName:"Link",props:{richTextItem:{defaultValue:null,description:"",name:"richTextItem",required:!0,type:{name:"TextRichTextItemResponse"}}}}}catch{}export{r as L};
-//# sourceMappingURL=Link-13e2ed26.js.map

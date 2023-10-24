@@ -1,0 +1,2 @@
+import{j as i}from"./jsx-runtime-ffb262ed.js";const r=({block:e})=>i.jsx("hr",{id:e.id,className:"notion_divider"});try{r.displayName="Divider",r.__docgenInfo={description:"",displayName:"Divider",props:{block:{defaultValue:null,description:"",name:"block",required:!0,type:{name:"DividerBlockObjectResponse"}},blocks:{defaultValue:null,description:"",name:"blocks",required:!0,type:{name:"BlockObject[]"}}}}}catch{}export{r as D};
+//# sourceMappingURL=Divider-788acd01.js.map
