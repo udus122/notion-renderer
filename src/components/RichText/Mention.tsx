@@ -1,6 +1,6 @@
 import { isFullUser } from "@notionhq/client";
 
-import { useMapper } from "../mapper.js";
+import { useMapper } from "../hooks.js";
 
 import { Annotation } from "./Annotation/Annotation.js";
 

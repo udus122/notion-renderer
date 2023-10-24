@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
 import { extractTitleProperty } from "../../utils.js";
-import { useMapper } from "../mapper.js";
+import { useMapper } from "../hooks.js";
 
 import { Icon } from "./Icon.js";
 

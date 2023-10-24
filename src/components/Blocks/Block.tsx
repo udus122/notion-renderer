@@ -1,4 +1,4 @@
-import { useMapper } from "../mapper.js";
+import { useMapper } from "../hooks.js";
 
 import type {
   BlockObject,
