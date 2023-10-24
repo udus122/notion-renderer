@@ -1,6 +1,6 @@
-import { extractTitleProperty } from "@udus/notion-libs";
 import { Fragment } from "react";
 
+import { extractTitleProperty } from "../../utils.js";
 import { useMapper } from "../mapper.js";
 
 import { Icon } from "./Icon.js";

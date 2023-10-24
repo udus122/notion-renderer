@@ -1,4 +1,4 @@
-import React, { createContext, useContext } from "react";
+import { createContext, useContext, type ComponentType } from "react";
 
 import { Audio } from "./Blocks/Audio.js";
 import { Bookmark } from "./Blocks/Bookmark.js";
@@ -118,4 +118,4 @@ export const defaultAnnotationMapper = {
 export const AnnotationMapper = createContext(defaultAnnotationMapper);
 
 export const LinkComponentMapper =
-  createContext<React.ComponentType<LinkProps>>(Link);
+  createContext<ComponentType<LinkProps>>(Link);

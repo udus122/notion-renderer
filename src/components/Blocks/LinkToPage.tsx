@@ -1,5 +1,4 @@
-import { extractTitleProperty } from "@udus/notion-libs";
-
+import { extractTitleProperty } from "../../utils.js";
 import { useMapper } from "../mapper.js";
 import { RichText } from "../RichText/RichText.js";
 
