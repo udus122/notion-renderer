@@ -1,10 +1,8 @@
 {
-
   "name": "notion-component",
   "version": "1.0.0-alpha.5",
   "type": "module",
   "license": "MIT",
-  "type": "module",
   "main": "dist/index.js",
   "exports": {
     ".": {
@@ -118,7 +116,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/udus122/notion-component.git"
+    "url": "https://github.com/udus122/notion-components.git"
   },
   "publishConfig": {
     "access": "public"
