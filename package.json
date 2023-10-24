@@ -69,7 +69,10 @@
     "@extractus/article-extractor": "^8.0.3",
     "@extractus/oembed-extractor": "^4.0.1",
     "@notionhq/client": "^2.2.13",
-    "katex": "^0.16.9"
+    "@udus/notion-libs": "^1.0.0-alpha.3",
+    "i": "^0.3.7",
+    "katex": "^0.16.9",
+    "npm": "^10.2.1"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
