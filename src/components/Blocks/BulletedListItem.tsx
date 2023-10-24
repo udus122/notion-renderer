@@ -1,13 +1,12 @@
-import { RichTexts } from "../RichTexts/RichTexts.js";
+import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type {
-  BlockComponentProps,
-  BulletedListItemBlockObjectComponent,
-} from "../../types/components.js";
+import type { BlockProps } from "./Block.js";
+import type { BulletedListItemBlockObject } from "@udus/notion-libs";
+import type React from "react";
 
-type Props = BlockComponentProps<BulletedListItemBlockObjectComponent>;
+type Props = BlockProps<BulletedListItemBlockObject>;
 
 export const BulletedListItem: React.FC<Props> = ({ block }) => {
   return (
@@ -15,7 +14,7 @@ export const BulletedListItem: React.FC<Props> = ({ block }) => {
       id={block.id}
       className={`notion_bulleted_list_item notion_color_${block.bulleted_list_item.color}`}
     >
-      <RichTexts richTexts={block.bulleted_list_item.rich_text} />
+      <RichText richText={block.bulleted_list_item.rich_text} />
       <div>
         {block.bulleted_list_item.children && (
           <Blocks blocks={block.bulleted_list_item.children} />

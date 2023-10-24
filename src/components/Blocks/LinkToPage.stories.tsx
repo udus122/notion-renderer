@@ -1,8 +1,8 @@
 import { LinkToPage } from "./LinkToPage.js";
 import LinkToPageObject from "./LinkToPage.json";
 
-import type { LinkToPageBlockObjectComponent } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { LinkToPageBlockObject } from "@udus/notion-libs";
 
 const meta: Meta<typeof LinkToPage> = {
   title: "Blocks/LinkToPage",
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof LinkToPage>;
 
 export const Default: Story = {
   args: {
-    block: LinkToPageObject as LinkToPageBlockObjectComponent,
+    block: LinkToPageObject as LinkToPageBlockObject,
   },
 };

@@ -1,13 +1,11 @@
-import { RichTexts } from "../RichTexts/RichTexts.js";
+import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type {
-  BlockComponentProps,
-  ToDoBlockObjectComponent,
-} from "../../types/components.js";
+import type { BlockProps } from "./Block.js";
+import type { ToDoBlockObject } from "@udus/notion-libs";
 
-type Props = BlockComponentProps<ToDoBlockObjectComponent>;
+type Props = BlockProps<ToDoBlockObject>;
 
 export const ToDo: React.FC<Props> = ({ block }) => {
   const isChecked = block.to_do.checked;
@@ -21,7 +19,7 @@ export const ToDo: React.FC<Props> = ({ block }) => {
           {isChecked ? <CheckedBox /> : <CheckBox />}
         </span>
         <span className={`notion_to_do_text ${isChecked ? "checked" : ""}`}>
-          <RichTexts richTexts={block.to_do.rich_text} />
+          <RichText richText={block.to_do.rich_text} />
         </span>
       </div>
       {block.to_do.children && (

@@ -1,8 +1,8 @@
 import { Callout } from "./Callout.js";
 import CalloutObject from "./Callout.json";
 
-import type { CalloutBlockObjectComponent } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { CalloutBlockObject } from "@udus/notion-libs";
 
 const meta: Meta<typeof Callout> = {
   title: "Blocks/Callout",
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Callout>;
 
 export const Default: Story = {
   args: {
-    block: CalloutObject as CalloutBlockObjectComponent,
+    block: CalloutObject as CalloutBlockObject,
   },
 };

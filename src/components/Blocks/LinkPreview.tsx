@@ -1,36 +1,34 @@
-import type {
-  BlockComponentProps,
-  LinkPreviewBlockObjectComponent,
-} from "../../types/components.js";
+import { useMapper } from "../hooks.js";
 
-type Props = BlockComponentProps<LinkPreviewBlockObjectComponent>;
+import type { BlockProps } from "./Block.js";
+import type { LinkPreviewBlockObject } from "@udus/notion-libs";
+
+type Props = BlockProps<LinkPreviewBlockObject>;
 
 export const LinkPreview: React.FC<Props> = ({ block }) => {
+  const { Link } = useMapper();
+
   return (
     <div className="notion_link_preview">
-      <a
-        href={block.link_preview.url}
-        target="_blank"
-        rel="noopener noreferrer"
-      >
+      <Link href={block.link_preview.url}>
         <div className="notion_link_preview_container">
           <div className="notion_link_preview_content">
             <div className="notion_link_preview_title">
-              {block.link_preview?.site_info?.title
-                ? block.link_preview.site_info.title
+              {block.link_preview?.site_meta?.title
+                ? block.link_preview.site_meta.title
                 : block.link_preview.url}
             </div>
             <div className="notion_link_preview_description">
-              {block.link_preview?.site_info?.description
-                ? block.link_preview.site_info.description
+              {block.link_preview?.site_meta?.description
+                ? block.link_preview.site_meta.description
                 : block.link_preview.url}
             </div>
             <div className="notion_link_preview_url">
               <span className="notion_link_preview_favicon">
                 <img
                   src={
-                    block.link_preview?.site_info?.icon
-                      ? block.link_preview.site_info?.icon
+                    block.link_preview?.site_meta?.favicon
+                      ? block.link_preview.site_meta?.favicon
                       : `https://www.google.com/s2/favicons?domain=${block.link_preview.url}`
                   }
                   alt="link preview favicon"
@@ -41,18 +39,16 @@ export const LinkPreview: React.FC<Props> = ({ block }) => {
               </span>
             </div>
           </div>
-          {block.link_preview?.site_info?.image && (
+          {block.link_preview?.site_meta?.image && (
             <div className="notion_link_preview_cover">
               <img
-                src={block.link_preview.site_info.image.url}
-                width={block.link_preview.site_info.image.width}
-                height={block.link_preview.site_info.image.height}
+                src={block.link_preview.site_meta.image}
                 alt="link preview og image"
               />
             </div>
           )}
         </div>
-      </a>
+      </Link>
     </div>
   );
 };

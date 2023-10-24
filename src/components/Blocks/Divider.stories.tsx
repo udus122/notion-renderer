@@ -1,8 +1,8 @@
 import { Divider } from "./Divider.js";
 import DividerObject from "./Divider.json";
 
-import type { DividerBlockObjectComponent } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { DividerBlockObject } from "@udus/notion-libs";
 
 const meta: Meta<typeof Divider> = {
   title: "Blocks/Divider",
@@ -15,6 +15,6 @@ type Story = StoryObj<typeof Divider>;
 
 export const Default: Story = {
   args: {
-    block: DividerObject as DividerBlockObjectComponent,
+    block: DividerObject as DividerBlockObject,
   },
 };

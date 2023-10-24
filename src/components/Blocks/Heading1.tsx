@@ -1,13 +1,11 @@
-import { RichTexts } from "../RichTexts/RichTexts.js";
+import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type {
-  BlockComponentProps,
-  Heading1BlockObjectComponent,
-} from "../../types/components.js";
+import type { BlockProps } from "./Block.js";
+import type { Heading1BlockObject } from "@udus/notion-libs";
 
-type Props = BlockComponentProps<Heading1BlockObjectComponent>;
+type Props = BlockProps<Heading1BlockObject>;
 
 export const Heading1: React.FC<Props> = ({ block }) => {
   return (
@@ -19,7 +17,7 @@ export const Heading1: React.FC<Props> = ({ block }) => {
         >
           <summary className="notion_toggle_summary">
             <h1>
-              <RichTexts richTexts={block.heading_1.rich_text} />
+              <RichText richText={block.heading_1.rich_text} />
             </h1>
           </summary>
           <div className="notion_toggle_details">
@@ -33,7 +31,7 @@ export const Heading1: React.FC<Props> = ({ block }) => {
           id={block.id}
           className={`notion_heading notion_heading_1 notion_color_${block.heading_1.color}`}
         >
-          <RichTexts richTexts={block.heading_1.rich_text} />
+          <RichText richText={block.heading_1.rich_text} />
         </h1>
       )}
     </>

@@ -1,11 +1,9 @@
-import { RichTexts } from "../RichTexts/RichTexts.js";
+import { RichText } from "../RichText/RichText.js";
 
-import type {
-  BlockComponentProps,
-  PdfBlockObjectComponent,
-} from "../../types/components.js";
+import type { BlockProps } from "./Block.js";
+import type { PdfBlockObject } from "@udus/notion-libs";
 
-type Props = BlockComponentProps<PdfBlockObjectComponent>;
+type Props = BlockProps<PdfBlockObject>;
 
 export const Pdf: React.FC<Props> = ({ block }) => {
   const pdfUrl =
@@ -30,7 +28,7 @@ export const Pdf: React.FC<Props> = ({ block }) => {
         <a href={pdfUrl}>here</a>.
       </object>
       <div className="notion_caption notion_pdf_caption">
-        <RichTexts richTexts={block.pdf.caption} />
+        <RichText richText={block.pdf.caption} />
       </div>
     </div>
   );

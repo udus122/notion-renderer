@@ -1,17 +1,15 @@
 import { NumberedListItem } from "./NumberedListItem.js";
 
-import type {
-  BlockComponentProps,
-  NumberedListBlockObjectComponent,
-} from "../../types/components.js";
+import type { BlockProps } from "./Block.js";
+import type { NumberedListBlockObject } from "@udus/notion-libs";
 
-type Props = BlockComponentProps<NumberedListBlockObjectComponent>;
+type Props = BlockProps<NumberedListBlockObject>;
 
-export const NumberedList: React.FC<Props> = ({ block }) => {
+export const NumberedList: React.FC<Props> = ({ block, blocks }) => {
   return (
     <ol className="notion_numbered_list">
       {block.numbered_list.items.map((item) => {
-        return <NumberedListItem key={item.id} block={item}></NumberedListItem>;
+        return <NumberedListItem key={item.id} block={item} blocks={blocks} />;
       })}
     </ol>
   );

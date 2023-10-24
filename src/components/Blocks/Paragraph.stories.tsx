@@ -2,8 +2,8 @@ import { Paragraph } from "./Paragraph.js";
 import ParagraphObject from "./Paragraph.json";
 import ParagraphWithChildrenObject from "./Paragraph.WithChildren.json";
 
-import type { ParagraphBlockObjectComponent } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { ParagraphBlockObject } from "@udus/notion-libs";
 
 const meta: Meta<typeof Paragraph> = {
   title: "Blocks/Paragraph",
@@ -17,12 +17,12 @@ type Story = StoryObj<typeof Paragraph>;
 
 export const Default: Story = {
   args: {
-    block: ParagraphObject as ParagraphBlockObjectComponent,
+    block: ParagraphObject as ParagraphBlockObject,
   },
 };
 
 export const WithChildren: Story = {
   args: {
-    block: ParagraphWithChildrenObject as ParagraphBlockObjectComponent,
+    block: ParagraphWithChildrenObject as ParagraphBlockObject,
   },
 };

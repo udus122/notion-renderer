@@ -1,11 +1,9 @@
-import { RichTexts } from "../RichTexts/RichTexts.js";
+import { RichText } from "../RichText/RichText.js";
 
-import type {
-  BlockComponentProps,
-  AudioBlockObjectComponent,
-} from "../../types/components.js";
+import type { BlockProps } from "./Block.js";
+import type { AudioBlockObject } from "@udus/notion-libs";
 
-type Props = BlockComponentProps<AudioBlockObjectComponent>;
+type Props = BlockProps<AudioBlockObject>;
 
 export const Audio: React.FC<Props> = ({ block }) => {
   const audioUrl =
@@ -21,7 +19,7 @@ export const Audio: React.FC<Props> = ({ block }) => {
         <a href={audioUrl}>here</a>.
       </audio>
       <div className="notion_caption notion_audio_caption">
-        <RichTexts richTexts={block.audio.caption} />
+        <RichText richText={block.audio.caption} />
       </div>
     </div>
   );

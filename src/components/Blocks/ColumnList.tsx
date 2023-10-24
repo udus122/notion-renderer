@@ -1,11 +1,9 @@
 import { Blocks } from "./Blocks.js";
 
-import type {
-  BlockComponentProps,
-  ColumnListBlockObjectComponent,
-} from "../../types/components.js";
+import type { BlockProps } from "./Block.js";
+import type { ColumnListBlockObject } from "@udus/notion-libs";
 
-type Props = BlockComponentProps<ColumnListBlockObjectComponent>;
+type Props = BlockProps<ColumnListBlockObject>;
 
 export const ColumnList: React.FC<Props> = ({ block }) => {
   return (
@@ -14,7 +12,7 @@ export const ColumnList: React.FC<Props> = ({ block }) => {
         block.column_list.columns.map(
           (column) =>
             column.column.children && (
-              <div className="notion_column">
+              <div key={column.id} className="notion_column">
                 <Blocks blocks={column.column.children} />
               </div>
             )

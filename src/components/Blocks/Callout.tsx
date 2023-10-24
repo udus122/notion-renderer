@@ -1,14 +1,12 @@
-import { RichTexts } from "../RichTexts/RichTexts.js";
+import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 import { Icon } from "./Icon.js";
 
-import type {
-  BlockComponentProps,
-  CalloutBlockObjectComponent,
-} from "../../types/components.js";
+import type { BlockProps } from "./Block.js";
+import type { CalloutBlockObject } from "@udus/notion-libs";
 
-type Props = BlockComponentProps<CalloutBlockObjectComponent>;
+type Props = BlockProps<CalloutBlockObject>;
 
 export const Callout: React.FC<Props> = ({ block }) => {
   return (
@@ -21,7 +19,7 @@ export const Callout: React.FC<Props> = ({ block }) => {
       </span>
       <div className="notion_callout_content">
         <span>
-          <RichTexts richTexts={block.callout.rich_text} />
+          <RichText richText={block.callout.rich_text} />
         </span>
         {block.callout.children && <Blocks blocks={block.callout.children} />}
       </div>

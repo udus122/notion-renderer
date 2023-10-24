@@ -1,7 +1,8 @@
+import { type TableBlockObject } from "@udus/notion-libs";
+
 import { Table } from "./Table.js";
 import TableObject from "./Table.json";
 
-import type { TableBlockObjectComponent } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Table> = {
@@ -16,6 +17,6 @@ type Story = StoryObj<typeof Table>;
 
 export const Default: Story = {
   args: {
-    block: TableObject as TableBlockObjectComponent,
+    block: TableObject as TableBlockObject,
   },
 };

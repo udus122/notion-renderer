@@ -2,9 +2,9 @@ import DividerObject from "./Block.Divider.json";
 import { Block } from "./Block.js";
 import ParagraphObject from "./Block.Paragraph.json";
 
-import type { ParagraphBlockObjectComponent } from "../../types/components.js";
 import type { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { ParagraphBlockObject } from "@udus/notion-libs";
 
 const meta: Meta<typeof Block> = {
   title: "Blocks/Block",
@@ -24,6 +24,6 @@ export const Divider: Story = {
 
 export const Paragraph: Story = {
   args: {
-    block: ParagraphObject as ParagraphBlockObjectComponent,
+    block: ParagraphObject as ParagraphBlockObject,
   },
 };

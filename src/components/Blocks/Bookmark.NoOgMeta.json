@@ -39,7 +39,7 @@
       }
     ],
     "url": "https://example.com",
-    "site_info": {
+    "site_meta": {
       "title": "Example Domain"
     }
   }

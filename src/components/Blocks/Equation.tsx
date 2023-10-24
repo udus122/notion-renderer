@@ -1,16 +1,22 @@
-import { BlockMath } from "react-katex";
+import katex from "katex";
 
-import type {
-  BlockComponentProps,
-  EquationBlockObjectComponent,
-} from "../../types/components.js";
+import type { BlockProps } from "./Block.js";
+import type { EquationBlockObject } from "@udus/notion-libs";
 
-type Props = BlockComponentProps<EquationBlockObjectComponent>;
+type Props = BlockProps<EquationBlockObject>;
 
 export const Equation: React.FC<Props> = ({ block }) => {
   return (
     <div id={block.id} className="notion_equation">
-      <BlockMath math={block.equation.expression} />
+      <div
+        dangerouslySetInnerHTML={{
+          // eslint-disable-next-line import/no-named-as-default-member
+          __html: katex.renderToString(block.equation.expression, {
+            displayMode: true,
+            output: "mathml",
+          }),
+        }}
+      />
     </div>
   );
 };

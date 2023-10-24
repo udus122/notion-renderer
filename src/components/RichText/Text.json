@@ -1,0 +1,17 @@
+{
+  "type": "text",
+  "text": {
+    "content": "text without link\n↑linebreak here",
+    "link": null
+  },
+  "annotations": {
+    "bold": false,
+    "italic": false,
+    "strikethrough": false,
+    "underline": false,
+    "code": false,
+    "color": "default"
+  },
+  "plain_text": "text without link\n↑linebreak here",
+  "href": null
+}

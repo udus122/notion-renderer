@@ -1,4 +1,4 @@
-import type { Icon as IconType } from "../../types/components.js";
+import type { Icon as IconType } from "src/types/notion.js";
 
 type Props = {
   icon: IconType;

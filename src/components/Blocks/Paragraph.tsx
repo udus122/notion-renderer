@@ -1,13 +1,12 @@
-import { RichTexts } from "../RichTexts/RichTexts.js";
+import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type {
-  BlockComponentProps,
-  ParagraphBlockObjectComponent,
-} from "../../types/components.js";
+import type { BlockProps } from "./Block.js";
+import type { ParagraphBlockObject } from "@udus/notion-libs";
+import type React from "react";
 
-type Props = BlockComponentProps<ParagraphBlockObjectComponent>;
+type Props = BlockProps<ParagraphBlockObject>;
 
 export const Paragraph: React.FC<Props> = ({ block }) => {
   return (
@@ -16,7 +15,7 @@ export const Paragraph: React.FC<Props> = ({ block }) => {
       className={`notion_paragraph notion_color_${block.paragraph.color}`}
     >
       <p>
-        <RichTexts richTexts={block.paragraph.rich_text} />
+        <RichText richText={block.paragraph.rich_text} />
       </p>
       {block.paragraph.children && (
         <div className={"notion_paragraph_children"}>

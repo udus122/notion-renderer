@@ -1,14 +1,9 @@
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { a11yDark } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { RichText } from "../RichText/RichText.js";
 
-import { RichTexts } from "../RichTexts/RichTexts.js";
+import type { BlockProps } from "./Block.js";
+import type { CodeBlockObject } from "@udus/notion-libs";
 
-import type {
-  BlockComponentProps,
-  CodeBlockObjectComponent,
-} from "../../types/components.js";
-
-type Props = BlockComponentProps<CodeBlockObjectComponent>;
+type Props = BlockProps<CodeBlockObject>;
 
 export const Code: React.FC<Props> = ({ block }) => {
   return (
@@ -16,20 +11,14 @@ export const Code: React.FC<Props> = ({ block }) => {
       <div className="notion_code_header">
         <div className="notion_code_langage">{block.code.language}</div>
       </div>
-      {/* TODO: create copy button */}
-      <SyntaxHighlighter
-        language={
-          block.code.language === "plain text" ? "text" : block.code.language
-        }
-        style={a11yDark}
-        className="notion_code_pre"
-        customStyle={{ backgroundColor: "rgba(255,255,255,0.03)" }}
-      >
-        {block.code.rich_text.map((t) => t.plain_text).join("")}
-      </SyntaxHighlighter>
+      <pre className="notion_code_body">
+        <code>
+          <RichText richText={block.code.rich_text} />
+        </code>
+      </pre>
       {block.code.caption && (
         <div className="notion_caption">
-          <RichTexts richTexts={block.code.caption} />
+          <RichText richText={block.code.caption} />
         </div>
       )}
     </div>

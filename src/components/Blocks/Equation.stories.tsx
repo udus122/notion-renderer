@@ -1,8 +1,8 @@
 import { Equation } from "./Equation.js";
 import EquationObject from "./Equation.json";
 
-import type { EquationBlockObjectComponent } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { EquationBlockObject } from "@udus/notion-libs";
 
 const meta: Meta<typeof Equation> = {
   title: "Blocks/Equation",
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Equation>;
 
 export const Default: Story = {
   args: {
-    block: EquationObject as EquationBlockObjectComponent,
+    block: EquationObject as EquationBlockObject,
   },
 };

@@ -2,8 +2,8 @@ import AudioExternalObject from "./Audio.External.json";
 import AudioFileObject from "./Audio.File.json";
 import { Audio } from "./Audio.js";
 
-import type { AudioBlockObjectComponent } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { AudioBlockObject } from "@udus/notion-libs";
 
 const meta: Meta<typeof Audio> = {
   title: "Blocks/Audio",
@@ -17,18 +17,18 @@ type Story = StoryObj<typeof Audio>;
 
 export const Default: Story = {
   args: {
-    block: AudioExternalObject as AudioBlockObjectComponent,
+    block: AudioExternalObject as AudioBlockObject,
   },
 };
 
 export const External: Story = {
   args: {
-    block: AudioExternalObject as AudioBlockObjectComponent,
+    block: AudioExternalObject as AudioBlockObject,
   },
 };
 
 export const File: Story = {
   args: {
-    block: AudioFileObject as AudioBlockObjectComponent,
+    block: AudioFileObject as AudioBlockObject,
   },
 };

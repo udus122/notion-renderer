@@ -1,8 +1,8 @@
 import { Toggle } from "./Toggle.js";
 import ToggleObject from "./Toggle.json";
 
-import type { ToggleBlockObjectComponent } from "../../types/components.js";
 import type { Meta, StoryObj } from "@storybook/react";
+import type { ToggleBlockObject } from "@udus/notion-libs";
 
 const meta: Meta<typeof Toggle> = {
   title: "Blocks/Toggle",
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Toggle>;
 
 export const Default: Story = {
   args: {
-    block: ToggleObject as ToggleBlockObjectComponent,
+    block: ToggleObject as ToggleBlockObject,
   },
 };

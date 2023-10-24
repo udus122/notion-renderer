@@ -1,23 +1,25 @@
-import { RichTexts } from "../RichTexts/RichTexts.js";
+import { useMapper } from "../hooks.js";
+import { RichText } from "../RichText/RichText.js";
 
+import type { BlockProps } from "./Block.js";
 import type {
-  BlockComponentProps,
-  Heading1BlockObjectComponent,
-  Heading2BlockObjectComponent,
-  Heading3BlockObjectComponent,
-  TableOfContentsBlockObjectComponent,
-} from "../../types/components.js";
+  TableOfContentsBlockObject,
+  Heading3BlockObject,
+  Heading2BlockObject,
+  Heading1BlockObject,
+} from "@udus/notion-libs";
 
-type Props = BlockComponentProps<TableOfContentsBlockObjectComponent>;
+type Props = BlockProps<TableOfContentsBlockObject>;
 
 export const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
+  const { Link } = useMapper();
   const headings = blocks?.filter(
     (
       block
     ): block is
-      | Heading1BlockObjectComponent
-      | Heading2BlockObjectComponent
-      | Heading3BlockObjectComponent =>
+      | Heading1BlockObject
+      | Heading2BlockObject
+      | Heading3BlockObject =>
       block.type === "heading_1" ||
       block.type === "heading_2" ||
       block.type === "heading_3"
@@ -30,12 +32,12 @@ export const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
       {headings &&
         headings.map((heading) => {
           return (
-            <div className="notion_table_of_contents_item">
+            <div key={heading.id} className="notion_table_of_contents_item">
               <div className={`notion_table_of_contents_item_${heading.type}`}>
-                <a href={`#${heading.id}`}>
+                <Link href={`#${heading.id}`}>
                   {/* @ts-expect-error: because heading objects always have a 'rich_text' property  */}
-                  <RichTexts richTexts={heading[heading.type].rich_text} />
-                </a>
+                  <RichText richText={heading[heading.type].rich_text} />
+                </Link>
               </div>
             </div>
           );

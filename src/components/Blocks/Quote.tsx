@@ -1,13 +1,11 @@
-import { RichTexts } from "../RichTexts/RichTexts.js";
+import { RichText } from "../RichText/RichText.js";
 
 import { Blocks } from "./Blocks.js";
 
-import type {
-  BlockComponentProps,
-  QuoteBlockObjectComponent,
-} from "../../types/components.js";
+import type { BlockProps } from "./Block.js";
+import type { QuoteBlockObject } from "@udus/notion-libs";
 
-type Props = BlockComponentProps<QuoteBlockObjectComponent>;
+type Props = BlockProps<QuoteBlockObject>;
 
 export const Quote: React.FC<Props> = ({ block }) => {
   return (
@@ -15,7 +13,7 @@ export const Quote: React.FC<Props> = ({ block }) => {
       id={block.id}
       className={`notion_quote notion_color_${block.quote.color}`}
     >
-      <RichTexts richTexts={block.quote.rich_text} />
+      <RichText richText={block.quote.rich_text} />
       {block.quote.children && (
         <div className={"notion_quote_children"}>
           <Blocks blocks={block.quote.children} />
