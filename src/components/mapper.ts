@@ -58,7 +58,7 @@ export const useMapper = () => {
   };
 };
 
-export const defaultBlockMapper = {
+export const BlockMapper = createContext({
   audio: Audio,
   bookmark: Bookmark,
   breadcrumb: Breadcrumb,
@@ -94,28 +94,22 @@ export const defaultBlockMapper = {
   toggle: Toggle,
   unsupported: Unsupported,
   video: Video,
-};
+});
 
-export const BlockMapper = createContext(defaultBlockMapper);
-
-export const defaultRichTextItemMapper = {
+export const RichTextItemMapper = createContext({
   text: Text,
   equation: InlineEquation,
   mention: Mention,
-};
+});
 
-export const RichTextItemMapper = createContext(defaultRichTextItemMapper);
-
-export const defaultAnnotationMapper = {
+export const AnnotationMapper = createContext({
   color: Color,
   bold: Bold,
   italic: Italic,
   strikethrough: Strikethrough,
   underline: Underline,
   code: InlineCode,
-};
-
-export const AnnotationMapper = createContext(defaultAnnotationMapper);
+});
 
 export const LinkComponentMapper =
   createContext<ComponentType<LinkProps>>(Link);

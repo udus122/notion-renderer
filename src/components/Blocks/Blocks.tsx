@@ -2,13 +2,11 @@ import React from "react";
 
 import { type LinkProps } from "../Link.js";
 import {
-  defaultBlockMapper,
   LinkComponentMapper,
   AnnotationMapper,
-  defaultAnnotationMapper,
   RichTextItemMapper,
-  defaultRichTextItemMapper,
   BlockMapper,
+  useMapper,
 } from "../mapper.js";
 
 import { Block } from "./Block.js";
@@ -52,8 +50,11 @@ const BlockMapperProvider: React.FC<{
   if (!mapper) {
     return children;
   }
+
+  const { blockMapper } = useMapper();
+
   return (
-    <BlockMapper.Provider value={{ ...defaultBlockMapper, ...mapper }}>
+    <BlockMapper.Provider value={{ ...blockMapper, ...mapper }}>
       {children}
     </BlockMapper.Provider>
   );
@@ -66,10 +67,9 @@ const RichTextItemMapperProvider: React.FC<{
   if (!mapper) {
     return children;
   }
+  const { richTextItemMapper } = useMapper();
   return (
-    <RichTextItemMapper.Provider
-      value={{ ...defaultRichTextItemMapper, ...mapper }}
-    >
+    <RichTextItemMapper.Provider value={{ ...richTextItemMapper, ...mapper }}>
       {children}
     </RichTextItemMapper.Provider>
   );
@@ -82,10 +82,9 @@ const AnnotationMapperProvider: React.FC<{
   if (!mapper) {
     return children;
   }
+  const { annotationMapper } = useMapper();
   return (
-    <AnnotationMapper.Provider
-      value={{ ...defaultAnnotationMapper, ...mapper }}
-    >
+    <AnnotationMapper.Provider value={{ ...annotationMapper, ...mapper }}>
       {children}
     </AnnotationMapper.Provider>
   );
@@ -94,12 +93,13 @@ const AnnotationMapperProvider: React.FC<{
 const LinkComponentProvider: React.FC<{
   component?: React.ComponentType<LinkProps>;
   children: React.ReactNode;
-}> = ({ component: value, children }) => {
-  if (!value) {
+}> = ({ component, children }) => {
+  if (!component) {
     return children;
   }
+
   return (
-    <LinkComponentMapper.Provider value={value}>
+    <LinkComponentMapper.Provider value={component}>
       {children}
     </LinkComponentMapper.Provider>
   );
