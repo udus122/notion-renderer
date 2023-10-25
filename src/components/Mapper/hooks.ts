@@ -1,9 +1,11 @@
 import { useContext } from "react";
 
-import { AnnotationContext } from "./Mapper/Annotation.js";
-import { BlockContext } from "./Mapper/Block.js";
-import { LinkContext } from "./Mapper/Link.js";
-import { RichTextItemContext } from "./Mapper/RichText.js";
+import {
+  AnnotationContext,
+  BlockContext,
+  LinkContext,
+  RichTextItemContext,
+} from "./context.js";
 
 export const useMapper = () => {
   const blockMapper = useContext(BlockContext);

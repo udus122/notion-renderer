@@ -1,4 +1,4 @@
-import { useMapper } from "../hooks.js";
+import { useMapper } from "../Mapper/hooks.js";
 
 import { Icon } from "./Icon.js";
 

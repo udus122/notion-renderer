@@ -1,5 +1,5 @@
 import { extractTitleProperty } from "../../utils.js";
-import { useMapper } from "../hooks.js";
+import { useMapper } from "../Mapper/hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
 import { Icon } from "./Icon.js";

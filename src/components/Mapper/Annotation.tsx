@@ -1,22 +1,6 @@
-import { createContext, useContext, type FC, type ReactNode } from "react";
+import { useContext, type FC, type ReactNode } from "react";
 
-import {
-  Color,
-  Bold,
-  Italic,
-  Strikethrough,
-  Underline,
-  InlineCode,
-} from "../RichText/Annotation/index.js";
-
-export const AnnotationContext = createContext({
-  color: Color,
-  bold: Bold,
-  italic: Italic,
-  strikethrough: Strikethrough,
-  underline: Underline,
-  code: InlineCode,
-});
+import { AnnotationContext } from "./context.js";
 
 export const AnnotationProvider: FC<{
   mapper?: object;

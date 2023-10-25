@@ -1,13 +1,7 @@
-import {
-  type FC,
-  type ComponentType,
-  type ReactNode,
-  createContext,
-} from "react";
+import { type FC, type ComponentType, type ReactNode } from "react";
 
-import { Link, type LinkProps } from "../Link.js";
-
-export const LinkContext = createContext<ComponentType<LinkProps>>(Link);
+import { LinkContext } from "./context.js";
+import { type LinkProps } from "../Link.js";
 
 export const LinkProvider: FC<{
   link?: ComponentType<LinkProps>;
