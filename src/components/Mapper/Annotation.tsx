@@ -1,6 +1,6 @@
 import { useContext, type FC, type ReactNode } from "react";
 
-import { AnnotationContext } from "./context.js";
+import { AnnotationContext } from "./hooks.js";
 
 export const AnnotationProvider: FC<{
   mapper?: object;
@@ -10,6 +10,7 @@ export const AnnotationProvider: FC<{
     return children;
   }
   const annotationMapper = useContext(AnnotationContext);
+
   return (
     <AnnotationContext.Provider value={{ ...annotationMapper, ...mapper }}>
       {children}

@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 
-import { BlockContext } from "./context.js";
+import { BlockContext } from "./hooks.js";
 
 export const BlockProvider: React.FC<{
   mapper?: object;

@@ -1,11 +1,15 @@
 import { useContext } from "react";
+import { createContext, type ComponentType } from "react";
 
-import {
-  AnnotationContext,
-  BlockContext,
-  LinkContext,
-  RichTextItemContext,
-} from "./context.js";
+import { Link, type LinkProps } from "../Link.js";
+
+export const AnnotationContext = createContext({});
+
+export const BlockContext = createContext({});
+
+export const LinkContext = createContext<ComponentType<LinkProps>>(Link);
+
+export const RichTextItemContext = createContext({});
 
 export const useMapper = () => {
   const blockMapper = useContext(BlockContext);

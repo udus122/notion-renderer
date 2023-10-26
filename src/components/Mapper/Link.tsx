@@ -1,7 +1,8 @@
 import { type FC, type ComponentType, type ReactNode } from "react";
 
-import { LinkContext } from "./context.js";
 import { type LinkProps } from "../Link.js";
+
+import { LinkContext } from "./hooks.js";
 
 export const LinkProvider: FC<{
   link?: ComponentType<LinkProps>;
