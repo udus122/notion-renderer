@@ -1,6 +1,6 @@
 {
   "name": "@udus/notion-components",
-  "version": "1.0.0-alpha.12",
+  "version": "1.0.0-alpha.13",
   "type": "module",
   "license": "MIT",
   "main": "dist/index.js",
