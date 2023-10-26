@@ -69,10 +69,8 @@
     "@extractus/article-extractor": "^8.0.3",
     "@extractus/oembed-extractor": "^4.0.1",
     "@notionhq/client": "^2.2.13",
-    "@udus/notion-libs": "^1.0.0-alpha.3",
-    "i": "^0.3.7",
-    "katex": "^0.16.9",
-    "npm": "^10.2.1"
+    "dotenv": "^16.3.1",
+    "katex": "^0.16.9"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
@@ -92,8 +90,6 @@
     "@types/react": "^18.2.23",
     "@types/react-dom": "^18.2.8",
     "@types/react-katex": "^3.0.1",
-    "@types/react-syntax-highlighter": "^15.5.7",
-    "@types/youtube-player": "^5.5.8",
     "@typescript-eslint/eslint-plugin": "^5.62.0",
     "@typescript-eslint/parser": "^5.62.0",
     "@vitejs/plugin-react-swc": "^3.4.0",
@@ -119,7 +115,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/udus122/notion-components.git"
+    "url": "git+https://github.com/udus122/notion-components.git"
   },
   "publishConfig": {
     "access": "public"
