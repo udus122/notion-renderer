@@ -1,0 +1,2 @@
+import{j as i}from"./jsx-runtime-ffb262ed.js";import{u as a}from"./hooks-81c64700.js";import{I as o}from"./Icon-9598511f.js";const c=({block:n})=>{var e;const{Link:s}=a();return i.jsx("div",{id:n.id,className:"notion_child_page",children:i.jsxs(s,{href:`/${n.id}`,children:[i.jsx("span",{className:"notion_child_page_icon",children:i.jsx(o,{icon:((e=n.child_page.page)==null?void 0:e.icon)??null})}),i.jsx("span",{className:"notion_child_page_title",children:n.child_page.title||"Unknown page"})]})})};export{c as C};
+//# sourceMappingURL=ChildPage-cc7ef4c3.js.map

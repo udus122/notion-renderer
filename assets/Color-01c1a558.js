@@ -1,2 +1,0 @@
-import{j as t}from"./jsx-runtime-ffb262ed.js";const o=({richTextItem:e,children:r})=>t.jsx("span",{className:`notion_color_${e.annotations.color}`,children:r});try{o.displayName="Color",o.__docgenInfo={description:"",displayName:"Color",props:{richTextItem:{defaultValue:null,description:"",name:"richTextItem",required:!0,type:{name:"RichTextItem"}}}}}catch{}export{o as C};
-//# sourceMappingURL=Color-01c1a558.js.map

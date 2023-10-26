@@ -1,2 +1,0 @@
-import{j as l}from"./jsx-runtime-ffb262ed.js";const n=({href:e,className:r="",target:o="_blank",rel:a="noopener noreferrer",children:t,...i})=>l.jsx("a",{href:e,className:`notion_link ${r}`,target:o,rel:a,...i,children:t});try{n.displayName="Link",n.__docgenInfo={description:"",displayName:"Link",props:{ref:{defaultValue:null,description:"",name:"ref",required:!1,type:{name:"((instance: HTMLAnchorElement | null) => void) | RefObject<HTMLAnchorElement> | null"}}}}}catch{}export{n as L};
-//# sourceMappingURL=Link-b5909185.js.map

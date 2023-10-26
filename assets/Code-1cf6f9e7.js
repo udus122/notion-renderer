@@ -1,0 +1,2 @@
+import{j as e}from"./jsx-runtime-ffb262ed.js";import{R as o}from"./RichText-df143fad.js";const d=({block:i})=>e.jsxs("div",{id:i.id,className:"notion_code",children:[e.jsx("div",{className:"notion_code_header",children:e.jsx("div",{className:"notion_code_langage",children:i.code.language})}),e.jsx("pre",{className:"notion_code_body",children:e.jsx("code",{children:e.jsx(o,{richText:i.code.rich_text})})}),i.code.caption&&e.jsx("div",{className:"notion_caption",children:e.jsx(o,{richText:i.code.caption})})]});export{d as C};
+//# sourceMappingURL=Code-1cf6f9e7.js.map
