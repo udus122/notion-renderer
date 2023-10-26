@@ -1,8 +1,12 @@
-import type { RichTextProps } from "../common.js";
+import type { RichTextItemProps } from "../common.js";
 import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { ComponentType } from "react";
 
-export type EquationRichTextItem = EquationRichTextItemResponse & {
+export type EquationRichTextItemObject = EquationRichTextItemResponse & {
   id?: string;
 };
 
-type Props = Omit<RichTextProps<EquationRichTextItem>, "richTextItemMapper">;
+export type EquationRichTextItemProps =
+  RichTextItemProps<EquationRichTextItemObject>;
+
+export type EquationRichTextItem = ComponentType<EquationRichTextItemProps>;

@@ -1,9 +1,10 @@
-import { type FC, type ReactNode } from "react";
-
 import { RichTextItemContext, useMapper } from "./hooks.js";
 
+import type { RichTextItemMapper } from "../../types/notion/mapper/richTextItem.js";
+import type { FC, ReactNode } from "react";
+
 export const RichTextItemProvider: FC<{
-  mapper?: object;
+  mapper?: RichTextItemMapper;
   children: ReactNode;
 }> = ({ mapper, children }) => {
   if (!mapper) {

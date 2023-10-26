@@ -1,7 +1,5 @@
-import type { RichTextItem } from "src/types/notion/richText/richTextItem.js";
+import type { UnderlineAnnotationItem } from "../../../types/notion/annotation/underline.js";
 
-type Props = React.ComponentProps<"u"> & { richTextItem: RichTextItem };
-
-export const Underline: React.FC<Props> = ({ children }) => {
+export const Underline: UnderlineAnnotationItem = ({ children }) => {
   return <u className="notion_underline">{children}</u>;
 };

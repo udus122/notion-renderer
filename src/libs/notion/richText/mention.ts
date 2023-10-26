@@ -3,7 +3,7 @@ import { fetchDatabase } from "../databases.js";
 import { fetchPage } from "../pages.js";
 
 import type {
-  MentionRichTextItem,
+  MentionRichTextItemObject,
   DatabaseMentionObject,
   PageMentionObject,
   TempateMentionMentionObject,
@@ -88,11 +88,11 @@ export const convertMentionObjectResponse = async (
 
 export const convertMentionRichTextItemResponse = async (
   item: MentionRichTextItemResponse
-): Promise<MentionRichTextItem> => {
+): Promise<MentionRichTextItemObject> => {
   const mention = await convertMentionObjectResponse(item.mention);
   return {
     ...item,
     mention,
     id: generateUUID(),
-  } satisfies MentionRichTextItem;
+  } satisfies MentionRichTextItemObject;
 };

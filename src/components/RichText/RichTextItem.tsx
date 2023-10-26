@@ -1,13 +1,13 @@
 import { useMapper } from "../Mapper/hooks.js";
 
-import { InlineEquation } from "./InlineEquation.js";
+import { Equation } from "./Equation.js";
 import { Mention } from "./Mention.js";
 import { Text } from "./Text.js";
 
-import type { RichTextProps } from "src/types/notion/common.js";
+import type { RichTextItemProps } from "src/types/notion/common.js";
 import type { RichTextItem as RichTextItemType } from "src/types/notion/richText/richTextItem.js";
 
-type Props = RichTextProps<RichTextItemType>;
+type Props = RichTextItemProps<RichTextItemType>;
 
 export const RichTextItem: React.FC<Props> = (props) => {
   if (!props.richText) return null;
@@ -22,7 +22,7 @@ const RichTextItemContent: React.FC<Props> = ({ richText: richTextItem }) => {
   const { richTextItemMapper } = useMapper();
 
   const mapper = {
-    equation: InlineEquation,
+    equation: Equation,
     mention: Mention,
     text: Text,
     ...richTextItemMapper,

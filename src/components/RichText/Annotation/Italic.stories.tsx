@@ -1,8 +1,8 @@
 import { Italic } from "./Italic.js";
 import italicRichText from "./Italic.json";
 
+import type { RichTextItem } from "../../../types/notion/richText/richTextItem.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { RichTextItem } from "src/types/notion/richText/richTextItem.js";
 
 const meta: Meta<typeof Italic> = {
   title: "Annotation/Italic",

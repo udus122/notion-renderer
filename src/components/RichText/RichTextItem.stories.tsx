@@ -3,10 +3,10 @@ import { RichTextItem } from "./RichTextItem.js";
 import MentionRichTextObject from "./RichTextItem.mention.json";
 import TextRichTextObject from "./RichTextItem.text.json";
 
+import type { EquationRichTextItemObject } from "../../types/notion/richText/equation.js";
+import type { MentionRichTextItemObject } from "../../types/notion/richText/mention.js";
+import type { TextRichTextItemObject } from "../../types/notion/richText/text.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { EquationRichTextItem } from "src/types/notion/richText/equation.js";
-import type { MentionRichTextItem } from "src/types/notion/richText/mention.js";
-import type { TextRichTextItem } from "src/types/notion/richText/text.js";
 
 const meta: Meta<typeof RichTextItem> = {
   title: "RichText/RichTextItem",
@@ -20,16 +20,16 @@ type Story = StoryObj<typeof RichTextItem>;
 
 export const Text: Story = {
   args: {
-    richText: TextRichTextObject as TextRichTextItem,
+    richText: TextRichTextObject as TextRichTextItemObject,
   },
 };
 export const Mention: Story = {
   args: {
-    richText: MentionRichTextObject as MentionRichTextItem,
+    richText: MentionRichTextObject as MentionRichTextItemObject,
   },
 };
 export const Equation: Story = {
   args: {
-    richText: EquationRichTextObject as EquationRichTextItem,
+    richText: EquationRichTextObject as EquationRichTextItemObject,
   },
 };

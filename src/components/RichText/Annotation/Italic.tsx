@@ -1,9 +1,5 @@
-import type { RichTextItem } from "src/types/notion/richText/richTextItem.js";
+import type { ItalicAnnotationItem } from "../../../types/notion/annotation/italic.js";
 
-type Props = React.ComponentProps<"em"> & {
-  richTextItem: RichTextItem;
-};
-
-export const Italic: React.FC<Props> = ({ children }) => {
+export const Italic: ItalicAnnotationItem = ({ children }) => {
   return <em className="notion_italic">{children}</em>;
 };

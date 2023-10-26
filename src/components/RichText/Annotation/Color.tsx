@@ -1,10 +1,6 @@
-import type { RichTextItem } from "src/types/notion/richText/richTextItem.js";
+import type { ColorAnnotationItem } from "../../../types/notion/annotation/color.js";
 
-type Props = React.ComponentProps<"span"> & {
-  richTextItem: RichTextItem;
-};
-
-export const Color: React.FC<Props> = ({ richTextItem, children }) => {
+export const Color: ColorAnnotationItem = ({ richTextItem, children }) => {
   return (
     <span className={`notion_color_${richTextItem.annotations.color}`}>
       {children}

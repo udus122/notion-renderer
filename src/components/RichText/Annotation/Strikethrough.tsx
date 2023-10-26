@@ -1,9 +1,5 @@
-import type { RichTextItem } from "src/types/notion/richText/richTextItem.js";
+import type { StrikethroughAnnotationItem } from "../../../types/notion/annotation/strikethrough.js";
 
-type Props = React.ComponentProps<"del"> & {
-  richTextItem: RichTextItem;
-};
-
-export const Strikethrough: React.FC<Props> = ({ children }) => {
+export const Strikethrough: StrikethroughAnnotationItem = ({ children }) => {
   return <del className="notion_strikethrough">{children}</del>;
 };

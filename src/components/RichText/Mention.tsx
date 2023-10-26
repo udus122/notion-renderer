@@ -4,10 +4,13 @@ import { useMapper } from "../Mapper/hooks.js";
 
 import { Annotation } from "./Annotation/Annotation.js";
 
-import type { RichTextProps } from "src/types/notion/common.js";
-import type { MentionRichTextItem } from "src/types/notion/richText/mention.js";
+import type { RichTextItemProps } from "../../types/notion/common.js";
+import type { MentionRichTextItemObject } from "../../types/notion/richText/mention.js";
 
-type Props = Omit<RichTextProps<MentionRichTextItem>, "richTextItemMapper">;
+type Props = Omit<
+  RichTextItemProps<MentionRichTextItemObject>,
+  "richTextItemMapper"
+>;
 
 export const Mention: React.FC<Props> = ({ richText: richTextItem }) => {
   const { Link } = useMapper();

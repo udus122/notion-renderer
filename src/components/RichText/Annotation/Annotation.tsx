@@ -1,14 +1,15 @@
-import { AnnotationProvider } from "../../Mapper/Annotation.js";
+import { AnnotationItemProvider } from "../../Mapper/Annotation.js";
 
 import { AnnotationItem } from "./AnnotationItem.js";
 
+import type { AnnotationItemMapper } from "../../../types/notion/mapper/annotationItem.js";
+import type { RichTextItem } from "../../../types/notion/richText/richTextItem.js";
 import type { ReactNode } from "react";
-import type { RichTextItem } from "src/types/notion/richText/richTextItem.js";
 
 type Props = {
   richTextItem: RichTextItem;
   children: ReactNode;
-  annotationMapper?: object;
+  annotationMapper?: AnnotationItemMapper;
 };
 
 export const Annotation: React.FC<Props> = ({
@@ -18,9 +19,9 @@ export const Annotation: React.FC<Props> = ({
 }) => {
   return (
     <span className="notion_annnotation">
-      <AnnotationProvider mapper={annotationMapper}>
+      <AnnotationItemProvider mapper={annotationMapper}>
         <AnnotationItem richTextItem={richTextItem}>{children}</AnnotationItem>
-      </AnnotationProvider>
+      </AnnotationItemProvider>
     </span>
   );
 };

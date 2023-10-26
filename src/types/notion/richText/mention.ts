@@ -1,17 +1,24 @@
+import type { RichTextItemProps } from "../common.js";
 import type { ArticleData } from "@extractus/article-extractor";
 import type {
   DatabaseObjectResponse,
   MentionRichTextItemResponse,
   PageObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
+import type { ComponentType } from "react";
 import type { Overwrite } from "src/types/utils.js";
 
-export type MentionRichTextItem = Overwrite<
+export type MentionRichTextItemObject = Overwrite<
   MentionRichTextItemResponse,
   {
     mention: MentionObject;
   }
 > & { id?: string };
+
+export type MentionRichTextItemProps =
+  RichTextItemProps<MentionRichTextItemObject>;
+
+export type MentionRichTextItem = ComponentType;
 
 export type MentionObject =
   | UserMentionObject

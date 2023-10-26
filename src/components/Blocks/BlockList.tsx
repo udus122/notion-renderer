@@ -1,8 +1,6 @@
 import React from "react";
 
-import { type LinkProps } from "src/types/notion/link.js";
-
-import { AnnotationProvider } from "../Mapper/Annotation.js";
+import { AnnotationItemProvider } from "../Mapper/Annotation.js";
 import { BlockProvider } from "../Mapper/Block.js";
 import { LinkProvider } from "../Mapper/Link.js";
 import { RichTextItemProvider } from "../Mapper/RichText.js";
@@ -10,12 +8,16 @@ import { RichTextItemProvider } from "../Mapper/RichText.js";
 import { Block } from "./Block.js";
 
 import type { BlockBlockObject } from "../../types/notion/blocks/block.js";
+import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
+import type { BlockMapper } from "../../types/notion/mapper/block.js";
+import type { RichTextItemMapper } from "../../types/notion/mapper/richTextItem.js";
+import type { LinkProps } from "src/types/notion/link.js";
 
 type Props = {
   blocks: Array<BlockBlockObject>;
-  blockMapper?: object;
-  richTextItemMapper?: object;
-  annotationMapper?: object;
+  blockMapper?: BlockMapper;
+  richTextItemMapper?: RichTextItemMapper;
+  annotationMapper?: AnnotationItemMapper;
   LinkComponent?: React.ComponentType<LinkProps>;
 };
 
@@ -30,7 +32,7 @@ export const BlockList: React.FC<Props> = function ({
     <div className="notion_block_list">
       <BlockProvider mapper={blockMapper}>
         <RichTextItemProvider mapper={richTextItemMapper}>
-          <AnnotationProvider mapper={annotationMapper}>
+          <AnnotationItemProvider mapper={annotationMapper}>
             <LinkProvider link={LinkComponent}>
               {blocks.map((block) => {
                 return (
@@ -44,7 +46,7 @@ export const BlockList: React.FC<Props> = function ({
                 );
               })}
             </LinkProvider>
-          </AnnotationProvider>
+          </AnnotationItemProvider>
         </RichTextItemProvider>
       </BlockProvider>
     </div>

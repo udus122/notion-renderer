@@ -11,7 +11,7 @@ export type BlockProps<T extends BlockBlockObject> = {
   blocks: Array<BlockBlockObject>;
 };
 
-export type RichTextProps<T extends RichTextItem> = {
+export type RichTextItemProps<T extends RichTextItem> = {
   richText: T;
 };
 

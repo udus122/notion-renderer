@@ -2,17 +2,17 @@ import { useMapper } from "../../Mapper/hooks.js";
 
 import { Bold } from "./Bold.js";
 import { Color } from "./Color.js";
-import { InlineCode } from "./InlineCode.js";
+import { Code } from "./Code.js";
 import { Italic } from "./Italic.js";
 import { Strikethrough } from "./Strikethrough.js";
 import { Underline } from "./Underline.js";
 
-import type { RichTextItem } from "src/types/notion/richText/richTextItem.js";
-import type React from "react";
+import type { RichTextItem } from "../../../types/notion/richText/richTextItem.js";
+import type { FC, ReactNode } from "react";
 
-export const AnnotationItem: React.FC<{
+export const AnnotationItem: FC<{
   richTextItem: RichTextItem;
-  children: React.ReactNode;
+  children: ReactNode;
 }> = ({ richTextItem, children }) => {
   const { annotationMapper } = useMapper();
 
@@ -21,7 +21,7 @@ export const AnnotationItem: React.FC<{
     underline: Underline,
     strikethrough: Strikethrough,
     italic: Italic,
-    code: InlineCode,
+    code: Code,
     color: Color,
     ...annotationMapper,
   };

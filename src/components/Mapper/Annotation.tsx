@@ -1,9 +1,10 @@
-import { type FC, type ReactNode } from "react";
-
 import { AnnotationContext, useMapper } from "./hooks.js";
 
-export const AnnotationProvider: FC<{
-  mapper?: object;
+import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
+import type { FC, ReactNode } from "react";
+
+export const AnnotationItemProvider: FC<{
+  mapper?: AnnotationItemMapper;
   children: ReactNode;
 }> = ({ mapper, children }) => {
   if (!mapper) {

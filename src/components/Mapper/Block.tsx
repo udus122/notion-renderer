@@ -1,10 +1,11 @@
-import React from "react";
-
 import { BlockContext, useMapper } from "./hooks.js";
 
-export const BlockProvider: React.FC<{
-  mapper?: object;
-  children: React.ReactNode;
+import type { BlockMapper } from "../../types/notion/mapper/block.js";
+import type { FC, ReactNode } from "react";
+
+export const BlockProvider: FC<{
+  mapper?: BlockMapper;
+  children: ReactNode;
 }> = ({ mapper, children }) => {
   if (!mapper) {
     return children;

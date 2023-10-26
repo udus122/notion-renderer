@@ -1,8 +1,8 @@
-import { type FC, type ComponentType, type ReactNode } from "react";
-
-import { type LinkProps } from "src/types/notion/link.js";
+import { type LinkProps } from "../../types/notion/link.js";
 
 import { LinkContext } from "./hooks.js";
+
+import type { FC, ComponentType, ReactNode } from "react";
 
 export const LinkProvider: FC<{
   link?: ComponentType<LinkProps>;
