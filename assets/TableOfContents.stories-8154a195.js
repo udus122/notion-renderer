@@ -1,7 +1,0 @@
-import{B as a}from"./Blocks-eeeab56b.js";import{b as s}from"./Text-73a49d78.js";import"./jsx-runtime-ffb262ed.js";import"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";import"./Link-b5909185.js";import"./Divider-788acd01.js";import"./Equation-a7b58347.js";import"./index-a34f34ea.js";import"./Bold-e93c1dbf.js";import"./Color-01c1a558.js";import"./InlineCode-a40eec31.js";import"./Italic-ab7b1ad2.js";import"./Strikethrough-950f48a2.js";import"./Underline-504dd5a5.js";const r="block",n="caab8e83-7d35-466f-9138-f9156f17577d",d={type:"page_id",page_id:"2712e341-754a-41ae-a9ce-4c0bb4b18c52"},b="2023-03-18T12:21:00.000Z",i="2023-03-18T12:21:00.000Z",l={object:"user",id:"e0446ede-dde6-457c-b535-d2b19f40b45a"},p={object:"user",id:"e0446ede-dde6-457c-b535-d2b19f40b45a"},m=!1,_=!1,f="table_of_contents",O={color:"default"},j={object:r,id:n,parent:d,created_time:b,last_edited_time:i,created_by:l,last_edited_by:p,has_children:m,archived:_,type:f,table_of_contents:O},q={title:"Blocks/TableOfContents",component:s,tags:["autodocs"]},t={args:{block:j,blocks:a}};var e,o,c;t.parameters={...t.parameters,docs:{...(e=t.parameters)==null?void 0:e.docs,source:{originalSource:`{
-  args: {
-    block: (TableOfContentsObject as TableOfContentsBlockObject),
-    blocks: (BlocksObject as Array<BlockObject>)
-  }
-}`,...(c=(o=t.parameters)==null?void 0:o.docs)==null?void 0:c.source}}};const w=["Default"];export{t as Default,w as __namedExportsOrder,q as default};
-//# sourceMappingURL=TableOfContents.stories-8154a195.js.map
