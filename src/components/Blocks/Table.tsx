@@ -5,7 +5,7 @@ import type {
   TableCellBlockObjectComponent,
   TableRowBlockObject,
   TableBlockObject,
-} from "@udus/notion-libs";
+} from "../../types/notion.js";
 
 type Props = BlockProps<TableBlockObject>;
 

@@ -7,7 +7,7 @@ import type {
   Heading3BlockObject,
   Heading2BlockObject,
   Heading1BlockObject,
-} from "@udus/notion-libs";
+} from "../../types/notion.js";
 
 type Props = BlockProps<TableOfContentsBlockObject>;
 

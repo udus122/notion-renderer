@@ -3,7 +3,7 @@ import { ToDo } from "./ToDo.js";
 import ToDoObject from "./Todo.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { ToDoBlockObject } from "@udus/notion-libs";
+import type { ToDoBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof ToDo> = {
   title: "Blocks/ToDo",

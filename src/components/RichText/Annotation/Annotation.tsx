@@ -2,7 +2,7 @@ import { AnnotationProvider } from "../../Mapper/Annotation.js";
 
 import { AnnotationItem } from "./AnnotationItem.js";
 
-import type { RichTextItem } from "@udus/notion-libs";
+import type { RichTextItem } from "../../../types/notion.js";
 import type { ReactNode } from "react";
 
 type Props = {

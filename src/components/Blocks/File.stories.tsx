@@ -3,7 +3,7 @@ import FileFileObject from "./File.File.json";
 import { File } from "./File.js";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { FileBlockObject } from "@udus/notion-libs";
+import type { FileBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof File> = {
   title: "Blocks/File",

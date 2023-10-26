@@ -6,7 +6,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import type {
   TableOfContentsBlockObject,
   BlockObject,
-} from "@udus/notion-libs";
+} from "../../types/notion.js";
 
 const meta: Meta<typeof TableOfContents> = {
   title: "Blocks/TableOfContents",

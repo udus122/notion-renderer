@@ -2,7 +2,7 @@ import { Quote } from "./Quote.js";
 import QuoteObject from "./Quote.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { QuoteBlockObject } from "@udus/notion-libs";
+import type { QuoteBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof Quote> = {
   title: "Blocks/Quote",

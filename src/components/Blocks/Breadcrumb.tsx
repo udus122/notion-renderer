@@ -6,7 +6,7 @@ import { useMapper } from "../Mapper/hooks.js";
 import { Icon } from "./Icon.js";
 
 import type { BlockProps } from "./Block.js";
-import type { BreadcrumbBlockObject } from "@udus/notion-libs";
+import type { BreadcrumbBlockObject } from "../../types/notion.js";
 
 type Props = BlockProps<BreadcrumbBlockObject>;
 

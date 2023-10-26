@@ -3,7 +3,7 @@ import { RichText } from "../RichText/RichText.js";
 import { BlockList } from "./BlockList.js";
 
 import type { BlockProps } from "./Block.js";
-import type { ToDoBlockObject } from "@udus/notion-libs";
+import type { ToDoBlockObject } from "../../types/notion.js";
 
 type Props = BlockProps<ToDoBlockObject>;
 

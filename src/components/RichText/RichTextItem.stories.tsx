@@ -8,7 +8,7 @@ import type {
   EquationRichTextItem,
   MentionRichTextItem,
   TextRichTextItem,
-} from "@udus/notion-libs";
+} from "../../types/notion.js";
 
 const meta: Meta<typeof RichTextItem> = {
   title: "RichText/RichTextItem",

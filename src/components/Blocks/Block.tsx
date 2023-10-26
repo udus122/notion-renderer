@@ -38,7 +38,7 @@ import type {
   Heading2BlockObject,
   Heading3BlockObject,
   ToggleBlockObject,
-} from "@udus/notion-libs";
+} from "../../types/notion.js";
 
 export type BlockProps<T extends BlockObject> = {
   block: T;

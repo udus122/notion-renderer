@@ -5,7 +5,7 @@ import { RichTextItemProvider } from "../Mapper/RichText.js";
 import { RichTextItem } from "./RichTextItem.js";
 
 import type { LinkProps } from "../Link.js";
-import type { RichTextItem as RichTextItemType } from "@udus/notion-libs";
+import type { RichTextItem as RichTextItemType } from "../../types/notion.js";
 
 export type RichTextProps<T extends RichTextItemType> = {
   richText: T;

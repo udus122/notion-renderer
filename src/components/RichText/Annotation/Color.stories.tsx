@@ -2,7 +2,7 @@ import { Color } from "./Color.js";
 import ColorObject from "./Color.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { RichTextItem } from "@udus/notion-libs";
+import type { RichTextItem } from "../../../types/notion.js";
 
 const meta: Meta<typeof Color> = {
   title: "Annotation/Color",

@@ -2,7 +2,7 @@ import { Text } from "./Text.js";
 import TextObject from "./Text.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { TextRichTextItem } from "@udus/notion-libs";
+import type { TextRichTextItem } from "../../types/notion.js";
 
 const meta: Meta<typeof Text> = {
   title: "RichText/Text",

@@ -1,5 +1,5 @@
 import type { BlockProps } from "./Block.js";
-import type { BlockObject } from "@udus/notion-libs";
+import type { BlockObject } from "../../types/notion.js";
 
 type Props = BlockProps<BlockObject>;
 

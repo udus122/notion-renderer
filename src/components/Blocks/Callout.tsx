@@ -4,7 +4,7 @@ import { BlockList } from "./BlockList.js";
 import { Icon } from "./Icon.js";
 
 import type { BlockProps } from "./Block.js";
-import type { CalloutBlockObject } from "@udus/notion-libs";
+import type { CalloutBlockObject } from "../../types/notion.js";
 
 type Props = BlockProps<CalloutBlockObject>;
 

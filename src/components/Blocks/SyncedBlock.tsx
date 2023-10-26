@@ -1,7 +1,7 @@
 import { Block, type BlockProps } from "./Block.js";
 import { BlockList } from "./BlockList.js";
 
-import type { SyncedBlockBlockObject } from "@udus/notion-libs";
+import type { SyncedBlockBlockObject } from "../../types/notion.js";
 
 type Props = BlockProps<SyncedBlockBlockObject>;
 

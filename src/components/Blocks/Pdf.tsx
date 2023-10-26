@@ -1,7 +1,7 @@
 import { RichText } from "../RichText/RichText.js";
 
 import type { BlockProps } from "./Block.js";
-import type { PdfBlockObject } from "@udus/notion-libs";
+import type { PdfBlockObject } from "../../types/notion.js";
 
 type Props = BlockProps<PdfBlockObject>;
 

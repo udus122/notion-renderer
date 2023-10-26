@@ -6,7 +6,7 @@ import { OpenedHeading3 } from "./Custom/OpenedHeading3.js";
 import { OpenedToggle } from "./Custom/OpenedToggle.js";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { BlockObject } from "@udus/notion-libs";
+import type { BlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof BlockList> = {
   title: "Blocks",

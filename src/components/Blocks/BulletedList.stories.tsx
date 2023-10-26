@@ -1,4 +1,4 @@
-import { type BulletedListBlockObject } from "@udus/notion-libs";
+import { type BulletedListBlockObject } from "../../types/notion.js";
 
 import { BulletedList } from "./BulletedList.js";
 import BulletedListObject from "./BulletedList.json";

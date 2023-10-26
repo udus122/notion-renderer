@@ -1,4 +1,4 @@
-import { type TableBlockObject } from "@udus/notion-libs";
+import { type TableBlockObject } from "../../types/notion.js";
 
 import { Table } from "./Table.js";
 import TableObject from "./Table.json";

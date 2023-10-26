@@ -4,7 +4,7 @@ import ParagraphObject from "./Block.Paragraph.json";
 
 import type { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { ParagraphBlockObject } from "@udus/notion-libs";
+import type { ParagraphBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof Block> = {
   title: "Blocks/Block",

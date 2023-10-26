@@ -1,4 +1,4 @@
-import type { RichTextItem } from "@udus/notion-libs";
+import type { RichTextItem } from "../../../types/notion.js";
 
 type Props = React.ComponentProps<"code"> & {
   richTextItem?: RichTextItem;

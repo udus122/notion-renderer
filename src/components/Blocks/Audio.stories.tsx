@@ -3,7 +3,7 @@ import AudioFileObject from "./Audio.File.json";
 import { Audio } from "./Audio.js";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { AudioBlockObject } from "@udus/notion-libs";
+import type { AudioBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof Audio> = {
   title: "Blocks/Audio",

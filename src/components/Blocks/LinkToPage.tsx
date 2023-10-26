@@ -5,7 +5,7 @@ import { RichText } from "../RichText/RichText.js";
 import { Icon } from "./Icon.js";
 
 import type { BlockProps } from "./Block.js";
-import type { LinkToPageBlockObject } from "@udus/notion-libs";
+import type { LinkToPageBlockObject } from "../../types/notion.js";
 
 type Props = BlockProps<LinkToPageBlockObject>;
 

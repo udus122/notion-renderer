@@ -5,7 +5,7 @@ import { Mention } from "./Mention.js";
 import { Text } from "./Text.js";
 
 import type { RichTextProps } from "./RichText.js";
-import type { RichTextItem as RichTextItemType } from "@udus/notion-libs";
+import type { RichTextItem as RichTextItemType } from "../../types/notion.js";
 
 type Props = RichTextProps<RichTextItemType>;
 

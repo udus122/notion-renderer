@@ -3,7 +3,7 @@ import { SyncedBlock } from "./SyncedBlock.js";
 import SyncedBlockOriginalObject from "./SyncedBlock.Original.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { SyncedBlockBlockObject } from "@udus/notion-libs";
+import type { SyncedBlockBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof SyncedBlock> = {
   title: "Blocks/SyncedBlock",

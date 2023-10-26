@@ -8,7 +8,7 @@ import { RichTextItemProvider } from "../Mapper/RichText.js";
 
 import { Block } from "./Block.js";
 
-import type { BlockObject } from "@udus/notion-libs";
+import type { BlockObject } from "../../types/notion.js";
 
 type Props = {
   blocks: Array<BlockObject>;

@@ -2,7 +2,7 @@ import { ChildDatabase } from "./ChildDatabase.js";
 import ChildDatabaseObject from "./ChildDatabase.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { ChildDatabaseBlockObject } from "@udus/notion-libs";
+import type { ChildDatabaseBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof ChildDatabase> = {
   title: "Blocks/ChildDatabase",

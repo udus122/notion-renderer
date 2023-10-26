@@ -2,7 +2,7 @@ import { Underline } from "./Underline.js";
 import UnderlineRichText from "./Underline.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { RichTextItem } from "@udus/notion-libs";
+import type { RichTextItem } from "../../../types/notion.js";
 
 const meta: Meta<typeof Underline> = {
   title: "Annotation/Underline",

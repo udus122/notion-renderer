@@ -3,7 +3,7 @@ import ParagraphObject from "./Paragraph.json";
 import ParagraphWithChildrenObject from "./Paragraph.WithChildren.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { ParagraphBlockObject } from "@udus/notion-libs";
+import type { ParagraphBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof Paragraph> = {
   title: "Blocks/Paragraph",
