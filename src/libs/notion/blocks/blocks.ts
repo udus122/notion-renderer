@@ -103,7 +103,9 @@ export const fetchBlock = async (
   return null;
 };
 
-export const fetchBlocks = async (blockId: string): Promise<BlockObject[]> => {
+export const fetchBlockList = async (
+  blockId: string
+): Promise<BlockObject[]> => {
   const childrenBlockResponses = await listBlockChildren({
     block_id: blockId,
   });

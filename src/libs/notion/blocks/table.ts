@@ -1,4 +1,4 @@
-import { fetchBlocks } from "./blocks.js";
+import { fetchBlockList } from "./blocks.js";
 
 import type {
   TableBlockObject,
@@ -10,7 +10,7 @@ export const convertTableResponseToBlock = async (
   block: TableBlockObjectResponse
 ) => {
   if (block.has_children) {
-    const blocks = await fetchBlocks(block.id);
+    const blocks = await fetchBlockList(block.id);
     const table_rows = blocks.filter(
       (block): block is TableRowBlockObject => block.type === "table_row"
     );

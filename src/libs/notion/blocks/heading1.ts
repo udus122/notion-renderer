@@ -1,6 +1,6 @@
 import { convertResponseToRichText } from "../richText/richText.js";
 
-import { fetchBlocks } from "./blocks.js";
+import { fetchBlockList } from "./blocks.js";
 
 import type { Heading1BlockObject } from "../../../types/notion.js";
 import type { Heading1BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
@@ -9,7 +9,7 @@ export const convertHeading1ResponseToBlock = async (
   block: Heading1BlockObjectResponse
 ) => {
   if (block.has_children) {
-    const children = await fetchBlocks(block.id);
+    const children = await fetchBlockList(block.id);
     return {
       ...block,
       heading_1: {
