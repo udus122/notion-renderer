@@ -3,7 +3,7 @@ import { Mention } from "./Mention.js";
 import MentionPageRichTextObject from "./Mention.page.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { MentionRichTextItem } from "../../types/notion.js";
+import type { MentionRichTextItem } from "src/types/notion/richText/mention.js";
 
 const meta: Meta<typeof Mention> = {
   title: "RichText/Mention",

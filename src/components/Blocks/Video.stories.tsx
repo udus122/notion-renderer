@@ -3,8 +3,8 @@ import VideoFileObject from "./Video.File.json";
 import { Video } from "./Video.js";
 import VideoYouTubeObject from "./Video.YouTube.json";
 
+import type { VideoBlockObject } from "../../types/notion/blocks/video.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { VideoBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof Video> = {
   title: "Blocks/Video",

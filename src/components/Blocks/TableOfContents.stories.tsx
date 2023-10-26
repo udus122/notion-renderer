@@ -2,11 +2,9 @@ import BlocksObject from "./BlockList.json";
 import { TableOfContents } from "./TableOfContents.js";
 import TableOfContentsObject from "./TableOfContents.json";
 
+import type { BlockBlockObject } from "../../types/notion/blocks/block.js";
+import type { TableOfContentsBlockObject } from "../../types/notion/blocks/tableOfContents.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type {
-  TableOfContentsBlockObject,
-  BlockObject,
-} from "../../types/notion.js";
 
 const meta: Meta<typeof TableOfContents> = {
   title: "Blocks/TableOfContents",
@@ -21,6 +19,6 @@ type Story = StoryObj<typeof TableOfContents>;
 export const Default: Story = {
   args: {
     block: TableOfContentsObject as TableOfContentsBlockObject,
-    blocks: BlocksObject as Array<BlockObject>,
+    blocks: BlocksObject as Array<BlockBlockObject>,
   },
 };

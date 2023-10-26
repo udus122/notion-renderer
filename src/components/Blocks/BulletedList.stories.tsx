@@ -1,8 +1,7 @@
-import { type BulletedListBlockObject } from "../../types/notion.js";
-
 import { BulletedList } from "./BulletedList.js";
 import BulletedListObject from "./BulletedList.json";
 
+import type { BulletedListBlockObject } from "../../types/notion/blocks/bulletedList.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof BulletedList> = {

@@ -1,17 +1,13 @@
+import { notNullNorUndefined } from "../../libs/utils.js";
 import { useMapper } from "../Mapper/hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
-import type { BlockProps } from "./Block.js";
-import type {
-  TableOfContentsBlockObject,
-  Heading3BlockObject,
-  Heading2BlockObject,
-  Heading1BlockObject,
-} from "../../types/notion.js";
+import type { Heading1BlockObject } from "../../types/notion/blocks/heading1.js";
+import type { Heading2BlockObject } from "../../types/notion/blocks/heading2.js";
+import type { Heading3BlockObject } from "../../types/notion/blocks/heading3.js";
+import type { TableOfContentsBlock } from "../../types/notion/blocks/tableOfContents.js";
 
-type Props = BlockProps<TableOfContentsBlockObject>;
-
-export const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
+export const TableOfContents: TableOfContentsBlock = ({ block, blocks }) => {
   const { Link } = useMapper();
   const headings = blocks?.filter(
     (
@@ -20,9 +16,10 @@ export const TableOfContents: React.FC<Props> = ({ block, blocks }) => {
       | Heading1BlockObject
       | Heading2BlockObject
       | Heading3BlockObject =>
-      block.type === "heading_1" ||
-      block.type === "heading_2" ||
-      block.type === "heading_3"
+      notNullNorUndefined(block) &&
+      (block.type === "heading_1" ||
+        block.type === "heading_2" ||
+        block.type === "heading_3")
   );
   return (
     <div

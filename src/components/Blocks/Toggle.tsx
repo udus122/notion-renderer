@@ -2,12 +2,9 @@ import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";
 
-import type { BlockProps } from "./Block.js";
-import type { ToggleBlockObject } from "../../types/notion.js";
+import type { ToggleBlock } from "../../types/notion/blocks/toggle.js";
 
-type Props = BlockProps<ToggleBlockObject>;
-
-export const Toggle: React.FC<Props> = ({ block }) => {
+export const Toggle: ToggleBlock = ({ block }) => {
   return (
     <details
       id={block.id}

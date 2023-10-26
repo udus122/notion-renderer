@@ -1,12 +1,9 @@
 import { useMapper } from "../Mapper/hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
-import type { BlockProps } from "./Block.js";
-import type { BookmarkBlockObject } from "../../types/notion.js";
+import type { BookmarkBlock } from "../../types/notion/blocks/bookmark.js";
 
-type Props = BlockProps<BookmarkBlockObject>;
-
-export const Bookmark: React.FC<Props> = ({ block }) => {
+export const Bookmark: BookmarkBlock = ({ block }) => {
   const { Link } = useMapper();
   return (
     <div className="notion_bookmark">

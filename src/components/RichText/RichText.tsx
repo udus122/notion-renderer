@@ -4,12 +4,8 @@ import { RichTextItemProvider } from "../Mapper/RichText.js";
 
 import { RichTextItem } from "./RichTextItem.js";
 
-import type { LinkProps } from "../Link.js";
-import type { RichTextItem as RichTextItemType } from "../../types/notion.js";
-
-export type RichTextProps<T extends RichTextItemType> = {
-  richText: T;
-};
+import type { LinkProps } from "src/types/notion/link.js";
+import type { RichTextItem as RichTextItemType } from "src/types/notion/richText/richTextItem.js";
 
 type Props = {
   richText: Array<RichTextItemType>;

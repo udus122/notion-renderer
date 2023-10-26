@@ -1,11 +1,8 @@
 import { BlockList } from "./BlockList.js";
 
-import type { BlockProps } from "./Block.js";
-import type { ColumnListBlockObject } from "../../types/notion.js";
+import type { ColumnListBlock } from "../../types/notion/blocks/columnList.js";
 
-type Props = BlockProps<ColumnListBlockObject>;
-
-export const ColumnList: React.FC<Props> = ({ block }) => {
+export const ColumnList: ColumnListBlock = ({ block }) => {
   return (
     <div id={block.id} className="notion_column_list">
       {block.column_list.columns &&

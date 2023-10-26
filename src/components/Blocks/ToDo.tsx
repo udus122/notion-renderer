@@ -2,12 +2,9 @@ import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";
 
-import type { BlockProps } from "./Block.js";
-import type { ToDoBlockObject } from "../../types/notion.js";
+import type { ToDoBlock } from "../../types/notion/blocks/toDo.js";
 
-type Props = BlockProps<ToDoBlockObject>;
-
-export const ToDo: React.FC<Props> = ({ block }) => {
+export const ToDo: ToDoBlock = ({ block }) => {
   const isChecked = block.to_do.checked;
   return (
     <div

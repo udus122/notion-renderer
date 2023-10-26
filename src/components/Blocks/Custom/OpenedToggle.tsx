@@ -1,8 +1,8 @@
 import { RichText } from "../../RichText/RichText.js";
 import { BlockList } from "../BlockList.js";
 
-import type { BlockProps } from "../Block.js";
-import type { ToggleBlockObject } from "../../../types/notion.js";
+import type { ToggleBlockObject } from "../../../types/notion/blocks/toggle.js";
+import type { BlockProps } from "src/types/notion/common.js";
 
 type Props = BlockProps<ToggleBlockObject>;
 

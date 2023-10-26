@@ -41,12 +41,10 @@ import { convertToggleResponseToBlock } from "./toggle.js";
 import { convertUnsupportedResponseToBlock } from "./unsupported.js";
 import { convertVideoResponseToBlock } from "./video.js";
 
-import type {
-  BlockObject,
-  BulletedListBlockObject,
-  ListBlockChildrenResponseResults,
-  NumberedListBlockObject,
-} from "../../../types/notion.js";
+import type { BlockBlockObject } from "../../../types/notion/blocks/block.js";
+import type { BulletedListBlockObject } from "../../../types/notion/blocks/bulletedList.js";
+import type { NumberedListBlockObject } from "../../../types/notion/blocks/numberedList.js";
+import type { ListBlockChildrenResponseResults } from "../../../types/notion/common.js";
 import type {
   BlockObjectResponse,
   GetBlockParameters,
@@ -94,7 +92,7 @@ export const listBlockChildren = async (
 
 export const fetchBlock = async (
   blockId: string
-): Promise<BlockObject | null> => {
+): Promise<BlockBlockObject | null> => {
   const block = await retrieveBlock({ block_id: blockId });
   if (block) {
     const blockComponent = convertResponseToBlock(block);
@@ -105,7 +103,7 @@ export const fetchBlock = async (
 
 export const fetchBlockList = async (
   blockId: string
-): Promise<BlockObject[]> => {
+): Promise<BlockBlockObject[]> => {
   const childrenBlockResponses = await listBlockChildren({
     block_id: blockId,
   });
@@ -117,7 +115,7 @@ export const fetchBlockList = async (
 
 export const resolveBlockChildren = async (
   blocks: ListBlockChildrenResponseResults
-): Promise<Array<BlockObject>> => {
+): Promise<Array<BlockBlockObject>> => {
   const blockObjectComponents = await Promise.all(
     blocks.map(async (child_block) => await convertResponseToBlock(child_block))
   );
@@ -127,18 +125,19 @@ export const resolveBlockChildren = async (
 };
 
 export const wrapListItems = (
-  blocks: Array<BlockObject>
-): Array<BlockObject> => {
+  blocks: Array<BlockBlockObject>
+): Array<BlockBlockObject> => {
   return blocks.reduce(
     (
-      prevList: Array<BlockObject>,
-      currBlock: BlockObject
-    ): Array<BlockObject> => {
+      prevList: Array<BlockBlockObject>,
+      currBlock: BlockBlockObject
+    ): Array<BlockBlockObject> => {
       /* If the block.type is neither
        * 'bulleted_list_item' nor 'numbered_list_item' nor 'bulleted_list' nor 'numbered_list',
        * return the block as it is.
        */
       if (
+        notNullNorUndefined(currBlock) &&
         currBlock.type !== "bulleted_list" &&
         currBlock.type !== "numbered_list" &&
         currBlock.type !== "bulleted_list_item" &&
@@ -153,6 +152,7 @@ export const wrapListItems = (
       const id = generateUUID();
       if (
         // bulleted_list_item
+        notNullNorUndefined(currBlock) &&
         currBlock.type === "bulleted_list_item" &&
         prevBlock?.type !== "bulleted_list"
       ) {
@@ -165,6 +165,7 @@ export const wrapListItems = (
       }
       if (
         // numbered_list_item
+        notNullNorUndefined(currBlock) &&
         currBlock.type === "numbered_list_item" &&
         prevBlock?.type !== "numbered_list"
       ) {
@@ -180,6 +181,7 @@ export const wrapListItems = (
       // add the second and subsequent list items to the previous list.
       if (
         // bulleted_list
+        notNullNorUndefined(currBlock) &&
         currBlock.type === "bulleted_list_item" &&
         prevBlock?.type === "bulleted_list"
       ) {
@@ -190,6 +192,7 @@ export const wrapListItems = (
       }
       if (
         // numbered_list_item
+        notNullNorUndefined(currBlock) &&
         currBlock.type === "numbered_list_item" &&
         prevBlock?.type === "numbered_list"
       ) {
@@ -208,7 +211,7 @@ export const wrapListItems = (
 
 export const convertResponseToBlock = async (
   block: BlockObjectResponse | PartialBlockObjectResponse
-): Promise<BlockObject | null> => {
+): Promise<BlockBlockObject | null> => {
   if (!isFullBlock(block)) {
     return null;
   }

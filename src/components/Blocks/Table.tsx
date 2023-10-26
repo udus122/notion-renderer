@@ -1,15 +1,10 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { BlockProps } from "./Block.js";
-import type {
-  TableCellBlockObjectComponent,
-  TableRowBlockObject,
-  TableBlockObject,
-} from "../../types/notion.js";
+import type { TableBlock } from "../../types/notion/blocks/table.js";
+import type { TableCellBlockObjectComponent } from "../../types/notion/blocks/tableCell.js";
+import type { TableRowBlockObject } from "../../types/notion/blocks/tableRow.js";
 
-type Props = BlockProps<TableBlockObject>;
-
-export const Table: React.FC<Props> = ({ block }) => {
+export const Table: TableBlock = ({ block }) => {
   return (
     <table id={block.id} className="notion_table">
       <tbody>

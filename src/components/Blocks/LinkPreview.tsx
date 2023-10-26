@@ -1,11 +1,8 @@
 import { useMapper } from "../Mapper/hooks.js";
 
-import type { BlockProps } from "./Block.js";
-import type { LinkPreviewBlockObject } from "../../types/notion.js";
+import type { LinkPreviewBlock } from "src/types/notion/blocks/linkPreview.js";
 
-type Props = BlockProps<LinkPreviewBlockObject>;
-
-export const LinkPreview: React.FC<Props> = ({ block }) => {
+export const LinkPreview: LinkPreviewBlock = ({ block }) => {
   const { Link } = useMapper();
 
   return (

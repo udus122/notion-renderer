@@ -3,14 +3,11 @@ import { Fragment } from "react";
 import { extractTitleProperty } from "../../utils.js";
 import { useMapper } from "../Mapper/hooks.js";
 
-import { Icon } from "./Icon.js";
+import { Icon } from "../Icon.js";
 
-import type { BlockProps } from "./Block.js";
-import type { BreadcrumbBlockObject } from "../../types/notion.js";
+import type { BreadcrumbBlock } from "../../types/notion/blocks/breadcrumb.js";
 
-type Props = BlockProps<BreadcrumbBlockObject>;
-
-export const Breadcrumb: React.FC<Props> = ({ block }) => {
+export const Breadcrumb: BreadcrumbBlock = ({ block }) => {
   const { Link } = useMapper();
   return (
     <div id={block.id} className="notion_breadcrumb">

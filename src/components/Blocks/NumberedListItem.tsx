@@ -2,12 +2,9 @@ import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";
 
-import type { BlockProps } from "./Block.js";
-import type { NumberedListItemBlockObject } from "../../types/notion.js";
+import type { NumberedListItemBlock } from "../../types/notion/blocks/numberedListItem.js";
 
-type Props = BlockProps<NumberedListItemBlockObject>;
-
-export const NumberedListItem: React.FC<Props> = ({ block }) => {
+export const NumberedListItem: NumberedListItemBlock = ({ block }) => {
   return (
     <li
       id={block.id}

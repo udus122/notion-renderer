@@ -4,11 +4,9 @@ import MentionRichTextObject from "./RichTextItem.mention.json";
 import TextRichTextObject from "./RichTextItem.text.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type {
-  EquationRichTextItem,
-  MentionRichTextItem,
-  TextRichTextItem,
-} from "../../types/notion.js";
+import type { EquationRichTextItem } from "src/types/notion/richText/equation.js";
+import type { MentionRichTextItem } from "src/types/notion/richText/mention.js";
+import type { TextRichTextItem } from "src/types/notion/richText/text.js";
 
 const meta: Meta<typeof RichTextItem> = {
   title: "RichText/RichTextItem",

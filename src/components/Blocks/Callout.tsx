@@ -1,14 +1,11 @@
 import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";
-import { Icon } from "./Icon.js";
+import { Icon } from "../Icon.js";
 
-import type { BlockProps } from "./Block.js";
-import type { CalloutBlockObject } from "../../types/notion.js";
+import type { CalloutBlock } from "src/types/notion/blocks/callout.js";
 
-type Props = BlockProps<CalloutBlockObject>;
-
-export const Callout: React.FC<Props> = ({ block }) => {
+export const Callout: CalloutBlock = ({ block }) => {
   return (
     <div
       id={block.id}

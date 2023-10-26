@@ -3,15 +3,15 @@ import { fetchDatabase } from "../databases.js";
 import { fetchPage } from "../pages.js";
 
 import type {
-  DatabaseMentionObject,
-  DateMentionObject,
-  LinkPreviewMentionObject,
-  MentionObject,
   MentionRichTextItem,
+  DatabaseMentionObject,
   PageMentionObject,
   TempateMentionMentionObject,
+  LinkPreviewMentionObject,
+  DateMentionObject,
   UserMentionObject,
-} from "../../../types/notion.js";
+  MentionObject,
+} from "../../../types/notion/richText/mention.js";
 import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertMentionObjectResponse = async (

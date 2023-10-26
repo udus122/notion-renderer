@@ -1,9 +1,9 @@
+import { notNullNorUndefined } from "src/index.js";
+
 import { fetchBlockList } from "./blocks.js";
 
-import type {
-  TableBlockObject,
-  TableRowBlockObject,
-} from "../../../types/notion.js";
+import type { TableBlockObject } from "../../../types/notion/blocks/table.js";
+import type { TableRowBlockObject } from "../../../types/notion/blocks/tableRow.js";
 import type { TableBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertTableResponseToBlock = async (
@@ -12,7 +12,8 @@ export const convertTableResponseToBlock = async (
   if (block.has_children) {
     const blocks = await fetchBlockList(block.id);
     const table_rows = blocks.filter(
-      (block): block is TableRowBlockObject => block.type === "table_row"
+      (block): block is TableRowBlockObject =>
+        notNullNorUndefined(block) && block.type === "table_row"
     );
     return {
       ...block,

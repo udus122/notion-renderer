@@ -1,11 +1,9 @@
-import { Block, type BlockProps } from "./Block.js";
+import { Block } from "./Block.js";
 import { BlockList } from "./BlockList.js";
 
-import type { SyncedBlockBlockObject } from "../../types/notion.js";
+import type { SyncedBlockBlock } from "../../types/notion/blocks/syncedBlock.js";
 
-type Props = BlockProps<SyncedBlockBlockObject>;
-
-export const SyncedBlock: React.FC<Props> = ({ block, blocks }) => {
+export const SyncedBlock: SyncedBlockBlock = ({ block, blocks }) => {
   return (
     <div className="notion_synced_block">
       {block.synced_block.synced_from === null

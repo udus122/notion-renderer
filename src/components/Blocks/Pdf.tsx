@@ -1,11 +1,8 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { BlockProps } from "./Block.js";
-import type { PdfBlockObject } from "../../types/notion.js";
+import type { PdfBlock } from "src/types/notion/blocks/pdf.js";
 
-type Props = BlockProps<PdfBlockObject>;
-
-export const Pdf: React.FC<Props> = ({ block }) => {
+export const Pdf: PdfBlock = ({ block }) => {
   const pdfUrl =
     block.pdf.type == "external"
       ? block.pdf.external.url

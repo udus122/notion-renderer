@@ -1,11 +1,8 @@
 import katex from "katex";
 
-import type { BlockProps } from "./Block.js";
-import type { EquationBlockObject } from "../../types/notion.js";
+import type { EquationBlock } from "src/types/notion/blocks/equation.js";
 
-type Props = BlockProps<EquationBlockObject>;
-
-export const Equation: React.FC<Props> = ({ block }) => {
+export const Equation: EquationBlock = ({ block }) => {
   return (
     <div id={block.id} className="notion_equation">
       <div

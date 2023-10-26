@@ -1,8 +1,8 @@
 import { Bold } from "./Bold.js";
 import boldRichText from "./Bold.json";
 
+import type { RichTextItem } from "src/types/notion/richText/richTextItem.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { RichTextItem } from "../../../types/notion.js";
 
 const meta: Meta<typeof Bold> = {
   title: "Annotation/Bold",

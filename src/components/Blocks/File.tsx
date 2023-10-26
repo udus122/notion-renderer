@@ -1,12 +1,9 @@
 import { useMapper } from "../Mapper/hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
-import type { BlockProps } from "./Block.js";
-import type { FileBlockObject } from "../../types/notion.js";
+import type { FileBlock } from "../../types/notion/blocks/file.js";
 
-type Props = BlockProps<FileBlockObject>;
-
-export const File: React.FC<Props> = ({ block }) => {
+export const File: FileBlock = ({ block }) => {
   const { Link } = useMapper();
 
   const fileUrl =

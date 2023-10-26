@@ -1,9 +1,6 @@
-import type { BlockProps } from "./Block.js";
-import type { BlockObject } from "../../types/notion.js";
+import type { UnsupportedBlock } from "../../types/notion/blocks/unsupported.js";
 
-type Props = BlockProps<BlockObject>;
-
-export const Unsupported: React.FC<Props> = ({ block }) => {
+export const Unsupported: UnsupportedBlock = ({ block }) => {
   console.warn(`${block.type} is not supported`);
   return null;
 };

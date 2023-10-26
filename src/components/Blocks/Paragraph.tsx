@@ -2,13 +2,9 @@ import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";
 
-import type { BlockProps } from "./Block.js";
-import type { ParagraphBlockObject } from "../../types/notion.js";
-import type React from "react";
+import type { ParagraphBlock } from "../../types/notion/blocks/paragraph.js";
 
-type Props = BlockProps<ParagraphBlockObject>;
-
-export const Paragraph: React.FC<Props> = ({ block }) => {
+export const Paragraph: ParagraphBlock = ({ block }) => {
   return (
     <div
       id={block.id}

@@ -1,8 +1,6 @@
-export type LinkProps = React.ComponentPropsWithRef<"a">;
+import type { LinkComponent } from "../types/notion/link.js";
 
-type Props = LinkProps;
-
-export const Link: React.FC<Props> = ({
+export const Link: LinkComponent = ({
   href,
   className = "",
   target = "_blank",

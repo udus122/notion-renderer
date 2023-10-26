@@ -4,8 +4,8 @@ import { InlineEquation } from "./InlineEquation.js";
 import { Mention } from "./Mention.js";
 import { Text } from "./Text.js";
 
-import type { RichTextProps } from "./RichText.js";
-import type { RichTextItem as RichTextItemType } from "../../types/notion.js";
+import type { RichTextProps } from "src/types/notion/common.js";
+import type { RichTextItem as RichTextItemType } from "src/types/notion/richText/richTextItem.js";
 
 type Props = RichTextProps<RichTextItemType>;
 

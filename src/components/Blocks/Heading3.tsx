@@ -2,12 +2,9 @@ import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";
 
-import type { BlockProps } from "./Block.js";
-import type { Heading3BlockObject } from "../../types/notion.js";
+import type { Heading3Block } from "src/types/notion/blocks/heading3.js";
 
-type Props = BlockProps<Heading3BlockObject>;
-
-export const Heading3: React.FC<Props> = ({ block }) => {
+export const Heading3: Heading3Block = ({ block }) => {
   return (
     <>
       {block.heading_3.is_toggleable ? (

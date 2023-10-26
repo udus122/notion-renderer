@@ -7,7 +7,7 @@ import { Italic } from "./Italic.js";
 import { Strikethrough } from "./Strikethrough.js";
 import { Underline } from "./Underline.js";
 
-import type { RichTextItem } from "../../../types/notion.js";
+import type { RichTextItem } from "src/types/notion/richText/richTextItem.js";
 import type React from "react";
 
 export const AnnotationItem: React.FC<{

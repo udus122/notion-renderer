@@ -1,8 +1,8 @@
 import { ColumnList } from "./ColumnList.js";
 import ColumnListObject from "./ColumnList.json";
 
+import type { ColumnListBlockObject } from "../../types/notion/blocks/columnList.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { ColumnListBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof ColumnList> = {
   title: "Blocks/ColumnList",

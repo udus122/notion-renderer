@@ -2,18 +2,14 @@ import { useEffect } from "react";
 
 import { RichText } from "../RichText/RichText.js";
 
-import type { BlockProps } from "./Block.js";
-import type { EmbedBlockObject } from "../../types/notion.js";
+import type { EmbedBlock } from "../../types/notion/blocks/embed.js";
 
-type Props = BlockProps<EmbedBlockObject>;
-
-export const Embed: React.FC<Props> = ({ block }) => {
+export const Embed: EmbedBlock = ({ block }) => {
   useEffect(() => {
-    // scriptを読み込み
     const script = document.createElement("script");
     script.src = "https://platform.twitter.com/widgets.js";
     document.body.appendChild(script);
-    // アンマウント時に一応scriptタグを消しておく
+
     return () => {
       document.body.removeChild(script);
     };

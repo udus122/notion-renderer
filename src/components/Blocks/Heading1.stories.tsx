@@ -2,8 +2,8 @@ import { Heading1 } from "./Heading1.js";
 import Heading1Object from "./Heading1.json";
 import Heading1Toggleable from "./Heading1.Toggleable.json";
 
+import type { Heading1BlockObject } from "../../types/notion/blocks/heading1.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { Heading1BlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof Heading1> = {
   title: "Blocks/Heading1",

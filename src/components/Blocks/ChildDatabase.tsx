@@ -1,13 +1,10 @@
 import { useMapper } from "../Mapper/hooks.js";
 
-import { Icon } from "./Icon.js";
+import { Icon } from "../Icon.js";
 
-import type { BlockProps } from "./Block.js";
-import type { ChildDatabaseBlockObject } from "../../types/notion.js";
+import type { ChildDatabaseBlock } from "../../types/notion/blocks/childDatabase.js";
 
-type Props = BlockProps<ChildDatabaseBlockObject>;
-
-export const ChildDatabase: React.FC<Props> = ({ block }) => {
+export const ChildDatabase: ChildDatabaseBlock = ({ block }) => {
   const { Link } = useMapper();
   return (
     <div id={block.id} className="notion_child_database">

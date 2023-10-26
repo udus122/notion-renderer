@@ -1,13 +1,10 @@
 import { useMapper } from "../Mapper/hooks.js";
 
-import { Icon } from "./Icon.js";
+import { Icon } from "../Icon.js";
 
-import type { BlockProps } from "./Block.js";
-import type { ChildPageBlockObject } from "../../types/notion.js";
+import type { ChildPageBlock } from "../../types/notion/blocks/childPage.js";
 
-type Props = BlockProps<ChildPageBlockObject>;
-
-export const ChildPage: React.FC<Props> = ({ block }) => {
+export const ChildPage: ChildPageBlock = ({ block }) => {
   const { Link } = useMapper();
   return (
     <div id={block.id} className="notion_child_page">

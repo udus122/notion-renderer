@@ -1,8 +1,8 @@
 import { Toggle } from "./Toggle.js";
 import ToggleObject from "./Toggle.json";
 
+import type { ToggleBlockObject } from "../../types/notion/blocks/toggle.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { ToggleBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof Toggle> = {
   title: "Blocks/Toggle",

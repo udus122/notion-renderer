@@ -1,11 +1,8 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { BlockProps } from "./Block.js";
-import type { CodeBlockObject } from "../../types/notion.js";
+import type { CodeBlock } from "src/types/notion/blocks/code.js";
 
-type Props = BlockProps<CodeBlockObject>;
-
-export const Code: React.FC<Props> = ({ block }) => {
+export const Code: CodeBlock = ({ block }) => {
   return (
     <div id={block.id} className="notion_code">
       <div className="notion_code_header">

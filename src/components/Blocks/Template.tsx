@@ -1,10 +1,6 @@
-import { Unsupported } from "./Unsupported.js";
+import type { TemplateBlock } from "../../types/notion/blocks/template.js";
 
-import type { BlockProps } from "./Block.js";
-import type { TemplateBlockObject } from "../../types/notion.js";
-
-type Props = BlockProps<TemplateBlockObject>;
-
-export const Template: React.FC<Props> = ({ block, blocks }) => {
-  return <Unsupported block={block} blocks={blocks} />;
+export const Template: TemplateBlock = ({ block }) => {
+  console.warn(`${block.type} is not supported`);
+  return null;
 };

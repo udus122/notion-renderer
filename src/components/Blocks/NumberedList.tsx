@@ -1,11 +1,8 @@
 import { NumberedListItem } from "./NumberedListItem.js";
 
-import type { BlockProps } from "./Block.js";
-import type { NumberedListBlockObject } from "../../types/notion.js";
+import type { NumberedListBlock } from "../../types/notion/blocks/numberedList.js";
 
-type Props = BlockProps<NumberedListBlockObject>;
-
-export const NumberedList: React.FC<Props> = ({ block, blocks }) => {
+export const NumberedList: NumberedListBlock = ({ block, blocks }) => {
   return (
     <ol className="notion_numbered_list">
       {block.numbered_list.items.map((item) => {

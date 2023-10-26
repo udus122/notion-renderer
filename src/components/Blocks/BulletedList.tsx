@@ -1,11 +1,8 @@
 import { BulletedListItem } from "./BulletedListItem.js";
 
-import type { BlockProps } from "./Block.js";
-import type { BulletedListBlockObject } from "../../types/notion.js";
+import type { BulletedListBlock } from "../../types/notion/blocks/bulletedList.js";
 
-type Props = BlockProps<BulletedListBlockObject>;
-
-export const BulletedList: React.FC<Props> = ({ block, blocks }) => {
+export const BulletedList: BulletedListBlock = ({ block, blocks }) => {
   return (
     <ul className="notion_bulleted_list">
       {block.bulleted_list.items.map((item) => {

@@ -1,4 +1,4 @@
-import type { EquationBlockObject } from "../../../types/notion.js";
+import type { EquationBlockObject } from "../../../types/notion/blocks/equation.js";
 import type { EquationBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertEquationResponseToBlock = async (

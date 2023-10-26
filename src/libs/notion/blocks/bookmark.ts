@@ -1,7 +1,7 @@
 import { fetchSiteMeta } from "../../../libs/utils.js";
 import { convertResponseToRichText } from "../richText/richText.js";
 
-import type { BookmarkBlockObject } from "../../../types/notion.js";
+import type { BookmarkBlockObject } from "../../../types/notion/blocks/bookmark.js";
 import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertBookmarkResponseToBlock = async (

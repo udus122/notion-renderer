@@ -1,7 +1,8 @@
 import { useContext } from "react";
 import { createContext, type ComponentType } from "react";
 
-import { Link, type LinkProps } from "../Link.js";
+import { Link } from "../Link.js";
+import { type LinkProps } from "src/types/notion/link.js";
 
 export const AnnotationContext = createContext({});
 

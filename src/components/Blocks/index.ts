@@ -17,7 +17,7 @@ export * from "./File.js";
 export * from "./Heading1.js";
 export * from "./Heading2.js";
 export * from "./Heading3.js";
-export * from "./Icon.js";
+export * from "../Icon.js";
 export * from "./Image.js";
 export * from "./LinkPreview.js";
 export * from "./LinkToPage.js";

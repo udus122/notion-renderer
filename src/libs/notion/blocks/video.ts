@@ -1,7 +1,7 @@
 import { fetchOembed } from "../../../libs/utils.js";
 import { convertResponseToRichText } from "../richText/richText.js";
 
-import type { VideoBlockObject } from "../../../types/notion.js";
+import type { VideoBlockObject } from "../../../types/notion/blocks/video.js";
 import type { VideoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertVideoResponseToBlock = async (

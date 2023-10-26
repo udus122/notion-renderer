@@ -2,8 +2,8 @@ import { Bookmark } from "./Bookmark.js";
 import BookmarkObject from "./Bookmark.json";
 import BookmarkNoOgMetaObject from "./Bookmark.NoOgMeta.json";
 
+import type { BookmarkBlockObject } from "../../types/notion/blocks/bookmark.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { BookmarkBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof Bookmark> = {
   title: "Blocks/Bookmark",

@@ -1,8 +1,8 @@
 import { AnnotationItem } from "./AnnotationItem.js";
 import RichTextAnnotationObject from "./AnnotationItem.json";
 
+import type { RichTextItem } from "src/types/notion/richText/richTextItem.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { RichTextItem } from "../../../types/notion.js";
 
 const meta: Meta<typeof AnnotationItem> = {
   title: "Annotation",

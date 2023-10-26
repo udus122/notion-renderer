@@ -2,8 +2,8 @@ import katex from "katex";
 
 import { Annotation } from "./Annotation/Annotation.js";
 
-import type { RichTextProps } from "./RichText.js";
-import type { EquationRichTextItem } from "../../types/notion.js";
+import type { EquationRichTextItem } from "../../types/notion/richText/equation.js";
+import type { RichTextProps } from "src/types/notion/common.js";
 
 type Props = Omit<RichTextProps<EquationRichTextItem>, "richTextItemMapper">;
 

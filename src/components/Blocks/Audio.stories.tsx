@@ -2,8 +2,8 @@ import AudioExternalObject from "./Audio.External.json";
 import AudioFileObject from "./Audio.File.json";
 import { Audio } from "./Audio.js";
 
+import type { AudioBlockObject } from "../../types/notion/blocks/audio.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { AudioBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof Audio> = {
   title: "Blocks/Audio",

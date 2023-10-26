@@ -1,11 +1,8 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { BlockProps } from "./Block.js";
-import type { VideoBlockObject } from "../../types/notion.js";
+import type { VideoBlock } from "../../types/notion/blocks/video.js";
 
-type Props = BlockProps<VideoBlockObject>;
-
-export const Video: React.FC<Props> = ({ block }) => {
+export const Video: VideoBlock = ({ block }) => {
   if (block.video.type === "external" && block.video.oembed) {
     return (
       <div

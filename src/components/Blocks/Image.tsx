@@ -1,11 +1,8 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { BlockProps } from "./Block.js";
-import type { ImageBlockObject } from "../../types/notion.js";
+import type { ImageBlock } from "../../types/notion/blocks/image.js";
 
-type Props = BlockProps<ImageBlockObject>;
-
-export const Image: React.FC<Props> = ({ block }) => {
+export const Image: ImageBlock = ({ block }) => {
   return (
     <div id={block.id} className="notion_image">
       <img

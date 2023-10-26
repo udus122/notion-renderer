@@ -1,10 +1,11 @@
-import type { Icon as IconType } from "src/types/notion.js";
+import type { IconObject } from "../types/notion/blocks/icon.js";
+import type { FC } from "react";
 
 type Props = {
-  icon: IconType;
+  icon: IconObject;
 };
 
-export const Icon: React.FC<Props> = ({ icon }) => {
+export const Icon: FC<Props> = ({ icon }) => {
   if (!icon) return <DefaultIcon />;
 
   return (

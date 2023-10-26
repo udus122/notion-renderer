@@ -2,8 +2,8 @@ import { Paragraph } from "./Paragraph.js";
 import ParagraphObject from "./Paragraph.json";
 import ParagraphWithChildrenObject from "./Paragraph.WithChildren.json";
 
+import type { ParagraphBlockObject } from "../../types/notion/blocks/paragraph.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { ParagraphBlockObject } from "../../types/notion.js";
 
 const meta: Meta<typeof Paragraph> = {
   title: "Blocks/Paragraph",

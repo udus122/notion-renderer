@@ -1,11 +1,8 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { BlockProps } from "./Block.js";
-import type { AudioBlockObject } from "../../types/notion.js";
+import type { AudioBlock } from "../../types/notion/blocks/audio.js";
 
-type Props = BlockProps<AudioBlockObject>;
-
-export const Audio: React.FC<Props> = ({ block }) => {
+export const Audio: AudioBlock = ({ block }) => {
   const audioUrl =
     block.audio.type == "external"
       ? block.audio.external.url

@@ -2,14 +2,11 @@ import { extractTitleProperty } from "../../utils.js";
 import { useMapper } from "../Mapper/hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
-import { Icon } from "./Icon.js";
+import { Icon } from "../Icon.js";
 
-import type { BlockProps } from "./Block.js";
-import type { LinkToPageBlockObject } from "../../types/notion.js";
+import type { LinkToPageBlock } from "src/types/notion/blocks/linkToPage.js";
 
-type Props = BlockProps<LinkToPageBlockObject>;
-
-export const LinkToPage: React.FC<Props> = ({ block }) => {
+export const LinkToPage: LinkToPageBlock = ({ block }) => {
   const { Link } = useMapper();
 
   if (block.link_to_page.type === "page_id" && block.link_to_page.page) {
