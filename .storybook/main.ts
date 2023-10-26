@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/react-vite";
+import { mergeConfig } from "vite";
 const config: StorybookConfig = {
   stories: ["../src/**/*.mdx", "../src/**/*.stories.@(js|jsx|ts|tsx)"],
   addons: [
@@ -17,6 +18,17 @@ const config: StorybookConfig = {
   },
   core: {
     disableWhatsNewNotifications: true,
+  },
+  viteFinal: async (config) => {
+    return mergeConfig(config, {
+      build: {
+        rollupOptions: {
+          entryFileNames: `[name].js`,
+          chunkFileNames: `[name].js`,
+          assetFileNames: `assets/[name].[ext]`,
+        },
+      },
+    });
   },
 };
 
