@@ -1,6 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import { Blocks } from "./Blocks.js";
+import { BlockList } from "./BlockList.js";
 
 import type { BlockProps } from "./Block.js";
 import type { QuoteBlockObject } from "@udus/notion-libs";
@@ -16,7 +16,7 @@ export const Quote: React.FC<Props> = ({ block }) => {
       <RichText richText={block.quote.rich_text} />
       {block.quote.children && (
         <div className={"notion_quote_children"}>
-          <Blocks blocks={block.quote.children} />
+          <BlockList blocks={block.quote.children} />
         </div>
       )}
     </blockquote>

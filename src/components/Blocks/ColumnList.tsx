@@ -1,4 +1,4 @@
-import { Blocks } from "./Blocks.js";
+import { BlockList } from "./BlockList.js";
 
 import type { BlockProps } from "./Block.js";
 import type { ColumnListBlockObject } from "@udus/notion-libs";
@@ -13,7 +13,7 @@ export const ColumnList: React.FC<Props> = ({ block }) => {
           (column) =>
             column.column.children && (
               <div key={column.id} className="notion_column">
-                <Blocks blocks={column.column.children} />
+                <BlockList blocks={column.column.children} />
               </div>
             )
         )}

@@ -1,6 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import { Blocks } from "./Blocks.js";
+import { BlockList } from "./BlockList.js";
 
 import type { BlockProps } from "./Block.js";
 import type { ToDoBlockObject } from "@udus/notion-libs";
@@ -24,7 +24,7 @@ export const ToDo: React.FC<Props> = ({ block }) => {
       </div>
       {block.to_do.children && (
         <div className="notion_to_do_children">
-          <Blocks blocks={block.to_do.children} />
+          <BlockList blocks={block.to_do.children} />
         </div>
       )}
     </div>

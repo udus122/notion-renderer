@@ -1,4 +1,4 @@
-import BlocksObject from "./Blocks.json";
+import BlocksObject from "./BlockList.json";
 import { TableOfContents } from "./TableOfContents.js";
 import TableOfContentsObject from "./TableOfContents.json";
 

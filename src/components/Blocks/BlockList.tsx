@@ -18,7 +18,7 @@ type Props = {
   LinkComponent?: React.ComponentType<LinkProps>;
 };
 
-export const Blocks: React.FC<Props> = function ({
+export const BlockList: React.FC<Props> = function ({
   blocks,
   blockMapper,
   richTextItemMapper,

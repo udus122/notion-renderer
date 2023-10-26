@@ -1,5 +1,5 @@
 import { RichText } from "../../RichText/RichText.js";
-import { Blocks } from "../Blocks.js";
+import { BlockList } from "../BlockList.js";
 
 import type { BlockProps } from "../Block.js";
 import type { ToggleBlockObject } from "@udus/notion-libs";
@@ -17,7 +17,7 @@ export const OpenedToggle: React.FC<Props> = ({ block }) => {
         <RichText richText={block.toggle.rich_text} />
       </summary>
       <div className="notion_toggle_details">
-        {block.toggle.children && <Blocks blocks={block.toggle.children} />}
+        {block.toggle.children && <BlockList blocks={block.toggle.children} />}
       </div>
     </details>
   );

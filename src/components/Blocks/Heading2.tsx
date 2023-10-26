@@ -1,6 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import { Blocks } from "./Blocks.js";
+import { BlockList } from "./BlockList.js";
 
 import type { BlockProps } from "./Block.js";
 import type { Heading2BlockObject } from "@udus/notion-libs";
@@ -22,7 +22,7 @@ export const Heading2: React.FC<Props> = ({ block }) => {
           </summary>
           <div className="notion_toggle_details">
             {block.heading_2.children && (
-              <Blocks blocks={block.heading_2.children} />
+              <BlockList blocks={block.heading_2.children} />
             )}
           </div>
         </details>
