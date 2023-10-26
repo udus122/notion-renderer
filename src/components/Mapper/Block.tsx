@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
+import React from "react";
 
-import { BlockContext } from "./hooks.js";
+import { BlockContext, useMapper } from "./hooks.js";
 
 export const BlockProvider: React.FC<{
   mapper?: object;
@@ -10,7 +10,7 @@ export const BlockProvider: React.FC<{
     return children;
   }
 
-  const blockMapper = useContext(BlockContext);
+  const { blockMapper } = useMapper();
 
   return (
     <BlockContext.Provider value={{ ...blockMapper, ...mapper }}>

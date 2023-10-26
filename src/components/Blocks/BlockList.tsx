@@ -18,7 +18,7 @@ type Props = {
   LinkComponent?: React.ComponentType<LinkProps>;
 };
 
-export const Blocks: React.FC<Props> = function ({
+export const BlockList: React.FC<Props> = function ({
   blocks,
   blockMapper,
   richTextItemMapper,
@@ -26,16 +26,18 @@ export const Blocks: React.FC<Props> = function ({
   LinkComponent,
 }) {
   return (
-    <BlockProvider mapper={blockMapper}>
-      <RichTextItemProvider mapper={richTextItemMapper}>
-        <AnnotationProvider mapper={annotationMapper}>
-          <LinkProvider link={LinkComponent}>
-            {blocks.map((block) => {
-              return <Block key={block.id} block={block} blocks={blocks} />;
-            })}
-          </LinkProvider>
-        </AnnotationProvider>
-      </RichTextItemProvider>
-    </BlockProvider>
+    <div className="notion_block_list">
+      <BlockProvider mapper={blockMapper}>
+        <RichTextItemProvider mapper={richTextItemMapper}>
+          <AnnotationProvider mapper={annotationMapper}>
+            <LinkProvider link={LinkComponent}>
+              {blocks.map((block) => {
+                return <Block key={block.id} block={block} blocks={blocks} />;
+              })}
+            </LinkProvider>
+          </AnnotationProvider>
+        </RichTextItemProvider>
+      </BlockProvider>
+    </div>
   );
 };

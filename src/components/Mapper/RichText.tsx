@@ -1,6 +1,6 @@
-import { useContext, type FC, type ReactNode } from "react";
+import { type FC, type ReactNode } from "react";
 
-import { RichTextItemContext } from "./hooks.js";
+import { RichTextItemContext, useMapper } from "./hooks.js";
 
 export const RichTextItemProvider: FC<{
   mapper?: object;
@@ -10,7 +10,7 @@ export const RichTextItemProvider: FC<{
     return children;
   }
 
-  const richTextItemMapper = useContext(RichTextItemContext);
+  const { richTextItemMapper } = useMapper();
 
   return (
     <RichTextItemContext.Provider value={{ ...richTextItemMapper, ...mapper }}>

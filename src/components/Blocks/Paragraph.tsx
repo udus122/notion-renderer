@@ -1,6 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import { Blocks } from "./Blocks.js";
+import { BlockList } from "./BlockList.js";
 
 import type { BlockProps } from "./Block.js";
 import type { ParagraphBlockObject } from "@udus/notion-libs";
@@ -19,7 +19,7 @@ export const Paragraph: React.FC<Props> = ({ block }) => {
       </p>
       {block.paragraph.children && (
         <div className={"notion_paragraph_children"}>
-          <Blocks blocks={block.paragraph.children} />
+          <BlockList blocks={block.paragraph.children} />
         </div>
       )}
     </div>

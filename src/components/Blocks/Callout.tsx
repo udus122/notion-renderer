@@ -1,6 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import { Blocks } from "./Blocks.js";
+import { BlockList } from "./BlockList.js";
 import { Icon } from "./Icon.js";
 
 import type { BlockProps } from "./Block.js";
@@ -21,7 +21,9 @@ export const Callout: React.FC<Props> = ({ block }) => {
         <span>
           <RichText richText={block.callout.rich_text} />
         </span>
-        {block.callout.children && <Blocks blocks={block.callout.children} />}
+        {block.callout.children && (
+          <BlockList blocks={block.callout.children} />
+        )}
       </div>
     </div>
   );
