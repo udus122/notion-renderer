@@ -1,2 +1,0 @@
-import{j as t}from"./jsx-runtime-ffb262ed.js";import{R as i}from"./RichTextItem-121edc25.js";const a=({richText:r})=>r?t.jsx("span",{className:"notion_rich_text",children:r.map((e,c)=>t.jsx(i,{richText:e},(e==null?void 0:e.id)??`${c}-${e.plain_text}`))}):null;try{a.displayName="RichText",a.__docgenInfo={description:"",displayName:"RichText",props:{richText:{defaultValue:null,description:"",name:"richText",required:!0,type:{name:"RichTextItem[]"}}}}}catch{}export{a as R};
-//# sourceMappingURL=RichText-56528f6a.js.map
