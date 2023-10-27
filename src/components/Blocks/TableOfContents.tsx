@@ -1,4 +1,3 @@
-import { notNullNorUndefined } from "../../libs/utils.js";
 import { useMapper } from "../Mapper/hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
@@ -16,7 +15,7 @@ export const TableOfContents: TableOfContentsBlock = ({ block, blocks }) => {
       | Heading1BlockObject
       | Heading2BlockObject
       | Heading3BlockObject =>
-      notNullNorUndefined(block) &&
+      block !== null &&
       (block.type === "heading_1" ||
         block.type === "heading_2" ||
         block.type === "heading_3")

@@ -1,7 +1,7 @@
 import { useMapper } from "../../Mapper/hooks.js";
 
 import { Bold } from "./Bold.js";
-import { Code } from "./Code.js";
+import { InlineCode } from "./InlineCode.js";
 import { Color } from "./Color.js";
 import { Italic } from "./Italic.js";
 import { Strikethrough } from "./Strikethrough.js";
@@ -21,7 +21,7 @@ export const AnnotationItem: FC<{
     underline: Underline,
     strikethrough: Strikethrough,
     italic: Italic,
-    code: Code,
+    code: InlineCode,
     color: Color,
     ...annotationMapper,
   };

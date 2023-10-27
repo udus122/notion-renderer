@@ -1,18 +1,18 @@
-import { Code } from "./Code.js";
-import codeRichText from "./Code.json";
+import { InlineCode } from "./InlineCode.js";
+import codeRichText from "./InlineCode.json";
 
 import type { RichTextItem } from "../../../types/notion/richText/richTextItem.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof Code> = {
+const meta: Meta<typeof InlineCode> = {
   title: "Annotation/InlineCode",
-  component: Code,
+  component: InlineCode,
   tags: ["autodocs"],
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Code>;
+type Story = StoryObj<typeof InlineCode>;
 
 export const Default: Story = {
   args: {

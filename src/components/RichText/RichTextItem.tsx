@@ -1,6 +1,6 @@
 import { useMapper } from "../Mapper/hooks.js";
 
-import { Equation } from "./Equation.js";
+import { InlineEquation } from "./InlineEquation.js";
 import { Mention } from "./Mention.js";
 import { Text } from "./Text.js";
 
@@ -22,7 +22,7 @@ const RichTextItemContent: React.FC<Props> = ({ richText: richTextItem }) => {
   const { richTextItemMapper } = useMapper();
 
   const mapper = {
-    equation: Equation,
+    equation: InlineEquation,
     mention: Mention,
     text: Text,
     ...richTextItemMapper,
