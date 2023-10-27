@@ -4,13 +4,16 @@
   border-radius: 3px;
   padding-inline-start: 1rem;
   overflow: hidden;
+
   .notion-light &:hover {
-    background-color: rgba(55, 53, 47, 0.08);
+    background-color: rgb(55 53 47 / 8%);
   }
+
   .notion-dark &:hover {
-    background-color: rgba(255, 255, 255, 0.055);
+    background-color: rgb(255 255 255 / 5.5%);
   }
 }
+
 .notion-link-preview-content {
   flex: 4 1 180px;
   padding-block: 1rem;
@@ -49,6 +52,7 @@
   height: 0.75em;
   align-items: center;
   justify-content: center;
+
   img {
     max-inline-size: 100%;
   }
@@ -63,6 +67,7 @@
   max-block-size: 100%;
   max-inline-size: 100%;
   flex: 1 1 180px;
+
   img {
     block-size: 100%;
     max-inline-size: 100%;

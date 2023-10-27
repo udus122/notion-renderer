@@ -1,1 +1,5 @@
-/* .notion-pdf {} */
+.notion-pdf {
+  object {
+    max-inline-size: 100%;
+  }
+}

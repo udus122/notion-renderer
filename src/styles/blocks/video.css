@@ -1,4 +1,10 @@
-.notion-video > video {
-  block-size: auto;
-  max-inline-size: 100%;
+.notion-video {
+  video {
+    block-size: auto;
+    max-inline-size: 100%;
+  }
+
+  iframe {
+    max-inline-size: 100%;
+  }
 }

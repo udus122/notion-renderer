@@ -6,11 +6,13 @@
   padding: 1rem;
   border-radius: 3px;
   box-shadow: none;
+
   .notion-light &.notion-color-default_background {
-    border: 1px solid rgba(55, 53, 47, 0.16);
+    border: 1px solid rgb(55 53 47 / 16%);
   }
+
   .notion-dark &.notion-color-default_background {
-    border: 1px solid rgba(255, 255, 255, 0.13);
+    border: 1px solid rgb(255 255 255 / 13%);
   }
 }
 

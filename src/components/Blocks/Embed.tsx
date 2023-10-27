@@ -16,14 +16,13 @@ export const Embed: EmbedBlock = ({ block }) => {
   }, []);
   if (block.embed.oembed) {
     return (
-      <div>
-        <div
-          dangerouslySetInnerHTML={{
-            __html:
-              block.embed.oembed.type === "rich" ? block.embed.oembed.html : "",
-          }}
-        />
-      </div>
+      <div
+        className="notion-embed"
+        dangerouslySetInnerHTML={{
+          __html:
+            block.embed.oembed.type === "rich" ? block.embed.oembed.html : "",
+        }}
+      />
     );
   }
 

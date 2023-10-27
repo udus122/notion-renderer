@@ -1,6 +1,7 @@
 .notion-column-list {
   display: flex;
   column-gap: 1rem;
+
   & > .notion-column {
     flex-grow: 1;
   }

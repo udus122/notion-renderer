@@ -6,6 +6,7 @@ export const Video: VideoBlock = ({ block }) => {
   if (block.video.type === "external" && block.video.oembed) {
     return (
       <div
+        className="notion-video"
         dangerouslySetInnerHTML={{
           __html:
             block.video.oembed.type === "video" ? block.video.oembed.html : "",
