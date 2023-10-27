@@ -1,4 +1,8 @@
+import { AnnotationItemProvider } from "../Mapper/Annotation.js";
+import { BlockProvider } from "../Mapper/Block.js";
 import { useMapper } from "../Mapper/hooks.js";
+import { LinkProvider } from "../Mapper/Link.js";
+import { RichTextItemProvider } from "../Mapper/RichText.js";
 
 import { Audio } from "./Audio.js";
 import { Bookmark } from "./Bookmark.js";
@@ -36,12 +40,44 @@ import { Toggle } from "./Toggle.js";
 import { Unsupported } from "./Unsupported.js";
 import { Video } from "./Video.js";
 
-import type { BlockBlock } from "../../types/notion/blocks/block.js";
+import type {
+  BlockBlock,
+  BlockBlockObject,
+} from "../../types/notion/blocks/block.js";
+import type { LinkProps } from "../../types/notion/link.js";
+import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
+import type { BlockMapper } from "../../types/notion/mapper/block.js";
+import type { RichTextItemMapper } from "../../types/notion/mapper/richTextItem.js";
+import type { FC } from "react";
 
-export const Block: BlockBlock = ({ block, blocks = [] }) => {
+type Props = {
+  block: BlockBlockObject;
+  blocks: Array<BlockBlockObject>;
+  blockMapper?: BlockMapper;
+  richTextItemMapper?: RichTextItemMapper;
+  annotationMapper?: AnnotationItemMapper;
+  LinkComponent?: React.ComponentType<LinkProps>;
+};
+
+export const Block: FC<Props> = ({
+  block,
+  blocks,
+  blockMapper,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
+}) => {
   return (
     <div className="notion_block">
-      <BlockSwitcher block={block} blocks={blocks} />
+      <BlockProvider mapper={blockMapper}>
+        <RichTextItemProvider mapper={richTextItemMapper}>
+          <AnnotationItemProvider mapper={annotationMapper}>
+            <LinkProvider link={LinkComponent}>
+              <BlockSwitcher block={block} blocks={blocks} />
+            </LinkProvider>
+          </AnnotationItemProvider>
+        </RichTextItemProvider>
+      </BlockProvider>
     </div>
   );
 };

@@ -1,6 +1,3 @@
-import { type TableBlockObject } from "./table.js";
-import { type ToDoBlockObject } from "./toDo.js";
-
 import type { AudioBlockObject } from "./audio.js";
 import type { BookmarkBlockObject } from "./bookmark.js";
 import type { BreadcrumbBlockObject } from "./breadcrumb.js";
@@ -28,9 +25,11 @@ import type { ParagraphBlockObject } from "./paragraph.js";
 import type { PdfBlockObject } from "./pdf.js";
 import type { QuoteBlockObject } from "./quote.js";
 import type { SyncedBlockBlockObject } from "./syncedBlock.js";
+import type { TableBlockObject } from "./table.js";
 import type { TableOfContentsBlockObject } from "./tableOfContents.js";
 import type { TableRowBlockObject } from "./tableRow.js";
 import type { TemplateBlockObject } from "./template.js";
+import type { ToDoBlockObject } from "./toDo.js";
 import type { ToggleBlockObject } from "./toggle.js";
 import type { UnsupportedBlockObject } from "./unsupported.js";
 import type { VideoBlockObject } from "./video.js";
@@ -56,7 +55,6 @@ export type BlockBlockObject =
   | Heading1BlockObject
   | Heading2BlockObject
   | Heading3BlockObject
-  // | IconObject
   | NumberedListBlockObject
   | NumberedListItemBlockObject
   | ImageBlockObject
