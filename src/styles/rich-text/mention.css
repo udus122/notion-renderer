@@ -1,9 +1,3 @@
-/* text */
-.notion-rich-text-type-text {
-  white-space: pre;
-}
-
-/* user mention */
 .notion-rich-text-type-mention-type-user-avatar {
   block-size: 1rem;
   inline-size: 1rem;

@@ -1,34 +1,35 @@
-@layer theme, components;
+@layer notion-theme, notion-components;
 
 @import url("../../node_modules/modern-normalize/modern-normalize.css");
 @import url("katex/dist/katex.min.css");
-@import url("./colors.css");
-@import url("./icon.css") layer(components);
-@import url("./caption.css") layer(components);
-@import url("./blocks/audio.css") layer(components);
-@import url("./blocks/bookmark.css") layer(components);
-@import url("./blocks/breadcrumb.css") layer(components);
-@import url("./blocks/callout.css") layer(components);
-@import url("./blocks/child-database.css") layer(components);
-@import url("./blocks/child-page.css") layer(components);
-@import url("./blocks/code.css") layer(components);
-@import url("./blocks/column-list.css") layer(components);
-@import url("./blocks/embed.css") layer(components);
-@import url("./blocks/file.css") layer(components);
-@import url("./blocks/image.css") layer(components);
-@import url("./blocks/link-preview.css") layer(components);
-@import url("./blocks/paragraph.css") layer(components);
-@import url("./blocks/pdf.css") layer(components);
-@import url("./blocks/quote.css") layer(components);
-@import url("./blocks/to-do.css") layer(components);
-@import url("./blocks/table.css") layer(components);
-@import url("./blocks/table-of-contents.css") layer(components);
-@import url("./blocks/toggle.css") layer(components);
-@import url("./blocks/video.css") layer(components);
-@import url("./blocks.css") layer(components);
-@import url("./rich_text.css") layer(components);
+@import url("./colors.css") layer(notion-components);
+@import url("./icon.css") layer(notion-components);
+@import url("./caption.css") layer(notion-components);
+@import url("./blocks/audio.css") layer(notion-components);
+@import url("./blocks/bookmark.css") layer(notion-components);
+@import url("./blocks/breadcrumb.css") layer(notion-components);
+@import url("./blocks/callout.css") layer(notion-components);
+@import url("./blocks/child-database.css") layer(notion-components);
+@import url("./blocks/child-page.css") layer(notion-components);
+@import url("./blocks/code.css") layer(notion-components);
+@import url("./blocks/column-list.css") layer(notion-components);
+@import url("./blocks/embed.css") layer(notion-components);
+@import url("./blocks/file.css") layer(notion-components);
+@import url("./blocks/image.css") layer(notion-components);
+@import url("./blocks/link-preview.css") layer(notion-components);
+@import url("./blocks/paragraph.css") layer(notion-components);
+@import url("./blocks/pdf.css") layer(notion-components);
+@import url("./blocks/quote.css") layer(notion-components);
+@import url("./blocks/to-do.css") layer(notion-components);
+@import url("./blocks/table.css") layer(notion-components);
+@import url("./blocks/table-of-contents.css") layer(notion-components);
+@import url("./blocks/toggle.css") layer(notion-components);
+@import url("./blocks/video.css") layer(notion-components);
+@import url("./blocks.css") layer(notion-components);
+@import url("./rich-text/mention.css") layer(notion-components);
+@import url("./rich-text/text.css") layer(notion-components);
 
-@layer theme {
+@layer notion-theme {
   .notion-light {
     --color-text-default: #37352f;
     --color-bg-default: #fff;
