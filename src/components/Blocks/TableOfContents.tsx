@@ -24,13 +24,13 @@ export const TableOfContents: TableOfContentsBlock = ({ block, blocks }) => {
   return (
     <div
       id={block.id}
-      className={`notion_table_of_contents notion_color_${block.table_of_contents.color}`}
+      className={`notion-table-of-contents notion-color-${block.table_of_contents.color}`}
     >
       {headings &&
         headings.map((heading) => {
           return (
-            <div key={heading.id} className="notion_table_of_contents_item">
-              <div className={`notion_table_of_contents_item_${heading.type}`}>
+            <div key={heading.id} className="notion-table-of-contents-item">
+              <div className={`notion-table-of-contents-item-${heading.type}`}>
                 <Link href={`#${heading.id}`}>
                   {/* @ts-expect-error: because heading objects always have a 'rich_text' property  */}
                   <RichText richText={heading[heading.type].rich_text} />

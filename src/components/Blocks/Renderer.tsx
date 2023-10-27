@@ -30,7 +30,7 @@ export const BlockRenderer: FC<Props> = ({
   theme = "light",
 }) => {
   return (
-    <div className={`notion_root notion_${theme}`}>
+    <div className={`notion-root notion-${theme}`}>
       <BlockProvider mapper={blockMapper}>
         <RichTextItemProvider mapper={richTextItemMapper}>
           <AnnotationItemProvider mapper={annotationMapper}>

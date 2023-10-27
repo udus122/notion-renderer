@@ -22,12 +22,12 @@ export const Video: VideoBlock = ({ block }) => {
       : "";
 
   return (
-    <div id={block.id} className="notion_video">
+    <div id={block.id} className="notion-video">
       <video controls src={videoUrl}>
         Your browser does not support type os. You can download video file
         <a href={videoUrl}>here</a>.
       </video>
-      <div className="notion_caption notion_video_caption">
+      <div className="notion-caption notion-video-caption">
         <RichText richText={block.video.caption} />
       </div>
     </div>

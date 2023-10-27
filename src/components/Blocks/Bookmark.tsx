@@ -6,22 +6,22 @@ import type { BookmarkBlock } from "../../types/notion/blocks/bookmark.js";
 export const Bookmark: BookmarkBlock = ({ block }) => {
   const { Link } = useMapper();
   return (
-    <div className="notion_bookmark">
+    <div className="notion-bookmark">
       <Link href={block.bookmark.url}>
-        <div className="notion_bookmark_container">
-          <div className="notion_bookmark_content">
-            <div className="notion_bookmark_title">
+        <div className="notion-bookmark-container">
+          <div className="notion-bookmark-content">
+            <div className="notion-bookmark-title">
               {block.bookmark?.site_meta?.title
                 ? block.bookmark.site_meta.title
                 : block.bookmark.url}
             </div>
-            <div className="notion_bookmark_description">
+            <div className="notion-bookmark-description">
               {block.bookmark?.site_meta?.description
                 ? block.bookmark.site_meta.description
                 : block.bookmark.url}
             </div>
-            <div className="notion_bookmark_url">
-              <span className="notion_bookmark_favicon">
+            <div className="notion-bookmark-url">
+              <span className="notion-bookmark-favicon">
                 <img
                   src={
                     block.bookmark?.site_meta?.favicon
@@ -31,13 +31,13 @@ export const Bookmark: BookmarkBlock = ({ block }) => {
                   alt="bookmark favicon"
                 />
               </span>
-              <span className="notion_bookmark_link_url">
+              <span className="notion-bookmark-link-url">
                 {block.bookmark.url}
               </span>
             </div>
           </div>
           {block.bookmark?.site_meta?.image && (
-            <div className="notion_bookmark_cover">
+            <div className="notion-bookmark-cover">
               <img
                 src={block.bookmark.site_meta.image}
                 alt="bookmark og image"
@@ -46,7 +46,7 @@ export const Bookmark: BookmarkBlock = ({ block }) => {
           )}
         </div>
       </Link>
-      <div className="notion_caption notion_bookmark_caption">
+      <div className="notion-caption notion-bookmark-caption">
         <RichText richText={block.bookmark.caption} />
       </div>
     </div>

@@ -17,9 +17,9 @@ export const File: FileBlock = ({ block }) => {
   );
 
   return (
-    <div id={block.id} className="notion_file">
+    <div id={block.id} className="notion-file">
       <Link href={fileUrl}>
-        <div className="notion_file_title">
+        <div className="notion-file-title">
           <img
             src="https://www.notion.so/icons/document_gray.svg"
             alt="File icon in a file block"
@@ -29,7 +29,7 @@ export const File: FileBlock = ({ block }) => {
           {filename}
         </div>
       </Link>
-      <div className="notion_caption notion_file_caption">
+      <div className="notion-caption notion-file-caption">
         <RichText richText={block.file.caption} />
       </div>
     </div>

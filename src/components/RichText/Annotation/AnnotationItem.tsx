@@ -1,8 +1,8 @@
 import { useMapper } from "../../Mapper/hooks.js";
 
 import { Bold } from "./Bold.js";
-import { Color } from "./Color.js";
 import { Code } from "./Code.js";
+import { Color } from "./Color.js";
 import { Italic } from "./Italic.js";
 import { Strikethrough } from "./Strikethrough.js";
 import { Underline } from "./Underline.js";

@@ -9,7 +9,7 @@ type Props = {
 
 export const BlockList: FC<Props> = ({ blocks }) => {
   return (
-    <div className="notion_block_list">
+    <div className="notion-block-list">
       {blocks.map((block) => {
         return (
           block !== null && (

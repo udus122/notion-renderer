@@ -10,12 +10,12 @@ export const Audio: AudioBlock = ({ block }) => {
       ? block.audio.file.url
       : "";
   return (
-    <div id={block.id} className="notion_audio">
+    <div id={block.id} className="notion-audio">
       <audio controls src={audioUrl}>
         Your browser does not support HTML5 audios. You can download audio file
         <a href={audioUrl}>here</a>.
       </audio>
-      <div className="notion_caption notion_audio_caption">
+      <div className="notion-caption notion-audio-caption">
         <RichText richText={block.audio.caption} />
       </div>
     </div>

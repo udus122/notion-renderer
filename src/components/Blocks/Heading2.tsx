@@ -10,14 +10,14 @@ export const Heading2: Heading2Block = ({ block }) => {
       {block.heading_2.is_toggleable ? (
         <details
           id={block.id}
-          className={`notion_heading notion_heading_2 notion_toggle notion_color_${block.heading_2.color}`}
+          className={`notion-heading notion-heading-2 notion-toggle notion-color-${block.heading_2.color}`}
         >
-          <summary className="notion_toggle_summary">
+          <summary className="notion-toggle-summary">
             <h2>
               <RichText richText={block.heading_2.rich_text} />
             </h2>
           </summary>
-          <div className="notion_toggle_details">
+          <div className="notion-toggle-details">
             {block.heading_2.children && (
               <BlockList blocks={block.heading_2.children} />
             )}
@@ -26,7 +26,7 @@ export const Heading2: Heading2Block = ({ block }) => {
       ) : (
         <h1
           id={block.id}
-          className={`notion_heading notion_heading_2 notion_color_${block.heading_2.color}`}
+          className={`notion-heading notion-heading-2 notion-color-${block.heading_2.color}`}
         >
           <RichText richText={block.heading_2.rich_text} />
         </h1>

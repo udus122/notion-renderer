@@ -9,18 +9,18 @@ export const ToDo: ToDoBlock = ({ block }) => {
   return (
     <div
       id={block.id}
-      className={`notion_to_do notion_color_${block.to_do.color}`}
+      className={`notion-to-do notion-color-${block.to_do.color}`}
     >
-      <div className="notion_to_do_content">
-        <span className="notion_to_do_icon">
+      <div className="notion-to-do-content">
+        <span className="notion-to-do-icon">
           {isChecked ? <CheckedBox /> : <CheckBox />}
         </span>
-        <span className={`notion_to_do_text ${isChecked ? "checked" : ""}`}>
+        <span className={`notion-to-do-text ${isChecked ? "checked" : ""}`}>
           <RichText richText={block.to_do.rich_text} />
         </span>
       </div>
       {block.to_do.children && (
-        <div className="notion_to_do_children">
+        <div className="notion-to-do-children">
           <BlockList blocks={block.to_do.children} />
         </div>
       )}
@@ -37,7 +37,7 @@ const CheckBox = () => (
 );
 
 const CheckedBox = () => (
-  <span className="notion_checkbox checked">
+  <span className="notion-checkbox checked">
     <svg viewBox="0 0 14 14">
       <polygon points="5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039"></polygon>
     </svg>

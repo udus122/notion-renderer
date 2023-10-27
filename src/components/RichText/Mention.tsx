@@ -18,7 +18,7 @@ export const Mention: React.FC<Props> = ({ richText: richTextItem }) => {
   switch (richTextItem.mention.type) {
     case "database":
       return (
-        <span className="notion_rich_text_type_mention_type_database">
+        <span className="notion-rich-text-type-mention-type-database">
           <Link href={`/${richTextItem.mention.database.id}`}>
             <Annotation richTextItem={richTextItem}>
               {richTextItem.plain_text}
@@ -28,7 +28,7 @@ export const Mention: React.FC<Props> = ({ richText: richTextItem }) => {
       );
     case "date":
       return (
-        <span className="notion_rich_text_type_mention_type_date">
+        <span className="notion-rich-text-type-mention-type-date">
           <Annotation richTextItem={richTextItem}>
             {richTextItem.plain_text}
           </Annotation>
@@ -62,7 +62,7 @@ export const Mention: React.FC<Props> = ({ richText: richTextItem }) => {
         <span className="notion_rich_text_type_mention_type_user">
           {isFullUser(richTextItem.mention.user) ? (
             <img
-              className="notion_rich_text_type_mention_type_user_avatar"
+              className="notion-rich-text-type-mention-type-user-avatar"
               src={richTextItem.mention.user.avatar_url ?? undefined}
               alt="user avater"
             />

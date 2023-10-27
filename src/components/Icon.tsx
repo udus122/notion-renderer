@@ -9,20 +9,20 @@ export const Icon: FC<Props> = ({ icon }) => {
   if (!icon) return <DefaultIcon />;
 
   return (
-    <div className="notion_icon">
+    <div className="notion-icon">
       {!icon ? (
         <DefaultIcon />
       ) : icon.type === "emoji" ? (
-        <span className="notion_icon_emoji">{icon.emoji}</span>
+        <span className="notion-icon-emoji">{icon.emoji}</span>
       ) : icon.type === "external" ? (
         <img
-          className="notion_icon_external"
+          className="notion-icon-external"
           src={icon.external.url}
           alt="notion callout icon"
         />
       ) : icon.type === "file" ? (
         <img
-          className="notion_icon_file"
+          className="notion-icon-file"
           src={icon.file.url}
           alt="notion callout icon"
         />

@@ -4,17 +4,17 @@ import type { CodeBlock } from "src/types/notion/blocks/code.js";
 
 export const Code: CodeBlock = ({ block }) => {
   return (
-    <div id={block.id} className="notion_code">
-      <div className="notion_code_header">
-        <div className="notion_code_langage">{block.code.language}</div>
+    <div id={block.id} className="notion-code">
+      <div className="notion-code-header">
+        <div className="notion-code-langage">{block.code.language}</div>
       </div>
-      <pre className="notion_code_body">
+      <pre className="notion-code-body">
         <code>
           <RichText richText={block.code.rich_text} />
         </code>
       </pre>
       {block.code.caption && (
-        <div className="notion_caption">
+        <div className="notion-caption">
           <RichText richText={block.code.caption} />
         </div>
       )}

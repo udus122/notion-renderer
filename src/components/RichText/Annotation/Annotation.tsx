@@ -18,7 +18,7 @@ export const Annotation: React.FC<Props> = ({
   annotationMapper,
 }) => {
   return (
-    <span className="notion_annnotation">
+    <span className="notion-annnotation">
       <AnnotationItemProvider mapper={annotationMapper}>
         <AnnotationItem richTextItem={richTextItem}>{children}</AnnotationItem>
       </AnnotationItemProvider>

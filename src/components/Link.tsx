@@ -10,7 +10,7 @@ export const Link: LinkComponent = ({
 }) => (
   <a
     href={href}
-    className={`notion_link ${className}`}
+    className={`notion-link ${className}`}
     target={target}
     rel={rel}
     {...props}

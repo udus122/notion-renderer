@@ -2,7 +2,7 @@ import type { ColorAnnotationItem } from "../../../types/notion/annotation/color
 
 export const Color: ColorAnnotationItem = ({ richTextItem, children }) => {
   return (
-    <span className={`notion_color_${richTextItem.annotations.color}`}>
+    <span className={`notion-color-${richTextItem.annotations.color}`}>
       {children}
     </span>
   );

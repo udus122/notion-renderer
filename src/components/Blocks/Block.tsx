@@ -68,7 +68,7 @@ export const Block: FC<Props> = ({
   LinkComponent,
 }) => {
   return (
-    <div className="notion_block">
+    <div className="notion-block">
       <BlockProvider mapper={blockMapper}>
         <RichTextItemProvider mapper={richTextItemMapper}>
           <AnnotationItemProvider mapper={annotationMapper}>

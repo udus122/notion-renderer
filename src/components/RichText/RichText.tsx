@@ -25,7 +25,7 @@ export const RichText: React.FC<Props> = ({
   if (!richText) return null;
 
   return (
-    <span className="notion_rich_text">
+    <span className="notion-rich-text">
       <RichTextItemProvider mapper={richTextItemMapper}>
         <AnnotationItemProvider mapper={annotationMapper}>
           <LinkProvider link={LinkComponent}>

@@ -4,15 +4,15 @@ import { Equation } from "./Equation.js";
 import { Mention } from "./Mention.js";
 import { Text } from "./Text.js";
 
-import type { RichTextItemProps } from "src/types/notion/common.js";
-import type { RichTextItem as RichTextItemType } from "src/types/notion/richText/richTextItem.js";
+import type { RichTextItemProps } from "../../types/notion/common.js";
+import type { RichTextItem as RichTextItemType } from "../../types/notion/richText/richTextItem.js";
 
 type Props = RichTextItemProps<RichTextItemType>;
 
 export const RichTextItem: React.FC<Props> = (props) => {
   if (!props.richText) return null;
   return (
-    <span className="notion_rich_text_item">
+    <span className="notion-rich-text-item">
       <RichTextItemContent {...props} />
     </span>
   );

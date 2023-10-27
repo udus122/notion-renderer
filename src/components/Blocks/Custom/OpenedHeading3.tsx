@@ -9,15 +9,15 @@ export const OpenedHeading3: Heading3Block = ({ block }) => {
       {block.heading_3.is_toggleable ? (
         <details
           id={block.id}
-          className={`notion_heading notion_heading_3 notion_toggle notion_color_${block.heading_3.color}`}
+          className={`notion-heading notion-heading-3 notion-toggle notion-color-${block.heading_3.color}`}
           open
         >
-          <summary className="notion_toggle_summary">
+          <summary className="notion-toggle-summary">
             <h3>
               <RichText richText={block.heading_3.rich_text} />
             </h3>
           </summary>
-          <div className="notion_toggle_details">
+          <div className="notion-toggle-details">
             {block.heading_3.children && (
               <BlockList blocks={block.heading_3.children} />
             )}
@@ -26,7 +26,7 @@ export const OpenedHeading3: Heading3Block = ({ block }) => {
       ) : (
         <h3
           id={block.id}
-          className={`notion_heading notion_heading_3 notion_color_${block.heading_3.color}`}
+          className={`notion-heading notion-heading-3 notion-color-${block.heading_3.color}`}
         >
           <RichText richText={block.heading_3.rich_text} />
         </h3>

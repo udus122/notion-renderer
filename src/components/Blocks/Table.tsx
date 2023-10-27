@@ -6,7 +6,7 @@ import type { TableRowBlockObject } from "../../types/notion/blocks/tableRow.js"
 
 export const Table: TableBlock = ({ block }) => {
   return (
-    <table id={block.id} className="notion_table">
+    <table id={block.id} className="notion-table">
       <tbody>
         {block.table.table_rows &&
           block.table.table_rows.map((table_row, index) => {
@@ -36,7 +36,7 @@ const TableRowRowHeader: React.FC<{
   table_row: TableRowBlockObject;
 }> = ({ table_row }) => {
   return (
-    <tr id={table_row.id} className="notion_table_row">
+    <tr id={table_row.id} className="notion-table-row">
       {table_row.table_row.cells.map((cell) => (
         <Th key={table_row.id} cell={cell} />
       ))}
@@ -48,7 +48,7 @@ const TableRowColumnHeader: React.FC<{
   table_row: TableRowBlockObject;
 }> = ({ table_row }) => {
   return (
-    <tr id={table_row.id} className="notion_table_row">
+    <tr id={table_row.id} className="notion-table-row">
       {table_row.table_row.cells.map((cell, index) => {
         return index === 0 ? (
           <Th key={table_row.id} cell={cell} />

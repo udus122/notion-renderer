@@ -8,12 +8,12 @@ export const Toggle: ToggleBlock = ({ block }) => {
   return (
     <details
       id={block.id}
-      className={`notion_toggle notion_color_${block.toggle.color}`}
+      className={`notion-toggle notion-color-${block.toggle.color}`}
     >
-      <summary className="notion_toggle_summary">
+      <summary className="notion-toggle-summary">
         <RichText richText={block.toggle.rich_text} />
       </summary>
-      <div className="notion_toggle_details">
+      <div className="notion-toggle-details">
         {block.toggle.children && <BlockList blocks={block.toggle.children} />}
       </div>
     </details>

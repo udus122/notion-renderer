@@ -1,37 +1,37 @@
 @import "./colors.css";
 @import "./blocks.css";
-@import "./rich_texts.css";
+@import "./rich-texts.css";
 /* @import "katex/dist/katex.min.css"; */
 
 :root {
-  --color_default: #ffffffe6;
-  --color_gray: #979a9bf2;
-  --color_brown: #937264;
-  --color_orange: #ffa344;
-  --color_yellow: #ffdc49;
-  --color_green: #4dab9a;
-  --color_blue: #529cca;
-  --color_purple: #9a6dd7;
-  --color_pink: #e255a1;
-  --color_red: #ff7369;
+  --color-default: #ffffffe6;
+  --color-gray: #979a9bf2;
+  --color-brown: #937264;
+  --color-orange: #ffa344;
+  --color-yellow: #ffdc49;
+  --color-green: #4dab9a;
+  --color-blue: #529cca;
+  --color-purple: #9a6dd7;
+  --color-pink: #e255a1;
+  --color-red: #ff7369;
 
-  --color_default_background: #2f3437;
-  --color_gray_background: #454b4e;
-  --color_brown_background: #434040;
-  --color_orange_background: #594a3a;
-  --color_yellow_background: #59563b;
-  --color_green_background: #354c4b;
-  --color_blue_background: #364954;
-  --color_purple_background: #443f57;
-  --color_pink_background: #533b4c;
-  --color_red_background: #594141;
+  --color-default-background: #2f3437;
+  --color-gray-background: #454b4e;
+  --color-brown-background: #434040;
+  --color-orange-background: #594a3a;
+  --color-yellow-background: #59563b;
+  --color-green-background: #354c4b;
+  --color-blue-background: #364954;
+  --color-purple-background: #443f57;
+  --color-pink-background: #533b4c;
+  --color-red-background: #594141;
 
-  --color_inline_code: #eb5757;
+  --color-inline-code: #eb5757;
 }
 
 body {
-  color: var(--color_default);
-  background-color: var(--color_default_background);
+  color: var(--color-default);
+  background-color: var(--color-default-background);
   line-height: 1.5;
   fill: currentColor;
   font-family: "Helvetica Neue", "Arial", "Hiragino Kaku Gothic ProN",

@@ -28,9 +28,9 @@ export const Embed: EmbedBlock = ({ block }) => {
   }
 
   return (
-    <div id={block.id} className="notion_embed">
+    <div id={block.id} className="notion-embed">
       <iframe src={block.embed.url} title="notion embed content" />
-      <div className="notion_caption notion_embed_caption">
+      <div className="notion-caption notion-embed-caption">
         <RichText richText={block.embed.caption} />
       </div>
     </div>

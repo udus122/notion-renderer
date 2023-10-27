@@ -1,10 +1,9 @@
 import { extractTitleProperty } from "../../utils.js";
+import { Icon } from "../Icon.js";
 import { useMapper } from "../Mapper/hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
-import { Icon } from "../Icon.js";
-
-import type { LinkToPageBlock } from "src/types/notion/blocks/linkToPage.js";
+import type { LinkToPageBlock } from "../../types/notion/blocks/linkToPage.js";
 
 export const LinkToPage: LinkToPageBlock = ({ block }) => {
   const { Link } = useMapper();
@@ -12,12 +11,12 @@ export const LinkToPage: LinkToPageBlock = ({ block }) => {
   if (block.link_to_page.type === "page_id" && block.link_to_page.page) {
     const titleRichText = extractTitleProperty(block.link_to_page.page);
     return (
-      <div id={block.id} className="notion_link_to_page">
+      <div id={block.id} className="notion-link-to-page">
         <Link href={`/${block.id}`}>
-          <span className="notion_link_to_page_icon">
+          <span className="notion-link-to-page-icon">
             {<Icon icon={block.link_to_page.page?.icon ?? null} />}
           </span>
-          <span className="notion_link_to_page_title">
+          <span className="notion-link-to-page-title">
             <RichText richText={titleRichText} />
           </span>
         </Link>
@@ -30,12 +29,12 @@ export const LinkToPage: LinkToPageBlock = ({ block }) => {
   ) {
     const titleRichTexts = extractTitleProperty(block.link_to_page.database);
     return (
-      <div id={block.id} className="notion_link_to_page">
+      <div id={block.id} className="notion-link-to-page">
         <Link href={`/${block.id}`}>
-          <span className="notion_link_to_page_icon">
+          <span className="notion-link-to-page-icon">
             {<Icon icon={block.link_to_page.database?.icon ?? null} />}
           </span>
-          <span className="notion_link_to_page_title">
+          <span className="notion-link-to-page-title">
             <RichText richText={titleRichTexts} />
           </span>
         </Link>

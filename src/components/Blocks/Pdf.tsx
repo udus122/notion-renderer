@@ -10,7 +10,7 @@ export const Pdf: PdfBlock = ({ block }) => {
       ? block.pdf.file.url
       : "";
   return (
-    <div id={block.id} className="notion_pdf">
+    <div id={block.id} className="notion-pdf">
       <object
         type="application/pdf"
         data={
@@ -24,7 +24,7 @@ export const Pdf: PdfBlock = ({ block }) => {
         Your browser does not support pdfs. You can download pdf file
         <a href={pdfUrl}>here</a>.
       </object>
-      <div className="notion_caption notion_pdf_caption">
+      <div className="notion-caption notion-pdf-caption">
         <RichText richText={block.pdf.caption} />
       </div>
     </div>

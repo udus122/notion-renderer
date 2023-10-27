@@ -14,7 +14,7 @@ export const Text: React.FC<Props> = ({ richText: richTextItem }) => {
   const { Link } = useMapper();
 
   return (
-    <span className="notion_rich_text_type_text">
+    <span className="notion-rich-text-type-text">
       <Annotation richTextItem={richTextItem}>
         {richTextItem.text.link ? (
           <Link href={richTextItem.text.link?.url}>

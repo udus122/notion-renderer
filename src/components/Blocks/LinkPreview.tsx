@@ -6,22 +6,22 @@ export const LinkPreview: LinkPreviewBlock = ({ block }) => {
   const { Link } = useMapper();
 
   return (
-    <div className="notion_link_preview">
+    <div className="notion-link-preview">
       <Link href={block.link_preview.url}>
-        <div className="notion_link_preview_container">
-          <div className="notion_link_preview_content">
-            <div className="notion_link_preview_title">
+        <div className="notion-link-preview-container">
+          <div className="notion-link-preview-content">
+            <div className="notion-link-preview-title">
               {block.link_preview?.site_meta?.title
                 ? block.link_preview.site_meta.title
                 : block.link_preview.url}
             </div>
-            <div className="notion_link_preview_description">
+            <div className="notion-link-preview-description">
               {block.link_preview?.site_meta?.description
                 ? block.link_preview.site_meta.description
                 : block.link_preview.url}
             </div>
-            <div className="notion_link_preview_url">
-              <span className="notion_link_preview_favicon">
+            <div className="notion-link-preview-url">
+              <span className="notion-link-preview-favicon">
                 <img
                   src={
                     block.link_preview?.site_meta?.favicon
@@ -31,13 +31,13 @@ export const LinkPreview: LinkPreviewBlock = ({ block }) => {
                   alt="link preview favicon"
                 />
               </span>
-              <span className="notion_link_preview_link_url">
+              <span className="notion-link-preview-link-url">
                 {block.link_preview.url}
               </span>
             </div>
           </div>
           {block.link_preview?.site_meta?.image && (
-            <div className="notion_link_preview_cover">
+            <div className="notion-link-preview-cover">
               <img
                 src={block.link_preview.site_meta.image}
                 alt="link preview og image"
