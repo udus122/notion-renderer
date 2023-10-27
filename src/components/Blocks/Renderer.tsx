@@ -18,7 +18,7 @@ type Props = {
   richTextItemMapper?: RichTextItemMapper;
   annotationMapper?: AnnotationItemMapper;
   LinkComponent?: React.ComponentType<LinkProps>;
-  theme: "light" | "dark";
+  theme?: "light" | "dark";
 };
 
 export const BlockRenderer: FC<Props> = ({
