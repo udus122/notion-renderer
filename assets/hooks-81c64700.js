@@ -1,2 +1,0 @@
-import{r as t}from"./index-76fb7be0.js";import{L as a}from"./Link-23da1aea.js";const r=t.createContext({}),c=t.createContext({}),x=t.createContext(a),p=t.createContext({}),u=()=>{const e=t.useContext(c),o=t.useContext(p),n=t.useContext(r),s=t.useContext(x);return{blockMapper:e,richTextItemMapper:o,annotationMapper:n,Link:s}};export{r as A,c as B,x as L,p as R,u};
-//# sourceMappingURL=hooks-81c64700.js.map

@@ -1,2 +1,0 @@
-import{j as e}from"./jsx-runtime-ffb262ed.js";import{R as t}from"./RichText-df143fad.js";const r=({block:i})=>e.jsxs("div",{id:i.id,className:"notion_image",children:[e.jsx("img",{src:i.image.type=="external"?i.image.external.url:i.image.type=="file"?i.image.file.url:"",alt:i.image.caption.map(a=>a.plain_text).join("")}),e.jsx("div",{className:"notion_caption notion_image_caption",children:e.jsx(t,{richText:i.image.caption})})]});export{r as I};
-//# sourceMappingURL=Image-e5aa9dcc.js.map
