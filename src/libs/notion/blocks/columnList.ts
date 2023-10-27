@@ -1,4 +1,4 @@
-import { notNullNorUndefined } from "src/index.js";
+import { notNullNorUndefined } from "../../utils.js";
 
 import { fetchBlockList } from "./blocks.js";
 

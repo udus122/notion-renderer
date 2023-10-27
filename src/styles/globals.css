@@ -1,7 +1,6 @@
 @layer notion-theme, notion-components;
 
 @import url("../../node_modules/modern-normalize/modern-normalize.css");
-@import url("katex/dist/katex.min.css");
 @import url("./colors.css") layer(notion-components);
 @import url("./icon.css") layer(notion-components);
 @import url("./caption.css") layer(notion-components);
