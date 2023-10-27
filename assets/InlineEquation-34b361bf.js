@@ -1,2 +1,0 @@
-import{j as n}from"./jsx-runtime-ffb262ed.js";import{k as o}from"./katex-c2839aef.js";import{A as e}from"./Annotation-79f5dc6e.js";const i=({richText:t})=>n.jsx("span",{className:"notion_rich_text_type_equation",children:n.jsx(e,{richTextItem:t,children:n.jsx("span",{dangerouslySetInnerHTML:{__html:o.renderToString(t.equation.expression,{displayMode:!1,output:"mathml"})}})})});export{i as I};
-//# sourceMappingURL=InlineEquation-34b361bf.js.map
