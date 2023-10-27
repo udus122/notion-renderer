@@ -1,0 +1,15 @@
+.notion-icon {
+  display: inline-flex;
+  width: 1.5em;
+  height: 1.5em;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notion-icon img {
+  block-size: auto;
+  max-inline-size: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.25em;
+}

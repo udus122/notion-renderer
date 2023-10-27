@@ -1,0 +1,30 @@
+.notion-callout {
+  display: flex;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: none;
+  .notion-light &.notion-color-default_background {
+    border: 1px solid rgba(55, 53, 47, 0.16);
+  }
+  .notion-dark &.notion-color-default_background {
+    border: 1px solid rgba(255, 255, 255, 0.13);
+  }
+}
+
+.notion-callout-icon img {
+  block-size: auto;
+  max-inline-size: 100%;
+  aspect-ratio: 1;
+  border-radius: 0.25em;
+}
+
+.notion-callout-content {
+  display: flex;
+  flex-direction: column;
+  margin-inline-start: 8px;
+  overflow: hidden;
+  width: 100%;
+}

@@ -14,7 +14,7 @@ export const Code: CodeBlock = ({ block }) => {
         </code>
       </pre>
       {block.code.caption && (
-        <div className="notion-caption">
+        <div className="notion-caption notion-code-caption">
           <RichText richText={block.code.caption} />
         </div>
       )}

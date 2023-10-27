@@ -1,0 +1,25 @@
+.notion-breadcrumb {
+  display: flex;
+  align-items: center;
+
+  .notion-link {
+    opacity: unset;
+    transition: border-color 0.1s ease-in, opacity 0.1s ease-in;
+    text-decoration-line: unset;
+
+    &:hover {
+      opacity: 0.7;
+      transition: border-color 0.1s ease-in, opacity 0.1s ease-in;
+      text-decoration-line: unset;
+    }
+  }
+}
+
+.notion-breadcrumb-title {
+  display: flex;
+  align-items: center;
+}
+
+.notion-breadcrumb-separator {
+  margin-inline: 0.25rem;
+}

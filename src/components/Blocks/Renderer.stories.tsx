@@ -23,6 +23,12 @@ export const Default: Story = {
     blocks: BlocksObject as Array<BlockBlockObject>,
   },
 };
+export const Dark: Story = {
+  args: {
+    blocks: BlocksObject as Array<BlockBlockObject>,
+    theme: "dark",
+  },
+};
 
 export const Custom: Story = {
   args: {

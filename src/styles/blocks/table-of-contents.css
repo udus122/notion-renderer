@@ -1,0 +1,28 @@
+.notion-table-of-contents > * + * {
+  padding-top: 0.2rem;
+}
+
+.notion-table-of-contents-item {
+  padding-inline-start: 2px;
+  transition: background-color 20ms ease-in 0s;
+
+  &:hover {
+    background-color: #ffffff10;
+  }
+
+  & > .notion-table-of-contents-item-heading_1 {
+    padding-inline-start: calc(1rem * 0);
+  }
+
+  & > .notion-table-of-contents-item-heading_2 {
+    padding-inline-start: calc(1rem * 1);
+  }
+
+  & > .notion-table-of-contents-item-heading_3 {
+    padding-inline-start: calc(1rem * 2);
+  }
+
+  a {
+    border-block-end: 1px solid #ffffff20;
+  }
+}

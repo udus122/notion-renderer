@@ -40,11 +40,11 @@
     "prebuild": "npm run clean",
     "build": "run-p build:*",
     "build:ts": "tsc",
-    "build:css": "cpx \"src/styles/**/*\" dist/styles",
+    "build:css": "postcss src/styles/globals.css -o dist/styles/globals.css",
     "build:sb": "storybook build && touch storybook-static/.nojekyll",
     "watch": "run-p watch:*",
     "watch:ts": "tsc -w",
-    "watch:css": "cpx \"src/styles/**/*\" dist/styles -w",
+    "watch:css": "postcss src/styles/globals.css -o dist/styles/globals.css -w",
     "lint": "run-p lint:*",
     "lint:js": "run-p lint:eslint lint:prettier lint:tsc",
     "lint:eslint": "eslint src --ext .js,.jsx,.ts,.tx",
@@ -70,7 +70,8 @@
     "@extractus/oembed-extractor": "^4.0.1",
     "@notionhq/client": "^2.2.13",
     "dotenv": "^16.3.1",
-    "katex": "^0.16.9"
+    "katex": "^0.16.9",
+    "modern-normalize": "^2.0.0"
   },
   "devDependencies": {
     "@commitlint/cli": "^17.7.2",
