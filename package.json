@@ -63,14 +63,14 @@
   },
   "peerDependencies": {
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "katex": "^0.16.9"
   },
   "dependencies": {
     "@extractus/article-extractor": "^8.0.3",
     "@extractus/oembed-extractor": "^4.0.1",
     "@notionhq/client": "^2.2.13",
     "dotenv": "^16.3.1",
-    "katex": "^0.16.9",
     "modern-normalize": "^2.0.0"
   },
   "devDependencies": {

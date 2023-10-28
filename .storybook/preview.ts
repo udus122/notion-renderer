@@ -1,12 +1,10 @@
 import type { Preview } from "@storybook/react";
+import "katex/dist/katex.min.css";
 import "../src/styles/globals.css";
 
 const preview: Preview = {
   parameters: {
     actions: { argTypesRegex: "^on[A-Z].*" },
-    backgrounds: {
-      default: "dark",
-    },
     controls: {
       matchers: {
         color: /(background|color)$/i,
