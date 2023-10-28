@@ -1,6 +1,9 @@
 ![Notion Renderer](./assets/logo.png)
 
 # Notion Renderer
+![npm version](https://img.shields.io/npm/v/%40udus%2Fnotion-renderer) ![GitHub License](https://img.shields.io/github/license/udus122/notion-renderer) ![GitHub Repo stars](https://img.shields.io/github/stars/udus122/notion-renderer?style=social)
+
+
 A fully customizable React renderer for the official Notion API.
 
 > [!NOTE]
