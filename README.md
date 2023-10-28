@@ -1,5 +1,6 @@
-# Notion Renderer
+![Notion Renderer](./assets/logo.png)
 
+# Notion Renderer
 A fully customizable React renderer for the official Notion API.
 
 > [!NOTE]
