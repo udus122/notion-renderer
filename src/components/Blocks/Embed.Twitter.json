@@ -1,12 +1,12 @@
 {
   "object": "block",
-  "id": "a7c9e11f-78ee-4f68-bdee-c19b2532bc4a",
+  "id": "5207c376-e14a-4b87-ab41-fd1abd509bc7",
   "parent": {
     "type": "page_id",
-    "page_id": "2712e341-754a-41ae-a9ce-4c0bb4b18c52"
+    "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
   },
-  "created_time": "2023-03-18T12:21:00.000Z",
-  "last_edited_time": "2023-03-18T12:21:00.000Z",
+  "created_time": "2023-10-28T07:00:00.000Z",
+  "last_edited_time": "2023-10-28T07:00:00.000Z",
   "created_by": {
     "object": "user",
     "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
@@ -20,12 +20,12 @@
   "type": "embed",
   "embed": {
     "caption": [],
-    "url": "https://twitter.com/ydnjp/status/1604310734930071554",
+    "url": "https://twitter.com/NotionHQ/status/1699828805408550971?s=20",
     "oembed": {
-      "url": "https://twitter.com/ydnjp/status/1604310734930071554",
-      "author_name": "Yahoo!デベロッパーネットワーク",
-      "author_url": "https://twitter.com/ydnjp",
-      "html": "<blockquote class=\"twitter-tweet\" data-lang=\"ja\" data-theme=\"dark\"><p lang=\"ja\" dir=\"ltr\">「保守性と生産性を両立する分析用SQL構造化の4原則 〜 構造化プログラミングの考え方をSQLに適用する」<br><br>📝Tech Blog更新しました。<br>Yahoo!広告の数千行の分析用SQLをリファクタリングする過程で得られた保守性と生産性を両立する分析SQLを構造化する4原則を紹介します。<a href=\"https://t.co/t3xgo0H7oU\">https://t.co/t3xgo0H7oU</a></p>&mdash; Yahoo!デベロッパーネットワーク (@ydnjp) <a href=\"https://twitter.com/ydnjp/status/1604310734930071554?ref_src=twsrc%5Etfw\">2022年12月18日</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "url": "https://twitter.com/NotionHQ/status/1699828805408550971",
+      "author_name": "Notion",
+      "author_url": "https://twitter.com/NotionHQ",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Introducing: Formulas 2.0 🦾<br><br>• Redesigned multi-line editor<br>• Syntax and error highlighting<br>• Colorful, rich data outputs<br>• Powerful new functions <a href=\"https://t.co/sbrLZxT31F\">pic.twitter.com/sbrLZxT31F</a></p>&mdash; Notion (@NotionHQ) <a href=\"https://twitter.com/NotionHQ/status/1699828805408550971?ref_src=twsrc%5Etfw\">September 7, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
       "width": 550,
       "height": null,
       "type": "rich",

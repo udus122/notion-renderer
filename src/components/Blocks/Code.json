@@ -1,12 +1,12 @@
 {
   "object": "block",
-  "id": "8a392133-c1dd-473c-a60c-54a029ac5b53",
+  "id": "a6cf0d65-d899-4bb0-9f54-878407f4dd3b",
   "parent": {
     "type": "page_id",
-    "page_id": "2712e341-754a-41ae-a9ce-4c0bb4b18c52"
+    "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
   },
-  "created_time": "2023-03-18T12:21:00.000Z",
-  "last_edited_time": "2023-10-04T04:42:00.000Z",
+  "created_time": "2023-10-28T06:23:00.000Z",
+  "last_edited_time": "2023-10-28T06:23:00.000Z",
   "created_by": {
     "object": "user",
     "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
@@ -23,7 +23,7 @@
       {
         "type": "text",
         "text": {
-          "content": "this is plain text code block",
+          "content": "This is code block.",
           "link": null
         },
         "annotations": {
@@ -34,15 +34,16 @@
           "code": false,
           "color": "default"
         },
-        "plain_text": "this is plain text code block",
-        "href": null
+        "plain_text": "This is code block.",
+        "href": null,
+        "id": "c0fc83cf-592a-44f4-a0ac-4eca2609abc9"
       }
     ],
     "rich_text": [
       {
         "type": "text",
         "text": {
-          "content": "console.log('Hello World')",
+          "content": "console.log(\"Hello World!\")",
           "link": null
         },
         "annotations": {
@@ -53,10 +54,11 @@
           "code": false,
           "color": "default"
         },
-        "plain_text": "console.log('Hello World')",
-        "href": null
+        "plain_text": "console.log(\"Hello World!\")",
+        "href": null,
+        "id": "5e0706ce-da8a-408b-9337-7c52ae567ffa"
       }
     ],
-    "language": "javascript"
+    "language": "typescript"
   }
 }

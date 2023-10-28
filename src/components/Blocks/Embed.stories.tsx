@@ -17,7 +17,7 @@ type Story = StoryObj<typeof Embed>;
 
 export const Default: Story = {
   args: {
-    block: EmbedObject as EmbedBlockObject,
+    block: EmbedObject as unknown as EmbedBlockObject,
   },
 };
 

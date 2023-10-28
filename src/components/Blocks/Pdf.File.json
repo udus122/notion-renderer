@@ -1,12 +1,12 @@
 {
   "object": "block",
-  "id": "fae7d727-bce0-4c59-b67a-e82374be4beb",
+  "id": "26eb5569-390b-4943-a859-f7b3301a087f",
   "parent": {
     "type": "page_id",
-    "page_id": "2712e341-754a-41ae-a9ce-4c0bb4b18c52"
+    "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
   },
-  "created_time": "2023-10-07T02:26:00.000Z",
-  "last_edited_time": "2023-10-07T02:26:00.000Z",
+  "created_time": "2023-10-28T06:45:00.000Z",
+  "last_edited_time": "2023-10-28T06:45:00.000Z",
   "created_by": {
     "object": "user",
     "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
@@ -20,10 +20,9 @@
   "type": "pdf",
   "pdf": {
     "caption": [],
-    "type": "file",
-    "file": {
-      "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/da8dc9fd-77ac-4597-8c35-df32f04bdd4a/862b685f-6207-4091-a7a1-94559f969d58/adobe_pdf_sample.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231007%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231007T041714Z&X-Amz-Expires=3600&X-Amz-Signature=74d82d914c713a981fe8a6387d318c350d8e5193ff5f30d7adce8f40a27da455&X-Amz-SignedHeaders=host&x-id=GetObject",
-      "expiry_time": "2023-10-07T05:17:14.518Z"
+    "type": "external",
+    "external": {
+      "url": "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
     }
   }
 }

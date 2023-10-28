@@ -1,12 +1,12 @@
 {
   "object": "block",
-  "id": "61b88b0c-2fe5-489f-b3e6-d186b11e16e5",
+  "id": "c2b895b3-a4df-4fc9-bce8-c9bc00983443",
   "parent": {
     "type": "page_id",
-    "page_id": "2712e341-754a-41ae-a9ce-4c0bb4b18c52"
+    "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
   },
-  "created_time": "2023-03-18T12:21:00.000Z",
-  "last_edited_time": "2023-03-27T13:19:00.000Z",
+  "created_time": "2023-10-28T06:22:00.000Z",
+  "last_edited_time": "2023-10-28T06:23:00.000Z",
   "created_by": {
     "object": "user",
     "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
@@ -19,12 +19,12 @@
   "archived": false,
   "type": "child_page",
   "child_page": {
-    "title": "子ページ",
+    "title": "Child page",
     "page": {
       "object": "page",
-      "id": "61b88b0c-2fe5-489f-b3e6-d186b11e16e5",
-      "created_time": "2023-03-18T12:21:00.000Z",
-      "last_edited_time": "2023-03-27T13:19:00.000Z",
+      "id": "c2b895b3-a4df-4fc9-bce8-c9bc00983443",
+      "created_time": "2023-10-28T06:22:00.000Z",
+      "last_edited_time": "2023-10-28T06:23:00.000Z",
       "created_by": {
         "object": "user",
         "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
@@ -33,19 +33,14 @@
         "object": "user",
         "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
       },
-      "cover": {
-        "type": "external",
-        "external": {
-          "url": "https://www.notion.so/images/page-cover/gradients_2.png"
-        }
-      },
+      "cover": null,
       "icon": {
         "type": "emoji",
-        "emoji": "💰"
+        "emoji": "🧸"
       },
       "parent": {
         "type": "page_id",
-        "page_id": "2712e341-754a-41ae-a9ce-4c0bb4b18c52"
+        "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
       },
       "archived": false,
       "properties": {
@@ -56,7 +51,7 @@
             {
               "type": "text",
               "text": {
-                "content": "子ページ",
+                "content": "Child page",
                 "link": null
               },
               "annotations": {
@@ -67,15 +62,15 @@
                 "code": false,
                 "color": "default"
               },
-              "plain_text": "子ページ",
+              "plain_text": "Child page",
               "href": null
             }
           ]
         }
       },
-      "url": "https://www.notion.so/61b88b0c2fe5489fb3e6d186b11e16e5",
+      "url": "https://www.notion.so/Child-page-c2b895b3a4df4fc9bce8c9bc00983443",
       "public_url": null,
-      "request_id": "447a1fca-909a-4cc6-9d3c-3a9cb0151183"
+      "request_id": "c880f39f-c984-4f03-84df-7cc778eb1c77"
     }
   }
 }
