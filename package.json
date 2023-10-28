@@ -1,6 +1,6 @@
 {
   "name": "@udus/notion-renderer",
-  "version": "1.0.0-alpha.27",
+  "version": "1.0.0-alpha.28",
   "type": "module",
   "license": "MIT",
   "repository": {
@@ -11,7 +11,7 @@
     "notion",
     "react",
     "notion-api"
-],
+  ],
   "main": "dist/index.js",
   "exports": {
     ".": {
