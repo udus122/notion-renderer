@@ -1,4 +1,5 @@
 import katex from "katex";
+import "katex/dist/katex.min.css";
 
 import { Annotation } from "./Annotation/Annotation.js";
 
@@ -14,7 +15,7 @@ export const InlineEquation: EquationRichTextItem = ({
           // eslint-disable-next-line import/no-named-as-default-member
           __html: katex.renderToString(richTextItem.equation.expression, {
             displayMode: false,
-            output: "mathml",
+            throwOnError: false,
           }),
         }}
       />
