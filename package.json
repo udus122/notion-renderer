@@ -3,6 +3,15 @@
   "version": "1.0.0-alpha.27",
   "type": "module",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udus122/notion-renderer.git"
+  },
+  "keywords": [
+    "notion",
+    "react",
+    "notion-api"
+],
   "main": "dist/index.js",
   "exports": {
     ".": {
@@ -117,10 +126,6 @@
     "typescript": "^5.2.2",
     "vite": "^4.4.9",
     "vite-plugin-node-polyfills": "^0.15.0"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/udus122/notion-renderer.git"
   },
   "publishConfig": {
     "access": "public"
