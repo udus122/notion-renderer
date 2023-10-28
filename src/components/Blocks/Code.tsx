@@ -1,6 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { CodeBlock } from "src/types/notion/blocks/code.js";
+import type { CodeBlock } from "../../types/notion/blocks/code.js";
 
 export const Code: CodeBlock = ({ block }) => {
   return (

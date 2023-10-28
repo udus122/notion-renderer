@@ -2,7 +2,7 @@ import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";
 
-import type { Heading2Block } from "src/types/notion/blocks/heading2.js";
+import type { Heading2Block } from "../../types/notion/blocks/heading2.js";
 
 export const Heading2: Heading2Block = ({ block }) => {
   return (

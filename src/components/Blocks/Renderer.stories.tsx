@@ -5,8 +5,8 @@ import { OpenedHeading3 } from "./Custom/OpenedHeading3.js";
 import { OpenedToggle } from "./Custom/OpenedToggle.js";
 import { BlockRenderer } from "./Renderer.js";
 
+import type { BlockBlockObject } from "../../types/notion/blocks/block.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { BlockBlockObject } from "src/types/notion/blocks/block.js";
 
 const meta: Meta<typeof BlockRenderer> = {
   title: "Renderer",

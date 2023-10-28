@@ -1,8 +1,8 @@
 import { Color } from "./Color.js";
 import ColorObject from "./Color.json";
 
+import type { RichTextItem } from "../../../types/notion/richText/richTextItem.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { RichTextItem } from "src/types/notion/richText/richTextItem.js";
 
 const meta: Meta<typeof Color> = {
   title: "Annotation/Color",

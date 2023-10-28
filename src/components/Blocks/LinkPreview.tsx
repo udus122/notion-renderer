@@ -1,6 +1,6 @@
 import { useMapper } from "../Mapper/hooks.js";
 
-import type { LinkPreviewBlock } from "src/types/notion/blocks/linkPreview.js";
+import type { LinkPreviewBlock } from "../../types/notion/blocks/linkPreview.js";
 
 export const LinkPreview: LinkPreviewBlock = ({ block }) => {
   const { Link } = useMapper();
