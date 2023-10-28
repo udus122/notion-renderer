@@ -1,5 +1,5 @@
 {
-  "name": "@udus/notion-components",
+  "name": "@udus/notion-renderer",
   "version": "1.0.0-alpha.27",
   "type": "module",
   "license": "MIT",
@@ -62,9 +62,9 @@
     "test": "exit 1"
   },
   "peerDependencies": {
+    "katex": "^0.16.9",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "katex": "^0.16.9"
+    "react-dom": "^18.2.0"
   },
   "dependencies": {
     "@extractus/article-extractor": "^8.0.3",
@@ -94,7 +94,6 @@
     "@typescript-eslint/parser": "^5.62.0",
     "@vitejs/plugin-react-swc": "^3.4.0",
     "autoprefixer": "^10.4.16",
-    "cpx2": "^5.0.0",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^8.50.0",
     "eslint-config-prettier": "^8.10.0",
@@ -121,7 +120,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/udus122/notion-components.git"
+    "url": "git+https://github.com/udus122/notion-renderer.git"
   },
   "publishConfig": {
     "access": "public"
