@@ -4,7 +4,11 @@ import type { Heading2BlockObject } from "./blocks/heading2.js";
 import type { Heading3BlockObject } from "./blocks/heading3.js";
 import type { ToggleBlockObject } from "./blocks/toggle.js";
 import type { RichTextItem } from "./richText/richTextItem.js";
-import type { ListBlockChildrenResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type {
+  DatabaseObjectResponse,
+  ListBlockChildrenResponse,
+  PageObjectResponse,
+} from "@notionhq/client/build/src/api-endpoints.js";
 
 export type BlockProps<T extends BlockBlockObject> = {
   block: T;
@@ -29,3 +33,7 @@ export type IdRequest = string | string;
 export type EmojiRequest = string;
 
 export type TextRequest = string;
+
+export type CoverObject =
+  | PageObjectResponse["cover"]
+  | DatabaseObjectResponse["cover"];
