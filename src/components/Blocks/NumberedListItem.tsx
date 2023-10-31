@@ -8,7 +8,7 @@ export const NumberedListItem: NumberedListItemBlock = ({ block }) => {
   return (
     <li
       id={block.id}
-      className={`notion-numbered-list-item notion-color-${block.numbered_list_item.color}`}
+      className={`notion-block notion-numbered-list-item notion-color-${block.numbered_list_item.color}`}
     >
       <RichText richText={block.numbered_list_item.rich_text} />
       <div>

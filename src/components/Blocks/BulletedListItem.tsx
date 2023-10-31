@@ -8,7 +8,7 @@ export const BulletedListItem: BulletedListItemBlock = ({ block }) => {
   return (
     <li
       id={block.id}
-      className={`notion-bulleted-list-item notion-color-${block.bulleted_list_item.color}`}
+      className={`notion-block notion-bulleted-list-item notion-color-${block.bulleted_list_item.color}`}
     >
       <RichText richText={block.bulleted_list_item.rich_text} />
       <div>

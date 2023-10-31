@@ -10,7 +10,7 @@ export const Heading2: Heading2Block = ({ block }) => {
       {block.heading_2.is_toggleable ? (
         <details
           id={block.id}
-          className={`notion-heading notion-heading-2 notion-toggle notion-color-${block.heading_2.color}`}
+          className={`notion-block notion-heading notion-heading-2 notion-toggle notion-color-${block.heading_2.color}`}
         >
           <summary className="notion-toggle-summary">
             <h2>
@@ -26,7 +26,7 @@ export const Heading2: Heading2Block = ({ block }) => {
       ) : (
         <h1
           id={block.id}
-          className={`notion-heading notion-heading-2 notion-color-${block.heading_2.color}`}
+          className={`notion-block notion-heading notion-heading-2 notion-color-${block.heading_2.color}`}
         >
           <RichText richText={block.heading_2.rich_text} />
         </h1>

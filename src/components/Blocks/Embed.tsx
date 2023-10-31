@@ -17,7 +17,7 @@ export const Embed: EmbedBlock = ({ block }) => {
   if (block.embed.oembed) {
     return (
       <div
-        className="notion-embed"
+        className="notion-block notion-embed"
         dangerouslySetInnerHTML={{
           __html:
             block.embed.oembed.type === "rich" ? block.embed.oembed.html : "",
@@ -27,7 +27,7 @@ export const Embed: EmbedBlock = ({ block }) => {
   }
 
   return (
-    <div id={block.id} className="notion-embed">
+    <div id={block.id} className="notion-block notion-embed">
       <iframe src={block.embed.url} title="notion embed content" />
       <div className="notion-caption notion-embed-caption">
         <RichText richText={block.embed.caption} />

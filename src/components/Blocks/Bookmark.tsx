@@ -6,7 +6,7 @@ import type { BookmarkBlock } from "../../types/notion/blocks/bookmark.js";
 export const Bookmark: BookmarkBlock = ({ block }) => {
   const { Link } = useMapper();
   return (
-    <div className="notion-bookmark">
+    <div id={block.id} className="notion-block notion-bookmark">
       <Link href={block.bookmark.url}>
         <div className="notion-bookmark-container">
           <div className="notion-bookmark-content">

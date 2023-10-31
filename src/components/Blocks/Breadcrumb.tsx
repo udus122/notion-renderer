@@ -9,7 +9,7 @@ import type { BreadcrumbBlock } from "../../types/notion/blocks/breadcrumb.js";
 export const Breadcrumb: BreadcrumbBlock = ({ block }) => {
   const { Link } = useMapper();
   return (
-    <div id={block.id} className="notion-breadcrumb">
+    <div id={block.id} className="notion-block notion-breadcrumb">
       {block.breadcrumb.parents.map((pageOrDatabase, index, array) => {
         return (
           <Fragment key={pageOrDatabase.id}>

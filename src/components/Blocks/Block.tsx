@@ -68,17 +68,15 @@ export const Block: FC<Props> = ({
   LinkComponent,
 }) => {
   return (
-    <div className="notion-block">
-      <BlockProvider mapper={blockMapper}>
-        <RichTextItemProvider mapper={richTextItemMapper}>
-          <AnnotationItemProvider mapper={annotationMapper}>
-            <LinkProvider link={LinkComponent}>
-              <BlockSwitcher block={block} blocks={blocks} />
-            </LinkProvider>
-          </AnnotationItemProvider>
-        </RichTextItemProvider>
-      </BlockProvider>
-    </div>
+    <BlockProvider mapper={blockMapper}>
+      <RichTextItemProvider mapper={richTextItemMapper}>
+        <AnnotationItemProvider mapper={annotationMapper}>
+          <LinkProvider link={LinkComponent}>
+            <BlockSwitcher block={block} blocks={blocks} />
+          </LinkProvider>
+        </AnnotationItemProvider>
+      </RichTextItemProvider>
+    </BlockProvider>
   );
 };
 

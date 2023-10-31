@@ -11,8 +11,12 @@ export const LinkToPage: LinkToPageBlock = ({ block }) => {
   if (block.link_to_page.type === "page_id" && block.link_to_page.page) {
     const titleRichText = extractTitleProperty(block.link_to_page.page);
     return (
-      <div id={block.id} className="notion-link-to-page">
-        <Link href={`/${block.id}`}>
+      <div>
+        <Link
+          id={block.id}
+          className="notion-block notion-link-to-page"
+          href={`/${block.id}`}
+        >
           <span className="notion-link-to-page-icon">
             {<Icon icon={block.link_to_page.page?.icon ?? null} />}
           </span>
@@ -29,8 +33,12 @@ export const LinkToPage: LinkToPageBlock = ({ block }) => {
   ) {
     const titleRichTexts = extractTitleProperty(block.link_to_page.database);
     return (
-      <div id={block.id} className="notion-link-to-page">
-        <Link href={`/${block.id}`}>
+      <div>
+        <Link
+          id={block.id}
+          className="notion-block notion-link-to-page"
+          href={`/${block.id}`}
+        >
           <span className="notion-link-to-page-icon">
             {<Icon icon={block.link_to_page.database?.icon ?? null} />}
           </span>

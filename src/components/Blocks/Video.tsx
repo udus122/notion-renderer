@@ -23,7 +23,7 @@ export const Video: VideoBlock = ({ block }) => {
       : "";
 
   return (
-    <div id={block.id} className="notion-video">
+    <div id={block.id} className="notion-block notion-video">
       <video controls src={videoUrl}>
         Your browser does not support type os. You can download video file
         <a href={videoUrl}>here</a>.

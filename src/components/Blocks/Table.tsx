@@ -6,7 +6,7 @@ import type { TableRowBlockObject } from "../../types/notion/blocks/tableRow.js"
 
 export const Table: TableBlock = ({ block }) => {
   return (
-    <table id={block.id} className="notion-table">
+    <table id={block.id} className="notion-block notion-table">
       <tbody>
         {block.table.table_rows &&
           block.table.table_rows.map((table_row, index) => {

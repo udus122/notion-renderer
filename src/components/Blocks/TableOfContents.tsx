@@ -23,7 +23,7 @@ export const TableOfContents: TableOfContentsBlock = ({ block, blocks }) => {
   return (
     <div
       id={block.id}
-      className={`notion-table-of-contents notion-color-${block.table_of_contents.color}`}
+      className={`notion-block notion-table-of-contents notion-color-${block.table_of_contents.color}`}
     >
       {headings &&
         headings.map((heading) => {

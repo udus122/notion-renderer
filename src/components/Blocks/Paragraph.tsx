@@ -8,7 +8,7 @@ export const Paragraph: ParagraphBlock = ({ block }) => {
   return (
     <div
       id={block.id}
-      className={`notion-paragraph notion-color-${block.paragraph.color}`}
+      className={`notion-block notion-paragraph notion-color-${block.paragraph.color}`}
     >
       <p>
         <RichText richText={block.paragraph.rich_text} />

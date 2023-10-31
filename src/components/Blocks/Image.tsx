@@ -4,7 +4,7 @@ import type { ImageBlock } from "../../types/notion/blocks/image.js";
 
 export const Image: ImageBlock = ({ block }) => {
   return (
-    <div id={block.id} className="notion-image">
+    <div id={block.id} className="notion-block notion-image">
       <img
         src={
           block.image.type == "external"

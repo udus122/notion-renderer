@@ -5,7 +5,7 @@ import type { SyncedBlockBlock } from "../../types/notion/blocks/syncedBlock.js"
 
 export const SyncedBlock: SyncedBlockBlock = ({ block, blocks }) => {
   return (
-    <div className="notion-synced-block">
+    <div className="notion-block notion-synced-block">
       {block.synced_block.synced_from === null
         ? block.synced_block.children && (
             <div className={"notion-synced-block-original"}>

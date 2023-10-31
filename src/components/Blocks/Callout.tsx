@@ -9,7 +9,7 @@ export const Callout: CalloutBlock = ({ block }) => {
   return (
     <div
       id={block.id}
-      className={`notion-callout notion-color-${block.callout.color}`}
+      className={`notion-block notion-callout notion-color-${block.callout.color}`}
     >
       <span className="notion-callout-icon">
         <Icon icon={block.callout.icon} />

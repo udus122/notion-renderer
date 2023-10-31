@@ -4,7 +4,7 @@ import type { CodeBlock } from "../../types/notion/blocks/code.js";
 
 export const Code: CodeBlock = ({ block }) => {
   return (
-    <div id={block.id} className="notion-code">
+    <div id={block.id} className="notion-block notion-code">
       <div className="notion-code-header">
         <div className="notion-code-langage">{block.code.language}</div>
       </div>

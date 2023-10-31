@@ -10,7 +10,7 @@ export const Pdf: PdfBlock = ({ block }) => {
       ? block.pdf.file.url
       : "";
   return (
-    <div id={block.id} className="notion-pdf">
+    <div id={block.id} className="notion-block notion-pdf">
       <object
         type="application/pdf"
         data={

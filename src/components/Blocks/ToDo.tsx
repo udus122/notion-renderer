@@ -9,7 +9,7 @@ export const ToDo: ToDoBlock = ({ block }) => {
   return (
     <div
       id={block.id}
-      className={`notion-to-do notion-color-${block.to_do.color}`}
+      className={`notion-block notion-to-do notion-color-${block.to_do.color}`}
     >
       <div className="notion-to-do-content">
         <span className="notion-to-do-icon">

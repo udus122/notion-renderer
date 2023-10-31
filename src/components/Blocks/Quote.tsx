@@ -8,7 +8,7 @@ export const Quote: QuoteBlock = ({ block }) => {
   return (
     <blockquote
       id={block.id}
-      className={`notion-quote notion-color-${block.quote.color}`}
+      className={`notion-block notion-quote notion-color-${block.quote.color}`}
     >
       <RichText richText={block.quote.rich_text} />
       {block.quote.children && (
