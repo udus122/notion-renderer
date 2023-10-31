@@ -1,23 +1,38 @@
 import type {
-  PageObjectResponse,
   DatabaseObjectResponse,
+  PageObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 
-export function extractTitleProperty(
-  page_or_database: PageObjectResponse | DatabaseObjectResponse
-) {
-  if (page_or_database.object === "database") {
-    return page_or_database.title;
+export type TitleProperty = Extract<
+  PageObjectResponse["properties"][string],
+  { type: "title" }
+>;
+
+export const extractTitle = (
+  pageOrDatabase: PageObjectResponse | DatabaseObjectResponse
+) => {
+  if (pageOrDatabase.object === "page") {
+    return extractTitlePropertyFromPage(pageOrDatabase.properties)?.title ?? [];
   }
-  if (page_or_database.object === "page") {
-    return Object.values(page_or_database.properties).filter(
-      (
-        property
-      ): property is Extract<
-        PageObjectResponse["properties"][string],
-        { type: "title" }
-      > => property.type === "title"
-    )[0].title;
+
+  if (pageOrDatabase.object === "database") {
+    return pageOrDatabase.title;
   }
+
   return [];
-}
+};
+
+export const extractTitlePropertyFromPage = (
+  page_properties: PageObjectResponse["properties"]
+) => {
+  for (const property of Object.values(page_properties)) {
+    if (isTitleProperty(property)) {
+      return property;
+    }
+  }
+  return;
+};
+
+export const isTitleProperty = (
+  property: PageObjectResponse["properties"][string]
+): property is TitleProperty => property.type === "title";
