@@ -4,8 +4,8 @@ import { useMapper } from "../Mapper/hooks.js";
 
 import { Annotation } from "./Annotation/Annotation.js";
 
-import type { RichTextItemProps } from "../../types/notion/common.js";
 import type { MentionRichTextItemObject } from "../../types/notion/richText/mention.js";
+import type { RichTextItemProps } from "../../types/notion/richText/richTextItem.js";
 
 type Props = Omit<
   RichTextItemProps<MentionRichTextItemObject>,

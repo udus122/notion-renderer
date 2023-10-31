@@ -1,4 +1,4 @@
-import type { BlockProps } from "../common.js";
+import type { BlockBlockProps } from "./block.js";
 import type {
   ChildDatabaseBlockObjectResponse,
   DatabaseObjectResponse,
@@ -11,6 +11,6 @@ export type ChildDatabaseBlockObject = ChildDatabaseBlockObjectResponse & {
   };
 };
 
-export type ChildDatabaseBlockProps = BlockProps<ChildDatabaseBlockObject>;
+export type ChildDatabaseBlockProps = BlockBlockProps<ChildDatabaseBlockObject>;
 
 export type ChildDatabaseBlock = ComponentType<ChildDatabaseBlockProps>;

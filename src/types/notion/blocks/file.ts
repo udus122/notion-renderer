@@ -1,5 +1,6 @@
 import type { Overwrite } from "../../../types/utils.js";
-import type { BlockProps, TextRequest } from "../common.js";
+import type { TextRequest } from "../common.js";
+import type { BlockBlockProps } from "./block.js";
 import type { RichTextItem } from "../richText/richTextItem.js";
 import type { FileBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
@@ -26,6 +27,6 @@ export type FileBlockObject = Overwrite<
   }
 >;
 
-export type FileBlockProps = BlockProps<FileBlockObject>;
+export type FileBlockProps = BlockBlockProps<FileBlockObject>;
 
 export type FileBlock = ComponentType<FileBlockProps>;

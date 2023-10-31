@@ -1,5 +1,5 @@
 import type { BlockBlockObject } from "./block.js";
-import type { BlockProps } from "../common.js";
+import type { BlockBlockProps } from "./block.js";
 import type { NumberedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 
@@ -9,6 +9,6 @@ export type NumberedListItemBlockObject =
   };
 
 export type NumberedListItemBlockProps =
-  BlockProps<NumberedListItemBlockObject>;
+  BlockBlockProps<NumberedListItemBlockObject>;
 
 export type NumberedListItemBlock = ComponentType<NumberedListItemBlockProps>;

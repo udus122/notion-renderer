@@ -33,7 +33,6 @@ import type { ToDoBlockObject } from "./toDo.js";
 import type { ToggleBlockObject } from "./toggle.js";
 import type { UnsupportedBlockObject } from "./unsupported.js";
 import type { VideoBlockObject } from "./video.js";
-import type { BlockProps } from "../common.js";
 import type { ComponentType } from "react";
 
 export type BlockBlockObject =
@@ -73,6 +72,9 @@ export type BlockBlockObject =
   | UnsupportedBlockObject
   | VideoBlockObject;
 
-export type BlockBlockProps = BlockProps<BlockBlockObject>;
+export type BlockBlockProps<T extends BlockBlockObject = BlockBlockObject> = {
+  block: T;
+  blocks: Array<BlockBlockObject>;
+};
 
 export type BlockBlock = ComponentType<BlockBlockProps>;

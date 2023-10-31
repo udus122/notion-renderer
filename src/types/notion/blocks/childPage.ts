@@ -1,4 +1,4 @@
-import type { BlockProps } from "../common.js";
+import type { BlockBlockProps } from "./block.js";
 import type {
   ChildPageBlockObjectResponse,
   PageObjectResponse,
@@ -11,6 +11,6 @@ export type ChildPageBlockObject = ChildPageBlockObjectResponse & {
   };
 };
 
-export type ChildPageBlockProps = BlockProps<ChildPageBlockObject>;
+export type ChildPageBlockProps = BlockBlockProps<ChildPageBlockObject>;
 
 export type ChildPageBlock = ComponentType<ChildPageBlockProps>;

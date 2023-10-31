@@ -1,5 +1,5 @@
+import type { BlockBlockProps } from "./block.js";
 import type { Overwrite } from "../../utils.js";
-import type { BlockProps } from "../common.js";
 import type {
   BreadcrumbBlockObjectResponse,
   DatabaseObjectResponse,
@@ -16,6 +16,6 @@ export type BreadcrumbBlockObject = Overwrite<
   }
 >;
 
-export type BreadcrumbBlockProps = BlockProps<BreadcrumbBlockObject>;
+export type BreadcrumbBlockProps = BlockBlockProps<BreadcrumbBlockObject>;
 
 export type BreadcrumbBlock = ComponentType<BreadcrumbBlockProps>;

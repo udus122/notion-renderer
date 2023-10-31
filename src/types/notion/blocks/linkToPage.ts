@@ -1,4 +1,5 @@
-import type { IdRequest, BlockProps } from "../common.js";
+import type { IdRequest } from "../common.js";
+import type { BlockBlockProps } from "./block.js";
 import type {
   LinkToPageBlockObjectResponse,
   PageObjectResponse,
@@ -26,6 +27,6 @@ export type LinkToPageBlockObject = LinkToPageBlockObjectResponse & {
       };
 };
 
-export type LinkToPageBlockProps = BlockProps<LinkToPageBlockObject>;
+export type LinkToPageBlockProps = BlockBlockProps<LinkToPageBlockObject>;
 
 export type LinkToPageBlock = ComponentType<LinkToPageBlockProps>;

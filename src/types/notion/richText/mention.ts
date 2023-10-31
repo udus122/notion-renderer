@@ -1,5 +1,5 @@
+import type { RichTextItemProps } from "./richTextItem.js";
 import type { Overwrite } from "../../../types/utils.js";
-import type { RichTextItemProps } from "../common.js";
 import type { ArticleData } from "@extractus/article-extractor";
 import type {
   DatabaseObjectResponse,

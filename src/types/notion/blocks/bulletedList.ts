@@ -1,5 +1,5 @@
+import type { BlockBlockProps } from "./block.js";
 import type { BulletedListItemBlockObject } from "./bulletedListItem.js";
-import type { BlockProps } from "../common.js";
 import type { ComponentType } from "react";
 
 export type BulletedListBlockObject = {
@@ -10,6 +10,6 @@ export type BulletedListBlockObject = {
   };
 };
 
-export type BulletedListBlockProps = BlockProps<BulletedListBlockObject>;
+export type BulletedListBlockProps = BlockBlockProps<BulletedListBlockObject>;
 
 export type BulletedListBlock = ComponentType<BulletedListBlockProps>;

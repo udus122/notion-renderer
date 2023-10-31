@@ -1,5 +1,5 @@
 import type { NumberedListItemBlockObject } from "./numberedListItem.js";
-import type { BlockProps } from "../common.js";
+import type { BlockBlockProps } from "./block.js";
 import type { ComponentType } from "react";
 
 export type NumberedListBlockObject = {
@@ -8,6 +8,6 @@ export type NumberedListBlockObject = {
   type: "numbered_list";
 };
 
-export type NumberedListBlockProps = BlockProps<NumberedListBlockObject>;
+export type NumberedListBlockProps = BlockBlockProps<NumberedListBlockObject>;
 
 export type NumberedListBlock = ComponentType<NumberedListBlockProps>;
