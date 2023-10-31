@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import type { RichText } from "src/types/notion/richText/richText.js";
 
 const meta: Meta<typeof Title> = {
-  title: "Title",
+  title: "Page/Title",
   component: Title,
   tags: ["autodocs"],
 };

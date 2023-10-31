@@ -1,0 +1,17 @@
+@import url("./cover.css") layer(notion-components);
+
+.notion-page {
+  & > div {
+    margin-inline: 3rem;
+  }
+
+  .notion-icon {
+    display: block;
+    font-size: 5rem;
+    margin-block-start: -3.5rem;
+  }
+
+  .notion-title {
+    /* margin-block: -2rem auto 0; */
+  }
+}

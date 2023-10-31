@@ -27,7 +27,7 @@
 @import url("./blocks.css") layer(notion-components);
 @import url("./rich-text/mention.css") layer(notion-components);
 @import url("./rich-text/text.css") layer(notion-components);
-@import url("./pages/cover.css") layer(notion-components);
+@import url("./pages/page.css") layer(notion-components);
 
 @layer notion-theme {
   .notion-light {

@@ -1,7 +1,7 @@
 import { Cover } from "./Cover.js";
 import CoverObject from "./Cover.json";
 
-import type { CoverObject as CoverObjectType } from "../types/notion/common.js";
+import type { CoverObject as CoverObjectType } from "../../types/notion/common.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Cover> = {
