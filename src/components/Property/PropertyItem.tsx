@@ -5,6 +5,7 @@ import { RichTextItemProvider } from "../Mapper/RichText.js";
 
 import { CheckboxProperty } from "./Checkbox.js";
 import { CreatedTimeProperty } from "./CreatedTime.js";
+import { DateProperty } from "./Date.js";
 import { EmailProperty } from "./Email.js";
 import { LastEditedTimeProperty } from "./LastEditedTime.js";
 import { MultiSelectProperty } from "./MultiSelect.js";
@@ -57,6 +58,7 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
   const mapper = {
     checkbox: CheckboxProperty,
     created_time: CreatedTimeProperty,
+    date: DateProperty,
     email: EmailProperty,
     last_edited_time: LastEditedTimeProperty,
     multi_select: MultiSelectProperty,
@@ -77,6 +79,10 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
       return <PropertyComponent propertyItem={property} />;
     }
     case "created_time": {
+      const PropertyComponent = mapper[property.type];
+      return <PropertyComponent propertyItem={property} />;
+    }
+    case "date": {
       const PropertyComponent = mapper[property.type];
       return <PropertyComponent propertyItem={property} />;
     }
