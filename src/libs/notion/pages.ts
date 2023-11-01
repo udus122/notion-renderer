@@ -34,3 +34,7 @@ export const fetchPage = async (pageId: string) => {
   // TODO: propertiesをすべて取得する
   return page;
 };
+
+import "dotenv/config";
+const res = await fetchPage("696a56fa0c6842709fe6165c403abc76");
+console.log(JSON.stringify(res, null, 2));
