@@ -8,6 +8,7 @@ import { EmailProperty } from "./Email.js";
 import { NumberProperty } from "./Number.js";
 import { PhoneNumberProperty } from "./PhoneNumber.js";
 import { RichTextProperty } from "./RichText.js";
+import { SelectProperty } from "./Select.js";
 import { TitleProperty } from "./Title.js";
 import { UrlProperty } from "./Url.js";
 
@@ -55,6 +56,7 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
     number: NumberProperty,
     phone_number: PhoneNumberProperty,
     rich_text: RichTextProperty,
+    select: SelectProperty,
     title: TitleProperty,
     url: UrlProperty,
   };
@@ -79,6 +81,10 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
       return <PropertyComponent propertyItem={property} />;
     }
     case "phone_number": {
+      const PropertyComponent = mapper[property.type];
+      return <PropertyComponent propertyItem={property} />;
+    }
+    case "select": {
       const PropertyComponent = mapper[property.type];
       return <PropertyComponent propertyItem={property} />;
     }
