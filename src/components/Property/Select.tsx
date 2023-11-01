@@ -5,13 +5,13 @@ export const SelectProperty: SelectPropertyItemComponent = ({
 }) => {
   return (
     <div id={propertyItem.id} className="notion-property-item notion-select">
-      <span
-        className={`notion-pill notion-pill-color-${
-          propertyItem.select?.color ?? "default"
-        }`}
-      >
-        {propertyItem.select?.name ?? ""}
-      </span>
+      {propertyItem.select && (
+        <span
+          className={`notion-pill notion-pill-color-${propertyItem.select.color}`}
+        >
+          {propertyItem.select.name}
+        </span>
+      )}
     </div>
   );
 };

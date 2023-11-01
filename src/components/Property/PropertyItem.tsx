@@ -5,6 +5,7 @@ import { RichTextItemProvider } from "../Mapper/RichText.js";
 
 import { CheckboxProperty } from "./Checkbox.js";
 import { EmailProperty } from "./Email.js";
+import { MultiSelectProperty } from "./MultiSelect.js";
 import { NumberProperty } from "./Number.js";
 import { PhoneNumberProperty } from "./PhoneNumber.js";
 import { RichTextProperty } from "./RichText.js";
@@ -53,6 +54,7 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
   const mapper = {
     checkbox: CheckboxProperty,
     email: EmailProperty,
+    multi_select: MultiSelectProperty,
     number: NumberProperty,
     phone_number: PhoneNumberProperty,
     rich_text: RichTextProperty,
@@ -73,6 +75,10 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
       return <PropertyComponent propertyItem={property} />;
     }
     case "rich_text": {
+      const PropertyComponent = mapper[property.type];
+      return <PropertyComponent propertyItem={property} />;
+    }
+    case "multi_select": {
       const PropertyComponent = mapper[property.type];
       return <PropertyComponent propertyItem={property} />;
     }

@@ -29,6 +29,7 @@
 @import url("./rich-text/text.css") layer(notion-components);
 @import url("./pages/page.css") layer(notion-components);
 @import url("./property/property-item.css") layer(notion-components);
+@import url("./property/multi-select.css") layer(notion-components);
 
 @layer notion-theme {
   .notion-light {
