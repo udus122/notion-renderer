@@ -79,6 +79,18 @@
     "type": "created_time",
     "created_time": "2023-10-31T04:38:00.000Z"
   },
+  "Date Formulta": {
+    "id": "VhQl",
+    "type": "formula",
+    "formula": {
+      "type": "date",
+      "date": {
+        "start": "2023-10-02",
+        "end": null,
+        "time_zone": null
+      }
+    }
+  },
   "Phone": {
     "id": "Zg%5D%60",
     "type": "phone_number",
@@ -924,6 +936,14 @@
       }
     ]
   },
+  "Boolean Formula": {
+    "id": "%5D%7Dtj",
+    "type": "formula",
+    "formula": {
+      "type": "boolean",
+      "boolean": false
+    }
+  },
   "URL": {
     "id": "dh%7BX",
     "type": "url",
@@ -933,9 +953,9 @@
     "id": "iTg%3D",
     "type": "status",
     "status": {
-      "id": "9390a424-e130-414d-bbcc-242ce7f18eb8",
-      "name": "Not started",
-      "color": "default"
+      "id": "47aa2c43-af81-4803-863d-e9b398d31360",
+      "name": "In progress",
+      "color": "blue"
     }
   },
   "Figma File": {
@@ -983,12 +1003,12 @@
       "number": 4
     }
   },
-  "Formula": {
+  "Number Formula": {
     "id": "mXX%3F",
     "type": "formula",
     "formula": {
-      "type": "string",
-      "string": null
+      "type": "number",
+      "number": 2
     }
   },
   "Date": {
@@ -1045,12 +1065,20 @@
   "Last edited time": {
     "id": "wRro",
     "type": "last_edited_time",
-    "last_edited_time": "2023-11-01T05:16:00.000Z"
+    "last_edited_time": "2023-11-01T07:29:00.000Z"
   },
   "AI key info": {
     "id": "yx%3Aw",
     "type": "rich_text",
     "rich_text": []
+  },
+  "String Formula": {
+    "id": "%7BKxV",
+    "type": "formula",
+    "formula": {
+      "type": "string",
+      "string": "Not"
+    }
   },
   "Select": {
     "id": "%7BzcJ",

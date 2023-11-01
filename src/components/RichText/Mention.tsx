@@ -1,5 +1,6 @@
 import { isFullUser } from "@notionhq/client";
 
+import { DateComponent } from "../Date.js";
 import { useMapper } from "../Mapper/hooks.js";
 
 import { Annotation } from "./Annotation/Annotation.js";
@@ -29,9 +30,7 @@ export const Mention: React.FC<Props> = ({ richText: richTextItem }) => {
     case "date":
       return (
         <span className="notion-rich-text-type-mention-type-date">
-          <Annotation richTextItem={richTextItem}>
-            {richTextItem.plain_text}
-          </Annotation>
+          <DateComponent date={richTextItem.mention.date} />
         </span>
       );
     case "link_preview":
