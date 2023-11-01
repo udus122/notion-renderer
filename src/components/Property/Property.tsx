@@ -8,10 +8,9 @@ type Props = {
 };
 
 export const Property: FC<Props> = ({ properties }) => {
-  // console.log("properties:", JSON.stringify(properties, null, 2));
   return (
     <div className="notion-properties">
-      {Object.entries(properties).map(([propertyName, propertyItem]) => {
+      {Object.values(properties).map((propertyItem) => {
         return <PropertyItem key={propertyItem.id} property={propertyItem} />;
       })}
     </div>

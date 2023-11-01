@@ -21,4 +21,11 @@ export const Default: Story = {
       PropertyItemObject
     >,
   },
+  decorators: [
+    (Story) => (
+      <div className="notion-root notion-light">
+        <Story />
+      </div>
+    ),
+  ],
 };

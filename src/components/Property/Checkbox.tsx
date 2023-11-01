@@ -5,7 +5,7 @@ import type { CheckboxPropertyItemComponent } from "../../types/notion/propertyI
 export const CheckboxProperty: CheckboxPropertyItemComponent = ({
   propertyItem,
 }) => (
-  <span id={propertyItem.id} className="notion-property-item notion-checkbox">
+  <div id={propertyItem.id} className="notion-property-item notion-checkbox">
     <Checkbox checked={propertyItem.checkbox} />
-  </span>
+  </div>
 );

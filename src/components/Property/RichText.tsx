@@ -5,7 +5,7 @@ import type { RichTextPropertyItemComponent } from "../../types/notion/propertyI
 export const RichTextProperty: RichTextPropertyItemComponent = ({
   propertyItem,
 }) => (
-  <span id={propertyItem.id} className="notion-property-item notion-rich-text">
+  <div id={propertyItem.id} className="notion-property-item notion-rich-text">
     <RichText richText={propertyItem.rich_text} />
-  </span>
+  </div>
 );
