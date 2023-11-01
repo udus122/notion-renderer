@@ -2,6 +2,7 @@ import type { CheckboxPropertyItemObject } from "./checkbox.js";
 import type { CreatedTimePropertyItemObject } from "./createdTime.js";
 import type { DatePropertyItemObject } from "./date.js";
 import type { EmailPropertyItemObject } from "./email.js";
+import type { LastEditedByPropertyItemObject } from "./lastEditedBy.js";
 import type { LastEditedTimePropertyItemObject } from "./lastEditedTime.js";
 import type { MultiSelectPropertyItemObject } from "./multiSelect.js";
 import type { NumberPropertyItemObject } from "./number.js";
@@ -20,6 +21,7 @@ export type PropertyItemObject =
   | DatePropertyItemObject
   | EmailPropertyItemObject
   | LastEditedTimePropertyItemObject
+  | LastEditedByPropertyItemObject
   | MultiSelectPropertyItemObject
   | NumberPropertyItemObject
   | PeoplePropertyItemObject
