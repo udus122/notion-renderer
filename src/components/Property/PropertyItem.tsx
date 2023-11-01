@@ -4,6 +4,7 @@ import { PropertyItemProvider } from "../Mapper/Property.js";
 import { RichTextItemProvider } from "../Mapper/RichText.js";
 
 import { CheckboxProperty } from "./Checkbox.js";
+import { RichTextProperty } from "./RichText.js";
 
 import type { LinkProps } from "../../types/notion/link.js";
 import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
@@ -45,7 +46,9 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
 
   const mapper = {
     checkbox: CheckboxProperty,
+    rich_text: RichTextProperty,
   };
+
   console.log("property:", JSON.stringify(property, null, 2));
 
   switch (property.type) {
@@ -53,7 +56,12 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
       const PropertyComponent = mapper[property.type];
       return <PropertyComponent propertyItem={property} />;
     }
+    case "rich_text": {
+      const PropertyComponent = mapper[property.type];
+      return <PropertyComponent propertyItem={property} />;
+    }
     default: {
+      // @ts-expect-error: to log when an unexpected 'property.type' is encountered, which is not in the type.
       console.warn(`${property.type as { type: never }} is never.`);
       return null;
     }
