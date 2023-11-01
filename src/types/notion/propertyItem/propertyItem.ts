@@ -5,6 +5,7 @@ import type { EmailPropertyItemObject } from "./email.js";
 import type { LastEditedTimePropertyItemObject } from "./lastEditedTime.js";
 import type { MultiSelectPropertyItemObject } from "./multiSelect.js";
 import type { NumberPropertyItemObject } from "./number.js";
+import type { PeoplePropertyItemObject } from "./people.js";
 import type { PhoneNumberPropertyItemObject } from "./phoneNumber.js";
 import type { RichTextPropertyItemObject } from "./richText.js";
 import type { SelectPropertyItemObject } from "./select.js";
@@ -21,6 +22,7 @@ export type PropertyItemObject =
   | LastEditedTimePropertyItemObject
   | MultiSelectPropertyItemObject
   | NumberPropertyItemObject
+  | PeoplePropertyItemObject
   | PhoneNumberPropertyItemObject
   | RichTextPropertyItemObject
   | SelectPropertyItemObject

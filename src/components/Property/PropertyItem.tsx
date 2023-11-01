@@ -10,6 +10,7 @@ import { EmailProperty } from "./Email.js";
 import { LastEditedTimeProperty } from "./LastEditedTime.js";
 import { MultiSelectProperty } from "./MultiSelect.js";
 import { NumberProperty } from "./Number.js";
+import { PeopleProperty } from "./People.js";
 import { PhoneNumberProperty } from "./PhoneNumber.js";
 import { RichTextProperty } from "./RichText.js";
 import { SelectProperty } from "./Select.js";
@@ -63,6 +64,7 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
     last_edited_time: LastEditedTimeProperty,
     multi_select: MultiSelectProperty,
     number: NumberProperty,
+    people: PeopleProperty,
     phone_number: PhoneNumberProperty,
     rich_text: RichTextProperty,
     select: SelectProperty,
@@ -103,6 +105,10 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
       return <PropertyComponent propertyItem={property} />;
     }
     case "number": {
+      const PropertyComponent = mapper[property.type];
+      return <PropertyComponent propertyItem={property} />;
+    }
+    case "people": {
       const PropertyComponent = mapper[property.type];
       return <PropertyComponent propertyItem={property} />;
     }
