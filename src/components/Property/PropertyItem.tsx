@@ -5,6 +5,7 @@ import { RichTextItemProvider } from "../Mapper/RichText.js";
 
 import { CheckboxProperty } from "./Checkbox.js";
 import { RichTextProperty } from "./RichText.js";
+import { TitleProperty } from "./Title.js";
 
 import type { LinkProps } from "../../types/notion/link.js";
 import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
@@ -47,6 +48,7 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
   const mapper = {
     checkbox: CheckboxProperty,
     rich_text: RichTextProperty,
+    title: TitleProperty,
   };
 
   console.log("property:", JSON.stringify(property, null, 2));
@@ -57,6 +59,10 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
       return <PropertyComponent propertyItem={property} />;
     }
     case "rich_text": {
+      const PropertyComponent = mapper[property.type];
+      return <PropertyComponent propertyItem={property} />;
+    }
+    case "title": {
       const PropertyComponent = mapper[property.type];
       return <PropertyComponent propertyItem={property} />;
     }
