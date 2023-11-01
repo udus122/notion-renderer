@@ -1,5 +1,5 @@
-import type { Overwrite } from "../../utils.js";
 import type { BlockBlockProps } from "./block.js";
+import type { Overwrite } from "../../utils.js";
 import type { RichTextItem } from "../richText/richTextItem.js";
 import type { CodeBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";

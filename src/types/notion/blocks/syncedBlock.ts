@@ -1,6 +1,5 @@
-import type { BlockBlockObject } from "./block.js";
+import type { BlockBlockObject, BlockBlockProps } from "./block.js";
 import type { IdRequest } from "../common.js";
-import type { BlockBlockProps } from "./block.js";
 import type { SyncedBlockBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 

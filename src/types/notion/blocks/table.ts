@@ -1,5 +1,5 @@
-import type { TableRowBlockObject } from "./tableRow.js";
 import type { BlockBlockProps } from "./block.js";
+import type { TableRowBlockObject } from "./tableRow.js";
 import type { TableBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 

@@ -1,5 +1,5 @@
-import type { IdRequest } from "../common.js";
 import type { BlockBlockProps } from "./block.js";
+import type { IdRequest } from "../common.js";
 import type {
   LinkToPageBlockObjectResponse,
   PageObjectResponse,
