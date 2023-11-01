@@ -1,4 +1,5 @@
 import type { CheckboxPropertyItemObject } from "./checkbox.js";
+import type { CreatedTimePropertyItemObject } from "./createdTime.js";
 import type { EmailPropertyItemObject } from "./email.js";
 import type { MultiSelectPropertyItemObject } from "./multiSelect.js";
 import type { NumberPropertyItemObject } from "./number.js";
@@ -12,6 +13,7 @@ import type { ComponentType } from "react";
 
 export type PropertyItemObject =
   | CheckboxPropertyItemObject
+  | CreatedTimePropertyItemObject
   | EmailPropertyItemObject
   | MultiSelectPropertyItemObject
   | NumberPropertyItemObject
