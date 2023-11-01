@@ -16,6 +16,12 @@
   display: inline-flex;
   align-items: center;
 
+  svg {
+    width: 1rem;
+    height: 1rem;
+    fill: inherit;
+  }
+
   &.checked {
     display: inline-flex;
     align-items: center;
