@@ -2,7 +2,7 @@
   "Checkbox": {
     "id": "CkJ%3F",
     "type": "checkbox",
-    "checkbox": false
+    "checkbox": true
   },
   "Created by": {
     "id": "EGOy",
@@ -82,7 +82,7 @@
   "Phone": {
     "id": "Zg%5D%60",
     "type": "phone_number",
-    "phone_number": null
+    "phone_number": "203-7934-8139"
   },
   "Text": {
     "id": "%5Bl_x",
@@ -364,6 +364,23 @@
       {
         "type": "text",
         "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
           "content": "orange",
           "link": null
         },
@@ -376,6 +393,23 @@
           "color": "orange"
         },
         "plain_text": "orange",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
         "href": null
       },
       {
@@ -398,6 +432,23 @@
       {
         "type": "text",
         "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
           "content": "green",
           "link": null
         },
@@ -410,6 +461,23 @@
           "color": "orange"
         },
         "plain_text": "green",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
         "href": null
       },
       {
@@ -432,6 +500,23 @@
       {
         "type": "text",
         "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
           "content": "purple",
           "link": null
         },
@@ -444,6 +529,23 @@
           "color": "purple"
         },
         "plain_text": "purple",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
         "href": null
       },
       {
@@ -466,6 +568,23 @@
       {
         "type": "text",
         "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
           "content": "red",
           "link": null
         },
@@ -483,7 +602,7 @@
       {
         "type": "text",
         "text": {
-          "content": " default_background ",
+          "content": " default_background",
           "link": null
         },
         "annotations": {
@@ -494,7 +613,24 @@
           "code": false,
           "color": "default"
         },
-        "plain_text": " default_background ",
+        "plain_text": " default_background",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
         "href": null
       },
       {
@@ -517,6 +653,23 @@
       {
         "type": "text",
         "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
           "content": "brown_background",
           "link": null
         },
@@ -529,6 +682,23 @@
           "color": "brown_background"
         },
         "plain_text": "brown_background",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
         "href": null
       },
       {
@@ -551,6 +721,23 @@
       {
         "type": "text",
         "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
           "content": "yellow_background",
           "link": null
         },
@@ -563,6 +750,23 @@
           "color": "yellow_background"
         },
         "plain_text": "yellow_background",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
         "href": null
       },
       {
@@ -585,6 +789,23 @@
       {
         "type": "text",
         "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
           "content": "blue_background",
           "link": null
         },
@@ -597,6 +818,23 @@
           "color": "blue_background"
         },
         "plain_text": "blue_background",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
         "href": null
       },
       {
@@ -619,6 +857,23 @@
       {
         "type": "text",
         "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
           "content": "pink_background",
           "link": null
         },
@@ -631,6 +886,23 @@
           "color": "pink_background"
         },
         "plain_text": "pink_background",
+        "href": null
+      },
+      {
+        "type": "text",
+        "text": {
+          "content": " ",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": " ",
         "href": null
       },
       {
@@ -655,7 +927,7 @@
   "URL": {
     "id": "dh%7BX",
     "type": "url",
-    "url": null
+    "url": "https://example.com"
   },
   "Status": {
     "id": "iTg%3D",
@@ -696,7 +968,7 @@
   "Email": {
     "id": "kCCJ",
     "type": "email",
-    "email": null
+    "email": "Fletcher_Satterfield@example.org"
   },
   "Number": {
     "id": "k%60Z%3F",
@@ -743,16 +1015,26 @@
   "Related Child database": {
     "id": "qY%5BD",
     "type": "relation",
-    "relation": [],
+    "relation": [
+      {
+        "id": "cc34d676-8e58-40a0-9244-3b684b6ec105"
+      },
+      {
+        "id": "a0832007-560f-479e-8b64-120517dd0ce0"
+      },
+      {
+        "id": "2287f62c-b150-430f-8f72-27d04d5a6e50"
+      }
+    ],
     "has_more": false
   },
   "Rollup": {
     "id": "qtat",
     "type": "rollup",
     "rollup": {
-      "type": "array",
-      "array": [],
-      "function": "show_original"
+      "type": "number",
+      "number": 3,
+      "function": "count"
     }
   },
   "AI translation": {
@@ -763,7 +1045,7 @@
   "Last edited time": {
     "id": "wRro",
     "type": "last_edited_time",
-    "last_edited_time": "2023-11-01T02:00:00.000Z"
+    "last_edited_time": "2023-11-01T05:16:00.000Z"
   },
   "AI key info": {
     "id": "yx%3Aw",

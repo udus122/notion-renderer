@@ -37,4 +37,4 @@ export const fetchPage = async (pageId: string) => {
 
 import "dotenv/config";
 const res = await fetchPage("696a56fa0c6842709fe6165c403abc76");
-console.log(JSON.stringify(res, null, 2));
+console.log(JSON.stringify(res?.properties, null, 2));

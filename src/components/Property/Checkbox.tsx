@@ -1,6 +1,6 @@
 import { Checkbox } from "../Checkbox.js";
 
-import type { CheckboxPropertyItemComponent } from "src/types/notion/propertyItem/checkbox.js";
+import type { CheckboxPropertyItemComponent } from "../../types/notion/propertyItem/checkbox.js";
 
 export const CheckboxProperty: CheckboxPropertyItemComponent = ({
   propertyItem,
