@@ -1,6 +1,7 @@
 import type { CheckboxPropertyItemObject } from "./checkbox.js";
 import type { EmailPropertyItemObject } from "./email.js";
 import type { NumberPropertyItemObject } from "./number.js";
+import type { PhoneNumberPropertyItemObject } from "./phoneNumber.js";
 import type { RichTextPropertyItemObject } from "./richText.js";
 import type { TitlePropertyItemObject } from "./title.js";
 import type { UrlPropertyItemObject } from "./url.js";
@@ -8,11 +9,12 @@ import type { ComponentType } from "react";
 
 export type PropertyItemObject =
   | CheckboxPropertyItemObject
+  | EmailPropertyItemObject
+  | NumberPropertyItemObject
+  | PhoneNumberPropertyItemObject
   | RichTextPropertyItemObject
   | TitlePropertyItemObject
-  | UrlPropertyItemObject
-  | NumberPropertyItemObject
-  | EmailPropertyItemObject;
+  | UrlPropertyItemObject;
 
 export type PropertyItemProps<
   T extends PropertyItemObject = PropertyItemObject

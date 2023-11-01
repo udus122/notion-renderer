@@ -6,6 +6,7 @@ import { RichTextItemProvider } from "../Mapper/RichText.js";
 import { CheckboxProperty } from "./Checkbox.js";
 import { EmailProperty } from "./Email.js";
 import { NumberProperty } from "./Number.js";
+import { PhoneNumberProperty } from "./PhoneNumber.js";
 import { RichTextProperty } from "./RichText.js";
 import { TitleProperty } from "./Title.js";
 import { UrlProperty } from "./Url.js";
@@ -51,8 +52,9 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
   const mapper = {
     checkbox: CheckboxProperty,
     email: EmailProperty,
-    rich_text: RichTextProperty,
     number: NumberProperty,
+    phone_number: PhoneNumberProperty,
+    rich_text: RichTextProperty,
     title: TitleProperty,
     url: UrlProperty,
   };
@@ -73,6 +75,10 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
       return <PropertyComponent propertyItem={property} />;
     }
     case "number": {
+      const PropertyComponent = mapper[property.type];
+      return <PropertyComponent propertyItem={property} />;
+    }
+    case "phone_number": {
       const PropertyComponent = mapper[property.type];
       return <PropertyComponent propertyItem={property} />;
     }
