@@ -5,6 +5,7 @@ import type { NumberPropertyItemObject } from "./number.js";
 import type { PhoneNumberPropertyItemObject } from "./phoneNumber.js";
 import type { RichTextPropertyItemObject } from "./richText.js";
 import type { SelectPropertyItemObject } from "./select.js";
+import type { StatusPropertyItemObject } from "./status.js";
 import type { TitlePropertyItemObject } from "./title.js";
 import type { UrlPropertyItemObject } from "./url.js";
 import type { ComponentType } from "react";
@@ -17,6 +18,7 @@ export type PropertyItemObject =
   | PhoneNumberPropertyItemObject
   | RichTextPropertyItemObject
   | SelectPropertyItemObject
+  | StatusPropertyItemObject
   | TitlePropertyItemObject
   | UrlPropertyItemObject;
 
