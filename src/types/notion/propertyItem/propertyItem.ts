@@ -1,4 +1,5 @@
 import type { CheckboxPropertyItemObject } from "./checkbox.js";
+import type { EmailPropertyItemObject } from "./email.js";
 import type { NumberPropertyItemObject } from "./number.js";
 import type { RichTextPropertyItemObject } from "./richText.js";
 import type { TitlePropertyItemObject } from "./title.js";
@@ -10,7 +11,8 @@ export type PropertyItemObject =
   | RichTextPropertyItemObject
   | TitlePropertyItemObject
   | UrlPropertyItemObject
-  | NumberPropertyItemObject;
+  | NumberPropertyItemObject
+  | EmailPropertyItemObject;
 
 export type PropertyItemProps<
   T extends PropertyItemObject = PropertyItemObject
