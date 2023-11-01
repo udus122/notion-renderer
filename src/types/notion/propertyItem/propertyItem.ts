@@ -1,4 +1,5 @@
 import type { CheckboxPropertyItemObject } from "./checkbox.js";
+import type { CreatedByPropertyItemObject } from "./createdBy.js";
 import type { CreatedTimePropertyItemObject } from "./createdTime.js";
 import type { DatePropertyItemObject } from "./date.js";
 import type { EmailPropertyItemObject } from "./email.js";
@@ -17,6 +18,7 @@ import type { ComponentType } from "react";
 
 export type PropertyItemObject =
   | CheckboxPropertyItemObject
+  | CreatedByPropertyItemObject
   | CreatedTimePropertyItemObject
   | DatePropertyItemObject
   | EmailPropertyItemObject

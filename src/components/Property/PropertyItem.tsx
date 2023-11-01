@@ -4,6 +4,7 @@ import { PropertyItemProvider } from "../Mapper/Property.js";
 import { RichTextItemProvider } from "../Mapper/RichText.js";
 
 import { CheckboxProperty } from "./Checkbox.js";
+import { CreatedByProperty } from "./CreatedBy.js";
 import { CreatedTimeProperty } from "./CreatedTime.js";
 import { DateProperty } from "./Date.js";
 import { EmailProperty } from "./Email.js";
@@ -59,6 +60,7 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
 
   const mapper = {
     checkbox: CheckboxProperty,
+    created_by: CreatedByProperty,
     created_time: CreatedTimeProperty,
     date: DateProperty,
     email: EmailProperty,
@@ -83,6 +85,10 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
       return <PropertyComponent propertyItem={property} />;
     }
     case "created_time": {
+      const PropertyComponent = mapper[property.type];
+      return <PropertyComponent propertyItem={property} />;
+    }
+    case "created_by": {
       const PropertyComponent = mapper[property.type];
       return <PropertyComponent propertyItem={property} />;
     }
