@@ -1,6 +1,7 @@
 @layer notion-theme, notion-components;
 
 @import url("../../node_modules/modern-normalize/modern-normalize.css");
+@import url("./common/file.css") layer(notion-components);
 @import url("./colors.css") layer(notion-components);
 @import url("./icon.css") layer(notion-components);
 @import url("./caption.css") layer(notion-components);
@@ -13,7 +14,6 @@
 @import url("./blocks/code.css") layer(notion-components);
 @import url("./blocks/column-list.css") layer(notion-components);
 @import url("./blocks/embed.css") layer(notion-components);
-@import url("./blocks/file.css") layer(notion-components);
 @import url("./blocks/image.css") layer(notion-components);
 @import url("./blocks/link-preview.css") layer(notion-components);
 @import url("./blocks/paragraph.css") layer(notion-components);

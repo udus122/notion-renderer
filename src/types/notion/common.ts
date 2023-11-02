@@ -26,3 +26,22 @@ export type TextRequest = string;
 export type CoverObject =
   | PageObjectResponse["cover"]
   | DatabaseObjectResponse["cover"];
+
+export type NotionHostedFile = {
+  type?: "file";
+  file: {
+    url: string;
+    expiry_time: string;
+  };
+  name?: string;
+};
+
+export type ExternalFile = {
+  type?: "external";
+  external: {
+    url: TextRequest;
+  };
+  name?: string;
+};
+
+export type FileObject = ExternalFile | NotionHostedFile;
