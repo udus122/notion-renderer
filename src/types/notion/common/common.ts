@@ -1,7 +1,7 @@
-import type { Heading1BlockObject } from "./blocks/heading1.js";
-import type { Heading2BlockObject } from "./blocks/heading2.js";
-import type { Heading3BlockObject } from "./blocks/heading3.js";
-import type { ToggleBlockObject } from "./blocks/toggle.js";
+import type { Heading1BlockObject } from "../blocks/heading1.js";
+import type { Heading2BlockObject } from "../blocks/heading2.js";
+import type { Heading3BlockObject } from "../blocks/heading3.js";
+import type { ToggleBlockObject } from "../blocks/toggle.js";
 import type {
   DatabaseObjectResponse,
   ListBlockChildrenResponse,

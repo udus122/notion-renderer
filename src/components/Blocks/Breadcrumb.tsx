@@ -1,7 +1,7 @@
 import { Fragment } from "react";
 
 import { extractTitle } from "../../utils.js";
-import { Icon } from "../Icon.js";
+import { Icon } from "../Common/Icon.js";
 import { useMapper } from "../Mapper/hooks.js";
 import { RichText } from "../RichText/RichText.js";
 

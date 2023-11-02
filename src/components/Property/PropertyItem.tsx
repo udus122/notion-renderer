@@ -22,7 +22,7 @@ import { StatusProperty } from "./Status.js";
 import { TitleProperty } from "./Title.js";
 import { UrlProperty } from "./Url.js";
 
-import type { LinkProps } from "../../types/notion/link.js";
+import type { LinkProps } from "../../types/notion/common/link.js";
 import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
 import type { PropertyItemMapper } from "../../types/notion/mapper/propertyItem.js";
 import type { RichTextItemMapper } from "../../types/notion/mapper/richTextItem.js";

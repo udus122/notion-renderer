@@ -44,7 +44,7 @@ import { convertVideoResponseToBlock } from "./video.js";
 import type { BlockBlockObject } from "../../../types/notion/blocks/block.js";
 import type { BulletedListBlockObject } from "../../../types/notion/blocks/bulletedList.js";
 import type { NumberedListBlockObject } from "../../../types/notion/blocks/numberedList.js";
-import type { ListBlockChildrenResponseResults } from "../../../types/notion/common.js";
+import type { ListBlockChildrenResponseResults } from "../../../types/notion/common/common.js";
 import type {
   BlockObjectResponse,
   GetBlockParameters,

@@ -1,4 +1,4 @@
-import { Checkbox } from "../Checkbox.js";
+import { Checkbox } from "../Common/Checkbox.js";
 
 import type { CheckboxPropertyItemComponent } from "../../types/notion/propertyItem/checkbox.js";
 

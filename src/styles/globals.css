@@ -3,7 +3,8 @@
 @import url("../../node_modules/modern-normalize/modern-normalize.css");
 @import url("./common/file.css") layer(notion-components);
 @import url("./colors.css") layer(notion-components);
-@import url("./icon.css") layer(notion-components);
+@import url("./common/icon.css") layer(notion-components);
+@import url("./common/link.css") layer(notion-components);
 @import url("./caption.css") layer(notion-components);
 @import url("./blocks/audio.css") layer(notion-components);
 @import url("./blocks/bookmark.css") layer(notion-components);

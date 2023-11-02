@@ -1,4 +1,4 @@
-import { DateComponent } from "../Date.js";
+import { DateComponent } from "../Common/Date.js";
 
 import type { DatePropertyItemComponent } from "../../types/notion/propertyItem/date.js";
 

@@ -1,4 +1,4 @@
-import type { CoverObject } from "../../types/notion/common.js";
+import type { CoverObject } from "../../types/notion/common/common.js";
 
 type Props = {
   cover: CoverObject;

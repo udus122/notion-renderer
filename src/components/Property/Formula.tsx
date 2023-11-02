@@ -1,5 +1,5 @@
-import { Checkbox } from "../Checkbox.js";
-import { DateComponent } from "../Date.js";
+import { Checkbox } from "../Common/Checkbox.js";
+import { DateComponent } from "../Common/Date.js";
 
 import type { FormulaPropertyItemComponent } from "../../types/notion/propertyItem/formula.js";
 

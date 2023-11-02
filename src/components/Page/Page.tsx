@@ -1,5 +1,5 @@
 import { extractTitle } from "../../utils.js";
-import { Icon } from "../Icon.js";
+import { Icon } from "../Common/Icon.js";
 
 import { Cover } from "./Cover.js";
 import { Title } from "./Title.js";

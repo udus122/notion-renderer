@@ -1,6 +1,6 @@
 import { isFullUser } from "@notionhq/client";
 
-import { DateComponent } from "../Date.js";
+import { DateComponent } from "../Common/Date.js";
 import { useMapper } from "../Mapper/hooks.js";
 
 import { Annotation } from "./Annotation/Annotation.js";

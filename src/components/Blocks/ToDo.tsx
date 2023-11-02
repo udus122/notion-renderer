@@ -1,4 +1,4 @@
-import { Checkbox } from "../Checkbox.js";
+import { Checkbox } from "../Common/Checkbox.js";
 import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";

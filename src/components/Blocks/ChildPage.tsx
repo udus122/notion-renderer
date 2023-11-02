@@ -1,4 +1,4 @@
-import { Icon } from "../Icon.js";
+import { Icon } from "../Common/Icon.js";
 import { useMapper } from "../Mapper/hooks.js";
 
 import type { ChildPageBlock } from "../../types/notion/blocks/childPage.js";

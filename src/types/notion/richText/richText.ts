@@ -1,5 +1,5 @@
 import type { RichTextItem } from "./richTextItem.js";
-import type { LinkComponent } from "../link.js";
+import type { LinkComponent } from "../common/link.js";
 import type { AnnotationItemMapper } from "../mapper/annotationItem.js";
 import type { RichTextItemMapper } from "../mapper/richTextItem.js";
 

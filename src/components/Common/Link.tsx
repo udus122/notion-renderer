@@ -1,4 +1,4 @@
-import type { LinkComponent } from "../types/notion/link.js";
+import type { LinkComponent } from "../../types/notion/common/link.js";
 
 export const Link: LinkComponent = ({
   href,

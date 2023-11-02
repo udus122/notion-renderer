@@ -1,4 +1,4 @@
-import { type LinkProps } from "../../types/notion/link.js";
+import { type LinkProps } from "../../types/notion/common/link.js";
 
 import { LinkContext } from "./hooks.js";
 

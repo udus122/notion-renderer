@@ -1,6 +1,6 @@
 import { useMapper } from "../Mapper/hooks.js";
 
-import type { FileObject } from "../../types/notion/common.js";
+import type { FileObject } from "../../types/notion/common/common.js";
 import type { FC } from "react";
 
 type Props = {
