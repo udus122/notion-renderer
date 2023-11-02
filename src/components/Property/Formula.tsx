@@ -5,6 +5,7 @@ import type { FormulaPropertyItemComponent } from "../../types/notion/propertyIt
 
 export const FormulaProperty: FormulaPropertyItemComponent = ({
   propertyItem,
+  format,
 }) => {
   const { formula } = propertyItem;
   return (
@@ -16,7 +17,7 @@ export const FormulaProperty: FormulaPropertyItemComponent = ({
       ) : formula.type === "boolean" ? (
         <Checkbox checked={formula.boolean ?? false} />
       ) : formula.type === "date" ? (
-        <DateComponent date={formula.date} />
+        <DateComponent date={formula.date} format={format} />
       ) : null}
     </div>
   );

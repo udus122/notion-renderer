@@ -5,7 +5,9 @@ import type { ComponentType } from "react";
 export type FormulaPropertyItemObject = FormulaPropertyItemObjectResponse;
 
 export type FormulaPropertyItemProps =
-  PropertyItemProps<FormulaPropertyItemObject>;
+  PropertyItemProps<FormulaPropertyItemObject> & {
+    format?: string;
+  };
 
 export type FormulaPropertyItemComponent =
   ComponentType<FormulaPropertyItemProps>;

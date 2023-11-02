@@ -6,7 +6,9 @@ export type LastEditedTimePropertyItemObject =
   LastEditedTimePropertyItemObjectResponse;
 
 export type LastEditedTimePropertyItemProps =
-  PropertyItemProps<LastEditedTimePropertyItemObject>;
+  PropertyItemProps<LastEditedTimePropertyItemObject> & {
+    format?: string;
+  };
 
 export type LastEditedTimePropertyItemComponent =
   ComponentType<LastEditedTimePropertyItemProps>;

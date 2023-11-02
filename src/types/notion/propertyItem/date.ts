@@ -4,6 +4,9 @@ import type { ComponentType } from "react";
 
 export type DatePropertyItemObject = DatePropertyItemObjectResponse;
 
-export type DatePropertyItemProps = PropertyItemProps<DatePropertyItemObject>;
+export type DatePropertyItemProps =
+  PropertyItemProps<DatePropertyItemObject> & {
+    format?: string;
+  };
 
 export type DatePropertyItemComponent = ComponentType<DatePropertyItemProps>;

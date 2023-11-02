@@ -6,7 +6,9 @@ export type CreatedTimePropertyItemObject =
   CreatedTimePropertyItemObjectResponse;
 
 export type CreatedTimePropertyItemProps =
-  PropertyItemProps<CreatedTimePropertyItemObject>;
+  PropertyItemProps<CreatedTimePropertyItemObject> & {
+    format?: string;
+  };
 
 export type CreatedTimePropertyItemComponent =
   ComponentType<CreatedTimePropertyItemProps>;
