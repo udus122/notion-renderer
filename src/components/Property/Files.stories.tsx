@@ -1,0 +1,21 @@
+import { FilesProperty } from "./Files.js";
+import FilesPropertyObject from "./Files.json";
+
+import type { FilesPropertyItemObject } from "../../types/notion/propertyItem/files.js";
+import type { Meta, StoryObj } from "@storybook/react";
+
+const meta: Meta<typeof FilesProperty> = {
+  title: "Property/Files",
+  component: FilesProperty,
+  tags: ["autodocs"],
+};
+
+export default meta;
+
+type Story = StoryObj<typeof FilesProperty>;
+
+export const Default: Story = {
+  args: {
+    propertyItem: FilesPropertyObject as unknown as FilesPropertyItemObject,
+  },
+};

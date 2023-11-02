@@ -8,6 +8,7 @@ import { CreatedByProperty } from "./CreatedBy.js";
 import { CreatedTimeProperty } from "./CreatedTime.js";
 import { DateProperty } from "./Date.js";
 import { EmailProperty } from "./Email.js";
+import { FilesProperty } from "./Files.js";
 import { FormulaProperty } from "./Formula.js";
 import { LastEditedByProperty } from "./LastEditedBy.js";
 import { LastEditedTimeProperty } from "./LastEditedTime.js";
@@ -65,6 +66,7 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
     created_time: CreatedTimeProperty,
     date: DateProperty,
     email: EmailProperty,
+    files: FilesProperty,
     formula: FormulaProperty,
     last_edited_by: LastEditedByProperty,
     last_edited_time: LastEditedTimeProperty,
@@ -99,6 +101,10 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
       return <PropertyComponent propertyItem={property} />;
     }
     case "email": {
+      const PropertyComponent = mapper[property.type];
+      return <PropertyComponent propertyItem={property} />;
+    }
+    case "files": {
       const PropertyComponent = mapper[property.type];
       return <PropertyComponent propertyItem={property} />;
     }
