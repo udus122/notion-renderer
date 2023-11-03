@@ -62,10 +62,11 @@ export const retrieveBlock = async (
     GetBlockResponse
   >(notion.blocks.retrieve, args);
 
-  if (!error) {
-    return payload;
+  if (error) {
+    return;
   }
-  return;
+
+  return payload;
 };
 
 export const listBlockChildren = async (
@@ -76,18 +77,19 @@ export const listBlockChildren = async (
     ListBlockChildrenResponse
   >(notion.blocks.children.list, args);
 
-  if (!error) {
-    if (payload.next_cursor) {
-      const nextResults = await listBlockChildren({
-        ...args,
-        start_cursor: payload.next_cursor,
-      });
-      payload.results = [...payload.results, ...nextResults];
-    }
-
-    return payload.results;
+  if (error) {
+    return [];
   }
-  return [];
+
+  if (payload.next_cursor) {
+    const nextResults = await listBlockChildren({
+      ...args,
+      start_cursor: payload.next_cursor,
+    });
+    payload.results = [...payload.results, ...nextResults];
+  }
+
+  return payload.results;
 };
 
 export const fetchBlock = async (
