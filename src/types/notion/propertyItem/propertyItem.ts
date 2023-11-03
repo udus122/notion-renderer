@@ -11,7 +11,9 @@ import type { MultiSelectPropertyItemObject } from "./multiSelect.js";
 import type { NumberPropertyItemObject } from "./number.js";
 import type { PeoplePropertyItemObject } from "./people.js";
 import type { PhoneNumberPropertyItemObject } from "./phoneNumber.js";
+import type { RelationPropertyItemObject } from "./relation.js";
 import type { RichTextPropertyItemObject } from "./richText.js";
+import type { RollupPropertyItemObject } from "./rollup.js";
 import type { SelectPropertyItemObject } from "./select.js";
 import type { StatusPropertyItemObject } from "./status.js";
 import type { TitlePropertyItemObject } from "./title.js";
@@ -32,7 +34,9 @@ export type PropertyItemObject =
   | NumberPropertyItemObject
   | PeoplePropertyItemObject
   | PhoneNumberPropertyItemObject
+  | RelationPropertyItemObject
   | RichTextPropertyItemObject
+  | RollupPropertyItemObject
   | SelectPropertyItemObject
   | StatusPropertyItemObject
   | TitlePropertyItemObject
