@@ -39,6 +39,6 @@ export * from "./richText/richText.js";
 export * from "./richText/richTextItem.js";
 export * from "./richText/text.js";
 export * from "./databases.js";
-export * from "./pages.js";
+export * from "./pages/pages.js";
 export * from "./parent.js";
 export * from "./comments.js";

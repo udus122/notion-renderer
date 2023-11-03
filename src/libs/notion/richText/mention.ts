@@ -1,6 +1,6 @@
 import { fetchSiteMeta, generateUUID } from "../../utils.js";
 import { fetchDatabase } from "../databases.js";
-import { fetchPage } from "../pages.js";
+import { fetchPage } from "../pages/pages.js";
 
 import type {
   MentionRichTextItemObject,

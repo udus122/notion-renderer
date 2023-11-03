@@ -1,4 +1,4 @@
-import { fetchPage } from "../pages.js";
+import { fetchPage } from "../pages/pages.js";
 
 import type { ChildPageBlockObject } from "../../../types/notion/blocks/childPage.js";
 import type { ChildPageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";

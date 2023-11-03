@@ -1,8 +1,7 @@
 import { isFullPage } from "@notionhq/client";
 
-import { callAPIWithBackOff } from "../utils.js";
-
-import { notion } from "./auth.js";
+import { callAPIWithBackOff } from "../../utils.js";
+import { notion } from "../auth.js";
 
 import type {
   GetPageParameters,
@@ -37,4 +36,3 @@ export const fetchPage = async (pageId: string) => {
 
 import "dotenv/config";
 const res = await fetchPage("696a56fa0c6842709fe6165c403abc76");
-console.log(JSON.stringify(res?.properties, null, 2));
