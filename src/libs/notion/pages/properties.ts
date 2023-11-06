@@ -34,8 +34,10 @@ export const retrievePageProperty = async (
       const nextResults = (await retrievePageProperty({
         ...args,
         start_cursor: payload.next_cursor,
-      })) as PropertyItemPropertyItemListResponse;
-      payload.results = [...payload.results, ...nextResults.results];
+      })) as PropertyItemPropertyItemListResponse | undefined;
+      if (nextResults) {
+        payload.results = [...payload.results, ...nextResults.results];
+      }
     }
   }
 
@@ -94,6 +96,21 @@ export const fetchPageProperty = async (pageId: string, propertyId: string) => {
           relation: (results as RelationPropertyItemObjectResponse[]).map(
             (result) => result.relation
           ),
+          // relation: await (
+          //   results as RelationPropertyItemObjectResponse[]
+          // ).reduce<Promise<RelationPropertyItemObjectRelationItem>>(
+          //   async (prev, cur) => {
+          //     const page = await fetchPage(cur.relation.id);
+          //     return [
+          //       ...(await prev),
+          //       {
+          //         ...cur.relation,
+          //         page,
+          //       },
+          //     ];
+          //   },
+          //   Promise.resolve([])
+          // ),
         } satisfies RelationPropertyItemObject;
       }
       case "rollup": {
