@@ -16,6 +16,7 @@ import { MultiSelectProperty } from "./MultiSelect.js";
 import { NumberProperty } from "./Number.js";
 import { PeopleProperty } from "./People.js";
 import { PhoneNumberProperty } from "./PhoneNumber.js";
+import { RelationProperty } from "./Relation.js";
 import { RichTextProperty } from "./RichText.js";
 import { SelectProperty } from "./Select.js";
 import { StatusProperty } from "./Status.js";
@@ -74,6 +75,7 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
     number: NumberProperty,
     people: PeopleProperty,
     phone_number: PhoneNumberProperty,
+    relation: RelationProperty,
     rich_text: RichTextProperty,
     select: SelectProperty,
     status: StatusProperty,
@@ -117,6 +119,10 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
       return <PropertyComponent propertyItem={property} />;
     }
     case "last_edited_time": {
+      const PropertyComponent = mapper[property.type];
+      return <PropertyComponent propertyItem={property} />;
+    }
+    case "relation": {
       const PropertyComponent = mapper[property.type];
       return <PropertyComponent propertyItem={property} />;
     }
