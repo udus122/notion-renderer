@@ -322,3 +322,7 @@ export const convertResponseToBlock = async (
     }
   }
 };
+import "dotenv/config";
+
+const res = await fetchBlockList("7ed3a6eebb5e4cdfa94433684d7c56bf");
+console.log(JSON.stringify(res, null, 2));

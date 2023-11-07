@@ -74,7 +74,6 @@ export type BlockBlockObject =
 
 export type BlockBlockProps<T extends BlockBlockObject = BlockBlockObject> = {
   block: T;
-  blocks: Array<BlockBlockObject>;
 };
 
 export type BlockBlock = ComponentType<BlockBlockProps>;

@@ -3,7 +3,7 @@ import { BlockList } from "./BlockList.js";
 
 import type { SyncedBlockBlock } from "../../types/notion/blocks/syncedBlock.js";
 
-export const SyncedBlock: SyncedBlockBlock = ({ block, blocks }) => {
+export const SyncedBlock: SyncedBlockBlock = ({ block }) => {
   return (
     <div className="notion-block notion-synced-block">
       {block.synced_block.synced_from === null
@@ -14,10 +14,7 @@ export const SyncedBlock: SyncedBlockBlock = ({ block, blocks }) => {
           )
         : block.synced_block.synced_from.block && (
             <div className={"notion-synced-block-duplicated"}>
-              <Block
-                block={block.synced_block.synced_from.block}
-                blocks={blocks}
-              />
+              <Block block={block.synced_block.synced_from.block} />
             </div>
           )}
     </div>

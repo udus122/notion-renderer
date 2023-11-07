@@ -1,13 +1,14 @@
-import { useMapper } from "../hooks.js";
-import { RichText } from "../RichText/RichText.js";
+import { useBlocks, useMapper } from "../hooks.js";
 
 import type { Heading1BlockObject } from "../../types/notion/blocks/heading1.js";
 import type { Heading2BlockObject } from "../../types/notion/blocks/heading2.js";
 import type { Heading3BlockObject } from "../../types/notion/blocks/heading3.js";
 import type { TableOfContentsBlock } from "../../types/notion/blocks/tableOfContents.js";
 
-export const TableOfContents: TableOfContentsBlock = ({ block, blocks }) => {
+export const TableOfContents: TableOfContentsBlock = ({ block }) => {
+  const blocks = useBlocks();
   const { Link } = useMapper();
+
   const headings = blocks?.filter(
     (
       block
@@ -32,7 +33,7 @@ export const TableOfContents: TableOfContentsBlock = ({ block, blocks }) => {
               <div className={`notion-table-of-contents-item-${heading.type}`}>
                 <Link href={`#${heading.id}`}>
                   {/* @ts-expect-error: because heading objects always have a 'rich_text' property  */}
-                  <RichText richText={heading[heading.type].rich_text} />
+                  {heading[heading.type].rich_text.map((t) => t.plain_text)}
                 </Link>
               </div>
             </div>
