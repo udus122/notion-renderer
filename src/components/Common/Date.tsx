@@ -1,9 +1,9 @@
 import { zonedTimeToUtc, format as formatDate } from "date-fns-tz";
 
-import type { DatePropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { DateResponse } from "../../types/notion/common/common.js";
 
 type Props = {
-  date: DatePropertyItemObjectResponse["date"];
+  date: DateResponse;
   format?: string;
 };
 

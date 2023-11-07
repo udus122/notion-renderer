@@ -4,6 +4,7 @@ import type { Heading3BlockObject } from "../blocks/heading3.js";
 import type { ToggleBlockObject } from "../blocks/toggle.js";
 import type {
   DatabaseObjectResponse,
+  DatePropertyItemObjectResponse,
   ListBlockChildrenResponse,
   PageObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
@@ -45,3 +46,5 @@ export type ExternalFile = {
 };
 
 export type FileObject = ExternalFile | NotionHostedFile;
+
+export type DateResponse = DatePropertyItemObjectResponse["date"];
