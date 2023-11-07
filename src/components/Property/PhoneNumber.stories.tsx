@@ -5,7 +5,7 @@ import type { PhoneNumberPropertyItemObject } from "../../types/notion/propertyI
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof PhoneNumberProperty> = {
-  title: "Property/PhoneNumber",
+  title: "Properties/PhoneNumber",
   component: PhoneNumberProperty,
   tags: ["autodocs"],
 };

@@ -5,7 +5,7 @@ import type { MultiSelectPropertyItemObject } from "../../types/notion/propertyI
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof MultiSelectProperty> = {
-  title: "Property/MultiSelect",
+  title: "Properties/MultiSelect",
   component: MultiSelectProperty,
   tags: ["autodocs"],
 };

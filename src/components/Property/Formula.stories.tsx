@@ -8,7 +8,7 @@ import type { FormulaPropertyItemObject } from "../../types/notion/propertyItem/
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof FormulaProperty> = {
-  title: "Property/Formula",
+  title: "Properties/Formula",
   component: FormulaProperty,
   tags: ["autodocs"],
 };

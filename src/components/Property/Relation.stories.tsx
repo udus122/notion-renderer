@@ -5,7 +5,7 @@ import type { RelationPropertyItemObject } from "../../types/notion/propertyItem
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof RelationProperty> = {
-  title: "Property/Relation",
+  title: "Properties/Relation",
   component: RelationProperty,
   tags: ["autodocs"],
 };

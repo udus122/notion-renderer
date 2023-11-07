@@ -6,7 +6,7 @@ import type { DatePropertyItemObject } from "../../types/notion/propertyItem/dat
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof DateProperty> = {
-  title: "Property/Date",
+  title: "Properties/Date",
   component: DateProperty,
   tags: ["autodocs"],
 };

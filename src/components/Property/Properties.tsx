@@ -8,7 +8,7 @@ type Props = {
   hidePropertyName?: boolean;
 };
 
-export const Property: FC<Props> = ({
+export const Properties: FC<Props> = ({
   properties,
   hidePropertyName = false,
 }) => {

@@ -5,7 +5,7 @@ import type { RichTextPropertyItemObject } from "../../types/notion/propertyItem
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof RichTextProperty> = {
-  title: "Property/RichText",
+  title: "Properties/RichText",
   component: RichTextProperty,
   tags: ["autodocs"],
 };

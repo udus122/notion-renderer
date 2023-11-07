@@ -6,7 +6,7 @@ import type { RollupPropertyItemObject } from "../../types/notion/propertyItem/r
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof RollupProperty> = {
-  title: "Property/Rollup",
+  title: "Properties/Rollup",
   component: RollupProperty,
   tags: ["autodocs"],
 };

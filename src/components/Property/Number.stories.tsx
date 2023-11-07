@@ -5,7 +5,7 @@ import type { NumberPropertyItemObject } from "../../types/notion/propertyItem/n
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof NumberProperty> = {
-  title: "Property/Number",
+  title: "Properties/Number",
   component: NumberProperty,
   tags: ["autodocs"],
 };

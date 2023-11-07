@@ -5,7 +5,7 @@ import type { UrlPropertyItemObject } from "../../types/notion/propertyItem/url.
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof UrlProperty> = {
-  title: "Property/Url",
+  title: "Properties/Url",
   component: UrlProperty,
   tags: ["autodocs"],
 };

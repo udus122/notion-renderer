@@ -5,7 +5,7 @@ import type { CreatedTimePropertyItemObject } from "../../types/notion/propertyI
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof CreatedTimeProperty> = {
-  title: "Property/CreatedTime",
+  title: "Properties/CreatedTime",
   component: CreatedTimeProperty,
   tags: ["autodocs"],
 };

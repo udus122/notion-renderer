@@ -5,7 +5,7 @@ import type { LastEditedTimePropertyItemObject } from "../../types/notion/proper
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof LastEditedTimeProperty> = {
-  title: "Property/LastEditedTime",
+  title: "Properties/LastEditedTime",
   component: LastEditedTimeProperty,
   tags: ["autodocs"],
 };

@@ -5,7 +5,7 @@ import type { EmailPropertyItemObject } from "../../types/notion/propertyItem/em
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof EmailProperty> = {
-  title: "Property/Email",
+  title: "Properties/Email",
   component: EmailProperty,
   tags: ["autodocs"],
 };

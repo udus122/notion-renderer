@@ -1,18 +1,18 @@
-import { Property } from "./Property.js";
-import PropertiesObject from "./Property.json";
+import { Properties } from "./Properties.js";
+import PropertiesObject from "./Properties.json";
 
 import type { PropertyItemObject } from "../../types/notion/propertyItem/propertyItem.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof Property> = {
-  title: "Property",
-  component: Property,
+const meta: Meta<typeof Properties> = {
+  title: "Properties",
+  component: Properties,
   tags: ["autodocs"],
 };
 
 export default meta;
 
-type Story = StoryObj<typeof Property>;
+type Story = StoryObj<typeof Properties>;
 
 export const Default: Story = {
   args: {

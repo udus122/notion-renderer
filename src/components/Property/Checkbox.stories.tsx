@@ -6,7 +6,7 @@ import type { CheckboxPropertyItemObject } from "../../types/notion/propertyItem
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof CheckboxProperty> = {
-  title: "Property/Checkbox",
+  title: "Properties/Checkbox",
   component: CheckboxProperty,
   tags: ["autodocs"],
 };
