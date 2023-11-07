@@ -1,0 +1,5 @@
+.notion-property {
+  display: grid;
+  grid-template-columns: minmax(30%, max-content) auto;
+  padding-block: 0.25rem;
+}

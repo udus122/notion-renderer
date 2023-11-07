@@ -29,3 +29,20 @@ export const Default: Story = {
     ),
   ],
 };
+
+export const hidePropertyName: Story = {
+  args: {
+    properties: PropertiesObject as unknown as Record<
+      string,
+      PropertyItemObject
+    >,
+    hidePropertyName: true,
+  },
+  decorators: [
+    (Story) => (
+      <div className="notion-root notion-light">
+        <Story />
+      </div>
+    ),
+  ],
+};
