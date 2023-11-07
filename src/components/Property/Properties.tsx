@@ -1,4 +1,4 @@
-import { PropertyItem } from "./PropertyItem.js";
+import { Property } from "./Property.js";
 
 import type { PropertyItemObject } from "../../types/notion/propertyItem/propertyItem.js";
 import type { FC } from "react";
@@ -16,12 +16,11 @@ export const Properties: FC<Props> = ({
     <div className="notion-properties">
       {Object.entries(properties).map(([name, item]) => {
         return (
-          <div className="notion-property">
-            {!hidePropertyName && (
-              <div className="notion-property-name">{name}</div>
-            )}
-            <PropertyItem key={item.id} property={item} />
-          </div>
+          <Property
+            propertyName={name}
+            propertyItem={item}
+            hidePropertyName={hidePropertyName}
+          />
         );
       })}
     </div>
