@@ -6,11 +6,11 @@ import type {
 } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 
-export type RelationPropertyItemObjectRelationItem = Array<
-  RelationPropertyItemObjectResponse["relation"] & {
-    page?: PageObjectResponse;
-  }
->;
+export type RelationItem = RelationPropertyItemObjectResponse["relation"] & {
+  page?: PageObjectResponse;
+};
+
+export type RelationPropertyItemObjectRelationItem = Array<RelationItem>;
 
 export type RelationPropertyItemObject = PartialBy<
   Overwrite<
