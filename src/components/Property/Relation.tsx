@@ -1,7 +1,7 @@
 import { RelationItem } from "../Common/RelationItem.js";
 import { useMapper } from "../Mapper/hooks.js";
 
-import type { RelationPropertyItemComponent } from "../../types/notion/property/relation.js";
+import type { RelationPropertyItemComponent } from "../../types/notion/pages/properties/relation.js";
 
 export const RelationProperty: RelationPropertyItemComponent = ({
   propertyItem,

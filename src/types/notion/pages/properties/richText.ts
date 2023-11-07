@@ -1,6 +1,6 @@
 import type { PropertyItemProps } from "./propertyItem.js";
-import type { Overwrite, PartialBy } from "../../utils.js";
-import type { RichText } from "../richText/richText.js";
+import type { Overwrite, PartialBy } from "../../../utils.js";
+import type { RichText } from "../../richText/richText.js";
 import type { RichTextPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 

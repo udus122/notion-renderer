@@ -4,14 +4,14 @@ import { convertResponseToRichText } from "../richText/richText.js";
 
 import { fetchPage } from "./pages.js";
 
-import type { PeoplePropertyItemObject } from "../../../types/notion/property/people.js";
+import type { PeoplePropertyItemObject } from "../../../types/notion/pages/properties/people.js";
 import type {
   RelationPropertyItemObject,
   RelationPropertyItemObjectRelationItem,
-} from "../../../types/notion/property/relation.js";
-import type { RichTextPropertyItemObject } from "../../../types/notion/property/richText.js";
-import type { RollupPropertyItemObject } from "../../../types/notion/property/rollup.js";
-import type { TitlePropertyItemObject } from "../../../types/notion/property/title.js";
+} from "../../../types/notion/pages/properties/relation.js";
+import type { RichTextPropertyItemObject } from "../../../types/notion/pages/properties/richText.js";
+import type { RollupPropertyItemObject } from "../../../types/notion/pages/properties/rollup.js";
+import type { TitlePropertyItemObject } from "../../../types/notion/pages/properties/title.js";
 import type {
   GetPagePropertyParameters,
   GetPagePropertyResponse,

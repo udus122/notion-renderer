@@ -4,7 +4,7 @@ import { FormulaProperty } from "./Formula.js";
 import NumberFormulaPropertyObject from "./Formula.Number.json";
 import StringFormulaPropertyObject from "./Formula.String.json";
 
-import type { FormulaPropertyItemObject } from "../../types/notion/property/formula.js";
+import type { FormulaPropertyItemObject } from "../../types/notion/pages/properties/formula.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof FormulaProperty> = {

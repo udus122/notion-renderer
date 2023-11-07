@@ -1,6 +1,6 @@
 import { File } from "../Common/File.js";
 
-import type { FilesPropertyItemComponent } from "../../types/notion/property/files.js";
+import type { FilesPropertyItemComponent } from "../../types/notion/pages/properties/files.js";
 
 export const FilesProperty: FilesPropertyItemComponent = ({ propertyItem }) => {
   return (

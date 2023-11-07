@@ -28,7 +28,7 @@ import type { LinkProps } from "../../types/notion/common/link.js";
 import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
 import type { PropertyItemMapper } from "../../types/notion/mapper/propertyItem.js";
 import type { RichTextItemMapper } from "../../types/notion/mapper/richTextItem.js";
-import type { PropertyItemObject } from "../../types/notion/property/propertyItem.js";
+import type { PropertyItemObject } from "../../types/notion/pages/properties/propertyItem.js";
 import type { FC } from "react";
 
 type Props = {

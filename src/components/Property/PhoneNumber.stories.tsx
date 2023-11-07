@@ -1,7 +1,7 @@
 import { PhoneNumberProperty } from "./PhoneNumber.js";
 import PhoneNumberPropertyObject from "./PhoneNumber.json";
 
-import type { PhoneNumberPropertyItemObject } from "../../types/notion/property/phoneNumber.js";
+import type { PhoneNumberPropertyItemObject } from "../../types/notion/pages/properties/phoneNumber.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof PhoneNumberProperty> = {

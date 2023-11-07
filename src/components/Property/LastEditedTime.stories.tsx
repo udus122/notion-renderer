@@ -1,7 +1,7 @@
 import { LastEditedTimeProperty } from "./LastEditedTime.js";
 import LastEditedTimePropertyObject from "./LastEditedTime.json";
 
-import type { LastEditedTimePropertyItemObject } from "../../types/notion/property/lastEditedTime.js";
+import type { LastEditedTimePropertyItemObject } from "../../types/notion/pages/properties/lastEditedTime.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof LastEditedTimeProperty> = {

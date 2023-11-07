@@ -1,7 +1,7 @@
 import { UrlProperty } from "./Url.js";
 import UrlPropertyObject from "./Url.json";
 
-import type { UrlPropertyItemObject } from "../../types/notion/property/url.js";
+import type { UrlPropertyItemObject } from "../../types/notion/pages/properties/url.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof UrlProperty> = {

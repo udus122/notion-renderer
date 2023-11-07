@@ -1,6 +1,6 @@
 import { format as formatDate } from "date-fns";
 
-import type { CreatedTimePropertyItemComponent } from "../../types/notion/property/createdTime.js";
+import type { CreatedTimePropertyItemComponent } from "../../types/notion/pages/properties/createdTime.js";
 
 export const CreatedTimeProperty: CreatedTimePropertyItemComponent = ({
   propertyItem,

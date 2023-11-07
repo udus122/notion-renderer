@@ -1,7 +1,7 @@
 import { Properties } from "./Properties.js";
 import PropertiesObject from "./Properties.json";
 
-import type { PropertyItemObject } from "../../types/notion/property/propertyItem.js";
+import type { PropertyItemObject } from "../../types/notion/pages/properties/propertyItem.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Properties> = {
