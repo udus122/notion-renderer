@@ -1,12 +1,12 @@
 import { createContext, useContext, type ComponentType } from "react";
 
-import { Link } from "../Common/Link.js";
+import { Link } from "./Common/Link.js";
 
-import type { LinkProps } from "../../types/notion/common/link.js";
-import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
-import type { BlockMapper } from "../../types/notion/mapper/block.js";
-import type { PropertyItemMapper } from "../../types/notion/mapper/propertyItem.js";
-import type { RichTextItemMapper } from "../../types/notion/mapper/richTextItem.js";
+import type { LinkProps } from "../types/notion/common/link.js";
+import type { AnnotationItemMapper } from "../types/notion/mapper/annotationItem.js";
+import type { BlockMapper } from "../types/notion/mapper/block.js";
+import type { PropertyItemMapper } from "../types/notion/mapper/propertyItem.js";
+import type { RichTextItemMapper } from "../types/notion/mapper/richTextItem.js";
 
 export const AnnotationContext = createContext<AnnotationItemMapper>({});
 

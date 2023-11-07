@@ -1,6 +1,6 @@
 import { AnnotationItemProvider } from "../Mapper/Annotation.js";
 import { BlockProvider } from "../Mapper/Block.js";
-import { useMapper } from "../Mapper/hooks.js";
+import { useMapper } from "../hooks.js";
 import { LinkProvider } from "../Mapper/Link.js";
 import { RichTextItemProvider } from "../Mapper/RichText.js";
 

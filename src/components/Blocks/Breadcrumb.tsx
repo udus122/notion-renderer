@@ -2,7 +2,7 @@ import { Fragment } from "react";
 
 import { extractTitle } from "../../utils.js";
 import { Icon } from "../Common/Icon.js";
-import { useMapper } from "../Mapper/hooks.js";
+import { useMapper } from "../hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
 import type { BreadcrumbBlock } from "../../types/notion/blocks/breadcrumb.js";

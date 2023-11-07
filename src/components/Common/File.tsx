@@ -1,4 +1,4 @@
-import { useMapper } from "../Mapper/hooks.js";
+import { useMapper } from "../hooks.js";
 
 import type { FileObject } from "../../types/notion/common/common.js";
 import type { FC } from "react";

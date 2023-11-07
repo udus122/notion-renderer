@@ -1,5 +1,5 @@
 import { File as FileComponent } from "../Common/File.js";
-import { useMapper } from "../Mapper/hooks.js";
+import { useMapper } from "../hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
 import type { FileBlock } from "../../types/notion/blocks/file.js";

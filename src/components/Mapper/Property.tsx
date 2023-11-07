@@ -1,4 +1,4 @@
-import { PropertyItemContext, useMapper } from "./hooks.js";
+import { PropertyItemContext, useMapper } from "../hooks.js";
 
 import type { PropertyItemMapper } from "../../types/notion/mapper/propertyItem.js";
 import type { FC, ReactNode } from "react";

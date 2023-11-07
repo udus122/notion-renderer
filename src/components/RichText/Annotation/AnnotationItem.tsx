@@ -1,4 +1,4 @@
-import { useMapper } from "../../Mapper/hooks.js";
+import { useMapper } from "../../hooks.js";
 
 import { Bold } from "./Bold.js";
 import { Color } from "./Color.js";

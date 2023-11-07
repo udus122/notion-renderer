@@ -1,4 +1,4 @@
-import { useMapper } from "../Mapper/hooks.js";
+import { useMapper } from "../hooks.js";
 
 import type { EmailPropertyItemComponent } from "../../types/notion/pages/properties/email.js";
 

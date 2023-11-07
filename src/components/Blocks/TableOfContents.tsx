@@ -1,4 +1,4 @@
-import { useMapper } from "../Mapper/hooks.js";
+import { useMapper } from "../hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
 import type { Heading1BlockObject } from "../../types/notion/blocks/heading1.js";

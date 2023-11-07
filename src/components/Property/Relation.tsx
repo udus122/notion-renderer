@@ -1,5 +1,5 @@
 import { RelationItem } from "../Common/RelationItem.js";
-import { useMapper } from "../Mapper/hooks.js";
+import { useMapper } from "../hooks.js";
 
 import type { RelationPropertyItemComponent } from "../../types/notion/pages/properties/relation.js";
 

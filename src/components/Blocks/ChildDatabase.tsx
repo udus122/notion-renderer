@@ -1,5 +1,5 @@
 import { Icon } from "../Common/Icon.js";
-import { useMapper } from "../Mapper/hooks.js";
+import { useMapper } from "../hooks.js";
 
 import type { ChildDatabaseBlock } from "../../types/notion/blocks/childDatabase.js";
 
