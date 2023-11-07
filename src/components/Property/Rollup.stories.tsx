@@ -2,7 +2,7 @@ import DateRollupPropertyObject from "./Rollup.Date.json";
 import { RollupProperty } from "./Rollup.js";
 import NumberRollupPropertyObject from "./Rollup.Number.json";
 
-import type { RollupPropertyItemObject } from "../../types/notion/propertyItem/rollup.js";
+import type { RollupPropertyItemObject } from "../../types/notion/property/rollup.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof RollupProperty> = {

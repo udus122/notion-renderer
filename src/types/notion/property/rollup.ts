@@ -1,5 +1,5 @@
 import type { PropertyItemProps } from "./propertyItem.js";
-import type { PartialBy } from "../../../types/utils.js";
+import type { PartialBy } from "../../utils.js";
 import type { RollupPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 

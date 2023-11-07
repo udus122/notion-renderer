@@ -1,4 +1,4 @@
-import type { StatusPropertyItemComponent } from "../../types/notion/propertyItem/status.js";
+import type { StatusPropertyItemComponent } from "../../types/notion/property/status.js";
 
 export const StatusProperty: StatusPropertyItemComponent = ({
   propertyItem,

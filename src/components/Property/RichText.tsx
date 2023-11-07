@@ -1,6 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { RichTextPropertyItemComponent } from "../../types/notion/propertyItem/richText.js";
+import type { RichTextPropertyItemComponent } from "../../types/notion/property/richText.js";
 
 export const RichTextProperty: RichTextPropertyItemComponent = ({
   propertyItem,

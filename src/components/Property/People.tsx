@@ -1,6 +1,6 @@
 import { isFullUser } from "@notionhq/client";
 
-import type { PeoplePropertyItemComponent } from "../../types/notion/propertyItem/people.js";
+import type { PeoplePropertyItemComponent } from "../../types/notion/property/people.js";
 
 export const PeopleProperty: PeoplePropertyItemComponent = ({
   propertyItem,

@@ -1,4 +1,4 @@
-import type { SelectPropertyItemComponent } from "../../types/notion/propertyItem/select.js";
+import type { SelectPropertyItemComponent } from "../../types/notion/property/select.js";
 
 export const SelectProperty: SelectPropertyItemComponent = ({
   propertyItem,

@@ -1,7 +1,7 @@
 import { CreatedTimeProperty } from "./CreatedTime.js";
 import CreatedTimePropertyObject from "./CreatedTime.json";
 
-import type { CreatedTimePropertyItemObject } from "../../types/notion/propertyItem/createdTime.js";
+import type { CreatedTimePropertyItemObject } from "../../types/notion/property/createdTime.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof CreatedTimeProperty> = {

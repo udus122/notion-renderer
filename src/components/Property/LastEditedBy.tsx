@@ -1,6 +1,6 @@
 import { isFullUser } from "@notionhq/client";
 
-import type { LastEditedByPropertyItemComponent } from "../../types/notion/propertyItem/lastEditedBy.js";
+import type { LastEditedByPropertyItemComponent } from "../../types/notion/property/lastEditedBy.js";
 
 export const LastEditedByProperty: LastEditedByPropertyItemComponent = ({
   propertyItem,

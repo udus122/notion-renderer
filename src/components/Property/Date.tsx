@@ -1,6 +1,6 @@
 import { DateComponent } from "../Common/Date.js";
 
-import type { DatePropertyItemComponent } from "../../types/notion/propertyItem/date.js";
+import type { DatePropertyItemComponent } from "../../types/notion/property/date.js";
 
 export const DateProperty: DatePropertyItemComponent = ({
   propertyItem,

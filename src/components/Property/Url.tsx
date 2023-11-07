@@ -1,6 +1,6 @@
 import { useMapper } from "../Mapper/hooks.js";
 
-import type { UrlPropertyItemComponent } from "../../types/notion/propertyItem/url.js";
+import type { UrlPropertyItemComponent } from "../../types/notion/property/url.js";
 
 export const UrlProperty: UrlPropertyItemComponent = ({ propertyItem }) => {
   const { Link } = useMapper();

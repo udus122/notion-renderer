@@ -1,6 +1,6 @@
 import { useMapper } from "../Mapper/hooks.js";
 
-import type { PhoneNumberPropertyItemComponent } from "../../types/notion/propertyItem/phoneNumber.js";
+import type { PhoneNumberPropertyItemComponent } from "../../types/notion/property/phoneNumber.js";
 
 export const PhoneNumberProperty: PhoneNumberPropertyItemComponent = ({
   propertyItem,

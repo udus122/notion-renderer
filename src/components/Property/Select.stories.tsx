@@ -1,7 +1,7 @@
 import { SelectProperty } from "./Select.js";
 import SelectPropertyObject from "./Select.json";
 
-import type { SelectPropertyItemObject } from "../../types/notion/propertyItem/select.js";
+import type { SelectPropertyItemObject } from "../../types/notion/property/select.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof SelectProperty> = {

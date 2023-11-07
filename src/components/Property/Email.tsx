@@ -1,6 +1,6 @@
 import { useMapper } from "../Mapper/hooks.js";
 
-import type { EmailPropertyItemComponent } from "../../types/notion/propertyItem/email.js";
+import type { EmailPropertyItemComponent } from "../../types/notion/property/email.js";
 
 export const EmailProperty: EmailPropertyItemComponent = ({ propertyItem }) => {
   const { Link } = useMapper();

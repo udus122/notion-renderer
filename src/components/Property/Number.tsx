@@ -1,4 +1,4 @@
-import type { NumberPropertyItemComponent } from "../../types/notion/propertyItem/number.js";
+import type { NumberPropertyItemComponent } from "../../types/notion/property/number.js";
 
 export const NumberProperty: NumberPropertyItemComponent = ({
   propertyItem,
