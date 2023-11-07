@@ -1,0 +1,14 @@
+{
+  "id": "C%3Bzr",
+  "next_url": null,
+  "type": "rollup",
+  "rollup": {
+    "type": "date",
+    "date": {
+      "start": "2023-11-02T07:30:00.000+00:00",
+      "end": null,
+      "time_zone": null
+    },
+    "function": "latest_date"
+  }
+}

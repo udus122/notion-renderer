@@ -18,6 +18,7 @@ import { PeopleProperty } from "./People.js";
 import { PhoneNumberProperty } from "./PhoneNumber.js";
 import { RelationProperty } from "./Relation.js";
 import { RichTextProperty } from "./RichText.js";
+import { RollupProperty } from "./Rollup.js";
 import { SelectProperty } from "./Select.js";
 import { StatusProperty } from "./Status.js";
 import { TitleProperty } from "./Title.js";
@@ -77,6 +78,7 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
     phone_number: PhoneNumberProperty,
     relation: RelationProperty,
     rich_text: RichTextProperty,
+    rollup: RollupProperty,
     select: SelectProperty,
     status: StatusProperty,
     title: TitleProperty,
@@ -125,6 +127,10 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
       return <PropertyComponent propertyItem={property} />;
     }
     case "rich_text": {
+      const PropertyComponent = mapper[property.type];
+      return <PropertyComponent propertyItem={property} />;
+    }
+    case "rollup": {
       const PropertyComponent = mapper[property.type];
       return <PropertyComponent propertyItem={property} />;
     }
