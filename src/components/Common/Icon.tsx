@@ -42,7 +42,6 @@ const DefaultIcon = () => {
           width: "19.8px",
           height: "19.8px",
           display: "block",
-          fill: "rgba(255, 255, 255, 0.443)",
           flexShrink: 0,
         }}
       >

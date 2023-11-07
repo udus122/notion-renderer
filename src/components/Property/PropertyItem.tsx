@@ -83,8 +83,6 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
     url: UrlProperty,
   };
 
-  console.log("property:", JSON.stringify(property, null, 2));
-
   switch (property.type) {
     case "checkbox": {
       const PropertyComponent = mapper[property.type];
@@ -164,7 +162,7 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
     }
     default: {
       // @ts-expect-error: to log when an unexpected 'property.type' is encountered, which is not in the type.
-      console.warn(`${property.type as { type: never }} is never.`);
+      console.warn(`${property.type as { type: never }} is not supported.`);
       return null;
     }
   }

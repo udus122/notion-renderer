@@ -31,6 +31,7 @@
 @import url("./pages/page.css") layer(notion-components);
 @import url("./property/property-item.css") layer(notion-components);
 @import url("./property/multi-select.css") layer(notion-components);
+@import url("./property/relation.css") layer(notion-components);
 
 @layer notion-theme {
   .notion-light {

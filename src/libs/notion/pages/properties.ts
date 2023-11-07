@@ -2,8 +2,13 @@ import { callAPIWithBackOff } from "../../utils.js";
 import { notion } from "../auth.js";
 import { convertResponseToRichText } from "../richText/richText.js";
 
+import { fetchPage } from "./pages.js";
+
 import type { PeoplePropertyItemObject } from "../../../types/notion/propertyItem/people.js";
-import type { RelationPropertyItemObject } from "../../../types/notion/propertyItem/relation.js";
+import type {
+  RelationPropertyItemObject,
+  RelationPropertyItemObjectRelationItem,
+} from "../../../types/notion/propertyItem/relation.js";
 import type { RichTextPropertyItemObject } from "../../../types/notion/propertyItem/richText.js";
 import type { RollupPropertyItemObject } from "../../../types/notion/propertyItem/rollup.js";
 import type { TitlePropertyItemObject } from "../../../types/notion/propertyItem/title.js";
@@ -93,24 +98,21 @@ export const fetchPageProperty = async (pageId: string, propertyId: string) => {
       case "relation": {
         return {
           ...property_item,
-          relation: (results as RelationPropertyItemObjectResponse[]).map(
-            (result) => result.relation
+          relation: await (
+            results as RelationPropertyItemObjectResponse[]
+          ).reduce<Promise<RelationPropertyItemObjectRelationItem>>(
+            async (prev, cur) => {
+              const page = await fetchPage(cur.relation.id);
+              return [
+                ...(await prev),
+                {
+                  ...cur.relation,
+                  page,
+                },
+              ];
+            },
+            Promise.resolve([])
           ),
-          // relation: await (
-          //   results as RelationPropertyItemObjectResponse[]
-          // ).reduce<Promise<RelationPropertyItemObjectRelationItem>>(
-          //   async (prev, cur) => {
-          //     const page = await fetchPage(cur.relation.id);
-          //     return [
-          //       ...(await prev),
-          //       {
-          //         ...cur.relation,
-          //         page,
-          //       },
-          //     ];
-          //   },
-          //   Promise.resolve([])
-          // ),
         } satisfies RelationPropertyItemObject;
       }
       case "rollup": {
