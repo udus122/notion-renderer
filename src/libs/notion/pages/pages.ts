@@ -3,7 +3,7 @@ import { isFullPage } from "@notionhq/client";
 import { callAPIWithBackOff } from "../../utils.js";
 import { notion } from "../auth.js";
 
-import { fetchPageProperty } from "./properties.js";
+import { fetchPageProperty } from "./properties/properties.js";
 
 import type { PageObject } from "../../../types/notion/pages/page.js";
 import type { Properties } from "../../../types/notion/pages/properties/properties.js";
