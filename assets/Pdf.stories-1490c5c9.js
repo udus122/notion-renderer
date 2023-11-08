@@ -1,0 +1,14 @@
+import{P as m}from"./Pdf-ad37f828.js";import"./jsx-runtime-ffb262ed.js";import"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";import"./RichText-1f58aba5.js";import"./Annotation-e8498d68.js";import"./hooks-69e941c5.js";import"./Link-62299450.js";import"./AnnotationItem-9a2d3927.js";import"./Bold-27d453fc.js";import"./Color-bf0161c1.js";import"./InlineCode-aab75cea.js";import"./Italic-ec5ae852.js";import"./Strikethrough-2d45501b.js";import"./Underline-53eade56.js";import"./RichTextItem-653db5bd.js";import"./InlineEquation-1da68743.js";import"./katex-c2839aef.js";import"./Mention-6810c0e3.js";import"./index-077c9703.js";import"./index-7653c3a3.js";import"./Date-8aa40b7c.js";import"./Text-afd38f2c.js";const f="block",_="26eb5569-390b-4943-a859-f7b3301a087f",u={type:"page_id",page_id:"7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"},y="2023-10-28T06:45:00.000Z",g="2023-10-28T06:45:00.000Z",h={object:"user",id:"e0446ede-dde6-457c-b535-d2b19f40b45a"},j={object:"user",id:"e0446ede-dde6-457c-b535-d2b19f40b45a"},x=!1,k=!1,P="pdf",$={caption:[],type:"external",external:{url:"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"}},l={object:f,id:_,parent:u,created_time:y,last_edited_time:g,created_by:h,last_edited_by:j,has_children:x,archived:k,type:P,pdf:$},O="block",w="26eb5569-390b-4943-a859-f7b3301a087f",E={type:"page_id",page_id:"7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"},v="2023-10-28T06:45:00.000Z",B="2023-10-28T06:45:00.000Z",F={object:"user",id:"e0446ede-dde6-457c-b535-d2b19f40b45a"},T={object:"user",id:"e0446ede-dde6-457c-b535-d2b19f40b45a"},Z=!1,S=!1,A="pdf",D={caption:[],type:"external",external:{url:"https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"}},I={object:O,id:w,parent:E,created_time:v,last_edited_time:B,created_by:F,last_edited_by:T,has_children:Z,archived:S,type:A,pdf:D},ae={title:"Blocks/Pdf",component:m,tags:["autodocs"]},e={args:{block:l}},t={args:{block:l}},r={args:{block:I}};var o,c,s;e.parameters={...e.parameters,docs:{...(o=e.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  args: {
+    block: (PdfExternalObject as PdfBlockObject)
+  }
+}`,...(s=(c=e.parameters)==null?void 0:c.docs)==null?void 0:s.source}}};var a,d,i;t.parameters={...t.parameters,docs:{...(a=t.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  args: {
+    block: (PdfExternalObject as PdfBlockObject)
+  }
+}`,...(i=(d=t.parameters)==null?void 0:d.docs)==null?void 0:i.source}}};var p,n,b;r.parameters={...r.parameters,docs:{...(p=r.parameters)==null?void 0:p.docs,source:{originalSource:`{
+  args: {
+    block: (PdfFileObject as PdfBlockObject)
+  }
+}`,...(b=(n=r.parameters)==null?void 0:n.docs)==null?void 0:b.source}}};const de=["Default","External","File"];export{e as Default,t as External,r as File,de as __namedExportsOrder,ae as default};
+//# sourceMappingURL=Pdf.stories-1490c5c9.js.map

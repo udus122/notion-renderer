@@ -1,0 +1,2 @@
+import{j as r}from"./jsx-runtime-ffb262ed.js";const n=({cover:e})=>e?e.type==="external"?r.jsx("img",{className:"notion-cover",src:e.external.url,alt:"notion cover"}):e.type==="file"?r.jsx("img",{className:"notion-cover",src:e.file.url,alt:"notion cover"}):(console.warn("unknown cover type"),null):null;try{n.displayName="Cover",n.__docgenInfo={description:"",displayName:"Cover",props:{cover:{defaultValue:null,description:"",name:"cover",required:!0,type:{name:"CoverObject"}}}}}catch{}export{n as C};
+//# sourceMappingURL=Cover-4eaf6d1c.js.map
