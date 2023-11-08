@@ -22,6 +22,7 @@ import { RollupProperty } from "./Rollup.js";
 import { SelectProperty } from "./Select.js";
 import { StatusProperty } from "./Status.js";
 import { TitleProperty } from "./Title.js";
+import { UniqueIdProperty } from "./UniqueId.js";
 import { UrlProperty } from "./Url.js";
 
 import type { LinkProps } from "../../types/notion/common/link.js";
@@ -82,6 +83,7 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
     select: SelectProperty,
     status: StatusProperty,
     title: TitleProperty,
+    unique_id: UniqueIdProperty,
     url: UrlProperty,
   };
 
@@ -159,6 +161,10 @@ const PropertyItemSwitcher: FC<Props> = ({ property }) => {
       return <PropertyComponent propertyItem={property} />;
     }
     case "title": {
+      const PropertyComponent = mapper[property.type];
+      return <PropertyComponent propertyItem={property} />;
+    }
+    case "unique_id": {
       const PropertyComponent = mapper[property.type];
       return <PropertyComponent propertyItem={property} />;
     }

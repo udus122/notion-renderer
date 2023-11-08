@@ -22,7 +22,7 @@ export const Page: PageComponent = ({ page }) => {
       <Cover cover={page.cover} />
       <div>
         <Icon icon={page.icon} />
-        <Title title={title.title} />
+        <Title title={title?.title ?? []} />
         <Properties properties={other} />
       </div>
     </div>

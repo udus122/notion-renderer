@@ -17,6 +17,7 @@ import type { RollupPropertyItemObject } from "./rollup.js";
 import type { SelectPropertyItemObject } from "./select.js";
 import type { StatusPropertyItemObject } from "./status.js";
 import type { TitlePropertyItemObject } from "./title.js";
+import type { UniqueIdPropertyItemObject } from "./uniqueId.js";
 import type { UrlPropertyItemObject } from "./url.js";
 import type { ComponentType } from "react";
 
@@ -40,6 +41,7 @@ export type PropertyItemObject =
   | SelectPropertyItemObject
   | StatusPropertyItemObject
   | TitlePropertyItemObject
+  | UniqueIdPropertyItemObject
   | UrlPropertyItemObject;
 
 export type PropertyItemProps<

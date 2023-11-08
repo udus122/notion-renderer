@@ -22,10 +22,6 @@ export const splitTitleAndOtherProperties = (
     }
   });
 
-  if (title === undefined) {
-    throw new Error("Title property not found");
-  }
-
   return { title, other };
 };
 
@@ -34,7 +30,7 @@ export const extractTitle = (
 ): RichText | RichTextItemResponse[] => {
   if (pageOrDatabase.object === "page") {
     const { title } = splitTitleAndOtherProperties(pageOrDatabase.properties);
-    return title.title;
+    return title?.title ?? [];
   }
 
   if (pageOrDatabase.object === "database") {
