@@ -1,8 +1,8 @@
 import type { BlockBlockProps } from "./block.js";
 import type { IdRequest } from "../common/common.js";
+import type { PageObject } from "../pages/page.js";
 import type {
   LinkToPageBlockObjectResponse,
-  PageObjectResponse,
   DatabaseObjectResponse,
   ListCommentsResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
@@ -13,7 +13,7 @@ export type LinkToPageBlockObject = LinkToPageBlockObjectResponse & {
     | {
         type: "page_id";
         page_id: IdRequest;
-        page?: PageObjectResponse;
+        page?: PageObject;
       }
     | {
         type: "database_id";

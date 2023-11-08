@@ -1,22 +1,18 @@
 import type { PropertyItemProps } from "./propertyItem.js";
 import type { Overwrite, PartialBy } from "../../../utils.js";
-import type {
-  PageObjectResponse,
-  RelationPropertyItemObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+import type { PageObject } from "../page.js";
+import type { RelationPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 
 export type RelationItem = RelationPropertyItemObjectResponse["relation"] & {
-  page?: PageObjectResponse;
+  page?: PageObject;
 };
-
-export type RelationPropertyItemObjectRelationItem = Array<RelationItem>;
 
 export type RelationPropertyItemObject = PartialBy<
   Overwrite<
     RelationPropertyItemObjectResponse,
     {
-      relation: RelationPropertyItemObjectRelationItem;
+      relation: Array<RelationItem>;
     }
   >,
   "object"

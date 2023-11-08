@@ -1,7 +1,7 @@
 import { Page } from "./Page.js";
 import PageObject from "./Page.json";
 
-import type { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { PageObject as PageObjectType } from "../../types/notion/pages/page.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Page> = {
@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Page>;
 
 export const Default: Story = {
   args: {
-    page: PageObject as PageObjectResponse,
+    page: PageObject as PageObjectType,
   },
 };

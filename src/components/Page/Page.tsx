@@ -4,11 +4,11 @@ import { Icon } from "../Common/Icon.js";
 import { Cover } from "./Cover.js";
 import { Title } from "./Title.js";
 
-import type { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { PageObject } from "../../types/notion/pages/page.js";
 import type { ComponentType } from "react";
 
 type Props = {
-  page: PageObjectResponse;
+  page: PageObject;
 };
 
 type PageComponent = ComponentType<Props>;

@@ -1,3 +1,5 @@
+import type { PageObject } from "./types/notion/pages/page.js";
+import type { Properties } from "./types/notion/pages/properties/properties.js";
 import type {
   DatabaseObjectResponse,
   PageObjectResponse,
@@ -9,7 +11,7 @@ export type TitleProperty = Extract<
 >;
 
 export const extractTitle = (
-  pageOrDatabase: PageObjectResponse | DatabaseObjectResponse
+  pageOrDatabase: PageObject | PageObjectResponse | DatabaseObjectResponse
 ) => {
   if (pageOrDatabase.object === "page") {
     return extractTitlePropertyFromPage(pageOrDatabase.properties)?.title ?? [];
@@ -23,7 +25,7 @@ export const extractTitle = (
 };
 
 export const extractTitlePropertyFromPage = (
-  page_properties: PageObjectResponse["properties"]
+  page_properties: PageObjectResponse["properties"] | Properties
 ) => {
   for (const property of Object.values(page_properties)) {
     if (isTitleProperty(property)) {
@@ -34,5 +36,5 @@ export const extractTitlePropertyFromPage = (
 };
 
 export const isTitleProperty = (
-  property: PageObjectResponse["properties"][string]
+  property: PageObjectResponse["properties"][string] | Properties[string]
 ): property is TitleProperty => property.type === "title";
