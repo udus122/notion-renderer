@@ -1,0 +1,21 @@
+{
+  "id": "Sd%7C%5B",
+  "type": "multi_select",
+  "multi_select": [
+    {
+      "id": "f37d4deb-6c01-4d6c-9479-b6ce1aaa41df",
+      "name": "multi-select1",
+      "color": "red"
+    },
+    {
+      "id": "d47af6be-01c9-45ee-aa87-6c40ecaee90c",
+      "name": "multi-select2",
+      "color": "yellow"
+    },
+    {
+      "id": "142a5ecd-2d77-455d-b294-35c6686316d1",
+      "name": "multi-select3",
+      "color": "green"
+    }
+  ]
+}

@@ -1,4 +1,4 @@
-import { Icon } from "../Icon.js";
+import { Icon } from "../Common/Icon.js";
 import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";

@@ -193,7 +193,7 @@ Most common block types are supported.
 | [Heading3](https://developers.notion.com/reference/block#headings)                             | ✅         | `heading_3`                          | `<h3>`                                                                         |                                                                                                                                                                                                           |
 | [Image](https://developers.notion.com/reference/block#image)                                   | ✅         | `image`                              | `<img>`                                                                        |                                                                                                                                                                                                           |
 | [Link Preview](https://developers.notion.com/reference/block#link-preview)                     | ✅         | `link_preview`                       | `<Link>`                                                                       | When retrieving an object from the API, we use [@extractus/article-extractor](https://github.com/extractus/article-extractor) to obtain meta information of the site such as OGP images and descriptions. |
-| Link To Page                         | ✅         | `link_to_page`                         | `<Link>`                                                                       |                                                                                                                                                                                                           |
+| Link To Page                                                                                   | ✅         | `link_to_page`                       | `<Link>`                                                                       |                                                                                                                                                                                                           |
 | [Numbered lit item](https://developers.notion.com/reference/block#numbered-list-item)          | ✅         | `numbered_list`/`numbered_list_item` | `<ol>`/`<li>`                                                                  |                                                                                                                                                                                                           |
 | [Paragraph](https://developers.notion.com/reference/block#paragraph)                           | ✅         | `paragraph`                          | `<p>`                                                                          |                                                                                                                                                                                                           |
 | [PDF](https://developers.notion.com/reference/block#pdf)                                       | ✅         | `pdf`                                | `<object type="application/pdf>`                                               |                                                                                                                                                                                                           |
@@ -228,7 +228,38 @@ Most common block types are supported.
 
 ### Page
 
-comming soon.
+| Property Type | Supported | Notes |
+| ------------- | --------- | ----- |
+| Cover         | ✅         |       |
+| Icon          | ✅         |       |
+| Title         | ✅         |       |
+
+#### Properties
+
+| Property Type                                                                                     | Supported | Mapper Field Name  | Notes |
+| ------------------------------------------------------------------------------------------------- | --------- | ------------------ | ----- |
+| [Checkbox](https://developers.notion.com/reference/page-property-values#checkbox)                 | ✅         | `checkbox`         |       |
+| [Created by](https://developers.notion.com/reference/page-property-values#created-by)             | ✅         | `created_by`       |       |
+| [Created time](https://developers.notion.com/reference/page-property-values#created-time)         | ✅         | `created_time`     |       |
+| [Date](https://developers.notion.com/reference/page-property-values#date)                         | ✅         | `date`             |       |
+| [Email](https://developers.notion.com/reference/page-property-values#email)                       | ✅         | `email`            |       |
+| [Files](https://developers.notion.com/reference/page-property-values#files)                       | ✅         | `files`            |       |
+| [Formula](https://developers.notion.com/reference/page-property-values#formula)                   | ✅         | `formula`          |       |
+| [Last edited by](https://developers.notion.com/reference/page-property-values#last-edited-by)     | ✅         | `last_edited_by`   |       |
+| [Last edited time](https://developers.notion.com/reference/page-property-values#last-edited-time) | ✅         | `last_edited_time` |       |
+| [Multi-select](https://developers.notion.com/reference/page-property-values#multi-select)         | ✅         | `multi_select`     |       |
+| [Number](https://developers.notion.com/reference/page-property-values#number)                     | ✅         | `number`           |       |
+| [People](https://developers.notion.com/reference/page-property-values#people)                     | ✅         | `people`           |       |
+| [Phone number](https://developers.notion.com/reference/page-property-values#phone-number)         | ✅         | `phone_number`     |       |
+| [Relation](https://developers.notion.com/reference/page-property-values#relation)                 | ✅         | `relation`         | WIP   |
+| [Rollup](https://developers.notion.com/reference/page-property-values#rollup)                     | ✅         | `rollup`           | WIP   |
+| [Rich text](https://developers.notion.com/reference/page-property-values#rich-text)               | ✅         | `rich_text`        |       |
+| [Select](https://developers.notion.com/reference/page-property-values#select)                     | ✅         | `select`           |       |
+| [Status](https://developers.notion.com/reference/page-property-values#status)                     | ✅         | `status`           |       |
+| [Title](https://developers.notion.com/reference/page-property-values#title)                       | ✅         | `title`            |       |
+| [URL](https://developers.notion.com/reference/page-property-values#url)                           | ✅         | `url`              |       |
+| [Unique ID](https://developers.notion.com/reference/page-property-values#unique-id)               | ✅         | `unique_id`        |       |
+| [Verification](https://developers.notion.com/reference/page-property-values#verification)         | ❌         | `verification`     |       |
 
 ### Database
 

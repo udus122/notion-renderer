@@ -2,7 +2,14 @@ name: Release
 permissions:
   contents: write
   pull-requests: read
-on: push
+on:
+  push:
+    branches:
+      - main
+      - next
+      - next-major
+      - beta
+      - alpha
 jobs:
   release:
     runs-on: ubuntu-latest

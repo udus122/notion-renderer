@@ -4,19 +4,9 @@ import { RichTextItemProvider } from "../Mapper/RichText.js";
 
 import { RichTextItem } from "./RichTextItem.js";
 
-import type { LinkProps } from "../../types/notion/link.js";
-import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
-import type { RichTextItemMapper } from "../../types/notion/mapper/richTextItem.js";
-import type { RichTextItem as RichTextItemType } from "../../types/notion/richText/richTextItem.js";
+import type { RichTextComponent } from "../../types/notion/richText/richText.js";
 
-type Props = {
-  richText: Array<RichTextItemType>;
-  richTextItemMapper?: RichTextItemMapper;
-  annotationMapper?: AnnotationItemMapper;
-  LinkComponent?: React.ComponentType<LinkProps>;
-};
-
-export const RichText: React.FC<Props> = ({
+export const RichText: RichTextComponent = ({
   richText,
   richTextItemMapper,
   annotationMapper,

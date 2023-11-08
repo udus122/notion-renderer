@@ -37,7 +37,7 @@
           },
           "plain_text": "Audio",
           "href": null,
-          "id": "5c1b1e6a-d7c4-4396-9288-dd71b68152b8"
+          "id": "4bde8f7b-be16-4a17-a6fe-0c44c78e0f57"
         }
       ],
       "is_toggleable": false,
@@ -112,7 +112,7 @@
           },
           "plain_text": "Bookmark",
           "href": "https://developers.notion.com/reference/block#bookmark",
-          "id": "5454c4a0-fe79-4e13-94a9-be210a903a3b"
+          "id": "4aae3535-4f37-44c4-89eb-bc169e82e68c"
         }
       ],
       "is_toggleable": false,
@@ -150,7 +150,7 @@
           "https://developers.notion.com/"
         ],
         "image": "https://files.readme.io/a507683-developer-portal-meta.png",
-        "content": "<div><section>\n   <section>\n      <p>Connect Notion pages and databases to the tools you use every day, creating powerful workflows.</p>\n   \t\t<a target=\"_blank\" href=\"https://developers.notion.com/docs/getting-started\">Get started</a>\n   </section>\n   <section>\n      <img src=\"https://www.notion.so/front-static/external/readme/images/api-hanging@2x.png\" alt=\"A trio of structural engineers enjoying their lunch on a steel beam suspended in the air by a crane hook\" />\n   </section>\n  </section>\n<section>\n      <section>\n         <img src=\"https://www.notion.so/front-static/external/readme/images/code@2x.png\" alt=\"A snippet of code describing the Notion API\" />\n      </section>\n      <section>\n         <section>\n            <h2>Building blocks for developers</h2>\n         </section>\n         <p>Aggregate data from many sources into your team’s workspace. Spend less time context switching, and increase visibility across the software and services you rely on.</p>\n      </section>\n   </section>\n<section>\n     <section>\n        <h2>Stay in the loop</h2>\n     </section>\n        <section>\n          <section>\n            <h3>Twitter</h3>\n            <p>Spend more time on Twitter than your inbox? Us, too.</p>\n            <a target=\"_blank\" href=\"http://twitter.com/notionapi\">Follow @NotionAPI</a>\n          </section>\n          <section>\n            <h3>Slack community</h3>\n            <p>Meet other developers and connect with our team.</p>\n            <a target=\"_blank\" href=\"https://join.slack.com/t/notiondevs/shared_invite/zt-20b5996xv-DzJdLiympy6jP0GGzu3AMg\">Join here</a>\n          </section>\n          <section>\n\t\t\t\t\t\t <img src=\"https://www.notion.so/front-static/external/readme/images/newspaper@2x.png\" alt=\"A newspaper coming out of a mailbox\" />\n          </section>\n       </section>\n      </section>\n<section>\n         <section>\n            <img src=\"https://www.notion.so/front-static/external/readme/images/paperairplane@2x.png\" alt=\"A paper plane flying away to the right\" />\n            <h2>Getting help</h2>\n         </section>\n         <section>\n           <section>\n              <h4>Resources</h4>\n              <a target=\"_blank\" href=\"https://developers.notion.com/page/frequently-asked-questions\">Frequently asked questions</a>\n              <a target=\"_blank\" href=\"https://www.postman.com/notionhq/workspace/notion-s-api-workspace\">Postman collection</a>\n            \t<a target=\"_blank\" href=\"https://developers.notion.com/page/notion-platform-roadmap\">Public roadmap</a>\n            </section>\n            <section>\n               <h4>Community</h4>\n               <a target=\"_blank\" href=\"https://stackoverflow.com/questions/tagged/notion-api\">#notion-api on Stack Overflow</a>\n               <a target=\"_blank\" href=\"https://join.slack.com/t/notiondevs/shared_invite/zt-20b5996xv-DzJdLiympy6jP0GGzu3AMg\">Notion Devs Slack</a>\n            </section>\n            <section>\n               <h4>Support</h4>\n               <a target=\"_blank\" href=\"https://developers.notion.com/cdn-cgi/l/email-protection#ff9b9a899a93908f9a8d8cbf929e949a91908b969091d19c9092\">Contact Notion developer support</a>\n            </section>\n         </section>\n      </section>\n<section>\n     <section>\n      <img src=\"https://www.notion.so/front-static/external/readme/images/api-pointy@2x.png\" />\n     </section>\n    <section>\n      <h2>Changelog</h2>\n      <section>\n          <p>2023-09-21</p>\n          <p>Changes for Sep 08 - Sep 21</p>\n        </section>\n      <section>\n          <p>2023-09-07</p>\n          <p>Changes for Sep 06 - Sep 07</p>\n        </section>\n      <section>\n          <p>2023-09-05</p>\n          <p>Changes for Aug 23 - Sep 05</p>\n        </section>\n      <section>\n          <p>2023-08-22</p>\n          <p>Changes for Aug 08 - Aug 22</p>\n        </section>\n      <section>\n          <p>2023-08-07</p>\n          <p>Changes for Jul 25 - Aug 07</p>\n        </section>\n      <section>\n          <p>2023-07-24</p>\n          <p>Changes for Jul 11 - Jul 24</p>\n        </section>\n      <a target=\"_blank\" href=\"https://developers.notion.com/page/changelog\">All changes</a>\n    </section>\n  </section></div>",
+        "content": "<div><section>\n   <section>\n      <p>Connect Notion pages and databases to the tools you use every day, creating powerful workflows.</p>\n   \t\t<a target=\"_blank\" href=\"https://developers.notion.com/docs/getting-started\">Get started</a>\n   </section>\n   <section>\n      <img src=\"https://www.notion.so/front-static/external/readme/images/api-hanging@2x.png\" alt=\"A trio of structural engineers enjoying their lunch on a steel beam suspended in the air by a crane hook\" />\n   </section>\n  </section>\n<section>\n      <section>\n         <img src=\"https://www.notion.so/front-static/external/readme/images/code@2x.png\" alt=\"A snippet of code describing the Notion API\" />\n      </section>\n      <section>\n         <section>\n            <h2>Building blocks for developers</h2>\n         </section>\n         <p>Aggregate data from many sources into your team’s workspace. Spend less time context switching, and increase visibility across the software and services you rely on.</p>\n      </section>\n   </section>\n<section>\n     <section>\n        <h2>Stay in the loop</h2>\n     </section>\n        <section>\n          <section>\n            <h3>Twitter</h3>\n            <p>Spend more time on Twitter than your inbox? Us, too.</p>\n            <a target=\"_blank\" href=\"http://twitter.com/notionapi\">Follow @NotionAPI</a>\n          </section>\n          <section>\n            <h3>Slack community</h3>\n            <p>Meet other developers and connect with our team.</p>\n            <a target=\"_blank\" href=\"https://join.slack.com/t/notiondevs/shared_invite/zt-20b5996xv-DzJdLiympy6jP0GGzu3AMg\">Join here</a>\n          </section>\n          <section>\n\t\t\t\t\t\t <img src=\"https://www.notion.so/front-static/external/readme/images/newspaper@2x.png\" alt=\"A newspaper coming out of a mailbox\" />\n          </section>\n       </section>\n      </section>\n<section>\n         <section>\n            <img src=\"https://www.notion.so/front-static/external/readme/images/paperairplane@2x.png\" alt=\"A paper plane flying away to the right\" />\n            <h2>Getting help</h2>\n         </section>\n         <section>\n           <section>\n              <h4>Resources</h4>\n              <a target=\"_blank\" href=\"https://developers.notion.com/page/frequently-asked-questions\">Frequently asked questions</a>\n              <a target=\"_blank\" href=\"https://www.postman.com/notionhq/workspace/notion-s-api-workspace\">Postman collection</a>\n            \t<a target=\"_blank\" href=\"https://developers.notion.com/page/notion-platform-roadmap\">Public roadmap</a>\n            </section>\n            <section>\n               <h4>Community</h4>\n               <a target=\"_blank\" href=\"https://stackoverflow.com/questions/tagged/notion-api\">#notion-api on Stack Overflow</a>\n               <a target=\"_blank\" href=\"https://join.slack.com/t/notiondevs/shared_invite/zt-20b5996xv-DzJdLiympy6jP0GGzu3AMg\">Notion Devs Slack</a>\n            </section>\n            <section>\n               <h4>Support</h4>\n               <a target=\"_blank\" href=\"https://developers.notion.com/cdn-cgi/l/email-protection#4d29283b2821223d283f3e0d202c2628232239242223632e2220\">Contact Notion developer support</a>\n            </section>\n         </section>\n      </section>\n<section>\n     <section>\n      <img src=\"https://www.notion.so/front-static/external/readme/images/api-pointy@2x.png\" />\n     </section>\n    <section>\n      <h2>Changelog</h2>\n      <section>\n          <p>2023-09-21</p>\n          <p>Changes for Sep 08 - Sep 21</p>\n        </section>\n      <section>\n          <p>2023-09-07</p>\n          <p>Changes for Sep 06 - Sep 07</p>\n        </section>\n      <section>\n          <p>2023-09-05</p>\n          <p>Changes for Aug 23 - Sep 05</p>\n        </section>\n      <section>\n          <p>2023-08-22</p>\n          <p>Changes for Aug 08 - Aug 22</p>\n        </section>\n      <section>\n          <p>2023-08-07</p>\n          <p>Changes for Jul 25 - Aug 07</p>\n        </section>\n      <section>\n          <p>2023-07-24</p>\n          <p>Changes for Jul 11 - Jul 24</p>\n        </section>\n      <a target=\"_blank\" href=\"https://developers.notion.com/page/changelog\">All changes</a>\n    </section>\n  </section></div>",
         "author": "",
         "favicon": "https://dev.notion.so/front-static/favicon.ico",
         "source": "developers.notion.com",
@@ -199,7 +199,7 @@
           },
           "plain_text": "Breadcrumb",
           "href": "https://developers.notion.com/reference/block#breadcrumb",
-          "id": "ac1c26d8-0a96-45b7-b916-dea3e826800c"
+          "id": "d98da89f-80f6-452b-9514-b01240fa0825"
         }
       ],
       "is_toggleable": false,
@@ -232,7 +232,7 @@
           "object": "page",
           "id": "c8e25a3b-c0d2-447f-8118-da4c624e9186",
           "created_time": "2023-10-28T06:19:00.000Z",
-          "last_edited_time": "2023-10-28T06:56:00.000Z",
+          "last_edited_time": "2023-11-06T05:17:00.000Z",
           "created_by": {
             "object": "user",
             "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
@@ -241,8 +241,16 @@
             "object": "user",
             "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
           },
-          "cover": null,
-          "icon": null,
+          "cover": {
+            "type": "external",
+            "external": {
+              "url": "https://i.gyazo.com/8bb9a4e65e8e56b674cfa044e2370080.png"
+            }
+          },
+          "icon": {
+            "type": "emoji",
+            "emoji": "🤿"
+          },
           "parent": {
             "type": "workspace",
             "workspace": true
@@ -275,7 +283,7 @@
           },
           "url": "https://www.notion.so/Notion-Renderer-c8e25a3bc0d2447f8118da4c624e9186",
           "public_url": null,
-          "request_id": "3b146686-7dae-4fbd-b6d8-d903bbc46000"
+          "request_id": "fa5e9e8c-a907-43fc-a632-965224e3387f"
         },
         {
           "object": "page",
@@ -332,13 +340,13 @@
           },
           "url": "https://www.notion.so/Parent-Page-744bc4cc94874af19e18cb0aa6f19eb3",
           "public_url": null,
-          "request_id": "ade34565-da56-4a5d-8948-b7d00e84e60c"
+          "request_id": "fc00918d-9a8e-4057-8df0-6311515cc360"
         },
         {
           "object": "page",
           "id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf",
           "created_time": "2023-10-28T06:19:00.000Z",
-          "last_edited_time": "2023-10-28T07:05:00.000Z",
+          "last_edited_time": "2023-11-07T13:18:00.000Z",
           "created_by": {
             "object": "user",
             "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
@@ -372,7 +380,7 @@
                 {
                   "type": "text",
                   "text": {
-                    "content": "Design Sample",
+                    "content": "Design ",
                     "link": null
                   },
                   "annotations": {
@@ -383,7 +391,41 @@
                     "code": false,
                     "color": "default"
                   },
-                  "plain_text": "Design Sample",
+                  "plain_text": "Design ",
+                  "href": null
+                },
+                {
+                  "type": "text",
+                  "text": {
+                    "content": "Sa",
+                    "link": null
+                  },
+                  "annotations": {
+                    "bold": false,
+                    "italic": true,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "Sa",
+                  "href": null
+                },
+                {
+                  "type": "text",
+                  "text": {
+                    "content": "mple",
+                    "link": null
+                  },
+                  "annotations": {
+                    "bold": false,
+                    "italic": false,
+                    "strikethrough": false,
+                    "underline": false,
+                    "code": false,
+                    "color": "default"
+                  },
+                  "plain_text": "mple",
                   "href": null
                 }
               ]
@@ -391,7 +433,7 @@
           },
           "url": "https://www.notion.so/Design-Sample-7ed3a6eebb5e4cdfa94433684d7c56bf",
           "public_url": null,
-          "request_id": "d69aad50-2dca-4915-a13b-b3bc5b7d760e"
+          "request_id": "c747d0f9-4de0-4934-9707-48baabdeca4b"
         }
       ]
     }
@@ -436,7 +478,7 @@
           },
           "plain_text": "Bulleted list item",
           "href": "https://developers.notion.com/reference/block#breadcrumb",
-          "id": "57ef0ca8-2cc2-454d-842c-04bbbb1076b5"
+          "id": "653d2ed9-e8e6-441d-ab3d-9d378f465f5b"
         }
       ],
       "is_toggleable": false,
@@ -444,7 +486,7 @@
     }
   },
   {
-    "id": "8cb695cc-ff76-4e80-9d8d-917635e6538d",
+    "id": "aa2e50ae-4ced-414f-891e-51823ff948f4",
     "type": "bulleted_list",
     "bulleted_list": {
       "items": [
@@ -486,13 +528,13 @@
                 },
                 "plain_text": "hoge",
                 "href": null,
-                "id": "0498abca-9c16-439b-b880-31ae6a0d417c"
+                "id": "1886f688-0538-4fc8-84fb-943f009016fc"
               }
             ],
             "color": "default",
             "children": [
               {
-                "id": "66b7c7ef-4f77-42c5-822f-37e63dffdf8c",
+                "id": "1eafdf82-4682-474d-9fb9-7deaeb0073ad",
                 "type": "bulleted_list",
                 "bulleted_list": {
                   "items": [
@@ -534,7 +576,7 @@
                             },
                             "plain_text": "fuga",
                             "href": null,
-                            "id": "e7c470bf-3220-4a74-a27d-e4cb6c4c1c6c"
+                            "id": "4b7bf84b-91d1-416f-9dc1-c2497b3f40ed"
                           }
                         ],
                         "color": "default"
@@ -584,7 +626,7 @@
                 },
                 "plain_text": "bar",
                 "href": null,
-                "id": "6c96dcc7-b50d-4002-b27c-d018d2fd382a"
+                "id": "cc5caa76-b4e4-43cf-9be2-bd84f308abf2"
               }
             ],
             "color": "default"
@@ -628,7 +670,7 @@
                 },
                 "plain_text": "baz",
                 "href": null,
-                "id": "13ac7840-5e36-4db2-91cd-d24412c805ea"
+                "id": "163f3d62-6d86-424b-bcbd-0619bcf46ab8"
               }
             ],
             "color": "default"
@@ -677,7 +719,7 @@
           },
           "plain_text": "Callout",
           "href": "https://developers.notion.com/reference/block#callout",
-          "id": "e8bdcb03-474f-4d84-97d8-78bc6baa9748"
+          "id": "20ef09a8-5609-4a6f-84ae-616037723b69"
         }
       ],
       "is_toggleable": false,
@@ -722,7 +764,7 @@
           },
           "plain_text": "This is callout block",
           "href": null,
-          "id": "5650c6f9-1467-40e4-8cf3-c7bd3e132219"
+          "id": "2a4d55d6-f533-48bb-a08e-11fb9e022847"
         }
       ],
       "icon": {
@@ -772,7 +814,7 @@
           },
           "plain_text": "Child database",
           "href": "https://developers.notion.com/reference/block#child-database",
-          "id": "1d3d27ed-899b-44a4-80c9-3876266a7a30"
+          "id": "7afe455a-9457-446c-ba56-5c5ddd025125"
         }
       ],
       "is_toggleable": false,
@@ -787,7 +829,7 @@
       "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
     },
     "created_time": "2023-10-28T06:22:00.000Z",
-    "last_edited_time": "2023-10-28T06:22:00.000Z",
+    "last_edited_time": "2023-11-07T02:25:00.000Z",
     "created_by": {
       "object": "user",
       "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
@@ -823,7 +865,7 @@
           "object": "user",
           "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
         },
-        "last_edited_time": "2023-10-28T06:22:00.000Z",
+        "last_edited_time": "2023-11-07T02:25:00.000Z",
         "title": [
           {
             "type": "text",
@@ -846,13 +888,409 @@
         "description": [],
         "is_inline": false,
         "properties": {
+          "Rollup 1": {
+            "id": "%3D%3CGx",
+            "name": "Rollup 1",
+            "type": "rollup",
+            "rollup": {
+              "rollup_property_name": "Name",
+              "relation_property_name": "Related Child database",
+              "rollup_property_id": "title",
+              "relation_property_id": "qY[D",
+              "function": "show_original"
+            }
+          },
+          "Date Rollup": {
+            "id": "C%3Bzr",
+            "name": "Date Rollup",
+            "type": "rollup",
+            "rollup": {
+              "rollup_property_name": "Created time",
+              "relation_property_name": "Related Child database",
+              "rollup_property_id": "USxG",
+              "relation_property_id": "qY[D",
+              "function": "latest_date"
+            }
+          },
+          "Checkbox": {
+            "id": "CkJ%3F",
+            "name": "Checkbox",
+            "type": "checkbox",
+            "checkbox": {}
+          },
+          "Created by": {
+            "id": "EGOy",
+            "name": "Created by",
+            "type": "created_by",
+            "created_by": {}
+          },
+          "Array Rollup": {
+            "id": "HQw%7B",
+            "name": "Array Rollup",
+            "type": "rollup",
+            "rollup": {
+              "rollup_property_name": "Name",
+              "relation_property_name": "Related Child database",
+              "rollup_property_id": "title",
+              "relation_property_id": "qY[D",
+              "function": "show_original"
+            }
+          },
+          "Person": {
+            "id": "K%5Eat",
+            "name": "Person",
+            "type": "people",
+            "people": {}
+          },
+          "Last edited by": {
+            "id": "MIDM",
+            "name": "Last edited by",
+            "type": "last_edited_by",
+            "last_edited_by": {}
+          },
+          "AI summary": {
+            "id": "N%5DBa",
+            "name": "AI summary",
+            "type": "rich_text",
+            "rich_text": {}
+          },
+          "Multi-select": {
+            "id": "Sd%7C%5B",
+            "name": "Multi-select",
+            "type": "multi_select",
+            "multi_select": {
+              "options": [
+                {
+                  "id": "f37d4deb-6c01-4d6c-9479-b6ce1aaa41df",
+                  "name": "multi-select1",
+                  "color": "red"
+                },
+                {
+                  "id": "d47af6be-01c9-45ee-aa87-6c40ecaee90c",
+                  "name": "multi-select2",
+                  "color": "yellow"
+                },
+                {
+                  "id": "142a5ecd-2d77-455d-b294-35c6686316d1",
+                  "name": "multi-select3",
+                  "color": "green"
+                },
+                {
+                  "id": "341dd48f-3c59-4661-afaf-cfa33dd589be",
+                  "name": "multi-select4",
+                  "color": "default"
+                },
+                {
+                  "id": "43563d28-13a1-4b4e-afec-0799b353fa85",
+                  "name": "multi-select5",
+                  "color": "brown"
+                }
+              ]
+            }
+          },
+          "Created time": {
+            "id": "USxG",
+            "name": "Created time",
+            "type": "created_time",
+            "created_time": {}
+          },
+          "Date Formulta": {
+            "id": "VhQl",
+            "name": "Date Formulta",
+            "type": "formula",
+            "formula": {
+              "expression": "{{notion:block_property:niEB:00000000-0000-0000-0000-000000000000:da8dc9fd-77ac-4597-8c35-df32f04bdd4a}}.dateAdd(1, \"days\")"
+            }
+          },
+          "Phone": {
+            "id": "Zg%5D%60",
+            "name": "Phone",
+            "type": "phone_number",
+            "phone_number": {}
+          },
+          "Text": {
+            "id": "%5Bl_x",
+            "name": "Text",
+            "type": "rich_text",
+            "rich_text": {}
+          },
+          "Boolean Formula": {
+            "id": "%5D%7Dtj",
+            "name": "Boolean Formula",
+            "type": "formula",
+            "formula": {
+              "expression": "not {{notion:block_property:CkJ%3F:00000000-0000-0000-0000-000000000000:da8dc9fd-77ac-4597-8c35-df32f04bdd4a}}"
+            }
+          },
+          "URL": {
+            "id": "dh%7BX",
+            "name": "URL",
+            "type": "url",
+            "url": {}
+          },
+          "Status": {
+            "id": "iTg%3D",
+            "name": "Status",
+            "type": "status",
+            "status": {
+              "options": [
+                {
+                  "id": "9390a424-e130-414d-bbcc-242ce7f18eb8",
+                  "name": "Not started",
+                  "color": "brown"
+                },
+                {
+                  "id": "Hop_",
+                  "name": "To-do",
+                  "color": "gray"
+                },
+                {
+                  "id": "47aa2c43-af81-4803-863d-e9b398d31360",
+                  "name": "In progress",
+                  "color": "blue"
+                },
+                {
+                  "id": "zoYy",
+                  "name": "WIP",
+                  "color": "orange"
+                },
+                {
+                  "id": "f72a4293-c52d-42c1-82f2-208c15981e79",
+                  "name": "Done",
+                  "color": "green"
+                },
+                {
+                  "id": "Cvwl",
+                  "name": "Completed",
+                  "color": "red"
+                }
+              ],
+              "groups": [
+                {
+                  "id": "cb4ac8d6-f8d8-4035-a6fd-af287b5f9231",
+                  "name": "To-do",
+                  "color": "gray",
+                  "option_ids": [
+                    "9390a424-e130-414d-bbcc-242ce7f18eb8",
+                    "Hop_"
+                  ]
+                },
+                {
+                  "id": "ba9fce61-5aa2-46aa-a333-05d207e17d58",
+                  "name": "In progress",
+                  "color": "blue",
+                  "option_ids": [
+                    "47aa2c43-af81-4803-863d-e9b398d31360",
+                    "zoYy"
+                  ]
+                },
+                {
+                  "id": "51587d6f-e054-48bb-bcae-c6c2a8651b1d",
+                  "name": "Complete",
+                  "color": "green",
+                  "option_ids": [
+                    "Cvwl",
+                    "f72a4293-c52d-42c1-82f2-208c15981e79"
+                  ]
+                }
+              ]
+            }
+          },
+          "Number Array Rollup": {
+            "id": "ijTU",
+            "name": "Number Array Rollup",
+            "type": "rollup",
+            "rollup": {
+              "rollup_property_name": "Number Formula",
+              "relation_property_name": "Related Child database",
+              "rollup_property_id": "mXX?",
+              "relation_property_id": "qY[D",
+              "function": "show_original"
+            }
+          },
+          "Figma File": {
+            "id": "jT%7C%7B",
+            "name": "Figma File",
+            "type": "relation",
+            "relation": {
+              "database_id": "6f571a2c-d95d-4927-aa0c-8e8bc06e995e",
+              "type": "dual_property",
+              "dual_property": {
+                "synced_property_name": "Related to Child database (Figma File)",
+                "synced_property_id": "WK%60Y"
+              }
+            }
+          },
           "Tags": {
             "id": "k%3FXm",
             "name": "Tags",
             "type": "multi_select",
             "multi_select": {
-              "options": []
+              "options": [
+                {
+                  "id": "efa55e61-ced6-4dde-9f43-54ebea678534",
+                  "name": "tag1",
+                  "color": "red"
+                },
+                {
+                  "id": "8910b3cc-e481-433f-9202-283deedbc21f",
+                  "name": "tag2",
+                  "color": "default"
+                },
+                {
+                  "id": "a6a679ca-fe61-48a0-9ab2-124faf9047db",
+                  "name": "tag3",
+                  "color": "blue"
+                }
+              ]
             }
+          },
+          "Email": {
+            "id": "kCCJ",
+            "name": "Email",
+            "type": "email",
+            "email": {}
+          },
+          "Number": {
+            "id": "k%60Z%3F",
+            "name": "Number",
+            "type": "number",
+            "number": {
+              "format": "number"
+            }
+          },
+          "Child Database": {
+            "id": "lz%7Bj",
+            "name": "Child Database",
+            "type": "unique_id",
+            "unique_id": {
+              "prefix": "CD"
+            }
+          },
+          "Number Formula": {
+            "id": "mXX%3F",
+            "name": "Number Formula",
+            "type": "formula",
+            "formula": {
+              "expression": "1+1"
+            }
+          },
+          "Date": {
+            "id": "niEB",
+            "name": "Date",
+            "type": "date",
+            "date": {}
+          },
+          "Google Drive File": {
+            "id": "n%7C%3FH",
+            "name": "Google Drive File",
+            "type": "relation",
+            "relation": {
+              "database_id": "6f571a2c-d95d-4927-aa0c-8e8bc06e995e",
+              "type": "dual_property",
+              "dual_property": {
+                "synced_property_name": "Related to Child database (Google Drive File)",
+                "synced_property_id": "Qn%3D%3A"
+              }
+            }
+          },
+          "GitHub Pull Requests": {
+            "id": "pwwp",
+            "name": "GitHub Pull Requests",
+            "type": "relation",
+            "relation": {
+              "database_id": "6f571a2c-d95d-4927-aa0c-8e8bc06e995e",
+              "type": "dual_property",
+              "dual_property": {
+                "synced_property_name": "Related to Child database (GitHub Pull Requests)",
+                "synced_property_id": "nTdk"
+              }
+            }
+          },
+          "Related Child database": {
+            "id": "qY%5BD",
+            "name": "Related Child database",
+            "type": "relation",
+            "relation": {
+              "database_id": "9a93d3be-9ef9-4471-8a18-1572525eb5b3",
+              "type": "single_property",
+              "single_property": {}
+            }
+          },
+          "Rollup": {
+            "id": "qtat",
+            "name": "Rollup",
+            "type": "rollup",
+            "rollup": {
+              "rollup_property_name": "Name",
+              "relation_property_name": "Related Child database",
+              "rollup_property_id": "title",
+              "relation_property_id": "qY[D",
+              "function": "count"
+            }
+          },
+          "AI translation": {
+            "id": "rex%3D",
+            "name": "AI translation",
+            "type": "rich_text",
+            "rich_text": {}
+          },
+          "Last edited time": {
+            "id": "wRro",
+            "name": "Last edited time",
+            "type": "last_edited_time",
+            "last_edited_time": {}
+          },
+          "AI key info": {
+            "id": "yx%3Aw",
+            "name": "AI key info",
+            "type": "rich_text",
+            "rich_text": {}
+          },
+          "String Formula": {
+            "id": "%7BKxV",
+            "name": "String Formula",
+            "type": "formula",
+            "formula": {
+              "expression": "substring(\"Notion\",0,3)"
+            }
+          },
+          "Select": {
+            "id": "%7BzcJ",
+            "name": "Select",
+            "type": "select",
+            "select": {
+              "options": [
+                {
+                  "id": "d9c74119-23ce-44b0-8ba8-2df0a0253023",
+                  "name": "select1",
+                  "color": "default"
+                },
+                {
+                  "id": "bc31eaa4-6f91-4833-b881-c33b69b28ad4",
+                  "name": "select2",
+                  "color": "purple"
+                }
+              ]
+            }
+          },
+          "Average Rollup": {
+            "id": "%7CyGg",
+            "name": "Average Rollup",
+            "type": "rollup",
+            "rollup": {
+              "rollup_property_name": "Number",
+              "relation_property_name": "Related Child database",
+              "rollup_property_id": "k`Z?",
+              "relation_property_id": "qY[D",
+              "function": "average"
+            }
+          },
+          "Files & media": {
+            "id": "%7D%3Ep%3D",
+            "name": "Files & media",
+            "type": "files",
+            "files": {}
           },
           "Name": {
             "id": "title",
@@ -868,7 +1306,7 @@
         "url": "https://www.notion.so/9a93d3be9ef944718a181572525eb5b3",
         "public_url": null,
         "archived": false,
-        "request_id": "ed2ec9be-5ea7-422d-945d-2838f68948d1"
+        "request_id": "796246c3-c9d1-4b38-bac5-1031a6a62334"
       }
     }
   },
@@ -912,7 +1350,7 @@
           },
           "plain_text": "Child page",
           "href": "https://developers.notion.com/reference/block#child-page",
-          "id": "0c30dc49-bd31-43d2-af9a-864672217b92"
+          "id": "af997074-9609-408c-8cea-d652fb3d4afd"
         }
       ],
       "is_toggleable": false,
@@ -967,6 +1405,7 @@
         "properties": {
           "title": {
             "id": "title",
+            "next_url": null,
             "type": "title",
             "title": [
               {
@@ -984,14 +1423,15 @@
                   "color": "default"
                 },
                 "plain_text": "Child page",
-                "href": null
+                "href": null,
+                "id": "c3d8fae7-3b81-417f-8707-8b362c05b5a8"
               }
             ]
           }
         },
         "url": "https://www.notion.so/Child-page-c2b895b3a4df4fc9bce8c9bc00983443",
         "public_url": null,
-        "request_id": "0b68e0d7-f1ea-4e65-b5fa-087dae05843e"
+        "request_id": "ca54c1f7-f087-4ef7-9806-b2243fc81cd0"
       }
     }
   },
@@ -1035,7 +1475,7 @@
           },
           "plain_text": "Code",
           "href": "https://developers.notion.com/reference/block#code",
-          "id": "e111c83a-369a-41c1-a817-ac44d4843f73"
+          "id": "aec1b7c1-f9ee-4092-96aa-c77fc8272c1f"
         }
       ],
       "is_toggleable": false,
@@ -1080,7 +1520,7 @@
           },
           "plain_text": "This is code block.",
           "href": null,
-          "id": "5dd1d1a0-670c-4f29-99f7-8118afe96ddd"
+          "id": "6201cf37-9393-4716-b4b8-f43fa21a1c8b"
         }
       ],
       "rich_text": [
@@ -1100,7 +1540,7 @@
           },
           "plain_text": "console.log(\"Hello World!\")",
           "href": null,
-          "id": "53032708-5e9d-4369-a16a-dcb96babbe6d"
+          "id": "8fa95828-c9da-451a-ab0e-8aece437a737"
         }
       ],
       "language": "typescript"
@@ -1146,7 +1586,7 @@
           },
           "plain_text": "Column list and column",
           "href": "https://developers.notion.com/reference/block#column-list-and-column",
-          "id": "edc88a37-25ae-4da5-b40a-84b74da371db"
+          "id": "18d0a83c-0412-40ab-9cd1-bbf7f545d46d"
         }
       ],
       "is_toggleable": false,
@@ -1235,7 +1675,7 @@
                       },
                       "plain_text": "col1",
                       "href": null,
-                      "id": "d8955ebe-1d75-4b30-9356-c1a31bcf644e"
+                      "id": "63046567-c201-4fea-8944-12c6c1cb7154"
                     }
                   ],
                   "color": "default"
@@ -1279,7 +1719,7 @@
                       },
                       "plain_text": "col1 sub item",
                       "href": null,
-                      "id": "3015f04b-c4fd-44d6-a3cf-690deda8ba97"
+                      "id": "58d834a7-c77f-41de-bf0c-609473a5f334"
                     }
                   ],
                   "color": "default"
@@ -1323,7 +1763,7 @@
                       },
                       "plain_text": "col1 sub item",
                       "href": null,
-                      "id": "50790784-901b-4161-ba6e-8dd017cef5bd"
+                      "id": "e49c665e-8c43-4e6a-922c-0a4ff1feb743"
                     }
                   ],
                   "color": "default"
@@ -1392,7 +1832,7 @@
                       },
                       "plain_text": "col2",
                       "href": null,
-                      "id": "2d67c8a6-e8bc-4c72-a74f-df275d1ee8ed"
+                      "id": "ec1ddda5-b6eb-4065-8107-3f3d155a46f3"
                     }
                   ],
                   "color": "default"
@@ -1436,7 +1876,7 @@
                       },
                       "plain_text": "col2 sub item",
                       "href": null,
-                      "id": "00fe6c12-a700-4c92-96c0-65eed73594c7"
+                      "id": "f217e610-cac9-42e1-a841-c783df08625a"
                     }
                   ],
                   "color": "default"
@@ -1480,7 +1920,7 @@
                       },
                       "plain_text": "col2 sub item",
                       "href": null,
-                      "id": "3fb6f299-5140-4bb3-8f24-4b24e1f2ab10"
+                      "id": "08eb2659-a0bb-479a-b616-b8a707d06087"
                     }
                   ],
                   "color": "default"
@@ -1549,7 +1989,7 @@
                       },
                       "plain_text": "col3",
                       "href": null,
-                      "id": "cf05c043-940b-4d20-b0b0-88b13459b23a"
+                      "id": "f271c38b-ef3a-4818-b48f-595232b2e6d7"
                     }
                   ],
                   "color": "default"
@@ -1593,7 +2033,7 @@
                       },
                       "plain_text": "col3 sub item",
                       "href": null,
-                      "id": "188c758e-1117-451a-a63e-11a998373311"
+                      "id": "9ba15447-4789-46e1-ab62-0f4ff05b1038"
                     }
                   ],
                   "color": "default"
@@ -1645,7 +2085,7 @@
           },
           "plain_text": "Divider",
           "href": "https://developers.notion.com/reference/block#divider",
-          "id": "f9a274c2-5b31-4102-a6c7-18baa645349f"
+          "id": "c470da5b-68c8-4afd-a36c-667b021feb4f"
         }
       ],
       "is_toggleable": false,
@@ -1714,7 +2154,7 @@
           },
           "plain_text": "Embed",
           "href": "https://developers.notion.com/reference/block#embed",
-          "id": "452a6ed6-6a6a-4980-9204-311b315169d5"
+          "id": "09a6973b-e7d7-49da-91f7-884c7974c452"
         }
       ],
       "is_toggleable": false,
@@ -1759,7 +2199,7 @@
           },
           "plain_text": "Twitter",
           "href": null,
-          "id": "84a98928-65de-46d3-8c36-c8b3f77c51dd"
+          "id": "090a03cc-68ef-47c9-ae15-d2127553b463"
         }
       ],
       "is_toggleable": false,
@@ -1842,7 +2282,7 @@
           },
           "plain_text": "Speaker Deck",
           "href": null,
-          "id": "a09fa464-5e38-4b0e-9d81-8764a5ddf4d2"
+          "id": "1ad973c9-bde0-481d-a7ce-79cd22410ea8"
         }
       ],
       "is_toggleable": false,
@@ -1927,7 +2367,7 @@
           },
           "plain_text": "Equation",
           "href": "https://developers.notion.com/reference/block#equation",
-          "id": "d2c7630a-b528-40ae-ae06-88ea1f1fbb14"
+          "id": "d70eb2eb-a054-4b2e-b072-4d1cf9d0effb"
         }
       ],
       "is_toggleable": false,
@@ -1998,7 +2438,7 @@
           },
           "plain_text": "File",
           "href": "https://developers.notion.com/reference/block#file",
-          "id": "00a92ddc-800b-4420-a7ea-8cac9aae1662"
+          "id": "55c3c231-25a0-4398-83af-dde07d51e313"
         }
       ],
       "is_toggleable": false,
@@ -2029,8 +2469,8 @@
       "caption": [],
       "type": "file",
       "file": {
-        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/da8dc9fd-77ac-4597-8c35-df32f04bdd4a/02775636-4318-4a55-918c-85fa5dfe85f4/sample-file.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231028%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231028T070543Z&X-Amz-Expires=3600&X-Amz-Signature=b69b7a50847b18cf03436ed5623de8c08fc37c394cf78513dff0e0f8e8648528&X-Amz-SignedHeaders=host&x-id=GetObject",
-        "expiry_time": "2023-10-28T08:05:43.176Z"
+        "url": "https://prod-files-secure.s3.us-west-2.amazonaws.com/da8dc9fd-77ac-4597-8c35-df32f04bdd4a/02775636-4318-4a55-918c-85fa5dfe85f4/sample-file.txt?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20231107%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20231107T132039Z&X-Amz-Expires=3600&X-Amz-Signature=fb0d789733ad0b2189e93ff9bdacf75413568cbd97944c5eebf78cfb17b4429a&X-Amz-SignedHeaders=host&x-id=GetObject",
+        "expiry_time": "2023-11-07T14:20:39.673Z"
       }
     }
   },
@@ -2074,7 +2514,7 @@
           },
           "plain_text": "Heading1",
           "href": "https://developers.notion.com/reference/block#headings",
-          "id": "cf690675-6143-48eb-98e4-4e1ac889bc54"
+          "id": "f3b0d75a-84ed-4c0b-829e-ad1fccd61a2e"
         }
       ],
       "is_toggleable": false,
@@ -2119,7 +2559,7 @@
           },
           "plain_text": "Heading1",
           "href": null,
-          "id": "4d530bb0-dd7b-49c6-99b9-107f4cdc1cd8"
+          "id": "a2e5b218-6a3c-4a88-b28f-f016d880d1a2"
         }
       ],
       "is_toggleable": false,
@@ -2164,7 +2604,7 @@
           },
           "plain_text": "Toggleable Heading1",
           "href": null,
-          "id": "589edb17-66a4-45bf-8c6f-d8905ff70164"
+          "id": "2423e044-7cb5-4c2b-8f09-fecfffb79a0e"
         }
       ],
       "is_toggleable": true,
@@ -2208,7 +2648,7 @@
                 },
                 "plain_text": "child of Toggleable Heading1",
                 "href": null,
-                "id": "987fa18b-28e1-4643-8486-57e208f94c29"
+                "id": "9d714bc8-6fda-4ca4-ad89-9bd042ee7684"
               }
             ],
             "color": "default"
@@ -2257,7 +2697,7 @@
           },
           "plain_text": "Heading2",
           "href": "https://developers.notion.com/reference/block#headings",
-          "id": "3fa3e895-ad50-4e63-8483-fc18c916ecac"
+          "id": "7f5fdfa3-0ccb-4173-a4cc-4b1dd135bd7a"
         }
       ],
       "is_toggleable": false,
@@ -2302,7 +2742,7 @@
           },
           "plain_text": "Heading2",
           "href": null,
-          "id": "a9eb76d9-ccbc-476c-9ac8-cb0506d0719a"
+          "id": "fd0fb44b-1e90-431b-a9d9-55bbcae61840"
         }
       ],
       "is_toggleable": false,
@@ -2347,7 +2787,7 @@
           },
           "plain_text": "Toggleable Heading2 ",
           "href": null,
-          "id": "8738b553-8a0f-4a41-8d00-c0728b8e094d"
+          "id": "3e43b08d-1609-4211-80b1-4a47a64f8855"
         }
       ],
       "is_toggleable": true,
@@ -2391,7 +2831,7 @@
                 },
                 "plain_text": "child of Toggleable Heading2",
                 "href": null,
-                "id": "ade36dba-e8c5-4aa8-a9ef-ebdae325628e"
+                "id": "9bc3c6e6-9895-47b7-afba-3bd94038f8b1"
               }
             ],
             "color": "default"
@@ -2440,7 +2880,7 @@
           },
           "plain_text": "Heading3",
           "href": "https://developers.notion.com/reference/block#headings",
-          "id": "057b5b0c-a522-43f3-9eb2-54795d0e2495"
+          "id": "c687feb7-f520-4b62-bb03-f6d230ba5783"
         }
       ],
       "is_toggleable": false,
@@ -2485,7 +2925,7 @@
           },
           "plain_text": "Heading 3",
           "href": null,
-          "id": "07652b6b-9400-4237-a165-d20aacc3c69a"
+          "id": "ad8008b6-ec75-4d85-a810-c49db082b5ef"
         }
       ],
       "is_toggleable": false,
@@ -2530,7 +2970,7 @@
           },
           "plain_text": "Toggleable Heading3",
           "href": null,
-          "id": "1baaedc1-b035-483e-87c2-09bfd79bde8b"
+          "id": "f7ea8e35-c295-4730-8541-d1de067f152b"
         }
       ],
       "is_toggleable": true,
@@ -2574,7 +3014,7 @@
                 },
                 "plain_text": "child of Toggleable Heading3",
                 "href": null,
-                "id": "9ac4c6bd-348f-4c61-b935-2a983e4b2f41"
+                "id": "ef1c3a22-feb4-468d-8b48-8f91f4729148"
               }
             ],
             "color": "default"
@@ -2623,7 +3063,7 @@
           },
           "plain_text": "Image",
           "href": "https://developers.notion.com/reference/block#image",
-          "id": "04172c4f-bfe3-4f5a-b259-12fdd5ad9435"
+          "id": "167b8926-9f68-4d4c-a5b0-c763d799434b"
         }
       ],
       "is_toggleable": false,
@@ -2698,7 +3138,7 @@
           },
           "plain_text": "Link Preview",
           "href": "https://developers.notion.com/reference/block#link-preview",
-          "id": "0b809f1a-098d-4a6b-90ef-d54771c7fd7f"
+          "id": "379ff5c4-7c81-459e-8b4b-97c04522a69f"
         }
       ],
       "is_toggleable": false,
@@ -2713,7 +3153,7 @@
       "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
     },
     "created_time": "2023-10-28T06:39:00.000Z",
-    "last_edited_time": "2023-10-28T06:39:00.000Z",
+    "last_edited_time": "2023-11-07T13:20:00.000Z",
     "created_by": {
       "object": "user",
       "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
@@ -2729,18 +3169,142 @@
       "url": "https://github.com/udus122/notion-renderer",
       "site_meta": {
         "url": "https://github.com/udus122/notion-renderer",
-        "title": "GitHub - udus122/notion-renderer",
-        "description": "Notion Renderer A fully customizable React renderer for the official Notion API. Note Please note that this package is currently in alpha release. Therefore, there may be significant changes to the API...",
+        "title": "GitHub - udus122/notion-renderer: A fully customizable React renderer for the official Notion API.",
+        "description": "Notion Renderer  A fully customizable React renderer for the official Notion API. Note Please note that this package is currently in alpha release. Therefore, there may be significant changes to the API...",
         "links": [
           "https://github.com/udus122/notion-renderer"
         ],
-        "image": "https://opengraph.githubassets.com/2270afdfcf1d84cb316bc23a3cfdfdc330de2a7b544309fc7654b593ced9e8af/udus122/notion-renderer",
-        "content": "<div>\n            <article><p><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer/blob/alpha/assets/logo.png\"><img src=\"https://github.com/udus122/notion-renderer/raw/alpha/assets/logo.png\" alt=\"Notion Renderer\" /></a></p>\n<h2 id=\"user-content-notion-renderer\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#notion-renderer\">Notion Renderer</a></h2>\n<p>A fully customizable React renderer for the official Notion API.</p>\n<p><span>Note</span><br />\nPlease note that this package is currently in alpha release.<br />\nTherefore, there may be significant changes to the API without prior notice.</p>\n<h2 id=\"user-content-example\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#example\">Example</a></h2>\n<ul>\n<li>Storybook: <a target=\"_blank\" href=\"https://udus122.github.io/notion-renderer/?path=/docs/renderer--docs\">https://udus122.github.io/notion-renderer/?path=/docs/renderer--docs</a></li>\n</ul>\n<h2 id=\"user-content-installation\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#installation\">Installation</a></h2>\n<div><pre>npm install @udus/notion-renderer@alpha</pre></div>\n<h2 id=\"user-content-usage\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#usage\">Usage</a></h2>\n<h3 id=\"user-content-quick-start\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#quick-start\">Quick Start</a></h3>\n<p>First, fetch the blocks of the page you want to render using <a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer/blob/alpha/src/libs/notion/blocks/blocks.ts#L104\"><code>fetchBlockList</code></a>.<br />\nNext, pass the fetched block list to the <a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer/blob/alpha/src/components/Blocks/Renderer.tsx#L24\"><code>BlockRenderer</code></a>.</p>\n<p>If you are using Next.js, you can do it as shown in the sample code below.</p>\n<div><pre><span>import</span> <span>{</span> <span>BlockRenderer</span> <span>}</span> <span>from</span> <span>\"@udus/notion-components/components\"</span><span>;</span>\n<span>import</span> <span>{</span> <span>fetchBlockList</span> <span>}</span> <span>from</span> <span>\"@udus/notion-components/libs\"</span><span>;</span>\n<span>import</span> <span>type</span> <span>{</span> <span>InferGetStaticPropsType</span><span>,</span> <span>NextPage</span> <span>}</span> <span>from</span> <span>\"next\"</span><span>;</span>\n<span>export</span> <span>const</span> <span>getStaticProps</span> <span>=</span> <span>async</span> <span>(</span><span>)</span> <span>=&gt;</span> <span>{</span>\n  <span>const</span> <span>blocks</span> <span>=</span> <span>await</span> <span>fetchBlockList</span><span>(</span><span>\"YOUR_PAGE_ID\"</span><span>)</span><span>;</span>\n  <span>return</span> <span>{</span>\n    <span>props</span>: <span>{</span>\n      blocks<span>,</span>\n    <span>}</span><span>,</span>\n  <span>}</span><span>;</span>\n<span>}</span><span>;</span>\n<span>type</span> <span>Props</span> <span>=</span> <span>InferGetStaticPropsType</span><span>&lt;</span><span>typeof</span> <span>getStaticProps</span><span>&gt;</span><span>;</span>\n<span>const</span> <span>Index</span>: <span>NextPage</span><span>&lt;</span><span>Props</span><span>&gt;</span> <span>=</span> <span>(</span><span>{</span> blocks <span>}</span><span>)</span> <span>=&gt;</span> <span>{</span>\n  <span>return</span> <span>&lt;</span><span>BlockRenderer</span><span></span> <span>blocks</span><span>=</span><span>{</span>blocks<span>}</span> <span>/</span><span>&gt;</span><span>;</span>\n<span>}</span><span>;</span>\n<span>export</span> <span>default</span> <span>Index</span><span>;</span></pre></div>\n<p>And you will need to import CSS styles like below.</p>\n<div><pre><span>// Load the CSS to be used with the Notion Renderer.</span>\n<span>import</span> <span>\"@udus/notion-components/styles/globals.css\"</span><span>;</span>\n<span>// Load the CSS used for rendering equations</span>\n<span>import</span> <span>\"katex/dist/katex.min.css\"</span><span>;</span></pre></div>\n<p>Please set your Notion integration token as an environment variable named <code>NOTION_TOKEN</code>.</p>\n<div><pre><code>.env\nNOTION_TOKEN=secret_epO17gyx***********************************\n</code></pre></div>\n<h3 id=\"user-content-custom-component\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#custom-component\">Custom Component</a></h3>\n<p>You can render the page using a custom component instead of the default components, you can also create and use your own components.\nPlease see the example of creating custom components at the following link: <a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer/tree/alpha/src/components/Blocks/Custom\">https://github.com/udus122/notion-renderer/tree/alpha/src/components/Blocks/Custom</a></p>\n<div><pre><span>export</span> <span>default</span> <span>(</span><span>)</span> <span>=&gt;</span> <span>(</span>\n  <span>&lt;</span><span>BlockRenderer</span>\n    <span>blocks</span><span>=</span><span>{</span><span>blocks</span><span>}</span>\n    <span>blockMapper</span><span>=</span><span>{</span>\n      <span>toggle</span>: <span>OpenedToggle</span><span>,</span>\n      <span>heading_1</span>: <span>OpenedHeading1</span><span>,</span>\n      <span>heading_2</span>: <span>OpenedHeading2</span><span>,</span>\n      <span>heading_3</span>: <span>OpenedHeading3</span><span>,</span>\n    <span>}</span> <span>/</span><span>&gt;</span>\n<span>)</span></pre></div>\n<h4 id=\"user-content-color\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#color\">Color</a></h4>\n<p>If you want to use dark mode, please set the theme to <code>theme=\"dark\"</code> as follows.(<code>theme=\"light\"</code> is default.)</p>\n<div><pre><span>export</span> <span>default</span> <span>(</span><span>)</span> <span>=&gt;</span> <span>(</span>\n  <span>&lt;</span><span>BlockRenderer</span> <span>blocks</span><span>=</span><span>{</span><span>blocks</span><span>}</span> <span>theme</span><span>=</span><span>\"dark\"</span> <span>/</span><span>&gt;</span>\n<span>)</span></pre></div>\n<p>If you want to change the color theme, please overwrite the CSS variables set to .notion-light or .notion-dark as follows. The default values are listed below.</p>\n<div><pre>.<span>notion-light</span> {\n  <span>--color-text-default</span><span>:</span> <span><span>#</span>37352f</span>;\n  <span>--color-bg-default</span><span>:</span> <span><span>#</span>fff</span>;\n  <span>--color-pill-default</span><span>:</span> <span>rgb</span>(<span>206</span> <span>205</span> <span>202</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-gray</span><span>:</span> <span><span>#</span>9b9a97</span>;\n  <span>--color-bg-gray</span><span>:</span> <span><span>#</span>ebeced</span>;\n  <span>--color-pill-gray</span><span>:</span> <span>rgb</span>(<span>155</span> <span>154</span> <span>151</span> <span>/</span> <span>40<span>%</span></span>);\n  <span>--color-text-brown</span><span>:</span> <span><span>#</span>64473a</span>;\n  <span>--color-bg-brown</span><span>:</span> <span><span>#</span>e9e5e3</span>;\n  <span>--color-pill-brown</span><span>:</span> <span>rgb</span>(<span>140</span> <span>46</span> <span>0</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-orange</span><span>:</span> <span><span>#</span>d9730d</span>;\n  <span>--color-bg-orange</span><span>:</span> <span><span>#</span>faebdd</span>;\n  <span>--color-pill-orange</span><span>:</span> <span>rgb</span>(<span>245</span> <span>93</span> <span>0</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-yellow</span><span>:</span> <span><span>#</span>dfab01</span>;\n  <span>--color-bg-yellow</span><span>:</span> <span><span>#</span>fbf3db</span>;\n  <span>--color-pill-yellow</span><span>:</span> <span>rgb</span>(<span>233</span> <span>168</span> <span>0</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-green</span><span>:</span> <span><span>#</span>0f7b6c</span>;\n  <span>--color-bg-green</span><span>:</span> <span><span>#</span>ddedea</span>;\n  <span>--color-pill-green</span><span>:</span> <span>rgb</span>(<span>0</span> <span>135</span> <span>107</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-blue</span><span>:</span> <span><span>#</span>0b6e99</span>;\n  <span>--color-bg-blue</span><span>:</span> <span><span>#</span>ddebf1</span>;\n  <span>--color-pill-blue</span><span>:</span> <span>rgb</span>(<span>0</span> <span>120</span> <span>223</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-purple</span><span>:</span> <span><span>#</span>6940a5</span>;\n  <span>--color-bg-purple</span><span>:</span> <span><span>#</span>eae4f2</span>;\n  <span>--color-pill-purple</span><span>:</span> <span>rgb</span>(<span>103</span> <span>36</span> <span>222</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-pink</span><span>:</span> <span><span>#</span>ad1a72</span>;\n  <span>--color-bg-pink</span><span>:</span> <span><span>#</span>f4dfeb</span>;\n  <span>--color-pill-pink</span><span>:</span> <span>rgb</span>(<span>221</span> <span>0</span> <span>129</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-red</span><span>:</span> <span><span>#</span>e03e3e</span>;\n  <span>--color-bg-red</span><span>:</span> <span><span>#</span>fbe4e4</span>;\n  <span>--color-pill-red</span><span>:</span> <span>rgb</span>(<span>255</span> <span>0</span> <span>26</span> <span>/</span> <span>20<span>%</span></span>);\n}\n.<span>notion-dark</span> {\n  <span>--color-text-default</span><span>:</span> <span>rgb</span>(<span>255</span> <span>255</span> <span>255</span> <span>/</span> <span>90<span>%</span></span>);\n  <span>--color-bg-default</span><span>:</span> <span><span>#</span>2f3437</span>;\n  <span>--color-pill-default</span><span>:</span> <span>rgb</span>(<span>206</span> <span>205</span> <span>202</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-gray</span><span>:</span> <span>rgb</span>(<span>151</span> <span>154</span> <span>155</span> <span>/</span> <span>95<span>%</span></span>);\n  <span>--color-bg-gray</span><span>:</span> <span><span>#</span>454b4e</span>;\n  <span>--color-pill-gray</span><span>:</span> <span>rgb</span>(<span>151</span> <span>154</span> <span>155</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-brown</span><span>:</span> <span><span>#</span>937264</span>;\n  <span>--color-bg-brown</span><span>:</span> <span><span>#</span>434040</span>;\n  <span>--color-pill-brown</span><span>:</span> <span>rgb</span>(<span>147</span> <span>114</span> <span>100</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-orange</span><span>:</span> <span><span>#</span>ffa344</span>;\n  <span>--color-bg-orange</span><span>:</span> <span><span>#</span>594a3a</span>;\n  <span>--color-pill-orange</span><span>:</span> <span>rgb</span>(<span>255</span> <span>163</span> <span>68</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-yellow</span><span>:</span> <span><span>#</span>ffdc49</span>;\n  <span>--color-bg-yellow</span><span>:</span> <span><span>#</span>59563b</span>;\n  <span>--color-pill-yellow</span><span>:</span> <span>rgb</span>(<span>255</span> <span>220</span> <span>73</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-green</span><span>:</span> <span><span>#</span>4dab9a</span>;\n  <span>--color-bg-green</span><span>:</span> <span><span>#</span>354c4b</span>;\n  <span>--color-pill-green</span><span>:</span> <span>rgb</span>(<span>77</span> <span>171</span> <span>154</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-blue</span><span>:</span> <span><span>#</span>529cca</span>;\n  <span>--color-bg-blue</span><span>:</span> <span><span>#</span>364954</span>;\n  <span>--color-pill-blue</span><span>:</span> <span>rgb</span>(<span>82</span> <span>156</span> <span>202</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-purple</span><span>:</span> <span><span>#</span>9a6dd7</span>;\n  <span>--color-bg-purple</span><span>:</span> <span><span>#</span>443f57</span>;\n  <span>--color-pill-purple</span><span>:</span> <span>rgb</span>(<span>154</span> <span>109</span> <span>215</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-pink</span><span>:</span> <span><span>#</span>e255a1</span>;\n  <span>--color-bg-pink</span><span>:</span> <span><span>#</span>533b4c</span>;\n  <span>--color-pill-pink</span><span>:</span> <span>rgb</span>(<span>226</span> <span>85</span> <span>161</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-red</span><span>:</span> <span><span>#</span>ff7369</span>;\n  <span>--color-bg-red</span><span>:</span> <span><span>#</span>594141</span>;\n  <span>--color-pill-red</span><span>:</span> <span>rgb</span>(<span>255</span> <span>115</span> <span>105</span> <span>/</span> <span>50<span>%</span></span>);\n}</pre></div>\n<h2 id=\"user-content-supported-objects\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#supported-objects\">Supported Objects</a></h2>\n<h3 id=\"user-content-block\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#block\"></a><a target=\"_blank\" href=\"https://developers.notion.com/reference/block\">Block</a></h3>\n<p>Most common block types are supported.</p>\n<table>\n<thead>\n<tr>\n<th>Block Type</th>\n<th>Supported</th>\n<th>Mapper Field Name</th>\n<th>HTML Tag</th>\n<th>Notes</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Audio</td>\n<td>✅</td>\n<td><code>audio</code></td>\n<td><code>&lt;audio&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#bookmark\">Bookmark</a></td>\n<td>✅</td>\n<td><code>bookmark</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td>When retrieving an object from the API, we use <a target=\"_blank\" href=\"https://github.com/extractus/article-extractor\">@extractus/article-extractor</a> to obtain meta information of the site such as OGP images and descriptions.</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#breadcrumb\">Breadcrumb</a></td>\n<td>✅</td>\n<td><code>breadcrumb</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td>When retrieving an object from the API, we recursively obtain the parent page.</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#breadcrumb\">Bulleted list item</a></td>\n<td>✅</td>\n<td><code>bullted_list</code>/<code>bullted_list_item</code></td>\n<td><code>&lt;ul&gt;</code>/<code>&lt;li&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#callout\">Callout</a></td>\n<td>✅</td>\n<td><code>callout</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#child-database\">Child database</a></td>\n<td>✅</td>\n<td><code>child_database</code></td>\n<td><code>&lt;Link&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#child-page\">Child page</a></td>\n<td>✅</td>\n<td><code>child_page</code></td>\n<td><code>&lt;Link&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#code\">Code</a></td>\n<td>✅</td>\n<td><code>code</code></td>\n<td><code>&lt;pre&gt;&lt;code&gt;</code></td>\n<td>By default, SyntaxHighlight is not included. If necessary, please create a custom component.</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#column-list-and-column\">Column list and column</a></td>\n<td>✅</td>\n<td><code>column_list</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#divider\">Divider</a></td>\n<td>✅</td>\n<td><code>divider</code></td>\n<td><code>&lt;hr&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#embed\">Embed</a></td>\n<td>✅</td>\n<td><code>embed</code></td>\n<td>passing the <a target=\"_blank\" href=\"https://oembed.com/\">oEmbed</a> content to <code>dangerouslySetInnerHTML</code></td>\n<td>When retrieving an object from the API, we use <a target=\"_blank\" href=\"https://github.com/extractus/oembed-extractor\">@extractus/oembed-extractor</a> to obtain the oEmbed content.</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#equation\">Equation</a></td>\n<td>✅</td>\n<td><code>equation</code></td>\n<td><a target=\"_blank\" href=\"https://katex.org/\">katex</a></td>\n<td>In order to render properly, you need to import <code>katex/dist/katex.min.css</code>.</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#file\">File</a></td>\n<td>✅</td>\n<td><code>file</code></td>\n<td><code>&lt;Link&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#headings\">Heading1</a></td>\n<td>✅</td>\n<td><code>heading_1</code></td>\n<td><code>&lt;h1&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#headings\">Heading2</a></td>\n<td>✅</td>\n<td><code>heading_2</code></td>\n<td><code>&lt;h2&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#headings\">Heading3</a></td>\n<td>✅</td>\n<td><code>heading_3</code></td>\n<td><code>&lt;h3&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#image\">Image</a></td>\n<td>✅</td>\n<td><code>image</code></td>\n<td><code>&lt;img&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#link-preview\">Link Preview</a></td>\n<td>✅</td>\n<td><code>link_preview</code></td>\n<td><code>&lt;Link&gt;</code></td>\n<td>When retrieving an object from the API, we use <a target=\"_blank\" href=\"https://github.com/extractus/article-extractor\">@extractus/article-extractor</a> to obtain meta information of the site such as OGP images and descriptions.</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#numbered-list-item\">Numbered lit item</a></td>\n<td>✅</td>\n<td><code>numbered_list</code>/<code>numbered_list_item</code></td>\n<td><code>&lt;ol&gt;</code>/<code>&lt;li&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#paragraph\">Paragraph</a></td>\n<td>✅</td>\n<td><code>paragraph</code></td>\n<td><code>&lt;p&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#pdf\">PDF</a></td>\n<td>✅</td>\n<td><code>pdf</code></td>\n<td><code>&lt;object type=\"application/pdf&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#quote\">Quote</a></td>\n<td>✅</td>\n<td><code>quote</code></td>\n<td><code>&lt;blockquote&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#synced-block\">Synced block</a></td>\n<td>✅</td>\n<td><code>synced_block</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#table\">Table</a></td>\n<td>✅</td>\n<td><code>table</code></td>\n<td><code>&lt;table&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#table\">Table</a></td>\n<td>✅</td>\n<td><code>table</code></td>\n<td><code>&lt;table&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#table-of-contents\">Table of contents</a></td>\n<td>✅</td>\n<td><code>table_of_contents</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#table-of-contents\">Template</a></td>\n<td>❌</td>\n<td><code>template</code></td>\n<td></td>\n<td>Deprecated</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#to-do\">To do</a></td>\n<td>✅</td>\n<td><code>to_do</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#toggle-blocks\">Toggle Blocks</a></td>\n<td>✅</td>\n<td><code>toggle</code></td>\n<td><code>&lt;details&gt;&lt;summary&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#video\">Video</a></td>\n<td>✅</td>\n<td><code>video</code></td>\n<td><code>&lt;video&gt;</code></td>\n<td>YouTube is supported through the oEmbed API.</td>\n</tr>\n</tbody>\n</table>\n<h4 id=\"user-content-rich-text\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#rich-text\"></a><a target=\"_blank\" href=\"https://developers.notion.com/reference/rich-text#rich-text-type-objects\">Rich text</a></h4>\n<table>\n<thead>\n<tr>\n<th>Rich text Type</th>\n<th>Supported</th>\n<th>Mapper Field Name</th>\n<th>HTML Tag</th>\n<th>Notes</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/rich-text#equation\">Equation</a></td>\n<td>✅</td>\n<td><code>equation</code></td>\n<td><a target=\"_blank\" href=\"https://katex.org/\">katex</a></td>\n<td>In order to render properly, you need to import <code>katex/dist/katex.min.css</code>.</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/rich-text#mention\">Mention</a></td>\n<td>✅</td>\n<td><code>mention</code></td>\n<td><code>&lt;span&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/rich-text#text\">Text</a></td>\n<td>✅</td>\n<td><code>text</code></td>\n<td><code>&lt;span&gt;</code></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<h5 id=\"user-content-annotation\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#annotation\"></a><a target=\"_blank\" href=\"https://developers.notion.com/reference/rich-text#the-annotation-object\">Annotation</a></h5>\n<table>\n<thead>\n<tr>\n<th>Annotation Type</th>\n<th>Supported</th>\n<th>Mapper Field Name</th>\n<th>HTML Tag</th>\n<th>Notes</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Bold</td>\n<td>✅</td>\n<td><code>bold</code></td>\n<td><code>&lt;strong&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td>Italic</td>\n<td>✅</td>\n<td><code>italic</code></td>\n<td><code>&lt;em&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td>Strikethrough</td>\n<td>✅</td>\n<td><code>strikethrough</code></td>\n<td><code>&lt;del&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td>Underline</td>\n<td>✅</td>\n<td><code>underline</code></td>\n<td><code>&lt;u&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td>Code</td>\n<td>✅</td>\n<td><code>code</code></td>\n<td><code>&lt;code&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td>Color</td>\n<td>✅</td>\n<td><code>color</code></td>\n<td><code>&lt;span&gt;</code></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"user-content-page\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#page\">Page</a></h3>\n<p>comming soon.</p>\n<h3 id=\"user-content-database\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#database\">Database</a></h3>\n<p>comming soon.</p>\n<h2 id=\"user-content-contributing\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#contributing\">Contributing</a></h2>\n<p>Pull requests are welcome.</p>\n<h2 id=\"user-content-license\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#license\">License</a></h2>\n<p><a target=\"_blank\" href=\"https://choosealicense.com/licenses/mit/\">MIT</a></p>\n</article>\n          </div>",
+        "image": "https://repository-images.githubusercontent.com/622398220/cccadf1e-b3e5-425f-ae15-33632cc2ccf1",
+        "content": "<div>\n            <article><p><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer/blob/alpha/assets/logo.png\"><img src=\"https://github.com/udus122/notion-renderer/raw/alpha/assets/logo.png\" alt=\"Notion Renderer\" /></a></p>\n<h2 id=\"user-content-notion-renderer\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#notion-renderer\">Notion Renderer</a></h2>\n<p><a target=\"_blank\" href=\"https://camo.githubusercontent.com/e1aa50d32fe8aaec8a112093fde0ab013de9e6da07ceb9177238bd0ad6c9c363/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f253430756475732532466e6f74696f6e2d72656e6465726572\"><img src=\"https://camo.githubusercontent.com/e1aa50d32fe8aaec8a112093fde0ab013de9e6da07ceb9177238bd0ad6c9c363/68747470733a2f2f696d672e736869656c64732e696f2f6e706d2f762f253430756475732532466e6f74696f6e2d72656e6465726572\" alt=\"npm version\" /></a> <a target=\"_blank\" href=\"https://camo.githubusercontent.com/e90f43dd8876e97bd40ac8bf4bec70d1e52ad1cb83425d9c4069af1744093ea7/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f756475733132322f6e6f74696f6e2d72656e6465726572\"><img src=\"https://camo.githubusercontent.com/e90f43dd8876e97bd40ac8bf4bec70d1e52ad1cb83425d9c4069af1744093ea7/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f6c6963656e73652f756475733132322f6e6f74696f6e2d72656e6465726572\" alt=\"GitHub License\" /></a> <a target=\"_blank\" href=\"https://camo.githubusercontent.com/75e60e31d949e1152a818b86e32bfc35441ab969fe2c51480c3a3e821d8e83af/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f756475733132322f6e6f74696f6e2d72656e64657265723f7374796c653d736f6369616c\"><img src=\"https://camo.githubusercontent.com/75e60e31d949e1152a818b86e32bfc35441ab969fe2c51480c3a3e821d8e83af/68747470733a2f2f696d672e736869656c64732e696f2f6769746875622f73746172732f756475733132322f6e6f74696f6e2d72656e64657265723f7374796c653d736f6369616c\" alt=\"GitHub Repo stars\" /></a></p>\n<p>A fully customizable React renderer for the official Notion API.</p>\n<p><span>Note</span><br />\nPlease note that this package is currently in alpha release.<br />\nTherefore, there may be significant changes to the API without prior notice.</p>\n<h2 id=\"user-content-example\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#example\">Example</a></h2>\n<ul>\n<li>Storybook: <a target=\"_blank\" href=\"https://udus122.github.io/notion-renderer/?path=/docs/renderer--docs\">https://udus122.github.io/notion-renderer/?path=/docs/renderer--docs</a></li>\n</ul>\n<h2 id=\"user-content-installation\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#installation\">Installation</a></h2>\n<div><pre>npm install @udus/notion-renderer@alpha</pre></div>\n<h2 id=\"user-content-usage\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#usage\">Usage</a></h2>\n<h3 id=\"user-content-quick-start\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#quick-start\">Quick Start</a></h3>\n<p>First, fetch the blocks of the page you want to render using <a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer/blob/alpha/src/libs/notion/blocks/blocks.ts#L104\"><code>fetchBlockList</code></a>.<br />\nNext, pass the fetched block list to the <a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer/blob/alpha/src/components/Blocks/Renderer.tsx#L24\"><code>BlockRenderer</code></a>.</p>\n<p>If you are using Next.js, you can do it as shown in the sample code below.</p>\n<div><pre><span>import</span> <span>{</span> <span>BlockRenderer</span> <span>}</span> <span>from</span> <span>\"@udus/notion-components/components\"</span><span>;</span>\n<span>import</span> <span>{</span> <span>fetchBlockList</span> <span>}</span> <span>from</span> <span>\"@udus/notion-components/libs\"</span><span>;</span>\n<span>import</span> <span>type</span> <span>{</span> <span>InferGetStaticPropsType</span><span>,</span> <span>NextPage</span> <span>}</span> <span>from</span> <span>\"next\"</span><span>;</span>\n<span>export</span> <span>const</span> <span>getStaticProps</span> <span>=</span> <span>async</span> <span>(</span><span>)</span> <span>=&gt;</span> <span>{</span>\n  <span>const</span> <span>blocks</span> <span>=</span> <span>await</span> <span>fetchBlockList</span><span>(</span><span>\"YOUR_PAGE_ID\"</span><span>)</span><span>;</span>\n  <span>return</span> <span>{</span>\n    <span>props</span>: <span>{</span>\n      blocks<span>,</span>\n    <span>}</span><span>,</span>\n  <span>}</span><span>;</span>\n<span>}</span><span>;</span>\n<span>type</span> <span>Props</span> <span>=</span> <span>InferGetStaticPropsType</span><span>&lt;</span><span>typeof</span> <span>getStaticProps</span><span>&gt;</span><span>;</span>\n<span>const</span> <span>Index</span>: <span>NextPage</span><span>&lt;</span><span>Props</span><span>&gt;</span> <span>=</span> <span>(</span><span>{</span> blocks <span>}</span><span>)</span> <span>=&gt;</span> <span>{</span>\n  <span>return</span> <span>&lt;</span><span>BlockRenderer</span><span></span> <span>blocks</span><span>=</span><span>{</span>blocks<span>}</span> <span>/</span><span>&gt;</span><span>;</span>\n<span>}</span><span>;</span>\n<span>export</span> <span>default</span> <span>Index</span><span>;</span></pre></div>\n<p>And you will need to import CSS styles like below.</p>\n<div><pre><span>// Load the CSS to be used with the Notion Renderer.</span>\n<span>import</span> <span>\"@udus/notion-components/styles/globals.css\"</span><span>;</span>\n<span>// Load the CSS used for rendering equations</span>\n<span>import</span> <span>\"katex/dist/katex.min.css\"</span><span>;</span></pre></div>\n<p>Please set your Notion integration token as an environment variable named <code>NOTION_TOKEN</code>.</p>\n<div><pre><code>.env\nNOTION_TOKEN=secret_epO17gyx***********************************\n</code></pre></div>\n<h3 id=\"user-content-custom-component\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#custom-component\">Custom Component</a></h3>\n<p>You can render the page using a custom component instead of the default components, you can also create and use your own components.\nPlease see the example of creating custom components at the following link: <a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer/tree/alpha/src/components/Blocks/Custom\">https://github.com/udus122/notion-renderer/tree/alpha/src/components/Blocks/Custom</a></p>\n<div><pre><span>export</span> <span>default</span> <span>(</span><span>)</span> <span>=&gt;</span> <span>(</span>\n  <span>&lt;</span><span>BlockRenderer</span>\n    <span>blocks</span><span>=</span><span>{</span><span>blocks</span><span>}</span>\n    <span>blockMapper</span><span>=</span><span>{</span>\n      <span>toggle</span>: <span>OpenedToggle</span><span>,</span>\n      <span>heading_1</span>: <span>OpenedHeading1</span><span>,</span>\n      <span>heading_2</span>: <span>OpenedHeading2</span><span>,</span>\n      <span>heading_3</span>: <span>OpenedHeading3</span><span>,</span>\n    <span>}</span> <span>/</span><span>&gt;</span>\n<span>)</span></pre></div>\n<h4 id=\"user-content-color\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#color\">Color</a></h4>\n<p>If you want to use dark mode, please set the theme to <code>theme=\"dark\"</code> as follows.(<code>theme=\"light\"</code> is default.)</p>\n<div><pre><span>export</span> <span>default</span> <span>(</span><span>)</span> <span>=&gt;</span> <span>(</span>\n  <span>&lt;</span><span>BlockRenderer</span> <span>blocks</span><span>=</span><span>{</span><span>blocks</span><span>}</span> <span>theme</span><span>=</span><span>\"dark\"</span> <span>/</span><span>&gt;</span>\n<span>)</span></pre></div>\n<p>If you want to change the color theme, please overwrite the CSS variables set to .notion-light or .notion-dark as follows. The default values are listed below.</p>\n<div><pre>.<span>notion-light</span> {\n  <span>--color-text-default</span><span>:</span> <span><span>#</span>37352f</span>;\n  <span>--color-bg-default</span><span>:</span> <span><span>#</span>fff</span>;\n  <span>--color-pill-default</span><span>:</span> <span>rgb</span>(<span>206</span> <span>205</span> <span>202</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-gray</span><span>:</span> <span><span>#</span>9b9a97</span>;\n  <span>--color-bg-gray</span><span>:</span> <span><span>#</span>ebeced</span>;\n  <span>--color-pill-gray</span><span>:</span> <span>rgb</span>(<span>155</span> <span>154</span> <span>151</span> <span>/</span> <span>40<span>%</span></span>);\n  <span>--color-text-brown</span><span>:</span> <span><span>#</span>64473a</span>;\n  <span>--color-bg-brown</span><span>:</span> <span><span>#</span>e9e5e3</span>;\n  <span>--color-pill-brown</span><span>:</span> <span>rgb</span>(<span>140</span> <span>46</span> <span>0</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-orange</span><span>:</span> <span><span>#</span>d9730d</span>;\n  <span>--color-bg-orange</span><span>:</span> <span><span>#</span>faebdd</span>;\n  <span>--color-pill-orange</span><span>:</span> <span>rgb</span>(<span>245</span> <span>93</span> <span>0</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-yellow</span><span>:</span> <span><span>#</span>dfab01</span>;\n  <span>--color-bg-yellow</span><span>:</span> <span><span>#</span>fbf3db</span>;\n  <span>--color-pill-yellow</span><span>:</span> <span>rgb</span>(<span>233</span> <span>168</span> <span>0</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-green</span><span>:</span> <span><span>#</span>0f7b6c</span>;\n  <span>--color-bg-green</span><span>:</span> <span><span>#</span>ddedea</span>;\n  <span>--color-pill-green</span><span>:</span> <span>rgb</span>(<span>0</span> <span>135</span> <span>107</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-blue</span><span>:</span> <span><span>#</span>0b6e99</span>;\n  <span>--color-bg-blue</span><span>:</span> <span><span>#</span>ddebf1</span>;\n  <span>--color-pill-blue</span><span>:</span> <span>rgb</span>(<span>0</span> <span>120</span> <span>223</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-purple</span><span>:</span> <span><span>#</span>6940a5</span>;\n  <span>--color-bg-purple</span><span>:</span> <span><span>#</span>eae4f2</span>;\n  <span>--color-pill-purple</span><span>:</span> <span>rgb</span>(<span>103</span> <span>36</span> <span>222</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-pink</span><span>:</span> <span><span>#</span>ad1a72</span>;\n  <span>--color-bg-pink</span><span>:</span> <span><span>#</span>f4dfeb</span>;\n  <span>--color-pill-pink</span><span>:</span> <span>rgb</span>(<span>221</span> <span>0</span> <span>129</span> <span>/</span> <span>20<span>%</span></span>);\n  <span>--color-text-red</span><span>:</span> <span><span>#</span>e03e3e</span>;\n  <span>--color-bg-red</span><span>:</span> <span><span>#</span>fbe4e4</span>;\n  <span>--color-pill-red</span><span>:</span> <span>rgb</span>(<span>255</span> <span>0</span> <span>26</span> <span>/</span> <span>20<span>%</span></span>);\n}\n.<span>notion-dark</span> {\n  <span>--color-text-default</span><span>:</span> <span>rgb</span>(<span>255</span> <span>255</span> <span>255</span> <span>/</span> <span>90<span>%</span></span>);\n  <span>--color-bg-default</span><span>:</span> <span><span>#</span>2f3437</span>;\n  <span>--color-pill-default</span><span>:</span> <span>rgb</span>(<span>206</span> <span>205</span> <span>202</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-gray</span><span>:</span> <span>rgb</span>(<span>151</span> <span>154</span> <span>155</span> <span>/</span> <span>95<span>%</span></span>);\n  <span>--color-bg-gray</span><span>:</span> <span><span>#</span>454b4e</span>;\n  <span>--color-pill-gray</span><span>:</span> <span>rgb</span>(<span>151</span> <span>154</span> <span>155</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-brown</span><span>:</span> <span><span>#</span>937264</span>;\n  <span>--color-bg-brown</span><span>:</span> <span><span>#</span>434040</span>;\n  <span>--color-pill-brown</span><span>:</span> <span>rgb</span>(<span>147</span> <span>114</span> <span>100</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-orange</span><span>:</span> <span><span>#</span>ffa344</span>;\n  <span>--color-bg-orange</span><span>:</span> <span><span>#</span>594a3a</span>;\n  <span>--color-pill-orange</span><span>:</span> <span>rgb</span>(<span>255</span> <span>163</span> <span>68</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-yellow</span><span>:</span> <span><span>#</span>ffdc49</span>;\n  <span>--color-bg-yellow</span><span>:</span> <span><span>#</span>59563b</span>;\n  <span>--color-pill-yellow</span><span>:</span> <span>rgb</span>(<span>255</span> <span>220</span> <span>73</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-green</span><span>:</span> <span><span>#</span>4dab9a</span>;\n  <span>--color-bg-green</span><span>:</span> <span><span>#</span>354c4b</span>;\n  <span>--color-pill-green</span><span>:</span> <span>rgb</span>(<span>77</span> <span>171</span> <span>154</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-blue</span><span>:</span> <span><span>#</span>529cca</span>;\n  <span>--color-bg-blue</span><span>:</span> <span><span>#</span>364954</span>;\n  <span>--color-pill-blue</span><span>:</span> <span>rgb</span>(<span>82</span> <span>156</span> <span>202</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-purple</span><span>:</span> <span><span>#</span>9a6dd7</span>;\n  <span>--color-bg-purple</span><span>:</span> <span><span>#</span>443f57</span>;\n  <span>--color-pill-purple</span><span>:</span> <span>rgb</span>(<span>154</span> <span>109</span> <span>215</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-pink</span><span>:</span> <span><span>#</span>e255a1</span>;\n  <span>--color-bg-pink</span><span>:</span> <span><span>#</span>533b4c</span>;\n  <span>--color-pill-pink</span><span>:</span> <span>rgb</span>(<span>226</span> <span>85</span> <span>161</span> <span>/</span> <span>50<span>%</span></span>);\n  <span>--color-text-red</span><span>:</span> <span><span>#</span>ff7369</span>;\n  <span>--color-bg-red</span><span>:</span> <span><span>#</span>594141</span>;\n  <span>--color-pill-red</span><span>:</span> <span>rgb</span>(<span>255</span> <span>115</span> <span>105</span> <span>/</span> <span>50<span>%</span></span>);\n}</pre></div>\n<h2 id=\"user-content-supported-objects\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#supported-objects\">Supported Objects</a></h2>\n<h3 id=\"user-content-block\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#block\"></a><a target=\"_blank\" href=\"https://developers.notion.com/reference/block\">Block</a></h3>\n<p>Most common block types are supported.</p>\n<table>\n<thead>\n<tr>\n<th>Block Type</th>\n<th>Supported</th>\n<th>Mapper Field Name</th>\n<th>HTML Tag</th>\n<th>Notes</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Audio</td>\n<td>✅</td>\n<td><code>audio</code></td>\n<td><code>&lt;audio&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#bookmark\">Bookmark</a></td>\n<td>✅</td>\n<td><code>bookmark</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td>When retrieving an object from the API, we use <a target=\"_blank\" href=\"https://github.com/extractus/article-extractor\">@extractus/article-extractor</a> to obtain meta information of the site such as OGP images and descriptions.</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#breadcrumb\">Breadcrumb</a></td>\n<td>✅</td>\n<td><code>breadcrumb</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td>When retrieving an object from the API, we recursively obtain the parent page.</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#breadcrumb\">Bulleted list item</a></td>\n<td>✅</td>\n<td><code>bullted_list</code>/<code>bullted_list_item</code></td>\n<td><code>&lt;ul&gt;</code>/<code>&lt;li&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#callout\">Callout</a></td>\n<td>✅</td>\n<td><code>callout</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#child-database\">Child database</a></td>\n<td>✅</td>\n<td><code>child_database</code></td>\n<td><code>&lt;Link&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#child-page\">Child page</a></td>\n<td>✅</td>\n<td><code>child_page</code></td>\n<td><code>&lt;Link&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#code\">Code</a></td>\n<td>✅</td>\n<td><code>code</code></td>\n<td><code>&lt;pre&gt;&lt;code&gt;</code></td>\n<td>By default, SyntaxHighlight is not included. If necessary, please create a custom component.</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#column-list-and-column\">Column list and column</a></td>\n<td>✅</td>\n<td><code>column_list</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#divider\">Divider</a></td>\n<td>✅</td>\n<td><code>divider</code></td>\n<td><code>&lt;hr&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#embed\">Embed</a></td>\n<td>✅</td>\n<td><code>embed</code></td>\n<td>passing the <a target=\"_blank\" href=\"https://oembed.com/\">oEmbed</a> content to <code>dangerouslySetInnerHTML</code></td>\n<td>When retrieving an object from the API, we use <a target=\"_blank\" href=\"https://github.com/extractus/oembed-extractor\">@extractus/oembed-extractor</a> to obtain the oEmbed content.</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#equation\">Equation</a></td>\n<td>✅</td>\n<td><code>equation</code></td>\n<td><a target=\"_blank\" href=\"https://katex.org/\">katex</a></td>\n<td>In order to render properly, you need to import <code>katex/dist/katex.min.css</code>.</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#file\">File</a></td>\n<td>✅</td>\n<td><code>file</code></td>\n<td><code>&lt;Link&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#headings\">Heading1</a></td>\n<td>✅</td>\n<td><code>heading_1</code></td>\n<td><code>&lt;h1&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#headings\">Heading2</a></td>\n<td>✅</td>\n<td><code>heading_2</code></td>\n<td><code>&lt;h2&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#headings\">Heading3</a></td>\n<td>✅</td>\n<td><code>heading_3</code></td>\n<td><code>&lt;h3&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#image\">Image</a></td>\n<td>✅</td>\n<td><code>image</code></td>\n<td><code>&lt;img&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#link-preview\">Link Preview</a></td>\n<td>✅</td>\n<td><code>link_preview</code></td>\n<td><code>&lt;Link&gt;</code></td>\n<td>When retrieving an object from the API, we use <a target=\"_blank\" href=\"https://github.com/extractus/article-extractor\">@extractus/article-extractor</a> to obtain meta information of the site such as OGP images and descriptions.</td>\n</tr>\n<tr>\n<td>Link To Page</td>\n<td>✅</td>\n<td><code>link_to_page</code></td>\n<td><code>&lt;Link&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#numbered-list-item\">Numbered lit item</a></td>\n<td>✅</td>\n<td><code>numbered_list</code>/<code>numbered_list_item</code></td>\n<td><code>&lt;ol&gt;</code>/<code>&lt;li&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#paragraph\">Paragraph</a></td>\n<td>✅</td>\n<td><code>paragraph</code></td>\n<td><code>&lt;p&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#pdf\">PDF</a></td>\n<td>✅</td>\n<td><code>pdf</code></td>\n<td><code>&lt;object type=\"application/pdf&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#quote\">Quote</a></td>\n<td>✅</td>\n<td><code>quote</code></td>\n<td><code>&lt;blockquote&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#synced-block\">Synced block</a></td>\n<td>✅</td>\n<td><code>synced_block</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#table\">Table</a></td>\n<td>✅</td>\n<td><code>table</code></td>\n<td><code>&lt;table&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#table-of-contents\">Table of contents</a></td>\n<td>✅</td>\n<td><code>table_of_contents</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#table-of-contents\">Template</a></td>\n<td>❌</td>\n<td><code>template</code></td>\n<td></td>\n<td>Deprecated</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#to-do\">To do</a></td>\n<td>✅</td>\n<td><code>to_do</code></td>\n<td><code>&lt;div&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#toggle-blocks\">Toggle Blocks</a></td>\n<td>✅</td>\n<td><code>toggle</code></td>\n<td><code>&lt;details&gt;&lt;summary&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/block#video\">Video</a></td>\n<td>✅</td>\n<td><code>video</code></td>\n<td><code>&lt;video&gt;</code></td>\n<td>YouTube is supported through the oEmbed API.</td>\n</tr>\n</tbody>\n</table>\n<h4 id=\"user-content-rich-text\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#rich-text\"></a><a target=\"_blank\" href=\"https://developers.notion.com/reference/rich-text#rich-text-type-objects\">Rich text</a></h4>\n<table>\n<thead>\n<tr>\n<th>Rich text Type</th>\n<th>Supported</th>\n<th>Mapper Field Name</th>\n<th>HTML Tag</th>\n<th>Notes</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/rich-text#equation\">Equation</a></td>\n<td>✅</td>\n<td><code>equation</code></td>\n<td><a target=\"_blank\" href=\"https://katex.org/\">katex</a></td>\n<td>In order to render properly, you need to import <code>katex/dist/katex.min.css</code>.</td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/rich-text#mention\">Mention</a></td>\n<td>✅</td>\n<td><code>mention</code></td>\n<td><code>&lt;span&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td><a target=\"_blank\" href=\"https://developers.notion.com/reference/rich-text#text\">Text</a></td>\n<td>✅</td>\n<td><code>text</code></td>\n<td><code>&lt;span&gt;</code></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<h5 id=\"user-content-annotation\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#annotation\"></a><a target=\"_blank\" href=\"https://developers.notion.com/reference/rich-text#the-annotation-object\">Annotation</a></h5>\n<table>\n<thead>\n<tr>\n<th>Annotation Type</th>\n<th>Supported</th>\n<th>Mapper Field Name</th>\n<th>HTML Tag</th>\n<th>Notes</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>Bold</td>\n<td>✅</td>\n<td><code>bold</code></td>\n<td><code>&lt;strong&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td>Italic</td>\n<td>✅</td>\n<td><code>italic</code></td>\n<td><code>&lt;em&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td>Strikethrough</td>\n<td>✅</td>\n<td><code>strikethrough</code></td>\n<td><code>&lt;del&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td>Underline</td>\n<td>✅</td>\n<td><code>underline</code></td>\n<td><code>&lt;u&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td>Code</td>\n<td>✅</td>\n<td><code>code</code></td>\n<td><code>&lt;code&gt;</code></td>\n<td></td>\n</tr>\n<tr>\n<td>Color</td>\n<td>✅</td>\n<td><code>color</code></td>\n<td><code>&lt;span&gt;</code></td>\n<td></td>\n</tr>\n</tbody>\n</table>\n<h3 id=\"user-content-page\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#page\">Page</a></h3>\n<p>comming soon.</p>\n<h3 id=\"user-content-database\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#database\">Database</a></h3>\n<p>comming soon.</p>\n<h2 id=\"user-content-contributing\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#contributing\">Contributing</a></h2>\n<p>Pull requests are welcome.</p>\n<h2 id=\"user-content-license\"><a target=\"_blank\" href=\"https://github.com/udus122/notion-renderer#license\">License</a></h2>\n<p><a target=\"_blank\" href=\"https://choosealicense.com/licenses/mit/\">MIT</a></p>\n</article>\n          </div>",
         "author": "",
         "favicon": "https://github.githubassets.com/favicons/favicon.svg",
         "source": "github.com",
         "published": "",
         "ttr": 173
+      }
+    }
+  },
+  {
+    "object": "block",
+    "id": "e27c6205-9654-46ac-814a-5ed4dd98fdd1",
+    "parent": {
+      "type": "page_id",
+      "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
+    },
+    "created_time": "2023-10-28T07:08:00.000Z",
+    "last_edited_time": "2023-10-28T07:08:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+    },
+    "has_children": false,
+    "archived": false,
+    "type": "heading_2",
+    "heading_2": {
+      "rich_text": [
+        {
+          "type": "text",
+          "text": {
+            "content": "Link To Page",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Link To Page",
+          "href": null,
+          "id": "164a685b-6ab3-4090-bd8c-23d81eea1fb7"
+        }
+      ],
+      "is_toggleable": false,
+      "color": "default"
+    }
+  },
+  {
+    "object": "block",
+    "id": "94bdbb08-4bcd-4a3a-a20c-903056fb42a3",
+    "parent": {
+      "type": "page_id",
+      "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
+    },
+    "created_time": "2023-10-28T07:08:00.000Z",
+    "last_edited_time": "2023-10-28T07:08:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+    },
+    "has_children": false,
+    "archived": false,
+    "type": "link_to_page",
+    "link_to_page": {
+      "type": "page_id",
+      "page_id": "c2b895b3-a4df-4fc9-bce8-c9bc00983443",
+      "page": {
+        "object": "page",
+        "id": "c2b895b3-a4df-4fc9-bce8-c9bc00983443",
+        "created_time": "2023-10-28T06:22:00.000Z",
+        "last_edited_time": "2023-10-28T06:23:00.000Z",
+        "created_by": {
+          "object": "user",
+          "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+        },
+        "last_edited_by": {
+          "object": "user",
+          "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+        },
+        "cover": null,
+        "icon": {
+          "type": "emoji",
+          "emoji": "🧸"
+        },
+        "parent": {
+          "type": "page_id",
+          "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
+        },
+        "archived": false,
+        "properties": {
+          "title": {
+            "id": "title",
+            "next_url": null,
+            "type": "title",
+            "title": [
+              {
+                "type": "text",
+                "text": {
+                  "content": "Child page",
+                  "link": null
+                },
+                "annotations": {
+                  "bold": false,
+                  "italic": false,
+                  "strikethrough": false,
+                  "underline": false,
+                  "code": false,
+                  "color": "default"
+                },
+                "plain_text": "Child page",
+                "href": null,
+                "id": "84e88b84-30b0-40da-a47b-b31a244f9123"
+              }
+            ]
+          }
+        },
+        "url": "https://www.notion.so/Child-page-c2b895b3a4df4fc9bce8c9bc00983443",
+        "public_url": null,
+        "request_id": "d23b42da-c687-402e-8a4c-b4698ab95846"
       }
     }
   },
@@ -2784,7 +3348,7 @@
           },
           "plain_text": "Numbered lit item",
           "href": "https://developers.notion.com/reference/block#numbered-list-item",
-          "id": "aa2b7ee9-31fe-4a79-a4f0-523c1deaa1a3"
+          "id": "c4bdaa0d-98d1-4066-96da-359d65bc8089"
         }
       ],
       "is_toggleable": false,
@@ -2792,7 +3356,7 @@
     }
   },
   {
-    "id": "b13b7015-7f7e-46b9-877a-2807868a9b74",
+    "id": "41b4ac58-915e-48f6-aeb9-7d79507f930b",
     "type": "numbered_list",
     "numbered_list": {
       "items": [
@@ -2882,7 +3446,7 @@
             "color": "default",
             "children": [
               {
-                "id": "9c249bd7-43f4-432d-a66c-fe7e9e26eeb1",
+                "id": "51c77e2f-6162-4007-a50e-25318cef1068",
                 "type": "numbered_list",
                 "numbered_list": {
                   "items": [
@@ -2972,7 +3536,7 @@
                         "color": "default",
                         "children": [
                           {
-                            "id": "d156b822-b530-4e65-99cb-b350da66fdbc",
+                            "id": "6ac05e1c-654f-4bbf-ac1a-70888ba476aa",
                             "type": "numbered_list",
                             "numbered_list": {
                               "items": [
@@ -3117,7 +3681,7 @@
           },
           "plain_text": "Paragraphs ",
           "href": "https://developers.notion.com/reference/block#paragraph",
-          "id": "07827826-b41f-41aa-a40f-1ae56e64ef4e"
+          "id": "1f9eaced-c0d5-4641-ac95-02e32b32bd81"
         }
       ],
       "is_toggleable": false,
@@ -3162,7 +3726,7 @@
           },
           "plain_text": "default color block",
           "href": null,
-          "id": "5feb794d-ffe9-407c-8b8e-e7c78e41363e"
+          "id": "b0d5774b-9320-4d75-83ca-62368a1759c5"
         }
       ],
       "color": "default"
@@ -3206,7 +3770,7 @@
           },
           "plain_text": "gray color block",
           "href": null,
-          "id": "1c818d82-f61c-4a6f-831d-5183c59d0e61"
+          "id": "0a49c029-7c2c-46da-b534-2bfb0b8c2b01"
         }
       ],
       "color": "gray"
@@ -3250,7 +3814,7 @@
           },
           "plain_text": "brown color block",
           "href": null,
-          "id": "98db0f22-8b84-4cbd-b1b1-c52f621902fd"
+          "id": "97c3616f-97e0-4808-b1b4-66beaac074c8"
         }
       ],
       "color": "brown"
@@ -3294,7 +3858,7 @@
           },
           "plain_text": "orange color block",
           "href": null,
-          "id": "3fad03ba-8c36-4fb9-9078-cbaeeca4aade"
+          "id": "14a546ce-5575-49db-a353-e7090ac190ab"
         }
       ],
       "color": "orange"
@@ -3338,7 +3902,7 @@
           },
           "plain_text": "yellow color block",
           "href": null,
-          "id": "d63915df-d1e9-4a01-be2c-4eb47eb11a30"
+          "id": "de62f4e1-7425-4e65-a00f-b40b3eb527c1"
         }
       ],
       "color": "yellow"
@@ -3382,7 +3946,7 @@
           },
           "plain_text": "green color block",
           "href": null,
-          "id": "3ad3e1ba-fe2d-4378-aacf-9b708c04e910"
+          "id": "caacaba6-7b42-4e4b-9862-866a694460f7"
         }
       ],
       "color": "green"
@@ -3426,7 +3990,7 @@
           },
           "plain_text": "blue color block",
           "href": null,
-          "id": "402bbe95-9e40-4ae6-9f5c-e703533a881a"
+          "id": "741d3eaa-5c82-487f-a61e-0733de70c291"
         }
       ],
       "color": "blue"
@@ -3470,7 +4034,7 @@
           },
           "plain_text": "purple color block",
           "href": null,
-          "id": "91d9a375-637a-4843-8b7f-5abf91c61179"
+          "id": "9477e3b4-9cc0-4e0e-9f1c-b9dfcc336c7c"
         }
       ],
       "color": "purple"
@@ -3514,7 +4078,7 @@
           },
           "plain_text": "pink color block",
           "href": null,
-          "id": "a49f943e-d2fc-411c-83b1-c6ec0210a7c2"
+          "id": "aecffcbe-c402-4ed0-b882-75fb5b7f8f75"
         }
       ],
       "color": "pink"
@@ -3558,7 +4122,7 @@
           },
           "plain_text": "red color block",
           "href": null,
-          "id": "ce66d995-ab87-4d97-a023-a652f5eb207c"
+          "id": "9f496012-ff1b-4716-84f7-35b1a17ccb74"
         }
       ],
       "color": "red"
@@ -3602,7 +4166,7 @@
           },
           "plain_text": "default background color block",
           "href": null,
-          "id": "b6afe03f-71d0-4b95-bdd3-74c081ed46ab"
+          "id": "37645f56-4471-4695-9345-22f3f318ea4a"
         }
       ],
       "color": "default"
@@ -3646,7 +4210,7 @@
           },
           "plain_text": "gray background color block",
           "href": null,
-          "id": "2a628d4a-70d6-4702-8d8f-fb41c26ce59b"
+          "id": "007dbf3a-3647-4646-b4e3-c3036acbd12b"
         }
       ],
       "color": "gray_background"
@@ -3690,7 +4254,7 @@
           },
           "plain_text": "brown background color block",
           "href": null,
-          "id": "e2ae8273-6438-40ce-95a5-80e3a1bee6ba"
+          "id": "8ae27f1b-c7aa-4ade-b4b1-6c3324edb4cf"
         }
       ],
       "color": "brown_background"
@@ -3734,7 +4298,7 @@
           },
           "plain_text": "orange background color block",
           "href": null,
-          "id": "3a38f2b3-6123-4fa9-a501-a06f407c9325"
+          "id": "45c42549-8e24-49b6-98b1-23af2dd22311"
         }
       ],
       "color": "orange_background"
@@ -3778,7 +4342,7 @@
           },
           "plain_text": "yellow background color block",
           "href": null,
-          "id": "5e134ca4-a08a-492d-a51b-6570b2430fce"
+          "id": "e66359b5-4e92-4355-98f4-4f6c562a3b1b"
         }
       ],
       "color": "yellow_background"
@@ -3822,7 +4386,7 @@
           },
           "plain_text": "green background color block",
           "href": null,
-          "id": "a9790513-1839-49dc-b244-9772a6c735cb"
+          "id": "9b0bd8b4-5019-4a23-994c-d54b0045eca5"
         }
       ],
       "color": "green_background"
@@ -3866,7 +4430,7 @@
           },
           "plain_text": "blue background color block",
           "href": null,
-          "id": "2a417fb2-558a-42fd-a5de-b8f1b34eccdd"
+          "id": "2941ae0a-aafe-42f0-b200-b3739ce39169"
         }
       ],
       "color": "blue_background"
@@ -3910,7 +4474,7 @@
           },
           "plain_text": "purple background color block",
           "href": null,
-          "id": "0720daa9-0130-4728-b9fc-fc0aaadb3b7a"
+          "id": "72cda3ab-0e07-461e-ba2c-8ed179bc56c4"
         }
       ],
       "color": "purple_background"
@@ -3954,7 +4518,7 @@
           },
           "plain_text": "pink background color block",
           "href": null,
-          "id": "e595a2cc-d61d-48a5-b69d-5092548e293f"
+          "id": "95e71564-19fa-4e38-af73-5bb6579e8382"
         }
       ],
       "color": "pink_background"
@@ -3998,7 +4562,7 @@
           },
           "plain_text": "red background color block",
           "href": null,
-          "id": "21ed4dbf-e878-48f4-9456-d6b75c3e6c49"
+          "id": "f8780d3d-4779-4192-af65-336a9b5d1bab"
         }
       ],
       "color": "red_background"
@@ -4044,7 +4608,7 @@
           },
           "plain_text": "PDF",
           "href": "https://developers.notion.com/reference/block#pdf",
-          "id": "9fea20b5-b6c3-4c4a-82d3-f0948cf0d733"
+          "id": "d1bc784d-708f-4444-afed-d70d65154f14"
         }
       ],
       "is_toggleable": false,
@@ -4119,7 +4683,7 @@
           },
           "plain_text": "Quote",
           "href": "https://developers.notion.com/reference/block#quote",
-          "id": "6509c996-afa4-4f28-abba-cfb971037911"
+          "id": "a5e87c11-5033-4c63-a9f9-d5230ba24097"
         }
       ],
       "is_toggleable": false,
@@ -4164,7 +4728,7 @@
           },
           "plain_text": "Quote block",
           "href": null,
-          "id": "5e4a0df0-9098-46ca-99b8-511d6c72650a"
+          "id": "a24e8f76-97bd-4c8d-b5e4-450a6314a989"
         }
       ],
       "color": "default",
@@ -4207,7 +4771,7 @@
                 },
                 "plain_text": "Quote sub block",
                 "href": null,
-                "id": "c9a00b6d-8dfb-4780-840a-fde4c337b929"
+                "id": "374fa21e-b5f7-481b-bc04-10321810abc3"
               }
             ],
             "color": "default"
@@ -4256,7 +4820,7 @@
           },
           "plain_text": "Synced block",
           "href": "https://developers.notion.com/reference/block#synced-block",
-          "id": "ebe35da3-75a8-40b7-a664-387be93f58bd"
+          "id": "3c75b352-c091-424f-8d1b-0670ffe50680"
         }
       ],
       "is_toggleable": false,
@@ -4301,7 +4865,7 @@
           },
           "plain_text": "Below is Original",
           "href": null,
-          "id": "5c0ae839-d4fe-4b58-af5b-e8cfebd75506"
+          "id": "9b3afd87-ad91-4e03-98b4-1992b2c9c4e6"
         }
       ],
       "color": "default"
@@ -4368,7 +4932,7 @@
                 },
                 "plain_text": "This is Synced Block",
                 "href": null,
-                "id": "bfc68f86-e88c-40f6-b7a8-93b101ba0b7e"
+                "id": "46aa619f-d669-48d6-bbdf-18facad4d8a2"
               }
             ],
             "color": "default"
@@ -4415,7 +4979,7 @@
           },
           "plain_text": "Below is Duplicated",
           "href": null,
-          "id": "af84725f-6f8e-4068-b3a4-3b0eb49c115c"
+          "id": "558dec22-188b-4ab6-8f7e-d37a40a932fa"
         }
       ],
       "color": "default"
@@ -4506,7 +5070,7 @@
                       },
                       "plain_text": "This is Synced Block",
                       "href": null,
-                      "id": "ed7d2147-c652-4773-b404-5f1f79326b9c"
+                      "id": "bce91bbe-d83c-45ae-af1f-a62e8b7e64ac"
                     }
                   ],
                   "color": "default"
@@ -4514,7 +5078,7 @@
               }
             ]
           },
-          "request_id": "d2310ba0-0458-4351-ab0c-28cf0dc19105"
+          "request_id": "bfc34a45-5dc5-4d01-ac54-4fd96de0a25c"
         }
       },
       "children": [
@@ -4556,7 +5120,7 @@
                 },
                 "plain_text": "This is Synced Block",
                 "href": null,
-                "id": "c9b278c0-047a-426c-9543-42268008bc5f"
+                "id": "2e2b0449-be33-4b75-a0d0-4eb3082c2c76"
               }
             ],
             "color": "default"
@@ -4605,7 +5169,7 @@
           },
           "plain_text": "Table",
           "href": "https://developers.notion.com/reference/block#table",
-          "id": "6694c378-6053-44e8-8b31-12c89b379d95"
+          "id": "13dd583f-ba32-4e24-b431-702d7b7219db"
         }
       ],
       "is_toggleable": false,
@@ -4676,7 +5240,7 @@
                   },
                   "plain_text": "column1",
                   "href": null,
-                  "id": "11186c15-1114-428c-b4a1-da0e3347d534"
+                  "id": "d31cdb2c-d4df-4544-a147-a1e028a8415b"
                 }
               ],
               [
@@ -4696,7 +5260,7 @@
                   },
                   "plain_text": "column2",
                   "href": null,
-                  "id": "19ac521f-33ad-4e65-82b6-3c190f6060f5"
+                  "id": "00455182-c4a6-41c4-8de5-e6824c55c079"
                 }
               ],
               [
@@ -4716,7 +5280,7 @@
                   },
                   "plain_text": "column3",
                   "href": null,
-                  "id": "c67bec8e-98d7-42d7-bf4c-658fc6099ef3"
+                  "id": "20784cd7-5d72-49f3-96d7-13e9f76cb13a"
                 }
               ]
             ]
@@ -4761,7 +5325,7 @@
                   },
                   "plain_text": "row1",
                   "href": null,
-                  "id": "c099f678-2b44-44ae-9bbc-71245192523c"
+                  "id": "b7f76727-ca4b-4a36-9deb-07467e3b7c25"
                 }
               ],
               [
@@ -4781,7 +5345,7 @@
                   },
                   "plain_text": "cell1",
                   "href": null,
-                  "id": "30a78c53-e492-44fc-a966-b576101f9d02"
+                  "id": "584c1be1-1f5e-4924-9b79-ac76f81f0805"
                 }
               ],
               [
@@ -4801,7 +5365,7 @@
                   },
                   "plain_text": "cell2",
                   "href": null,
-                  "id": "e9f42ea1-e208-43c8-aaae-14da6fa876e1"
+                  "id": "9426482d-8c10-4676-bde3-0a9ba98c789c"
                 }
               ]
             ]
@@ -4846,7 +5410,7 @@
                   },
                   "plain_text": "row2",
                   "href": null,
-                  "id": "ddf5229c-3eb3-4ea2-ba2b-74626cb9e24b"
+                  "id": "afe73f57-f06e-40bd-a60d-eb48a0c1c687"
                 }
               ],
               [
@@ -4866,7 +5430,7 @@
                   },
                   "plain_text": "cell3",
                   "href": null,
-                  "id": "0f16300a-04fb-4ae6-9e19-4564fe467fb5"
+                  "id": "2c94e07e-b254-447d-9306-7032f7bae78e"
                 }
               ],
               [
@@ -4886,7 +5450,7 @@
                   },
                   "plain_text": "cell4",
                   "href": null,
-                  "id": "9c72ea5b-14aa-4194-8710-f0b58f345e94"
+                  "id": "a25e4ba6-f117-4045-a449-1be83da9e814"
                 }
               ]
             ]
@@ -4931,7 +5495,7 @@
                   },
                   "plain_text": "row3",
                   "href": null,
-                  "id": "a3d110ca-7b16-468a-ad75-794f3cd86ce7"
+                  "id": "68825cf0-a41f-4bd1-8e5c-211d9abf281a"
                 }
               ],
               [
@@ -4951,7 +5515,7 @@
                   },
                   "plain_text": "cell5",
                   "href": null,
-                  "id": "f9226376-54cb-4146-affb-fe6e2d8280b8"
+                  "id": "5fa47601-0ccf-4b71-afb0-cbf14a1ca2fb"
                 }
               ],
               [
@@ -4971,13 +5535,84 @@
                   },
                   "plain_text": "cell6",
                   "href": null,
-                  "id": "bf4a2e2c-6458-4a31-9053-6b9c3b03a4ab"
+                  "id": "b30d3fa1-55f7-4f11-a268-81b17d1655fa"
                 }
               ]
             ]
           }
         }
       ]
+    }
+  },
+  {
+    "object": "block",
+    "id": "ce967ca3-cfb9-4454-9a4a-fa3e0c132a6c",
+    "parent": {
+      "type": "page_id",
+      "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
+    },
+    "created_time": "2023-11-07T13:18:00.000Z",
+    "last_edited_time": "2023-11-07T13:18:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+    },
+    "has_children": false,
+    "archived": false,
+    "type": "heading_2",
+    "heading_2": {
+      "rich_text": [
+        {
+          "type": "text",
+          "text": {
+            "content": "Table of contents",
+            "link": {
+              "url": "https://developers.notion.com/reference/block#table-of-contents"
+            }
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": "Table of contents",
+          "href": "https://developers.notion.com/reference/block#table-of-contents",
+          "id": "f15bc0e1-e30e-4dd6-8f77-b9c89b01ddc0"
+        }
+      ],
+      "is_toggleable": false,
+      "color": "default"
+    }
+  },
+  {
+    "object": "block",
+    "id": "9a4cf05b-6b77-49bd-9a41-a201fa815dff",
+    "parent": {
+      "type": "page_id",
+      "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
+    },
+    "created_time": "2023-11-07T13:18:00.000Z",
+    "last_edited_time": "2023-11-07T13:18:00.000Z",
+    "created_by": {
+      "object": "user",
+      "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+    },
+    "last_edited_by": {
+      "object": "user",
+      "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+    },
+    "has_children": false,
+    "archived": false,
+    "type": "table_of_contents",
+    "table_of_contents": {
+      "color": "gray"
     }
   },
   {
@@ -5020,7 +5655,7 @@
           },
           "plain_text": "To do",
           "href": "https://developers.notion.com/reference/block#to-do",
-          "id": "6487ddb3-646a-4608-8ea5-8aa905b344df"
+          "id": "ea52fa47-4864-40aa-aa23-766a719189c3"
         }
       ],
       "is_toggleable": false,
@@ -5065,7 +5700,7 @@
           },
           "plain_text": "To do",
           "href": null,
-          "id": "3c1ddb8c-9946-49cb-ad64-8d3e5957f44a"
+          "id": "9df82bdb-60cf-4c13-b0c0-b10f79ad1fbd"
         }
       ],
       "checked": false,
@@ -5110,7 +5745,7 @@
           },
           "plain_text": "Done",
           "href": null,
-          "id": "5677f123-f964-492c-8257-7aa337ac6417"
+          "id": "c4772abf-c293-46b1-9c07-8a4e5f0b9294"
         }
       ],
       "checked": true,
@@ -5154,7 +5789,7 @@
                 },
                 "plain_text": "sub task",
                 "href": null,
-                "id": "1f56c174-ca18-4259-a365-b14c525711a3"
+                "id": "d3d833e8-25b4-4289-9b6b-7cee821d7320"
               }
             ],
             "checked": false,
@@ -5199,7 +5834,7 @@
                 },
                 "plain_text": "sub task done",
                 "href": null,
-                "id": "c7fac162-7fd5-4081-a0d5-68bc4c920f22"
+                "id": "49b98af1-dc8d-4116-80d7-f689e85bb377"
               }
             ],
             "checked": true,
@@ -5247,7 +5882,7 @@
           },
           "plain_text": "Task",
           "href": null,
-          "id": "8bdbccef-3ed7-49ba-8b37-3f8248294525"
+          "id": "b9bba9a3-fbc9-46f0-bda8-34d150b24929"
         }
       ],
       "checked": false,
@@ -5294,7 +5929,7 @@
           },
           "plain_text": "Toggle Blocks",
           "href": "https://developers.notion.com/reference/block#toggle-blocks",
-          "id": "2eb683c4-937f-4015-8da5-dabc6ab8d9b7"
+          "id": "52d72642-0b32-4ba2-a8b8-19463ac66571"
         }
       ],
       "is_toggleable": false,
@@ -5339,7 +5974,7 @@
           },
           "plain_text": "This is Toggle block",
           "href": null,
-          "id": "c8384c01-33b6-4042-af13-22d4d7478344"
+          "id": "8da1361b-dccc-4517-8c64-e97b96770122"
         }
       ],
       "color": "default",
@@ -5382,7 +6017,7 @@
                 },
                 "plain_text": "this is child of toggle block",
                 "href": null,
-                "id": "cff7af49-8f45-4b90-b9b5-b875bb07b6e7"
+                "id": "e1cb7cea-8514-4a5c-892f-74fdcfac6d97"
               }
             ],
             "color": "default"
@@ -5431,7 +6066,7 @@
           },
           "plain_text": "Video",
           "href": "https://developers.notion.com/reference/block#video",
-          "id": "89283db1-8728-44c9-9451-d52021b37a61"
+          "id": "ba5a3d28-5544-4f6d-996e-1d80ee8325b4"
         }
       ],
       "is_toggleable": false,
@@ -5476,7 +6111,7 @@
           },
           "plain_text": "this is external file video ",
           "href": null,
-          "id": "d5bfc372-0052-44e7-b30a-a1fe0fd4aab1"
+          "id": "44be81d2-d8e3-4314-a012-bcb9a829e1ab"
         }
       ],
       "type": "external",
@@ -5523,7 +6158,7 @@
           },
           "plain_text": "Youtube",
           "href": null,
-          "id": "f8dc9256-474b-4fe7-b7d6-149fa702c205"
+          "id": "0183b883-ec2f-48db-949a-6abe48b06de5"
         }
       ],
       "is_toggleable": false,
@@ -5611,7 +6246,7 @@
           },
           "plain_text": "Rich text",
           "href": null,
-          "id": "7de448e6-15a1-45b3-a1bf-3d1aaf7c2682"
+          "id": "29c22f36-ea4a-45c7-b7b8-f7fa6391bfc2"
         }
       ],
       "is_toggleable": false,
@@ -5656,7 +6291,7 @@
           },
           "plain_text": "Annotations",
           "href": null,
-          "id": "4797a98e-99ab-473e-a70c-a1c684b51574"
+          "id": "b1b8c6c4-959f-4f70-96e4-6ef81b45c76f"
         }
       ],
       "is_toggleable": false,
@@ -5701,7 +6336,7 @@
           },
           "plain_text": "Bold: ",
           "href": null,
-          "id": "e76b6d5f-c054-41c6-8bb6-f68f497eb173"
+          "id": "f85ed881-3963-473c-9487-626f42dca4de"
         },
         {
           "type": "text",
@@ -5719,7 +6354,7 @@
           },
           "plain_text": "Bold",
           "href": null,
-          "id": "c79fcad4-38f5-415c-88ee-007eb0756c76"
+          "id": "5bc869ed-873e-4e04-9bb9-733797d476d0"
         }
       ],
       "color": "default"
@@ -5763,7 +6398,7 @@
           },
           "plain_text": "Italic: ",
           "href": null,
-          "id": "3726d393-07c7-4c5f-9083-c42fd1b55104"
+          "id": "1e092947-1d25-4ca3-b937-e04973b69916"
         },
         {
           "type": "text",
@@ -5781,7 +6416,7 @@
           },
           "plain_text": "Italic",
           "href": null,
-          "id": "687aa103-9092-41f8-92ce-d4221903caa1"
+          "id": "6c739478-9d20-4700-aa4f-9b43c466df15"
         }
       ],
       "color": "default"
@@ -5825,7 +6460,7 @@
           },
           "plain_text": "Underline: ",
           "href": null,
-          "id": "0538cdc2-e7ac-4ec4-b3be-4c8d520d33ef"
+          "id": "5f74eec9-94ca-4105-aae3-beb21bae66fa"
         },
         {
           "type": "text",
@@ -5843,7 +6478,7 @@
           },
           "plain_text": "underline",
           "href": null,
-          "id": "03b7f15d-a95a-47a1-8370-3a8b0c47c32a"
+          "id": "a58c3b14-1d4a-462b-9932-1b0de53d9240"
         }
       ],
       "color": "default"
@@ -5887,7 +6522,7 @@
           },
           "plain_text": "Strikethrough: ",
           "href": null,
-          "id": "5b2272bd-461d-453f-a09a-4909bb3ee92a"
+          "id": "b01aba5b-32dc-4564-bacd-7c93907f4fa3"
         },
         {
           "type": "text",
@@ -5905,7 +6540,7 @@
           },
           "plain_text": "Strikethrough",
           "href": null,
-          "id": "54ff7ff8-0166-46ed-ba2d-e069ebfaba9f"
+          "id": "e330537c-f41a-4a92-973d-23b24ec3adab"
         }
       ],
       "color": "default"
@@ -5949,7 +6584,7 @@
           },
           "plain_text": "Code: ",
           "href": null,
-          "id": "716d3eac-51b2-43ab-8e7c-fbd941cd4779"
+          "id": "f65db4d9-7756-4b54-bf4c-916ee5df0c55"
         },
         {
           "type": "text",
@@ -5967,7 +6602,7 @@
           },
           "plain_text": "inline code",
           "href": null,
-          "id": "8723376f-795b-4d90-b270-b2a482b60454"
+          "id": "0fd4b8c5-f27f-41da-8b82-05ca0dc792d3"
         }
       ],
       "color": "default"
@@ -5981,7 +6616,7 @@
       "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
     },
     "created_time": "2023-10-28T06:19:00.000Z",
-    "last_edited_time": "2023-10-28T06:34:00.000Z",
+    "last_edited_time": "2023-10-31T05:34:00.000Z",
     "created_by": {
       "object": "user",
       "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
@@ -6011,7 +6646,7 @@
           },
           "plain_text": "Color: default ",
           "href": null,
-          "id": "e2982759-693e-4726-a623-09b1400e6ef0"
+          "id": "b9221049-b2ff-4b2c-8260-dc8c6bf57df1"
         },
         {
           "type": "text",
@@ -6029,7 +6664,7 @@
           },
           "plain_text": "gray",
           "href": null,
-          "id": "b0cc45e2-b97a-41cc-a4bb-cc9978a4297d"
+          "id": "b0ab2ad1-4dc2-4eee-a36b-f41efd30728a"
         },
         {
           "type": "text",
@@ -6047,12 +6682,12 @@
           },
           "plain_text": " ",
           "href": null,
-          "id": "a828cf01-7011-4bf2-948e-0a5f4941c3b9"
+          "id": "f89542ac-81b1-44f0-96ff-911ce0344a2e"
         },
         {
           "type": "text",
           "text": {
-            "content": "brown",
+            "content": "brown ",
             "link": null
           },
           "annotations": {
@@ -6063,14 +6698,14 @@
             "code": false,
             "color": "brown"
           },
-          "plain_text": "brown",
+          "plain_text": "brown ",
           "href": null,
-          "id": "695a8c8f-20b7-411c-af84-d5d4abe2ca2c"
+          "id": "56f63fff-e34e-4251-9041-cd32e39761e4"
         },
         {
           "type": "text",
           "text": {
-            "content": "orange",
+            "content": "orange ",
             "link": null
           },
           "annotations": {
@@ -6081,14 +6716,14 @@
             "code": false,
             "color": "orange"
           },
-          "plain_text": "orange",
+          "plain_text": "orange ",
           "href": null,
-          "id": "bb142dce-2acb-4027-9705-f5e39f26bcba"
+          "id": "b959419b-e200-4f9b-b6dd-758f9e418725"
         },
         {
           "type": "text",
           "text": {
-            "content": "yellow",
+            "content": "yellow ",
             "link": null
           },
           "annotations": {
@@ -6099,9 +6734,9 @@
             "code": false,
             "color": "yellow"
           },
-          "plain_text": "yellow",
+          "plain_text": "yellow ",
           "href": null,
-          "id": "f78a4d42-ae19-4e59-9912-914af7e8bf82"
+          "id": "68e5cab0-75b5-48e6-905f-3ab20b41395d"
         },
         {
           "type": "text",
@@ -6115,16 +6750,34 @@
             "strikethrough": false,
             "underline": false,
             "code": false,
-            "color": "orange"
+            "color": "green"
           },
           "plain_text": "green",
           "href": null,
-          "id": "8e1cbaf1-786e-411c-ac7d-716546aa0df0"
+          "id": "fcbc7bd2-e5cb-4a34-9aee-011548c9350d"
         },
         {
           "type": "text",
           "text": {
-            "content": "blue",
+            "content": " ",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "orange"
+          },
+          "plain_text": " ",
+          "href": null,
+          "id": "817d4935-37fb-4e5a-af28-061ff23444a9"
+        },
+        {
+          "type": "text",
+          "text": {
+            "content": "blue ",
             "link": null
           },
           "annotations": {
@@ -6135,14 +6788,14 @@
             "code": false,
             "color": "blue"
           },
-          "plain_text": "blue",
+          "plain_text": "blue ",
           "href": null,
-          "id": "bee5275b-6c67-42bb-b088-40bbaef59953"
+          "id": "3481b795-897a-4538-91df-abd4d9369c36"
         },
         {
           "type": "text",
           "text": {
-            "content": "purple",
+            "content": "purple ",
             "link": null
           },
           "annotations": {
@@ -6153,14 +6806,14 @@
             "code": false,
             "color": "purple"
           },
-          "plain_text": "purple",
+          "plain_text": "purple ",
           "href": null,
-          "id": "a4cf4bc1-c797-4f49-ad88-8d07cd7d7e51"
+          "id": "84729175-189b-43fa-9528-a1d2f51fb3b3"
         },
         {
           "type": "text",
           "text": {
-            "content": "pink",
+            "content": "pink ",
             "link": null
           },
           "annotations": {
@@ -6171,9 +6824,9 @@
             "code": false,
             "color": "pink"
           },
-          "plain_text": "pink",
+          "plain_text": "pink ",
           "href": null,
-          "id": "6fff9958-5a1b-42f2-87db-c4046e4a9912"
+          "id": "4e95d5a3-a882-4fe3-a142-2291c22ee7bf"
         },
         {
           "type": "text",
@@ -6191,7 +6844,7 @@
           },
           "plain_text": "red",
           "href": null,
-          "id": "7768f15e-735b-4bde-946b-071f6f629510"
+          "id": "88f519f0-66c7-43c5-b087-010502bdc018"
         },
         {
           "type": "text",
@@ -6209,7 +6862,7 @@
           },
           "plain_text": " default_background ",
           "href": null,
-          "id": "32b6fffe-678a-46d2-8e56-a3f4d05bf2e9"
+          "id": "4d03880f-4d0d-4c8a-819a-e3ae46c1290b"
         },
         {
           "type": "text",
@@ -6227,7 +6880,25 @@
           },
           "plain_text": "gray_background",
           "href": null,
-          "id": "075ec4cc-bee8-4d23-bc80-25b0679b6ab9"
+          "id": "40c57680-39bc-4190-bef7-e536ee2abb95"
+        },
+        {
+          "type": "text",
+          "text": {
+            "content": " ",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": " ",
+          "href": null,
+          "id": "eb1ce6fc-92e0-4ccd-879d-d83a84bfafd8"
         },
         {
           "type": "text",
@@ -6245,7 +6916,25 @@
           },
           "plain_text": "brown_background",
           "href": null,
-          "id": "e522289c-ab6f-4d2f-890e-27d9e39c18fa"
+          "id": "d8975cda-fccc-4095-9532-4becfe4fcef3"
+        },
+        {
+          "type": "text",
+          "text": {
+            "content": " ",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": " ",
+          "href": null,
+          "id": "a75f27fb-80dd-44f7-a8b9-bad4628affe0"
         },
         {
           "type": "text",
@@ -6263,7 +6952,25 @@
           },
           "plain_text": "orange_background",
           "href": null,
-          "id": "7bb64c0c-bc39-4adb-b294-0059f6e48257"
+          "id": "899cb05c-c64f-441a-bcb1-99c6befde314"
+        },
+        {
+          "type": "text",
+          "text": {
+            "content": " ",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": " ",
+          "href": null,
+          "id": "3561e029-c210-4199-9fc0-fb878c69960e"
         },
         {
           "type": "text",
@@ -6281,7 +6988,25 @@
           },
           "plain_text": "yellow_background",
           "href": null,
-          "id": "87a30a2c-4b47-45b1-87ab-4dd63ab9938c"
+          "id": "36e6bdcd-eafe-4526-a671-23d5cb4e50b5"
+        },
+        {
+          "type": "text",
+          "text": {
+            "content": " ",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": " ",
+          "href": null,
+          "id": "8bf7857d-3806-4329-ac08-a9302a69f212"
         },
         {
           "type": "text",
@@ -6299,7 +7024,25 @@
           },
           "plain_text": "green_background",
           "href": null,
-          "id": "4914797c-fbba-45ca-b9d8-a1e8a3441e7b"
+          "id": "a4bae4ce-2cce-48a6-ac32-7e7199e7a62b"
+        },
+        {
+          "type": "text",
+          "text": {
+            "content": " ",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": " ",
+          "href": null,
+          "id": "a186a793-5344-483c-b4bc-10904073a312"
         },
         {
           "type": "text",
@@ -6317,7 +7060,25 @@
           },
           "plain_text": "blue_background",
           "href": null,
-          "id": "d944bba0-f6bc-4039-b7b8-ebd4039fdaf6"
+          "id": "76f6befa-0043-4bb1-8d80-6e7715637764"
+        },
+        {
+          "type": "text",
+          "text": {
+            "content": " ",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": " ",
+          "href": null,
+          "id": "55fdef22-c4f3-4233-b503-7b4f56e523d8"
         },
         {
           "type": "text",
@@ -6335,7 +7096,25 @@
           },
           "plain_text": "purple_background",
           "href": null,
-          "id": "519e7606-a5c9-47e0-a56b-926da6f0b5cc"
+          "id": "c210b13b-deda-4a56-8f63-b8bf55f14165"
+        },
+        {
+          "type": "text",
+          "text": {
+            "content": " ",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": " ",
+          "href": null,
+          "id": "caa15fa0-5fed-499c-b2d8-3bcd6e8517ad"
         },
         {
           "type": "text",
@@ -6353,7 +7132,25 @@
           },
           "plain_text": "pink_background",
           "href": null,
-          "id": "493014a4-37a9-4c44-a377-79317b21fae5"
+          "id": "6fe7ca7c-8f27-4902-865b-2190e0816e6c"
+        },
+        {
+          "type": "text",
+          "text": {
+            "content": " ",
+            "link": null
+          },
+          "annotations": {
+            "bold": false,
+            "italic": false,
+            "strikethrough": false,
+            "underline": false,
+            "code": false,
+            "color": "default"
+          },
+          "plain_text": " ",
+          "href": null,
+          "id": "ade2455d-d21a-47c5-b5ce-72b2c13ffe1c"
         },
         {
           "type": "text",
@@ -6371,7 +7168,7 @@
           },
           "plain_text": "red_background",
           "href": null,
-          "id": "7eda378d-b651-447d-b75b-822e67e88682"
+          "id": "70b8a81f-774e-4a78-896b-e263ed94a0c4"
         }
       ],
       "color": "default"
@@ -6415,7 +7212,7 @@
           },
           "plain_text": "Equation: ",
           "href": null,
-          "id": "eb4c785c-7124-4349-bfd6-9501bfc4d142"
+          "id": "4cda6493-d861-465f-ad0f-72ed63f3c5be"
         },
         {
           "type": "equation",
@@ -6432,7 +7229,7 @@
           },
           "plain_text": "\\dot x = x^{\\prime} = dx/dt=\\frac{d x(t)}{d t}=\\frac{d}{d t}\\left(x(t)\\right)",
           "href": null,
-          "id": "f1b33ea9-db4e-4b60-b829-01516642271f"
+          "id": "0c4e5b14-93db-4859-902c-1e48e958c952"
         },
         {
           "type": "text",
@@ -6450,7 +7247,7 @@
           },
           "plain_text": " ",
           "href": null,
-          "id": "c2d24ede-05fc-4962-8770-7ff8f06a9f4c"
+          "id": "dc6c2fd2-73d1-4c59-91b4-2bc828c44709"
         }
       ],
       "color": "default"
@@ -6494,7 +7291,7 @@
           },
           "plain_text": "Page Mention: ",
           "href": null,
-          "id": "e24a6cc6-8d17-49f4-8ac8-03328af167ad"
+          "id": "360c69a7-01aa-4251-a7b9-45ae6020b82e"
         },
         {
           "type": "mention",
@@ -6533,6 +7330,7 @@
                 "properties": {
                   "title": {
                     "id": "title",
+                    "next_url": null,
                     "type": "title",
                     "title": [
                       {
@@ -6550,14 +7348,15 @@
                           "color": "default"
                         },
                         "plain_text": "Sub Page",
-                        "href": null
+                        "href": null,
+                        "id": "1d2ad5e3-3872-4140-b7b1-62c335ed0e7c"
                       }
                     ]
                   }
                 },
                 "url": "https://www.notion.so/Sub-Page-61b88b0c2fe5489fb3e6d186b11e16e5",
                 "public_url": "https://udus.notion.site/Sub-Page-61b88b0c2fe5489fb3e6d186b11e16e5",
-                "request_id": "f41cb362-97a0-458a-9836-d97c0472b20e"
+                "request_id": "0f9bf0de-0ba8-4ca7-a5a9-276449f5a71a"
               }
             }
           },
@@ -6571,7 +7370,7 @@
           },
           "plain_text": "Sub Page",
           "href": "https://www.notion.so/61b88b0c2fe5489fb3e6d186b11e16e5",
-          "id": "6cf67a70-0cec-4ea5-a942-7861ff7d13e8"
+          "id": "3b7e982f-8a9b-4f64-afef-6d9b6beb56b0"
         },
         {
           "type": "text",
@@ -6589,7 +7388,7 @@
           },
           "plain_text": " ",
           "href": null,
-          "id": "b8a49786-f985-43df-9cf2-ae93904100bb"
+          "id": "c4f3fca0-ce37-43eb-8db3-1ad13ae5a018"
         }
       ],
       "color": "default"
@@ -6633,7 +7432,7 @@
           },
           "plain_text": "date mention: ",
           "href": null,
-          "id": "e958968e-ca9b-4196-8431-35a79545dca8"
+          "id": "c36cf2cd-ac07-495a-8e4f-29ff57e2f8c1"
         },
         {
           "type": "mention",
@@ -6655,7 +7454,7 @@
           },
           "plain_text": "2023-10-12",
           "href": null,
-          "id": "4ba942e1-c7ca-45c8-a646-a7ff7b6c09c9"
+          "id": "8d492f47-b957-4967-af13-a94ce10e7181"
         },
         {
           "type": "text",
@@ -6673,7 +7472,7 @@
           },
           "plain_text": " ",
           "href": null,
-          "id": "bf6ce47f-9b7b-4359-a9d7-cbb96c9b0768"
+          "id": "ab992a8b-b93c-4480-8bff-b8dbb9f4b843"
         },
         {
           "type": "mention",
@@ -6695,7 +7494,7 @@
           },
           "plain_text": "2023-10-01",
           "href": null,
-          "id": "6228ed30-3d48-4950-8fee-f2727e2d58cd"
+          "id": "25cc0cda-93f5-472b-bc43-108eea71044c"
         },
         {
           "type": "text",
@@ -6713,7 +7512,7 @@
           },
           "plain_text": " ",
           "href": null,
-          "id": "d7186932-7007-4446-b521-3cc0be1b8498"
+          "id": "dd90ab18-0209-48a2-ab8b-9855ce23dc51"
         }
       ],
       "color": "default"
@@ -6757,7 +7556,7 @@
           },
           "plain_text": "user mention: ",
           "href": null,
-          "id": "09de4dbe-1eda-4208-91e0-5f3c1bc4fa2e"
+          "id": "9818dad3-ddd9-4116-a455-fd300725e45d"
         },
         {
           "type": "mention",
@@ -6784,7 +7583,7 @@
           },
           "plain_text": "@Yudai Usuda",
           "href": null,
-          "id": "68f7e894-07e6-4200-9b7b-d2d8abdd2f11"
+          "id": "6fe8a262-4db7-4a27-bf08-d5603eff0501"
         }
       ],
       "color": "default"
@@ -6828,7 +7627,7 @@
           },
           "plain_text": "link preview mention: ",
           "href": null,
-          "id": "8eb08ae4-1874-41c6-bbb4-d08531dcf014"
+          "id": "96122311-7726-4e15-ab94-f8335b3c21bc"
         },
         {
           "type": "mention",
@@ -6864,7 +7663,7 @@
           },
           "plain_text": "https://github.com/udus122/notion-component/pull/1",
           "href": "https://github.com/udus122/notion-component/pull/1",
-          "id": "0ace6dcf-629d-4740-8c13-d347f090d1b3"
+          "id": "c5c612bf-c6ff-4d85-ad6a-7cef7ec0197e"
         }
       ],
       "color": "default"

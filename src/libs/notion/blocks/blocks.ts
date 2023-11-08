@@ -44,14 +44,12 @@ import { convertVideoResponseToBlock } from "./video.js";
 import type { BlockBlockObject } from "../../../types/notion/blocks/block.js";
 import type { BulletedListBlockObject } from "../../../types/notion/blocks/bulletedList.js";
 import type { NumberedListBlockObject } from "../../../types/notion/blocks/numberedList.js";
-import type { ListBlockChildrenResponseResults } from "../../../types/notion/common.js";
+import type { ListBlockChildrenResponseResults } from "../../../types/notion/common/common.js";
 import type {
-  BlockObjectResponse,
   GetBlockParameters,
   GetBlockResponse,
   ListBlockChildrenParameters,
   ListBlockChildrenResponse,
-  PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const retrieveBlock = async (
@@ -62,10 +60,11 @@ export const retrieveBlock = async (
     GetBlockResponse
   >(notion.blocks.retrieve, args);
 
-  if (!error) {
-    return payload;
+  if (error) {
+    return;
   }
-  return;
+
+  return payload;
 };
 
 export const listBlockChildren = async (
@@ -76,29 +75,30 @@ export const listBlockChildren = async (
     ListBlockChildrenResponse
   >(notion.blocks.children.list, args);
 
-  if (!error) {
-    if (payload.next_cursor) {
-      const nextResults = await listBlockChildren({
-        ...args,
-        start_cursor: payload.next_cursor,
-      });
-      payload.results = [...payload.results, ...nextResults];
-    }
-
-    return payload.results;
+  if (error) {
+    return [];
   }
-  return [];
+
+  if (payload.next_cursor) {
+    const nextResults = await listBlockChildren({
+      ...args,
+      start_cursor: payload.next_cursor,
+    });
+    payload.results = [...payload.results, ...nextResults];
+  }
+
+  return payload.results;
 };
 
 export const fetchBlock = async (
   blockId: string
-): Promise<BlockBlockObject | null> => {
-  const block = await retrieveBlock({ block_id: blockId });
-  if (block) {
-    const blockComponent = convertResponseToBlock(block);
-    return blockComponent;
+): Promise<BlockBlockObject | undefined> => {
+  const blockObjectResponse = await retrieveBlock({ block_id: blockId });
+  if (!blockObjectResponse) {
+    return;
   }
-  return null;
+  const blockObject = convertResponseToBlock(blockObjectResponse);
+  return blockObject;
 };
 
 export const fetchBlockList = async (
@@ -116,12 +116,11 @@ export const fetchBlockList = async (
 export const resolveBlockChildren = async (
   blocks: ListBlockChildrenResponseResults
 ): Promise<Array<BlockBlockObject>> => {
-  const blockObjectComponents = await Promise.all(
+  const blockObjectList = await Promise.all(
     blocks.map(async (child_block) => await convertResponseToBlock(child_block))
   );
-  const nonNullBlockObjectComponents =
-    blockObjectComponents.filter(notNullNorUndefined);
-  return wrapListItems(nonNullBlockObjectComponents);
+  const notNullBlockObjectList = blockObjectList.filter(notNullNorUndefined);
+  return wrapListItems(notNullBlockObjectList);
 };
 
 export const wrapListItems = (
@@ -210,10 +209,10 @@ export const wrapListItems = (
 };
 
 export const convertResponseToBlock = async (
-  block: BlockObjectResponse | PartialBlockObjectResponse
-): Promise<BlockBlockObject | null> => {
+  block: GetBlockResponse
+): Promise<BlockBlockObject | undefined> => {
   if (!isFullBlock(block)) {
-    return null;
+    return undefined;
   }
   switch (block.type) {
     case "audio": {
@@ -316,7 +315,11 @@ export const convertResponseToBlock = async (
       return await convertVideoResponseToBlock(block);
     }
     default: {
-      return null;
+      return;
     }
   }
 };
+import "dotenv/config";
+
+const res = await fetchBlockList("7ed3a6eebb5e4cdfa94433684d7c56bf");
+console.log(JSON.stringify(res, null, 2));

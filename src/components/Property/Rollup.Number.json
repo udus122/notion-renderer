@@ -1,0 +1,10 @@
+{
+  "id": "%7CyGg",
+  "next_url": null,
+  "type": "rollup",
+  "rollup": {
+    "type": "number",
+    "number": 43.5,
+    "function": "average"
+  }
+}

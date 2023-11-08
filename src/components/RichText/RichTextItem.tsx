@@ -1,16 +1,14 @@
-import { useMapper } from "../Mapper/hooks.js";
+import { useMapper } from "../hooks.js";
 
 import { InlineEquation } from "./InlineEquation.js";
 import { Mention } from "./Mention.js";
 import { Text } from "./Text.js";
 
-import type { RichTextItemProps } from "../../types/notion/common.js";
-import type { RichTextItem as RichTextItemType } from "../../types/notion/richText/richTextItem.js";
+import type { RichTextItemComponent } from "../../types/notion/richText/richTextItem.js";
 
-type Props = RichTextItemProps<RichTextItemType>;
-
-export const RichTextItem: React.FC<Props> = (props) => {
+export const RichTextItem: RichTextItemComponent = (props) => {
   if (!props.richText) return null;
+
   return (
     <span className="notion-rich-text-item">
       <RichTextItemContent {...props} />
@@ -18,7 +16,9 @@ export const RichTextItem: React.FC<Props> = (props) => {
   );
 };
 
-const RichTextItemContent: React.FC<Props> = ({ richText: richTextItem }) => {
+const RichTextItemContent: RichTextItemComponent = ({
+  richText: richTextItem,
+}) => {
   const { richTextItemMapper } = useMapper();
 
   const mapper = {

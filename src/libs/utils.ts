@@ -26,7 +26,7 @@ export const callAPIWithBackOff = async <Args, Item>(
   func: (args: Args) => Promise<Item>,
   args: Args,
   retryCount = 3,
-  waitingTimeMS = 1000
+  waitingTimeMS = 3000
 ): Promise<Result<Item>> => {
   if (retryCount < 1) {
     return {

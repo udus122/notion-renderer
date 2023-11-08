@@ -1,4 +1,6 @@
-import BlocksObject from "./BlockList.json";
+import { BlocksContext } from "../hooks.js";
+
+import BlockList from "./BlockList.json";
 import { TableOfContents } from "./TableOfContents.js";
 import TableOfContentsObject from "./TableOfContents.json";
 
@@ -19,6 +21,12 @@ type Story = StoryObj<typeof TableOfContents>;
 export const Default: Story = {
   args: {
     block: TableOfContentsObject as TableOfContentsBlockObject,
-    blocks: BlocksObject as Array<BlockBlockObject>,
   },
+  decorators: [
+    (Story) => (
+      <BlocksContext.Provider value={BlockList as Array<BlockBlockObject>}>
+        <Story />
+      </BlocksContext.Provider>
+    ),
+  ],
 };

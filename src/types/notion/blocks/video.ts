@@ -1,5 +1,6 @@
+import type { BlockBlockProps } from "./block.js";
 import type { Overwrite } from "../../utils.js";
-import type { TextRequest, BlockProps } from "../common.js";
+import type { TextRequest } from "../common/common.js";
 import type { RichTextItem } from "../richText/richTextItem.js";
 import type {
   LinkTypeData,
@@ -33,6 +34,6 @@ export type VideoBlockObject = Overwrite<
   }
 >;
 
-export type VideoBlockProps = BlockProps<VideoBlockObject>;
+export type VideoBlockProps = BlockBlockProps<VideoBlockObject>;
 
 export type VideoBlock = ComponentType<VideoBlockProps>;

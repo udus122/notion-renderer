@@ -18,7 +18,7 @@ export const convertSyncedBlockResponseToBlock = async (
           ...block.synced_block,
           synced_from: {
             ...block.synced_block.synced_from,
-            block: duplicatedBlock,
+            block: duplicatedBlock ?? null,
           },
           children: children.length === 0 ? null : children,
         },

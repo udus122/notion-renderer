@@ -1,0 +1,20 @@
+@import url("./cover.css") layer(notion-components);
+
+.notion-page {
+  & > div {
+    margin-inline: 3rem;
+  }
+
+  .notion-cover {
+    block-size: 30vh;
+    inline-size: 100%;
+    object-position: center 0%;
+    object-fit: cover;
+  }
+
+  .notion-icon {
+    display: block;
+    font-size: 5rem;
+    margin-block-start: -3rem;
+  }
+}

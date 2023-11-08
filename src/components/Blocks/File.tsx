@@ -1,4 +1,5 @@
-import { useMapper } from "../Mapper/hooks.js";
+import { File as FileComponent } from "../Common/File.js";
+import { useMapper } from "../hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
 import type { FileBlock } from "../../types/notion/blocks/file.js";
@@ -18,17 +19,7 @@ export const File: FileBlock = ({ block }) => {
 
   return (
     <div id={block.id} className="notion-file">
-      <Link href={fileUrl}>
-        <div className="notion-file-title">
-          <img
-            src="https://www.notion.so/icons/document_gray.svg"
-            alt="File icon in a file block"
-            width={20}
-            height={20}
-          />{" "}
-          {filename}
-        </div>
-      </Link>
+      <FileComponent file={block.file} />
       <div className="notion-caption notion-file-caption">
         <RichText richText={block.file.caption} />
       </div>

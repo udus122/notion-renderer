@@ -7,7 +7,7 @@ import type { EquationRichTextItem } from "../../types/notion/richText/equation.
 export const InlineEquation: EquationRichTextItem = ({
   richText: richTextItem,
 }) => (
-  <span className="notion_rich_text_type_equation">
+  <span className="notion-rich-text-type-equation">
     <Annotation richTextItem={richTextItem}>
       <span
         dangerouslySetInnerHTML={{

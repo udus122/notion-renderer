@@ -9,7 +9,7 @@ export const convertResponseToRichTextItem = async (
 ) => {
   switch (response.type) {
     case "text": {
-      return await convertTextRichTextItemResponse(response);
+      return convertTextRichTextItemResponse(response);
     }
     case "equation": {
       return await convertEquationRichTextItemResponse(response);

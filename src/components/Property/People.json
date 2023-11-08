@@ -1,0 +1,16 @@
+{
+  "id": "K%5Eat",
+  "type": "people",
+  "people": [
+    {
+      "object": "user",
+      "id": "e0446ede-dde6-457c-b535-d2b19f40b45a",
+      "name": "Yudai Usuda",
+      "avatar_url": "https://lh3.googleusercontent.com/-aterSOvHdK8/AAAAAAAAAAI/AAAAAAAAAAA/ACHi3rf3K60tC7tkhIgJeYpSyyEnrkYT2A/photo.jpg",
+      "type": "person",
+      "person": {
+        "email": "u.yudai1202@gmail.com"
+      }
+    }
+  ]
+}

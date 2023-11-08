@@ -1,4 +1,4 @@
-import type { RichTextItemProps } from "../common.js";
+import type { RichTextItemProps } from "./richTextItem.js";
 import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 

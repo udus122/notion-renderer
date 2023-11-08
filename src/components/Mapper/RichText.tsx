@@ -1,4 +1,4 @@
-import { RichTextItemContext, useMapper } from "./hooks.js";
+import { RichTextItemContext, useMapper } from "../hooks.js";
 
 import type { RichTextItemMapper } from "../../types/notion/mapper/richTextItem.js";
 import type { FC, ReactNode } from "react";

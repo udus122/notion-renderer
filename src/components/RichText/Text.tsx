@@ -1,8 +1,8 @@
-import { useMapper } from "../Mapper/hooks.js";
+import { useMapper } from "../hooks.js";
 
 import { Annotation } from "./Annotation/Annotation.js";
 
-import type { RichTextItemProps } from "../../types/notion/common.js";
+import type { RichTextItemProps } from "../../types/notion/richText/richTextItem.js";
 import type { TextRichTextItemObject } from "../../types/notion/richText/text.js";
 
 type Props = Omit<

@@ -1,4 +1,4 @@
-import type { BlockProps } from "../common.js";
+import type { BlockBlockProps } from "./block.js";
 import type { RichTextItem } from "../richText/richTextItem.js";
 import type {
   LinkTypeData,
@@ -16,6 +16,6 @@ export type EmbedBlockObject = EmbedBlockObjectResponse & {
   };
 };
 
-export type EmbedBlockProps = BlockProps<EmbedBlockObject>;
+export type EmbedBlockProps = BlockBlockProps<EmbedBlockObject>;
 
 export type EmbedBlock = ComponentType<EmbedBlockProps>;

@@ -1,0 +1,19 @@
+import { DateComponent } from "../Common/Date.js";
+
+import type { DatePropertyItemComponent } from "../../types/notion/pages/properties/date.js";
+
+export const DateProperty: DatePropertyItemComponent = ({
+  propertyItem,
+  format,
+}) => {
+  if (!propertyItem.date) return null;
+
+  return (
+    <div
+      id={propertyItem.id}
+      className="notion-property-item notion-created-time"
+    >
+      <DateComponent date={propertyItem.date} format={format} />
+    </div>
+  );
+};

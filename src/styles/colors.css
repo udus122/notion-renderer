@@ -77,3 +77,43 @@
 .notion-color-red_background {
   background-color: var(--color-bg-red);
 }
+
+.notion-pill-color-default {
+  background-color: unset;
+}
+
+.notion-pill-color-gray {
+  background-color: var(--color-pill-gray);
+}
+
+.notion-pill-color-brown {
+  background-color: var(--color-pill-brown);
+}
+
+.notion-pill-color-orange {
+  background-color: var(--color-pill-orange);
+}
+
+.notion-pill-color-yellow {
+  background-color: var(--color-pill-yellow);
+}
+
+.notion-pill-color-green {
+  background-color: var(--color-pill-green);
+}
+
+.notion-pill-color-blue {
+  background-color: var(--color-pill-blue);
+}
+
+.notion-pill-color-purple {
+  background-color: var(--color-pill-purple);
+}
+
+.notion-pill-color-pink {
+  background-color: var(--color-pill-pink);
+}
+
+.notion-pill-color-red {
+  background-color: var(--color-pill-red);
+}
