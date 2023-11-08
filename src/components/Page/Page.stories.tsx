@@ -18,4 +18,11 @@ export const Default: Story = {
   args: {
     page: PageObject as PageObjectType,
   },
+  decorators: [
+    (Story) => (
+      <div className="notion-root notion-light">
+        <Story />
+      </div>
+    ),
+  ],
 };
