@@ -228,11 +228,11 @@ Most common block types are supported.
 
 ### Page
 
-| Property Type | Supported | Notes |
-| ------------- | --------- | ----- |
-| Cover         | ✅         |       |
-| Icon          | ✅         |       |
-| Title         | ✅         |       |
+| Page components | Supported | Notes |
+| --------------- | --------- | ----- |
+| Cover           | ✅         |       |
+| Icon            | ✅         |       |
+| Title           | ✅         |       |
 
 #### Properties
 
@@ -263,7 +263,17 @@ Most common block types are supported.
 
 ### Database
 
-comming soon.
+under construction.
+
+| Layout Type | Supported | Layout Name | Notes |
+| ----------- | --------- | ----------- | ----- |
+| Table       | ❌         | `table`     |       |
+| Gallery     | ❌         | `gallery`   |       |
+| List        | ❌         | `list`      |       |
+| Board       | ❌         | `board`     |       |
+| Calendar    | ❌         | `calendar`  |       |
+| Timeline    | ❌         | `timeline`  |       |
+
 
 ## Contributing
 
