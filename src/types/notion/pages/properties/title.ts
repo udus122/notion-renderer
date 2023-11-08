@@ -4,11 +4,13 @@ import type { RichText } from "../../richText/richText.js";
 import type { TitlePropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 
+export type TitleItem = RichText;
+
 export type TitlePropertyItemObject = PartialBy<
   Overwrite<
     TitlePropertyItemObjectResponse,
     {
-      title: RichText;
+      title: TitleItem;
     }
   >,
   "object"

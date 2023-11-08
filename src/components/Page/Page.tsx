@@ -1,5 +1,6 @@
-import { extractTitle } from "../../utils.js";
+import { splitTitleAndOtherProperties } from "../../utils.js";
 import { Icon } from "../Common/Icon.js";
+import { Properties } from "../Property/Properties.js";
 
 import { Cover } from "./Cover.js";
 import { Title } from "./Title.js";
@@ -14,13 +15,15 @@ type Props = {
 type PageComponent = ComponentType<Props>;
 
 export const Page: PageComponent = ({ page }) => {
+  const { title, other } = splitTitleAndOtherProperties(page.properties);
+
   return (
     <div id={page.id} className="notion-page">
       <Cover cover={page.cover} />
       <div>
         <Icon icon={page.icon} />
-        <Title title={extractTitle(page)} />
-        {/* <Properties properties={page.properties} /> */}
+        <Title title={title.title} />
+        <Properties properties={other} />
       </div>
     </div>
   );

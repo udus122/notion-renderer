@@ -1,20 +1,40 @@
 import type { PageObject } from "./types/notion/pages/page.js";
 import type { Properties } from "./types/notion/pages/properties/properties.js";
+import type { TitlePropertyItemObject } from "./types/notion/pages/properties/title.js";
+import type { RichText } from "./types/notion/richText/richText.js";
 import type {
   DatabaseObjectResponse,
   PageObjectResponse,
+  RichTextItemResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 
-export type TitleProperty = Extract<
-  PageObjectResponse["properties"][string],
-  { type: "title" }
->;
+export const splitTitleAndOtherProperties = (
+  properties: Properties | PageObjectResponse["properties"]
+) => {
+  let title: TitlePropertyItemObject | undefined;
+  const other: Properties = {};
+
+  Object.entries(properties).forEach(([key, value]) => {
+    if (isTitleProperty(value)) {
+      title = value;
+    } else {
+      other[key] = value;
+    }
+  });
+
+  if (title === undefined) {
+    throw new Error("Title property not found");
+  }
+
+  return { title, other };
+};
 
 export const extractTitle = (
   pageOrDatabase: PageObject | PageObjectResponse | DatabaseObjectResponse
-) => {
+): RichText | RichTextItemResponse[] => {
   if (pageOrDatabase.object === "page") {
-    return extractTitlePropertyFromPage(pageOrDatabase.properties)?.title ?? [];
+    const { title } = splitTitleAndOtherProperties(pageOrDatabase.properties);
+    return title.title;
   }
 
   if (pageOrDatabase.object === "database") {
@@ -24,17 +44,6 @@ export const extractTitle = (
   return [];
 };
 
-export const extractTitlePropertyFromPage = (
-  page_properties: PageObjectResponse["properties"] | Properties
-) => {
-  for (const property of Object.values(page_properties)) {
-    if (isTitleProperty(property)) {
-      return property;
-    }
-  }
-  return;
-};
-
 export const isTitleProperty = (
   property: PageObjectResponse["properties"][string] | Properties[string]
-): property is TitleProperty => property.type === "title";
+): property is TitlePropertyItemObject => property.type === "title";

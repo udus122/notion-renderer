@@ -5,13 +5,16 @@
     margin-inline: 3rem;
   }
 
+  .notion-cover {
+    block-size: 30vh;
+    inline-size: 100%;
+    object-position: center 0%;
+    object-fit: cover;
+  }
+
   .notion-icon {
     display: block;
     font-size: 5rem;
-    margin-block-start: -3.5rem;
-  }
-
-  .notion-title {
-    /* margin-block: -2rem auto 0; */
+    margin-block-start: -3rem;
   }
 }
