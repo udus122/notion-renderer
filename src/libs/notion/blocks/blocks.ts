@@ -94,13 +94,13 @@ export const listBlockChildren = async (
 
 export const fetchBlock = async (
   blockId: string
-): Promise<BlockBlockObject | null> => {
-  const block = await retrieveBlock({ block_id: blockId });
-  if (block) {
-    const blockComponent = convertResponseToBlock(block);
-    return blockComponent;
+): Promise<BlockBlockObject | undefined> => {
+  const blockObjectResponse = await retrieveBlock({ block_id: blockId });
+  if (!blockObjectResponse) {
+    return;
   }
-  return null;
+  const blockObject = convertResponseToBlock(blockObjectResponse);
+  return blockObject;
 };
 
 export const fetchBlockList = async (
@@ -118,12 +118,11 @@ export const fetchBlockList = async (
 export const resolveBlockChildren = async (
   blocks: ListBlockChildrenResponseResults
 ): Promise<Array<BlockBlockObject>> => {
-  const blockObjectComponents = await Promise.all(
+  const blockObjectList = await Promise.all(
     blocks.map(async (child_block) => await convertResponseToBlock(child_block))
   );
-  const nonNullBlockObjectComponents =
-    blockObjectComponents.filter(notNullNorUndefined);
-  return wrapListItems(nonNullBlockObjectComponents);
+  const notNullBlockObjectList = blockObjectList.filter(notNullNorUndefined);
+  return wrapListItems(notNullBlockObjectList);
 };
 
 export const wrapListItems = (
@@ -213,9 +212,9 @@ export const wrapListItems = (
 
 export const convertResponseToBlock = async (
   block: BlockObjectResponse | PartialBlockObjectResponse
-): Promise<BlockBlockObject | null> => {
+): Promise<BlockBlockObject | undefined> => {
   if (!isFullBlock(block)) {
-    return null;
+    return undefined;
   }
   switch (block.type) {
     case "audio": {
@@ -318,7 +317,7 @@ export const convertResponseToBlock = async (
       return await convertVideoResponseToBlock(block);
     }
     default: {
-      return null;
+      return;
     }
   }
 };

@@ -44,7 +44,7 @@ export const convertLinkToPageResponseToBlock = async (
       } satisfies LinkToPageBlockObject;
     }
     default: {
-      return null;
+      return;
     }
   }
 };
