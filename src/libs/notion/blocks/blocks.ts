@@ -46,12 +46,10 @@ import type { BulletedListBlockObject } from "../../../types/notion/blocks/bulle
 import type { NumberedListBlockObject } from "../../../types/notion/blocks/numberedList.js";
 import type { ListBlockChildrenResponseResults } from "../../../types/notion/common/common.js";
 import type {
-  BlockObjectResponse,
   GetBlockParameters,
   GetBlockResponse,
   ListBlockChildrenParameters,
   ListBlockChildrenResponse,
-  PartialBlockObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const retrieveBlock = async (
@@ -211,7 +209,7 @@ export const wrapListItems = (
 };
 
 export const convertResponseToBlock = async (
-  block: BlockObjectResponse | PartialBlockObjectResponse
+  block: GetBlockResponse
 ): Promise<BlockBlockObject | undefined> => {
   if (!isFullBlock(block)) {
     return undefined;
