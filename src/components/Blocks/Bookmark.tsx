@@ -1,13 +1,11 @@
-import { useMapper } from "../hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
 import type { BookmarkBlock } from "../../types/notion/blocks/bookmark.js";
 
 export const Bookmark: BookmarkBlock = ({ block }) => {
-  const { Link } = useMapper();
   return (
     <div id={block.id} className="notion-block notion-bookmark">
-      <Link href={block.bookmark.url}>
+      <a href={block.bookmark.url} target="_blank">
         <div className="notion-bookmark-container">
           <div className="notion-bookmark-content">
             <div className="notion-bookmark-title">
@@ -45,7 +43,7 @@ export const Bookmark: BookmarkBlock = ({ block }) => {
             </div>
           )}
         </div>
-      </Link>
+      </a>
       <div className="notion-caption notion-bookmark-caption">
         <RichText richText={block.bookmark.caption} />
       </div>
