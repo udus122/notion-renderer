@@ -8,26 +8,27 @@ export const convertVideoResponseToBlock = async (
   block: VideoBlockObjectResponse
 ) => {
   if (block.video.type === "external") {
-    const { payload: oembed, error } = await fetchOembed(
-      block.video.external.url,
-      { maxwidth: 560, maxheight: 315 }
-    );
-    if (!error) {
+    const { ok, data } = await fetchOembed(block.video.external.url, {
+      maxwidth: 560,
+      maxheight: 315,
+    });
+    if (!ok) {
       return {
         ...block,
         video: {
           ...block.video,
           caption: await convertResponseToRichText(block.video.caption),
-          oembed,
         },
       } satisfies VideoBlockObject;
     }
+
+    return {
+      ...block,
+      video: {
+        ...block.video,
+        caption: await convertResponseToRichText(block.video.caption),
+        oembed: data,
+      },
+    } satisfies VideoBlockObject;
   }
-  return {
-    ...block,
-    video: {
-      ...block.video,
-      caption: await convertResponseToRichText(block.video.caption),
-    },
-  } satisfies VideoBlockObject;
 };

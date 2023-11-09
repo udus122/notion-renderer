@@ -12,15 +12,15 @@ import type {
 export const retrieveDatabase = async (
   args: GetDatabaseParameters
 ): Promise<GetDatabaseResponse | undefined> => {
-  const { payload, error } = await callAPIWithBackOff<
+  const { ok, data } = await callAPIWithBackOff<
     GetDatabaseParameters,
     GetDatabaseResponse
   >(notion.databases.retrieve, args);
 
-  if (!error) {
-    return payload;
+  if (!ok) {
+    return;
   }
-  return;
+  return data;
 };
 
 export const fetchDatabase = async (databaseId: string) => {

@@ -55,39 +55,39 @@ import type {
 export const retrieveBlock = async (
   args: GetBlockParameters
 ): Promise<GetBlockResponse | undefined> => {
-  const { payload, error } = await callAPIWithBackOff<
+  const { ok, data } = await callAPIWithBackOff<
     GetBlockParameters,
     GetBlockResponse
   >(notion.blocks.retrieve, args);
 
-  if (error) {
+  if (!ok) {
     return;
   }
 
-  return payload;
+  return data;
 };
 
 export const listBlockChildren = async (
   args: ListBlockChildrenParameters
 ): Promise<ListBlockChildrenResponseResults> => {
-  const { payload, error } = await callAPIWithBackOff<
+  const { ok, data } = await callAPIWithBackOff<
     ListBlockChildrenParameters,
     ListBlockChildrenResponse
   >(notion.blocks.children.list, args);
 
-  if (error) {
+  if (!ok) {
     return [];
   }
 
-  if (payload.next_cursor) {
+  if (data.next_cursor) {
     const nextResults = await listBlockChildren({
       ...args,
-      start_cursor: payload.next_cursor,
+      start_cursor: data.next_cursor,
     });
-    payload.results = [...payload.results, ...nextResults];
+    data.results = [...data.results, ...nextResults];
   }
 
-  return payload.results;
+  return data.results;
 };
 
 export const fetchBlock = async (

@@ -29,20 +29,19 @@ export const convertMentionObjectResponse = async (
       } satisfies DateMentionObject;
     }
     case "link_preview": {
-      const { payload: site_meta, error } = await fetchSiteMeta(
-        mention.link_preview.url
-      );
-      if (!error) {
+      const { ok, data } = await fetchSiteMeta(mention.link_preview.url);
+      if (!ok) {
         return {
           ...mention,
-          link_preview: {
-            ...mention.link_preview,
-            site_meta: site_meta,
-          },
         } satisfies LinkPreviewMentionObject;
       }
+
       return {
         ...mention,
+        link_preview: {
+          ...mention.link_preview,
+          site_meta: data,
+        },
       } satisfies LinkPreviewMentionObject;
     }
     case "template_mention": {

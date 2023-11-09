@@ -30,16 +30,16 @@ export const callAPIWithBackOff = async <Args, Item>(
 ): Promise<Result<Item>> => {
   if (retryCount < 1) {
     return {
-      payload: undefined,
-      error: new Error("retry count exceeded."),
+      ok: false,
+      data: new Error("retry count exceeded."),
     };
   }
 
   try {
-    const payload = await func({ ...args });
+    const data = await func({ ...args });
     return {
-      payload,
-      error: undefined,
+      ok: true,
+      data,
     };
   } catch (error) {
     if (isNotionClientError(error)) {
@@ -54,15 +54,15 @@ export const callAPIWithBackOff = async <Args, Item>(
           if (waitingTimeMS > 0) {
             await new Promise((resolve) => setTimeout(resolve, waitingTimeMS));
           }
-          const { payload, error: retryError } = await callAPIWithBackOff(
+          const { ok, data } = await callAPIWithBackOff(
             func,
             { ...args },
             retryCount--
           );
-          if (!retryError) {
+          if (ok) {
             return {
-              payload,
-              error: undefined,
+              ok,
+              data,
             };
           }
           break;
@@ -71,14 +71,14 @@ export const callAPIWithBackOff = async <Args, Item>(
           break;
       }
       return {
-        payload: undefined,
-        error,
+        ok: false,
+        data: error,
       };
     }
   }
   return {
-    payload: undefined,
-    error: new Error("Notion api call was failed with unknown error."),
+    ok: false,
+    data: new Error("Notion api call was failed with unknown error."),
   };
 };
 
@@ -92,14 +92,14 @@ export const fetchSiteMeta = async (
   fetchOptions?: FetchOptions | undefined
 ): Promise<Result<ArticleData>> => {
   try {
-    const article = await extractSiteMeta(url, parserOptions, fetchOptions);
-    if (article) {
-      return { payload: article, error: undefined };
+    const data = await extractSiteMeta(url, parserOptions, fetchOptions);
+    if (data) {
+      return { ok: true, data };
     }
   } catch (error) {
-    return { payload: undefined, error: error as Error };
+    return { ok: false, data: error as Error };
   }
-  return { payload: undefined, error: new Error("article is null.") };
+  return { ok: false, data: new Error("article is null.") };
 };
 
 export const fetchOembed = async (
@@ -114,11 +114,11 @@ export const fetchOembed = async (
       | PhotoTypeData
       | VideoTypeData
       | RichTypeData;
-    return { payload: oembed, error: undefined };
+    return { ok: true, data: oembed };
   } catch (error) {
     return {
-      payload: undefined,
-      error: error as Error,
+      ok: false,
+      data: error as Error,
     };
   }
 };

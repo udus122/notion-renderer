@@ -7,14 +7,13 @@ import type { EmbedBlockObjectResponse } from "@notionhq/client/build/src/api-en
 export const convertEmbedResponseToBlock = async (
   block: EmbedBlockObjectResponse
 ) => {
-  const { payload: oembed, error } = await fetchOembed(block.embed.url);
-  if (!error) {
+  const { ok, data } = await fetchOembed(block.embed.url);
+  if (!ok) {
     return {
       ...block,
       embed: {
         ...block.embed,
         caption: await convertResponseToRichText(block.embed.caption),
-        oembed,
       },
     } satisfies EmbedBlockObject;
   }
@@ -22,6 +21,7 @@ export const convertEmbedResponseToBlock = async (
     ...block,
     embed: {
       ...block.embed,
+      oembed: data,
       caption: await convertResponseToRichText(block.embed.caption),
     },
   } satisfies EmbedBlockObject;
