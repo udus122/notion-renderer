@@ -1,2 +1,0 @@
-import{j as n}from"./jsx-runtime-ffb262ed.js";import{I as a}from"./Icon-a1839b0c.js";import{u as o}from"./hooks-69e941c5.js";const r=({block:i})=>{var e;const{Link:s}=o();return n.jsxs(s,{id:i.id,className:"notion-block notion-child-page",href:`/${i.id}`,children:[n.jsx("span",{className:"notion-child-page-icon",children:n.jsx(a,{icon:((e=i.child_page.page)==null?void 0:e.icon)??null})}),n.jsx("span",{className:"notion-child-page-title",children:i.child_page.title||"Unknown page"})]})};export{r as C};
-//# sourceMappingURL=ChildPage-81d4d254.js.map
