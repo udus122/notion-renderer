@@ -1,3 +1,5 @@
+"use client";
+
 import { BlockList } from "./Blocks/BlockList.js";
 import { AnnotationItemProvider } from "./Mapper/Annotation.js";
 import { BlockProvider } from "./Mapper/Block.js";
