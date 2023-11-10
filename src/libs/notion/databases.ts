@@ -4,9 +4,12 @@ import { callAPIWithBackOff } from "../utils.js";
 
 import { notion } from "./auth.js";
 
+import type { Result } from "../../types/utils.js";
 import type {
   GetDatabaseParameters,
   GetDatabaseResponse,
+  QueryDatabaseParameters,
+  QueryDatabaseResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const retrieveDatabase = async (
