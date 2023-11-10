@@ -66,4 +66,3 @@ export const fetchAllDatabaseItems = async (
 
   return data.results;
 };
-
