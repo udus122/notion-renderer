@@ -1,4 +1,4 @@
-import{M as l,d as s}from"./index-4951bd02.js";import{j as e}from"./jsx-runtime-ffb262ed.js";import{u as c}from"./index-a1cf9e47.js";import"./iframe-8f3e810b.js";import"../sb-preview/runtime.js";import"./index-7653c3a3.js";import"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";import"./index-2ee68151.js";import"./index-d37d4223.js";import"./index-356e4a49.js";const i=`![Notion Renderer](/assets/logo.png)
+import{M as l,d as s}from"./index-fa465e15.js";import{j as e}from"./jsx-runtime-ffb262ed.js";import{u as c}from"./index-a1cf9e47.js";import"./iframe-9387617e.js";import"../sb-preview/runtime.js";import"./index-7653c3a3.js";import"./index-76fb7be0.js";import"./_commonjsHelpers-de833af9.js";import"./index-2ee68151.js";import"./index-d37d4223.js";import"./index-356e4a49.js";const i=`![Notion Renderer](/assets/logo.png)
 
 # Notion Renderer
 ![npm version](https://img.shields.io/npm/v/%40udus%2Fnotion-renderer) ![GitHub License](https://img.shields.io/github/license/udus122/notion-renderer) ![GitHub Repo stars](https://img.shields.io/github/stars/udus122/notion-renderer?style=social)
@@ -283,4 +283,4 @@ Pull requests are welcome.
 
 [MIT](https://choosealicense.com/licenses/mit/)`;function r(o){return e.jsxs(e.Fragment,{children:[e.jsx(l,{title:"Readme"}),`
 `,e.jsx(s,{children:i})]})}function p(o={}){const{wrapper:t}=Object.assign({},c(),o.components);return t?e.jsx(t,{...o,children:e.jsx(r,{...o})}):r()}const a=()=>{throw new Error("Docs-only story")};a.parameters={docsOnly:!0};const n={title:"Readme",tags:["stories-mdx"],includeStories:["__page"]};n.parameters=n.parameters||{};n.parameters.docs={...n.parameters.docs||{},page:p};const _=["__page"];export{_ as __namedExportsOrder,a as __page,n as default};
-//# sourceMappingURL=readme.stories-b292cb47.js.map
+//# sourceMappingURL=readme.stories-d28a0d0b.js.map
