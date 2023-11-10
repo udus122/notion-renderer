@@ -20,7 +20,7 @@ export const Mention: React.FC<Props> = ({ richText: richTextItem }) => {
     case "database":
       return (
         <span className="notion-rich-text-type-mention-type-database">
-          <Link href={`/${richTextItem.mention.database.id}`}>
+          <Link prefix="/" link={richTextItem.mention.database.id}>
             <Annotation richTextItem={richTextItem}>
               {richTextItem.plain_text}
             </Annotation>
@@ -36,7 +36,7 @@ export const Mention: React.FC<Props> = ({ richText: richTextItem }) => {
     case "link_preview":
       return (
         <span className="notion_rich_text_type_mention_type_link_preview">
-          <Link href={richTextItem.mention.link_preview.url}>
+          <Link link={richTextItem.mention.link_preview.url}>
             <Annotation richTextItem={richTextItem}>
               {richTextItem.plain_text}
             </Annotation>
@@ -46,7 +46,7 @@ export const Mention: React.FC<Props> = ({ richText: richTextItem }) => {
     case "page":
       return (
         <span className="notion_rich_text_type_mention_type_page">
-          <Link href={`/${richTextItem.mention.page.id}`}>
+          <Link link={richTextItem.mention.page.id}>
             <Annotation richTextItem={richTextItem}>
               {richTextItem.plain_text}
             </Annotation>

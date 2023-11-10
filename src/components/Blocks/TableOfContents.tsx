@@ -31,7 +31,7 @@ export const TableOfContents: TableOfContentsBlock = ({ block }) => {
           return (
             <div key={heading.id} className="notion-table-of-contents-item">
               <div className={`notion-table-of-contents-item-${heading.type}`}>
-                <Link href={`#${heading.id}`}>
+                <Link prefix="#" link={heading.id}>
                   {/* @ts-expect-error: because heading objects always have a 'rich_text' property  */}
                   {heading[heading.type].rich_text.map((t) => t.plain_text)}
                 </Link>

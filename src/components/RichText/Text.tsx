@@ -1,5 +1,3 @@
-import { useMapper } from "../hooks.js";
-
 import { Annotation } from "./Annotation/Annotation.js";
 
 import type { RichTextItemProps } from "../../types/notion/richText/richTextItem.js";
@@ -11,15 +9,13 @@ type Props = Omit<
 >;
 
 export const Text: React.FC<Props> = ({ richText: richTextItem }) => {
-  const { Link } = useMapper();
-
   return (
     <span className="notion-rich-text-type-text">
       <Annotation richTextItem={richTextItem}>
         {richTextItem.text.link ? (
-          <Link href={richTextItem.text.link?.url}>
+          <a className="notion-link" href={richTextItem.text.link?.url}>
             {richTextItem.text.content}
-          </Link>
+          </a>
         ) : (
           richTextItem.text.content
         )}

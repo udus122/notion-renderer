@@ -1,5 +1,3 @@
-import { useMapper } from "../hooks.js";
-
 import type { FileObject } from "../../types/notion/common/common.js";
 import type { FC } from "react";
 
@@ -8,8 +6,6 @@ type Props = {
 };
 
 export const File: FC<Props> = ({ file }) => {
-  const { Link } = useMapper();
-
   const fileUrl =
     file.type == "external"
       ? file.external.url
@@ -22,7 +18,7 @@ export const File: FC<Props> = ({ file }) => {
     decodeURIComponent(new URL(fileUrl).pathname.split("/").slice(-1)[0]);
 
   return (
-    <Link href={fileUrl} className="notion-file">
+    <a href={fileUrl} className="notion-link notion-file">
       <span className="notion-file-title">
         <span className="notion-file-icon">
           <img
@@ -34,6 +30,6 @@ export const File: FC<Props> = ({ file }) => {
         </span>
         <span className="notion-file-name">{filename}</span>
       </span>
-    </Link>
+    </a>
   );
 };
