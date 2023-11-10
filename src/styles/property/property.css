@@ -1,5 +1,20 @@
 .notion-property {
-  display: grid;
-  grid-template-columns: minmax(30%, max-content) auto;
+  display: flex;
   padding-block: 0.25rem;
+}
+
+.notion-property-name {
+  flex: 0 0 10em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notion-property-item {
+  flex: 1 1 auto;
+}
+
+.notion-pill {
+  padding-inline: 0.25rem;
+  border-radius: 3px;
 }

@@ -2,7 +2,7 @@
 
 .notion-page {
   & > div {
-    margin-inline: 3rem;
+    margin-inline: var(--margin);
   }
 
   .notion-cover {

@@ -1,3 +1,7 @@
+.notion-block-list {
+  margin-inline: var(--margin);
+}
+
 .notion-block {
   padding: 3px 2px;
 }
