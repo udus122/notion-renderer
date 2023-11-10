@@ -1,12 +1,8 @@
-import { useMapper } from "../hooks.js";
-
 import type { LinkPreviewBlock } from "../../types/notion/blocks/linkPreview.js";
 
 export const LinkPreview: LinkPreviewBlock = ({ block }) => {
-  const { Link } = useMapper();
-
   return (
-    <Link
+    <a
       id={block.id}
       className="notion-block notion-link-preview"
       href={block.link_preview.url}
@@ -48,6 +44,6 @@ export const LinkPreview: LinkPreviewBlock = ({ block }) => {
           </div>
         )}
       </div>
-    </Link>
+    </a>
   );
 };

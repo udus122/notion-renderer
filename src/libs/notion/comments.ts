@@ -10,21 +10,21 @@ import type {
 export const listComments = async (
   args: ListCommentsParameters
 ): Promise<ListCommentsResponse["results"]> => {
-  const { payload, error } = await callAPIWithBackOff<
+  const { ok, data } = await callAPIWithBackOff<
     ListCommentsParameters,
     ListCommentsResponse
   >(notion.comments.list, args);
 
-  if (!error) {
-    if (payload.next_cursor) {
-      const nextResults = await listComments({
-        ...args,
-        start_cursor: payload.next_cursor,
-      });
-      payload.results = [...payload.results, ...nextResults];
-    }
-
-    return payload.results;
+  if (!ok) {
+    return [];
   }
-  return [];
+
+  if (data.next_cursor) {
+    const nextResults = await listComments({
+      ...args,
+      start_cursor: data.next_cursor,
+    });
+    data.results = [...data.results, ...nextResults];
+  }
+  return data.results;
 };

@@ -47,29 +47,29 @@ import type {
 export const retrievePageProperty = async (
   args: GetPagePropertyParameters
 ): Promise<GetPagePropertyResponse | undefined> => {
-  const { payload, error } = await callAPIWithBackOff<
+  const { ok, data } = await callAPIWithBackOff<
     GetPagePropertyParameters,
     GetPagePropertyResponse
   >(notion.pages.properties.retrieve, args);
 
-  if (error) {
+  if (!ok) {
     return;
   }
 
-  if (payload.object === "list") {
-    if (payload.next_cursor) {
+  if (data.object === "list") {
+    if (data.next_cursor) {
       const nextResults = (await retrievePageProperty({
         ...args,
-        start_cursor: payload.next_cursor,
+        start_cursor: data.next_cursor,
       })) as PropertyItemPropertyItemListResponse | undefined;
 
       if (nextResults) {
-        payload.results = [...payload.results, ...nextResults.results];
+        data.results = [...data.results, ...nextResults.results];
       }
     }
   }
 
-  return payload;
+  return data;
 };
 
 export const fetchPageProperty = async (

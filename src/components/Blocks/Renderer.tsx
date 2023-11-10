@@ -1,3 +1,5 @@
+"use client";
+
 import { AnnotationItemProvider } from "../Mapper/Annotation.js";
 import { BlockProvider } from "../Mapper/Block.js";
 import { LinkProvider } from "../Mapper/Link.js";

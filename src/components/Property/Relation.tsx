@@ -11,7 +11,7 @@ export const RelationProperty: RelationPropertyItemComponent = ({
   return (
     <div id={propertyItem?.id} className="notion-property-item notion-relation">
       {propertyItem.relation?.map((item) => (
-        <Link key={item.id} href={`/${item.id}`}>
+        <Link key={item.id} prefix="/" link={item.id}>
           <RelationItem key={item.id} relationItem={item} />
         </Link>
       ))}

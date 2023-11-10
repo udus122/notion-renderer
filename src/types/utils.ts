@@ -8,10 +8,10 @@ export type PartialBy<T, K extends keyof T> = Omit<T, K> & Partial<Pick<T, K>>;
 
 export type Result<T, E extends Error = Error> =
   | {
-      payload: T;
-      error?: undefined;
+      ok: true;
+      data: T;
     }
   | {
-      payload?: undefined;
-      error: E;
+      ok: false;
+      data: E;
     };

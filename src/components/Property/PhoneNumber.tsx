@@ -1,20 +1,17 @@
-import { useMapper } from "../hooks.js";
-
 import type { PhoneNumberPropertyItemComponent } from "../../types/notion/pages/properties/phoneNumber.js";
 
 export const PhoneNumberProperty: PhoneNumberPropertyItemComponent = ({
   propertyItem,
 }) => {
-  const { Link } = useMapper();
   return (
     <div
       id={propertyItem.id}
       className="notion-property-item notion-phone-number"
     >
       {propertyItem.phone_number ? (
-        <Link href={`tel:${propertyItem.phone_number}`}>
+        <a className="notion-link" href={`tel:${propertyItem.phone_number}`}>
           {propertyItem.phone_number}
-        </Link>
+        </a>
       ) : (
         ""
       )}

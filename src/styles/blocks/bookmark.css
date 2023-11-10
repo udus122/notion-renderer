@@ -1,10 +1,12 @@
 .notion-bookmark-container {
+  container-type: inline-size;
   display: flex;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
   padding-inline-start: 1rem;
   overflow: hidden;
   transition: background-color 20ms ease-in 0s;
+  max-block-size: 15rem;
 
   .notion-light &:hover {
     background-color: rgb(55 53 47 / 8%);
@@ -74,5 +76,11 @@
     block-size: 100%;
     max-inline-size: 100%;
     object-fit: cover;
+  }
+}
+
+@container (width <= 480px) {
+  .notion-bookmark-cover {
+    display: none;
   }
 }

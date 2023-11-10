@@ -17,7 +17,7 @@ export const Breadcrumb: BreadcrumbBlock = ({ block }) => {
 
         return (
           <Fragment key={pageOrDatabase.id}>
-            <Link href={`/${pageOrDatabase.id}`}>
+            <Link prefix="/" link={pageOrDatabase.id}>
               <span className="notion-breadcrumb-title">
                 <Icon icon={pageOrDatabase.icon} />{" "}
                 <RichText richText={titleRichText} />

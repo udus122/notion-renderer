@@ -18,15 +18,16 @@ import type {
 export const retrievePage = async (
   args: GetPageParameters
 ): Promise<GetPageResponse | undefined> => {
-  const { payload, error } = await callAPIWithBackOff<
+  const { ok, data } = await callAPIWithBackOff<
     GetPageParameters,
     GetPageResponse
   >(notion.pages.retrieve, args);
 
-  if (!error) {
-    return payload;
+  if (!ok) {
+    return;
   }
-  return;
+
+  return data;
 };
 
 export const fetchPage = async (
@@ -66,3 +67,7 @@ export const convertResponseToPage = async (
     properties,
   } satisfies PageObject;
 };
+
+import "dotenv/config";
+const res = await fetchPage("696a56fa0c6842709fe6165c403abc76");
+console.log(JSON.stringify(res, null, 2));

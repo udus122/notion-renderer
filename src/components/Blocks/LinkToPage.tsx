@@ -27,17 +27,15 @@ export const LinkToPage: LinkToPageBlock = ({ block }) => {
       : [];
 
   return (
-    <Link
-      id={block.id}
-      className="notion-block notion-link-to-page"
-      href={`/${block.id}`}
-    >
-      <span className="notion-link-to-page-icon">
-        <Icon icon={icon} />
-      </span>
-      <span className="notion-link-to-page-title">
-        <RichText richText={titleRichText} />
-      </span>
-    </Link>
+    <div id={block.id} className="notion-block notion-link-to-page">
+      <Link prefix="/" link={block.id}>
+        <span className="notion-link-to-page-icon">
+          <Icon icon={icon} />
+        </span>
+        <span className="notion-link-to-page-title">
+          <RichText richText={titleRichText} />
+        </span>
+      </Link>
+    </div>
   );
 };

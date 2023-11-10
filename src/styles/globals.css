@@ -6,6 +6,7 @@
 @import url("./common/icon.css") layer(notion-components);
 @import url("./common/link.css") layer(notion-components);
 @import url("./caption.css") layer(notion-components);
+@import url("./blocks.css") layer(notion-components);
 @import url("./blocks/audio.css") layer(notion-components);
 @import url("./blocks/bookmark.css") layer(notion-components);
 @import url("./blocks/breadcrumb.css") layer(notion-components);
@@ -25,17 +26,18 @@
 @import url("./blocks/table-of-contents.css") layer(notion-components);
 @import url("./blocks/toggle.css") layer(notion-components);
 @import url("./blocks/video.css") layer(notion-components);
-@import url("./blocks.css") layer(notion-components);
 @import url("./rich-text/mention.css") layer(notion-components);
 @import url("./rich-text/text.css") layer(notion-components);
 @import url("./pages/page.css") layer(notion-components);
 @import url("./property/property.css") layer(notion-components);
-@import url("./property/property-item.css") layer(notion-components);
 @import url("./property/multi-select.css") layer(notion-components);
 @import url("./property/relation.css") layer(notion-components);
 
 @layer notion-theme {
-  .notion-light {
+  :root {
+    --margin: clamp(1rem, 0.273rem + 3.64vw, 3rem);
+
+    /* Colors */
     --color-text-default: #37352f;
     --color-bg-default: #fff;
     --color-pill-default: rgb(206 205 202 / 50%);
@@ -106,6 +108,8 @@
     background-color: var(--color-bg-default);
     line-height: 1.5;
     fill: currentcolor;
+    overflow-wrap: break-word;
+    word-break: break-all;
 
     p {
       margin: 0;

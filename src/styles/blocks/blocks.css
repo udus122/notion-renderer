@@ -1,0 +1,3 @@
+.notion-block-list {
+  margin-inline: clamp(1rem, 0.273rem + 3.64vw, 3rem);
+}

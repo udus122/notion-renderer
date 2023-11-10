@@ -4,6 +4,8 @@
   border-radius: 3px;
   padding-inline-start: 1rem;
   overflow: hidden;
+  transition: background-color 20ms ease-in 0s;
+  max-block-size: 15rem;
 
   .notion-light &:hover {
     background-color: rgb(55 53 47 / 8%);

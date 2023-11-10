@@ -7,23 +7,22 @@ import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api
 export const convertBookmarkResponseToBlock = async (
   block: BookmarkBlockObjectResponse
 ) => {
-  const { payload: site_meta, error } = await fetchSiteMeta(block.bookmark.url);
-  if (!error) {
-    if (site_meta) {
-      return {
-        ...block,
-        bookmark: {
-          ...block.bookmark,
-          site_meta: site_meta,
-          caption: await convertResponseToRichText(block.bookmark.caption),
-        },
-      } satisfies BookmarkBlockObject;
-    }
+  const { ok, data } = await fetchSiteMeta(block.bookmark.url);
+  if (!ok) {
+    return {
+      ...block,
+      bookmark: {
+        ...block.bookmark,
+        caption: await convertResponseToRichText(block.bookmark.caption),
+      },
+    } satisfies BookmarkBlockObject;
   }
+
   return {
     ...block,
     bookmark: {
       ...block.bookmark,
+      site_meta: data,
       caption: await convertResponseToRichText(block.bookmark.caption),
     },
   } satisfies BookmarkBlockObject;
