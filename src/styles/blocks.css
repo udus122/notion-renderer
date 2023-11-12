@@ -1,5 +1,9 @@
 .notion-block-list {
   margin-inline: var(--margin);
+
+  .notion-block-list {
+    margin-inline: 0;
+  }
 }
 
 .notion-block {

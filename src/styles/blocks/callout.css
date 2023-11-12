@@ -1,3 +1,5 @@
+/* stylelint-disable selector-class-pattern */
+
 .notion-callout {
   display: flex;
   margin-top: 2px;
@@ -6,8 +8,9 @@
   padding: 1rem;
   border-radius: 3px;
   box-shadow: none;
+  align-items: flex-start;
 
-  .notion-light &.notion-color-default_background {
+  &.notion-color-default_background {
     border: 1px solid rgb(55 53 47 / 16%);
   }
 
@@ -16,11 +19,19 @@
   }
 }
 
-.notion-callout-icon img {
-  block-size: auto;
-  max-inline-size: 100%;
-  aspect-ratio: 1;
-  border-radius: 0.25em;
+.notion-callout-icon {
+  .notion-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    block-size: auto;
+    max-inline-size: 100%;
+    aspect-ratio: 1;
+    border-radius: 0.25em;
+  }
 }
 
 .notion-callout-content {

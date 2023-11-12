@@ -20,7 +20,7 @@ export const File: FC<Props> = ({ file }) => {
   return (
     <a href={fileUrl} className="notion-link notion-file">
       <span className="notion-file-title">
-        <span className="notion-file-icon">
+        <span className="notion-icon notion-file-icon">
           <img
             src="https://www.notion.so/icons/document_gray.svg"
             alt="file icon"

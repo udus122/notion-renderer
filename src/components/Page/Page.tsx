@@ -19,11 +19,19 @@ export const Page: PageComponent = ({ page }) => {
 
   return (
     <div id={page.id} className="notion-page">
-      <Cover cover={page.cover} />
-      <div>
-        <Icon icon={page.icon} />
-        <Title title={title?.title ?? []} />
-        <Properties properties={other} />
+      <div className="notion-page-cover">
+        <Cover cover={page.cover} />
+      </div>
+      <div className="notion-page-contents">
+        <div className="notion-page-icon">
+          <Icon icon={page.icon} />
+        </div>
+        <div className="notion-page-title">
+          <Title title={title?.title ?? []} />
+        </div>
+        <div className="notion-page-properties">
+          <Properties properties={other} />
+        </div>
       </div>
     </div>
   );

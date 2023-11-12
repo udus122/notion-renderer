@@ -10,14 +10,17 @@
 @import url("./blocks/audio.css") layer(notion-components);
 @import url("./blocks/bookmark.css") layer(notion-components);
 @import url("./blocks/breadcrumb.css") layer(notion-components);
+@import url("./blocks/bulleted-list.css") layer(notion-components);
 @import url("./blocks/callout.css") layer(notion-components);
 @import url("./blocks/child-database.css") layer(notion-components);
 @import url("./blocks/child-page.css") layer(notion-components);
 @import url("./blocks/code.css") layer(notion-components);
 @import url("./blocks/column-list.css") layer(notion-components);
+@import url("./blocks/divider.css") layer(notion-components);
 @import url("./blocks/embed.css") layer(notion-components);
 @import url("./blocks/image.css") layer(notion-components);
 @import url("./blocks/link-preview.css") layer(notion-components);
+@import url("./blocks/numbered-list.css") layer(notion-components);
 @import url("./blocks/paragraph.css") layer(notion-components);
 @import url("./blocks/pdf.css") layer(notion-components);
 @import url("./blocks/quote.css") layer(notion-components);

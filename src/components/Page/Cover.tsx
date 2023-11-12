@@ -11,14 +11,14 @@ export const Cover: React.FC<Props> = ({ cover }) => {
   if (cover.type === "external") {
     return (
       <img
-        className={"notion-cover"}
+        className="notion-cover"
         src={cover.external.url}
         alt="notion cover"
       />
     );
   } else if (cover.type === "file") {
     return (
-      <img className={"notion-cover"} src={cover.file.url} alt="notion cover" />
+      <img className="notion-cover" src={cover.file.url} alt="notion cover" />
     );
   }
 
