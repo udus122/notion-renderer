@@ -26,3 +26,16 @@ export const Default: Story = {
     ),
   ],
 };
+
+export const Dark: Story = {
+  args: {
+    page: PageObject as PageObjectType,
+  },
+  decorators: [
+    (Story) => (
+      <div className="notion-root notion-dark">
+        <Story />
+      </div>
+    ),
+  ],
+};
