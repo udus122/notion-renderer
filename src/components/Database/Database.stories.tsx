@@ -29,3 +29,17 @@ export const Default: Story = {
     ),
   ],
 };
+
+export const Dark: Story = {
+  args: {
+    database: DatabaseObject as DatabaseObjectType,
+    pages: Pages as unknown as Array<PageObject>,
+  },
+  decorators: [
+    (Story) => (
+      <div className="notion-root notion-dark">
+        <Story />
+      </div>
+    ),
+  ],
+};
