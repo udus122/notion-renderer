@@ -9,22 +9,33 @@ import type { ComponentType } from "react";
 
 type Props = {
   page: PageObject;
+  hideCover?: boolean;
+  hideIcon?: boolean;
+  hideTitle?: boolean;
 };
 
 type PageComponent = ComponentType<Props>;
 
-export const Page: PageComponent = ({ page }) => {
+export const Page: PageComponent = ({
+  page,
+  hideCover = false,
+  hideIcon = false,
+}) => {
   const { title, other } = splitTitleAndOtherProperties(page.properties);
 
   return (
     <div id={page.id} className="notion-page">
-      <div className="notion-page-cover">
-        <Cover cover={page.cover} />
-      </div>
-      <div className="notion-page-contents">
-        <div className="notion-page-icon">
-          <Icon icon={page.icon} />
+      {!hideCover && (
+        <div className="notion-page-cover">
+          <Cover cover={page.cover} />
         </div>
+      )}
+      <div className="notion-page-contents">
+        {!hideIcon && (
+          <div className="notion-page-icon">
+            <Icon icon={page.icon} />
+          </div>
+        )}
         <div className="notion-page-title">
           <Title title={title?.title ?? []} />
         </div>

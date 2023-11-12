@@ -3,6 +3,10 @@
   inline-size: 100%;
   object-position: center 0%;
   object-fit: cover;
+
+  &:has(+ .notion-database-contents > .notion-database-icon) {
+    margin-block-end: -5rem;
+  }
 }
 
 .notion-database-contents {
@@ -12,5 +16,4 @@
 .notion-database-icon {
   display: block;
   font-size: 5rem;
-  margin-block-start: -5rem;
 }
