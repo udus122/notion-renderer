@@ -31,6 +31,7 @@
 @import url("./blocks/toggle.css") layer(notion-components);
 @import url("./blocks/video.css") layer(notion-components);
 @import url("./rich-text/mention.css") layer(notion-components);
+@import url("./rich-text/text.css") layer(notion-components);
 @import url("./database/database.css") layer(notion-components);
 @import url("./database/gallery.css") layer(notion-components);
 @import url("./database/card.css") layer(notion-components);
