@@ -5,7 +5,7 @@ import type { Meta, StoryObj } from "@storybook/react";
 import type { PageObject } from "src/types/notion/pages/page.js";
 
 const meta: Meta<typeof Gallery> = {
-  title: "Database/Gallery/Gallery",
+  title: "Database/Gallery",
   component: Gallery,
   tags: ["autodocs"],
   parameters: {

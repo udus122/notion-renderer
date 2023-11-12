@@ -4,59 +4,9 @@
   padding-top: 16px;
   padding-bottom: 4px;
   gap: 1rem;
-}
 
-.notion-gallery-card {
-  display: grid;
-  grid-template-columns: 1rem 1fr 1rem;
-  grid-template-rows: subgrid;
-  grid-row: span 3;
-  overflow: hidden;
-  border-radius: 0.3rem;
-  box-shadow: #00000020 0 2px 4px 2px;
-  padding-bottom: 1rem;
-
-  & > a {
-    display: contents;
+  .notion-gallery-card {
+    grid-template-rows: subgrid;
+    grid-row: span 3;
   }
-}
-
-.gallery-card-cover {
-  grid-column: 1 / -1;
-  aspect-ratio: 16/9;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 10rem;
-
-  img {
-    inline-size: 100%;
-    block-size: 100%;
-    object-fit: cover;
-  }
-}
-
-.notion-gallery-card-title-icon {
-  vertical-align: top;
-
-  .notion-icon {
-    align-items: flex-start;
-  }
-}
-
-.gallery-card-title {
-  grid-column: 2;
-  display: inline-flex;
-  align-items: flex-start;
-  font-size: 0.9rem;
-
-  .notion-icon {
-    font-size: 1em;
-  }
-}
-
-.gallery-card-properties {
-  grid-column: 2;
-  font-size: 0.8rem;
 }

@@ -6,11 +6,11 @@ export const StatusProperty: StatusPropertyItemComponent = ({
   return (
     <div id={propertyItem.id} className="notion-property-item notion-status">
       {propertyItem.status && (
-        <span
+        <div
           className={`notion-pill notion-pill-color-${propertyItem.status.color}`}
         >
           {propertyItem.status.name}
-        </span>
+        </div>
       )}
     </div>
   );

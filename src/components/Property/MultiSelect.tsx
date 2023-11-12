@@ -9,9 +9,9 @@ export const MultiSelectProperty: MultiSelectPropertyItemComponent = ({
       className="notion-property-item notion-multi-select"
     >
       {propertyItem.multi_select.map((select) => (
-        <span className={`notion-pill notion-pill-color-${select.color}`}>
+        <div className={`notion-pill notion-pill-color-${select.color}`}>
           {select.name}
-        </span>
+        </div>
       ))}
     </div>
   );

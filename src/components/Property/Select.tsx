@@ -6,11 +6,11 @@ export const SelectProperty: SelectPropertyItemComponent = ({
   return (
     <div id={propertyItem.id} className="notion-property-item notion-select">
       {propertyItem.select && (
-        <span
+        <div
           className={`notion-pill notion-pill-color-${propertyItem.select.color}`}
         >
           {propertyItem.select.name}
-        </span>
+        </div>
       )}
     </div>
   );
