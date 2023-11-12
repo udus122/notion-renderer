@@ -3,6 +3,7 @@ import { isFullDatabase } from "@notionhq/client";
 import { callAPIWithBackOff } from "../utils.js";
 
 import { notion } from "./auth.js";
+import { convertResponseToRichText } from "./richText/richText.js";
 
 import type { DatabaseObject } from "../../types/notion/database.js";
 import type { Result } from "../../types/utils.js";
@@ -34,10 +35,15 @@ export const fetchDatabase = async (
   if (!database) {
     return;
   }
+
   if (!isFullDatabase(database)) {
     return;
   }
-  return database;
+
+  return {
+    ...database,
+    title: await convertResponseToRichText(database.title),
+  };
 };
 
 export const queryDatabase = async (

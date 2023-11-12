@@ -1,6 +1,6 @@
 import { convertResponseToRichTextItem } from "./richTextItem.js";
 
-import type { RichTextItem } from "../../../types/notion/richText/richTextItem.js";
+import type { RichText } from "../../../types/notion/richText/richText.js";
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToRichText = async (
@@ -10,5 +10,5 @@ export const convertResponseToRichText = async (
     response.map(async (item) => {
       return await convertResponseToRichTextItem(item);
     })
-  )) satisfies Array<RichTextItem>;
+  )) satisfies RichText;
 };

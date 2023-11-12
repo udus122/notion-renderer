@@ -67,7 +67,3 @@ export const convertResponseToPage = async (
     properties,
   } satisfies PageObject;
 };
-
-import "dotenv/config";
-const res = await fetchPage("696a56fa0c6842709fe6165c403abc76");
-console.log(JSON.stringify(res, null, 2));
