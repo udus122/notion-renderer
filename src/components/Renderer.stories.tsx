@@ -28,6 +28,7 @@ export const Default: Story = {
 };
 export const Dark: Story = {
   args: {
+    page: PageObjectData as PageObject,
     blocks: BlocksObject as Array<BlockBlockObject>,
     theme: "dark",
   },
@@ -35,6 +36,7 @@ export const Dark: Story = {
 
 export const Custom: Story = {
   args: {
+    page: PageObjectData as PageObject,
     blocks: BlocksObject as Array<BlockBlockObject>,
     blockMapper: {
       toggle: OpenedToggle,
