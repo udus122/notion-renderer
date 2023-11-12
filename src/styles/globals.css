@@ -1,23 +1,27 @@
 @layer notion-theme, notion-components;
 
 @import url("../../node_modules/modern-normalize/modern-normalize.css");
+@import url("./common/colors.css") layer(notion-components);
+@import url("./common/cover.css") layer(notion-components);
 @import url("./common/file.css") layer(notion-components);
-@import url("./colors.css") layer(notion-components);
 @import url("./common/icon.css") layer(notion-components);
 @import url("./common/link.css") layer(notion-components);
-@import url("./caption.css") layer(notion-components);
+@import url("./common/caption.css") layer(notion-components);
 @import url("./blocks.css") layer(notion-components);
 @import url("./blocks/audio.css") layer(notion-components);
 @import url("./blocks/bookmark.css") layer(notion-components);
 @import url("./blocks/breadcrumb.css") layer(notion-components);
+@import url("./blocks/bulleted-list.css") layer(notion-components);
 @import url("./blocks/callout.css") layer(notion-components);
 @import url("./blocks/child-database.css") layer(notion-components);
 @import url("./blocks/child-page.css") layer(notion-components);
 @import url("./blocks/code.css") layer(notion-components);
 @import url("./blocks/column-list.css") layer(notion-components);
+@import url("./blocks/divider.css") layer(notion-components);
 @import url("./blocks/embed.css") layer(notion-components);
 @import url("./blocks/image.css") layer(notion-components);
 @import url("./blocks/link-preview.css") layer(notion-components);
+@import url("./blocks/numbered-list.css") layer(notion-components);
 @import url("./blocks/paragraph.css") layer(notion-components);
 @import url("./blocks/pdf.css") layer(notion-components);
 @import url("./blocks/quote.css") layer(notion-components);
@@ -28,10 +32,15 @@
 @import url("./blocks/video.css") layer(notion-components);
 @import url("./rich-text/mention.css") layer(notion-components);
 @import url("./rich-text/text.css") layer(notion-components);
+@import url("./database/database.css") layer(notion-components);
+@import url("./database/gallery.css") layer(notion-components);
+@import url("./database/card.css") layer(notion-components);
 @import url("./pages/page.css") layer(notion-components);
 @import url("./property/property.css") layer(notion-components);
 @import url("./property/multi-select.css") layer(notion-components);
 @import url("./property/relation.css") layer(notion-components);
+@import url("./property/select.css") layer(notion-components);
+@import url("./property/status.css") layer(notion-components);
 
 @layer notion-theme {
   :root {

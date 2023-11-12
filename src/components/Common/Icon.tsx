@@ -6,10 +6,10 @@ type Props = {
 };
 
 export const Icon: FC<Props> = ({ icon }) => {
-  if (!icon) return <DefaultIcon />;
+  if (!icon) return null;
 
   return (
-    <div className="notion-icon">
+    <span className="notion-icon">
       {!icon ? (
         <DefaultIcon />
       ) : icon.type === "emoji" ? (
@@ -29,7 +29,7 @@ export const Icon: FC<Props> = ({ icon }) => {
       ) : (
         <DefaultIcon />
       )}
-    </div>
+    </span>
   );
 };
 

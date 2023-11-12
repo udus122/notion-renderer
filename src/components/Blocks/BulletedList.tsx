@@ -4,7 +4,7 @@ import type { BulletedListBlock } from "../../types/notion/blocks/bulletedList.j
 
 export const BulletedList: BulletedListBlock = ({ block }) => {
   return (
-    <ul className="notion_bulleted_list">
+    <ul className="notion-bulleted-list">
       {block.bulleted_list.items.map((item) => {
         return <BulletedListItem key={item.id} block={item} />;
       })}

@@ -18,9 +18,9 @@ import type { PageObject } from "../types/notion/pages/page.js";
 import type { FC } from "react";
 
 type Props = {
-  page: PageObject;
+  page?: PageObject;
+  blocks?: Array<BlockBlockObject>;
   propertyMapper?: PropertyItemMapper;
-  blocks: Array<BlockBlockObject>;
   blockMapper?: BlockMapper;
   richTextItemMapper?: RichTextItemMapper;
   annotationMapper?: AnnotationItemMapper;
@@ -40,18 +40,22 @@ export const BlockRenderer: FC<Props> = ({
 }) => {
   return (
     <div className={`notion-root notion-${theme}`}>
-      <PropertyItemProvider mapper={propertyMapper}>
-        <Page page={page} />
-      </PropertyItemProvider>
-      <BlockProvider mapper={blockMapper}>
-        <RichTextItemProvider mapper={richTextItemMapper}>
-          <AnnotationItemProvider mapper={annotationMapper}>
-            <LinkProvider link={LinkComponent}>
-              <BlockList blocks={blocks} />
-            </LinkProvider>
-          </AnnotationItemProvider>
-        </RichTextItemProvider>
-      </BlockProvider>
+      {page && (
+        <PropertyItemProvider mapper={propertyMapper}>
+          <Page page={page} />
+        </PropertyItemProvider>
+      )}
+      {blocks && (
+        <BlockProvider mapper={blockMapper}>
+          <RichTextItemProvider mapper={richTextItemMapper}>
+            <AnnotationItemProvider mapper={annotationMapper}>
+              <LinkProvider link={LinkComponent}>
+                <BlockList blocks={blocks} />
+              </LinkProvider>
+            </AnnotationItemProvider>
+          </RichTextItemProvider>
+        </BlockProvider>
+      )}
     </div>
   );
 };

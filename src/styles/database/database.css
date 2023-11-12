@@ -1,19 +1,19 @@
-.notion-page-cover {
+.notion-database-cover {
   block-size: 30vh;
   inline-size: 100%;
   object-position: center 0%;
   object-fit: cover;
 
-  &:has(+ .notion-page-contents > .notion-page-icon) {
+  &:has(+ .notion-database-contents > .notion-database-icon) {
     margin-block-end: -5rem;
   }
 }
 
-.notion-page-contents {
+.notion-database-contents {
   margin-inline: var(--margin);
 }
 
-.notion-page-icon {
+.notion-database-icon {
   display: block;
   font-size: 5rem;
 }
