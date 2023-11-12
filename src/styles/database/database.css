@@ -1,0 +1,16 @@
+.notion-database-cover {
+  block-size: 30vh;
+  inline-size: 100%;
+  object-position: center 0%;
+  object-fit: cover;
+}
+
+.notion-database-contents {
+  margin-inline: var(--margin);
+}
+
+.notion-database-icon {
+  display: block;
+  font-size: 5rem;
+  margin-block-start: -5rem;
+}

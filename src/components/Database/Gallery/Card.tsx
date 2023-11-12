@@ -1,7 +1,7 @@
 import { splitTitleAndOtherProperties } from "../../../utils.js";
 import { Icon } from "../../Common/Icon.js";
 import { useMapper } from "../../hooks.js";
-import { Cover } from "../../Page/Cover.js";
+import { Cover } from "../../Common/Cover.js";
 import { Properties } from "../../Property/Properties.js";
 
 import type { PageObject } from "../../../types/notion/pages/page.js";

@@ -4,6 +4,7 @@ import { callAPIWithBackOff } from "../utils.js";
 
 import { notion } from "./auth.js";
 
+import type { DatabaseObject } from "../../types/notion/database.js";
 import type { Result } from "../../types/utils.js";
 import type {
   GetDatabaseParameters,
@@ -26,7 +27,9 @@ export const retrieveDatabase = async (
   return data;
 };
 
-export const fetchDatabase = async (databaseId: string) => {
+export const fetchDatabase = async (
+  databaseId: string
+): Promise<DatabaseObject | undefined> => {
   const database = await retrieveDatabase({ database_id: databaseId });
   if (!database) {
     return;
@@ -68,9 +71,9 @@ export const fetchAllDatabaseItems = async (
 };
 
 import "dotenv/config";
-
-const res = await fetchAllDatabaseItems({
-  database_id: "9a93d3be9ef944718a181572525eb5b3",
+const res = await fetchDatabase(
+  // {
+  "9a93d3be9ef944718a181572525eb5b3"
   // filter: {
   //   and: [
   //     {
@@ -81,18 +84,19 @@ const res = await fetchAllDatabaseItems({
   //     },
   //   ],
   // },
-  filter_properties: [
-    "title", // Name
-    "USxG", // Created time
-    "iTg%3D", // Status
-    "k%3FXm", // Tags
-  ],
-  sorts: [
-    {
-      property: "Unique Id",
-      direction: "ascending",
-    },
-  ],
-  page_size: 25,
-});
+  // filter_properties: [
+  //   "title", // Name
+  //   "USxG", // Created time
+  //   "iTg%3D", // Status
+  //   "k%3FXm", // Tags
+  // ],
+  // sorts: [
+  //   {
+  //     property: "Unique Id",
+  //     direction: "ascending",
+  //   },
+  // ],
+  // page_size: 25,
+  // }
+);
 console.log(JSON.stringify(res, null, 2));
