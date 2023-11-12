@@ -1,5 +1,3 @@
-@import url("./cover.css") layer(notion-components);
-
 .notion-page-cover {
   block-size: 30vh;
   inline-size: 100%;

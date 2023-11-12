@@ -1,9 +1,8 @@
 import { splitTitleAndOtherProperties } from "../../utils.js";
+import { Cover } from "../Common/Cover.js";
 import { Icon } from "../Common/Icon.js";
+import { Title } from "../Common/Title.js";
 import { Properties } from "../Property/Properties.js";
-
-import { Cover } from "./Cover.js";
-import { Title } from "./Title.js";
 
 import type { PageObject } from "../../types/notion/pages/page.js";
 import type { ComponentType } from "react";
