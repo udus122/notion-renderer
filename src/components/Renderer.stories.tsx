@@ -26,6 +26,7 @@ export const Default: Story = {
     blocks: BlocksObject as Array<BlockBlockObject>,
   },
 };
+
 export const Dark: Story = {
   args: {
     page: PageObjectData as PageObject,
