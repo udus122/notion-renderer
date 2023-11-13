@@ -35,6 +35,7 @@
 @import url("./database/database.css") layer(notion-components);
 @import url("./database/gallery.css") layer(notion-components);
 @import url("./database/card.css") layer(notion-components);
+@import url("./database/list.css") layer(notion-components);
 @import url("./pages/page.css") layer(notion-components);
 @import url("./property/property.css") layer(notion-components);
 @import url("./property/multi-select.css") layer(notion-components);
