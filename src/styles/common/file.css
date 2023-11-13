@@ -1,3 +1,17 @@
 .notion-file-title {
   display: flex;
 }
+
+.notion-file-icon {
+  flex-shrink: 0;
+  block-size: 1em;
+  inline-size: 1em;
+
+  img {
+    block-size: 100%;
+    inline-size: 100%;
+    max-inline-size: 100%;
+    aspect-ratio: 1;
+    border-radius: 0.25em;
+  }
+}
