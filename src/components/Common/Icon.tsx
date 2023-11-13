@@ -3,10 +3,11 @@ import type { FC } from "react";
 
 type Props = {
   icon: IconObject;
+  hideDefaultIcon?: boolean;
 };
 
-export const Icon: FC<Props> = ({ icon }) => {
-  if (!icon) return null;
+export const Icon: FC<Props> = ({ icon, hideDefaultIcon = false }) => {
+  if (!icon) return !hideDefaultIcon && <DefaultIcon />;
 
   return (
     <span className="notion-icon">
@@ -27,7 +28,7 @@ export const Icon: FC<Props> = ({ icon }) => {
           alt="notion callout icon"
         />
       ) : (
-        <DefaultIcon />
+        !hideDefaultIcon && <DefaultIcon />
       )}
     </span>
   );
