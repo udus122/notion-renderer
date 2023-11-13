@@ -30,18 +30,17 @@ export const Page: PageComponent = ({
           <Cover cover={page.cover} />
         </div>
       )}
-      <div className="notion-page-contents">
-        {!hideIcon && (
-          <div className="notion-page-icon">
-            <Icon icon={page.icon} />
-          </div>
-        )}
-        <div className="notion-page-title">
-          <Title title={title?.title ?? []} />
+
+      {!hideIcon && (
+        <div className="notion-page-icon">
+          <Icon icon={page.icon} />
         </div>
-        <div className="notion-page-properties">
-          <Properties properties={other} />
-        </div>
+      )}
+      <div className="notion-page-title">
+        <Title title={title?.title ?? []} />
+      </div>
+      <div className="notion-page-properties">
+        <Properties properties={other} />
       </div>
     </div>
   );

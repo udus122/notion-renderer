@@ -30,17 +30,15 @@ export const Database: DatabaseComponent = ({
           <Cover cover={database.cover} />
         </div>
       )}
-      <div className="notion-database-contents">
-        {!hideIcon && (
-          <div className="notion-database-icon">
-            <Icon icon={database.icon} />
-          </div>
-        )}
-        <div className="notion-database-title">
-          <Title title={database.title} />
+      {!hideIcon && (
+        <div className="notion-database-icon">
+          <Icon icon={database.icon} />
         </div>
-        <Gallery pages={pages} />
+      )}
+      <div className="notion-database-title">
+        <Title title={database.title} />
       </div>
+      <Gallery pages={pages} />
     </div>
   );
 };
