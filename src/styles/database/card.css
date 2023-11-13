@@ -12,7 +12,7 @@
   }
 }
 
-.gallery-card-cover {
+.notion-gallery-card-cover {
   grid-column: full;
   aspect-ratio: 16/9;
   overflow: hidden;
@@ -26,7 +26,7 @@
   vertical-align: top;
 }
 
-.gallery-card-title {
+.notion-gallery-card-title {
   grid-column: 2 / span 1;
   display: inline-flex;
   align-items: flex-start;
@@ -38,7 +38,7 @@
   }
 }
 
-.gallery-card-properties {
+.notion-gallery-card-properties {
   grid-column: content;
   font-size: 0.8rem;
 }
