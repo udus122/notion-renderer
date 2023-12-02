@@ -79,7 +79,7 @@
 }
 
 .notion-pill-color-default {
-  background-color: unset;
+  background-color: var(--color-pill-default);
 }
 
 .notion-pill-color-gray {
