@@ -16,6 +16,6 @@
 
 .notion-pill {
   padding-inline: 0.25rem;
-  padding-block: 0.1rem;
   border-radius: 3px;
+  white-space: nowrap;
 }

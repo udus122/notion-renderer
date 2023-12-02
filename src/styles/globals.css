@@ -1,6 +1,7 @@
-@layer notion-theme, notion-components;
+@layer normalization notion-theme, notion-components;
 
-@import url("../../node_modules/modern-normalize/modern-normalize.css");
+@import url("../../node_modules/modern-normalize/modern-normalize.css")
+layer(normalization);
 @import url("./common/colors.css") layer(notion-components);
 @import url("./common/cover.css") layer(notion-components);
 @import url("./common/file.css") layer(notion-components);
@@ -36,6 +37,7 @@
 @import url("./database/gallery.css") layer(notion-components);
 @import url("./database/card.css") layer(notion-components);
 @import url("./database/list.css") layer(notion-components);
+@import url("./database/table.css") layer(notion-components);
 @import url("./pages/page.css") layer(notion-components);
 @import url("./property/property.css") layer(notion-components);
 @import url("./property/multi-select.css") layer(notion-components);
@@ -119,7 +121,6 @@
     line-height: 1.5;
     fill: currentcolor;
     overflow-wrap: break-word;
-    word-break: break-all;
 
     p {
       margin: 0;

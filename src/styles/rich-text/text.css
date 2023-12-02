@@ -1,3 +1,16 @@
 .notion-rich-text-type-text {
   white-space: break-spaces;
 }
+
+.notion-inline-code {
+  background: rgb(135 131 120 / 15%);
+  color: rgb(235 87 87);
+  border-radius: 0.25em;
+  padding: 0.2em 0.4em;
+  line-height: normal;
+  font-size: 85%;
+
+  .notion-dark {
+    background-color: rgba(135 131 120 / 15%);
+  }
+}
