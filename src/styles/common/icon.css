@@ -4,6 +4,10 @@
   inline-size: 1.25em;
   font-size: 1.25em;
 
+  &:has(img) {
+    vertical-align: text-top;
+  }
+
   img {
     block-size: 100%;
     inline-size: 100%;

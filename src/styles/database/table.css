@@ -7,15 +7,6 @@
   border-spacing: 0;
   font-size: 0.875rem;
 
-  .notion-dark & {
-    background-color: rgb(25 25 25);
-  }
-
-  h1 {
-    font-size: inherit;
-    margin: unset;
-  }
-
   tbody {
     vertical-align: top;
   }
@@ -26,22 +17,30 @@
     text-align: left;
     border: 1px solid rgb(233 233 231);
     white-space: nowrap;
+    min-inline-size: 12rem;
+
+    .notion-dark & {
+      border: 1px solid rgb(47 47 47);
+    }
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
 
     div {
       padding: 0.2rem 0.5rem;
       overflow: hidden;
       text-overflow: ellipsis;
       resize: horizontal;
-      min-width: 100%;
+      min-inline-size: 100%;
 
       &::-webkit-resizer {
         background: transparent;
       }
-    }
-
-    .notion-dark & {
-      background-color: rgb(255 255 255 / 3%);
-      border: 1px solid rgb(47 47 47);
     }
   }
 
@@ -54,5 +53,25 @@
     .notion-dark & {
       border: 1px solid rgb(47 47 47);
     }
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  .notion-icon {
+    font-size: 1em;
+  }
+
+  .notion-link {
+    opacity: unset;
+  }
+
+  .notion-property-item a {
+    pointer-events: none;
   }
 }
