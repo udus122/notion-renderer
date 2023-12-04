@@ -17,7 +17,6 @@
     text-align: left;
     border: 1px solid rgb(233 233 231);
     white-space: nowrap;
-    min-inline-size: 12rem;
 
     .notion-dark & {
       border: 1px solid rgb(47 47 47);
@@ -33,10 +32,11 @@
 
     div {
       padding: 0.2rem 0.5rem;
+      inline-size: 12rem;
+      min-inline-size: 100%;
       overflow: hidden;
       text-overflow: ellipsis;
       resize: horizontal;
-      min-inline-size: 100%;
 
       &::-webkit-resizer {
         background: transparent;
@@ -49,6 +49,9 @@
     padding: 0.2rem 0.5rem;
     text-align: left;
     border: 1px solid rgb(233 233 231);
+    word-break: break-all;
+    line-break: anywhere;
+    white-space: break-spaces;
 
     .notion-dark & {
       border: 1px solid rgb(47 47 47);
