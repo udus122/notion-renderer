@@ -14,17 +14,9 @@ export const Icon: FC<Props> = ({ icon, hideDefaultIcon = false }) => {
       ) : icon.type === "emoji" ? (
         <span className="notion-icon-emoji">{icon.emoji}</span>
       ) : icon.type === "external" ? (
-        <img
-          className="notion-icon-external"
-          src={icon.external.url}
-          alt="notion callout icon"
-        />
+        <img className="notion-icon-external" src={icon.external.url} alt="" />
       ) : icon.type === "file" ? (
-        <img
-          className="notion-icon-file"
-          src={icon.file.url}
-          alt="notion callout icon"
-        />
+        <img className="notion-icon-file" src={icon.file.url} alt="" />
       ) : (
         !hideDefaultIcon && <DefaultIcon />
       )}
