@@ -2,6 +2,7 @@ import { selectProperties } from "../../utils.js";
 import { Cover } from "../Common/Cover.js";
 import { Icon } from "../Common/Icon.js";
 import { Title } from "../Common/Title.js";
+import { RichText } from "../index.js";
 
 import { Gallery } from "./Gallery/Gallery.js";
 import { List } from "./List/List.js";
@@ -19,6 +20,7 @@ type Props = {
   hideCover?: boolean;
   hideIcon?: boolean;
   hideTitle?: boolean;
+  hideDescription?: boolean;
 };
 
 type DatabaseComponent = ComponentType<Props>;
@@ -31,6 +33,7 @@ export const Database: DatabaseComponent = ({
   hideCover = false,
   hideIcon = false,
   hideTitle = false,
+  hideDescription = false,
 }) => {
   // Filter properties to display
   if (displayProperties) {
@@ -59,6 +62,11 @@ export const Database: DatabaseComponent = ({
       {!hideTitle && (
         <div className="notion-database-title">
           <Title title={database.title} />
+        </div>
+      )}
+      {!hideDescription && (
+        <div className="notion-database-description">
+          <RichText richText={database.description} />
         </div>
       )}
       <div className="notion-database-collection">

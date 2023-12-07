@@ -25,3 +25,8 @@
   display: block;
   font-size: 5rem;
 }
+
+.notion-database-description {
+  font-size: 0.875rem;
+  padding-block-end: 1.5rem;
+}
