@@ -1,19 +1,32 @@
+.notion-database {
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--margin) [content-start] 1fr [content-end] var(--margin)
+    [full-end];
+}
+
 .notion-database-cover {
+  grid-column: full;
   block-size: 30vh;
   inline-size: 100%;
   object-position: center 0%;
   object-fit: cover;
 
-  &:has(+ .notion-database-contents > .notion-database-icon) {
+  &:has(+ .notion-database-icon) {
     margin-block-end: -5rem;
   }
-}
 
-.notion-database-contents {
-  margin-inline: var(--margin);
+  & ~ * {
+    grid-column: content;
+  }
 }
 
 .notion-database-icon {
   display: block;
   font-size: 5rem;
+}
+
+.notion-database-description {
+  font-size: 0.875rem;
+  padding-block-end: 1.5rem;
 }

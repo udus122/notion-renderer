@@ -4,8 +4,13 @@
   inline-size: 1.25em;
   font-size: 1.25em;
 
+  &:has(img) {
+    vertical-align: text-top;
+  }
+
   img {
-    block-size: auto;
+    block-size: 100%;
+    inline-size: 100%;
     max-inline-size: 100%;
     aspect-ratio: 1;
     border-radius: 0.25em;

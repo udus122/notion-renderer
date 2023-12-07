@@ -1,3 +1,4 @@
+import type { DatabaseObject } from "./types/notion/database.js";
 import type { PageObject } from "./types/notion/pages/page.js";
 import type { Properties } from "./types/notion/pages/properties/properties.js";
 import type { TitlePropertyItemObject } from "./types/notion/pages/properties/title.js";
@@ -43,3 +44,53 @@ export const extractTitle = (
 export const isTitleProperty = (
   property: PageObjectResponse["properties"][string] | Properties[string]
 ): property is TitlePropertyItemObject => property.type === "title";
+
+export const selectPropertyById = <
+  T extends DatabaseObject["properties"] | PageObject["properties"]
+>(
+  properties: T,
+  id: string
+): T | undefined => {
+  const name = Object.keys(properties).find((key) => properties[key].id === id);
+  if (name) {
+    const selected = properties[name];
+    return { [name]: selected } as T;
+  }
+  return;
+};
+
+export const selectPropertyByName = <
+  T extends DatabaseObject["properties"] | PageObject["properties"]
+>(
+  properties: T,
+  key: string
+): T | undefined => {
+  const selected = properties[key];
+  if (selected) {
+    return { [key]: selected } as T;
+  }
+  return;
+};
+
+export const selectProperties = <
+  T extends DatabaseObject["properties"] | PageObject["properties"]
+>(
+  properties: T,
+  selector: Array<string>
+): T => {
+  const selected = selector.reduce((prev, keyOrId) => {
+    const selectedByName = selectPropertyByName(properties, keyOrId);
+    if (selectedByName) {
+      return { ...prev, ...selectedByName };
+    }
+
+    const selectedById = selectPropertyById(properties, keyOrId);
+    if (selectedById) {
+      return { ...prev, ...selectedById };
+    }
+
+    return { ...prev };
+  }, {} as T);
+
+  return selected;
+};

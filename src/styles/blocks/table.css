@@ -1,4 +1,4 @@
-.notion-table {
+.notion-table-block {
   border-collapse: collapse;
   border-spacing: 0;
 
@@ -12,11 +12,8 @@
     padding: 0.3rem;
     font-weight: 500;
     text-align: left;
-
-    .notion-light & {
-      background-color: rgb(247 246 243);
-      border: 1px solid rgb(233 233 231);
-    }
+    background-color: rgb(247 246 243);
+    border: 1px solid rgb(233 233 231);
 
     .notion-dark & {
       background-color: rgb(255 255 255 / 3%);
@@ -28,10 +25,7 @@
     margin: 0;
     padding: 0.3rem;
     text-align: left;
-
-    .notion-light & {
-      border: 1px solid rgb(233 233 231);
-    }
+    border: 1px solid rgb(233 233 231);
 
     .notion-dark & {
       border: 1px solid rgb(47 47 47);

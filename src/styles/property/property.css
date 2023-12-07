@@ -16,6 +16,19 @@
 
 .notion-pill {
   padding-inline: 0.25rem;
-  padding-block: 0.1rem;
   border-radius: 3px;
+  white-space: nowrap;
+}
+
+.notion-property-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: text-top;
+  margin-inline-end: 0.25rem;
+  fill: rgba(55 53 47 / 45%);
+
+  .notion-dark & {
+    fill: rgb(255 255 255 / 44.3%);
+  }
 }

@@ -1,0 +1,84 @@
+.notion-database-collection {
+  overflow-x: auto;
+}
+
+.notion-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  font-size: 0.875rem;
+
+  tbody {
+    vertical-align: top;
+  }
+
+  th {
+    margin: 0;
+    font-weight: 500;
+    text-align: left;
+    border: 1px solid rgb(233 233 231);
+    white-space: nowrap;
+
+    .notion-dark & {
+      border: 1px solid rgb(47 47 47);
+    }
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+
+    div {
+      padding: 0.2rem 0.5rem;
+      inline-size: 12rem;
+      min-inline-size: 100%;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      resize: horizontal;
+
+      &::-webkit-resizer {
+        background: transparent;
+      }
+    }
+  }
+
+  td {
+    margin: 0;
+    padding: 0.2rem 0.5rem;
+    text-align: left;
+    border: 1px solid rgb(233 233 231);
+    word-break: break-all;
+    line-break: anywhere;
+    white-space: break-spaces;
+
+    .notion-dark & {
+      border: 1px solid rgb(47 47 47);
+    }
+
+    &:first-child {
+      border-left: 0;
+    }
+
+    &:last-child {
+      border-right: 0;
+    }
+  }
+
+  .notion-icon {
+    font-size: 1em;
+  }
+
+  .notion-link {
+    opacity: unset;
+  }
+
+  .notion-property-item a {
+    pointer-events: none;
+  }
+}
+
+.notion-table-row-title {
+  border-bottom: 1px solid color-mix(in srgb, currentcolor 30%, transparent);
+}

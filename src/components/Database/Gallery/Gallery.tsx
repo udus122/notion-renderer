@@ -1,8 +1,13 @@
 import { Card } from "./Card.js";
 
 import type { PageObject } from "../../../types/notion/pages/page.js";
+import type { FC } from "react";
 
-export const Gallery = ({ pages }: { pages: PageObject[] }) => {
+type Props = {
+  pages: Array<PageObject>;
+};
+
+export const Gallery: FC<Props> = ({ pages }) => {
   return (
     <div className="notion-gallery">
       {pages.map((page) => (

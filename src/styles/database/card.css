@@ -3,16 +3,20 @@
   grid-template-columns: [full-start] 1rem [content-start] 1fr [content-end] 1rem [full-end];
   row-gap: 0.5rem;
   overflow: hidden;
-  border-radius: 0.3rem;
-  box-shadow: rgb(0 0 0 / 20%) 0 2px 4px 2px;
   padding-bottom: 1rem;
+  border-radius: 0.3rem;
+  box-shadow: rgb(15 15 15 / 10%) 0 0 0 1px, rgb(15 15 15 / 10%) 0 2px 4px;
+
+  .notion-dark & {
+    background: rgb(255 255 255 / 5.5%);
+  }
 
   & > a {
     display: contents;
   }
 }
 
-.gallery-card-cover {
+.notion-gallery-card-cover {
   grid-column: full;
   aspect-ratio: 16/9;
   overflow: hidden;
@@ -26,7 +30,7 @@
   vertical-align: top;
 }
 
-.gallery-card-title {
+.notion-gallery-card-title {
   grid-column: 2 / span 1;
   display: inline-flex;
   align-items: flex-start;
@@ -38,7 +42,7 @@
   }
 }
 
-.gallery-card-properties {
+.notion-gallery-card-properties {
   grid-column: content;
   font-size: 0.8rem;
 }
