@@ -1,8 +1,7 @@
 .notion-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 350px), 1fr));
-  padding-top: 16px;
-  padding-bottom: 4px;
+  padding: 16px 4px 4px;
   gap: 1rem;
 
   .notion-gallery-card {

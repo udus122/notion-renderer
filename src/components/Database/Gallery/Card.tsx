@@ -5,8 +5,13 @@ import { useMapper } from "../../hooks.js";
 import { Properties } from "../../Property/Properties.js";
 
 import type { PageObject } from "../../../types/notion/pages/page.js";
+import type { FC } from "react";
 
-export const Card = ({ page }: { page: PageObject }) => {
+type Props = {
+  page: PageObject;
+};
+
+export const Card: FC<Props> = ({ page }) => {
   const { Link } = useMapper();
 
   const { title, other } = splitTitleAndOtherProperties(page.properties);

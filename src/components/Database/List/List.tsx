@@ -1,8 +1,13 @@
 import { ListItem } from "./ListItem.js";
 
 import type { PageObject } from "../../../types/notion/pages/page.js";
+import type { FC } from "react";
 
-export const List = ({ pages }: { pages: PageObject[] }) => {
+type Props = {
+  pages: Array<PageObject>;
+};
+
+export const List: FC<Props> = ({ pages }) => {
   return (
     <div className="notion-list">
       {pages.map((page) => (

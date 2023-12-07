@@ -3,9 +3,13 @@
   grid-template-columns: [full-start] 1rem [content-start] 1fr [content-end] 1rem [full-end];
   row-gap: 0.5rem;
   overflow: hidden;
-  border-radius: 0.3rem;
-  box-shadow: rgb(0 0 0 / 20%) 0 2px 4px 2px;
   padding-bottom: 1rem;
+  border-radius: 0.3rem;
+  box-shadow: rgb(15 15 15 / 10%) 0 0 0 1px, rgb(15 15 15 / 10%) 0 2px 4px;
+
+  .notion-dark & {
+    background: rgb(255 255 255 / 5.5%);
+  }
 
   & > a {
     display: contents;
