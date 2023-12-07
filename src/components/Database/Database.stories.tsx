@@ -209,7 +209,6 @@ export const TableDark: Story = {
       "Tags",
       "Created time",
       "Last edited time",
-      "Related Child database",
       "Select",
       "Date",
       "Person",
