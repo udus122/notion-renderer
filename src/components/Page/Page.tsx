@@ -1,4 +1,4 @@
-import { splitTitleAndOtherProperties } from "../../utils.js";
+import { selectProperties, splitTitleAndOtherProperties } from "../../utils.js";
 import { Cover } from "../Common/Cover.js";
 import { Icon } from "../Common/Icon.js";
 import { Title } from "../Common/Title.js";
@@ -9,6 +9,7 @@ import type { ComponentType } from "react";
 
 type Props = {
   page: PageObject;
+  displayProperties?: Array<string>;
   hideCover?: boolean;
   hideIcon?: boolean;
   hideTitle?: boolean;
@@ -18,10 +19,16 @@ type PageComponent = ComponentType<Props>;
 
 export const Page: PageComponent = ({
   page,
+  displayProperties,
   hideCover = false,
   hideIcon = false,
+  hideTitle = false,
 }) => {
   const { title, other } = splitTitleAndOtherProperties(page.properties);
+
+  const properties = displayProperties
+    ? selectProperties(other, displayProperties)
+    : other;
 
   return (
     <div id={page.id} className="notion-page">
@@ -36,11 +43,13 @@ export const Page: PageComponent = ({
           <Icon icon={page.icon} />
         </div>
       )}
-      <div className="notion-page-title">
-        <Title title={title?.title ?? []} />
-      </div>
+      {!hideTitle && (
+        <div className="notion-page-title">
+          <Title title={title?.title ?? []} />
+        </div>
+      )}
       <div className="notion-page-properties">
-        <Properties properties={other} />
+        <Properties properties={properties} />
       </div>
     </div>
   );

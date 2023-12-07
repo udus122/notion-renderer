@@ -30,10 +30,27 @@ export const Default: Story = {
 export const Dark: Story = {
   args: {
     page: PageObject as PageObjectType,
+    displayProperties: [
+      "USxG",
+      "Tags",
+      "Text",
+      "Multi-select",
+      "Status",
+      "Last edited time",
+      "Related Child database",
+      "Select",
+      "Date",
+      "Person",
+      "Number",
+      "Checkbox",
+      "URL",
+      "Email",
+      "Phone",
+    ],
   },
   decorators: [
     (Story) => (
-      <div className="notion-root notion-dark">
+      <div style={{ blockSize: "100vh" }} className="notion-root notion-dark">
         <Story />
       </div>
     ),

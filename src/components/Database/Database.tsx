@@ -1,3 +1,4 @@
+import { selectProperties } from "../../utils.js";
 import { Cover } from "../Common/Cover.js";
 import { Icon } from "../Common/Icon.js";
 import { Title } from "../Common/Title.js";
@@ -25,12 +26,24 @@ type DatabaseComponent = ComponentType<Props>;
 export const Database: DatabaseComponent = ({
   database,
   pages,
+  viewType,
+  displayProperties,
   hideCover = false,
   hideIcon = false,
   hideTitle = false,
-  viewType,
-  displayProperties,
 }) => {
+  // Filter properties to display
+  if (displayProperties) {
+    database.properties = selectProperties(
+      database.properties,
+      displayProperties
+    );
+    pages.forEach((page) => {
+      page.properties = selectProperties(page.properties, displayProperties);
+      return page;
+    });
+  }
+
   return (
     <div id={database.id} className="notion-database">
       {!hideCover && (
@@ -54,11 +67,7 @@ export const Database: DatabaseComponent = ({
         ) : viewType === "list" ? (
           <List pages={pages} />
         ) : viewType === "table" ? (
-          <Table
-            database={database}
-            pages={pages}
-            displayProperties={displayProperties}
-          />
+          <Table database={database} pages={pages} />
         ) : null}
       </div>
     </div>

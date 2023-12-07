@@ -20,6 +20,7 @@ import type { FC } from "react";
 type Props = {
   page?: PageObject;
   blocks?: Array<BlockBlockObject>;
+  displayProperties?: Array<string>;
   propertyMapper?: PropertyItemMapper;
   blockMapper?: BlockMapper;
   richTextItemMapper?: RichTextItemMapper;
@@ -30,8 +31,9 @@ type Props = {
 
 export const BlockRenderer: FC<Props> = ({
   page,
-  propertyMapper,
   blocks,
+  displayProperties,
+  propertyMapper,
   blockMapper,
   richTextItemMapper,
   annotationMapper,
@@ -42,7 +44,7 @@ export const BlockRenderer: FC<Props> = ({
     <div className={`notion-root notion-${theme}`}>
       {page && (
         <PropertyItemProvider mapper={propertyMapper}>
-          <Page page={page} />
+          <Page page={page} displayProperties={displayProperties} />
         </PropertyItemProvider>
       )}
       {blocks && (
