@@ -78,3 +78,7 @@
     pointer-events: none;
   }
 }
+
+.notion-table-row-title {
+  border-bottom: 1px solid color-mix(in srgb, currentcolor 30%, transparent);
+}

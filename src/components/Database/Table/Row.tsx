@@ -1,36 +1,33 @@
 import { Property } from "../../../components/Property/Property.js";
-import { splitTitleAndOtherProperties } from "../../../utils.js";
-import { useMapper } from "../../hooks.js";
+import { isTitleProperty } from "../../../utils.js";
 
-import type { DatabaseObject } from "../../../types/notion/database.js";
+import { TableTitle } from "./Title.js";
+
 import type { PageObject } from "../../../types/notion/pages/page.js";
 import type { FC } from "react";
 
 type Props = {
-  database: DatabaseObject;
   page: PageObject;
-  displayProperties: Array<string>;
 };
 
-export const Row: FC<Props> = ({ database, page, displayProperties }) => {
-  const { Link } = useMapper();
-
-  const { title, other } = splitTitleAndOtherProperties(page.properties);
-
+export const Row: FC<Props> = ({ page }) => {
   return (
     <tr id={page.id} className="notion-table-row">
-      {displayProperties.map((key) => {
-        const propertyItem = page.properties[key];
+      {Object.entries(page.properties).map(([name, item]) => {
         return (
-          <td>
-            {propertyItem && (
-              <Property
-                propertyName={key}
-                propertyItem={propertyItem}
-                hidePropertyName
-              />
-            )}
-          </td>
+          item && (
+            <td>
+              {isTitleProperty(item) ? (
+                TableTitle(item, page)
+              ) : (
+                <Property
+                  propertyName={name}
+                  propertyItem={item}
+                  hidePropertyName
+                />
+              )}
+            </td>
+          )
         );
       })}
     </tr>
