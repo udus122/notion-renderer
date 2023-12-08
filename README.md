@@ -265,13 +265,11 @@ Most common block types are supported.
 
 ### Database
 
-under construction.
-
 | Layout Type | Supported | Layout Name | Notes |
 | ----------- | --------- | ----------- | ----- |
-| Table       | ❌         | `table`     |       |
-| Gallery     | ❌         | `gallery`   |       |
-| List        | ❌         | `list`      |       |
+| Table       | ✅         | `table`     |       |
+| Gallery     | ✅         | `gallery`   |       |
+| List        | ✅         | `list`      |       |
 | Board       | ❌         | `board`     |       |
 | Calendar    | ❌         | `calendar`  |       |
 | Timeline    | ❌         | `timeline`  |       |
