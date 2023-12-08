@@ -75,34 +75,3 @@ export const fetchAllDatabaseItems = async (
 
   return data.results;
 };
-
-import "dotenv/config";
-const res = await fetchDatabase(
-  // {
-  "9a93d3be9ef944718a181572525eb5b3"
-  // filter: {
-  //   and: [
-  //     {
-  //       property: "Tags",
-  //       multi_select: {
-  //         contains: "tag1",
-  //       },
-  //     },
-  //   ],
-  // },
-  // filter_properties: [
-  //   "title", // Name
-  //   "USxG", // Created time
-  //   "iTg%3D", // Status
-  //   "k%3FXm", // Tags
-  // ],
-  // sorts: [
-  //   {
-  //     property: "Unique Id",
-  //     direction: "ascending",
-  //   },
-  // ],
-  // page_size: 25,
-  // }
-);
-console.log(JSON.stringify(res, null, 2));

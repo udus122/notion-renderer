@@ -5,7 +5,7 @@ import type { CoverObject as CoverObjectType } from "../../types/notion/common/c
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Cover> = {
-  title: "Page/Cover",
+  title: "Common/Cover",
   component: Cover,
   tags: ["autodocs"],
 };
