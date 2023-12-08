@@ -1,2 +1,0 @@
-import{j as a}from"./jsx-runtime-ffb262ed.js";import{C as s}from"./Card-24d347ea.js";const t=({pages:e})=>a.jsx("div",{className:"notion-gallery",children:e.map(r=>a.jsx(s,{page:r},r.id))});try{t.displayName="Gallery",t.__docgenInfo={description:"",displayName:"Gallery",props:{pages:{defaultValue:null,description:"",name:"pages",required:!0,type:{name:"PageObject[]"}}}}}catch{}export{t as G};
-//# sourceMappingURL=Gallery-9d65e096.js.map
