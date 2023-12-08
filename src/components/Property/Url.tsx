@@ -2,12 +2,10 @@ import type { UrlPropertyItemComponent } from "../../types/notion/pages/properti
 
 export const UrlProperty: UrlPropertyItemComponent = ({ propertyItem }) => {
   return (
-    <a
-      id={propertyItem.id}
-      className="notion-property-item notion-url"
-      href={propertyItem.url ?? ""}
-    >
-      {propertyItem.url}
-    </a>
+    <div id={propertyItem.id} className="notion-property-item notion-url">
+      <a className="notion-link" href={propertyItem.url ?? ""}>
+        {propertyItem.url}
+      </a>
+    </div>
   );
 };

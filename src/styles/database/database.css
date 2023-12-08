@@ -30,3 +30,7 @@
   font-size: 0.875rem;
   padding-block-end: 1.5rem;
 }
+
+.notion-database-collection {
+  overflow-x: auto;
+}

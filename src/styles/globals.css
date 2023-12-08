@@ -122,19 +122,5 @@ layer(normalization);
     line-height: 1.5;
     fill: currentcolor;
     overflow-wrap: break-word;
-
-    p {
-      margin: 0;
-      padding: 1px;
-    }
-
-    a {
-      color: inherit;
-      text-decoration-line: none;
-    }
-
-    pre {
-      margin: 0;
-    }
   }
 }
