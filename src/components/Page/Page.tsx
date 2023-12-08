@@ -1,56 +1,64 @@
-import { selectProperties, splitTitleAndOtherProperties } from "../../utils.js";
-import { Cover } from "../Common/Cover.js";
-import { Icon } from "../Common/Icon.js";
-import { Title } from "../Common/Title.js";
-import { Properties } from "../Property/Properties.js";
+"use client";
 
+import { BlockList } from "../Blocks/BlockList.js";
+import { AnnotationItemProvider } from "../Mapper/Annotation.js";
+import { BlockProvider } from "../Mapper/Block.js";
+import { LinkProvider } from "../Mapper/Link.js";
+import { PropertyItemProvider } from "../Mapper/Property.js";
+import { RichTextItemProvider } from "../Mapper/RichText.js";
+
+import { PageMeta } from "./PageMeta.js";
+
+import type { BlockBlockObject } from "../../types/notion/blocks/block.js";
+import type { LinkProps } from "../../types/notion/common/link.js";
+import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
+import type { BlockMapper } from "../../types/notion/mapper/block.js";
+import type { PropertyItemMapper } from "../../types/notion/mapper/propertyItem.js";
+import type { RichTextItemMapper } from "../../types/notion/mapper/richTextItem.js";
 import type { PageObject } from "../../types/notion/pages/page.js";
-import type { ComponentType } from "react";
+import type { FC } from "react";
 
 type Props = {
-  page: PageObject;
+  page?: PageObject;
+  blocks?: Array<BlockBlockObject>;
   displayProperties?: Array<string>;
-  hideCover?: boolean;
-  hideIcon?: boolean;
-  hideTitle?: boolean;
+  propertyMapper?: PropertyItemMapper;
+  blockMapper?: BlockMapper;
+  richTextItemMapper?: RichTextItemMapper;
+  annotationMapper?: AnnotationItemMapper;
+  LinkComponent?: React.ComponentType<LinkProps>;
+  theme?: "light" | "dark";
 };
 
-type PageComponent = ComponentType<Props>;
-
-export const Page: PageComponent = ({
+export const Page: FC<Props> = ({
   page,
+  blocks,
   displayProperties,
-  hideCover = false,
-  hideIcon = false,
-  hideTitle = false,
+  propertyMapper,
+  blockMapper,
+  richTextItemMapper,
+  annotationMapper,
+  LinkComponent,
+  theme = "light",
 }) => {
-  const { title, other } = splitTitleAndOtherProperties(page.properties);
-
-  const properties = displayProperties
-    ? selectProperties(other, displayProperties)
-    : other;
-
   return (
-    <div id={page.id} className="notion-page">
-      {!hideCover && (
-        <div className="notion-page-cover">
-          <Cover cover={page.cover} />
-        </div>
+    <div className={`notion-root notion-${theme}`}>
+      {page && (
+        <PropertyItemProvider mapper={propertyMapper}>
+          <PageMeta page={page} displayProperties={displayProperties} />
+        </PropertyItemProvider>
       )}
-
-      {!hideIcon && (
-        <div className="notion-page-icon">
-          <Icon icon={page.icon} />
-        </div>
+      {blocks && (
+        <BlockProvider mapper={blockMapper}>
+          <RichTextItemProvider mapper={richTextItemMapper}>
+            <AnnotationItemProvider mapper={annotationMapper}>
+              <LinkProvider link={LinkComponent}>
+                <BlockList blocks={blocks} />
+              </LinkProvider>
+            </AnnotationItemProvider>
+          </RichTextItemProvider>
+        </BlockProvider>
       )}
-      {!hideTitle && (
-        <div className="notion-page-title">
-          <Title title={title?.title ?? []} />
-        </div>
-      )}
-      <div className="notion-page-properties">
-        <Properties properties={properties} />
-      </div>
     </div>
   );
 };
