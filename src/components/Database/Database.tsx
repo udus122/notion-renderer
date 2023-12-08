@@ -10,7 +10,7 @@ import { Table } from "./Table/Table.js";
 
 import type { DatabaseObject } from "../../types/notion/database.js";
 import type { PageObject } from "../../types/notion/pages/page.js";
-import type { ComponentType } from "react";
+import type { FC } from "react";
 
 type Props = {
   database: DatabaseObject;
@@ -21,11 +21,10 @@ type Props = {
   hideIcon?: boolean;
   hideTitle?: boolean;
   hideDescription?: boolean;
+  theme?: "light" | "dark";
 };
 
-type DatabaseComponent = ComponentType<Props>;
-
-export const Database: DatabaseComponent = ({
+export const Database: FC<Props> = ({
   database,
   pages,
   viewType,
@@ -34,6 +33,7 @@ export const Database: DatabaseComponent = ({
   hideIcon = false,
   hideTitle = false,
   hideDescription = false,
+  theme = "light",
 }) => {
   // Filter properties to display
   if (displayProperties) {
@@ -48,35 +48,37 @@ export const Database: DatabaseComponent = ({
   }
 
   return (
-    <div id={database.id} className="notion-database">
-      {!hideCover && (
-        <div className="notion-database-cover">
-          <Cover cover={database.cover} />
+    <div className={`notion-root notion-${theme}`}>
+      <div id={database.id} className="notion-database">
+        {!hideCover && (
+          <div className="notion-database-cover">
+            <Cover cover={database.cover} />
+          </div>
+        )}
+        {!hideIcon && (
+          <div className="notion-database-icon">
+            <Icon icon={database.icon} />
+          </div>
+        )}
+        {!hideTitle && (
+          <div className="notion-database-title">
+            <Title title={database.title} />
+          </div>
+        )}
+        {!hideDescription && (
+          <div className="notion-database-description">
+            <RichText richText={database.description} />
+          </div>
+        )}
+        <div className="notion-database-collection">
+          {viewType === "gallery" ? (
+            <Gallery pages={pages} />
+          ) : viewType === "list" ? (
+            <List pages={pages} />
+          ) : viewType === "table" ? (
+            <Table database={database} pages={pages} />
+          ) : null}
         </div>
-      )}
-      {!hideIcon && (
-        <div className="notion-database-icon">
-          <Icon icon={database.icon} />
-        </div>
-      )}
-      {!hideTitle && (
-        <div className="notion-database-title">
-          <Title title={database.title} />
-        </div>
-      )}
-      {!hideDescription && (
-        <div className="notion-database-description">
-          <RichText richText={database.description} />
-        </div>
-      )}
-      <div className="notion-database-collection">
-        {viewType === "gallery" ? (
-          <Gallery pages={pages} />
-        ) : viewType === "list" ? (
-          <List pages={pages} />
-        ) : viewType === "table" ? (
-          <Table database={database} pages={pages} />
-        ) : null}
       </div>
     </div>
   );
