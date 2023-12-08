@@ -1,4 +1,4 @@
-import Pages from "../Database.Pages.json";
+import Pages from "../Pages.json";
 
 import { Gallery } from "./Gallery.js";
 

@@ -12,7 +12,7 @@ import type { PageObject } from "../../types/notion/pages/page.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Page> = {
-  title: "Page/Page",
+  title: "Page",
   component: Page,
   tags: ["autodocs"],
 };
@@ -42,14 +42,6 @@ export const Default: Story = {
       "Email",
       "Phone",
     ],
-  },
-};
-
-export const Dark: Story = {
-  args: {
-    page: PageMetaObjectData as PageObject,
-    blocks: BlocksObject as Array<BlockBlockObject>,
-    theme: "dark",
   },
 };
 

@@ -1,13 +1,13 @@
 import Page from "../Page.json";
 
-import { Card } from "./Card.js";
+import { ListItem } from "./ListItem.js";
 
 import type { Meta, StoryObj } from "@storybook/react";
 import type { PageObject } from "src/types/notion/pages/page.js";
 
-const meta: Meta<typeof Card> = {
-  title: "Database/Gallery/Card",
-  component: Card,
+const meta: Meta<typeof ListItem> = {
+  title: "Database/List/ListItem",
+  component: ListItem,
   tags: ["autodocs"],
   parameters: {
     layout: "centered",
@@ -16,7 +16,7 @@ const meta: Meta<typeof Card> = {
 
 export default meta;
 
-type Story = StoryObj<typeof Card>;
+type Story = StoryObj<typeof ListItem>;
 
 export const Default: Story = {
   args: {
