@@ -15,24 +15,24 @@ import type { FC } from "react";
 type Props = {
   database: DatabaseObject;
   pages: Array<PageObject>;
-  viewType?: "table" | "gallery" | "list";
   displayProperties?: Array<string>;
   hideCover?: boolean;
   hideIcon?: boolean;
   hideTitle?: boolean;
   hideDescription?: boolean;
+  viewType?: "table" | "gallery" | "list";
   theme?: "light" | "dark";
 };
 
 export const Database: FC<Props> = ({
   database,
   pages,
-  viewType,
   displayProperties,
   hideCover = false,
   hideIcon = false,
   hideTitle = false,
   hideDescription = false,
+  viewType = "table",
   theme = "light",
 }) => {
   // Filter properties to display

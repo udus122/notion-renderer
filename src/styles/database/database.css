@@ -22,15 +22,22 @@
 }
 
 .notion-database-icon {
+  grid-column: content;
   display: block;
   font-size: 5rem;
 }
 
+.notion-database-title {
+  grid-column: content;
+}
+
 .notion-database-description {
+  grid-column: content;
   font-size: 0.875rem;
   padding-block-end: 1.5rem;
 }
 
 .notion-database-collection {
+  grid-column: content;
   overflow-x: auto;
 }
