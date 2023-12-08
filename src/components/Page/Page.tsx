@@ -22,6 +22,10 @@ type Props = {
   page?: PageObject;
   blocks?: Array<BlockBlockObject>;
   displayProperties?: Array<string>;
+  hideProperties?: boolean;
+  hideCover?: boolean;
+  hideIcon?: boolean;
+  hideTitle?: boolean;
   propertyMapper?: PropertyItemMapper;
   blockMapper?: BlockMapper;
   richTextItemMapper?: RichTextItemMapper;
@@ -34,6 +38,10 @@ export const Page: FC<Props> = ({
   page,
   blocks,
   displayProperties,
+  hideCover = false,
+  hideIcon = false,
+  hideTitle = false,
+  hideProperties = false,
   propertyMapper,
   blockMapper,
   richTextItemMapper,
@@ -45,7 +53,14 @@ export const Page: FC<Props> = ({
     <div className={`notion-root notion-${theme}`}>
       {page && (
         <PropertyItemProvider mapper={propertyMapper}>
-          <PageMeta page={page} displayProperties={displayProperties} />
+          <PageMeta
+            page={page}
+            displayProperties={displayProperties}
+            hideCover={hideCover}
+            hideIcon={hideIcon}
+            hideTitle={hideTitle}
+            hideProperties={hideProperties}
+          />
         </PropertyItemProvider>
       )}
       {blocks && (
