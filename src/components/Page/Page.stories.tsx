@@ -43,6 +43,18 @@ export const Default: Story = {
       "Phone",
     ],
   },
+  parameters: {
+    controls: {
+      include: [
+        "viewType",
+        "hideCover",
+        "hideIcon",
+        "hideTitle",
+        "hideProperties",
+        "theme",
+      ],
+    },
+  },
 };
 
 export const Custom: Story = {
@@ -54,6 +66,18 @@ export const Custom: Story = {
       heading_1: OpenedHeading1,
       heading_2: OpenedHeading2,
       heading_3: OpenedHeading3,
+    },
+  },
+  parameters: {
+    controls: {
+      include: [
+        "viewType",
+        "hideCover",
+        "hideIcon",
+        "hideTitle",
+        "hideDescription",
+        "theme",
+      ],
     },
   },
 };

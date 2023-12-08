@@ -47,4 +47,16 @@ export const Default: Story = {
       "Phone",
     ],
   },
+  parameters: {
+    controls: {
+      include: [
+        "viewType",
+        "hideCover",
+        "hideIcon",
+        "hideTitle",
+        "hideDescription",
+        "theme",
+      ],
+    },
+  },
 };
