@@ -122,5 +122,13 @@ layer(normalization);
     line-height: 1.5;
     fill: currentcolor;
     overflow-wrap: break-word;
+
+    a {
+      color: inherit;
+    }
+
+    p {
+      margin: 0;
+    }
   }
 }
