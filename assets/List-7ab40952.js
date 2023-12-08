@@ -1,0 +1,2 @@
+import{j as s}from"./jsx-runtime-ffb262ed.js";import{L as i}from"./ListItem-5291fe47.js";const r=({pages:e})=>s.jsx("div",{className:"notion-list",children:e.map(t=>s.jsx(i,{page:t},t.id))});try{r.displayName="List",r.__docgenInfo={description:"",displayName:"List",props:{pages:{defaultValue:null,description:"",name:"pages",required:!0,type:{name:"PageObject[]"}}}}}catch{}export{r as L};
+//# sourceMappingURL=List-7ab40952.js.map
