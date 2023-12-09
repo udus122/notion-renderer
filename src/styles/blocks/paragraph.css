@@ -1,3 +1,9 @@
+.notion-paragraph {
+  p {
+    margin: 0;
+  }
+}
+
 .notion-paragraph-children {
   margin-inline-start: 1.5rem;
 }
