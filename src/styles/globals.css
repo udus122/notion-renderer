@@ -44,6 +44,7 @@
 @import url("./property/relation.css");
 @import url("./property/select.css");
 @import url("./property/status.css");
+@import url("./property/url.css");
 
 :root {
   --margin: clamp(1rem, 0.273rem + 3.64vw, 3rem);
