@@ -35,7 +35,6 @@ layer(normalization);
 @import url("./rich-text/text.css") layer(notion-components);
 @import url("./database/database.css") layer(notion-components);
 @import url("./database/gallery.css") layer(notion-components);
-@import url("./database/card.css") layer(notion-components);
 @import url("./database/list.css") layer(notion-components);
 @import url("./database/table.css") layer(notion-components);
 @import url("./pages/page.css") layer(notion-components);
@@ -131,4 +130,8 @@ layer(normalization);
       margin: 0;
     }
   }
+}
+
+.notion-gallery-card-cover .notion-cover {
+  object-fit: contain;
 }
