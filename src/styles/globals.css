@@ -1,137 +1,121 @@
-@layer normalization, notion-theme, notion-components;
+@import url("../../node_modules/modern-normalize/modern-normalize.css");
+@import url("./common/colors.css");
+@import url("./common/cover.css");
+@import url("./common/file.css");
+@import url("./common/icon.css");
+@import url("./common/link.css");
+@import url("./common/caption.css");
+@import url("./blocks.css");
+@import url("./blocks/audio.css");
+@import url("./blocks/bookmark.css");
+@import url("./blocks/breadcrumb.css");
+@import url("./blocks/bulleted-list.css");
+@import url("./blocks/callout.css");
+@import url("./blocks/child-database.css");
+@import url("./blocks/child-page.css");
+@import url("./blocks/code.css");
+@import url("./blocks/column-list.css");
+@import url("./blocks/divider.css");
+@import url("./blocks/embed.css");
+@import url("./blocks/file.css");
+@import url("./blocks/image.css");
+@import url("./blocks/link-preview.css");
+@import url("./blocks/numbered-list.css");
+@import url("./blocks/paragraph.css");
+@import url("./blocks/pdf.css");
+@import url("./blocks/quote.css");
+@import url("./blocks/to-do.css");
+@import url("./blocks/table.css");
+@import url("./blocks/table-of-contents.css");
+@import url("./blocks/toggle.css");
+@import url("./blocks/video.css");
+@import url("./rich-text/mention.css");
+@import url("./rich-text/text.css");
+@import url("./database/database.css");
+@import url("./database/gallery.css");
+@import url("./database/list.css");
+@import url("./database/table.css");
+@import url("./pages/page.css");
+@import url("./property/files.css");
+@import url("./property/property.css");
+@import url("./property/multi-select.css");
+@import url("./property/relation.css");
+@import url("./property/select.css");
+@import url("./property/status.css");
 
-@import url("../../node_modules/modern-normalize/modern-normalize.css")
-layer(normalization);
-@import url("./common/colors.css") layer(notion-components);
-@import url("./common/cover.css") layer(notion-components);
-@import url("./common/file.css") layer(notion-components);
-@import url("./common/icon.css") layer(notion-components);
-@import url("./common/link.css") layer(notion-components);
-@import url("./common/caption.css") layer(notion-components);
-@import url("./blocks.css") layer(notion-components);
-@import url("./blocks/audio.css") layer(notion-components);
-@import url("./blocks/bookmark.css") layer(notion-components);
-@import url("./blocks/breadcrumb.css") layer(notion-components);
-@import url("./blocks/bulleted-list.css") layer(notion-components);
-@import url("./blocks/callout.css") layer(notion-components);
-@import url("./blocks/child-database.css") layer(notion-components);
-@import url("./blocks/child-page.css") layer(notion-components);
-@import url("./blocks/code.css") layer(notion-components);
-@import url("./blocks/column-list.css") layer(notion-components);
-@import url("./blocks/divider.css") layer(notion-components);
-@import url("./blocks/embed.css") layer(notion-components);
-@import url("./blocks/image.css") layer(notion-components);
-@import url("./blocks/link-preview.css") layer(notion-components);
-@import url("./blocks/numbered-list.css") layer(notion-components);
-@import url("./blocks/paragraph.css") layer(notion-components);
-@import url("./blocks/pdf.css") layer(notion-components);
-@import url("./blocks/quote.css") layer(notion-components);
-@import url("./blocks/to-do.css") layer(notion-components);
-@import url("./blocks/table.css") layer(notion-components);
-@import url("./blocks/table-of-contents.css") layer(notion-components);
-@import url("./blocks/toggle.css") layer(notion-components);
-@import url("./blocks/video.css") layer(notion-components);
-@import url("./rich-text/mention.css") layer(notion-components);
-@import url("./rich-text/text.css") layer(notion-components);
-@import url("./database/database.css") layer(notion-components);
-@import url("./database/gallery.css") layer(notion-components);
-@import url("./database/list.css") layer(notion-components);
-@import url("./database/table.css") layer(notion-components);
-@import url("./pages/page.css") layer(notion-components);
-@import url("./property/files.css") layer(notion-components);
-@import url("./property/property.css") layer(notion-components);
-@import url("./property/multi-select.css") layer(notion-components);
-@import url("./property/relation.css") layer(notion-components);
-@import url("./property/select.css") layer(notion-components);
-@import url("./property/status.css") layer(notion-components);
+:root {
+  --margin: clamp(1rem, 0.273rem + 3.64vw, 3rem);
 
-@layer notion-theme {
-  :root {
-    --margin: clamp(1rem, 0.273rem + 3.64vw, 3rem);
-
-    /* Colors */
-    --color-text-default: rgb(55 53 47);
-    --color-bg-default: rgb(255 255 255);
-    --color-pill-default: rgb(227 226 224 / 50%);
-    --color-text-gray: rgb(120 119 116);
-    --color-bg-gray: rgb(241 241 239);
-    --color-pill-gray: rgb(227 226 224);
-    --color-text-brown: rgb(159 107 83);
-    --color-bg-brown: rgb(244 238 238);
-    --color-pill-brown: rgb(238 224 218);
-    --color-text-orange: rgb(217 115 13);
-    --color-bg-orange: rgb(251 236 221);
-    --color-pill-orange: rgb(250 222 201);
-    --color-text-yellow: rgb(203 145 47);
-    --color-bg-yellow: rgb(251 243 219);
-    --color-pill-yellow: rgb(253 236 200);
-    --color-text-green: rgb(68 131 97);
-    --color-bg-green: rgb(237 243 236);
-    --color-pill-green: rgb(219 237 219);
-    --color-text-blue: rgb(51 126 169);
-    --color-bg-blue: rgb(231 243 248);
-    --color-pill-blue: rgb(211 229 239);
-    --color-text-purple: rgb(144 101 176);
-    --color-bg-purple: #eae4f2;
-    --color-pill-purple: rgb(244 240 247 / 80%);
-    --color-text-pink: rgb(193 76 138);
-    --color-bg-pink: rgb(249 238 243 / 80%);
-    --color-pill-pink: rgb(245 224 233);
-    --color-text-red: rgb(212 76 71);
-    --color-bg-red: rgb(253 235 236);
-    --color-pill-red: rgb(255 226 221);
-  }
-
-  .notion-dark {
-    --color-text-default: rgb(255 255 255 / 81%);
-    --color-bg-default: rgb(25 25 25);
-    --color-pill-default: rgb(55 55 55);
-    --color-text-gray: rgb(155 155 155);
-    --color-bg-gray: rgb(47 47 47);
-    --color-pill-gray: rgb(90 90 90);
-    --color-text-brown: rgb(186 133 111);
-    --color-bg-brown: rgb(74 50 40);
-    --color-pill-brown: rgb(96 59 44);
-    --color-text-orange: rgb(199 125 72);
-    --color-bg-orange: rgb(92 59 35);
-    --color-pill-orange: rgb(133 76 29);
-    --color-text-yellow: rgb(202 152 73);
-    --color-bg-yellow: rgb(86 67 40);
-    --color-pill-yellow: rgb(137 99 42);
-    --color-text-green: rgb(82 158 114);
-    --color-bg-green: rgb(36 61 48);
-    --color-pill-green: rgb(43 89 63);
-    --color-text-blue: rgb(94 135 201);
-    --color-bg-blue: rgb(20 58 78);
-    --color-pill-blue: rgb(40 69 108);
-    --color-text-purple: rgb(157 104 211);
-    --color-bg-purple: rgb(60 45 73);
-    --color-pill-purple: rgb(73 47 100);
-    --color-text-pink: rgb(209 87 150);
-    --color-bg-pink: rgb(78 44 60);
-    --color-pill-pink: rgb(105 49 76);
-    --color-text-red: rgb(223 84 82);
-    --color-bg-red: rgb(82 46 42);
-    --color-pill-red: rgb(110 54 48);
-  }
-
-  .notion-root {
-    color: var(--color-text-default);
-    background-color: var(--color-bg-default);
-    line-height: 1.5;
-    fill: currentcolor;
-    overflow-wrap: break-word;
-
-    a {
-      color: inherit;
-    }
-
-    p {
-      margin: 0;
-    }
-  }
+  /* Colors */
+  --color-text-default: rgb(55 53 47);
+  --color-bg-default: rgb(255 255 255);
+  --color-pill-default: rgb(227 226 224 / 50%);
+  --color-text-gray: rgb(120 119 116);
+  --color-bg-gray: rgb(241 241 239);
+  --color-pill-gray: rgb(227 226 224);
+  --color-text-brown: rgb(159 107 83);
+  --color-bg-brown: rgb(244 238 238);
+  --color-pill-brown: rgb(238 224 218);
+  --color-text-orange: rgb(217 115 13);
+  --color-bg-orange: rgb(251 236 221);
+  --color-pill-orange: rgb(250 222 201);
+  --color-text-yellow: rgb(203 145 47);
+  --color-bg-yellow: rgb(251 243 219);
+  --color-pill-yellow: rgb(253 236 200);
+  --color-text-green: rgb(68 131 97);
+  --color-bg-green: rgb(237 243 236);
+  --color-pill-green: rgb(219 237 219);
+  --color-text-blue: rgb(51 126 169);
+  --color-bg-blue: rgb(231 243 248);
+  --color-pill-blue: rgb(211 229 239);
+  --color-text-purple: rgb(144 101 176);
+  --color-bg-purple: #eae4f2;
+  --color-pill-purple: rgb(244 240 247 / 80%);
+  --color-text-pink: rgb(193 76 138);
+  --color-bg-pink: rgb(249 238 243 / 80%);
+  --color-pill-pink: rgb(245 224 233);
+  --color-text-red: rgb(212 76 71);
+  --color-bg-red: rgb(253 235 236);
+  --color-pill-red: rgb(255 226 221);
 }
 
-.notion-gallery-card-cover .notion-cover {
-  object-fit: contain;
+.notion-dark {
+  --color-text-default: rgb(255 255 255 / 81%);
+  --color-bg-default: rgb(25 25 25);
+  --color-pill-default: rgb(55 55 55);
+  --color-text-gray: rgb(155 155 155);
+  --color-bg-gray: rgb(47 47 47);
+  --color-pill-gray: rgb(90 90 90);
+  --color-text-brown: rgb(186 133 111);
+  --color-bg-brown: rgb(74 50 40);
+  --color-pill-brown: rgb(96 59 44);
+  --color-text-orange: rgb(199 125 72);
+  --color-bg-orange: rgb(92 59 35);
+  --color-pill-orange: rgb(133 76 29);
+  --color-text-yellow: rgb(202 152 73);
+  --color-bg-yellow: rgb(86 67 40);
+  --color-pill-yellow: rgb(137 99 42);
+  --color-text-green: rgb(82 158 114);
+  --color-bg-green: rgb(36 61 48);
+  --color-pill-green: rgb(43 89 63);
+  --color-text-blue: rgb(94 135 201);
+  --color-bg-blue: rgb(20 58 78);
+  --color-pill-blue: rgb(40 69 108);
+  --color-text-purple: rgb(157 104 211);
+  --color-bg-purple: rgb(60 45 73);
+  --color-pill-purple: rgb(73 47 100);
+  --color-text-pink: rgb(209 87 150);
+  --color-bg-pink: rgb(78 44 60);
+  --color-pill-pink: rgb(105 49 76);
+  --color-text-red: rgb(223 84 82);
+  --color-bg-red: rgb(82 46 42);
+  --color-pill-red: rgb(110 54 48);
+}
+
+.notion-root {
+  color: var(--color-text-default);
+  background-color: var(--color-bg-default);
+  line-height: 1.5;
+  fill: currentcolor;
+  overflow-wrap: break-word;
 }
