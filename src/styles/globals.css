@@ -36,7 +36,9 @@
 @import url("./database/list.css");
 @import url("./database/table.css");
 @import url("./pages/page.css");
+@import url("./property/email.css");
 @import url("./property/files.css");
+@import url("./property/phone-number.css");
 @import url("./property/property.css");
 @import url("./property/multi-select.css");
 @import url("./property/relation.css");
