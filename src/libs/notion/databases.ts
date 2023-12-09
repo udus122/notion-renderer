@@ -43,6 +43,7 @@ export const fetchDatabase = async (
   return {
     ...database,
     title: await convertResponseToRichText(database.title),
+    description: await convertResponseToRichText(database.description),
   };
 };
 

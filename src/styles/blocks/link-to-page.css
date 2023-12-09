@@ -1,19 +1,10 @@
-.notion-breadcrumb {
-  display: flex;
-  align-items: center;
-
+.notion-link-to-page {
   .notion-internal-link {
     color: inherit;
     fill: inherit;
-    text-decoration: none;
   }
-}
 
-.notion-breadcrumb-title {
-  display: flex;
-  align-items: center;
   transition: background-color 20ms ease-in 0s;
-  padding: 0.1rem 0.25rem;
   border-radius: 0.25rem;
 
   &:hover {
@@ -23,4 +14,8 @@
       background-color: rgb(255 255 255 / 5.5%);
     }
   }
+}
+
+.notion-link-to-page-title {
+  opacity: 0.7;
 }

@@ -2,8 +2,7 @@ import { isFullUser } from "@notionhq/client";
 
 import { DateComponent } from "../Common/Date.js";
 import { useMapper } from "../hooks.js";
-
-import { Annotation } from "./Annotation/Annotation.js";
+import { Icon } from "../index.js";
 
 import type { MentionRichTextItemObject } from "../../types/notion/richText/mention.js";
 import type { RichTextItemProps } from "../../types/notion/richText/richTextItem.js";
@@ -19,58 +18,57 @@ export const Mention: React.FC<Props> = ({ richText: richTextItem }) => {
   switch (richTextItem.mention.type) {
     case "database":
       return (
-        <span className="notion-rich-text-type-mention-type-database">
+        <span className="notion-database-mention-rich-text">
           <Link prefix="/" link={richTextItem.mention.database.id}>
-            <Annotation richTextItem={richTextItem}>
-              {richTextItem.plain_text}
-            </Annotation>
+            {richTextItem.mention.database.database && (
+              <Icon icon={richTextItem.mention.database.database?.icon} />
+            )}
+            {richTextItem.plain_text}
           </Link>
         </span>
       );
     case "date":
       return (
-        <span className="notion-rich-text-type-mention-type-date">
+        <span className="notion-date-mention-rich-text">
           <DateComponent date={richTextItem.mention.date} />
         </span>
       );
     case "link_preview":
       return (
-        <span className="notion_rich_text_type_mention_type_link_preview">
-          <Link link={richTextItem.mention.link_preview.url}>
-            <Annotation richTextItem={richTextItem}>
-              {richTextItem.plain_text}
-            </Annotation>
-          </Link>
-        </span>
+        <a
+          href={richTextItem.mention.link_preview.url}
+          className="notion-link-preview-mention-rich-text"
+        >
+          {richTextItem.plain_text}
+        </a>
       );
     case "page":
       return (
-        <span className="notion_rich_text_type_mention_type_page">
+        <span className="notion-page-mention-rich-text">
           <Link link={richTextItem.mention.page.id}>
-            <Annotation richTextItem={richTextItem}>
-              {richTextItem.plain_text}
-            </Annotation>
+            {richTextItem.mention.page.page && (
+              <Icon icon={richTextItem.mention.page.page?.icon} />
+            )}
+            {richTextItem.plain_text}
           </Link>
         </span>
       );
     case "template_mention":
-      console.warn(`${richTextItem.mention.type} is not supported yet.`);
+      console.warn(`${richTextItem.mention.type} is not supported.`);
       return null;
     case "user":
       return (
-        <span className="notion_rich_text_type_mention_type_user">
+        <span className="notion-user-mention-rich-text">
           {isFullUser(richTextItem.mention.user) ? (
             <img
-              className="notion-rich-text-type-mention-type-user-avatar"
+              className="notion-user-mention-rich-text-avatar"
               src={richTextItem.mention.user.avatar_url ?? undefined}
               alt="user avater"
             />
           ) : (
             "@"
           )}
-          <Annotation richTextItem={richTextItem}>
-            {richTextItem.plain_text.replace("@", "")}
-          </Annotation>
+          {richTextItem.plain_text.replace("@", "")}
         </span>
       );
     default:

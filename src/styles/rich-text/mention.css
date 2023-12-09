@@ -1,4 +1,33 @@
-.notion-rich-text-type-mention-type-user-avatar {
+.notion-database-mention-rich-text,
+.notion-page-mention-rich-text {
+  transition: background-color 20ms ease-in 0s;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: rgb(55 53 47 / 8%);
+
+    .notion-dark & {
+      background-color: rgb(255 255 255 / 5.5%);
+    }
+  }
+}
+
+.notion-link-preview-mention-rich-text {
+  color: inherit;
+  fill: inherit;
+  transition: background-color 20ms ease-in 0s;
+  border-radius: 0.25rem;
+
+  &:hover {
+    background-color: rgb(55 53 47 / 8%);
+
+    .notion-dark & {
+      background-color: rgb(255 255 255 / 5.5%);
+    }
+  }
+}
+
+.notion-user-mention-rich-text-avatar {
   block-size: 1rem;
   inline-size: 1rem;
   aspect-ratio: 1;

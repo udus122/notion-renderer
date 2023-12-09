@@ -6,5 +6,6 @@ export type DatabaseObject = Overwrite<
   DatabaseObjectResponse,
   {
     title: RichText;
+    description: RichText;
   }
 >;

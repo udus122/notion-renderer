@@ -14,7 +14,6 @@ export const Breadcrumb: BreadcrumbBlock = ({ block }) => {
     <div id={block.id} className="notion-block notion-breadcrumb">
       {block.breadcrumb.parents.map((pageOrDatabase, index, array) => {
         const titleRichText = extractTitle(pageOrDatabase);
-
         return (
           <Fragment key={pageOrDatabase.id}>
             <Link prefix="/" link={pageOrDatabase.id}>
