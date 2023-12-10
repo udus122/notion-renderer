@@ -45,7 +45,7 @@ export type PropertyItemObject =
   | UrlPropertyItemObject;
 
 export type PropertyItemProps<
-  T extends PropertyItemObject = PropertyItemObject
+  T extends PropertyItemObject = PropertyItemObject,
 > = {
   propertyItem: T;
 };

@@ -16,7 +16,7 @@ import type {
 } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const retrievePage = async (
-  args: GetPageParameters
+  args: GetPageParameters,
 ): Promise<GetPageResponse | undefined> => {
   const { ok, data } = await callAPIWithBackOff<
     GetPageParameters,
@@ -31,9 +31,9 @@ export const retrievePage = async (
 };
 
 export const fetchPage = async (
-  pageId: string
+  args: GetPageParameters,
 ): Promise<PageObject | undefined> => {
-  const pageObjectResponse = await retrievePage({ page_id: pageId });
+  const pageObjectResponse = await retrievePage(args);
 
   if (!pageObjectResponse) {
     return;
@@ -44,7 +44,7 @@ export const fetchPage = async (
 };
 
 export const convertResponseToPage = async (
-  page: PageObjectResponse | PartialPageObjectResponse
+  page: PageObjectResponse | PartialPageObjectResponse,
 ): Promise<PageObject | undefined> => {
   if (!isFullPage(page)) {
     return;
@@ -53,13 +53,13 @@ export const convertResponseToPage = async (
   const properties = Object.fromEntries(
     await Promise.all(
       Object.entries(page.properties).map(async ([key, value]) => {
-        const property = (await fetchPageProperty(
-          page.id,
-          value.id
-        )) as GetPagePropertyResponse;
+        const property = (await fetchPageProperty({
+          page_id: page.id,
+          property_id: value.id,
+        })) as GetPagePropertyResponse;
         return [key, property];
-      })
-    )
+      }),
+    ),
   ) as Properties;
 
   return {

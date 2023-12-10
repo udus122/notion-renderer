@@ -4,9 +4,9 @@ import type { ChildPageBlockObject } from "../../../types/notion/blocks/childPag
 import type { ChildPageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertChildPageResponseToBlock = async (
-  block: ChildPageBlockObjectResponse
+  block: ChildPageBlockObjectResponse,
 ) => {
-  const childPage = await fetchPage(block.id);
+  const childPage = await fetchPage({ page_id: block.id });
   if (childPage) {
     return {
       ...block,

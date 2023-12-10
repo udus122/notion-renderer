@@ -2,7 +2,7 @@ import type { FormulaPropertyItemObject } from "../../../../types/notion/pages/p
 import type { FormulaPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToFormulaPropertyItem = (
-  property: FormulaPropertyItemObjectResponse
+  property: FormulaPropertyItemObjectResponse,
 ): FormulaPropertyItemObject => {
   return {
     ...property,

@@ -16,15 +16,15 @@ export const LinkToPage: LinkToPageBlock = ({ block }) => {
     block.link_to_page.type === "page_id" && block.link_to_page.page
       ? block.link_to_page.page.icon
       : block.link_to_page.type === "database_id" && block.link_to_page.database
-      ? block.link_to_page.database.icon
-      : null;
+        ? block.link_to_page.database.icon
+        : null;
 
   const titleRichText =
     block.link_to_page.type === "page_id" && block.link_to_page.page
       ? extractTitle(block.link_to_page.page)
       : block.link_to_page.type === "database_id" && block.link_to_page.database
-      ? extractTitle(block.link_to_page.database)
-      : [];
+        ? extractTitle(block.link_to_page.database)
+        : [];
 
   return (
     <div id={block.id} className="notion-block notion-link-to-page">

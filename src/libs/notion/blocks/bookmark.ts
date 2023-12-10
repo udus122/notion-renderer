@@ -5,7 +5,7 @@ import type { BookmarkBlockObject } from "../../../types/notion/blocks/bookmark.
 import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertBookmarkResponseToBlock = async (
-  block: BookmarkBlockObjectResponse
+  block: BookmarkBlockObjectResponse,
 ) => {
   const { ok, data } = await fetchSiteMeta(block.bookmark.url);
   if (!ok) {

@@ -10,8 +10,8 @@ export const Image: ImageBlock = ({ block }) => {
           block.image.type == "external"
             ? block.image.external.url
             : block.image.type == "file"
-            ? block.image.file.url
-            : ""
+              ? block.image.file.url
+              : ""
         }
         alt={block.image.caption.map((b) => b.plain_text).join("")}
       />

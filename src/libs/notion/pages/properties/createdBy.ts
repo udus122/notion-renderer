@@ -2,7 +2,7 @@ import type { CreatedByPropertyItemObject } from "../../../../types/notion/pages
 import type { CreatedByPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToCreatedByPropertyItem = (
-  property: CreatedByPropertyItemObjectResponse
+  property: CreatedByPropertyItemObjectResponse,
 ): CreatedByPropertyItemObject => {
   return {
     ...property,

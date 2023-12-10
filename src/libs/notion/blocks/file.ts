@@ -4,7 +4,7 @@ import type { FileBlockObject } from "../../../types/notion/blocks/file.js";
 import type { FileBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertFileResponseToBlock = async (
-  block: FileBlockObjectResponse
+  block: FileBlockObjectResponse,
 ) => {
   return {
     ...block,

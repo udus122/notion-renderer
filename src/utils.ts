@@ -10,7 +10,7 @@ import type {
 } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const splitTitleAndOtherProperties = (
-  properties: Properties | PageObjectResponse["properties"]
+  properties: Properties | PageObjectResponse["properties"],
 ) => {
   let title: TitlePropertyItemObject | undefined;
   const other: Properties = {};
@@ -27,7 +27,7 @@ export const splitTitleAndOtherProperties = (
 };
 
 export const extractTitle = (
-  pageOrDatabase: PageObject | PageObjectResponse | DatabaseObjectResponse
+  pageOrDatabase: PageObject | PageObjectResponse | DatabaseObjectResponse,
 ): RichText | RichTextItemResponse[] => {
   if (pageOrDatabase.object === "page") {
     const { title } = splitTitleAndOtherProperties(pageOrDatabase.properties);
@@ -42,14 +42,14 @@ export const extractTitle = (
 };
 
 export const isTitleProperty = (
-  property: PageObjectResponse["properties"][string] | Properties[string]
+  property: PageObjectResponse["properties"][string] | Properties[string],
 ): property is TitlePropertyItemObject => property.type === "title";
 
 export const selectPropertyById = <
-  T extends DatabaseObject["properties"] | PageObject["properties"]
+  T extends DatabaseObject["properties"] | PageObject["properties"],
 >(
   properties: T,
-  id: string
+  id: string,
 ): T | undefined => {
   const name = Object.keys(properties).find((key) => properties[key].id === id);
   if (name) {
@@ -60,10 +60,10 @@ export const selectPropertyById = <
 };
 
 export const selectPropertyByName = <
-  T extends DatabaseObject["properties"] | PageObject["properties"]
+  T extends DatabaseObject["properties"] | PageObject["properties"],
 >(
   properties: T,
-  key: string
+  key: string,
 ): T | undefined => {
   const selected = properties[key];
   if (selected) {
@@ -73,10 +73,10 @@ export const selectPropertyByName = <
 };
 
 export const selectProperties = <
-  T extends DatabaseObject["properties"] | PageObject["properties"]
+  T extends DatabaseObject["properties"] | PageObject["properties"],
 >(
   properties: T,
-  selector: Array<string>
+  selector: Array<string>,
 ): T => {
   const selected = selector.reduce((prev, keyOrId) => {
     const selectedByName = selectPropertyByName(properties, keyOrId);

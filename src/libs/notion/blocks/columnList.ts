@@ -7,13 +7,13 @@ import type { ColumnListBlockObject } from "../../../types/notion/blocks/columnL
 import type { ColumnListBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertColumnListResponseToBlock = async (
-  block: ColumnListBlockObjectResponse
+  block: ColumnListBlockObjectResponse,
 ) => {
   if (block.has_children) {
-    const blocks = await fetchBlockList(block.id);
+    const blocks = await fetchBlockList({ block_id: block.id });
     const columns = blocks.filter(
       (block): block is ColumnBlockObject =>
-        notNullNorUndefined(block) && block.type === "column"
+        notNullNorUndefined(block) && block.type === "column",
     );
     return {
       ...block,

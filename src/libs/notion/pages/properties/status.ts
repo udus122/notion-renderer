@@ -2,7 +2,7 @@ import type { StatusPropertyItemObject } from "../../../../types/notion/pages/pr
 import type { StatusPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToStatusPropertyItem = (
-  property: StatusPropertyItemObjectResponse
+  property: StatusPropertyItemObjectResponse,
 ): StatusPropertyItemObject => {
   return {
     ...property,

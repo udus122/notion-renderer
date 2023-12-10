@@ -12,7 +12,7 @@ import type {
 } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToRelationPropertyItem = (
-  property: RelationPropertyItemObjectResponse
+  property: RelationPropertyItemObjectResponse,
 ): RelationPropertyItemObject => {
   return {
     ...property,
@@ -31,14 +31,14 @@ export const convertListResponseToRelationPropertyItem = async (
         { type: "relation" }
       >;
     }
-  >
+  >,
 ): Promise<RelationPropertyItemObject> => {
   const relationPropertyItemObject = {
     ...list.property_item,
     relation: await list.results
       .filter(isRelationTypeObject)
       .reduce<Promise<Array<RelationItem>>>(async (prev, cur) => {
-        const page = await fetchPage(cur.relation.id);
+        const page = await fetchPage({ page_id: cur.relation.id });
         return [
           ...(await prev),
           {
@@ -53,5 +53,5 @@ export const convertListResponseToRelationPropertyItem = async (
 };
 
 export const isRelationTypeObject = (
-  obj: PropertyItemObjectResponse
+  obj: PropertyItemObjectResponse,
 ): obj is RelationPropertyItemObjectResponse => obj.type === "relation";

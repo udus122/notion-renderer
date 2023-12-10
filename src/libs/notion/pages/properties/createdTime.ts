@@ -2,7 +2,7 @@ import type { CreatedTimePropertyItemObject } from "../../../../types/notion/pag
 import type { CreatedTimePropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToCreatedTimePropertyItem = (
-  property: CreatedTimePropertyItemObjectResponse
+  property: CreatedTimePropertyItemObjectResponse,
 ): CreatedTimePropertyItemObject => {
   return {
     ...property,

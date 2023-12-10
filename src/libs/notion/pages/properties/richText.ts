@@ -7,7 +7,7 @@ import type {
 import type { Overwrite } from "src/types/utils.js";
 
 export const convertResponseToRichTextPropertyItem = (
-  property: RichTextPropertyItemObjectResponse
+  property: RichTextPropertyItemObjectResponse,
 ): RichTextPropertyItemObject => {
   return {
     ...property,
@@ -26,7 +26,7 @@ export const convertListResponseToRichTextPropertyItem = (
         { type: "rich_text" }
       >;
     }
-  >
+  >,
 ): RichTextPropertyItemObject => {
   const rich_textPropertyItemObject = {
     ...list.property_item,
@@ -39,5 +39,5 @@ export const convertListResponseToRichTextPropertyItem = (
 };
 
 export const isRichTextTypeObject = (
-  obj: PropertyItemObjectResponse
+  obj: PropertyItemObjectResponse,
 ): obj is RichTextPropertyItemObjectResponse => obj.type === "rich_text";

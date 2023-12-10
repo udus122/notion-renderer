@@ -45,7 +45,7 @@ import type {
 } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const retrievePageProperty = async (
-  args: GetPagePropertyParameters
+  args: GetPagePropertyParameters,
 ): Promise<GetPagePropertyResponse | undefined> => {
   const { ok, data } = await callAPIWithBackOff<
     GetPagePropertyParameters,
@@ -73,27 +73,22 @@ export const retrievePageProperty = async (
 };
 
 export const fetchPageProperty = async (
-  pageId: string,
-  propertyId: string
+  args: GetPagePropertyParameters,
 ): Promise<PropertyItemObject | undefined> => {
-  const pagePropertyResponse = await retrievePageProperty({
-    page_id: pageId,
-    property_id: propertyId,
-  });
+  const pagePropertyResponse = await retrievePageProperty(args);
 
   if (!pagePropertyResponse) {
     return;
   }
 
-  const pagePropertyObject = await convertResponseToPropertyItem(
-    pagePropertyResponse
-  );
+  const pagePropertyObject =
+    await convertResponseToPropertyItem(pagePropertyResponse);
 
   return pagePropertyObject;
 };
 
 export const convertResponseToPropertyItem = async (
-  pageProperty: GetPagePropertyResponse
+  pageProperty: GetPagePropertyResponse,
 ): Promise<PropertyItemObject | undefined> => {
   if (pageProperty.object === "property_item") {
     switch (pageProperty.type) {

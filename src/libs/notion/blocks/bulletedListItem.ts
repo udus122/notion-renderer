@@ -6,16 +6,16 @@ import type { BulletedListItemBlockObject } from "../../../types/notion/blocks/b
 import type { BulletedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertBulletedListItemResponseToBlock = async (
-  block: BulletedListItemBlockObjectResponse
+  block: BulletedListItemBlockObjectResponse,
 ) => {
   if (block.has_children) {
-    const children = await fetchBlockList(block.id);
+    const children = await fetchBlockList({ block_id: block.id });
     return {
       ...block,
       bulleted_list_item: {
         ...block.bulleted_list_item,
         rich_text: await convertResponseToRichText(
-          block.bulleted_list_item.rich_text
+          block.bulleted_list_item.rich_text,
         ),
         children,
       },
@@ -26,7 +26,7 @@ export const convertBulletedListItemResponseToBlock = async (
     bulleted_list_item: {
       ...block.bulleted_list_item,
       rich_text: await convertResponseToRichText(
-        block.bulleted_list_item.rich_text
+        block.bulleted_list_item.rich_text,
       ),
     },
   } satisfies BulletedListItemBlockObject;

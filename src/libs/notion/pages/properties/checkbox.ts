@@ -2,7 +2,7 @@ import type { CheckboxPropertyItemObject } from "../../../../types/notion/pages/
 import type { CheckboxPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToCheckboxPropertyItem = (
-  property: CheckboxPropertyItemObjectResponse
+  property: CheckboxPropertyItemObjectResponse,
 ): CheckboxPropertyItemObject => {
   return {
     ...property,

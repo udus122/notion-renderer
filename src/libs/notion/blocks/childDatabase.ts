@@ -4,9 +4,9 @@ import type { ChildDatabaseBlockObject } from "../../../types/notion/blocks/chil
 import type { ChildDatabaseBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertChildDatabaseResponseToBlock = async (
-  block: ChildDatabaseBlockObjectResponse
+  block: ChildDatabaseBlockObjectResponse,
 ) => {
-  const childDatabase = await fetchDatabase(block.id);
+  const childDatabase = await fetchDatabase({ database_id: block.id });
   if (childDatabase) {
     return {
       ...block,

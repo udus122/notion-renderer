@@ -2,7 +2,7 @@ import type { FilesPropertyItemObject } from "../../../../types/notion/pages/pro
 import type { FilesPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToFilesPropertyItem = (
-  property: FilesPropertyItemObjectResponse
+  property: FilesPropertyItemObjectResponse,
 ): FilesPropertyItemObject => {
   return {
     ...property,

@@ -10,7 +10,7 @@ export const TableOfContents: TableOfContentsBlock = ({ block }) => {
 
   const headings = blocks?.filter(
     (
-      block
+      block,
     ): block is
       | Heading1BlockObject
       | Heading2BlockObject
@@ -18,7 +18,7 @@ export const TableOfContents: TableOfContentsBlock = ({ block }) => {
       block !== null &&
       (block.type === "heading_1" ||
         block.type === "heading_2" ||
-        block.type === "heading_3")
+        block.type === "heading_3"),
   );
   return (
     <div

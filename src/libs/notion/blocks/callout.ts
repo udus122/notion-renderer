@@ -6,10 +6,10 @@ import type { CalloutBlockObject } from "../../../types/notion/blocks/callout.js
 import type { CalloutBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertCalloutResponseToBlock = async (
-  block: CalloutBlockObjectResponse
+  block: CalloutBlockObjectResponse,
 ) => {
   if (block.has_children) {
-    const children = await fetchBlockList(block.id);
+    const children = await fetchBlockList({ block_id: block.id });
     return {
       ...block,
       callout: {

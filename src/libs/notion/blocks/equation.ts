@@ -2,7 +2,7 @@ import type { EquationBlockObject } from "../../../types/notion/blocks/equation.
 import type { EquationBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertEquationResponseToBlock = async (
-  block: EquationBlockObjectResponse
+  block: EquationBlockObjectResponse,
 ) => {
   return { ...block } satisfies EquationBlockObject;
 };

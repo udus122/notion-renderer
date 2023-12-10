@@ -159,7 +159,7 @@ const BlockSwitcher: FC<{ block: BlockBlockObject }> = ({ block }) => {
     }
     case "column": {
       console.warn(
-        `top level column block is not supported. column block must be child of column_list block.`
+        `top level column block is not supported. column block must be child of column_list block.`,
       );
       const BlockComponent = mapper[block.type];
       return <BlockComponent block={block} />;
@@ -242,7 +242,7 @@ const BlockSwitcher: FC<{ block: BlockBlockObject }> = ({ block }) => {
     }
     case "table_row": {
       console.warn(
-        `top level table_row block is not supported. table_row block must be child of table block.`
+        `top level table_row block is not supported. table_row block must be child of table block.`,
       );
       const BlockComponent = mapper[block.type];
       return <BlockComponent block={block} />;

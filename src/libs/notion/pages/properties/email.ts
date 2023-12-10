@@ -2,7 +2,7 @@ import type { EmailPropertyItemObject } from "../../../../types/notion/pages/pro
 import type { EmailPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToEmailPropertyItem = (
-  property: EmailPropertyItemObjectResponse
+  property: EmailPropertyItemObjectResponse,
 ): EmailPropertyItemObject => {
   return {
     ...property,

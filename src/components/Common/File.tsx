@@ -10,8 +10,8 @@ export const File: FC<Props> = ({ file }) => {
     file.type == "external"
       ? file.external.url
       : file.type == "file"
-      ? file.file.url
-      : "";
+        ? file.file.url
+        : "";
 
   const filename =
     file.name ??

@@ -3,7 +3,7 @@ import { generateUUID } from "../../utils.js";
 import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertTextRichTextItemResponse = (
-  response: TextRichTextItemResponse
+  response: TextRichTextItemResponse,
 ) => {
   return {
     ...response,

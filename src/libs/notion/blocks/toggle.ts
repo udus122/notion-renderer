@@ -6,10 +6,10 @@ import type { ToggleBlockObject } from "../../../types/notion/blocks/toggle.js";
 import type { ToggleBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertToggleResponseToBlock = async (
-  block: ToggleBlockObjectResponse
+  block: ToggleBlockObjectResponse,
 ) => {
   if (block.has_children) {
-    const children = await fetchBlockList(block.id);
+    const children = await fetchBlockList({ block_id: block.id });
     return {
       ...block,
       toggle: {

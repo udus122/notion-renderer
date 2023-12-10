@@ -2,7 +2,7 @@ import type { SelectPropertyItemObject } from "../../../../types/notion/pages/pr
 import type { SelectPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToSelectPropertyItem = (
-  property: SelectPropertyItemObjectResponse
+  property: SelectPropertyItemObjectResponse,
 ): SelectPropertyItemObject => {
   return {
     ...property,

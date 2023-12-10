@@ -7,13 +7,13 @@ import type { TableRowBlockObject } from "../../../types/notion/blocks/tableRow.
 import type { TableBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertTableResponseToBlock = async (
-  block: TableBlockObjectResponse
+  block: TableBlockObjectResponse,
 ) => {
   if (block.has_children) {
-    const blocks = await fetchBlockList(block.id);
+    const blocks = await fetchBlockList({ block_id: block.id });
     const table_rows = blocks.filter(
       (block): block is TableRowBlockObject =>
-        notNullNorUndefined(block) && block.type === "table_row"
+        notNullNorUndefined(block) && block.type === "table_row",
     );
     return {
       ...block,

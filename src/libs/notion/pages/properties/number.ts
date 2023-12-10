@@ -2,7 +2,7 @@ import type { NumberPropertyItemObject } from "../../../../types/notion/pages/pr
 import type { NumberPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToNumberPropertyItem = (
-  property: NumberPropertyItemObjectResponse
+  property: NumberPropertyItemObjectResponse,
 ): NumberPropertyItemObject => {
   return {
     ...property,

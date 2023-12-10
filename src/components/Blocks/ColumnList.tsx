@@ -12,7 +12,7 @@ export const ColumnList: ColumnListBlock = ({ block }) => {
               <div key={column.id} className="notion-column">
                 <BlockList blocks={column.column.children} />
               </div>
-            )
+            ),
         )}
     </div>
   );

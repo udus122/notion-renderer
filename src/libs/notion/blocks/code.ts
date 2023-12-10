@@ -4,7 +4,7 @@ import type { CodeBlockObject } from "../../../types/notion/blocks/code.js";
 import type { CodeBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertCodeResponseToBlock = async (
-  block: CodeBlockObjectResponse
+  block: CodeBlockObjectResponse,
 ) => {
   return {
     ...block,
