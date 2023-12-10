@@ -1,4 +1,4 @@
-import { fetchSiteMeta } from "../../../libs/utils.js";
+import { fetchSiteMeta } from "../../../libs/utils/sitemeta.js";
 
 import type { LinkPreviewBlockObject } from "../../../types/notion/blocks/linkPreview.js";
 import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";

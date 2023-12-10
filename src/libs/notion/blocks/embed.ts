@@ -1,4 +1,4 @@
-import { fetchOembed } from "../../../libs/utils.js";
+import { fetchOembed } from "../../../libs/utils/oembed.js";
 import { convertResponseToRichText } from "../richText/richText.js";
 
 import type { EmbedBlockObject } from "../../../types/notion/blocks/embed.js";

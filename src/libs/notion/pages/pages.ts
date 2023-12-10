@@ -1,6 +1,6 @@
 import { isFullPage } from "@notionhq/client";
 
-import { callAPIWithBackOff } from "../../utils.js";
+import { callAPIWithBackOff } from "../../utils/api.js";
 import { notion } from "../auth.js";
 
 import { fetchPageProperty } from "./properties/properties.js";

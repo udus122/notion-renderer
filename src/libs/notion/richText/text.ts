@@ -1,4 +1,4 @@
-import { generateUUID } from "../../utils.js";
+import { generateUUID } from "../../utils/utils.js";
 
 import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

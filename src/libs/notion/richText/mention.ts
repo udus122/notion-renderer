@@ -1,4 +1,5 @@
-import { fetchSiteMeta, generateUUID } from "../../utils.js";
+import { fetchSiteMeta } from "../../../libs/utils/sitemeta.js";
+import { generateUUID } from "../../utils/utils.js";
 import { fetchDatabase } from "../databases.js";
 import { fetchPage } from "../pages/pages.js";
 

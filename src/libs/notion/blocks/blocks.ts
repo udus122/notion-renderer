@@ -1,10 +1,7 @@
 import { isFullBlock } from "@notionhq/client";
 
-import {
-  callAPIWithBackOff,
-  generateUUID,
-  notNullNorUndefined,
-} from "../../utils.js";
+import { callAPIWithBackOff } from "../../../libs/utils/api.js";
+import { generateUUID, notNullNorUndefined } from "../../utils/utils.js";
 import { notion } from "../auth.js";
 
 import { convertAudioResponseToBlock } from "./audio.js";

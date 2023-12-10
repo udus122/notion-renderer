@@ -1,4 +1,4 @@
-import { fetchSiteMeta } from "../../../libs/utils.js";
+import { fetchSiteMeta } from "../../../libs/utils/sitemeta.js";
 import { convertResponseToRichText } from "../richText/richText.js";
 
 import type { BookmarkBlockObject } from "../../../types/notion/blocks/bookmark.js";

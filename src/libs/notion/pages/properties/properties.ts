@@ -1,4 +1,4 @@
-import { callAPIWithBackOff } from "../../../utils.js";
+import { callAPIWithBackOff } from "../../../utils/api.js";
 import { notion } from "../../auth.js";
 
 import { convertResponseToCheckboxPropertyItem } from "./checkbox.js";

@@ -1,4 +1,4 @@
-import { generateUUID } from "../../utils.js";
+import { generateUUID } from "../../utils/utils.js";
 
 import type { EquationRichTextItemObject } from "../../../types/notion/richText/equation.js";
 import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
