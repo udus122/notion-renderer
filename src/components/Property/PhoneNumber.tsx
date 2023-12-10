@@ -9,7 +9,7 @@ export const PhoneNumberProperty: PhoneNumberPropertyItemComponent = ({
       className="notion-property-item notion-phone-number"
     >
       {propertyItem.phone_number ? (
-        <a className="notion-link" href={`tel:${propertyItem.phone_number}`}>
+        <a href={`tel:${propertyItem.phone_number}`}>
           {propertyItem.phone_number}
         </a>
       ) : (

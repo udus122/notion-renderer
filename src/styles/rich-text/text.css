@@ -14,3 +14,9 @@
     background-color: rgba(135 131 120 / 15%);
   }
 }
+
+.notion-link {
+  color: inherit;
+  fill: inherit;
+  opacity: 0.7;
+}

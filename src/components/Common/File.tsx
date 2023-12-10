@@ -18,13 +18,10 @@ export const File: FC<Props> = ({ file }) => {
     decodeURIComponent(new URL(fileUrl).pathname.split("/").slice(-1)[0]);
 
   return (
-    <a href={fileUrl} className="notion-link notion-file">
+    <a href={fileUrl} className="notion-file">
       <span className="notion-file-title">
         <span className="notion-file-icon">
-          <img
-            src="https://www.notion.so/icons/document_gray.svg"
-            alt="file icon"
-          />
+          <img src="https://www.notion.so/icons/document_gray.svg" alt="" />
         </span>
         <span className="notion-file-name">{filename}</span>
       </span>

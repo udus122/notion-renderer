@@ -4,7 +4,7 @@ import type { FilesPropertyItemComponent } from "../../types/notion/pages/proper
 
 export const FilesProperty: FilesPropertyItemComponent = ({ propertyItem }) => {
   return (
-    <div id={propertyItem.id} className="notion-property-item notion-file">
+    <div id={propertyItem.id} className="notion-property-item notion-files">
       {propertyItem.files.map((file) => (
         <File file={file} />
       ))}

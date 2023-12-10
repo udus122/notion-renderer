@@ -1,0 +1,22 @@
+.notion-file {
+  display: flex;
+  color: inherit;
+  fill: inherit;
+  border-radius: 0.25rem;
+  padding-block: 0.1rem;
+  transition: background-color 20ms ease-in 0s;
+
+  &:hover {
+    background-color: rgb(55 53 47 / 8%);
+
+    .notion-dark & {
+      background-color: rgb(255 255 255 / 5.5%);
+    }
+  }
+}
+
+.notion-file-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

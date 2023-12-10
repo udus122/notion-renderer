@@ -31,12 +31,12 @@ export const Default: Story = {
     displayProperties: [
       "Name",
       "Text",
+      "e%3CoY",
       "Multi-select",
       "Status",
       "Tags",
       "Created time",
       "Last edited time",
-      "Related Child database",
       "Select",
       "Date",
       "Person",

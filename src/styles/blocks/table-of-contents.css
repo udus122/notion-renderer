@@ -1,3 +1,18 @@
+/* stylelint-disable selector-class-pattern */
+.notion-table-of-contents {
+  color: rgb(120 119 116);
+  fill: rgb(120 119 116);
+
+  .notion-dark & {
+    color: rgb(155 155 155);
+    fill: rgb(155 155 155);
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
 .notion-table-of-contents > * + * {
   padding-top: 0.2rem;
 }
@@ -7,7 +22,11 @@
   transition: background-color 20ms ease-in 0s;
 
   &:hover {
-    background-color: #ffffff10;
+    background-color: rgb(55 53 47 / 8%);
+
+    .notion-dark & {
+      background-color: rgb(255 255 255 / 5.5%);
+    }
   }
 
   & > .notion-table-of-contents-item-heading_1 {
@@ -20,9 +39,5 @@
 
   & > .notion-table-of-contents-item-heading_3 {
     padding-inline-start: calc(1rem * 2);
-  }
-
-  a {
-    border-block-end: 1px solid #ffffff20;
   }
 }

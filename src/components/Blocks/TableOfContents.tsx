@@ -1,4 +1,4 @@
-import { useBlocks, useMapper } from "../hooks.js";
+import { useBlocks } from "../hooks.js";
 
 import type { Heading1BlockObject } from "../../types/notion/blocks/heading1.js";
 import type { Heading2BlockObject } from "../../types/notion/blocks/heading2.js";
@@ -7,7 +7,6 @@ import type { TableOfContentsBlock } from "../../types/notion/blocks/tableOfCont
 
 export const TableOfContents: TableOfContentsBlock = ({ block }) => {
   const blocks = useBlocks();
-  const { Link } = useMapper();
 
   const headings = blocks?.filter(
     (
@@ -31,10 +30,10 @@ export const TableOfContents: TableOfContentsBlock = ({ block }) => {
           return (
             <div key={heading.id} className="notion-table-of-contents-item">
               <div className={`notion-table-of-contents-item-${heading.type}`}>
-                <Link prefix="#" link={heading.id}>
-                  {/* @ts-expect-error: because heading objects always have a 'rich_text' property  */}
+                <a href={`#${heading.id}`}>
+                  {/* @ts-expect-error: because heading objects always have a 'rich_text' property */}
                   {heading[heading.type].rich_text.map((t) => t.plain_text)}
-                </Link>
+                </a>
               </div>
             </div>
           );
