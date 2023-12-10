@@ -1,0 +1,1 @@
+import{j as a}from"./jsx-runtime-vNq4Oc-g.js";const n=({propertyItem:i})=>a.jsx("div",{id:i.id,className:"notion-property-item notion-email",children:i.email?a.jsx("a",{href:`mailto:${i.email}`,children:i.email}):""});export{n as E};

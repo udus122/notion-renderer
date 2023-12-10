@@ -1,0 +1,1 @@
+import{j as r}from"./jsx-runtime-vNq4Oc-g.js";import{k as t}from"./katex-mFqOzwKf.js";const i=({block:o})=>r.jsx("div",{id:o.id,className:"notion-block notion-equation",dangerouslySetInnerHTML:{__html:t.renderToString(o.equation.expression,{displayMode:!0,throwOnError:!1})}});export{i as E};

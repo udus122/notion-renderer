@@ -1,0 +1,1 @@
+import{j as o}from"./jsx-runtime-vNq4Oc-g.js";import{f as i}from"./index-svRVa2Vs.js";const d=({propertyItem:e,format:t="yyyy-MM-dd p"})=>{const r=new Date(e.created_time);return o.jsx("div",{id:e.id,className:"notion-property-item notion-created-time",children:i(r,t)})};export{d as C};

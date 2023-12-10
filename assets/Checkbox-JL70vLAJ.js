@@ -1,0 +1,1 @@
+import{j as c}from"./jsx-runtime-vNq4Oc-g.js";import{C as e}from"./Checkbox-tcHiP4BQ.js";const r=({propertyItem:o})=>c.jsx("div",{id:o.id,className:"notion-property-item notion-checkbox",children:c.jsx(e,{checked:o.checkbox})});export{r as C};

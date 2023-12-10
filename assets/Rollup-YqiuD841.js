@@ -1,0 +1,1 @@
+import{j as o}from"./jsx-runtime-vNq4Oc-g.js";import{D as n}from"./Date-Pu-r1Rem.js";const s=({propertyItem:r,format:e})=>{const{rollup:t}=r;return o.jsx("div",{id:r.id,className:"notion-property-item notion-rollup",children:t.type==="number"?o.jsx("span",{children:t.number}):t.type==="date"?o.jsx(n,{date:t.date,format:e}):(t.type==="array",null)})};export{s as R};

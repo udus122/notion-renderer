@@ -1,0 +1,1 @@
+import{j as t}from"./jsx-runtime-vNq4Oc-g.js";const n=({propertyItem:i})=>t.jsx("div",{id:i.id,className:"notion-property-item notion-multi-select",children:i.multi_select.map(o=>t.jsx("div",{className:`notion-pill notion-pill-color-${o.color}`,children:o.name}))});export{n as M};
