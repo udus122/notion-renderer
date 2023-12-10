@@ -5,7 +5,7 @@ import { convertTextRichTextItemResponse } from "./text.js";
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToRichTextItem = async (
-  response: RichTextItemResponse
+  response: RichTextItemResponse,
 ) => {
   switch (response.type) {
     case "text": {

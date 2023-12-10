@@ -39,7 +39,7 @@ export const Database: FC<Props> = ({
   if (displayProperties) {
     database.properties = selectProperties(
       database.properties,
-      displayProperties
+      displayProperties,
     );
     pages.forEach((page) => {
       page.properties = selectProperties(page.properties, displayProperties);

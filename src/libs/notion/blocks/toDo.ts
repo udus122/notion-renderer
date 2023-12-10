@@ -6,10 +6,10 @@ import type { ToDoBlockObject } from "../../../types/notion/blocks/toDo.js";
 import type { ToDoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertToDoResponseToBlock = async (
-  block: ToDoBlockObjectResponse
+  block: ToDoBlockObjectResponse,
 ) => {
   if (block.has_children) {
-    const children = await fetchBlockList(block.id);
+    const children = await fetchBlockList({ block_id: block.id });
     return {
       ...block,
       to_do: {

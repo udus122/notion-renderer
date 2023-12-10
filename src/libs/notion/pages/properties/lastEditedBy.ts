@@ -2,7 +2,7 @@ import type { LastEditedByPropertyItemObject } from "../../../../types/notion/pa
 import type { LastEditedByPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToLastEditedByPropertyItem = (
-  property: LastEditedByPropertyItemObjectResponse
+  property: LastEditedByPropertyItemObjectResponse,
 ): LastEditedByPropertyItemObject => {
   return {
     ...property,

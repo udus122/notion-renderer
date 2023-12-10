@@ -6,10 +6,10 @@ import type { ParagraphBlockObject } from "../../../types/notion/blocks/paragrap
 import type { ParagraphBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertParagraphResponseToBlock = async (
-  block: ParagraphBlockObjectResponse
+  block: ParagraphBlockObjectResponse,
 ) => {
   if (block.has_children) {
-    const children = await fetchBlockList(block.id);
+    const children = await fetchBlockList({ block_id: block.id });
     return {
       ...block,
       paragraph: {

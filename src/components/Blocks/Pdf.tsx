@@ -7,8 +7,8 @@ export const Pdf: PdfBlock = ({ block }) => {
     block.pdf.type == "external"
       ? block.pdf.external.url
       : block.pdf.type == "file"
-      ? block.pdf.file.url
-      : "";
+        ? block.pdf.file.url
+        : "";
   return (
     <div id={block.id} className="notion-block notion-pdf">
       <object
@@ -17,8 +17,8 @@ export const Pdf: PdfBlock = ({ block }) => {
           block.pdf.type == "external"
             ? block.pdf.external.url
             : block.pdf.type == "file"
-            ? block.pdf.file.url
-            : ""
+              ? block.pdf.file.url
+              : ""
         }
       >
         Your browser does not support pdfs. You can download pdf file

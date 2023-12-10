@@ -7,7 +7,7 @@ import type {
 } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToPeoplePropertyItem = (
-  property: PeoplePropertyItemObjectResponse
+  property: PeoplePropertyItemObjectResponse,
 ): PeoplePropertyItemObject => {
   const peoplePropertyItemObject = {
     ...property,
@@ -27,7 +27,7 @@ export const convertListResponseToPeoplePropertyItem = (
         { type: "people" }
       >;
     }
-  >
+  >,
 ): PeoplePropertyItemObject => {
   const peoplePropertyItemObject = {
     ...list.property_item,
@@ -40,5 +40,5 @@ export const convertListResponseToPeoplePropertyItem = (
 };
 
 export const isPeopleTypeObject = (
-  obj: PropertyItemObjectResponse
+  obj: PropertyItemObjectResponse,
 ): obj is PeoplePropertyItemObjectResponse => obj.type === "people";

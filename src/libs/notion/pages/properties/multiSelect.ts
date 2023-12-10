@@ -2,7 +2,7 @@ import type { MultiSelectPropertyItemObject } from "../../../../types/notion/pag
 import type { MultiSelectPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToMultiSelectPropertyItem = (
-  property: MultiSelectPropertyItemObjectResponse
+  property: MultiSelectPropertyItemObjectResponse,
 ): MultiSelectPropertyItemObject => {
   return {
     ...property,

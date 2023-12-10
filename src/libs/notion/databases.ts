@@ -6,6 +6,7 @@ import { notion } from "./auth.js";
 import { convertResponseToRichText } from "./richText/richText.js";
 
 import type { DatabaseObject } from "../../types/notion/database.js";
+import type { PageObject } from "../../types/notion/pages/page.js";
 import type { Result } from "../../types/utils.js";
 import type {
   GetDatabaseParameters,
@@ -15,7 +16,7 @@ import type {
 } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const retrieveDatabase = async (
-  args: GetDatabaseParameters
+  args: GetDatabaseParameters,
 ): Promise<GetDatabaseResponse | undefined> => {
   const { ok, data } = await callAPIWithBackOff<
     GetDatabaseParameters,
@@ -29,9 +30,9 @@ export const retrieveDatabase = async (
 };
 
 export const fetchDatabase = async (
-  databaseId: string
+  args: GetDatabaseParameters,
 ): Promise<DatabaseObject | undefined> => {
-  const database = await retrieveDatabase({ database_id: databaseId });
+  const database = await retrieveDatabase(args);
   if (!database) {
     return;
   }
@@ -48,7 +49,7 @@ export const fetchDatabase = async (
 };
 
 export const queryDatabase = async (
-  args: QueryDatabaseParameters
+  args: QueryDatabaseParameters,
 ): Promise<Result<QueryDatabaseResponse>> => {
   const result = await callAPIWithBackOff<
     QueryDatabaseParameters,
@@ -59,20 +60,23 @@ export const queryDatabase = async (
 };
 
 export const fetchAllDatabaseItems = async (
-  args: QueryDatabaseParameters
-): Promise<QueryDatabaseResponse["results"]> => {
+  args: QueryDatabaseParameters,
+): Promise<Array<PageObject>> => {
   const { ok, data } = await queryDatabase(args);
   if (!ok) {
     return [];
   }
 
-  if (data.next_cursor) {
-    const nextResults = await fetchAllDatabaseItems({
-      ...args,
-      start_cursor: data.next_cursor,
-    });
-    data.results = [...data.results, ...nextResults];
+  // TODO: convertResponseToPageを使って型変換する
+  const results = data.results as Array<PageObject>;
+
+  if (!data.next_cursor) {
+    return results;
   }
 
-  return data.results;
+  const nextResults = await fetchAllDatabaseItems({
+    ...args,
+    start_cursor: data.next_cursor,
+  });
+  return [...results, ...nextResults];
 };

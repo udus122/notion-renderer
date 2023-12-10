@@ -4,7 +4,7 @@ import type { LinkPreviewBlockObject } from "../../../types/notion/blocks/linkPr
 import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertLinkPreviewResponseToBlock = async (
-  block: LinkPreviewBlockObjectResponse
+  block: LinkPreviewBlockObjectResponse,
 ) => {
   const { ok, data } = await fetchSiteMeta(block.link_preview.url);
   if (!ok) {

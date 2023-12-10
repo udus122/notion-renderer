@@ -14,7 +14,7 @@ export const fetchParent = async (
   parent:
     | BlockObjectResponse["parent"]
     | PageObjectResponse["parent"]
-    | DatabaseObjectResponse["parent"]
+    | DatabaseObjectResponse["parent"],
 ) => {
   if (parent.type === "block_id") {
     const parentBlock = await retrieveBlock({ block_id: parent.block_id });
@@ -34,7 +34,7 @@ export const fetchParentBlockObject = async (
   parent:
     | BlockObjectResponse["parent"]
     | PageObjectResponse["parent"]
-    | DatabaseObjectResponse["parent"]
+    | DatabaseObjectResponse["parent"],
 ) => {
   if (parent.type === "block_id") {
     const parentBlock = await retrieveBlock({ block_id: parent.block_id });
@@ -63,7 +63,7 @@ export const fetchAllParents = async (
     | DatabaseObjectResponse["parent"],
   parentList: Array<
     BlockObjectResponse | PageObjectResponse | DatabaseObjectResponse
-  > = []
+  > = [],
 ): Promise<
   Array<BlockObjectResponse | PageObjectResponse | DatabaseObjectResponse>
 > => {

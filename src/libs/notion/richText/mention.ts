@@ -15,7 +15,7 @@ import type {
 import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertMentionObjectResponse = async (
-  mention: MentionObject
+  mention: MentionObject,
 ): Promise<MentionObject> => {
   switch (mention.type) {
     case "user": {
@@ -50,7 +50,7 @@ export const convertMentionObjectResponse = async (
       } satisfies TempateMentionMentionObject;
     }
     case "page": {
-      const childPage = await fetchPage(mention.page.id);
+      const childPage = await fetchPage({ page_id: mention.page.id });
       if (childPage) {
         return {
           ...mention,
@@ -65,7 +65,9 @@ export const convertMentionObjectResponse = async (
       } satisfies PageMentionObject;
     }
     case "database": {
-      const childDatabase = await fetchDatabase(mention.database.id);
+      const childDatabase = await fetchDatabase({
+        database_id: mention.database.id,
+      });
       if (childDatabase) {
         return {
           ...mention,
@@ -86,7 +88,7 @@ export const convertMentionObjectResponse = async (
 };
 
 export const convertMentionRichTextItemResponse = async (
-  item: MentionRichTextItemResponse
+  item: MentionRichTextItemResponse,
 ): Promise<MentionRichTextItemObject> => {
   const mention = await convertMentionObjectResponse(item.mention);
   return {

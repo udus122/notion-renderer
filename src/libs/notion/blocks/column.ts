@@ -4,10 +4,10 @@ import type { ColumnBlockObject } from "../../../types/notion/blocks/column.js";
 import type { ColumnBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertColumnResponseToBlock = async (
-  block: ColumnBlockObjectResponse
+  block: ColumnBlockObjectResponse,
 ) => {
   if (block.has_children) {
-    const children = await fetchBlockList(block.id);
+    const children = await fetchBlockList({ block_id: block.id });
     return {
       ...block,
       column: {

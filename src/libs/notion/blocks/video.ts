@@ -5,7 +5,7 @@ import type { VideoBlockObject } from "../../../types/notion/blocks/video.js";
 import type { VideoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertVideoResponseToBlock = async (
-  block: VideoBlockObjectResponse
+  block: VideoBlockObjectResponse,
 ) => {
   if (block.video.type === "external") {
     const { ok, data } = await fetchOembed(block.video.external.url, {

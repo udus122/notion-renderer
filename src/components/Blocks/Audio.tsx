@@ -7,8 +7,8 @@ export const Audio: AudioBlock = ({ block }) => {
     block.audio.type == "external"
       ? block.audio.external.url
       : block.audio.type == "file"
-      ? block.audio.file.url
-      : "";
+        ? block.audio.file.url
+        : "";
   return (
     <div id={block.id} className="notion-block notion-audio">
       <audio controls src={audioUrl}>

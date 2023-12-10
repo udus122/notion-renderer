@@ -6,10 +6,10 @@ import type { Heading1BlockObject } from "../../../types/notion/blocks/heading1.
 import type { Heading1BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertHeading1ResponseToBlock = async (
-  block: Heading1BlockObjectResponse
+  block: Heading1BlockObjectResponse,
 ) => {
   if (block.has_children) {
-    const children = await fetchBlockList(block.id);
+    const children = await fetchBlockList({ block_id: block.id });
     return {
       ...block,
       heading_1: {

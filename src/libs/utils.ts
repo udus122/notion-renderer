@@ -26,7 +26,7 @@ export const callAPIWithBackOff = async <Args, Item>(
   func: (args: Args) => Promise<Item>,
   args: Args,
   retryCount = 3,
-  waitingTimeMS = 3000
+  waitingTimeMS = 3000,
 ): Promise<Result<Item>> => {
   if (retryCount < 1) {
     return {
@@ -57,7 +57,7 @@ export const callAPIWithBackOff = async <Args, Item>(
           const { ok, data } = await callAPIWithBackOff(
             func,
             { ...args },
-            retryCount--
+            retryCount--,
           );
           if (ok) {
             return {
@@ -89,7 +89,7 @@ export const notNullNorUndefined = <T>(v: T | null | undefined): v is T => {
 export const fetchSiteMeta = async (
   url: string,
   parserOptions?: ParserOptions | undefined,
-  fetchOptions?: FetchOptions | undefined
+  fetchOptions?: FetchOptions | undefined,
 ): Promise<Result<ArticleData>> => {
   try {
     const data = await extractSiteMeta(url, parserOptions, fetchOptions);
@@ -104,7 +104,7 @@ export const fetchSiteMeta = async (
 
 export const fetchOembed = async (
   url: string,
-  params: Params = {}
+  params: Params = {},
 ): Promise<
   Result<LinkTypeData | PhotoTypeData | VideoTypeData | RichTypeData>
 > => {

@@ -4,7 +4,7 @@ import type { EquationRichTextItemObject } from "../../../types/notion/richText/
 import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertEquationRichTextItemResponse = async (
-  response: EquationRichTextItemResponse
+  response: EquationRichTextItemResponse,
 ) => {
   return {
     ...response,

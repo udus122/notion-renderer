@@ -53,7 +53,7 @@ import type {
 } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const retrieveBlock = async (
-  args: GetBlockParameters
+  args: GetBlockParameters,
 ): Promise<GetBlockResponse | undefined> => {
   const { ok, data } = await callAPIWithBackOff<
     GetBlockParameters,
@@ -68,7 +68,7 @@ export const retrieveBlock = async (
 };
 
 export const listBlockChildren = async (
-  args: ListBlockChildrenParameters
+  args: ListBlockChildrenParameters,
 ): Promise<ListBlockChildrenResponseResults> => {
   const { ok, data } = await callAPIWithBackOff<
     ListBlockChildrenParameters,
@@ -91,9 +91,9 @@ export const listBlockChildren = async (
 };
 
 export const fetchBlock = async (
-  blockId: string
+  args: GetBlockParameters,
 ): Promise<BlockBlockObject | undefined> => {
-  const blockObjectResponse = await retrieveBlock({ block_id: blockId });
+  const blockObjectResponse = await retrieveBlock(args);
   if (!blockObjectResponse) {
     return;
   }
@@ -102,34 +102,34 @@ export const fetchBlock = async (
 };
 
 export const fetchBlockList = async (
-  blockId: string
+  args: ListBlockChildrenParameters,
 ): Promise<BlockBlockObject[]> => {
-  const childrenBlockResponses = await listBlockChildren({
-    block_id: blockId,
-  });
+  const childrenBlockResponses = await listBlockChildren(args);
   const childrenBlockComponents = await resolveBlockChildren(
-    childrenBlockResponses
+    childrenBlockResponses,
   );
   return childrenBlockComponents;
 };
 
 export const resolveBlockChildren = async (
-  blocks: ListBlockChildrenResponseResults
+  blocks: ListBlockChildrenResponseResults,
 ): Promise<Array<BlockBlockObject>> => {
   const blockObjectList = await Promise.all(
-    blocks.map(async (child_block) => await convertResponseToBlock(child_block))
+    blocks.map(
+      async (child_block) => await convertResponseToBlock(child_block),
+    ),
   );
   const notNullBlockObjectList = blockObjectList.filter(notNullNorUndefined);
   return wrapListItems(notNullBlockObjectList);
 };
 
 export const wrapListItems = (
-  blocks: Array<BlockBlockObject>
+  blocks: Array<BlockBlockObject>,
 ): Array<BlockBlockObject> => {
   return blocks.reduce(
     (
       prevList: Array<BlockBlockObject>,
-      currBlock: BlockBlockObject
+      currBlock: BlockBlockObject,
     ): Array<BlockBlockObject> => {
       /* If the block.type is neither
        * 'bulleted_list_item' nor 'numbered_list_item' nor 'bulleted_list' nor 'numbered_list',
@@ -204,12 +204,12 @@ export const wrapListItems = (
       // If the condition is not met, do not display/render.
       return prevList;
     },
-    []
+    [],
   );
 };
 
 export const convertResponseToBlock = async (
-  block: GetBlockResponse
+  block: GetBlockResponse,
 ): Promise<BlockBlockObject | undefined> => {
   if (!isFullBlock(block)) {
     return undefined;
@@ -319,7 +319,3 @@ export const convertResponseToBlock = async (
     }
   }
 };
-import "dotenv/config";
-
-const res = await fetchBlockList("7ed3a6eebb5e4cdfa94433684d7c56bf");
-console.log(JSON.stringify(res, null, 2));

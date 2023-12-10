@@ -2,7 +2,7 @@ import type { UrlPropertyItemObject } from "../../../../types/notion/pages/prope
 import type { UrlPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToUrlPropertyItem = (
-  property: UrlPropertyItemObjectResponse
+  property: UrlPropertyItemObjectResponse,
 ): UrlPropertyItemObject => {
   return {
     ...property,

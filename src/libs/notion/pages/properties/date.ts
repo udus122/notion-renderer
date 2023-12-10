@@ -2,7 +2,7 @@ import type { DatePropertyItemObject } from "../../../../types/notion/pages/prop
 import type { DatePropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToDatePropertyItem = (
-  property: DatePropertyItemObjectResponse
+  property: DatePropertyItemObjectResponse,
 ): DatePropertyItemObject => {
   return {
     ...property,

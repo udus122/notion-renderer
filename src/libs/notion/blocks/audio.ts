@@ -4,7 +4,7 @@ import type { AudioBlockObject } from "../../../types/notion/blocks/audio.js";
 import type { AudioBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertAudioResponseToBlock = async (
-  block: AudioBlockObjectResponse
+  block: AudioBlockObjectResponse,
 ) => {
   return {
     ...block,

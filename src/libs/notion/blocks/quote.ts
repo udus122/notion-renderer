@@ -6,10 +6,10 @@ import type { QuoteBlockObject } from "../../../types/notion/blocks/quote.js";
 import type { QuoteBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertQuoteResponseToBlock = async (
-  block: QuoteBlockObjectResponse
+  block: QuoteBlockObjectResponse,
 ) => {
   if (block.has_children) {
-    const children = await fetchBlockList(block.id);
+    const children = await fetchBlockList({ block_id: block.id });
     return {
       ...block,
       quote: {

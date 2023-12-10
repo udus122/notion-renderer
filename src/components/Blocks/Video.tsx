@@ -19,8 +19,8 @@ export const Video: VideoBlock = ({ block }) => {
     block.video.type == "external"
       ? block.video.external.url
       : block.video.type == "file"
-      ? block.video.file.url
-      : "";
+        ? block.video.file.url
+        : "";
 
   return (
     <div id={block.id} className="notion-block notion-video">

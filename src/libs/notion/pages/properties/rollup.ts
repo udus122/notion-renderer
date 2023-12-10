@@ -7,7 +7,7 @@ import type {
 import type { Overwrite } from "src/types/utils.js";
 
 export const convertResponseToRollupPropertyItem = (
-  property: RollupPropertyItemObjectResponse
+  property: RollupPropertyItemObjectResponse,
 ): RollupPropertyItemObject => {
   return {
     ...property,
@@ -23,7 +23,7 @@ export const convertListResponseToRollupPropertyItem = (
         { type: "rollup" }
       >;
     }
-  >
+  >,
 ): RollupPropertyItemObject => {
   const rollupPropertyItemObject = {
     ...list.property_item,
@@ -33,5 +33,5 @@ export const convertListResponseToRollupPropertyItem = (
 };
 
 export const isRollupTypeObject = (
-  obj: PropertyItemObjectResponse
+  obj: PropertyItemObjectResponse,
 ): obj is RollupPropertyItemObjectResponse => obj.type === "rollup";

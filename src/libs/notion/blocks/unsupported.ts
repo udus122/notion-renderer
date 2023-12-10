@@ -2,7 +2,7 @@ import type { UnsupportedBlockObject } from "../../../types/notion/blocks/unsupp
 import type { UnsupportedBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertUnsupportedResponseToBlock = async (
-  block: UnsupportedBlockObjectResponse
+  block: UnsupportedBlockObjectResponse,
 ) => {
   return { ...block } satisfies UnsupportedBlockObject;
 };

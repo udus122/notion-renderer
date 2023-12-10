@@ -7,7 +7,7 @@ import type {
 import type { Overwrite } from "src/types/utils.js";
 
 export const convertResponseToTitlePropertyItem = (
-  property: TitlePropertyItemObjectResponse
+  property: TitlePropertyItemObjectResponse,
 ): TitlePropertyItemObject => {
   return {
     ...property,
@@ -24,7 +24,7 @@ export const convertListResponseToTitlePropertyItem = (
         { type: "title" }
       >;
     }
-  >
+  >,
 ): TitlePropertyItemObject => {
   const titlePropertyItemObject = {
     ...list.property_item,
@@ -35,5 +35,5 @@ export const convertListResponseToTitlePropertyItem = (
 };
 
 export const isTitleTypeObject = (
-  obj: PropertyItemObjectResponse
+  obj: PropertyItemObjectResponse,
 ): obj is TitlePropertyItemObjectResponse => obj.type === "title";

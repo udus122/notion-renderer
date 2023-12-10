@@ -6,13 +6,13 @@ import type { LinkToPageBlockObject } from "../../../types/notion/blocks/linkToP
 import type { LinkToPageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertLinkToPageResponseToBlock = async (
-  block: LinkToPageBlockObjectResponse
+  block: LinkToPageBlockObjectResponse,
 ) => {
   switch (block.link_to_page.type) {
     case "database_id": {
-      const linkedDatabase = await fetchDatabase(
-        block.link_to_page.database_id
-      );
+      const linkedDatabase = await fetchDatabase({
+        database_id: block.link_to_page.database_id,
+      });
       return {
         ...block,
         link_to_page: {
@@ -22,7 +22,9 @@ export const convertLinkToPageResponseToBlock = async (
       } satisfies LinkToPageBlockObject;
     }
     case "page_id": {
-      const linkedPage = await fetchPage(block.link_to_page.page_id);
+      const linkedPage = await fetchPage({
+        page_id: block.link_to_page.page_id,
+      });
       return {
         ...block,
         link_to_page: {

@@ -8,7 +8,7 @@ import type {
 } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const listComments = async (
-  args: ListCommentsParameters
+  args: ListCommentsParameters,
 ): Promise<ListCommentsResponse["results"]> => {
   const { ok, data } = await callAPIWithBackOff<
     ListCommentsParameters,

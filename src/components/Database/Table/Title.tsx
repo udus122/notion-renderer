@@ -6,7 +6,7 @@ import type { TitlePropertyItemObject } from "../../../types/notion/pages/proper
 
 export const TableTitle = (
   title: TitlePropertyItemObject,
-  page: PageObject
+  page: PageObject,
 ) => {
   const { Link } = useMapper();
 

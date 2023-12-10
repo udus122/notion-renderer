@@ -4,7 +4,7 @@ import type { ImageBlockObject } from "../../../types/notion/blocks/image.js";
 import type { ImageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertImageResponseToBlock = async (
-  block: ImageBlockObjectResponse
+  block: ImageBlockObjectResponse,
 ) => {
   return {
     ...block,
