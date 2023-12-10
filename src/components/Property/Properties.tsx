@@ -17,6 +17,7 @@ export const Properties: FC<Props> = ({
       {Object.entries(properties).map(([name, item]) => {
         return (
           <Property
+            key={item.id}
             propertyName={name}
             propertyItem={item}
             hidePropertyName={hidePropertyName}
