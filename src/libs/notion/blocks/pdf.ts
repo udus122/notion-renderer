@@ -5,7 +5,7 @@ import type { PdfBlockObjectResponse } from "@notionhq/client/build/src/api-endp
 
 export const convertPdfResponseToBlock = async (
   block: PdfBlockObjectResponse,
-) => {
+): Promise<PdfBlockObject> => {
   return {
     ...block,
     pdf: {

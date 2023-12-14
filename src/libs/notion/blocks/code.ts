@@ -5,7 +5,7 @@ import type { CodeBlockObjectResponse } from "@notionhq/client/build/src/api-end
 
 export const convertCodeResponseToBlock = async (
   block: CodeBlockObjectResponse,
-) => {
+): Promise<CodeBlockObject> => {
   return {
     ...block,
     code: {

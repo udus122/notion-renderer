@@ -1,10 +1,10 @@
 import type { TitlePropertyItemObject } from "../../../../types/notion/pages/properties/title.js";
+import type { Overwrite } from "../../../../types/utils.js";
 import type {
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
   TitlePropertyItemObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
-import type { Overwrite } from "src/types/utils.js";
 
 export const convertResponseToTitlePropertyItem = (
   property: TitlePropertyItemObjectResponse,

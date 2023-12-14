@@ -3,6 +3,6 @@ import type { TemplateBlockObjectResponse } from "@notionhq/client/build/src/api
 
 export const convertTemplateResponseToBlock = async (
   block: TemplateBlockObjectResponse,
-) => {
+): Promise<TemplateBlockObject> => {
   return { ...block } satisfies TemplateBlockObject;
 };

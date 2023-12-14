@@ -8,6 +8,7 @@ export const convertBookmarkResponseToBlock = async (
   block: BookmarkBlockObjectResponse,
 ) => {
   const { ok, data } = await fetchSiteMeta(block.bookmark.url);
+
   if (!ok) {
     return {
       ...block,

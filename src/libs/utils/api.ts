@@ -4,7 +4,7 @@ import {
   ClientErrorCode,
 } from "@notionhq/client";
 
-import type { Result } from "src/types/utils.js";
+import type { Result } from "../../types/utils.js";
 
 export const callAPIWithBackOff = async <Args, Item>(
   func: (args: Args) => Promise<Item>,

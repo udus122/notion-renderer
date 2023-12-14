@@ -1,25 +1,27 @@
-import { fetchDatabase } from "../databases.js";
+import { isFullDatabase } from "@notionhq/client";
+
+import { retrieveDatabase } from "../databases.js";
 
 import type { ChildDatabaseBlockObject } from "../../../types/notion/blocks/childDatabase.js";
 import type { ChildDatabaseBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertChildDatabaseResponseToBlock = async (
   block: ChildDatabaseBlockObjectResponse,
-) => {
-  const childDatabase = await fetchDatabase({ database_id: block.id });
-  if (childDatabase) {
-    return {
-      ...block,
-      child_database: {
-        ...block.child_database,
-        database: childDatabase ?? null,
-      },
-    } satisfies ChildDatabaseBlockObject;
+): Promise<ChildDatabaseBlockObject> => {
+  const { ok, data } = await retrieveDatabase({ database_id: block.id });
+  if (!ok) {
+    return block satisfies ChildDatabaseBlockObject;
   }
+
+  if (!isFullDatabase(data)) {
+    return block satisfies ChildDatabaseBlockObject;
+  }
+
   return {
     ...block,
     child_database: {
       ...block.child_database,
+      database: data,
     },
   } satisfies ChildDatabaseBlockObject;
 };

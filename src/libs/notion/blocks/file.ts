@@ -5,7 +5,7 @@ import type { FileBlockObjectResponse } from "@notionhq/client/build/src/api-end
 
 export const convertFileResponseToBlock = async (
   block: FileBlockObjectResponse,
-) => {
+): Promise<FileBlockObject> => {
   return {
     ...block,
     file: {

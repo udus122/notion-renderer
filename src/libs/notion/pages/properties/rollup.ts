@@ -1,10 +1,10 @@
 import type { RollupPropertyItemObject } from "../../../../types/notion/pages/properties/rollup.js";
+import type { Overwrite } from "../../../../types/utils.js";
 import type {
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
   RollupPropertyItemObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
-import type { Overwrite } from "src/types/utils.js";
 
 export const convertResponseToRollupPropertyItem = (
   property: RollupPropertyItemObjectResponse,

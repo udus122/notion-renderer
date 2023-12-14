@@ -7,7 +7,7 @@ import type { ComponentType } from "react";
 
 export type ChildDatabaseBlockObject = ChildDatabaseBlockObjectResponse & {
   child_database: {
-    database?: DatabaseObjectResponse | null;
+    database?: DatabaseObjectResponse;
   };
 };
 

@@ -1,13 +1,13 @@
 import { convertResponseToRichText } from "../richText/richText.js";
 
-import { fetchBlockList } from "./blocks.js";
+import { fetchBlockList } from "./fetchBlockList.js";
 
 import type { QuoteBlockObject } from "../../../types/notion/blocks/quote.js";
 import type { QuoteBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertQuoteResponseToBlock = async (
   block: QuoteBlockObjectResponse,
-) => {
+): Promise<QuoteBlockObject> => {
   if (block.has_children) {
     const children = await fetchBlockList({ block_id: block.id });
     return {

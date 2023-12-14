@@ -5,7 +5,7 @@ import type { TableRowBlockObjectResponse } from "@notionhq/client/build/src/api
 
 export const convertTableRowResponseToBlock = async (
   block: TableRowBlockObjectResponse,
-) => {
+): Promise<TableRowBlockObject> => {
   return {
     ...block,
     table_row: {

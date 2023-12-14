@@ -6,7 +6,7 @@ import type { EmbedBlockObjectResponse } from "@notionhq/client/build/src/api-en
 
 export const convertEmbedResponseToBlock = async (
   block: EmbedBlockObjectResponse,
-) => {
+): Promise<EmbedBlockObject> => {
   const { ok, data } = await fetchOembed(block.embed.url);
   if (!ok) {
     return {

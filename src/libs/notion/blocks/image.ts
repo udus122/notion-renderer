@@ -5,7 +5,7 @@ import type { ImageBlockObjectResponse } from "@notionhq/client/build/src/api-en
 
 export const convertImageResponseToBlock = async (
   block: ImageBlockObjectResponse,
-) => {
+): Promise<ImageBlockObject> => {
   return {
     ...block,
     image: {

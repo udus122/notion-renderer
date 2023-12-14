@@ -3,6 +3,6 @@ import type { TableOfContentsBlockObjectResponse } from "@notionhq/client/build/
 
 export const convertTableOfContentsResponseToBlock = async (
   block: TableOfContentsBlockObjectResponse,
-) => {
+): Promise<TableOfContentsBlockObject> => {
   return { ...block } satisfies TableOfContentsBlockObject;
 };

@@ -5,7 +5,7 @@ import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/ap
 
 export const convertEquationRichTextItemResponse = async (
   response: EquationRichTextItemResponse,
-) => {
+): Promise<EquationRichTextItemObject> => {
   return {
     ...response,
     id: generateUUID(),

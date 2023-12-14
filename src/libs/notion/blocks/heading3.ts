@@ -1,13 +1,13 @@
 import { convertResponseToRichText } from "../richText/richText.js";
 
-import { fetchBlockList } from "./blocks.js";
+import { fetchBlockList } from "./fetchBlockList.js";
 
 import type { Heading3BlockObject } from "../../../types/notion/blocks/heading3.js";
 import type { Heading3BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertHeading3ResponseToBlock = async (
   block: Heading3BlockObjectResponse,
-) => {
+): Promise<Heading3BlockObject> => {
   if (block.has_children) {
     const children = await fetchBlockList({ block_id: block.id });
     return {

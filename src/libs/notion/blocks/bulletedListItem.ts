@@ -1,13 +1,13 @@
 import { convertResponseToRichText } from "../richText/richText.js";
 
-import { fetchBlockList } from "./blocks.js";
+import { fetchBlockList } from "./fetchBlockList.js";
 
 import type { BulletedListItemBlockObject } from "../../../types/notion/blocks/bulletedListItem.js";
 import type { BulletedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertBulletedListItemResponseToBlock = async (
   block: BulletedListItemBlockObjectResponse,
-) => {
+): Promise<BulletedListItemBlockObject> => {
   if (block.has_children) {
     const children = await fetchBlockList({ block_id: block.id });
     return {

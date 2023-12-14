@@ -1,4 +1,6 @@
-import { fetchPage } from "../pages.js";
+import { isFullPage } from "@notionhq/client";
+
+import { retrievePage } from "../pages.js";
 
 import type {
   RelationItem,
@@ -38,7 +40,14 @@ export const convertListResponseToRelationPropertyItem = async (
     relation: await list.results
       .filter(isRelationTypeObject)
       .reduce<Promise<Array<RelationItem>>>(async (prev, cur) => {
-        const page = await fetchPage({ page_id: cur.relation.id });
+        const { ok, data: page } = await retrievePage({
+          page_id: cur.relation.id,
+        });
+
+        if (!ok || !isFullPage(page)) {
+          return prev;
+        }
+
         return [
           ...(await prev),
           {

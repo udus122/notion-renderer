@@ -3,6 +3,6 @@ import type { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-
 
 export const convertDividerResponseToBlock = async (
   block: DividerBlockObjectResponse,
-) => {
+): Promise<DividerBlockObject> => {
   return { ...block } satisfies DividerBlockObject;
 };

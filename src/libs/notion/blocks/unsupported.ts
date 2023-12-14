@@ -3,6 +3,6 @@ import type { UnsupportedBlockObjectResponse } from "@notionhq/client/build/src/
 
 export const convertUnsupportedResponseToBlock = async (
   block: UnsupportedBlockObjectResponse,
-) => {
+): Promise<UnsupportedBlockObject> => {
   return { ...block } satisfies UnsupportedBlockObject;
 };

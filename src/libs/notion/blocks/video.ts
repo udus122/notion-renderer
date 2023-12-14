@@ -6,29 +6,30 @@ import type { VideoBlockObjectResponse } from "@notionhq/client/build/src/api-en
 
 export const convertVideoResponseToBlock = async (
   block: VideoBlockObjectResponse,
-) => {
+): Promise<VideoBlockObject> => {
   if (block.video.type === "external") {
     const { ok, data } = await fetchOembed(block.video.external.url, {
       maxwidth: 560,
       maxheight: 315,
     });
-    if (!ok) {
+
+    if (ok) {
       return {
         ...block,
         video: {
           ...block.video,
           caption: await convertResponseToRichText(block.video.caption),
+          oembed: data,
         },
       } satisfies VideoBlockObject;
     }
-
-    return {
-      ...block,
-      video: {
-        ...block.video,
-        caption: await convertResponseToRichText(block.video.caption),
-        oembed: data,
-      },
-    } satisfies VideoBlockObject;
   }
+
+  return {
+    ...block,
+    video: {
+      ...block.video,
+      caption: await convertResponseToRichText(block.video.caption),
+    },
+  } satisfies VideoBlockObject;
 };

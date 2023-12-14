@@ -1,13 +1,13 @@
 import { convertResponseToRichText } from "../richText/richText.js";
 
-import { fetchBlockList } from "./blocks.js";
+import { fetchBlockList } from "./fetchBlockList.js";
 
 import type { ToDoBlockObject } from "../../../types/notion/blocks/toDo.js";
 import type { ToDoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertToDoResponseToBlock = async (
   block: ToDoBlockObjectResponse,
-) => {
+): Promise<ToDoBlockObject> => {
   if (block.has_children) {
     const children = await fetchBlockList({ block_id: block.id });
     return {

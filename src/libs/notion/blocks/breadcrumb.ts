@@ -9,7 +9,7 @@ import type {
 
 export const convertBreadcrumbResponseToBlock = async (
   block: BreadcrumbBlockObjectResponse,
-) => {
+): Promise<BreadcrumbBlockObject> => {
   const allParents = await fetchAllParents(block.parent);
   const parents = allParents.filter(
     (parent): parent is PageObjectResponse | DatabaseObjectResponse =>

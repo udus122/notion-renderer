@@ -1,7 +1,9 @@
+import { isFullDatabase, isFullPage } from "@notionhq/client";
+
 import { fetchSiteMeta } from "../../../libs/utils/sitemeta.js";
 import { generateUUID } from "../../utils/utils.js";
-import { fetchDatabase } from "../databases.js";
-import { fetchPage } from "../pages/pages.js";
+import { retrieveDatabase } from "../databases.js";
+import { retrievePage } from "../index.js";
 
 import type {
   MentionRichTextItemObject,
@@ -51,13 +53,13 @@ export const convertMentionObjectResponse = async (
       } satisfies TempateMentionMentionObject;
     }
     case "page": {
-      const childPage = await fetchPage({ page_id: mention.page.id });
-      if (childPage) {
+      const { ok, data } = await retrievePage({ page_id: mention.page.id });
+      if (ok && isFullPage(data)) {
         return {
           ...mention,
           page: {
             ...mention.page,
-            page: childPage,
+            page: data,
           },
         } satisfies PageMentionObject;
       }
@@ -66,15 +68,15 @@ export const convertMentionObjectResponse = async (
       } satisfies PageMentionObject;
     }
     case "database": {
-      const childDatabase = await fetchDatabase({
+      const { ok, data } = await retrieveDatabase({
         database_id: mention.database.id,
       });
-      if (childDatabase) {
+      if (ok && isFullDatabase(data)) {
         return {
           ...mention,
           database: {
             ...mention.database,
-            database: childDatabase,
+            database: data,
           },
         } satisfies DatabaseMentionObject;
       }

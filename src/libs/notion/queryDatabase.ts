@@ -4,17 +4,17 @@ import { notion } from "./auth.js";
 
 import type { Result } from "../../types/utils.js";
 import type {
-  GetDatabaseParameters,
-  GetDatabaseResponse,
+  QueryDatabaseParameters,
+  QueryDatabaseResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 
-export const retrieveDatabase = async (
-  args: GetDatabaseParameters,
-): Promise<Result<GetDatabaseResponse>> => {
+export const queryDatabase = async (
+  args: QueryDatabaseParameters,
+): Promise<Result<QueryDatabaseResponse>> => {
   const result = await callAPIWithBackOff<
-    GetDatabaseParameters,
-    GetDatabaseResponse
-  >(notion.databases.retrieve, args);
+    QueryDatabaseParameters,
+    QueryDatabaseResponse
+  >(notion.databases.query, args);
 
   return result;
 };

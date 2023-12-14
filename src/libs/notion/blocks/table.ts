@@ -1,6 +1,6 @@
 import { notNullNorUndefined } from "../../utils/utils.js";
 
-import { fetchBlockList } from "./blocks.js";
+import { fetchBlockList } from "./fetchBlockList.js";
 
 import type { TableBlockObject } from "../../../types/notion/blocks/table.js";
 import type { TableRowBlockObject } from "../../../types/notion/blocks/tableRow.js";
@@ -8,7 +8,7 @@ import type { TableBlockObjectResponse } from "@notionhq/client/build/src/api-en
 
 export const convertTableResponseToBlock = async (
   block: TableBlockObjectResponse,
-) => {
+): Promise<TableBlockObject> => {
   if (block.has_children) {
     const blocks = await fetchBlockList({ block_id: block.id });
     const table_rows = blocks.filter(

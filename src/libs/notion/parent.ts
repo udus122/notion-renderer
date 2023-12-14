@@ -35,23 +35,25 @@ export const fetchParentBlockObject = async (
     | BlockObjectResponse["parent"]
     | PageObjectResponse["parent"]
     | DatabaseObjectResponse["parent"],
-) => {
+): Promise<
+  BlockObjectResponse | PageObjectResponse | DatabaseObjectResponse | undefined
+> => {
   if (parent.type === "block_id") {
-    const parentBlock = await retrieveBlock({ block_id: parent.block_id });
-    if (parentBlock && isFullBlock(parentBlock)) {
-      return await parentBlock;
+    const { ok, data } = await retrieveBlock({ block_id: parent.block_id });
+    if (ok && isFullBlock(data)) {
+      return await data;
     }
   } else if (parent.type === "page_id") {
-    const parentPage = await retrievePage({ page_id: parent.page_id });
-    if (parentPage && isFullPage(parentPage)) {
-      return parentPage;
+    const { ok, data } = await retrievePage({ page_id: parent.page_id });
+    if (ok && isFullPage(data)) {
+      return data;
     }
   } else if (parent.type === "database_id") {
-    const parentDatabase = await retrieveDatabase({
+    const { ok, data } = await retrieveDatabase({
       database_id: parent.database_id,
     });
-    if (parentDatabase && isFullDatabase(parentDatabase)) {
-      return parentDatabase;
+    if (ok && isFullDatabase(data)) {
+      return data;
     }
   }
   return;

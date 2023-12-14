@@ -1,10 +1,10 @@
 import type { RichTextPropertyItemObject } from "../../../../types/notion/pages/properties/richText.js";
+import type { Overwrite } from "../../../../types/utils.js";
 import type {
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
   RichTextPropertyItemObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
-import type { Overwrite } from "src/types/utils.js";
 
 export const convertResponseToRichTextPropertyItem = (
   property: RichTextPropertyItemObjectResponse,

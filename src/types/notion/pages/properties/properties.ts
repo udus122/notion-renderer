@@ -20,13 +20,15 @@ import type { TitlePropertyItemObject } from "./title.js";
 import type { UniqueIdPropertyItemObject } from "./uniqueId.js";
 import type { UrlPropertyItemObject } from "./url.js";
 import type { VerificationPropertyItemObject } from "./verification.js";
-import type { MergeValues } from "../../../utils.js";
 import type { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 
 export type PropertyName = string;
 
-export type PropertyValueObject =
+export type PropertyValueObjectResponse =
+  PageObjectResponse["properties"][string];
+
+export type PropertyValue =
   | CheckboxPropertyItemObject
   | CreatedByPropertyItemObject
   | CreatedTimePropertyItemObject
@@ -50,14 +52,7 @@ export type PropertyValueObject =
   | UrlPropertyItemObject
   | VerificationPropertyItemObject;
 
-export type PropertyValue = MergeValues<
-  PageObjectResponse["properties"][string],
-  PropertyValueObject
->;
-
-export type PropertyValueProps<
-  T extends PropertyValueObject = PropertyValueObject,
-> = {
+export type PropertyValueProps<T extends PropertyValue = PropertyValue> = {
   propertyItem: T;
 };
 

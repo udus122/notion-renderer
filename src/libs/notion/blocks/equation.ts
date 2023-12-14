@@ -3,6 +3,6 @@ import type { EquationBlockObjectResponse } from "@notionhq/client/build/src/api
 
 export const convertEquationResponseToBlock = async (
   block: EquationBlockObjectResponse,
-) => {
+): Promise<EquationBlockObject> => {
   return { ...block } satisfies EquationBlockObject;
 };
