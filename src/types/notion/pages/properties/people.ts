@@ -1,4 +1,4 @@
-import type { PropertyItemProps } from "./propertyItem.js";
+import type { PropertyValueProps } from "./properties.js";
 import type { PeoplePropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 import type { Overwrite, PartialBy } from "src/types/utils.js";
@@ -12,7 +12,7 @@ export type PeoplePropertyItemObject = PartialBy<
 >;
 
 export type PeoplePropertyItemProps =
-  PropertyItemProps<PeoplePropertyItemObject>;
+  PropertyValueProps<PeoplePropertyItemObject>;
 
 export type PeoplePropertyItemComponent =
   ComponentType<PeoplePropertyItemProps>;
