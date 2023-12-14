@@ -1,7 +1,7 @@
 import { isFullDatabase, isFullPage } from "@notionhq/client";
 
 import { listComments } from "../../comments.js";
-import { retrieveDatabase } from "../../databases.js";
+import { retrieveDatabase } from "../../database/retrieve.js";
 import { retrievePage } from "../../pages/pages.js";
 
 import type { LinkToPageBlockObject } from "../../../../types/notion/blocks/linkToPage.js";

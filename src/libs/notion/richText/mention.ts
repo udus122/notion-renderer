@@ -2,7 +2,7 @@ import { isFullDatabase, isFullPage } from "@notionhq/client";
 
 import { fetchSiteMeta } from "../../../libs/utils/sitemeta.js";
 import { generateUUID } from "../../utils/utils.js";
-import { retrieveDatabase } from "../databases.js";
+import { retrieveDatabase } from "../database/retrieve.js";
 import { retrievePage } from "../index.js";
 
 import type {

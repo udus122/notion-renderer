@@ -1,6 +1,6 @@
-import { queryDatabase } from "./queryDatabase.js";
+import { queryDatabase } from "./query.js";
 
-import type { PageObject } from "../../types/notion/pages/page.js";
+import type { PageObject } from "../../../types/notion/pages/page.js";
 import type { QueryDatabaseParameters } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const fetchAllDatabaseItems = async (

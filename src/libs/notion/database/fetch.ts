@@ -1,10 +1,11 @@
 import { isFullDatabase } from "@notionhq/client";
 
-import { retrieveDatabase } from "./databases.js";
-import { convertResponseToRichText } from "./richText/richText.js";
+import { convertResponseToRichText } from "../richText/richText.js";
 
-import type { DatabaseObject } from "../../types/notion/database.js";
-import type { Result } from "../../types/utils.js";
+import { retrieveDatabase } from "./retrieve.js";
+
+import type { DatabaseObject } from "../../../types/notion/database.js";
+import type { Result } from "../../../types/utils.js";
 import type { GetDatabaseParameters } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const fetchDatabase = async (

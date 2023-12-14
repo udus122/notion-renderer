@@ -1,8 +1,7 @@
-import { callAPIWithBackOff } from "../utils/api.js";
+import { callAPIWithBackOff } from "../../utils/api.js";
+import { notion } from "../auth.js";
 
-import { notion } from "./auth.js";
-
-import type { Result } from "../../types/utils.js";
+import type { Result } from "../../../types/utils.js";
 import type {
   QueryDatabaseParameters,
   QueryDatabaseResponse,
