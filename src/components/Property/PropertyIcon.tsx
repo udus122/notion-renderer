@@ -1,12 +1,13 @@
-import type { PropertyItemObject } from "../../types/notion/pages/properties/propertyItem.js";
-import type { DatabaseObject } from "src/types/notion/database.js";
+import type { DatabaseObject } from "../../types/notion/database.js";
+import type { PropertyValue } from "../../types/notion/pages/properties/properties.js";
+import type { FC } from "react";
 
-export const PropertyIcon = ({
-  property,
-}: {
-  property: PropertyItemObject | DatabaseObject["properties"][string];
-}) => {
-  switch (property.type) {
+type Props = {
+  propertyValue: PropertyValue | DatabaseObject["properties"][string];
+};
+
+export const PropertyIcon: FC<Props> = ({ propertyValue }) => {
+  switch (propertyValue.type) {
     case "title": {
       return (
         <svg

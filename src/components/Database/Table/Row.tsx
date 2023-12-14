@@ -20,11 +20,7 @@ export const Row: FC<Props> = ({ page }) => {
               {isTitleProperty(item) ? (
                 TableTitle(item, page)
               ) : (
-                <Property
-                  propertyName={name}
-                  propertyItem={item}
-                  hidePropertyName
-                />
+                <Property name={name} value={item} hideName />
               )}
             </td>
           )

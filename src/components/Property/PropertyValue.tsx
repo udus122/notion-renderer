@@ -29,19 +29,19 @@ import type { LinkProps } from "../../types/notion/common/link.js";
 import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
 import type { PropertyItemMapper } from "../../types/notion/mapper/propertyItem.js";
 import type { RichTextItemMapper } from "../../types/notion/mapper/richTextItem.js";
-import type { PropertyItemObject } from "../../types/notion/pages/properties/propertyItem.js";
+import type { PropertyValue as PropertyValueType } from "../../types/notion/pages/properties/properties.js";
 import type { FC } from "react";
 
 type Props = {
-  property: PropertyItemObject;
+  value: PropertyValueType;
   propertyMapper?: PropertyItemMapper;
   richTextItemMapper?: RichTextItemMapper;
   annotationMapper?: AnnotationItemMapper;
   LinkComponent?: React.ComponentType<LinkProps>;
 };
 
-export const PropertyItem: FC<Props> = ({
-  property,
+export const PropertyValue: FC<Props> = ({
+  value,
   propertyMapper,
   richTextItemMapper,
   annotationMapper,
@@ -52,7 +52,7 @@ export const PropertyItem: FC<Props> = ({
       <RichTextItemProvider mapper={richTextItemMapper}>
         <AnnotationItemProvider mapper={annotationMapper}>
           <LinkProvider link={LinkComponent}>
-            <PropertyItemSwitcher property={property} />
+            <PropertyItemSwitcher value={value} />
           </LinkProvider>
         </AnnotationItemProvider>
       </RichTextItemProvider>
@@ -60,7 +60,7 @@ export const PropertyItem: FC<Props> = ({
   );
 };
 
-const PropertyItemSwitcher: FC<Props> = ({ property }) => {
+const PropertyItemSwitcher: FC<Props> = ({ value: property }) => {
   if (!property) return null;
 
   const mapper = {

@@ -14,7 +14,7 @@ export const Header: FC<Props> = ({ database }) => {
         return (
           item && (
             <th>
-              <PropertyName propertyName={name} propertyItem={item} />
+              <PropertyName name={name} value={item} />
             </th>
           )
         );

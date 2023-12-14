@@ -1,26 +1,20 @@
-import { PropertyItem } from "./PropertyItem.js";
 import { PropertyName } from "./PropertyName.js";
+import { PropertyValue } from "./PropertyValue.js";
 
-import type { PropertyItemObject } from "../../types/notion/pages/properties/propertyItem.js";
+import type { PropertyValue as PropertyValueType } from "../../types/notion/pages/properties/properties.js";
 import type { FC } from "react";
 
 type Props = {
-  propertyName: string;
-  propertyItem: PropertyItemObject;
-  hidePropertyName?: boolean;
+  name: string;
+  value: PropertyValueType;
+  hideName?: boolean;
 };
 
-export const Property: FC<Props> = ({
-  propertyName,
-  propertyItem,
-  hidePropertyName = false,
-}) => {
+export const Property: FC<Props> = ({ name, value, hideName = false }) => {
   return (
     <div className="notion-property">
-      {!hidePropertyName && (
-        <PropertyName propertyName={propertyName} propertyItem={propertyItem} />
-      )}
-      <PropertyItem key={propertyItem.id} property={propertyItem} />
+      {!hideName && <PropertyName name={name} value={value} />}
+      <PropertyValue key={value.id} value={value} />
     </div>
   );
 };
