@@ -1,4 +1,4 @@
-import { listBlockChildren } from "./listBlockChildren.js";
+import { listBlockChildren } from "./listBlocksChildren.js";
 import { resolveBlockChildren } from "./resolveBlockChildren.js";
 
 import type { BlockBlockObject } from "../../../types/notion/blocks/block.js";

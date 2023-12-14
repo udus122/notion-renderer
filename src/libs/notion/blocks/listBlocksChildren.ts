@@ -1,4 +1,4 @@
-import { callAPIWithBackOff } from "../../../libs/utils/api.js";
+import { callAPIWithBackOff } from "../../utils/api.js";
 import { notion } from "../auth.js";
 
 import type { ListBlockChildrenResponseResults } from "../../../types/notion/common/common.js";
