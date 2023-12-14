@@ -1,4 +1,4 @@
-import { callAPIWithBackOff } from "../../utils/api.js";
+import { callAPIWithBackOffAndCache } from "../../utils/api.js";
 import { notion } from "../auth.js";
 
 import type { Result } from "../../../types/utils.js";
@@ -10,7 +10,7 @@ import type {
 export const retrievePageProperty = async (
   args: GetPagePropertyParameters,
 ): Promise<Result<GetPagePropertyResponse>> => {
-  const result = await callAPIWithBackOff<
+  const result = await callAPIWithBackOffAndCache<
     GetPagePropertyParameters,
     GetPagePropertyResponse
   >(notion.pages.properties.retrieve, args);

@@ -1,6 +1,7 @@
-import { randomUUID, createHash } from "node:crypto";
-import { existsSync } from "node:fs";
-import { readFile, writeFile, stat, mkdir } from "node:fs/promises";
+import { randomUUID, createHash, type BinaryLike } from "node:crypto";
+import { existsSync, mkdirSync, type PathLike } from "node:fs";
+import { readFile, writeFile, stat } from "node:fs/promises";
+import { dirname } from "node:path";
 
 export const notUndefined = <T>(v: T | undefined): v is T =>
   typeof v !== "undefined";
@@ -14,32 +15,35 @@ export const generateUUID = (): string => {
   return randomUUID() as string;
 };
 
-export const hash = (a: string): string => {
-  const shasum = createHash("sha1");
-  shasum.update(a);
+export const hash = (data: BinaryLike): string => {
+  const shasum = createHash("md5");
+  shasum.update(data);
   return shasum.digest("hex");
 };
 
-export const createDirWhenNotfound = async (dir: string): Promise<void> => {
-  if (!existsSync(dir)) {
-    await mkdir(dir, { recursive: true });
-    console.log(`created direcotry: ${dir}`);
+export const createDirIfNotfound = (path: PathLike): void => {
+  if (!existsSync(path)) {
+    mkdirSync(path, { recursive: true });
   }
 };
 
-export const readCache = async <T>(f: string): Promise<T> => {
-  return JSON.parse(await readFile(f, "utf8"));
+export const readCache = async <T>(path: PathLike): Promise<T> => {
+  return JSON.parse(await readFile(path, "utf8"));
 };
 
-export const writeCache = async (f: string, data: unknown): Promise<void> => {
-  return writeFile(f, JSON.stringify(data), "utf8").catch(() => {});
+export const writeCache = async (
+  file: string,
+  data: unknown,
+): Promise<void> => {
+  createDirIfNotfound(dirname(file));
+  writeFile(file, JSON.stringify(data), "utf8");
 };
 
 export const isAvailableCache = async (
-  f: string,
+  path: PathLike,
   seconds: number,
 ): Promise<boolean> => {
   const t = new Date(Date.now() + seconds * 1000);
-  const stats = await stat(f);
+  const stats = await stat(path);
   return stats.mtime < t;
 };

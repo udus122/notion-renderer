@@ -1,4 +1,4 @@
-import { callAPIWithBackOff } from "../../utils/api.js";
+import { callAPIWithBackOffAndCache } from "../../utils/api.js";
 import { notion } from "../auth.js";
 
 import type { ListBlockChildrenResponseResults } from "../../../types/notion/common/common.js";
@@ -10,7 +10,7 @@ import type {
 export const listBlockChildren = async (
   args: ListBlockChildrenParameters,
 ): Promise<ListBlockChildrenResponseResults> => {
-  const { ok, data } = await callAPIWithBackOff<
+  const { ok, data } = await callAPIWithBackOffAndCache<
     ListBlockChildrenParameters,
     ListBlockChildrenResponse
   >(notion.blocks.children.list, args);
