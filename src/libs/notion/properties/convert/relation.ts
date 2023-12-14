@@ -1,6 +1,6 @@
 import { isFullPage } from "@notionhq/client";
 
-import { retrievePage } from "../pages.js";
+import { retrievePage } from "../../pages/pages.js";
 
 import type {
   RelationItem,

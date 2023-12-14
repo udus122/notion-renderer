@@ -1,6 +1,5 @@
-import { notUndefined } from "../../../libs/utils/utils.js";
-
-import { fetchPageProperty } from "./properties/properties.js";
+import { notUndefined } from "../../utils/utils.js";
+import { fetchPageProperty } from "../properties/fetch.js";
 
 import type { PageObject } from "../../../types/notion/pages/page.js";
 import type { PropertyValue } from "../../../types/notion/pages/properties/properties.js";

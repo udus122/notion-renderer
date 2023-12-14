@@ -1,6 +1,6 @@
 import { isFullPage } from "@notionhq/client";
 
-import { convertResponseToPage } from "./convertResponseToPage.js";
+import { convertResponseToPage } from "./convert.js";
 import { retrievePage } from "./pages.js";
 
 import type { PageObject } from "../../../types/notion/pages/page.js";
