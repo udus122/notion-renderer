@@ -1,6 +1,6 @@
 // export * from "./auth.js";
 export * from "./blocks/convertResponseToBlock/audio.js";
-export * from "./blocks/blocks.js";
+export * from "./blocks/retrieve.js";
 export * from "./blocks/convertResponseToBlock/bookmark.js";
 export * from "./blocks/convertResponseToBlock/breadcrumb.js";
 export * from "./blocks/convertResponseToBlock/bulletedListItem.js";

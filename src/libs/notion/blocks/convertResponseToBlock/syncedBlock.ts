@@ -1,4 +1,4 @@
-import { fetchBlock } from "../fetchBlock.js";
+import { fetchBlock } from "../fetch.js";
 import { fetchBlockList } from "../fetchBlockList.js";
 
 import type { SyncedBlockBlockObject } from "../../../../types/notion/blocks/syncedBlock.js";

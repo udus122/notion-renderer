@@ -1,5 +1,5 @@
-import { retrieveBlock } from "./blocks.js";
 import { convertResponseToBlock } from "./convertResponseToBlock/index.js";
+import { retrieveBlock } from "./retrieve.js";
 
 import type { BlockBlockObject } from "../../../types/notion/blocks/block.js";
 import type { Result } from "../../../types/utils.js";
