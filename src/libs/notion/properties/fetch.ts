@@ -1,20 +1,20 @@
-import { convertResponseToPropertyValue } from "./convert/convertResponseToPropertyValue.js";
+import { convertResponseToPropertyItem } from "./convert/convertResponseToPropertyItem.js";
 import { retrievePageProperty } from "./properties.js";
 
-import type { PropertyValue } from "../../../types/notion/pages/properties/properties.js";
+import type { PropertyItem } from "../../../types/notion/pages/properties/properties.js";
 import type { Result } from "../../../types/utils.js";
 import type { GetPagePropertyParameters } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const fetchPageProperty = async (
   args: GetPagePropertyParameters,
-): Promise<Result<PropertyValue>> => {
+): Promise<Result<PropertyItem>> => {
   const { ok, data } = await retrievePageProperty(args);
 
   if (!ok) {
     return { ok, data };
   }
 
-  const pagePropertyObject = await convertResponseToPropertyValue(data);
+  const pagePropertyObject = await convertResponseToPropertyItem(data);
 
   return { ok: true, data: pagePropertyObject };
 };

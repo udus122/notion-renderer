@@ -36,12 +36,12 @@ import { convertResponseToUniqueIdPropertyItem } from "./uniqueId.js";
 import { convertResponseToUrlPropertyItem } from "./url.js";
 import { convertResponseToVerificationPropertyItem } from "./verification.js";
 
-import type { PropertyValue } from "../../../../types/notion/pages/properties/properties.js";
+import type { PropertyItem } from "../../../../types/notion/pages/properties/properties.js";
 import type { GetPagePropertyResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
-export const convertResponseToPropertyValue = async (
+export const convertResponseToPropertyItem = async (
   pageProperty: GetPagePropertyResponse,
-): Promise<PropertyValue> => {
+): Promise<PropertyItem> => {
   if (pageProperty.object === "property_item") {
     switch (pageProperty.type) {
       case "checkbox": {

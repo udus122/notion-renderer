@@ -1,4 +1,4 @@
-import type { PropertyValueProps } from "./properties.js";
+import type { PropertyItemProps } from "./properties.js";
 import type { Overwrite, PartialBy } from "../../../utils.js";
 import type { RichText } from "../../richText/richText.js";
 import type { TitlePropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
@@ -16,7 +16,6 @@ export type TitlePropertyItemObject = PartialBy<
   "object"
 >;
 
-export type TitlePropertyItemProps =
-  PropertyValueProps<TitlePropertyItemObject>;
+export type TitlePropertyItemProps = PropertyItemProps<TitlePropertyItemObject>;
 
 export type TitlePropertyItemComponent = ComponentType<TitlePropertyItemProps>;
