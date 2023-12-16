@@ -14,6 +14,7 @@ export const Embed: EmbedBlock = ({ block }) => {
       document.body.removeChild(script);
     };
   }, []);
+
   if (block.embed.oembed) {
     return (
       <div
