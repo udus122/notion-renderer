@@ -1,5 +1,3 @@
-import { generateUUID } from "./libs/utils/utils.js";
-
 import type { DatabaseObject } from "./types/notion/database.js";
 import type { PageObject } from "./types/notion/pages/page.js";
 import type {
@@ -33,7 +31,7 @@ export const splitTitleAndOtherProperties = <
   let title: TitlePropertyItemObject = {
     type: "title",
     title: [],
-    id: generateUUID(),
+    id: "",
   };
 
   Object.entries(properties).forEach(([key, value]) => {
