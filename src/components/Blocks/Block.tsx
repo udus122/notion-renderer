@@ -49,7 +49,6 @@ import type { FC } from "react";
 
 type Props = {
   block: BlockBlockObject;
-  // blocks: Array<BlockBlockObject>;
   blockMapper?: BlockMapper;
   richTextItemMapper?: RichTextItemMapper;
   annotationMapper?: AnnotationItemMapper;
@@ -58,7 +57,6 @@ type Props = {
 
 export const Block: FC<Props> = ({
   block,
-  // blocks,
   blockMapper,
   richTextItemMapper,
   annotationMapper,

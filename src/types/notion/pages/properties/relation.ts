@@ -1,4 +1,4 @@
-import type { PropertyValueProps } from "./properties.js";
+import type { PropertyItemProps } from "./properties.js";
 import type { Overwrite, PartialBy } from "../../../utils.js";
 import type {
   PageObjectResponse,
@@ -21,7 +21,7 @@ export type RelationPropertyItemObject = PartialBy<
 >;
 
 export type RelationPropertyItemProps =
-  PropertyValueProps<RelationPropertyItemObject>;
+  PropertyItemProps<RelationPropertyItemObject>;
 
 export type RelationPropertyItemComponent =
   ComponentType<RelationPropertyItemProps>;

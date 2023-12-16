@@ -25,10 +25,10 @@ import type { ComponentType } from "react";
 
 export type PropertyName = string;
 
-export type PropertyValueObjectResponse =
+export type PropertyItemObjectResponse =
   PageObjectResponse["properties"][string];
 
-export type PropertyValue =
+export type PropertyItem =
   | CheckboxPropertyItemObject
   | CreatedByPropertyItemObject
   | CreatedTimePropertyItemObject
@@ -52,10 +52,10 @@ export type PropertyValue =
   | UrlPropertyItemObject
   | VerificationPropertyItemObject;
 
-export type PropertyValueProps<T extends PropertyValue = PropertyValue> = {
+export type PropertyItemProps<T extends PropertyItem = PropertyItem> = {
   propertyItem: T;
 };
 
-export type PropertyValueComponent = ComponentType<PropertyValueProps>;
+export type PropertyItemComponent = ComponentType<PropertyItemProps>;
 
-export type Properties = Record<PropertyName, PropertyValue>;
+export type Properties = Record<PropertyName, PropertyItem>;

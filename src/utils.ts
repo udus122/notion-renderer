@@ -1,10 +1,8 @@
-import { generateUUID } from "./libs/utils/utils.js";
-
 import type { DatabaseObject } from "./types/notion/database.js";
 import type { PageObject } from "./types/notion/pages/page.js";
 import type {
-  PropertyValue,
-  PropertyValueObjectResponse,
+  PropertyItem,
+  PropertyItemObjectResponse,
 } from "./types/notion/pages/properties/properties.js";
 import type { TitlePropertyItemObject } from "./types/notion/pages/properties/title.js";
 import type { RichText } from "./types/notion/richText/richText.js";
@@ -13,12 +11,12 @@ import type {
   PageObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 
-type PageOrDatabasePropertyValues =
-  | PropertyValueObjectResponse
-  | PropertyValue
+type PageOrDatabasePropertyItems =
+  | PropertyItemObjectResponse
+  | PropertyItem
   | DatabaseObject["properties"][string];
 
-type PageOrDatabaseProperties = Record<string, PageOrDatabasePropertyValues>;
+type PageOrDatabaseProperties = Record<string, PageOrDatabasePropertyItems>;
 
 type SplittedProperties<T extends PageOrDatabaseProperties> = {
   title: TitlePropertyItemObject;
@@ -33,7 +31,7 @@ export const splitTitleAndOtherProperties = <
   let title: TitlePropertyItemObject = {
     type: "title",
     title: [],
-    id: generateUUID(),
+    id: "",
   };
 
   Object.entries(properties).forEach(([key, value]) => {
@@ -62,7 +60,7 @@ export const extractTitle = (
 };
 
 export const isTitleProperty = (
-  property: PageOrDatabasePropertyValues,
+  property: PageOrDatabasePropertyItems,
 ): property is TitlePropertyItemObject => property.type === "title";
 
 export const selectPropertyById = <T extends PageOrDatabaseProperties>(
