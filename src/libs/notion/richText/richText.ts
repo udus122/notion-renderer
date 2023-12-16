@@ -5,7 +5,7 @@ import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoi
 
 export const convertResponseToRichText = async (
   response: Array<RichTextItemResponse>,
-) => {
+): Promise<RichText> => {
   return (await Promise.all(
     response.map(async (item) => {
       return await convertResponseToRichTextItem(item);

@@ -1,3 +1,7 @@
+export type MergeValues<T, U> = {
+  [K in keyof T & keyof U]: T[K] | U[K];
+};
+
 export type Overwrite<T, U extends { [Key in keyof T]?: unknown }> = Omit<
   T,
   keyof U

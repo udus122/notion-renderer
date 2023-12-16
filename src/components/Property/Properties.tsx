@@ -1,10 +1,10 @@
 import { Property } from "./Property.js";
 
-import type { PropertyItemObject } from "../../types/notion/pages/properties/propertyItem.js";
+import type { Properties as PropertiesType } from "../../types/notion/pages/properties/properties.js";
 import type { FC } from "react";
 
 type Props = {
-  properties: Record<string, PropertyItemObject>;
+  properties: PropertiesType;
   hidePropertyName?: boolean;
 };
 
@@ -14,13 +14,13 @@ export const Properties: FC<Props> = ({
 }) => {
   return (
     <div className="notion-properties">
-      {Object.entries(properties).map(([name, item]) => {
+      {Object.entries(properties).map(([name, value]) => {
         return (
           <Property
-            key={item.id}
-            propertyName={name}
-            propertyItem={item}
-            hidePropertyName={hidePropertyName}
+            key={value.id}
+            name={name}
+            value={value}
+            hideName={hidePropertyName}
           />
         );
       })}

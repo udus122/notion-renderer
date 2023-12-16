@@ -1,4 +1,4 @@
-import { callAPIWithBackOff } from "../utils.js";
+import { callAPIWithBackOffAndCache } from "../utils/api.js";
 
 import { notion } from "./auth.js";
 
@@ -10,7 +10,7 @@ import type {
 export const listComments = async (
   args: ListCommentsParameters,
 ): Promise<ListCommentsResponse["results"]> => {
-  const { ok, data } = await callAPIWithBackOff<
+  const { ok, data } = await callAPIWithBackOffAndCache<
     ListCommentsParameters,
     ListCommentsResponse
   >(notion.comments.list, args);

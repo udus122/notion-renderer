@@ -1,10 +1,10 @@
 import type { RichTextItemProps } from "./richTextItem.js";
 import type { Overwrite } from "../../../types/utils.js";
-import type { PageObject } from "../pages/page.js";
 import type { ArticleData } from "@extractus/article-extractor";
 import type {
   DatabaseObjectResponse,
   MentionRichTextItemResponse,
+  PageObjectResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 
@@ -81,7 +81,7 @@ export type LinkPreviewMentionObject = LinkPreviewMentionObjectResponse & {
 export type TempateMentionMentionObject = TemplateMentionMentionObjectResponse;
 
 export type PageMentionObject = PageMentionObjectResponse & {
-  page: { page?: PageObject };
+  page: { page?: PageObjectResponse };
 };
 
 export type DatabaseMentionObject = DatabaseMentionObjectResponse & {

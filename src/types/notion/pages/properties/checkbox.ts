@@ -1,11 +1,11 @@
-import type { PropertyItemProps } from "./propertyItem.js";
+import type { PropertyValueProps } from "./properties.js";
 import type { CheckboxPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 
 export type CheckboxPropertyItemObject = CheckboxPropertyItemObjectResponse;
 
 export type CheckboxPropertyItemProps =
-  PropertyItemProps<CheckboxPropertyItemObject>;
+  PropertyValueProps<CheckboxPropertyItemObject>;
 
 export type CheckboxPropertyItemComponent =
   ComponentType<CheckboxPropertyItemProps>;
