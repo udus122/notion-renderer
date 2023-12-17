@@ -1,6 +1,6 @@
 import { notUndefined } from "../../utils/utils.js";
 
-import { convertResponseToBlock } from "./convert/index.js";
+import { convertResponseToBlock } from "./convert/convertResponseToBlock.js";
 import { wrapListItems } from "./wrapListItems.js";
 
 import type { BlockBlockObject } from "../../../types/notion/blocks/block.js";

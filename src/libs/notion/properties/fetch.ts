@@ -1,5 +1,5 @@
 import { convertResponseToPropertyItem } from "./convert/convertResponseToPropertyItem.js";
-import { retrievePageProperty } from "./properties.js";
+import { retrievePageProperty } from "./retrieve.js";
 
 import type { PropertyItem } from "../../../types/notion/pages/properties/properties.js";
 import type { Result } from "../../../types/utils.js";
