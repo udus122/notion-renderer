@@ -28,20 +28,17 @@ export const splitTitleAndOtherProperties = <
 >(
   properties: T,
 ): SplittedProperties<T> => {
-  let title: TitlePropertyItemObject = {
-    type: "title",
-    title: [],
-    id: "",
-  };
+  const title = Object.values(properties).find<TitlePropertyItemObject>(
+    (value): value is TitlePropertyItemObject => isTitleProperty(value),
+  ) ?? { id: "", type: "title", title: [] };
 
-  Object.entries(properties).forEach(([key, value]) => {
-    if (isTitleProperty(value)) {
-      title = value;
-      delete properties[key];
-    }
-  });
+  const other = Object.fromEntries(
+    Object.entries(properties).filter(
+      ([key, value]) => !isTitleProperty(value),
+    ),
+  ) as T;
 
-  return { title, other: properties };
+  return { title, other };
 };
 
 export const extractTitle = (
