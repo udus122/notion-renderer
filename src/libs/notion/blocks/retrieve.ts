@@ -17,10 +17,3 @@ export const retrieveBlock = async (
 
   return result;
 };
-
-import "dotenv/config";
-
-const res = await retrieveBlock({
-  block_id: "96384815fab44d3ebda96f720890fcae",
-});
-console.log(JSON.stringify(res, null, 2));

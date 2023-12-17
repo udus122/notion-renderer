@@ -8,13 +8,10 @@ export const fetchBlockList = async (
   args: ListBlockChildrenParameters,
 ): Promise<BlockBlockObject[]> => {
   const childrenBlockResponses = await listBlockChildren(args);
+
   const childrenBlockComponents = await resolveBlockChildren(
     childrenBlockResponses,
   );
+
   return childrenBlockComponents;
 };
-
-const res = await fetchBlockList({
-  block_id: "b89028d90bfc4e55ac91e9cbb594bb6d",
-});
-console.log(JSON.stringify(res, null, 2));

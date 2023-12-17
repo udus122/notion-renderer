@@ -29,9 +29,3 @@ export const fetchDatabase = async (
 
   return { ok: true, data: databaseObject };
 };
-import "dotenv/config";
-
-const res = await fetchDatabase({
-  database_id: "160acc69bcb34fe6983df151b848d8ca",
-});
-console.log(JSON.stringify(res, null, 2));
