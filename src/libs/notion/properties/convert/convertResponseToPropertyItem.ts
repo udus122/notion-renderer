@@ -13,7 +13,7 @@ import {
   convertListResponseToPeoplePropertyItem,
   convertResponseToPeoplePropertyItem,
 } from "./people.js";
-import { convertResponseToPhoneNumberPropertyItem } from "./phone_number.js";
+import { convertResponseToPhoneNumberPropertyItem } from "./phoneNumber.js";
 import {
   convertListResponseToRelationPropertyItem,
   convertResponseToRelationPropertyItem,
