@@ -1,15 +1,13 @@
-import { RichText } from "../index.js";
-
 import type { RichText as RichTextType } from "../../types/notion/richText/richText.js";
 
 type Props = {
   title: RichTextType;
 };
 
-export const Title: React.FC<Props> = function ({ title }) {
+export const Title: React.FC<Props> = ({ title }) => {
   return (
     <h1 className="notion-title">
-      <RichText richText={title} />
+      {title.map((item) => item.plain_text).join("")}
     </h1>
   );
 };
