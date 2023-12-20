@@ -35,10 +35,3 @@ export const listBlockChildren = async (
 
   return { ok: true, data: blockList };
 };
-
-import "dotenv/config";
-
-const res = await listBlockChildren({
-  block_id: "696a56fa0c6842709fe6165c403abc76",
-});
-console.log(JSON.stringify(res, null, 2));
