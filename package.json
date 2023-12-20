@@ -26,6 +26,10 @@
       "import": "./dist/libs/index.js",
       "types": "./dist/libs/index.d.ts"
     },
+    "./types": {
+      "import": "./dist/types/index.js",
+      "types": "./dist/types/index.d.ts"
+    },
     "./styles/*.css": {
       "import": "./dist/styles/*.css",
       "require": "./dist/styles/*.css"
