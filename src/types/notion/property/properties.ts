@@ -28,7 +28,7 @@ export type PropertyName = string;
 export type PropertyItemObjectResponse =
   PageObjectResponse["properties"][string];
 
-export type PropertyItem =
+export type PropertyItemType =
   | CheckboxPropertyItemObject
   | CreatedByPropertyItemObject
   | CreatedTimePropertyItemObject
@@ -52,10 +52,10 @@ export type PropertyItem =
   | UrlPropertyItemObject
   | VerificationPropertyItemObject;
 
-export type PropertyItemProps<T extends PropertyItem = PropertyItem> = {
+export type PropertyItemProps<T extends PropertyItemType = PropertyItemType> = {
   propertyItem: T;
 };
 
 export type PropertyItemComponent = ComponentType<PropertyItemProps>;
 
-export type Properties = Record<PropertyName, PropertyItem>;
+export type PropertiesType = Record<PropertyName, PropertyItemType>;

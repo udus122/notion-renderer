@@ -3,11 +3,11 @@ import { AnnotationItemProvider } from "../../Mapper/Annotation.js";
 import { AnnotationItem } from "./AnnotationItem.js";
 
 import type { AnnotationItemMapper } from "../../../types/notion/mapper/annotationItem.js";
-import type { RichTextItem } from "../../../types/notion/richText/richTextItem.js";
+import type { RichTextItemType } from "../../../types/notion/richText/richTextItem.js";
 import type { ReactNode } from "react";
 
 type Props = {
-  richTextItem: RichTextItem;
+  richTextItem: RichTextItemType;
   children: ReactNode;
   annotationMapper?: AnnotationItemMapper;
 };

@@ -1,7 +1,7 @@
 import { AnnotationItem } from "./AnnotationItem.js";
 import RichTextAnnotationObject from "./AnnotationItem.json";
 
-import type { RichTextItem } from "../../../types/notion/richText/richTextItem.js";
+import type { RichTextItemType } from "../../../types/notion/richText/richTextItem.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof AnnotationItem> = {
@@ -16,7 +16,7 @@ type Story = StoryObj<typeof AnnotationItem>;
 
 export const Default: Story = {
   args: {
-    richTextItem: RichTextAnnotationObject as RichTextItem,
+    richTextItem: RichTextAnnotationObject as RichTextItemType,
     children: "text with all annotation",
   },
 };

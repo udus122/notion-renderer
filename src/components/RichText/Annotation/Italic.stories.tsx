@@ -1,7 +1,7 @@
 import { Italic } from "./Italic.js";
 import italicRichText from "./Italic.json";
 
-import type { RichTextItem } from "../../../types/notion/richText/richTextItem.js";
+import type { RichTextItemType } from "../../../types/notion/richText/richTextItem.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Italic> = {
@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Italic>;
 
 export const Default: Story = {
   args: {
-    richTextItem: italicRichText as RichTextItem,
+    richTextItem: italicRichText as RichTextItemType,
     children: "This is italic text",
   },
 };

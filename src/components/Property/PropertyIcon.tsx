@@ -1,9 +1,9 @@
 import type { DatabaseObject } from "../../types/notion/database.js";
-import type { PropertyItem } from "../../types/notion/property/properties.js";
+import type { PropertyItemType } from "../../types/notion/property/properties.js";
 import type { FC } from "react";
 
 type Props = {
-  propertyItem: PropertyItem | DatabaseObject["properties"][string];
+  propertyItem: PropertyItemType | DatabaseObject["properties"][string];
 };
 
 export const PropertyIcon: FC<Props> = ({ propertyItem }) => {

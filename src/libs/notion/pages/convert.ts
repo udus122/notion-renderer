@@ -2,17 +2,17 @@ import { notUndefined } from "../../utils/utils.js";
 import { fetchPageProperty } from "../properties/fetch.js";
 
 import type { PageObject } from "../../../types/notion/page.js";
-import type { PropertyItem } from "../../../types/notion/property/properties.js";
+import type { PropertyItemType } from "../../../types/notion/property/properties.js";
 import type { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToPage = async (
   page: PageObjectResponse,
 ): Promise<PageObject> => {
-  const properties = Object.fromEntries<PropertyItem>(
+  const properties = Object.fromEntries<PropertyItemType>(
     (
       await Promise.all(
         Object.entries(page.properties).map<
-          Promise<[string, PropertyItem] | undefined>
+          Promise<[string, PropertyItemType] | undefined>
         >(async ([key, value]) => {
           const { ok, data } = await fetchPageProperty({
             page_id: page.id,

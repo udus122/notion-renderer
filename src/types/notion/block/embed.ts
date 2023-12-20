@@ -1,5 +1,5 @@
 import type { BlockBlockProps } from "./block.js";
-import type { RichTextItem } from "../richText/richTextItem.js";
+import type { RichTextItemType } from "../richText/richTextItem.js";
 import type {
   LinkTypeData,
   PhotoTypeData,
@@ -11,7 +11,7 @@ import type { ComponentType } from "react";
 
 export type EmbedBlockObject = EmbedBlockObjectResponse & {
   embed: {
-    caption: Array<RichTextItem>;
+    caption: Array<RichTextItemType>;
     oembed?: LinkTypeData | PhotoTypeData | VideoTypeData | RichTypeData;
   };
 };

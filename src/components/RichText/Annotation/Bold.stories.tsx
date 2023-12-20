@@ -1,7 +1,7 @@
 import { Bold } from "./Bold.js";
 import boldRichText from "./Bold.json";
 
-import type { RichTextItem } from "../../../types/notion/richText/richTextItem.js";
+import type { RichTextItemType } from "../../../types/notion/richText/richTextItem.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Bold> = {
@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Bold>;
 
 export const Default: Story = {
   args: {
-    richTextItem: boldRichText as RichTextItem,
+    richTextItem: boldRichText as RichTextItemType,
     children: "This is bold text",
   },
 };

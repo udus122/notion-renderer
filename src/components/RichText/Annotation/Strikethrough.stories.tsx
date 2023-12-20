@@ -1,7 +1,7 @@
 import { Strikethrough } from "./Strikethrough.js";
 import StrikethroughRichText from "./Strikethrough.json";
 
-import type { RichTextItem } from "../../../types/notion/richText/richTextItem.js";
+import type { RichTextItemType } from "../../../types/notion/richText/richTextItem.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Strikethrough> = {
@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Strikethrough>;
 
 export const Default: Story = {
   args: {
-    richTextItem: StrikethroughRichText as RichTextItem,
+    richTextItem: StrikethroughRichText as RichTextItemType,
     children: "This is Strikethrough text",
   },
 };

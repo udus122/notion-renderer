@@ -3,12 +3,12 @@ import type { MentionRichTextItemObject } from "./mention.js";
 import type { TextRichTextItemObject } from "./text.js";
 import type { ComponentType } from "react";
 
-export type RichTextItem =
+export type RichTextItemType =
   | TextRichTextItemObject
   | EquationRichTextItemObject
   | MentionRichTextItemObject;
 
-export type RichTextItemProps<T extends RichTextItem = RichTextItem> = {
+export type RichTextItemProps<T extends RichTextItemType = RichTextItemType> = {
   richText: T;
 };
 
