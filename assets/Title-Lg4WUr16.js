@@ -1,0 +1,1 @@
+import{j as r}from"./jsx-runtime-vNq4Oc-g.js";const t=({title:e})=>r.jsx("h1",{className:"notion-title",children:e.map(i=>i.plain_text).join("")});try{t.displayName="Title",t.__docgenInfo={description:"",displayName:"Title",props:{title:{defaultValue:null,description:"",name:"title",required:!0,type:{name:"RichTextType"}}}}}catch{}export{t as T};
