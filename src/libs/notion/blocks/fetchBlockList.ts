@@ -18,10 +18,3 @@ export const fetchBlockList = async (
 
   return { ok: true, data: childrenBlockComponents };
 };
-
-import "dotenv/config";
-
-const res = await fetchBlockList({
-  block_id: "7ed3a6eebb5e4cdfa94433684d7c56bf",
-});
-console.log(JSON.stringify(res, null, 2));
