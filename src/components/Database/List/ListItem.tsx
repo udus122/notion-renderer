@@ -3,7 +3,7 @@ import { Icon } from "../../Common/Icon.js";
 import { useMapper } from "../../hooks.js";
 import { Properties } from "../../Property/Properties.js";
 
-import type { PageObject } from "../../../types/notion/pages/page.js";
+import type { PageObject } from "../../../types/notion/page.js";
 import type { FC } from "react";
 
 type Props = {

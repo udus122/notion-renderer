@@ -3,7 +3,7 @@ import Page from "../Page.json";
 import { ListItem } from "./ListItem.js";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { PageObject } from "src/types/notion/pages/page.js";
+import type { PageObject } from "src/types/notion/page.js";
 
 const meta: Meta<typeof ListItem> = {
   title: "Database/List/ListItem",

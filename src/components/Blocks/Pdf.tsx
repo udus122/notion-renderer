@@ -1,6 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { PdfBlock } from "../../types/notion/blocks/pdf.js";
+import type { PdfBlock } from "../../types/notion/block/pdf.js";
 
 export const Pdf: PdfBlock = ({ block }) => {
   const pdfUrl =

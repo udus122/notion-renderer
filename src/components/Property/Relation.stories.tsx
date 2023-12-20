@@ -1,7 +1,7 @@
 import { RelationProperty } from "./Relation.js";
 import RelationPropertyObject from "./Relation.json";
 
-import type { RelationPropertyItemObject } from "../../types/notion/pages/properties/relation.js";
+import type { RelationPropertyItemObject } from "../../types/notion/property/relation.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof RelationProperty> = {

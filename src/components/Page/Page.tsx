@@ -9,13 +9,13 @@ import { RichTextItemProvider } from "../Mapper/RichText.js";
 
 import { PageMeta } from "./PageMeta.js";
 
-import type { BlockBlockObject } from "../../types/notion/blocks/block.js";
+import type { BlockBlockObject } from "../../types/notion/block/block.js";
 import type { LinkProps } from "../../types/notion/common/link.js";
 import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
 import type { BlockMapper } from "../../types/notion/mapper/block.js";
 import type { PropertyItemMapper } from "../../types/notion/mapper/propertyItem.js";
 import type { RichTextItemMapper } from "../../types/notion/mapper/richTextItem.js";
-import type { PageObject } from "../../types/notion/pages/page.js";
+import type { PageObject } from "../../types/notion/page.js";
 import type { FC } from "react";
 
 type Props = {

@@ -2,7 +2,7 @@ import { isFullPage } from "@notionhq/client";
 
 import { retrievePage } from "../../pages/retrieve.js";
 
-import type { ChildPageBlockObject } from "../../../../types/notion/blocks/childPage.js";
+import type { ChildPageBlockObject } from "../../../../types/notion/block/childPage.js";
 import type { ChildPageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertChildPageResponseToBlock = async (

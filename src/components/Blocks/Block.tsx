@@ -40,7 +40,7 @@ import { Toggle } from "./Toggle.js";
 import { Unsupported } from "./Unsupported.js";
 import { Video } from "./Video.js";
 
-import type { BlockBlockObject } from "../../types/notion/blocks/block.js";
+import type { BlockBlockObject } from "../../types/notion/block/block.js";
 import type { LinkProps } from "../../types/notion/common/link.js";
 import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
 import type { BlockMapper } from "../../types/notion/mapper/block.js";

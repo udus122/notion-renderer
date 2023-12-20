@@ -3,7 +3,7 @@ import { Icon } from "../Common/Icon.js";
 import { useMapper } from "../hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
-import type { LinkToPageBlock } from "../../types/notion/blocks/linkToPage.js";
+import type { LinkToPageBlock } from "../../types/notion/block/linkToPage.js";
 
 export const LinkToPage: LinkToPageBlock = ({ block }) => {
   const { Link } = useMapper();

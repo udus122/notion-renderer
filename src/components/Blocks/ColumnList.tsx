@@ -1,6 +1,6 @@
 import { BlockList } from "./BlockList.js";
 
-import type { ColumnListBlock } from "../../types/notion/blocks/columnList.js";
+import type { ColumnListBlock } from "../../types/notion/block/columnList.js";
 
 export const ColumnList: ColumnListBlock = ({ block }) => {
   return (

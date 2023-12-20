@@ -1,7 +1,7 @@
 import { Block } from "./Block.js";
 import { BlockList } from "./BlockList.js";
 
-import type { SyncedBlockBlock } from "../../types/notion/blocks/syncedBlock.js";
+import type { SyncedBlockBlock } from "../../types/notion/block/syncedBlock.js";
 
 export const SyncedBlock: SyncedBlockBlock = ({ block }) => {
   return (

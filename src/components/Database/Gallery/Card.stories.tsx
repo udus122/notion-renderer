@@ -3,7 +3,7 @@ import Page from "../Page.json";
 import { Card } from "./Card.js";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { PageObject } from "src/types/notion/pages/page.js";
+import type { PageObject } from "src/types/notion/page.js";
 
 const meta: Meta<typeof Card> = {
   title: "Database/Gallery/Card",

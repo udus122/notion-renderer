@@ -4,7 +4,7 @@ import Pages from "../Pages.json";
 import { Table } from "./Table.js";
 
 import type { DatabaseObject } from "../../../types/notion/database.js";
-import type { PageObject } from "../../../types/notion/pages/page.js";
+import type { PageObject } from "../../../types/notion/page.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Table> = {

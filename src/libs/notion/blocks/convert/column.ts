@@ -1,6 +1,6 @@
 import { fetchBlockList } from "../fetchBlockList.js";
 
-import type { ColumnBlockObject } from "../../../../types/notion/blocks/column.js";
+import type { ColumnBlockObject } from "../../../../types/notion/block/column.js";
 import type { ColumnBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertColumnResponseToBlock = async (

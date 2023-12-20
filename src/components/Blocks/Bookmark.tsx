@@ -1,6 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { BookmarkBlock } from "../../types/notion/blocks/bookmark.js";
+import type { BookmarkBlock } from "../../types/notion/block/bookmark.js";
 
 export const Bookmark: BookmarkBlock = ({ block }) => {
   return (

@@ -1,8 +1,8 @@
 import { notNullNorUndefined } from "../../../utils/utils.js";
 import { fetchBlockList } from "../fetchBlockList.js";
 
-import type { TableBlockObject } from "../../../../types/notion/blocks/table.js";
-import type { TableRowBlockObject } from "../../../../types/notion/blocks/tableRow.js";
+import type { TableBlockObject } from "../../../../types/notion/block/table.js";
+import type { TableRowBlockObject } from "../../../../types/notion/block/tableRow.js";
 import type { TableBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertTableResponseToBlock = async (

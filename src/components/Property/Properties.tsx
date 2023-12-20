@@ -1,6 +1,6 @@
 import { Property } from "./Property.js";
 
-import type { Properties as PropertiesType } from "../../types/notion/pages/properties/properties.js";
+import type { Properties as PropertiesType } from "../../types/notion/property/properties.js";
 import type { FC } from "react";
 
 type Props = {

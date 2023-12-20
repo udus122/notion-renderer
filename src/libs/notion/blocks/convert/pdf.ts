@@ -1,6 +1,6 @@
 import { convertResponseToRichText } from "../../richText/richText.js";
 
-import type { PdfBlockObject } from "../../../../types/notion/blocks/pdf.js";
+import type { PdfBlockObject } from "../../../../types/notion/block/pdf.js";
 import type { PdfBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertPdfResponseToBlock = async (

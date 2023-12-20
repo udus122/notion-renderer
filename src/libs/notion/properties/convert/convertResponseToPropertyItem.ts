@@ -36,7 +36,7 @@ import { convertResponseToUniqueIdPropertyItem } from "./uniqueId.js";
 import { convertResponseToUrlPropertyItem } from "./url.js";
 import { convertResponseToVerificationPropertyItem } from "./verification.js";
 
-import type { PropertyItem } from "../../../../types/notion/pages/properties/properties.js";
+import type { PropertyItem } from "../../../../types/notion/property/properties.js";
 import type { GetPagePropertyResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToPropertyItem = async (

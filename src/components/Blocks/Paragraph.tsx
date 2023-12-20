@@ -2,7 +2,7 @@ import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";
 
-import type { ParagraphBlock } from "../../types/notion/blocks/paragraph.js";
+import type { ParagraphBlock } from "../../types/notion/block/paragraph.js";
 
 export const Paragraph: ParagraphBlock = ({ block }) => {
   return (

@@ -1,7 +1,7 @@
 import { BlockList } from "./BlockList.js";
 import BlocksObject from "./BlockList.json";
 
-import type { BlockBlockObject } from "../../types/notion/blocks/block.js";
+import type { BlockBlockObject } from "../../types/notion/block/block.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof BlockList> = {

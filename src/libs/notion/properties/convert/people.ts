@@ -1,4 +1,4 @@
-import type { PeoplePropertyItemObject } from "../../../../types/notion/pages/properties/people.js";
+import type { PeoplePropertyItemObject } from "../../../../types/notion/property/people.js";
 import type { Overwrite } from "../../../../types/utils.js";
 import type {
   PeoplePropertyItemObjectResponse,

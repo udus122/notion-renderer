@@ -5,7 +5,7 @@ import { retrievePage } from "../../pages/retrieve.js";
 import type {
   RelationItem,
   RelationPropertyItemObject,
-} from "../../../../types/notion/pages/properties/relation.js";
+} from "../../../../types/notion/property/relation.js";
 import type { Overwrite } from "../../../../types/utils.js";
 import type {
   PropertyItemObjectResponse,

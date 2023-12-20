@@ -7,8 +7,8 @@ import { OpenedToggle } from "../Blocks/Custom/OpenedToggle.js";
 import { Page } from "./Page.js";
 import PageMetaObjectData from "./PageMeta.json";
 
-import type { BlockBlockObject } from "../../types/notion/blocks/block.js";
-import type { PageObject } from "../../types/notion/pages/page.js";
+import type { BlockBlockObject } from "../../types/notion/block/block.js";
+import type { PageObject } from "../../types/notion/page.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Page> = {

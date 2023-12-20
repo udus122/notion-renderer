@@ -6,7 +6,7 @@ import type {
   QueryDatabaseParameters,
   QueryDatabaseResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
-import type { PageObject } from "src/types/notion/pages/page.js";
+import type { PageObject } from "src/types/notion/page.js";
 
 export const queryDatabase = async (
   args: QueryDatabaseParameters,

@@ -1,7 +1,7 @@
 import { UniqueIdProperty } from "./UniqueId.js";
 import UniqueIdPropertyObject from "./UniqueId.json";
 
-import type { UniqueIdPropertyItemObject } from "../../types/notion/pages/properties/uniqueId.js";
+import type { UniqueIdPropertyItemObject } from "../../types/notion/property/uniqueId.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof UniqueIdProperty> = {

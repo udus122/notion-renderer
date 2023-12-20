@@ -1,6 +1,6 @@
 import { fetchAllParents } from "../../parent.js";
 
-import type { BreadcrumbBlockObject } from "../../../../types/notion/blocks/breadcrumb.js";
+import type { BreadcrumbBlockObject } from "../../../../types/notion/block/breadcrumb.js";
 import type {
   BreadcrumbBlockObjectResponse,
   DatabaseObjectResponse,

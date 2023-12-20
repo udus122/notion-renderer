@@ -34,7 +34,7 @@ import { convertToggleResponseToBlock } from "./toggle.js";
 import { convertUnsupportedResponseToBlock } from "./unsupported.js";
 import { convertVideoResponseToBlock } from "./video.js";
 
-import type { BlockBlockObject } from "../../../../types/notion/blocks/block.js";
+import type { BlockBlockObject } from "../../../../types/notion/block/block.js";
 import type { Result } from "../../../../types/utils.js";
 import type { GetBlockResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

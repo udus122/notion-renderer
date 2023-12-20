@@ -1,7 +1,7 @@
 import { convertResponseToRichText } from "../../richText/richText.js";
 import { fetchBlockList } from "../fetchBlockList.js";
 
-import type { Heading2BlockObject } from "../../../../types/notion/blocks/heading2.js";
+import type { Heading2BlockObject } from "../../../../types/notion/block/heading2.js";
 import type { Heading2BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertHeading2ResponseToBlock = async (

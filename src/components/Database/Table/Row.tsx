@@ -3,7 +3,7 @@ import { isTitleProperty } from "../../../utils.js";
 
 import { TableTitle } from "./Title.js";
 
-import type { PageObject } from "../../../types/notion/pages/page.js";
+import type { PageObject } from "../../../types/notion/page.js";
 import type { FC } from "react";
 
 type Props = {

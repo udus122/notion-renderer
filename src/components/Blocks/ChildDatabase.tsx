@@ -1,7 +1,7 @@
 import { Icon } from "../Common/Icon.js";
 import { useMapper } from "../hooks.js";
 
-import type { ChildDatabaseBlock } from "../../types/notion/blocks/childDatabase.js";
+import type { ChildDatabaseBlock } from "../../types/notion/block/childDatabase.js";
 
 export const ChildDatabase: ChildDatabaseBlock = ({ block }) => {
   const { Link } = useMapper();

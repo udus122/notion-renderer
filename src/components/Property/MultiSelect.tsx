@@ -1,4 +1,4 @@
-import type { MultiSelectPropertyItemComponent } from "../../types/notion/pages/properties/multiSelect.js";
+import type { MultiSelectPropertyItemComponent } from "../../types/notion/property/multiSelect.js";
 
 export const MultiSelectProperty: MultiSelectPropertyItemComponent = ({
   propertyItem,

@@ -2,7 +2,7 @@ import { Heading3 } from "./Heading3.js";
 import Heading3Object from "./Heading3.json";
 import Heading3Toggleable from "./Heading3.Toggleable.json";
 
-import type { Heading3BlockObject } from "../../types/notion/blocks/heading3.js";
+import type { Heading3BlockObject } from "../../types/notion/block/heading3.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Heading3> = {

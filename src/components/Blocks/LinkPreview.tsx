@@ -1,4 +1,4 @@
-import type { LinkPreviewBlock } from "../../types/notion/blocks/linkPreview.js";
+import type { LinkPreviewBlock } from "../../types/notion/block/linkPreview.js";
 
 export const LinkPreview: LinkPreviewBlock = ({ block }) => {
   return (

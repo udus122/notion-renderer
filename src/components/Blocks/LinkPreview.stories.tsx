@@ -1,7 +1,7 @@
 import { LinkPreview } from "./LinkPreview.js";
 import LinkPreviewObject from "./LinkPreview.json";
 
-import type { LinkPreviewBlockObject } from "../../types/notion/blocks/linkPreview.js";
+import type { LinkPreviewBlockObject } from "../../types/notion/block/linkPreview.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof LinkPreview> = {
