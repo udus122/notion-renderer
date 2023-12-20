@@ -2,7 +2,7 @@ import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";
 
-import type { ToggleBlock } from "../../types/notion/blocks/toggle.js";
+import type { ToggleBlock } from "../../types/notion/block/toggle.js";
 
 export const Toggle: ToggleBlock = ({ block }) => {
   return (

@@ -1,6 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { VideoBlock } from "../../types/notion/blocks/video.js";
+import type { VideoBlock } from "../../types/notion/block/video.js";
 
 export const Video: VideoBlock = ({ block }) => {
   if (block.video.type === "external" && block.video.oembed) {

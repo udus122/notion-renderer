@@ -3,7 +3,7 @@ import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";
 
-import type { ToDoBlock } from "../../types/notion/blocks/toDo.js";
+import type { ToDoBlock } from "../../types/notion/block/toDo.js";
 
 export const ToDo: ToDoBlock = ({ block }) => {
   const { checked } = block.to_do;

@@ -1,7 +1,7 @@
 import { Equation } from "./Equation.js";
 import EquationObject from "./Equation.json";
 
-import type { EquationBlockObject } from "../../types/notion/blocks/equation.js";
+import type { EquationBlockObject } from "../../types/notion/block/equation.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Equation> = {

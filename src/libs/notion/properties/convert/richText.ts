@@ -1,4 +1,4 @@
-import type { RichTextPropertyItemObject } from "../../../../types/notion/pages/properties/richText.js";
+import type { RichTextPropertyItemObject } from "../../../../types/notion/property/richText.js";
 import type { Overwrite } from "../../../../types/utils.js";
 import type {
   PropertyItemObjectResponse,

@@ -1,8 +1,8 @@
 import { notNullNorUndefined } from "../../../utils/utils.js";
 import { fetchBlockList } from "../fetchBlockList.js";
 
-import type { ColumnBlockObject } from "../../../../types/notion/blocks/column.js";
-import type { ColumnListBlockObject } from "../../../../types/notion/blocks/columnList.js";
+import type { ColumnBlockObject } from "../../../../types/notion/block/column.js";
+import type { ColumnListBlockObject } from "../../../../types/notion/block/columnList.js";
 import type { ColumnListBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertColumnListResponseToBlock = async (

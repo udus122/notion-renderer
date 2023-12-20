@@ -1,8 +1,8 @@
 import { generateUUID } from "../../utils/utils.js";
 
-import type { BlockBlockObject } from "../../../types/notion/blocks/block.js";
-import type { BulletedListBlockObject } from "../../../types/notion/blocks/bulletedList.js";
-import type { NumberedListBlockObject } from "../../../types/notion/blocks/numberedList.js";
+import type { BlockBlockObject } from "../../../types/notion/block/block.js";
+import type { BulletedListBlockObject } from "../../../types/notion/block/bulletedList.js";
+import type { NumberedListBlockObject } from "../../../types/notion/block/numberedList.js";
 
 export const wrapListItems = (
   blocks: Array<BlockBlockObject>,

@@ -2,7 +2,7 @@ import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";
 
-import type { BulletedListItemBlock } from "../../types/notion/blocks/bulletedListItem.js";
+import type { BulletedListItemBlock } from "../../types/notion/block/bulletedListItem.js";
 
 export const BulletedListItem: BulletedListItemBlock = ({ block }) => {
   return (

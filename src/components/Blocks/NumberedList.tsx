@@ -1,6 +1,6 @@
 import { NumberedListItem } from "./NumberedListItem.js";
 
-import type { NumberedListBlock } from "../../types/notion/blocks/numberedList.js";
+import type { NumberedListBlock } from "../../types/notion/block/numberedList.js";
 
 export const NumberedList: NumberedListBlock = ({ block }) => {
   return (

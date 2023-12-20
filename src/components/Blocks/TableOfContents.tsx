@@ -1,9 +1,9 @@
 import { useBlocks } from "../hooks.js";
 
-import type { Heading1BlockObject } from "../../types/notion/blocks/heading1.js";
-import type { Heading2BlockObject } from "../../types/notion/blocks/heading2.js";
-import type { Heading3BlockObject } from "../../types/notion/blocks/heading3.js";
-import type { TableOfContentsBlock } from "../../types/notion/blocks/tableOfContents.js";
+import type { Heading1BlockObject } from "../../types/notion/block/heading1.js";
+import type { Heading2BlockObject } from "../../types/notion/block/heading2.js";
+import type { Heading3BlockObject } from "../../types/notion/block/heading3.js";
+import type { TableOfContentsBlock } from "../../types/notion/block/tableOfContents.js";
 
 export const TableOfContents: TableOfContentsBlock = ({ block }) => {
   const blocks = useBlocks();

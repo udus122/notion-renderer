@@ -1,4 +1,4 @@
-import type { StatusPropertyItemObject } from "../../../../types/notion/pages/properties/status.js";
+import type { StatusPropertyItemObject } from "../../../../types/notion/property/status.js";
 import type { StatusPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToStatusPropertyItem = (

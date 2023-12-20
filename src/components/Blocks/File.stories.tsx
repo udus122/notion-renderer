@@ -2,7 +2,7 @@ import FileExternalObject from "./File.External.json";
 import FileFileObject from "./File.File.json";
 import { File } from "./File.js";
 
-import type { FileBlockObject } from "../../types/notion/blocks/file.js";
+import type { FileBlockObject } from "../../types/notion/block/file.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof File> = {

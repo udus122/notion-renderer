@@ -2,7 +2,7 @@ import { useEffect } from "react";
 
 import { RichText } from "../RichText/RichText.js";
 
-import type { EmbedBlock } from "../../types/notion/blocks/embed.js";
+import type { EmbedBlock } from "../../types/notion/block/embed.js";
 
 export const Embed: EmbedBlock = ({ block }) => {
   useEffect(() => {

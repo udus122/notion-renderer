@@ -4,7 +4,7 @@ import Pages from "./Pages.json";
 
 import type { DatabaseObject as DatabaseObjectType } from "../../types/notion/database.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { PageObject } from "src/types/notion/pages/page.js";
+import type { PageObject } from "src/types/notion/page.js";
 
 const meta: Meta<typeof Database> = {
   title: "Database",

@@ -1,4 +1,4 @@
-import type { PhoneNumberPropertyItemComponent } from "../../types/notion/pages/properties/phoneNumber.js";
+import type { PhoneNumberPropertyItemComponent } from "../../types/notion/property/phoneNumber.js";
 
 export const PhoneNumberProperty: PhoneNumberPropertyItemComponent = ({
   propertyItem,

@@ -1,6 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { AudioBlock } from "../../types/notion/blocks/audio.js";
+import type { AudioBlock } from "../../types/notion/block/audio.js";
 
 export const Audio: AudioBlock = ({ block }) => {
   const audioUrl =

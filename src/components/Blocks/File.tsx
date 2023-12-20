@@ -1,7 +1,7 @@
 import { File as FileComponent } from "../Common/File.js";
 import { RichText } from "../RichText/RichText.js";
 
-import type { FileBlock } from "../../types/notion/blocks/file.js";
+import type { FileBlock } from "../../types/notion/block/file.js";
 
 export const File: FileBlock = ({ block }) => {
   return (

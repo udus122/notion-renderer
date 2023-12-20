@@ -1,6 +1,6 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { ImageBlock } from "../../types/notion/blocks/image.js";
+import type { ImageBlock } from "../../types/notion/block/image.js";
 
 export const Image: ImageBlock = ({ block }) => {
   return (

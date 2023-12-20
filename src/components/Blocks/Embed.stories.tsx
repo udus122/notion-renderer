@@ -2,7 +2,7 @@ import { Embed } from "./Embed.js";
 import EmbedObject from "./Embed.json";
 import EmbedTwitterObject from "./Embed.Twitter.json";
 
-import type { EmbedBlockObject } from "../../types/notion/blocks/embed.js";
+import type { EmbedBlockObject } from "../../types/notion/block/embed.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Embed> = {

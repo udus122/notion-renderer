@@ -1,4 +1,4 @@
-import type { CreatedTimePropertyItemObject } from "../../../../types/notion/pages/properties/createdTime.js";
+import type { CreatedTimePropertyItemObject } from "../../../../types/notion/property/createdTime.js";
 import type { CreatedTimePropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToCreatedTimePropertyItem = (

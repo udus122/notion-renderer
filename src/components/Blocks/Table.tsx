@@ -1,8 +1,8 @@
 import { RichText } from "../RichText/RichText.js";
 
-import type { TableBlock } from "../../types/notion/blocks/table.js";
-import type { TableCellBlockObjectComponent } from "../../types/notion/blocks/tableCell.js";
-import type { TableRowBlockObject } from "../../types/notion/blocks/tableRow.js";
+import type { TableBlock } from "../../types/notion/block/table.js";
+import type { TableCellBlockObjectComponent } from "../../types/notion/block/tableCell.js";
+import type { TableRowBlockObject } from "../../types/notion/block/tableRow.js";
 
 export const Table: TableBlock = ({ block }) => {
   return (

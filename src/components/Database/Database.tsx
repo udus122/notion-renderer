@@ -9,7 +9,7 @@ import { List } from "./List/List.js";
 import { Table } from "./Table/Table.js";
 
 import type { DatabaseObject } from "../../types/notion/database.js";
-import type { PageObject } from "../../types/notion/pages/page.js";
+import type { PageObject } from "../../types/notion/page.js";
 import type { FC } from "react";
 
 type Props = {

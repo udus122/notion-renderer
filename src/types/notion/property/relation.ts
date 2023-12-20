@@ -1,5 +1,5 @@
 import type { PropertyItemProps } from "./properties.js";
-import type { Overwrite, PartialBy } from "../../../utils.js";
+import type { Overwrite, PartialBy } from "../../utils.js";
 import type {
   PageObjectResponse,
   RelationPropertyItemObjectResponse,

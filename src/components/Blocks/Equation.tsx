@@ -1,6 +1,6 @@
 import katex from "katex";
 
-import type { EquationBlock } from "../../types/notion/blocks/equation.js";
+import type { EquationBlock } from "../../types/notion/block/equation.js";
 
 export const Equation: EquationBlock = ({ block }) => {
   return (

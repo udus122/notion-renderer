@@ -1,4 +1,4 @@
-import type { RollupPropertyItemObject } from "../../../../types/notion/pages/properties/rollup.js";
+import type { RollupPropertyItemObject } from "../../../../types/notion/property/rollup.js";
 import type { Overwrite } from "../../../../types/utils.js";
 import type {
   PropertyItemObjectResponse,

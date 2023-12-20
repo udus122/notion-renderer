@@ -3,7 +3,7 @@ import { RichText } from "../RichText/RichText.js";
 
 import { Icon } from "./Icon.js";
 
-import type { RelationItem as RelationItemType } from "../../types/notion/pages/properties/relation.js";
+import type { RelationItem as RelationItemType } from "../../types/notion/property/relation.js";
 import type { FC } from "react";
 
 type Props = {

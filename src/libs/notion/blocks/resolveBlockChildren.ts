@@ -3,7 +3,7 @@ import { notUndefined } from "../../utils/utils.js";
 import { convertResponseToBlock } from "./convert/convertResponseToBlock.js";
 import { wrapListItems } from "./wrapListItems.js";
 
-import type { BlockBlockObject } from "../../../types/notion/blocks/block.js";
+import type { BlockBlockObject } from "../../../types/notion/block/block.js";
 import type { ListBlockChildrenResponseResults } from "../../../types/notion/common/common.js";
 
 export const resolveBlockChildren = async (

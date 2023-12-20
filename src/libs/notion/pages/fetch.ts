@@ -3,7 +3,7 @@ import { isFullPage } from "@notionhq/client";
 import { convertResponseToPage } from "./convert.js";
 import { retrievePage } from "./retrieve.js";
 
-import type { PageObject } from "../../../types/notion/pages/page.js";
+import type { PageObject } from "../../../types/notion/page.js";
 import type { Result } from "../../../types/utils.js";
 import type { GetPageParameters } from "@notionhq/client/build/src/api-endpoints.js";
 

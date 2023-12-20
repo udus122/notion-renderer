@@ -1,4 +1,4 @@
-import type { FormulaPropertyItemObject } from "../../../../types/notion/pages/properties/formula.js";
+import type { FormulaPropertyItemObject } from "../../../../types/notion/property/formula.js";
 import type { FormulaPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToFormulaPropertyItem = (

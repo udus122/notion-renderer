@@ -1,7 +1,7 @@
 import { PageMeta } from "./PageMeta.js";
 import PageMetaObject from "./PageMeta.json";
 
-import type { PageObject as PageObjectType } from "../../types/notion/pages/page.js";
+import type { PageObject as PageObjectType } from "../../types/notion/page.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof PageMeta> = {

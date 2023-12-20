@@ -1,7 +1,7 @@
 import { Icon } from "../Common/Icon.js";
 import { useMapper } from "../hooks.js";
 
-import type { ChildPageBlock } from "../../types/notion/blocks/childPage.js";
+import type { ChildPageBlock } from "../../types/notion/block/childPage.js";
 
 export const ChildPage: ChildPageBlock = ({ block }) => {
   const { Link } = useMapper();

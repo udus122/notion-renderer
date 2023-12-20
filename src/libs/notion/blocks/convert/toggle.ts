@@ -1,7 +1,7 @@
 import { convertResponseToRichText } from "../../richText/richText.js";
 import { fetchBlockList } from "../fetchBlockList.js";
 
-import type { ToggleBlockObject } from "../../../../types/notion/blocks/toggle.js";
+import type { ToggleBlockObject } from "../../../../types/notion/block/toggle.js";
 import type { ToggleBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertToggleResponseToBlock = async (

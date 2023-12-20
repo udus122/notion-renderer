@@ -1,6 +1,6 @@
 import { convertResponseToRichText } from "../../richText/richText.js";
 
-import type { CodeBlockObject } from "../../../../types/notion/blocks/code.js";
+import type { CodeBlockObject } from "../../../../types/notion/block/code.js";
 import type { CodeBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertCodeResponseToBlock = async (

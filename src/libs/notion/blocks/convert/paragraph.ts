@@ -1,7 +1,7 @@
 import { convertResponseToRichText } from "../../richText/richText.js";
 import { fetchBlockList } from "../fetchBlockList.js";
 
-import type { ParagraphBlockObject } from "../../../../types/notion/blocks/paragraph.js";
+import type { ParagraphBlockObject } from "../../../../types/notion/block/paragraph.js";
 import type { ParagraphBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertParagraphResponseToBlock = async (

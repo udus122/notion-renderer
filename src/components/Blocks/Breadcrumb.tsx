@@ -5,7 +5,7 @@ import { Icon } from "../Common/Icon.js";
 import { useMapper } from "../hooks.js";
 import { RichText } from "../RichText/RichText.js";
 
-import type { BreadcrumbBlock } from "../../types/notion/blocks/breadcrumb.js";
+import type { BreadcrumbBlock } from "../../types/notion/block/breadcrumb.js";
 
 export const Breadcrumb: BreadcrumbBlock = ({ block }) => {
   const { Link } = useMapper();

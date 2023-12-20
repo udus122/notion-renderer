@@ -1,7 +1,7 @@
 import { convertResponseToRichText } from "../../richText/richText.js";
 import { fetchBlockList } from "../fetchBlockList.js";
 
-import type { ToDoBlockObject } from "../../../../types/notion/blocks/toDo.js";
+import type { ToDoBlockObject } from "../../../../types/notion/block/toDo.js";
 import type { ToDoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertToDoResponseToBlock = async (

@@ -1,7 +1,7 @@
 import { listBlockChildren } from "./listBlocksChildren.js";
 import { resolveBlockChildren } from "./resolveBlockChildren.js";
 
-import type { BlockBlockObject } from "../../../types/notion/blocks/block.js";
+import type { BlockBlockObject } from "../../../types/notion/block/block.js";
 import type { ListBlockChildrenParameters } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const fetchBlockList = async (

@@ -1,4 +1,4 @@
-import type { TitlePropertyItemObject } from "../../../../types/notion/pages/properties/title.js";
+import type { TitlePropertyItemObject } from "../../../../types/notion/property/title.js";
 import type { Overwrite } from "../../../../types/utils.js";
 import type {
   PropertyItemObjectResponse,

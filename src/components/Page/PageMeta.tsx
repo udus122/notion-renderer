@@ -4,7 +4,7 @@ import { Icon } from "../Common/Icon.js";
 import { Title } from "../Common/Title.js";
 import { Properties } from "../Property/Properties.js";
 
-import type { PageObject } from "../../types/notion/pages/page.js";
+import type { PageObject } from "../../types/notion/page.js";
 import type { ComponentType } from "react";
 
 type Props = {

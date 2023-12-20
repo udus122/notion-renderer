@@ -3,7 +3,7 @@ import { RichText } from "../RichText/RichText.js";
 
 import { BlockList } from "./BlockList.js";
 
-import type { CalloutBlock } from "../../types/notion/blocks/callout.js";
+import type { CalloutBlock } from "../../types/notion/block/callout.js";
 
 export const Callout: CalloutBlock = ({ block }) => {
   return (

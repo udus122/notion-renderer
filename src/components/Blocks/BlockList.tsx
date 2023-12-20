@@ -2,7 +2,7 @@ import { BlocksContext } from "../hooks.js";
 
 import { Block } from "./Block.js";
 
-import type { BlockBlockObject } from "../../types/notion/blocks/block.js";
+import type { BlockBlockObject } from "../../types/notion/block/block.js";
 import type { FC } from "react";
 
 type Props = {

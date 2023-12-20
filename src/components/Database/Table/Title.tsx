@@ -1,8 +1,8 @@
 import { Icon } from "../../Common/Icon.js";
 import { useMapper } from "../../hooks.js";
 
-import type { PageObject } from "../../../types/notion/pages/page.js";
-import type { TitlePropertyItemObject } from "../../../types/notion/pages/properties/title.js";
+import type { PageObject } from "../../../types/notion/page.js";
+import type { TitlePropertyItemObject } from "../../../types/notion/property/title.js";
 
 export const TableTitle = (
   title: TitlePropertyItemObject,

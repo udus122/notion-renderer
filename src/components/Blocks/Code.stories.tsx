@@ -1,7 +1,7 @@
 import { Code } from "./Code.js";
 import CodeObject from "./Code.json";
 
-import type { CodeBlockObject } from "../../types/notion/blocks/code.js";
+import type { CodeBlockObject } from "../../types/notion/block/code.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Code> = {
