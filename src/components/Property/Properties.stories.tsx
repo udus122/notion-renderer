@@ -2,7 +2,7 @@ import { Properties } from "./Properties.js";
 import PropertiesObject from "./Properties.json";
 
 import type { Meta, StoryObj } from "@storybook/react";
-import type { PropertyItem } from "src/types/notion/property/properties.js";
+import type { PropertyItemType } from "src/types/notion/property/properties.js";
 
 const meta: Meta<typeof Properties> = {
   title: "Properties",
@@ -16,7 +16,7 @@ type Story = StoryObj<typeof Properties>;
 
 export const Default: Story = {
   args: {
-    properties: PropertiesObject as unknown as Record<string, PropertyItem>,
+    properties: PropertiesObject as unknown as Record<string, PropertyItemType>,
   },
   decorators: [
     (Story) => (
@@ -29,7 +29,7 @@ export const Default: Story = {
 
 export const hidePropertyName: Story = {
   args: {
-    properties: PropertiesObject as unknown as Record<string, PropertyItem>,
+    properties: PropertiesObject as unknown as Record<string, PropertyItemType>,
     hidePropertyName: true,
   },
   decorators: [

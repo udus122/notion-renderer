@@ -1,8 +1,8 @@
-import type { RichTextItem } from "../richText/richTextItem.js";
+import type { RichTextItemType } from "../richText/richTextItem.js";
 import type { ComponentType } from "react";
 
 export type ColorAnnotationItemProps = React.ComponentProps<"span"> & {
-  richTextItem: RichTextItem;
+  richTextItem: RichTextItemType;
 };
 
 export type ColorAnnotationItem = ComponentType<ColorAnnotationItemProps>;

@@ -1,11 +1,11 @@
 import type { DatabaseObject } from "./types/notion/database.js";
 import type { PageObject } from "./types/notion/page.js";
 import type {
-  PropertyItem,
+  PropertyItemType,
   PropertyItemObjectResponse,
 } from "./types/notion/property/properties.js";
 import type { TitlePropertyItemObject } from "./types/notion/property/title.js";
-import type { RichText } from "./types/notion/richText/richText.js";
+import type { RichTextType } from "./types/notion/richText/richText.js";
 import type {
   DatabaseObjectResponse,
   PageObjectResponse,
@@ -13,7 +13,7 @@ import type {
 
 type PageOrDatabasePropertyItems =
   | PropertyItemObjectResponse
-  | PropertyItem
+  | PropertyItemType
   | DatabaseObject["properties"][string];
 
 type PageOrDatabaseProperties = Record<string, PageOrDatabasePropertyItems>;
@@ -43,7 +43,7 @@ export const splitTitleAndOtherProperties = <
 
 export const extractTitle = (
   pageOrDatabase: PageObject | PageObjectResponse | DatabaseObjectResponse,
-): RichText => {
+): RichTextType => {
   if (pageOrDatabase.object === "page") {
     const { title } = splitTitleAndOtherProperties(pageOrDatabase.properties);
     return title?.title ?? [];

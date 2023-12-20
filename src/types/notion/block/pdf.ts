@@ -1,7 +1,7 @@
 import type { BlockBlockProps } from "./block.js";
 import type { Overwrite } from "../../utils.js";
 import type { TextRequest } from "../common/common.js";
-import type { RichTextItem } from "../richText/richTextItem.js";
+import type { RichTextItemType } from "../richText/richTextItem.js";
 import type { PdfBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 import type { ComponentType } from "react";
 
@@ -14,7 +14,7 @@ export type PdfBlockObject = Overwrite<
           external: {
             url: TextRequest;
           };
-          caption: Array<RichTextItem>;
+          caption: Array<RichTextItemType>;
         }
       | {
           type: "file";
@@ -22,7 +22,7 @@ export type PdfBlockObject = Overwrite<
             url: string;
             expiry_time: string;
           };
-          caption: Array<RichTextItem>;
+          caption: Array<RichTextItemType>;
         };
   }
 >;

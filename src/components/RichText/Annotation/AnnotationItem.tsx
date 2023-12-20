@@ -7,11 +7,11 @@ import { Italic } from "./Italic.js";
 import { Strikethrough } from "./Strikethrough.js";
 import { Underline } from "./Underline.js";
 
-import type { RichTextItem } from "../../../types/notion/richText/richTextItem.js";
+import type { RichTextItemType } from "../../../types/notion/richText/richTextItem.js";
 import type { FC, ReactNode } from "react";
 
 export const AnnotationItem: FC<{
-  richTextItem: RichTextItem;
+  richTextItem: RichTextItemType;
   children: ReactNode;
 }> = ({ richTextItem, children }) => {
   const { annotationMapper } = useMapper();
