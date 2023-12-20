@@ -1,9 +1,9 @@
 import BlocksObject from "./BlockList.json";
+import { BlockRenderer } from "./Blocks.js";
 import { OpenedHeading1 } from "./Custom/OpenedHeading1.js";
 import { OpenedHeading2 } from "./Custom/OpenedHeading2.js";
 import { OpenedHeading3 } from "./Custom/OpenedHeading3.js";
 import { OpenedToggle } from "./Custom/OpenedToggle.js";
-import { BlockRenderer } from "./Renderer.js";
 
 import type { BlockBlockObject } from "../../types/notion/block/block.js";
 import type { Meta, StoryObj } from "@storybook/react";

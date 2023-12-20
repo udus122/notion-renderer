@@ -1,6 +1,7 @@
 export * from "./Audio.js";
 export * from "./Block.js";
 export * from "./BlockList.js";
+export * from "./Blocks.js";
 export * from "./Bookmark.js";
 export * from "./Breadcrumb.js";
 export * from "./BulletedList.js";
@@ -25,7 +26,6 @@ export * from "./NumberedListItem.js";
 export * from "./Paragraph.js";
 export * from "./Pdf.js";
 export * from "./Quote.js";
-export * from "./Renderer.js";
 export * from "./SyncedBlock.js";
 export * from "./Table.js";
 export * from "./ToDo.js";
