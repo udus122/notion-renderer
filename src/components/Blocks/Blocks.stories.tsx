@@ -1,5 +1,5 @@
 import BlocksObject from "./BlockList.json";
-import { BlockRenderer } from "./Blocks.js";
+import { Blocks } from "./Blocks.js";
 import { OpenedHeading1 } from "./Custom/OpenedHeading1.js";
 import { OpenedHeading2 } from "./Custom/OpenedHeading2.js";
 import { OpenedHeading3 } from "./Custom/OpenedHeading3.js";
@@ -8,15 +8,15 @@ import { OpenedToggle } from "./Custom/OpenedToggle.js";
 import type { BlockBlockObject } from "../../types/notion/block/block.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
-const meta: Meta<typeof BlockRenderer> = {
+const meta: Meta<typeof Blocks> = {
   title: "Blocks/Renderer",
-  component: BlockRenderer,
+  component: Blocks,
   tags: ["autodocs"],
 };
 
 export default meta;
 
-type Story = StoryObj<typeof BlockRenderer>;
+type Story = StoryObj<typeof Blocks>;
 
 export const Default: Story = {
   args: {

@@ -23,7 +23,7 @@ type Props = {
   theme?: "light" | "dark";
 };
 
-export const BlockRenderer: FC<Props> = ({
+export const Blocks: FC<Props> = ({
   blocks,
   blockMapper,
   richTextItemMapper,
