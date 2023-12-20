@@ -8,16 +8,20 @@ export const convertHeading3ResponseToBlock = async (
   block: Heading3BlockObjectResponse,
 ): Promise<Heading3BlockObject> => {
   if (block.has_children) {
-    const children = await fetchBlockList({ block_id: block.id });
-    return {
-      ...block,
-      heading_3: {
-        ...block.heading_3,
-        rich_text: await convertResponseToRichText(block.heading_3.rich_text),
-        children,
-      },
-    } satisfies Heading3BlockObject;
+    const { ok, data } = await fetchBlockList({ block_id: block.id });
+
+    if (ok) {
+      return {
+        ...block,
+        heading_3: {
+          ...block.heading_3,
+          rich_text: await convertResponseToRichText(block.heading_3.rich_text),
+          children: data,
+        },
+      } satisfies Heading3BlockObject;
+    }
   }
+
   return {
     ...block,
     heading_3: {

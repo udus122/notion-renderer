@@ -8,16 +8,20 @@ export const convertCalloutResponseToBlock = async (
   block: CalloutBlockObjectResponse,
 ): Promise<CalloutBlockObject> => {
   if (block.has_children) {
-    const children = await fetchBlockList({ block_id: block.id });
-    return {
-      ...block,
-      callout: {
-        ...block.callout,
-        rich_text: await convertResponseToRichText(block.callout.rich_text),
-        children,
-      },
-    } satisfies CalloutBlockObject;
+    const { ok, data } = await fetchBlockList({ block_id: block.id });
+
+    if (ok) {
+      return {
+        ...block,
+        callout: {
+          ...block.callout,
+          rich_text: await convertResponseToRichText(block.callout.rich_text),
+          children: data,
+        },
+      } satisfies CalloutBlockObject;
+    }
   }
+
   return {
     ...block,
     callout: {

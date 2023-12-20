@@ -8,18 +8,22 @@ export const convertBulletedListItemResponseToBlock = async (
   block: BulletedListItemBlockObjectResponse,
 ): Promise<BulletedListItemBlockObject> => {
   if (block.has_children) {
-    const children = await fetchBlockList({ block_id: block.id });
-    return {
-      ...block,
-      bulleted_list_item: {
-        ...block.bulleted_list_item,
-        rich_text: await convertResponseToRichText(
-          block.bulleted_list_item.rich_text,
-        ),
-        children,
-      },
-    } satisfies BulletedListItemBlockObject;
+    const { ok, data } = await fetchBlockList({ block_id: block.id });
+
+    if (ok) {
+      return {
+        ...block,
+        bulleted_list_item: {
+          ...block.bulleted_list_item,
+          rich_text: await convertResponseToRichText(
+            block.bulleted_list_item.rich_text,
+          ),
+          children: data,
+        },
+      } satisfies BulletedListItemBlockObject;
+    }
   }
+
   return {
     ...block,
     bulleted_list_item: {

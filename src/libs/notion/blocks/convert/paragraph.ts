@@ -8,16 +8,20 @@ export const convertParagraphResponseToBlock = async (
   block: ParagraphBlockObjectResponse,
 ): Promise<ParagraphBlockObject> => {
   if (block.has_children) {
-    const children = await fetchBlockList({ block_id: block.id });
-    return {
-      ...block,
-      paragraph: {
-        ...block.paragraph,
-        rich_text: await convertResponseToRichText(block.paragraph.rich_text),
-        children,
-      },
-    } satisfies ParagraphBlockObject;
+    const { ok, data } = await fetchBlockList({ block_id: block.id });
+
+    if (ok) {
+      return {
+        ...block,
+        paragraph: {
+          ...block.paragraph,
+          rich_text: await convertResponseToRichText(block.paragraph.rich_text),
+          children: data,
+        },
+      } satisfies ParagraphBlockObject;
+    }
   }
+
   return {
     ...block,
     paragraph: {

@@ -1,8 +1,8 @@
 import { Title } from "./Title.js";
 import TitleObject from "./Title.json";
 
+import type { RichTextType } from "../../types/notion/richText/richText.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { RichTextType } from "src/types/notion/richText/richText.js";
 
 const meta: Meta<typeof Title> = {
   title: "Common/Title",

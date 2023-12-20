@@ -2,8 +2,8 @@ import Pages from "../Pages.json";
 
 import { List } from "./List.js";
 
+import type { PageObject } from "../../../types/notion/page.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { PageObject } from "src/types/notion/page.js";
 
 const meta: Meta<typeof List> = {
   title: "Database/List",
