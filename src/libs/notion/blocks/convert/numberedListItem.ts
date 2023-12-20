@@ -7,15 +7,19 @@ export const convertNumberedListItemResponseToBlock = async (
   block: NumberedListItemBlockObjectResponse,
 ): Promise<NumberedListItemBlockObject> => {
   if (block.has_children) {
-    const children = await fetchBlockList({ block_id: block.id });
-    return {
-      ...block,
-      numbered_list_item: {
-        ...block.numbered_list_item,
-        children,
-      },
-    } satisfies NumberedListItemBlockObject;
+    const { ok, data } = await fetchBlockList({ block_id: block.id });
+
+    if (ok) {
+      return {
+        ...block,
+        numbered_list_item: {
+          ...block.numbered_list_item,
+          children: data,
+        },
+      } satisfies NumberedListItemBlockObject;
+    }
   }
+
   return {
     ...block,
   } satisfies NumberedListItemBlockObject;

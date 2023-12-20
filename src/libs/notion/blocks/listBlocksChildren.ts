@@ -2,6 +2,7 @@ import { callAPIWithBackOffAndCache } from "../../utils/api.js";
 import { notion } from "../auth.js";
 
 import type { ListBlockChildrenResponseResults } from "../../../types/notion/common/common.js";
+import type { Result } from "../../../types/utils.js";
 import type {
   ListBlockChildrenParameters,
   ListBlockChildrenResponse,
@@ -9,23 +10,35 @@ import type {
 
 export const listBlockChildren = async (
   args: ListBlockChildrenParameters,
-): Promise<ListBlockChildrenResponseResults> => {
-  const { ok, data } = await callAPIWithBackOffAndCache<
+): Promise<Result<ListBlockChildrenResponseResults>> => {
+  const result = await callAPIWithBackOffAndCache<
     ListBlockChildrenParameters,
     ListBlockChildrenResponse
   >(notion.blocks.children.list, args);
 
-  if (!ok) {
-    return [];
+  if (!result.ok) {
+    return result;
   }
 
-  if (data.next_cursor) {
+  let blockList = result.data.results;
+
+  if (result.data.next_cursor) {
     const nextResults = await listBlockChildren({
       ...args,
-      start_cursor: data.next_cursor,
+      start_cursor: result.data.next_cursor,
     });
-    data.results = [...data.results, ...nextResults];
+
+    if (nextResults.ok) {
+      blockList = [...blockList, ...nextResults.data];
+    }
   }
 
-  return data.results;
+  return { ok: true, data: blockList };
 };
+
+import "dotenv/config";
+
+const res = await listBlockChildren({
+  block_id: "696a56fa0c6842709fe6165c403abc76",
+});
+console.log(JSON.stringify(res, null, 2));

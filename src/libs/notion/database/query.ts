@@ -1,12 +1,16 @@
+import { isFullPage } from "@notionhq/client";
+
+import { notUndefined } from "../../../libs/utils/utils.js";
 import { callAPIWithBackOffAndCache } from "../../utils/api.js";
 import { notion } from "../auth.js";
+import { convertResponseToPage } from "../index.js";
 
+import type { PageObject } from "../../../types/notion/page.js";
 import type { Result } from "../../../types/utils.js";
 import type {
   QueryDatabaseParameters,
   QueryDatabaseResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
-import type { PageObject } from "src/types/notion/page.js";
 
 export const queryDatabase = async (
   args: QueryDatabaseParameters,
@@ -19,9 +23,30 @@ export const queryDatabase = async (
   return result;
 };
 
+export const fetchDatabaseItems = async (
+  args: QueryDatabaseParameters,
+): Promise<Result<PageObject[]>> => {
+  const { ok, data } = await queryDatabase(args);
+
+  if (ok) {
+    const pages = (
+      await Promise.all(
+        data.results.map(async (page) => {
+          if (!isFullPage(page)) return;
+
+          const converted = convertResponseToPage(page);
+          return converted;
+        }),
+      )
+    ).filter(notUndefined);
+    return { ok: true, data: pages };
+  }
+  return { ok: false, data: new Error("Failed to fetch database items") };
+};
+
 export const queryAllDatabaseItems = async (
   args: QueryDatabaseParameters,
-): Promise<Array<PageObject>> => {
+): Promise<PageObject[]> => {
   const { ok, data } = await queryDatabase(args);
   if (!ok) {
     return [];

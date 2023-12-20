@@ -2,8 +2,8 @@ import Pages from "../Pages.json";
 
 import { Gallery } from "./Gallery.js";
 
+import type { PageObject } from "../../../types/notion/page.js";
 import type { Meta, StoryObj } from "@storybook/react";
-import type { PageObject } from "src/types/notion/page.js";
 
 const meta: Meta<typeof Gallery> = {
   title: "Database/Gallery",

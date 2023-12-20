@@ -9,19 +9,24 @@ export const convertTableResponseToBlock = async (
   block: TableBlockObjectResponse,
 ): Promise<TableBlockObject> => {
   if (block.has_children) {
-    const blocks = await fetchBlockList({ block_id: block.id });
-    const table_rows = blocks.filter(
-      (block): block is TableRowBlockObject =>
-        notNullNorUndefined(block) && block.type === "table_row",
-    );
-    return {
-      ...block,
-      table: {
-        ...block.table,
-        table_rows,
-      },
-    } satisfies TableBlockObject;
+    const { ok, data } = await fetchBlockList({ block_id: block.id });
+
+    if (ok) {
+      const table_rows = data.filter(
+        (block): block is TableRowBlockObject =>
+          notNullNorUndefined(block) && block.type === "table_row",
+      );
+
+      return {
+        ...block,
+        table: {
+          ...block.table,
+          table_rows,
+        },
+      } satisfies TableBlockObject;
+    }
   }
+
   return {
     ...block,
   } satisfies TableBlockObject;

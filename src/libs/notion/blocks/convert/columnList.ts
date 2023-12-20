@@ -9,19 +9,24 @@ export const convertColumnListResponseToBlock = async (
   block: ColumnListBlockObjectResponse,
 ): Promise<ColumnListBlockObject> => {
   if (block.has_children) {
-    const blocks = await fetchBlockList({ block_id: block.id });
-    const columns = blocks.filter(
-      (block): block is ColumnBlockObject =>
-        notNullNorUndefined(block) && block.type === "column",
-    );
-    return {
-      ...block,
-      column_list: {
-        ...block.column_list,
-        columns,
-      },
-    } satisfies ColumnListBlockObject;
+    const { ok, data } = await fetchBlockList({ block_id: block.id });
+
+    if (ok) {
+      const columns = data.filter(
+        (block): block is ColumnBlockObject =>
+          notNullNorUndefined(block) && block.type === "column",
+      );
+
+      return {
+        ...block,
+        column_list: {
+          ...block.column_list,
+          columns,
+        },
+      } satisfies ColumnListBlockObject;
+    }
   }
+
   return {
     ...block,
   } satisfies ColumnListBlockObject;

@@ -7,14 +7,18 @@ export const convertColumnResponseToBlock = async (
   block: ColumnBlockObjectResponse,
 ): Promise<ColumnBlockObject> => {
   if (block.has_children) {
-    const children = await fetchBlockList({ block_id: block.id });
-    return {
-      ...block,
-      column: {
-        ...block.column,
-        children,
-      },
-    };
+    const { ok, data } = await fetchBlockList({ block_id: block.id });
+
+    if (ok) {
+      return {
+        ...block,
+        column: {
+          ...block.column,
+          children: data,
+        },
+      };
+    }
   }
+
   return { ...block } satisfies ColumnBlockObject;
 };

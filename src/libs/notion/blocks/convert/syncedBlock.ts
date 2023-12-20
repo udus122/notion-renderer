@@ -11,25 +11,29 @@ export const convertSyncedBlockResponseToBlock = async (
     return block satisfies SyncedBlockBlockObject;
   }
 
-  const children = await fetchBlockList({ block_id: block.id });
+  const { ok: okFetchBlockList, data: children } = await fetchBlockList({
+    block_id: block.id,
+  });
 
-  if (block.synced_block.synced_from) {
-    const { ok, data } = await fetchBlock({
-      block_id: block.synced_block.synced_from.block_id,
-    });
+  if (okFetchBlockList) {
+    if (block.synced_block.synced_from) {
+      const { ok: okFetchBlock, data: syncedFrom } = await fetchBlock({
+        block_id: block.synced_block.synced_from.block_id,
+      });
 
-    if (ok) {
-      return {
-        ...block,
-        synced_block: {
-          ...block.synced_block,
-          synced_from: {
-            ...block.synced_block.synced_from,
-            block: data,
+      if (okFetchBlock) {
+        return {
+          ...block,
+          synced_block: {
+            ...block.synced_block,
+            synced_from: {
+              ...block.synced_block.synced_from,
+              block: syncedFrom,
+            },
+            children,
           },
-          children: children,
-        },
-      } satisfies SyncedBlockBlockObject;
+        } satisfies SyncedBlockBlockObject;
+      }
     }
   }
 
@@ -37,7 +41,7 @@ export const convertSyncedBlockResponseToBlock = async (
     ...block,
     synced_block: {
       ...block.synced_block,
-      children,
+      children: [],
     },
   } satisfies SyncedBlockBlockObject;
 };

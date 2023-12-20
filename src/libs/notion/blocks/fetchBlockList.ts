@@ -2,16 +2,26 @@ import { listBlockChildren } from "./listBlocksChildren.js";
 import { resolveBlockChildren } from "./resolveBlockChildren.js";
 
 import type { BlockBlockObject } from "../../../types/notion/block/block.js";
+import type { Result } from "../../../types/utils.js";
 import type { ListBlockChildrenParameters } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const fetchBlockList = async (
   args: ListBlockChildrenParameters,
-): Promise<BlockBlockObject[]> => {
-  const childrenBlockResponses = await listBlockChildren(args);
+): Promise<Result<BlockBlockObject[]>> => {
+  const { ok, data } = await listBlockChildren(args);
 
-  const childrenBlockComponents = await resolveBlockChildren(
-    childrenBlockResponses,
-  );
+  if (!ok) {
+    return { ok, data };
+  }
 
-  return childrenBlockComponents;
+  const childrenBlockComponents = await resolveBlockChildren(data);
+
+  return { ok: true, data: childrenBlockComponents };
 };
+
+import "dotenv/config";
+
+const res = await fetchBlockList({
+  block_id: "7ed3a6eebb5e4cdfa94433684d7c56bf",
+});
+console.log(JSON.stringify(res, null, 2));

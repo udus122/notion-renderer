@@ -8,16 +8,20 @@ export const convertQuoteResponseToBlock = async (
   block: QuoteBlockObjectResponse,
 ): Promise<QuoteBlockObject> => {
   if (block.has_children) {
-    const children = await fetchBlockList({ block_id: block.id });
-    return {
-      ...block,
-      quote: {
-        ...block.quote,
-        rich_text: await convertResponseToRichText(block.quote.rich_text),
-        children,
-      },
-    } satisfies QuoteBlockObject;
+    const { ok, data } = await fetchBlockList({ block_id: block.id });
+
+    if (ok) {
+      return {
+        ...block,
+        quote: {
+          ...block.quote,
+          rich_text: await convertResponseToRichText(block.quote.rich_text),
+          children: data,
+        },
+      } satisfies QuoteBlockObject;
+    }
   }
+
   return {
     ...block,
     quote: {

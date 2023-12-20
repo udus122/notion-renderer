@@ -8,16 +8,20 @@ export const convertToDoResponseToBlock = async (
   block: ToDoBlockObjectResponse,
 ): Promise<ToDoBlockObject> => {
   if (block.has_children) {
-    const children = await fetchBlockList({ block_id: block.id });
-    return {
-      ...block,
-      to_do: {
-        ...block.to_do,
-        rich_text: await convertResponseToRichText(block.to_do.rich_text),
-        children,
-      },
-    } satisfies ToDoBlockObject;
+    const { ok, data } = await fetchBlockList({ block_id: block.id });
+
+    if (ok) {
+      return {
+        ...block,
+        to_do: {
+          ...block.to_do,
+          rich_text: await convertResponseToRichText(block.to_do.rich_text),
+          children: data,
+        },
+      } satisfies ToDoBlockObject;
+    }
   }
+
   return {
     ...block,
     to_do: {
