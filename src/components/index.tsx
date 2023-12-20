@@ -1,3 +1,5 @@
+"use client";
+
 export * from "./Blocks/index.js";
 export * from "./Blocks/Custom/index.js";
 export * from "./Database/index.js";
