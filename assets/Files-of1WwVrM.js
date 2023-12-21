@@ -1,0 +1,1 @@
+import{j as s}from"./jsx-runtime-vNq4Oc-g.js";import{F as r}from"./File-Hwv8s3_9.js";const n=({propertyItem:i})=>s.jsx("div",{id:i.id,className:"notion-property-item notion-files",children:i.files.map(o=>s.jsx(r,{file:o}))});export{n as F};
