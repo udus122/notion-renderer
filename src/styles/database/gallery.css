@@ -17,10 +17,7 @@
   box-shadow:
     rgb(15 15 15 / 10%) 0 0 0 1px,
     rgb(15 15 15 / 10%) 0 2px 4px;
-
-  .notion-dark & {
-    background: rgb(255 255 255 / 5.5%);
-  }
+  background: var(--color-bg-gallery-card);
 
   & > a {
     display: contents;

@@ -5,7 +5,6 @@ export {
   Audio,
   Block,
   BlockList,
-  Blocks,
   Bookmark,
   Breadcrumb,
   BulletedList,

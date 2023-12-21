@@ -1,14 +1,7 @@
 /* code block */
 .notion-code {
   padding-block-start: 0.5rem;
-
-  .notion-light & {
-    background-color: rgb(247 246 243);
-  }
-
-  .notion-dark & {
-    background-color: rgb(255 255 255 / 3%);
-  }
+  background-color: var(--color-code);
 
   .notion-code-header {
     display: flex;

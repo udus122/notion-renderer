@@ -18,13 +18,6 @@ export const Default: Story = {
   args: {
     properties: PropertiesObject as unknown as Record<string, PropertyItemType>,
   },
-  decorators: [
-    (Story) => (
-      <div className="notion-root notion-light">
-        <Story />
-      </div>
-    ),
-  ],
 };
 
 export const hidePropertyName: Story = {

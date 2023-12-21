@@ -21,7 +21,6 @@ type Props = {
   hideTitle?: boolean;
   hideDescription?: boolean;
   viewType?: "table" | "gallery" | "list";
-  theme?: "light" | "dark";
 };
 
 export const Database: FC<Props> = ({
@@ -33,7 +32,6 @@ export const Database: FC<Props> = ({
   hideTitle = false,
   hideDescription = false,
   viewType = "table",
-  theme,
 }) => {
   // Filter properties to display
   if (displayProperties) {
@@ -48,10 +46,7 @@ export const Database: FC<Props> = ({
   }
 
   return (
-    <div
-      id={database.id}
-      className={`notion-database ${theme ? `notion-${theme}` : ""}`}
-    >
+    <div id={database.id} className="notion-database">
       {!hideCover && (
         <div className="notion-database-cover">
           <Cover cover={database.cover} />

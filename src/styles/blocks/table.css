@@ -12,23 +12,14 @@
     padding: 0.3rem;
     font-weight: 500;
     text-align: left;
-    background-color: rgb(247 246 243);
-    border: 1px solid rgb(233 233 231);
-
-    .notion-dark & {
-      background-color: rgb(255 255 255 / 3%);
-      border: 1px solid rgb(47 47 47);
-    }
+    background-color: var(--color-th-background);
+    border: 1px solid var(--color-table-border);
   }
 
   td {
     margin: 0;
     padding: 0.3rem;
     text-align: left;
-    border: 1px solid rgb(233 233 231);
-
-    .notion-dark & {
-      border: 1px solid rgb(47 47 47);
-    }
+    border: 1px solid var(--color-table-border);
   }
 }

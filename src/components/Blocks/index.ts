@@ -1,7 +1,6 @@
 export * from "./Audio.js";
 export * from "./Block.js";
 export * from "./BlockList.js";
-export * from "./Blocks.js";
 export * from "./Bookmark.js";
 export * from "./Breadcrumb.js";
 export * from "./BulletedList.js";
