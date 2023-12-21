@@ -1,5 +1,6 @@
 "use client";
 
+export { RenderConfig } from "./RenderConfig.js";
 export {
   Audio,
   Block,
