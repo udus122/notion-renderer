@@ -1,8 +1,8 @@
 import { isFullUser } from "@notionhq/client";
 
 import { DateComponent } from "../Common/Date.js";
+import { Icon } from "../Common/Icon.js";
 import { useMapper } from "../hooks.js";
-import { Icon } from "../index.js";
 
 import type { MentionRichTextItemObject } from "../../types/notion/richText/mention.js";
 import type { RichTextItemProps } from "../../types/notion/richText/richTextItem.js";
