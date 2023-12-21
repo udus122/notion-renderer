@@ -1,48 +1,62 @@
-"use client";
+import { selectProperties, splitTitleAndOtherProperties } from "../../utils.js";
+import { BlockList } from "../Blocks/BlockList.js";
+import { Cover } from "../Common/Cover.js";
+import { Icon } from "../Common/Icon.js";
+import { Title } from "../Common/Title.js";
+import { Properties } from "../Property/Properties.js";
 
-import { PropertyItemProvider } from "../Mapper/Property.js";
-
-import { PageMeta } from "./PageMeta.js";
-
-import type { PropertyItemMapper } from "../../types/notion/mapper/propertyItem.js";
+import type { BlockBlockObject } from "../../types/notion/block/block.js";
 import type { PageObject } from "../../types/notion/page.js";
 import type { FC } from "react";
 
 type Props = {
-  page?: PageObject;
+  page: PageObject;
+  blocks?: Array<BlockBlockObject>;
   displayProperties?: Array<string>;
   hideProperties?: boolean;
   hideCover?: boolean;
   hideIcon?: boolean;
   hideTitle?: boolean;
-  propertyMapper?: PropertyItemMapper;
-  theme?: "light" | "dark";
 };
 
 export const Page: FC<Props> = ({
   page,
+  blocks,
   displayProperties,
   hideCover = false,
   hideIcon = false,
   hideTitle = false,
   hideProperties = false,
-  propertyMapper,
-  theme = "light",
 }) => {
+  const { title, other } = splitTitleAndOtherProperties(page.properties);
+
+  const properties = displayProperties
+    ? selectProperties(other, displayProperties)
+    : other;
   return (
-    <div className={`notion-root notion-${theme}`}>
-      {page && (
-        <PropertyItemProvider mapper={propertyMapper}>
-          <PageMeta
-            page={page}
-            displayProperties={displayProperties}
-            hideCover={hideCover}
-            hideIcon={hideIcon}
-            hideTitle={hideTitle}
-            hideProperties={hideProperties}
-          />
-        </PropertyItemProvider>
+    <div id={page.id} className="notion-page">
+      {!hideCover && (
+        <div className="notion-page-cover">
+          <Cover cover={page.cover} />
+        </div>
       )}
+
+      {!hideIcon && (
+        <div className="notion-page-icon">
+          <Icon icon={page.icon} />
+        </div>
+      )}
+      {!hideTitle && (
+        <div className="notion-page-title">
+          <Title title={title?.title ?? []} />
+        </div>
+      )}
+      {!hideProperties && (
+        <div className="notion-page-properties">
+          <Properties properties={properties} />
+        </div>
+      )}
+      {blocks && <BlockList blocks={blocks} />}
     </div>
   );
 };

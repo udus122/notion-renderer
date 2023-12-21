@@ -17,10 +17,6 @@
   border-radius: 0.25rem;
 
   &:hover {
-    background-color: rgb(55 53 47 / 8%);
-
-    .notion-dark & {
-      background-color: rgb(255 255 255 / 5.5%);
-    }
+    background-color: var(--color-link-hover);
   }
 }

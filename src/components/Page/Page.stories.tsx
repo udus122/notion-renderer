@@ -1,11 +1,14 @@
-import { Page } from "./Page.js";
-import PageMetaObjectData from "./PageMeta.json";
+import BlocksObject from "../Blocks/BlockList.json";
 
+import { Page } from "./Page.js";
+import PageObjectData from "./Page.json";
+
+import type { BlockBlockObject } from "../../types/notion/block/block.js";
 import type { PageObject } from "../../types/notion/page.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Page> = {
-  title: "Page",
+  title: "Page/Page",
   component: Page,
   tags: ["autodocs"],
 };
@@ -16,7 +19,8 @@ type Story = StoryObj<typeof Page>;
 
 export const Default: Story = {
   args: {
-    page: PageMetaObjectData as PageObject,
+    page: PageObjectData as PageObject,
+    blocks: BlocksObject as Array<BlockBlockObject>,
     displayProperties: [
       "Status",
       "Multi-select",
@@ -43,24 +47,6 @@ export const Default: Story = {
         "hideIcon",
         "hideTitle",
         "hideProperties",
-        "theme",
-      ],
-    },
-  },
-};
-
-export const Custom: Story = {
-  args: {
-    page: PageMetaObjectData as PageObject,
-  },
-  parameters: {
-    controls: {
-      include: [
-        "viewType",
-        "hideCover",
-        "hideIcon",
-        "hideTitle",
-        "hideDescription",
         "theme",
       ],
     },
