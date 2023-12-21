@@ -14,7 +14,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className="notion-root notion-dark">{children}</body>
     </html>
   );
 }
