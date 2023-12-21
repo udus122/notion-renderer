@@ -27,10 +27,10 @@ export const Blocks: FC<Props> = ({
   richTextItemMapper,
   annotationMapper,
   LinkComponent,
-  theme = "light",
+  theme,
 }) => {
   return (
-    <div className={`notion-root notion-${theme}`}>
+    <div className={theme ? `notion-${theme}` : ""}>
       <BlockProvider mapper={blockMapper}>
         <RichTextItemProvider mapper={richTextItemMapper}>
           <AnnotationItemProvider mapper={annotationMapper}>

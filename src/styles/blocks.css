@@ -1,9 +1,9 @@
 .notion-block-list {
-  margin-inline: var(--margin);
-
-  .notion-block-list {
-    margin-inline: 0;
-  }
+  color: var(--color-text-default);
+  background-color: var(--color-bg-default);
+  line-height: var(--notion-line-height);
+  fill: var(--notion-fill);
+  overflow-wrap: var(--notion-overflow-wrap);
 }
 
 .notion-block {

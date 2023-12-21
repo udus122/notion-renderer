@@ -33,7 +33,7 @@ export const Database: FC<Props> = ({
   hideTitle = false,
   hideDescription = false,
   viewType = "table",
-  theme = "light",
+  theme,
 }) => {
   // Filter properties to display
   if (displayProperties) {
@@ -48,37 +48,38 @@ export const Database: FC<Props> = ({
   }
 
   return (
-    <div className={`notion-root notion-${theme}`}>
-      <div id={database.id} className="notion-database">
-        {!hideCover && (
-          <div className="notion-database-cover">
-            <Cover cover={database.cover} />
-          </div>
-        )}
-        {!hideIcon && (
-          <div className="notion-database-icon">
-            <Icon icon={database.icon} />
-          </div>
-        )}
-        {!hideTitle && (
-          <div className="notion-database-title">
-            <Title title={database.title} />
-          </div>
-        )}
-        {!hideDescription && (
-          <div className="notion-database-description">
-            <RichText richText={database.description} />
-          </div>
-        )}
-        <div className="notion-database-collection">
-          {viewType === "gallery" ? (
-            <Gallery pages={pages} />
-          ) : viewType === "list" ? (
-            <List pages={pages} />
-          ) : viewType === "table" ? (
-            <Table database={database} pages={pages} />
-          ) : null}
+    <div
+      id={database.id}
+      className={`notion-database ${theme ? `notion-${theme}` : ""}`}
+    >
+      {!hideCover && (
+        <div className="notion-database-cover">
+          <Cover cover={database.cover} />
         </div>
+      )}
+      {!hideIcon && (
+        <div className="notion-database-icon">
+          <Icon icon={database.icon} />
+        </div>
+      )}
+      {!hideTitle && (
+        <div className="notion-database-title">
+          <Title title={database.title} />
+        </div>
+      )}
+      {!hideDescription && (
+        <div className="notion-database-description">
+          <RichText richText={database.description} />
+        </div>
+      )}
+      <div className="notion-database-collection">
+        {viewType === "gallery" ? (
+          <Gallery pages={pages} />
+        ) : viewType === "list" ? (
+          <List pages={pages} />
+        ) : viewType === "table" ? (
+          <Table database={database} pages={pages} />
+        ) : null}
       </div>
     </div>
   );

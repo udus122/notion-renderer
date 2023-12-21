@@ -1,8 +1,15 @@
 .notion-database {
   display: grid;
   grid-template-columns:
-    [full-start] var(--margin) [content-start] 1fr [content-end] var(--margin)
+    [full-start] var(--notion-margin) [content-start] 1fr [content-end] var(
+      --notion-margin
+    )
     [full-end];
+  color: var(--color-text-default);
+  background-color: var(--color-bg-default);
+  line-height: var(--notion-line-height);
+  fill: var(--notion-fill);
+  overflow-wrap: var(--notion-overflow-wrap);
 }
 
 .notion-database-cover {

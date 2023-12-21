@@ -9,7 +9,7 @@ import type { BlockBlockObject } from "../../types/notion/block/block.js";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Blocks> = {
-  title: "Blocks/Renderer",
+  title: "Blocks",
   component: Blocks,
   tags: ["autodocs"],
 };
@@ -22,11 +22,10 @@ export const Default: Story = {
   args: {
     blocks: BlocksObject as Array<BlockBlockObject>,
   },
-};
-export const Dark: Story = {
-  args: {
-    blocks: BlocksObject as Array<BlockBlockObject>,
-    theme: "dark",
+  parameters: {
+    controls: {
+      include: ["theme"],
+    },
   },
 };
 

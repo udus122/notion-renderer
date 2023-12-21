@@ -44,7 +44,7 @@ export {
   OpenedToggle,
 } from "./Blocks/Custom/index.js";
 export { Database } from "./Database/index.js";
-export { Page, PageMeta } from "./Page/index.js";
+export { Page } from "./Page/index.js";
 export {
   CheckboxProperty,
   CreatedByProperty,
