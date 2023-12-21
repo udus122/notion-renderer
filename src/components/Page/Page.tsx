@@ -1,5 +1,3 @@
-"use client";
-
 import { PropertyItemProvider } from "../Mapper/Property.js";
 
 import { PageMeta } from "./PageMeta.js";
@@ -9,7 +7,7 @@ import type { PageObject } from "../../types/notion/page.js";
 import type { FC } from "react";
 
 type Props = {
-  page?: PageObject;
+  page: PageObject;
   displayProperties?: Array<string>;
   hideProperties?: boolean;
   hideCover?: boolean;
