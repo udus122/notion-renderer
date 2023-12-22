@@ -1,0 +1,1 @@
+import{j as i}from"./jsx-runtime-vNq4Oc-g.js";import{R as o}from"./RichText-JuwqezW0.js";const s=({propertyItem:t})=>i.jsx("div",{id:t.id,className:"notion-property-item notion-rich-text",children:i.jsx(o,{richText:t.rich_text})});export{s as R};

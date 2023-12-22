@@ -1,0 +1,12 @@
+import{j as t}from"./jsx-runtime-vNq4Oc-g.js";import{P as n}from"./Pages-JcXOlXMa.js";import{L as d}from"./List---v5Eb_V.js";import"./index-4g5l5LRQ.js";import"./_commonjsHelpers-4gQjN7DL.js";import"./ListItem-HEKTdBq4.js";import"./utils-gSqeNnkP.js";import"./Icon-e4pLob1-.js";import"./hooks-3JhRioXY.js";import"./Link-4y-dmM-M.js";import"./Properties-FY85SXUU.js";import"./Property-et7ZdPJx.js";import"./Annotation-mwnpg9rz.js";import"./AnnotationItem-LPu8t0rA.js";import"./Bold-lS9YMGOC.js";import"./Color-mptN1qya.js";import"./InlineCode-TPhS41qP.js";import"./Italic-ORC3lBYR.js";import"./Strikethrough-g_2WBDxm.js";import"./Underline-K-lIgRJf.js";import"./RichText-JuwqezW0.js";import"./RichTextItem-uj_dJdIX.js";import"./InlineEquation-6PAgGiar.js";import"./katex-mFqOzwKf.js";import"./Mention-7zCUoZ8c.js";import"./index-jnESftpm.js";import"./index-Ou0R2y6e.js";import"./Date-Pu-r1Rem.js";import"./Text-99832FEP.js";import"./Checkbox-JL70vLAJ.js";import"./Checkbox-tcHiP4BQ.js";import"./CreatedBy-iOJDkciQ.js";import"./CreatedTime-VvaTSUef.js";import"./index-svRVa2Vs.js";import"./Date-sXOTSNaq.js";import"./Email-dwSEzcgk.js";import"./Files-of1WwVrM.js";import"./File-Hwv8s3_9.js";import"./Formula-yLIBVUXb.js";import"./LastEditedBy-O9svYQ5V.js";import"./LastEditedTime-0qC6POEY.js";import"./MultiSelect-i5MF47Mt.js";import"./Number-ngrvBzjk.js";import"./People-DfB2XZVQ.js";import"./PhoneNumber-EJEYVhPk.js";import"./Relation-JmWvgm6R.js";import"./RichText-3WHLmybK.js";import"./Rollup-YqiuD841.js";import"./Select-5o4j6stF.js";import"./Status-7q_XHn2S.js";import"./Title-1uyJbSn6.js";import"./UniqueId-zpaUPJvo.js";import"./Url-xp6E5wKB.js";const dr={title:"Database/List",component:d,tags:["autodocs"],parameters:{layout:"padded"}},r={args:{pages:n}},o={args:{pages:n},decorators:[c=>t.jsx("div",{className:"notion-root notion-dark",children:t.jsx(c,{})})]};var m,p,i;r.parameters={...r.parameters,docs:{...(m=r.parameters)==null?void 0:m.docs,source:{originalSource:`{
+  args: {
+    pages: ((Pages as unknown) as PageObject[])
+  }
+}`,...(i=(p=r.parameters)==null?void 0:p.docs)==null?void 0:i.source}}};var a,s,e;o.parameters={...o.parameters,docs:{...(a=o.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  args: {
+    pages: ((Pages as unknown) as PageObject[])
+  },
+  decorators: [Story => <div className="notion-root notion-dark">
+        <Story />
+      </div>]
+}`,...(e=(s=o.parameters)==null?void 0:s.docs)==null?void 0:e.source}}};const gr=["Default","Dark"];export{o as Dark,r as Default,gr as __namedExportsOrder,dr as default};

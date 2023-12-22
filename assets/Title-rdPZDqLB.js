@@ -1,1 +1,0 @@
-import{j as i}from"./jsx-runtime-vNq4Oc-g.js";import{R as o}from"./RichText-IsuZDZjy.js";const s=({propertyItem:t})=>i.jsx("h1",{id:t.id,className:"notion-property-item notion-title",children:i.jsx(o,{richText:t.title})});export{s as T};

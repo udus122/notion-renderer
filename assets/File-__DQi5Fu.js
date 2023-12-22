@@ -1,1 +1,0 @@
-import{j as i}from"./jsx-runtime-vNq4Oc-g.js";import{F as t}from"./File-Hwv8s3_9.js";import{R as e}from"./RichText-IsuZDZjy.js";const a=({block:o})=>i.jsxs("div",{id:o.id,className:"notion-block notion-file-block",children:[i.jsx(t,{file:o.file}),i.jsx("div",{className:"notion-caption notion-file-caption",children:i.jsx(e,{richText:o.file.caption})})]});export{a as F};
