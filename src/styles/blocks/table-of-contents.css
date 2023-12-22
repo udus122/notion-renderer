@@ -5,6 +5,8 @@
 
   a {
     color: inherit;
+    fill: inherit;
+    opacity: 0.7;
   }
 }
 

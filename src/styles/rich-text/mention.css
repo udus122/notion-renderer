@@ -1,7 +1,19 @@
 .notion-database-mention-rich-text,
 .notion-page-mention-rich-text {
+  color: inherit;
+  fill: inherit;
   transition: background-color 20ms ease-in 0s;
   border-radius: 0.25rem;
+
+  .notion-icon {
+    block-size: 1rem;
+    inline-size: 1rem;
+    margin-inline-end: 0.25rem;
+  }
+
+  .notion-page-mention-title {
+    opacity: 0.7;
+  }
 
   &:hover {
     background-color: var(--color-link-hover);
@@ -11,6 +23,7 @@
 .notion-link-preview-mention-rich-text {
   color: inherit;
   fill: inherit;
+  opacity: 0.7;
   transition: background-color 20ms ease-in 0s;
   border-radius: 0.25rem;
 

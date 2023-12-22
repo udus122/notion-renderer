@@ -1,4 +1,6 @@
 .notion-paragraph {
+  min-block-size: 1.5rem;
+
   p {
     margin: 0;
   }
