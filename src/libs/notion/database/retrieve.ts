@@ -1,4 +1,4 @@
-import { callAPIWithBackOffAndCache } from "../../utils/api.js";
+import { callAPIWithBackOff } from "../../utils/api.js";
 
 import type { Result } from "../../../types/utils.js";
 import type { Client } from "@notionhq/client";
@@ -11,7 +11,7 @@ export const retrieveDatabase = async (
   client: Client,
   args: GetDatabaseParameters,
 ): Promise<Result<GetDatabaseResponse>> => {
-  const result = await callAPIWithBackOffAndCache<
+  const result = await callAPIWithBackOff<
     GetDatabaseParameters,
     GetDatabaseResponse
   >(client.databases.retrieve, args);

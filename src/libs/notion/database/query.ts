@@ -1,7 +1,7 @@
 import { Client, isFullPage } from "@notionhq/client";
 
 import { notUndefined } from "../../../libs/utils/utils.js";
-import { callAPIWithBackOffAndCache } from "../../utils/api.js";
+import { callAPIWithBackOff } from "../../utils/api.js";
 import { convertResponseToPage } from "../index.js";
 
 import type { PageObject } from "../../../types/notion/page.js";
@@ -15,7 +15,7 @@ export const queryDatabase = async (
   client: Client,
   args: QueryDatabaseParameters,
 ): Promise<Result<QueryDatabaseResponse>> => {
-  const result = await callAPIWithBackOffAndCache<
+  const result = await callAPIWithBackOff<
     QueryDatabaseParameters,
     QueryDatabaseResponse
   >(client.databases.query, args);

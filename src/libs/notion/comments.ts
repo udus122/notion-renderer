@@ -1,4 +1,4 @@
-import { callAPIWithBackOffAndCache } from "../utils/api.js";
+import { callAPIWithBackOff } from "../utils/api.js";
 
 import type { Client } from "@notionhq/client";
 import type {
@@ -10,7 +10,7 @@ export const listComments = async (
   client: Client,
   args: ListCommentsParameters,
 ): Promise<ListCommentsResponse["results"]> => {
-  const { ok, data } = await callAPIWithBackOffAndCache<
+  const { ok, data } = await callAPIWithBackOff<
     ListCommentsParameters,
     ListCommentsResponse
   >(client.comments.list, args);

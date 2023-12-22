@@ -1,4 +1,4 @@
-import { callAPIWithBackOffAndCache } from "../../utils/api.js";
+import { callAPIWithBackOff } from "../../utils/api.js";
 
 import type { Result } from "../../../types/utils.js";
 import type { Client } from "@notionhq/client";
@@ -11,7 +11,7 @@ export const retrievePageProperty = async (
   client: Client,
   args: GetPagePropertyParameters,
 ): Promise<Result<GetPagePropertyResponse>> => {
-  const result = await callAPIWithBackOffAndCache<
+  const result = await callAPIWithBackOff<
     GetPagePropertyParameters,
     GetPagePropertyResponse
   >(client.pages.properties.retrieve, args);
