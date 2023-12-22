@@ -3,18 +3,23 @@ import { retrieveBlock } from "./retrieve.js";
 
 import type { BlockBlockObject } from "../../../types/notion/block/block.js";
 import type { Result } from "../../../types/utils.js";
+import type { Client } from "@notionhq/client";
 import type { GetBlockParameters } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const fetchBlock = async (
+  client: Client,
   args: GetBlockParameters,
 ): Promise<Result<BlockBlockObject>> => {
-  const retrievedResult = await retrieveBlock(args);
+  const retrievedResult = await retrieveBlock(client, args);
 
   if (!retrievedResult.ok) {
     return retrievedResult;
   }
 
-  const { ok, data } = await convertResponseToBlock(retrievedResult.data);
+  const { ok, data } = await convertResponseToBlock(
+    retrievedResult.data,
+    client,
+  );
 
   if (!ok) {
     return { ok, data };

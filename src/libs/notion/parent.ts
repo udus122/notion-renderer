@@ -1,4 +1,9 @@
-import { isFullBlock, isFullPage, isFullDatabase } from "@notionhq/client";
+import {
+  isFullBlock,
+  isFullPage,
+  isFullDatabase,
+  Client,
+} from "@notionhq/client";
 
 import { retrieveBlock } from "./blocks/retrieve.js";
 import { retrieveDatabase } from "./database/retrieve.js";
@@ -15,15 +20,18 @@ export const fetchParent = async (
     | BlockObjectResponse["parent"]
     | PageObjectResponse["parent"]
     | DatabaseObjectResponse["parent"],
+  client: Client,
 ) => {
   if (parent.type === "block_id") {
-    const parentBlock = await retrieveBlock({ block_id: parent.block_id });
+    const parentBlock = await retrieveBlock(client, {
+      block_id: parent.block_id,
+    });
     return parentBlock;
   } else if (parent.type === "page_id") {
-    const parentPage = await retrievePage({ page_id: parent.page_id });
+    const parentPage = await retrievePage(client, { page_id: parent.page_id });
     return parentPage;
   } else if (parent.type === "database_id") {
-    const parentDatabase = await retrieveDatabase({
+    const parentDatabase = await retrieveDatabase(client, {
       database_id: parent.database_id,
     });
     return parentDatabase;
@@ -35,21 +43,26 @@ export const fetchParentBlockObject = async (
     | BlockObjectResponse["parent"]
     | PageObjectResponse["parent"]
     | DatabaseObjectResponse["parent"],
+  client: Client,
 ): Promise<
   BlockObjectResponse | PageObjectResponse | DatabaseObjectResponse | undefined
 > => {
   if (parent.type === "block_id") {
-    const { ok, data } = await retrieveBlock({ block_id: parent.block_id });
+    const { ok, data } = await retrieveBlock(client, {
+      block_id: parent.block_id,
+    });
     if (ok && isFullBlock(data)) {
       return await data;
     }
   } else if (parent.type === "page_id") {
-    const { ok, data } = await retrievePage({ page_id: parent.page_id });
+    const { ok, data } = await retrievePage(client, {
+      page_id: parent.page_id,
+    });
     if (ok && isFullPage(data)) {
       return data;
     }
   } else if (parent.type === "database_id") {
-    const { ok, data } = await retrieveDatabase({
+    const { ok, data } = await retrieveDatabase(client, {
       database_id: parent.database_id,
     });
     if (ok && isFullDatabase(data)) {
@@ -66,15 +79,17 @@ export const fetchAllParents = async (
   parentList: Array<
     BlockObjectResponse | PageObjectResponse | DatabaseObjectResponse
   > = [],
+  client: Client,
 ): Promise<
   Array<BlockObjectResponse | PageObjectResponse | DatabaseObjectResponse>
 > => {
-  const parentObjectResponse = await fetchParentBlockObject(parent);
+  const parentObjectResponse = await fetchParentBlockObject(parent, client);
   if (!parentObjectResponse) {
     return parentList;
   }
-  return await fetchAllParents(parentObjectResponse.parent, [
-    parentObjectResponse,
-    ...parentList,
-  ]);
+  return await fetchAllParents(
+    parentObjectResponse.parent,
+    [parentObjectResponse, ...parentList],
+    client,
+  );
 };

@@ -1,13 +1,15 @@
 import { fetchBlockList } from "../fetchBlockList.js";
 
 import type { NumberedListItemBlockObject } from "../../../../types/notion/block/numberedListItem.js";
+import type { Client } from "@notionhq/client";
 import type { NumberedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertNumberedListItemResponseToBlock = async (
   block: NumberedListItemBlockObjectResponse,
+  client: Client,
 ): Promise<NumberedListItemBlockObject> => {
   if (block.has_children) {
-    const { ok, data } = await fetchBlockList({ block_id: block.id });
+    const { ok, data } = await fetchBlockList(client, { block_id: block.id });
 
     if (ok) {
       return {

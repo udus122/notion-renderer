@@ -1,4 +1,4 @@
-import { isFullDatabase } from "@notionhq/client";
+import { Client, isFullDatabase } from "@notionhq/client";
 
 import { convertResponseToRichText } from "../richText/richText.js";
 
@@ -9,9 +9,10 @@ import type { Result } from "../../../types/utils.js";
 import type { GetDatabaseParameters } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const fetchDatabase = async (
+  client: Client,
   args: GetDatabaseParameters,
 ): Promise<Result<DatabaseObject>> => {
-  const { ok, data } = await retrieveDatabase(args);
+  const { ok, data } = await retrieveDatabase(client, args);
 
   if (!ok) {
     return { ok, data };
@@ -23,8 +24,8 @@ export const fetchDatabase = async (
 
   const databaseObject = {
     ...data,
-    title: await convertResponseToRichText(data.title),
-    description: await convertResponseToRichText(data.description),
+    title: await convertResponseToRichText(data.title, client),
+    description: await convertResponseToRichText(data.description, client),
   } satisfies DatabaseObject;
 
   return { ok: true, data: databaseObject };

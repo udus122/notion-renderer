@@ -1,4 +1,4 @@
-import { isFullDatabase, isFullPage } from "@notionhq/client";
+import { Client, isFullDatabase, isFullPage } from "@notionhq/client";
 
 import { listComments } from "../../comments.js";
 import { retrieveDatabase } from "../../database/retrieve.js";
@@ -9,10 +9,11 @@ import type { LinkToPageBlockObjectResponse } from "@notionhq/client/build/src/a
 
 export const convertLinkToPageResponseToBlock = async (
   block: LinkToPageBlockObjectResponse,
+  client: Client,
 ): Promise<LinkToPageBlockObject> => {
   switch (block.link_to_page.type) {
     case "database_id": {
-      const { ok, data } = await retrieveDatabase({
+      const { ok, data } = await retrieveDatabase(client, {
         database_id: block.link_to_page.database_id,
       });
 
@@ -33,7 +34,7 @@ export const convertLinkToPageResponseToBlock = async (
       } satisfies LinkToPageBlockObject;
     }
     case "page_id": {
-      const { ok, data } = await retrievePage({
+      const { ok, data } = await retrievePage(client, {
         page_id: block.link_to_page.page_id,
       });
 
@@ -54,7 +55,7 @@ export const convertLinkToPageResponseToBlock = async (
       } satisfies LinkToPageBlockObject;
     }
     case "comment_id": {
-      const linkedComments = await listComments({
+      const linkedComments = await listComments(client, {
         block_id: block.link_to_page.comment_id,
       });
       return {

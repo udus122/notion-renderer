@@ -2,13 +2,15 @@ import { convertResponseToRichText } from "../../richText/richText.js";
 import { fetchBlockList } from "../fetchBlockList.js";
 
 import type { BulletedListItemBlockObject } from "../../../../types/notion/block/bulletedListItem.js";
+import type { Client } from "@notionhq/client";
 import type { BulletedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertBulletedListItemResponseToBlock = async (
   block: BulletedListItemBlockObjectResponse,
+  client: Client,
 ): Promise<BulletedListItemBlockObject> => {
   if (block.has_children) {
-    const { ok, data } = await fetchBlockList({ block_id: block.id });
+    const { ok, data } = await fetchBlockList(client, { block_id: block.id });
 
     if (ok) {
       return {
@@ -17,6 +19,7 @@ export const convertBulletedListItemResponseToBlock = async (
           ...block.bulleted_list_item,
           rich_text: await convertResponseToRichText(
             block.bulleted_list_item.rich_text,
+            client,
           ),
           children: data,
         },
@@ -30,6 +33,7 @@ export const convertBulletedListItemResponseToBlock = async (
       ...block.bulleted_list_item,
       rich_text: await convertResponseToRichText(
         block.bulleted_list_item.rich_text,
+        client,
       ),
     },
   } satisfies BulletedListItemBlockObject;

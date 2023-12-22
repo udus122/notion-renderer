@@ -1,6 +1,7 @@
 import { fetchAllParents } from "../../parent.js";
 
 import type { BreadcrumbBlockObject } from "../../../../types/notion/block/breadcrumb.js";
+import type { Client } from "@notionhq/client";
 import type {
   BreadcrumbBlockObjectResponse,
   DatabaseObjectResponse,
@@ -9,8 +10,9 @@ import type {
 
 export const convertBreadcrumbResponseToBlock = async (
   block: BreadcrumbBlockObjectResponse,
+  client: Client,
 ): Promise<BreadcrumbBlockObject> => {
-  const allParents = await fetchAllParents(block.parent);
+  const allParents = await fetchAllParents(block.parent, undefined, client);
   const parents = allParents.filter(
     (parent): parent is PageObjectResponse | DatabaseObjectResponse =>
       parent.object === "page" || parent.object === "database",
