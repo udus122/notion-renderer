@@ -1,4 +1,4 @@
-import { isFullDatabase, isFullPage } from "@notionhq/client";
+import { Client, isFullDatabase, isFullPage } from "@notionhq/client";
 
 import { fetchSiteMeta } from "../../../libs/utils/sitemeta.js";
 import { generateUUID } from "../../utils/utils.js";
@@ -19,6 +19,7 @@ import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api
 
 export const convertMentionObjectResponse = async (
   mention: MentionObject,
+  client: Client,
 ): Promise<MentionObject> => {
   switch (mention.type) {
     case "user": {
@@ -53,7 +54,9 @@ export const convertMentionObjectResponse = async (
       } satisfies TempateMentionMentionObject;
     }
     case "page": {
-      const { ok, data } = await retrievePage({ page_id: mention.page.id });
+      const { ok, data } = await retrievePage(client, {
+        page_id: mention.page.id,
+      });
       if (ok && isFullPage(data)) {
         return {
           ...mention,
@@ -68,7 +71,7 @@ export const convertMentionObjectResponse = async (
       } satisfies PageMentionObject;
     }
     case "database": {
-      const { ok, data } = await retrieveDatabase({
+      const { ok, data } = await retrieveDatabase(client, {
         database_id: mention.database.id,
       });
       if (ok && isFullDatabase(data)) {
@@ -92,8 +95,9 @@ export const convertMentionObjectResponse = async (
 
 export const convertMentionRichTextItemResponse = async (
   item: MentionRichTextItemResponse,
+  client: Client,
 ): Promise<MentionRichTextItemObject> => {
-  const mention = await convertMentionObjectResponse(item.mention);
+  const mention = await convertMentionObjectResponse(item.mention, client);
   return {
     ...item,
     mention,

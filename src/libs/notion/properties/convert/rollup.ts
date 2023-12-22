@@ -1,5 +1,6 @@
 import type { RollupPropertyItemObject } from "../../../../types/notion/property/rollup.js";
 import type { Overwrite } from "../../../../types/utils.js";
+import type { Client } from "@notionhq/client";
 import type {
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
@@ -8,6 +9,7 @@ import type {
 
 export const convertResponseToRollupPropertyItem = (
   property: RollupPropertyItemObjectResponse,
+  client: Client,
 ): RollupPropertyItemObject => {
   return {
     ...property,
@@ -24,6 +26,7 @@ export const convertListResponseToRollupPropertyItem = (
       >;
     }
   >,
+  client: Client,
 ): RollupPropertyItemObject => {
   const rollupPropertyItemObject = {
     ...list.property_item,

@@ -1,4 +1,4 @@
-import { isFullDatabase } from "@notionhq/client";
+import { Client, isFullDatabase } from "@notionhq/client";
 
 import { retrieveDatabase } from "../../database/retrieve.js";
 
@@ -7,8 +7,11 @@ import type { ChildDatabaseBlockObjectResponse } from "@notionhq/client/build/sr
 
 export const convertChildDatabaseResponseToBlock = async (
   block: ChildDatabaseBlockObjectResponse,
+  client: Client,
 ): Promise<ChildDatabaseBlockObject> => {
-  const { ok, data } = await retrieveDatabase({ database_id: block.id });
+  const { ok, data } = await retrieveDatabase(client, {
+    database_id: block.id,
+  });
   if (!ok) {
     return block satisfies ChildDatabaseBlockObject;
   }

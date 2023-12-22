@@ -1,5 +1,6 @@
 import type { RichTextPropertyItemObject } from "../../../../types/notion/property/richText.js";
 import type { Overwrite } from "../../../../types/utils.js";
+import type { Client } from "@notionhq/client";
 import type {
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
@@ -8,6 +9,7 @@ import type {
 
 export const convertResponseToRichTextPropertyItem = (
   property: RichTextPropertyItemObjectResponse,
+  client: Client,
 ): RichTextPropertyItemObject => {
   return {
     ...property,
@@ -27,6 +29,7 @@ export const convertListResponseToRichTextPropertyItem = (
       >;
     }
   >,
+  client: Client,
 ): RichTextPropertyItemObject => {
   const rich_textPropertyItemObject = {
     ...list.property_item,

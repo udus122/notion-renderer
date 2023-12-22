@@ -37,78 +37,83 @@ import { convertResponseToUrlPropertyItem } from "./url.js";
 import { convertResponseToVerificationPropertyItem } from "./verification.js";
 
 import type { PropertyItemType } from "../../../../types/notion/property/properties.js";
+import type { Client } from "@notionhq/client";
 import type { GetPagePropertyResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertResponseToPropertyItem = async (
   pageProperty: GetPagePropertyResponse,
+  client: Client,
 ): Promise<PropertyItemType> => {
   if (pageProperty.object === "property_item") {
     switch (pageProperty.type) {
       case "checkbox": {
-        return convertResponseToCheckboxPropertyItem(pageProperty);
+        return convertResponseToCheckboxPropertyItem(pageProperty, client);
       }
       case "created_by": {
-        return convertResponseToCreatedByPropertyItem(pageProperty);
+        return convertResponseToCreatedByPropertyItem(pageProperty, client);
       }
       case "created_time": {
-        return convertResponseToCreatedTimePropertyItem(pageProperty);
+        return convertResponseToCreatedTimePropertyItem(pageProperty, client);
       }
       case "date": {
-        return convertResponseToDatePropertyItem(pageProperty);
+        return convertResponseToDatePropertyItem(pageProperty, client);
       }
       case "email": {
-        return convertResponseToEmailPropertyItem(pageProperty);
+        return convertResponseToEmailPropertyItem(pageProperty, client);
       }
       case "files": {
-        return convertResponseToFilesPropertyItem(pageProperty);
+        return convertResponseToFilesPropertyItem(pageProperty, client);
       }
       case "formula": {
-        return convertResponseToFormulaPropertyItem(pageProperty);
+        return convertResponseToFormulaPropertyItem(pageProperty, client);
       }
       case "last_edited_by": {
-        return convertResponseToLastEditedByPropertyItem(pageProperty);
+        return convertResponseToLastEditedByPropertyItem(pageProperty, client);
       }
       case "last_edited_time": {
-        return convertResponseToLastEditedTimePropertyItem(pageProperty);
+        return convertResponseToLastEditedTimePropertyItem(
+          pageProperty,
+          client,
+        );
       }
       case "multi_select": {
-        return convertResponseToMultiSelectPropertyItem(pageProperty);
+        return convertResponseToMultiSelectPropertyItem(pageProperty, client);
       }
       case "number": {
-        return convertResponseToNumberPropertyItem(pageProperty);
+        return convertResponseToNumberPropertyItem(pageProperty, client);
       }
       case "people": {
-        return convertResponseToPeoplePropertyItem(pageProperty);
+        return convertResponseToPeoplePropertyItem(pageProperty, client);
       }
       case "phone_number": {
-        return convertResponseToPhoneNumberPropertyItem(pageProperty);
+        return convertResponseToPhoneNumberPropertyItem(pageProperty, client);
       }
       case "relation": {
-        return convertResponseToRelationPropertyItem(pageProperty);
+        return convertResponseToRelationPropertyItem(pageProperty, client);
       }
       case "rich_text": {
-        return convertResponseToRichTextPropertyItem(pageProperty);
+        return convertResponseToRichTextPropertyItem(pageProperty, client);
       }
       case "rollup": {
-        return convertResponseToRollupPropertyItem(pageProperty);
+        return convertResponseToRollupPropertyItem(pageProperty, client);
       }
       case "select": {
-        return convertResponseToSelectPropertyItem(pageProperty);
+        return convertResponseToSelectPropertyItem(pageProperty, client);
       }
       case "status": {
-        return convertResponseToStatusPropertyItem(pageProperty);
+        return convertResponseToStatusPropertyItem(pageProperty, client);
       }
       case "title": {
-        return convertResponseToTitlePropertyItem(pageProperty);
+        return convertResponseToTitlePropertyItem(pageProperty, client);
       }
       case "url": {
-        return convertResponseToUrlPropertyItem(pageProperty);
+        return convertResponseToUrlPropertyItem(pageProperty, client);
       }
       case "unique_id": {
-        return convertResponseToUniqueIdPropertyItem(pageProperty);
+        return convertResponseToUniqueIdPropertyItem(pageProperty, client);
       }
       case "verification": {
-        return convertResponseToVerificationPropertyItem(pageProperty);
+        return convertResponseToVerificationPropertyItem(pageProperty, client);
       }
       default: {
         return pageProperty;
@@ -121,39 +126,54 @@ export const convertResponseToPropertyItem = async (
 
     switch (property_item.type) {
       case "title": {
-        return convertListResponseToTitlePropertyItem({
-          ...pageProperty,
-          property_item,
-          results,
-        });
+        return convertListResponseToTitlePropertyItem(
+          {
+            ...pageProperty,
+            property_item,
+            results,
+          },
+          client,
+        );
       }
       case "rich_text": {
-        return convertListResponseToRichTextPropertyItem({
-          ...pageProperty,
-          property_item,
-          results,
-        });
+        return convertListResponseToRichTextPropertyItem(
+          {
+            ...pageProperty,
+            property_item,
+            results,
+          },
+          client,
+        );
       }
       case "people": {
-        return convertListResponseToPeoplePropertyItem({
-          ...pageProperty,
-          property_item,
-          results,
-        });
+        return convertListResponseToPeoplePropertyItem(
+          {
+            ...pageProperty,
+            property_item,
+            results,
+          },
+          client,
+        );
       }
       case "relation": {
-        return await convertListResponseToRelationPropertyItem({
-          ...pageProperty,
-          property_item,
-          results,
-        });
+        return await convertListResponseToRelationPropertyItem(
+          {
+            ...pageProperty,
+            property_item,
+            results,
+          },
+          client,
+        );
       }
       case "rollup": {
-        return convertListResponseToRollupPropertyItem({
-          ...pageProperty,
-          property_item,
-          results,
-        });
+        return convertListResponseToRollupPropertyItem(
+          {
+            ...pageProperty,
+            property_item,
+            results,
+          },
+          client,
+        );
       }
     }
   }

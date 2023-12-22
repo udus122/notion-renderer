@@ -1,5 +1,6 @@
 import type { PeoplePropertyItemObject } from "../../../../types/notion/property/people.js";
 import type { Overwrite } from "../../../../types/utils.js";
+import type { Client } from "@notionhq/client";
 import type {
   PeoplePropertyItemObjectResponse,
   PropertyItemObjectResponse,
@@ -8,6 +9,7 @@ import type {
 
 export const convertResponseToPeoplePropertyItem = (
   property: PeoplePropertyItemObjectResponse,
+  client: Client,
 ): PeoplePropertyItemObject => {
   const peoplePropertyItemObject = {
     ...property,
@@ -28,6 +30,7 @@ export const convertListResponseToPeoplePropertyItem = (
       >;
     }
   >,
+  client: Client,
 ): PeoplePropertyItemObject => {
   const peoplePropertyItemObject = {
     ...list.property_item,

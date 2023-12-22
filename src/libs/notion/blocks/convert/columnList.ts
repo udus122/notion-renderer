@@ -3,13 +3,15 @@ import { fetchBlockList } from "../fetchBlockList.js";
 
 import type { ColumnBlockObject } from "../../../../types/notion/block/column.js";
 import type { ColumnListBlockObject } from "../../../../types/notion/block/columnList.js";
+import type { Client } from "@notionhq/client";
 import type { ColumnListBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertColumnListResponseToBlock = async (
   block: ColumnListBlockObjectResponse,
+  client: Client,
 ): Promise<ColumnListBlockObject> => {
   if (block.has_children) {
-    const { ok, data } = await fetchBlockList({ block_id: block.id });
+    const { ok, data } = await fetchBlockList(client, { block_id: block.id });
 
     if (ok) {
       const columns = data.filter(

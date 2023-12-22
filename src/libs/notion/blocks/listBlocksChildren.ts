@@ -1,20 +1,21 @@
 import { callAPIWithBackOffAndCache } from "../../utils/api.js";
-import { notion } from "../auth.js";
 
 import type { ListBlockChildrenResponseResults } from "../../../types/notion/common/common.js";
 import type { Result } from "../../../types/utils.js";
+import type { Client } from "@notionhq/client";
 import type {
   ListBlockChildrenParameters,
   ListBlockChildrenResponse,
 } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const listBlockChildren = async (
+  client: Client,
   args: ListBlockChildrenParameters,
 ): Promise<Result<ListBlockChildrenResponseResults>> => {
   const result = await callAPIWithBackOffAndCache<
     ListBlockChildrenParameters,
     ListBlockChildrenResponse
-  >(notion.blocks.children.list, args);
+  >(client.blocks.children.list, args);
 
   if (!result.ok) {
     return result;
@@ -23,7 +24,7 @@ export const listBlockChildren = async (
   let blockList = result.data.results;
 
   if (result.data.next_cursor) {
-    const nextResults = await listBlockChildren({
+    const nextResults = await listBlockChildren(client, {
       ...args,
       start_cursor: result.data.next_cursor,
     });

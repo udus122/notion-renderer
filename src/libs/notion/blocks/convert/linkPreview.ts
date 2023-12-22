@@ -1,10 +1,12 @@
 import { fetchSiteMeta } from "../../../utils/sitemeta.js";
 
 import type { LinkPreviewBlockObject } from "../../../../types/notion/block/linkPreview.js";
+import type { Client } from "@notionhq/client";
 import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertLinkPreviewResponseToBlock = async (
   block: LinkPreviewBlockObjectResponse,
+  client: Client,
 ): Promise<LinkPreviewBlockObject> => {
   const { ok, data } = await fetchSiteMeta(block.link_preview.url);
   if (!ok) {

@@ -1,5 +1,6 @@
 import type { TitlePropertyItemObject } from "../../../../types/notion/property/title.js";
 import type { Overwrite } from "../../../../types/utils.js";
+import type { Client } from "@notionhq/client";
 import type {
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
@@ -8,6 +9,7 @@ import type {
 
 export const convertResponseToTitlePropertyItem = (
   property: TitlePropertyItemObjectResponse,
+  client: Client,
 ): TitlePropertyItemObject => {
   return {
     ...property,
@@ -25,6 +27,7 @@ export const convertListResponseToTitlePropertyItem = (
       >;
     }
   >,
+  client: Client,
 ): TitlePropertyItemObject => {
   const titlePropertyItemObject = {
     ...list.property_item,
