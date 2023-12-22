@@ -5,20 +5,18 @@ import {
 } from "@notionhq/client";
 
 import { exponentialBackoffFactory } from "./backoff.js";
-import { withCache } from "./cache.js";
 
 import type { Result } from "../../types/utils.js";
 
 const exponentialBackoff = exponentialBackoffFactory();
 
-export const callAPIWithBackOffAndCache = async <Args, Item>(
+export const callAPIWithBackOff = async <Args, Item>(
   func: (args: Args) => Promise<Item>,
   args: Args,
   retryCount: number = 5,
-  cacheDir: string = ".cache",
 ): Promise<Result<Item>> => {
   try {
-    const data = await withCache(func, cacheDir)({ ...args });
+    const data = await func({ ...args });
     return {
       ok: true,
       data,
@@ -40,11 +38,10 @@ export const callAPIWithBackOffAndCache = async <Args, Item>(
             };
           }
           await exponentialBackoff();
-          const { ok, data } = await callAPIWithBackOffAndCache(
+          const { ok, data } = await callAPIWithBackOff(
             func,
             { ...args },
             retryCount--,
-            cacheDir,
           );
           if (ok) {
             return {

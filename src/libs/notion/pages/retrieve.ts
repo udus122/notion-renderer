@@ -1,4 +1,4 @@
-import { callAPIWithBackOffAndCache } from "../../utils/api.js";
+import { callAPIWithBackOff } from "../../utils/api.js";
 
 import type { Result } from "../../../types/utils.js";
 import type { Client } from "@notionhq/client";
@@ -11,10 +11,10 @@ export const retrievePage = async (
   client: Client,
   args: GetPageParameters,
 ): Promise<Result<GetPageResponse>> => {
-  const result = await callAPIWithBackOffAndCache<
-    GetPageParameters,
-    GetPageResponse
-  >(client.pages.retrieve, args);
+  const result = await callAPIWithBackOff<GetPageParameters, GetPageResponse>(
+    client.pages.retrieve,
+    args,
+  );
 
   return result;
 };

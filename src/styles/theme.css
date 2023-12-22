@@ -30,6 +30,7 @@
     --color-text-red: var(--notion-light-color-text-red);
     --color-bg-red: var(--notion-light-color-bg-red);
     --color-pill-red: var(--notion-light-color-pill-red);
+    --color-bg-callout: var(--notion-light-color-bg-callout);
     --color-code: var(--notion-light-color-code);
     --color-divider: var(--notion-light-color-divider);
     --color-bg-inline-code: var(--notion-light-color-bg-inline-code);
@@ -77,6 +78,7 @@
     --color-text-red: var(--notion-dark-color-text-red);
     --color-bg-red: var(--notion-dark-color-bg-red);
     --color-pill-red: var(--notion-dark-color-pill-red);
+    --color-bg-callout: var(--notion-dark-color-bg-callout);
     --color-code: var(--notion-dark-color-code);
     --color-divider: var(--notion-dark-color-divider);
     --color-bg-inline-code: var(--notion-dark-color-bg-inline-code);
@@ -121,6 +123,7 @@
   --color-text-red: var(--notion-light-color-text-red);
   --color-bg-red: var(--notion-light-color-bg-red);
   --color-pill-red: var(--notion-light-color-pill-red);
+  --color-bg-callout: var(--notion-light-color-bg-callout);
   --color-code: var(--notion-light-color-code);
   --color-divider: var(--notion-light-color-divider);
   --color-bg-inline-code: var(--notion-light-color-bg-inline-code);
@@ -164,6 +167,7 @@
   --color-text-red: var(--notion-dark-color-text-red);
   --color-bg-red: var(--notion-dark-color-bg-red);
   --color-pill-red: var(--notion-dark-color-pill-red);
+  --color-bg-callout: var(--notion-dark-color-bg-callout);
   --color-code: var(--notion-dark-color-code);
   --color-divider: var(--notion-dark-color-divider);
   --color-bg-inline-code: var(--notion-dark-color-bg-inline-code);

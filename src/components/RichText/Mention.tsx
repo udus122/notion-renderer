@@ -47,9 +47,13 @@ export const Mention: React.FC<Props> = ({ richText: richTextItem }) => {
         <span className="notion-page-mention-rich-text">
           <Link link={richTextItem.mention.page.id}>
             {richTextItem.mention.page.page && (
-              <Icon icon={richTextItem.mention.page.page?.icon} />
+              <span className="notion-page-mention-icon">
+                <Icon icon={richTextItem.mention.page.page?.icon} />
+              </span>
             )}
-            {richTextItem.plain_text}
+            <span className="notion-page-mention-title">
+              {richTextItem.plain_text}
+            </span>
           </Link>
         </span>
       );

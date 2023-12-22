@@ -6,7 +6,10 @@
   overflow: hidden;
   transition: background-color 20ms ease-in 0s;
   max-block-size: 15rem;
-  background-color: var(--color-link-hover);
+
+  &:hover {
+    background-color: var(--color-link-hover);
+  }
 }
 
 .notion-link-preview-content {

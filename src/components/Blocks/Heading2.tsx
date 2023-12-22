@@ -24,12 +24,12 @@ export const Heading2: Heading2Block = ({ block }) => {
           </div>
         </details>
       ) : (
-        <h1
+        <h2
           id={block.id}
           className={`notion-block notion-heading notion-heading-2 notion-color-${block.heading_2.color}`}
         >
           <RichText richText={block.heading_2.rich_text} />
-        </h1>
+        </h2>
       )}
     </>
   );
