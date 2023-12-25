@@ -38,7 +38,7 @@ const TableRowRowHeader: React.FC<{
   return (
     <tr id={table_row.id} className="notion-table-block-row">
       {table_row.table_row.cells.map((cell) => (
-        <Th key={table_row.id} cell={cell} />
+        <Th key={cell.map((c) => c.plain_text).join("")} cell={cell} />
       ))}
     </tr>
   );
@@ -51,9 +51,9 @@ const TableRowColumnHeader: React.FC<{
     <tr id={table_row.id} className="notion-table-block-row">
       {table_row.table_row.cells.map((cell, index) => {
         return index === 0 ? (
-          <Th key={table_row.id} cell={cell} />
+          <Th key={cell.map((c) => c.plain_text).join("")} cell={cell} />
         ) : (
-          <Td key={table_row.id} cell={cell} />
+          <Td key={cell.map((c) => c.plain_text).join("")} cell={cell} />
         );
       })}
     </tr>
@@ -66,7 +66,7 @@ const TableRowNoHeader: React.FC<{
   return (
     <tr id={table_row.id} className="notion_table_row">
       {table_row.table_row.cells.map((cell) => (
-        <Td key={table_row.id} cell={cell} />
+        <Td key={cell.map((c) => c.plain_text).join("")} cell={cell} />
       ))}
     </tr>
   );
