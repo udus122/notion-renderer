@@ -4,6 +4,10 @@
   line-height: var(--notion-line-height);
   fill: var(--notion-fill);
   overflow-wrap: var(--notion-overflow-wrap);
+
+  .notion-block-list {
+    background-color: transparent;
+  }
 }
 
 .notion-block {
