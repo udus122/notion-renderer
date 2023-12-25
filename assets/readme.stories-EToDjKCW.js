@@ -1,4 +1,4 @@
-import{M as l,d as s}from"./index-v9lA09ce.js";import{j as e}from"./jsx-runtime-vNq4Oc-g.js";import{u as c}from"./index-Dbo06S9W.js";import"./iframe-DUDDtdDD.js";import"../sb-preview/runtime.js";import"./index-Ou0R2y6e.js";import"./index-4g5l5LRQ.js";import"./_commonjsHelpers-4gQjN7DL.js";import"./index-jmm5gWkb.js";import"./index-ogXoivrg.js";import"./index-Eng-400s.js";import"./index-PPLHz8o0.js";const i=`![Notion Renderer](/assets/logo.png)
+import{M as l,d as s}from"./index-9f4n_beV.js";import{j as e}from"./jsx-runtime-vNq4Oc-g.js";import{u as c}from"./index-Dbo06S9W.js";import"./iframe-Hqsret7i.js";import"../sb-preview/runtime.js";import"./index-Ou0R2y6e.js";import"./index-4g5l5LRQ.js";import"./_commonjsHelpers-4gQjN7DL.js";import"./index-jmm5gWkb.js";import"./index-ogXoivrg.js";import"./index-Eng-400s.js";import"./index-PPLHz8o0.js";const i=`![Notion Renderer](/assets/logo.png)
 
 # Notion Renderer
 ![npm version](https://img.shields.io/npm/v/%40udus%2Fnotion-renderer) ![GitHub License](https://img.shields.io/github/license/udus122/notion-renderer) ![GitHub Repo stars](https://img.shields.io/github/stars/udus122/notion-renderer?style=social)
