@@ -13,7 +13,7 @@ import type {
 
 export const queryDatabase = async (
   client: Client,
-  args: QueryDatabaseParameters
+  args: QueryDatabaseParameters,
 ): Promise<Result<QueryDatabaseResponse>> => {
   const result = await callAPIWithBackOff<
     QueryDatabaseParameters,
@@ -25,7 +25,7 @@ export const queryDatabase = async (
 
 export const fetchDatabaseItems = async (
   client: Client,
-  args: QueryDatabaseParameters
+  args: QueryDatabaseParameters,
 ): Promise<Result<QueryDatabaseObject>> => {
   const { ok, data } = await queryDatabase(client, args);
 
@@ -40,7 +40,7 @@ export const fetchDatabaseItems = async (
 
         const converted = convertResponseToPage(page, client);
         return converted;
-      })
+      }),
     )
   ).filter(notUndefined);
 
