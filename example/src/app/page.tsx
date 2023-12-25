@@ -1,56 +1,17 @@
-import { Database, Page } from "@udus/notion-renderer/components";
-import {
-  fetchDatabase,
-  fetchDatabaseItems,
-  fetchPage,
-} from "@udus/notion-renderer/libs";
+import { Page } from "@udus/notion-renderer/components";
+import { fetchBlockList, fetchPage } from "@udus/notion-renderer/libs";
+
+import { client } from "@/auth";
 
 export default async function Home() {
-  const pageResult = await fetchPage({
-    page_id: "4553dcd168664730aa8723e1cace3d7e",
+  const pageResult = await fetchPage(client, {
+    page_id: "7ed3a6eebb5e4cdfa94433684d7c56bf",
   });
   const page = pageResult.ok ? pageResult.data : undefined;
-  const databaseResult = await fetchDatabase({
-    database_id: "0c610de6533f47c2a6b3aa38d306ee79",
+  const blocksResult = await fetchBlockList(client, {
+    block_id: "7ed3a6eebb5e4cdfa94433684d7c56bf",
   });
-  const database = databaseResult.ok ? databaseResult.data : undefined;
-  const pagesResult = await fetchDatabaseItems({
-    database_id: "0c610de6533f47c2a6b3aa38d306ee79",
-    filter: {
-      and: [
-        {
-          property: "Status",
-          status: {
-            equals: "公開",
-          },
-        },
-      ],
-    },
-    sorts: [
-      {
-        property: "Published",
-        direction: "descending",
-      },
-    ],
-    page_size: 5,
-  });
-  const pages = pagesResult.ok ? pagesResult.data : [];
+  const blocks = blocksResult.ok ? blocksResult.data : undefined;
 
-  return (
-    <>
-      {page && <Page page={page} />}
-      {database && (
-        <Database
-          database={database}
-          pages={pages}
-          hideCover
-          hideIcon
-          hideTitle
-          hideDescription
-          viewType="gallery"
-          displayProperties={["title", "Published", "Tags"]}
-        />
-      )}
-    </>
-  );
+  return page && blocks && <Page page={page} blocks={blocks} />;
 }
