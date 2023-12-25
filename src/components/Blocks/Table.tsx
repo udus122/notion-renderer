@@ -37,8 +37,11 @@ const TableRowRowHeader: React.FC<{
 }> = ({ table_row }) => {
   return (
     <tr id={table_row.id} className="notion-table-block-row">
-      {table_row.table_row.cells.map((cell) => (
-        <Th key={cell.map((c) => c.plain_text).join("")} cell={cell} />
+      {table_row.table_row.cells.map((cell, index) => (
+        <Th
+          key={`${index}${cell.map((c) => c.plain_text).join("")}`}
+          cell={cell}
+        />
       ))}
     </tr>
   );
