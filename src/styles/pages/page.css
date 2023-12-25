@@ -41,3 +41,10 @@
 .notion-page-properties {
   grid-column: content;
 }
+
+.notion-page-divider {
+  grid-column: content;
+  inline-size: 100%;
+  border: 1px solid var(--color-divider);
+  margin-block: 2rem 1rem;
+}

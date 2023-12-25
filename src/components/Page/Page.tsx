@@ -56,7 +56,12 @@ export const Page: FC<Props> = ({
           <Properties properties={properties} />
         </div>
       )}
-      {blocks && <BlockList blocks={blocks} />}
+      {blocks && (
+        <>
+          <hr className="notion-page-divider" />
+          <BlockList blocks={blocks} />
+        </>
+      )}
     </div>
   );
 };
