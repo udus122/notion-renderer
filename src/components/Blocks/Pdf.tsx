@@ -21,7 +21,7 @@ export const Pdf: PdfBlock = ({ block }) => {
               : ""
         }
       >
-        Your browser does not support pdfs. You can download pdf file
+        Your browser does not support pdfs. You can download pdf file{" "}
         <a href={pdfUrl}>here</a>.
       </object>
       <div className="notion-caption notion-pdf-caption">

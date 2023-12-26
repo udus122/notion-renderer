@@ -39,4 +39,8 @@
   border-radius: 50%;
   margin-inline-end: 0.2rem;
   vertical-align: text-top;
+
+  img {
+    display: initial;
+  }
 }
