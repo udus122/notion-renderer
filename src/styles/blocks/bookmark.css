@@ -8,7 +8,7 @@
 .notion-bookmark-container {
   container-type: inline-size;
   display: flex;
-  border: 1px solid #e5e5e5;
+  border: 1px solid var(--color-border);
   border-radius: 3px;
   overflow: hidden;
   transition: background-color 20ms ease-in 0s;

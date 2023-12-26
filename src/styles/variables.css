@@ -37,7 +37,7 @@
   --notion-light-color-bg-red: rgb(253 235 236);
   --notion-light-color-pill-red: rgb(255 226 221);
   --notion-light-color-bg-callout: rgb(241 241 239);
-  --notion-light-color-divider: rgb(55 53 47 / 16%);
+  --notion-light-color-border: rgb(55 53 47 / 16%);
   --notion-light-color-code: rgb(247 246 243);
   --notion-light-color-bg-inline-code: rgb(135 131 120 / 15%);
   --notion-light-color-link-hover: rgb(55 53 47 / 8%);
@@ -81,7 +81,7 @@
   --notion-dark-color-pill-red: rgb(110 54 48);
   --notion-dark-color-bg-callout: rgb(37 37 37);
   --notion-dark-color-code: rgb(255 255 255 / 3%);
-  --notion-dark-color-divider: rgb(255 255 255 / 13%);
+  --notion-dark-color-border: rgb(255 255 255 / 13%);
   --notion-dark-color-bg-inline-code: rgb(135 131 120 / 15%);
   --notion-dark-color-link-hover: rgb(255 255 255 / 5.5%);
   --notion-dark-color-table-of-contents: rgb(155 155 155);

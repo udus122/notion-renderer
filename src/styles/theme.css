@@ -32,7 +32,7 @@
     --color-pill-red: var(--notion-light-color-pill-red);
     --color-bg-callout: var(--notion-light-color-bg-callout);
     --color-code: var(--notion-light-color-code);
-    --color-divider: var(--notion-light-color-divider);
+    --color-border: var(--notion-light-color-border);
     --color-bg-inline-code: var(--notion-light-color-bg-inline-code);
     --color-link-hover: var(--notion-light-color-link-hover);
     --color-color-table-of-contents: var(
@@ -80,7 +80,7 @@
     --color-pill-red: var(--notion-dark-color-pill-red);
     --color-bg-callout: var(--notion-dark-color-bg-callout);
     --color-code: var(--notion-dark-color-code);
-    --color-divider: var(--notion-dark-color-divider);
+    --color-border: var(--notion-dark-color-border);
     --color-bg-inline-code: var(--notion-dark-color-bg-inline-code);
     --color-link-hover: var(--notion-dark-color-link-hover);
     --color-color-table-of-contents: var(--notion-dark-color-table-of-contents);
@@ -125,7 +125,7 @@
   --color-pill-red: var(--notion-light-color-pill-red);
   --color-bg-callout: var(--notion-light-color-bg-callout);
   --color-code: var(--notion-light-color-code);
-  --color-divider: var(--notion-light-color-divider);
+  --color-border: var(--notion-light-color-border);
   --color-bg-inline-code: var(--notion-light-color-bg-inline-code);
   --color-link-hover: var(--notion-light-color-link-hover);
   --color-color-table-of-contents: var(--notion-light-color-table-of-contents);
@@ -169,7 +169,7 @@
   --color-pill-red: var(--notion-dark-color-pill-red);
   --color-bg-callout: var(--notion-dark-color-bg-callout);
   --color-code: var(--notion-dark-color-code);
-  --color-divider: var(--notion-dark-color-divider);
+  --color-border: var(--notion-dark-color-border);
   --color-bg-inline-code: var(--notion-dark-color-bg-inline-code);
   --color-link-hover: var(--notion-dark-color-link-hover);
   --color-color-table-of-contents: var(--notion-dark-color-table-of-contents);
