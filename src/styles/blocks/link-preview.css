@@ -1,11 +1,17 @@
+.notion-link-preview {
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
 .notion-link-preview-container {
   display: flex;
   border: 1px solid #e5e5e5;
   border-radius: 3px;
-  padding-inline-start: 1rem;
   overflow: hidden;
   transition: background-color 20ms ease-in 0s;
-  max-block-size: 15rem;
+  max-block-size: 10rem;
 
   &:hover {
     background-color: var(--color-link-hover);
@@ -14,7 +20,7 @@
 
 .notion-link-preview-content {
   flex: 4 1 180px;
-  padding-block: 1rem;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -24,9 +30,6 @@
   margin: 0 0 2px;
   line-height: 1.25rem;
   font-size: 1rem;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
   margin-block-end: 0.75rem;
 }
 
