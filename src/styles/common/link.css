@@ -1,4 +1,8 @@
 .notion-internal-link {
   color: inherit;
   fill: inherit;
+
+  &:hover {
+    background-color: var(--notion-dark-color-link-hover);
+  }
 }

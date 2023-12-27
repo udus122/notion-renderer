@@ -7,4 +7,8 @@
 .notion-relation-item {
   display: flex;
   align-items: center;
+  padding: 0.1rem 0.25rem;
+
+  /* To make it clickable within a gallry card. */
+  z-index: 1;
 }
