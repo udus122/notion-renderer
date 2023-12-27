@@ -18,23 +18,21 @@ export const Card: FC<Props> = ({ page }) => {
 
   return (
     <div id={page.id} className="notion-gallery-card">
-      <Link prefix="/" link={page.id}>
-        <div className="notion-gallery-card-cover">
-          <Cover cover={page.cover} />
-        </div>
-        <div className="notion-gallery-card-title">
-          <span className="notion-gallery-card-title-icon">
-            <Icon icon={page.icon} hideDefaultIcon />
-          </span>
-          <span className="notion-gallery-card-title-text">
-            {title?.title.map((text) => text.plain_text).join("") ??
-              "Annoymous"}
-          </span>
-        </div>
-        <div className="notion-gallery-card-properties">
-          <Properties properties={other} hidePropertyName />
-        </div>
-      </Link>
+      <Link prefix="/" link={page.id} />
+      <div className="notion-gallery-card-cover">
+        <Cover cover={page.cover} />
+      </div>
+      <div className="notion-gallery-card-title">
+        <span className="notion-gallery-card-title-icon">
+          <Icon icon={page.icon} hideDefaultIcon />
+        </span>
+        <span className="notion-gallery-card-title-text">
+          {title?.title.map((text) => text.plain_text).join("") ?? "Annoymous"}
+        </span>
+      </div>
+      <div className="notion-gallery-card-properties">
+        <Properties properties={other} hidePropertyName />
+      </div>
     </div>
   );
 };
