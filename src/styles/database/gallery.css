@@ -24,6 +24,10 @@
     position: absolute;
     inset: 0;
   }
+
+  .notion-relation .notion-internal-link {
+    z-index: 1;
+  }
 }
 
 .notion-gallery-card-cover {
