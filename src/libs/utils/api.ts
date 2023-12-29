@@ -8,7 +8,7 @@ import { exponentialBackoffFactory } from "./backoff.js";
 
 import type { Result } from "../../types/utils.js";
 
-const exponentialBackoff = exponentialBackoffFactory(120, undefined, 600);
+const exponentialBackoff = exponentialBackoffFactory(32, undefined, 300);
 
 export const callAPIWithBackOff = async <Args, Item>(
   func: (args: Args) => Promise<Item>,
