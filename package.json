@@ -46,6 +46,12 @@
       ],
       "libs": [
         "dist/libs/index.d.ts"
+      ],
+      "utils": [
+        "dist/utils/index.d.ts"
+      ],
+      "types": [
+        "dist/types/index.d.ts"
       ]
     }
   },
