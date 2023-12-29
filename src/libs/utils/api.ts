@@ -8,7 +8,7 @@ import { exponentialBackoffFactory } from "./backoff.js";
 
 import type { Result } from "../../types/utils.js";
 
-const exponentialBackoff = exponentialBackoffFactory(120);
+const exponentialBackoff = exponentialBackoffFactory(120, undefined, 600);
 
 export const callAPIWithBackOff = async <Args, Item>(
   func: (args: Args) => Promise<Item>,
@@ -22,6 +22,13 @@ export const callAPIWithBackOff = async <Args, Item>(
       data,
     };
   } catch (error) {
+    console.error(
+      `error occured with this parameter: ${JSON.stringify({
+        func: func.name,
+        args,
+        error,
+      })}`,
+    );
     if (isNotionClientError(error)) {
       switch (error.code) {
         case APIErrorCode.RateLimited:
@@ -30,7 +37,13 @@ export const callAPIWithBackOff = async <Args, Item>(
         case APIErrorCode.ServiceUnavailable:
         case ClientErrorCode.ResponseError:
         case ClientErrorCode.RequestTimeout: {
-          console.log(`retry with error. error code: ${error.code}`);
+          console.error(
+            `error occured: ${JSON.stringify({
+              func: func.name,
+              args,
+              error,
+            })}`,
+          );
           if (retryCount < 1) {
             return {
               ok: false,
