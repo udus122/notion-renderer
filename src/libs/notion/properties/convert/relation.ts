@@ -45,6 +45,8 @@ export const convertListResponseToRelationPropertyItem = async (
         const { ok, data: page } = await retrievePage(client, {
           page_id: cur.relation.id,
         });
+        // NOTE: wait 1sec to avoid 429 error
+        await new Promise((resolve) => setTimeout(resolve, 1000));
 
         if (!ok || !isFullPage(page)) {
           return prev;
