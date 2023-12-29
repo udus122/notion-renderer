@@ -37,13 +37,7 @@ export const callAPIWithBackOff = async <Args, Item>(
         case APIErrorCode.ServiceUnavailable:
         case ClientErrorCode.ResponseError:
         case ClientErrorCode.RequestTimeout: {
-          console.error(
-            `error occured: ${JSON.stringify({
-              func: func.name,
-              args,
-              error,
-            })}`,
-          );
+          console.error("start retrying...");
           if (retryCount < 1) {
             return {
               ok: false,
