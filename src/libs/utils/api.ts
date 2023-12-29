@@ -13,7 +13,7 @@ const exponentialBackoff = exponentialBackoffFactory(120);
 export const callAPIWithBackOff = async <Args, Item>(
   func: (args: Args) => Promise<Item>,
   args: Args,
-  retryCount: number = 5,
+  retryCount: number = 3,
 ): Promise<Result<Item>> => {
   try {
     const data = await func({ ...args });
@@ -41,7 +41,7 @@ export const callAPIWithBackOff = async <Args, Item>(
           const { ok, data } = await callAPIWithBackOff(
             func,
             { ...args },
-            retryCount--,
+            --retryCount,
           );
           if (ok) {
             return {
