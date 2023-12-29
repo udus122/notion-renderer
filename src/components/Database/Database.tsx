@@ -1,4 +1,4 @@
-import { selectProperties } from "../../utils.js";
+import { selectProperties } from "../../utils/index.js";
 import { Cover } from "../Common/Cover.js";
 import { Icon } from "../Common/Icon.js";
 import { Title } from "../Common/Title.js";

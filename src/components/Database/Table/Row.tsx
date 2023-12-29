@@ -1,5 +1,5 @@
 import { Property } from "../../../components/Property/Property.js";
-import { isTitleProperty } from "../../../utils.js";
+import { isTitleProperty } from "../../../utils/index.js";
 
 import { TableTitle } from "./Title.js";
 

@@ -1,11 +1,11 @@
-import type { DatabaseObject } from "./types/notion/database.js";
-import type { PageObject } from "./types/notion/page.js";
+import type { DatabaseObject } from "../types/notion/database.js";
+import type { PageObject } from "../types/notion/page.js";
 import type {
   PropertyItemType,
   PropertyItemObjectResponse,
-} from "./types/notion/property/properties.js";
-import type { TitlePropertyItemObject } from "./types/notion/property/title.js";
-import type { RichTextType } from "./types/notion/richText/richText.js";
+} from "../types/notion/property/properties.js";
+import type { TitlePropertyItemObject } from "../types/notion/property/title.js";
+import type { RichTextType } from "../types/notion/richText/richText.js";
 import type {
   DatabaseObjectResponse,
   PageObjectResponse,
