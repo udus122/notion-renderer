@@ -18,9 +18,6 @@ export const convertResponseToPage = async (
         property_id: value.id,
       });
 
-      // NOTE: wait 1sec to avoid 429 error
-      await new Promise((resolve) => setTimeout(resolve, 1000));
-
       if (!ok) {
         return accumulator;
       }
