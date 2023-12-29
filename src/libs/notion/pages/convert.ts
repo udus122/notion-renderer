@@ -10,24 +10,29 @@ export const convertResponseToPage = async (
   page: PageObjectResponse,
   client: Client,
 ): Promise<PageObject> => {
-  const properties = Object.fromEntries<PropertyItemType>(
-    (
-      await Promise.all(
-        Object.entries(page.properties).map<
-          Promise<[string, PropertyItemType] | undefined>
-        >(async ([key, value]) => {
-          const { ok, data } = await fetchPageProperty(client, {
-            page_id: page.id,
-            property_id: value.id,
-          });
+  const propertiesEntries = await Object.entries(page.properties).reduce(
+    async (previousPromise, [key, value]) => {
+      const accumulator = await previousPromise;
+      const { ok, data } = await fetchPageProperty(client, {
+        page_id: page.id,
+        property_id: value.id,
+      });
 
-          if (!ok) {
-            return;
-          }
-          return [key, data];
-        }),
-      )
-    ).filter(notUndefined),
+      // NOTE: wait 1sec to avoid 429 error
+      await new Promise((resolve) => setTimeout(resolve, 1000));
+
+      if (!ok) {
+        return accumulator;
+      }
+
+      accumulator.push([key, data as PropertyItemType]);
+      return accumulator;
+    },
+    Promise.resolve([] as Array<[string, PropertyItemType]>),
+  );
+
+  const properties = Object.fromEntries<PropertyItemType>(
+    propertiesEntries.filter(notUndefined),
   );
 
   return {
