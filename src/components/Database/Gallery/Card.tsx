@@ -1,4 +1,4 @@
-import { splitTitleAndOtherProperties } from "../../../utils.js";
+import { splitTitleAndOtherProperties } from "../../../utils/index.js";
 import { Cover } from "../../Common/Cover.js";
 import { Icon } from "../../Common/Icon.js";
 import { useMapper } from "../../hooks.js";
