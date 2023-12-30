@@ -1,9 +1,8 @@
 .notion-page {
   display: grid;
   grid-template-columns:
-    [full-start] var(--notion-margin) [content-start] 1fr [content-end] var(
-      --notion-margin
-    )
+    [full-start] var(--notion-margin)
+    [content-start] minmax(0, 1fr) [content-end] var(--notion-margin)
     [full-end];
   color: var(--color-text-default);
   background-color: var(--color-bg-default);
