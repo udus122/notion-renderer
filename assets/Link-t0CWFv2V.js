@@ -1,1 +1,0 @@
-import{j as o}from"./jsx-runtime-vNq4Oc-g.js";const a=({prefix:n="",link:r,children:e=null})=>o.jsx("a",{href:`${n}${r}`,className:"notion-internal-link",target:"_blank",rel:"noopener noreferrer",children:e});export{a as L};
