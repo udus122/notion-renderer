@@ -2,24 +2,25 @@
 .notion-code {
   padding-block-start: 0.5rem;
   background-color: var(--color-code);
+}
 
-  .notion-code-header {
-    display: flex;
-    padding-inline: 0.75rem;
-  }
+.notion-code-header {
+  display: flex;
+  padding-inline: 0.75rem;
+}
 
-  .notion-code-langage {
-    color: #999;
-    font-size: 0.75rem;
-    text-transform: capitalize;
-  }
+.notion-code-langage {
+  color: #999;
+  font-size: 0.75rem;
+  text-transform: capitalize;
+}
 
-  .notion-code-body {
-    margin-block-start: 0.75rem;
-    margin-inline: 1.5rem;
-  }
+.notion-code-body {
+  margin-block-start: 0.75rem;
+  margin-inline: 1.5rem;
+  word-break: break-all;
+}
 
-  .notion-code-caption {
-    padding-inline: 0.75rem;
-  }
+.notion-code-caption {
+  padding-inline: 0.75rem;
 }
