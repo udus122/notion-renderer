@@ -9,6 +9,7 @@
   padding: 0.2em 0.4em;
   line-height: normal;
   font-size: 85%;
+  word-break: break-all;
 }
 
 .notion-link {
