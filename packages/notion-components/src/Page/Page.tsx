@@ -1,7 +1,7 @@
 import {
   selectProperties,
   splitTitleAndOtherProperties,
-} from "../../utils/index.js";
+} from "../../../../src/utils/index.js";
 import { BlockList } from "../Blocks/BlockList.js";
 import { Cover } from "../Common/Cover.js";
 import { Icon } from "../Common/Icon.js";

@@ -2,7 +2,6 @@ import { convertResponseToPropertyItem } from "./convert/convertResponseToProper
 import { retrievePageProperty } from "./retrieve.js";
 
 import type { PropertyItemType ,Result} from "@repo/notion-types";
-// import type { Result } from "@repo/notion-types";
 import type { Client } from "@notionhq/client";
 import type { GetPagePropertyParameters } from "@notionhq/client/build/src/api-endpoints.js";
 

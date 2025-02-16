@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import { extractTitle } from "../../utils/index.js";
+import { extractTitle } from "../../../../src/utils/index.js";
 import { Icon } from "../Common/Icon.js";
 import { useMapper } from "../hooks.js";
 import { RichText } from "../RichText/RichText.js";

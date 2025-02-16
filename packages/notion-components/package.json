@@ -1,10 +1,9 @@
 {
-  "name": "@repo/notion-api-wrangler",
+  "name": "@repo/notion-components",
   "type": "module",
   "scripts": {
-    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
     "build": "tsup src/index.ts --format cjs,esm --dts",
-    "publish": "npm run build && changeset version && changeset publish"
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch"
   },
   "exports": {
     ".": {

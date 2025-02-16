@@ -8,6 +8,10 @@
     "dev": {
       "persistent": true,
       "cache": false
-    }
+    },
+    "publish": {
+     "cache": false,
+     "persistent": true
+   }
   }
 }
