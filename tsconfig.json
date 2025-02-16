@@ -24,8 +24,9 @@
     "baseUrl": ".",
   },
   "include": [
-    "src"
-  ],
+    "src",
+    "packages/libs" 
+ ],
   "exclude": [
     "**/*.json"
   ],
