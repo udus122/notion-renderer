@@ -1,7 +1,7 @@
 import { notUndefined } from "../../utils/utils.js";
 import { fetchPageProperty } from "../properties/fetch.js";
 
-import type { PageObject, PropertyItemType } from "@repo/notion-types";
+import type { PageObject, PropertyItemType } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

@@ -1,4 +1,4 @@
-import type { FormulaPropertyItemObject } from "@repo/notion-types";
+import type { FormulaPropertyItemObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { FormulaPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

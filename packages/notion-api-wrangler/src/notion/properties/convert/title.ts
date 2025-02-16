@@ -1,5 +1,5 @@
-import type { TitlePropertyItemObject } from "@repo/notion-types";
-import type { Overwrite } from "@repo/notion-types";
+import type { TitlePropertyItemObject } from "@udus/notion-types";
+import type { Overwrite } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type {
   PropertyItemObjectResponse,

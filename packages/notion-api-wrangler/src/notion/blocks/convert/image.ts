@@ -1,6 +1,6 @@
 import { convertResponseToRichText } from "../../richText/richText.js";
 
-import type { ImageBlockObject } from "@repo/notion-types";
+import type { ImageBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { ImageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

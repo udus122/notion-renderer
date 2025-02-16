@@ -1,6 +1,6 @@
 import { callAPIWithBackOff } from "../../utils/api.js";
 
-import type { Result } from "@repo/notion-types";
+import type { Result } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type {
   GetPageParameters,

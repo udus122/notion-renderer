@@ -1,7 +1,7 @@
 import { convertResponseToRichText } from "../../richText/richText.js";
 import { fetchBlockList } from "../fetchBlockList.js";
 
-import type { Heading2BlockObject } from "@repo/notion-types";
+import type { Heading2BlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { Heading2BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

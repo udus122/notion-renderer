@@ -4,7 +4,7 @@ import { listComments } from "../../comments.js";
 import { retrieveDatabase } from "../../database/retrieve.js";
 import { retrievePage } from "../../pages/retrieve.js";
 
-import type { LinkToPageBlockObject } from "@repo/notion-types";
+import type { LinkToPageBlockObject } from "@udus/notion-types";
 import type { LinkToPageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertLinkToPageResponseToBlock = async (

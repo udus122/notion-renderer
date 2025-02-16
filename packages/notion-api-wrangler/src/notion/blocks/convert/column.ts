@@ -1,6 +1,6 @@
 import { fetchBlockList } from "../fetchBlockList.js";
 
-import type { ColumnBlockObject } from "@repo/notion-types";
+import type { ColumnBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { ColumnBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

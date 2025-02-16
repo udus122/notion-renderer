@@ -1,7 +1,7 @@
 import { convertResponseToRichText } from "../../richText/richText.js";
 import { fetchBlockList } from "../fetchBlockList.js";
 
-import type { ToDoBlockObject } from "@repo/notion-types";
+import type { ToDoBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { ToDoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

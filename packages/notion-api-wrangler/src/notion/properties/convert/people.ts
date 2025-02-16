@@ -1,5 +1,5 @@
-import type { PeoplePropertyItemObject } from "@repo/notion-types";
-import type { Overwrite } from "@repo/notion-types";
+import type { PeoplePropertyItemObject } from "@udus/notion-types";
+import type { Overwrite } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type {
   PeoplePropertyItemObjectResponse,

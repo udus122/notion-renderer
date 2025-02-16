@@ -2,7 +2,7 @@ import { convertEquationRichTextItemResponse } from "./equation.js";
 import { convertMentionRichTextItemResponse } from "./mention.js";
 import { convertTextRichTextItemResponse } from "./text.js";
 
-import type { RichTextItemType } from "@repo/notion-types";
+import type { RichTextItemType } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

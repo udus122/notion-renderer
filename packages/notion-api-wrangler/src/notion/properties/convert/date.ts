@@ -1,4 +1,4 @@
-import type { DatePropertyItemObject } from "@repo/notion-types";
+import type { DatePropertyItemObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { DatePropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

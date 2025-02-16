@@ -1,5 +1,5 @@
-import type { RollupPropertyItemObject } from "@repo/notion-types";
-import type { Overwrite } from "@repo/notion-types";
+import type { RollupPropertyItemObject } from "@udus/notion-types";
+import type { Overwrite } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type {
   PropertyItemObjectResponse,

@@ -1,4 +1,4 @@
-import type { VerificationPropertyItemObject } from "@repo/notion-types";
+import type { VerificationPropertyItemObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { VerificationPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

@@ -1,7 +1,7 @@
 import { fetchOembed } from "../../../utils/oembed.js";
 import { convertResponseToRichText } from "../../richText/richText.js";
 
-import type { EmbedBlockObject } from "@repo/notion-types";
+import type { EmbedBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { EmbedBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

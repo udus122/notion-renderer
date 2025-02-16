@@ -1,6 +1,6 @@
 import { convertResponseToRichText } from "../../richText/richText.js";
 
-import type { CodeBlockObject } from "@repo/notion-types";
+import type { CodeBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { CodeBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

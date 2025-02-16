@@ -1,8 +1,8 @@
 import { notNullNorUndefined } from "../../../utils/utils.js";
 import { fetchBlockList } from "../fetchBlockList.js";
 
-import type { TableBlockObject } from "@repo/notion-types";
-import type { TableRowBlockObject } from "@repo/notion-types";
+import type { TableBlockObject } from "@udus/notion-types";
+import type { TableRowBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { TableBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

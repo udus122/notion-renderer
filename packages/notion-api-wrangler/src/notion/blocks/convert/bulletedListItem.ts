@@ -1,7 +1,7 @@
 import { convertResponseToRichText } from "../../richText/richText.js";
 import { fetchBlockList } from "../fetchBlockList.js";
 
-import type { BulletedListItemBlockObject } from "@repo/notion-types";
+import type { BulletedListItemBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { BulletedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

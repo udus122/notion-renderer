@@ -5,8 +5,8 @@ import { retrievePage } from "../../pages/retrieve.js";
 import type {
   RelationItem,
   RelationPropertyItemObject,
-} from "@repo/notion-types";
-import type { Overwrite } from "@repo/notion-types";
+} from "@udus/notion-types";
+import type { Overwrite } from "@udus/notion-types";
 import type {
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,

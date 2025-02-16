@@ -1,7 +1,7 @@
 import { convertResponseToBlock } from "./convert/convertResponseToBlock.js";
 import { retrieveBlock } from "./retrieve.js";
 
-import type { BlockBlockObject, Result } from "@repo/notion-types";
+import type { BlockBlockObject, Result } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { GetBlockParameters } from "@notionhq/client/build/src/api-endpoints.js";
 

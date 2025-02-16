@@ -1,6 +1,6 @@
 import { convertResponseToRichText } from "../../richText/richText.js";
 
-import type { AudioBlockObject } from "@repo/notion-types";
+import type { AudioBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { AudioBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

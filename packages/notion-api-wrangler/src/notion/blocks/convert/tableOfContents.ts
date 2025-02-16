@@ -1,4 +1,4 @@
-import type { TableOfContentsBlockObject } from "@repo/notion-types";
+import type { TableOfContentsBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { TableOfContentsBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

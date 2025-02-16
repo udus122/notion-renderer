@@ -1,4 +1,4 @@
-import type { SelectPropertyItemObject } from "@repo/notion-types";
+import type { SelectPropertyItemObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { SelectPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

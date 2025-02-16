@@ -1,6 +1,6 @@
 import { fetchSiteMeta } from "../../../utils/sitemeta.js";
 
-import type { LinkPreviewBlockObject } from "@repo/notion-types";
+import type { LinkPreviewBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

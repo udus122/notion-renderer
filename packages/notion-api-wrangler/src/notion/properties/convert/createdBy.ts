@@ -1,4 +1,4 @@
-import type { CreatedByPropertyItemObject } from "@repo/notion-types";
+import type { CreatedByPropertyItemObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { CreatedByPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

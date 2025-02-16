@@ -1,7 +1,7 @@
 import { fetchSiteMeta } from "../../../utils/sitemeta.js";
 import { convertResponseToRichText } from "../../richText/richText.js";
 
-import type { BookmarkBlockObject } from "@repo/notion-types";
+import type { BookmarkBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

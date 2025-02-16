@@ -36,7 +36,7 @@ import { convertResponseToUniqueIdPropertyItem } from "./uniqueId.js";
 import { convertResponseToUrlPropertyItem } from "./url.js";
 import { convertResponseToVerificationPropertyItem } from "./verification.js";
 
-import type { PropertyItemType } from "@repo/notion-types";
+import type { PropertyItemType } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { GetPagePropertyResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

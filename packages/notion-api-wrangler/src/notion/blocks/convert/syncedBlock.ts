@@ -1,7 +1,7 @@
 import { fetchBlock } from "../fetch.js";
 import { fetchBlockList } from "../fetchBlockList.js";
 
-import type { SyncedBlockBlockObject } from "@repo/notion-types";
+import type { SyncedBlockBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { SyncedBlockBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

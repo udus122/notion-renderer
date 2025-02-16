@@ -4,8 +4,8 @@ import { convertResponseToRichText } from "../richText/richText.js";
 
 import { retrieveDatabase } from "./retrieve.js";
 
-import type { DatabaseObject } from "@repo/notion-types";
-import type { Result } from "@repo/notion-types";
+import type { DatabaseObject } from "@udus/notion-types";
+import type { Result } from "@udus/notion-types";
 import type { GetDatabaseParameters } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const fetchDatabase = async (

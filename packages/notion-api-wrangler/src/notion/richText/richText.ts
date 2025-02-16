@@ -1,6 +1,6 @@
 import { convertResponseToRichTextItem } from "./richTextItem.js";
 
-import type { RichTextType } from "@repo/notion-types";
+import type { RichTextType } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

@@ -14,7 +14,7 @@ import type {
   DateMentionObject,
   UserMentionObject,
   MentionObject,
-} from "@repo/notion-types";
+} from "@udus/notion-types";
 import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertMentionObjectResponse = async (

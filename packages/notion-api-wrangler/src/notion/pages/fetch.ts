@@ -3,7 +3,7 @@ import { Client, isFullPage } from "@notionhq/client";
 import { convertResponseToPage } from "./convert.js";
 import { retrievePage } from "./retrieve.js";
 
-import type { PageObject, Result } from "@repo/notion-types";
+import type { PageObject, Result } from "@udus/notion-types";
 import type { GetPageParameters } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const fetchPage = async (

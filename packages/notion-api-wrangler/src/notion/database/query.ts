@@ -4,8 +4,8 @@ import { notUndefined } from "../../utils/utils.js";
 import { callAPIWithBackOff } from "../../utils/api.js";
 import { convertResponseToPage } from "../index.js";
 
-import type { QueryDatabaseObject } from "@repo/notion-types";
-import type { Result } from "@repo/notion-types";
+import type { QueryDatabaseObject } from "@udus/notion-types";
+import type { Result } from "@udus/notion-types";
 import type {
   QueryDatabaseParameters,
   QueryDatabaseResponse,

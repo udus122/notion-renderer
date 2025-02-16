@@ -1,6 +1,6 @@
 import { convertResponseToRichText } from "../../richText/richText.js";
 
-import type { PdfBlockObject } from "@repo/notion-types";
+import type { PdfBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { PdfBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 

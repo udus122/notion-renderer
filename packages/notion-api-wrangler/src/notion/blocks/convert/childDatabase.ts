@@ -2,7 +2,7 @@ import { Client, isFullDatabase } from "@notionhq/client";
 
 import { retrieveDatabase } from "../../database/retrieve.js";
 
-import type { ChildDatabaseBlockObject } from "@repo/notion-types";
+import type { ChildDatabaseBlockObject } from "@udus/notion-types";
 import type { ChildDatabaseBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
 
 export const convertChildDatabaseResponseToBlock = async (

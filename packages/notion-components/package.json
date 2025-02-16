@@ -1,5 +1,5 @@
 {
-  "name": "@repo/notion-components",
+  "name": "@udus/notion-components",
   "type": "module",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
@@ -21,7 +21,7 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "devDependencies": {
-    "@repo/notion-types": "*",
+    "@udus/notion-types": "*",
     "@repo/typescript-config": "*",
     "tsup": "^8.3.6",
     "typescript": "latest"

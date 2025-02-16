@@ -1,7 +1,7 @@
 import { listBlockChildren } from "./listBlocksChildren.js";
 import { resolveBlockChildren } from "./resolveBlockChildren.js";
 
-import type { BlockBlockObject, Result } from "@repo/notion-types";
+import type { BlockBlockObject, Result } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type { ListBlockChildrenParameters } from "@notionhq/client/build/src/api-endpoints.js";
 
