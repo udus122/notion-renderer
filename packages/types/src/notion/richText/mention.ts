@@ -1,5 +1,5 @@
 import type { RichTextItemProps } from "./richTextItem.js";
-import type { Overwrite } from "../../../types/utils.js";
+import type { Overwrite } from "../../utils.js";
 import type { ArticleData } from "@extractus/article-extractor";
 import type {
   DatabaseObjectResponse,
@@ -24,7 +24,7 @@ export type MentionObject =
   | UserMentionObject
   | DateMentionObject
   | LinkPreviewMentionObject
-  | TempateMentionMentionObject
+  | TemplateMentionMentionObject
   | PageMentionObject
   | DatabaseMentionObject;
 
@@ -78,7 +78,7 @@ export type LinkPreviewMentionObject = LinkPreviewMentionObjectResponse & {
   link_preview: { site_meta?: ArticleData };
 };
 
-export type TempateMentionMentionObject = TemplateMentionMentionObjectResponse;
+export type TemplateMentionMentionObject = TemplateMentionMentionObjectResponse;
 
 export type PageMentionObject = PageMentionObjectResponse & {
   page: { page?: PageObjectResponse };

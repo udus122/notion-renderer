@@ -1,5 +1,5 @@
 {
-  "name": "@repo/notion-api-wrangler",
+  "name": "@repo/notion-types",
   "type": "module",
   "scripts": {
     "build": "tsup src/index.ts --format cjs,esm --dts",
@@ -17,11 +17,7 @@
       }
     }
   },
-  "main": "./dist/index.js",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
   "devDependencies": {
-    "@repo/notion-types": "*",
     "@repo/typescript-config": "*",
     "tsup": "^8.3.6",
     "typescript": "latest"

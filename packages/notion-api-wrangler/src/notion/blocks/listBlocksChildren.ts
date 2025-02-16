@@ -1,0 +1,40 @@
+import { callAPIWithBackOff } from "../../utils/api.js";
+
+// import type { ListBlockChildrenResponseResults } from "@repo/notion-types";
+import type { ListBlockChildrenResponseResults, Result } from "@repo/notion-types";
+// import type { Result } from "@repo/notion-types";
+
+import type { Client } from "@notionhq/client";
+import type {
+  ListBlockChildrenParameters,
+  ListBlockChildrenResponse,
+} from "@notionhq/client/build/src/api-endpoints.js";
+
+export const listBlockChildren = async (
+  client: Client,
+  args: ListBlockChildrenParameters,
+): Promise<Result<ListBlockChildrenResponseResults>> => {
+  const result = await callAPIWithBackOff<
+    ListBlockChildrenParameters,
+    ListBlockChildrenResponse
+  >(client.blocks.children.list, args);
+
+  if (!result.ok) {
+    return result;
+  }
+
+  let blockList = result.data.results;
+
+  if (result.data.next_cursor) {
+    const nextResults = await listBlockChildren(client, {
+      ...args,
+      start_cursor: result.data.next_cursor,
+    });
+
+    if (nextResults.ok) {
+      blockList = [...blockList, ...nextResults.data];
+    }
+  }
+
+  return { ok: true, data: blockList };
+};
