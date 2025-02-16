@@ -23,6 +23,6 @@ export const Default: Story = {
 
 export const Twitter: Story = {
   args: {
-    block: EmbedTwitterObject as EmbedBlockObject,
+    block: EmbedTwitterObject as unknown as EmbedBlockObject,
   },
 };

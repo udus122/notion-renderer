@@ -19,7 +19,7 @@ type Story = StoryObj<typeof Page>;
 
 export const Default: Story = {
   args: {
-    page: PageObjectData as PageObject,
+    page: PageObjectData as unknown as PageObject,
     blocks: BlocksObject as Array<BlockBlockObject>,
     displayProperties: [
       "Status",

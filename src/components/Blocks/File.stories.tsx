@@ -17,12 +17,12 @@ type Story = StoryObj<typeof File>;
 
 export const Default: Story = {
   args: {
-    block: FileFileObject as FileBlockObject,
+    block: FileFileObject as unknown as FileBlockObject,
   },
 };
 
 export const External: Story = {
   args: {
-    block: FileExternalObject as FileBlockObject,
+    block: FileExternalObject as unknown as FileBlockObject,
   },
 };

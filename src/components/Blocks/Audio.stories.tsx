@@ -17,18 +17,18 @@ type Story = StoryObj<typeof Audio>;
 
 export const Default: Story = {
   args: {
-    block: AudioExternalObject as AudioBlockObject,
+    block: AudioExternalObject as unknown as AudioBlockObject,
   },
 };
 
 export const External: Story = {
   args: {
-    block: AudioExternalObject as AudioBlockObject,
+    block: AudioExternalObject as unknown as AudioBlockObject,
   },
 };
 
 export const File: Story = {
   args: {
-    block: AudioFileObject as AudioBlockObject,
+    block: AudioFileObject as unknown as AudioBlockObject,
   },
 };

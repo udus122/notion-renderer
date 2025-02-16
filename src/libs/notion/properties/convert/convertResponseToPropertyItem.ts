@@ -115,8 +115,9 @@ export const convertResponseToPropertyItem = async (
       case "verification": {
         return convertResponseToVerificationPropertyItem(pageProperty, client);
       }
+      case "button": 
       default: {
-        return pageProperty;
+        throw new Error(`Unsupported property type: ${pageProperty.type}`);
       }
     }
   }

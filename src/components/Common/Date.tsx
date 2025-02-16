@@ -1,4 +1,4 @@
-import { zonedTimeToUtc, format as formatDate } from "date-fns-tz";
+import { fromZonedTime, format as formatDate } from "date-fns-tz";
 
 import type { DateResponse } from "../../types/notion/common/common.js";
 
@@ -14,8 +14,8 @@ export const DateComponent: React.FC<Props> = ({
   if (!date) return null;
 
   const time_zone = date.time_zone ?? "UTC";
-  const start = zonedTimeToUtc(date.start, time_zone);
-  const end = date.end && zonedTimeToUtc(date.end, time_zone);
+  const start = fromZonedTime(date.start, time_zone);
+  const end = date.end && fromZonedTime(date.end, time_zone);
 
   return (
     <>

@@ -16,6 +16,6 @@ type Story = StoryObj<typeof LinkToPage>;
 
 export const Default: Story = {
   args: {
-    block: LinkToPageObject as LinkToPageBlockObject,
+    block: LinkToPageObject as unknown as LinkToPageBlockObject,
   },
 };

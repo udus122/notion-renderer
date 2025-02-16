@@ -17,18 +17,18 @@ type Story = StoryObj<typeof Pdf>;
 
 export const Default: Story = {
   args: {
-    block: PdfExternalObject as PdfBlockObject,
+    block: PdfExternalObject as unknown as PdfBlockObject,
   },
 };
 
 export const External: Story = {
   args: {
-    block: PdfExternalObject as PdfBlockObject,
+    block: PdfExternalObject as unknown as PdfBlockObject,
   },
 };
 
 export const File: Story = {
   args: {
-    block: PdfFileObject as PdfBlockObject,
+    block: PdfFileObject as unknown as PdfBlockObject,
   },
 };

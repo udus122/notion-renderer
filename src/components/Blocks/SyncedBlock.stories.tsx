@@ -29,6 +29,6 @@ export const Original: Story = {
 
 export const Duplicated: Story = {
   args: {
-    block: SyncedBlockDuplicatedObject as SyncedBlockBlockObject,
+    block: SyncedBlockDuplicatedObject as unknown as SyncedBlockBlockObject,
   },
 };

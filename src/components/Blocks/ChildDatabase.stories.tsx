@@ -16,6 +16,6 @@ type Story = StoryObj<typeof ChildDatabase>;
 
 export const Default: Story = {
   args: {
-    block: ChildDatabaseObject as ChildDatabaseBlockObject,
+    block: ChildDatabaseObject as unknown as ChildDatabaseBlockObject,
   },
 };

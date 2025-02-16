@@ -36,6 +36,6 @@ export const File: Story = {
 
 export const YouTube: Story = {
   args: {
-    block: VideoYouTubeObject as VideoBlockObject,
+    block: VideoYouTubeObject as unknown as VideoBlockObject,
   },
 };

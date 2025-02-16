@@ -16,6 +16,6 @@ type Story = StoryObj<typeof Image>;
 
 export const Default: Story = {
   args: {
-    block: ImageObject as ImageBlockObject,
+    block: ImageObject as unknown as ImageBlockObject,
   },
 };

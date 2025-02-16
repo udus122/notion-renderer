@@ -25,7 +25,7 @@ type Story = StoryObj<typeof Database>;
 
 export const Default: Story = {
   args: {
-    database: DatabaseObject as DatabaseObjectType,
+    database: DatabaseObject as unknown as DatabaseObjectType,
     pages: Pages as unknown as Array<PageObject>,
     viewType: "gallery",
     displayProperties: [

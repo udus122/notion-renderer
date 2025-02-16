@@ -16,6 +16,6 @@ type Story = StoryObj<typeof ChildPage>;
 
 export const Default: Story = {
   args: {
-    block: ChildPageObject as ChildPageBlockObject,
+    block: ChildPageObject as unknown as ChildPageBlockObject,
   },
 };
