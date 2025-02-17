@@ -1,4 +1,4 @@
-import type { FileObject } from "../../types/notion/common/common.js";
+import type { FileObject } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {
@@ -7,15 +7,16 @@ type Props = {
 
 export const File: FC<Props> = ({ file }) => {
   const fileUrl =
-    file.type == "external"
+    file.type === "external"
       ? file.external.url
-      : file.type == "file"
+      : file.type === "file"
         ? file.file.url
         : "";
 
   const filename =
     file.name ??
-    decodeURIComponent(new URL(fileUrl).pathname.split("/").slice(-1)[0]);
+    // TODO: Fix this
+    decodeURIComponent(new URL(fileUrl).pathname.split("/").slice(-1)[0] ?? "");
 
   return (
     <a href={fileUrl} className="notion-file">

@@ -1,15 +1,15 @@
-import { Client, isFullPage } from "@notionhq/client";
+import { type Client, isFullPage } from "@notionhq/client";
 
-import { notUndefined } from "../../utils/utils.js";
-import { callAPIWithBackOff } from "../../utils/api.js";
-import { convertResponseToPage } from "../index.js";
+import { notUndefined } from "../../utils/utils";
+import { callAPIWithBackOff } from "../../utils/api";
+import { convertResponseToPage } from "../index";
 
 import type { QueryDatabaseObject } from "@udus/notion-types";
 import type { Result } from "@udus/notion-types";
 import type {
   QueryDatabaseParameters,
   QueryDatabaseResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+} from "@notionhq/client/build/src/api-endpoints";
 
 export const queryDatabase = async (
   client: Client,

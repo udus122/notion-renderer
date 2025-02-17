@@ -1,6 +1,6 @@
-import type { PropertyItemProps } from "./properties.js";
-import type { Overwrite, PartialBy } from "../../utils.js";
-import type { PeoplePropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { PropertyItemProps } from "./properties";
+import type { Overwrite, PartialBy } from "../../utils";
+import type { PeoplePropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type PeoplePropertyItemObject = PartialBy<

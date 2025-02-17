@@ -1,4 +1,4 @@
-import type { ColorAnnotationItem } from "../../../types/notion/annotation/color.js";
+import type { ColorAnnotationItem } from "@udus/notion-types";
 
 export const Color: ColorAnnotationItem = ({ richTextItem, children }) => {
   return (

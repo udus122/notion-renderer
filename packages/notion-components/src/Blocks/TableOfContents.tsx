@@ -1,9 +1,9 @@
-import { useBlocks } from "../hooks.js";
+import { useBlocks } from "../hooks";
 
-import type { Heading1BlockObject } from "../../types/notion/block/heading1.js";
-import type { Heading2BlockObject } from "../../types/notion/block/heading2.js";
-import type { Heading3BlockObject } from "../../types/notion/block/heading3.js";
-import type { TableOfContentsBlock } from "../../types/notion/block/tableOfContents.js";
+import type { Heading1BlockObject } from "@udus/notion-types";
+import type { Heading2BlockObject } from "@udus/notion-types";
+import type { Heading3BlockObject } from "@udus/notion-types";
+import type { TableOfContentsBlock } from "@udus/notion-types";
 
 export const TableOfContents: TableOfContentsBlock = ({ block }) => {
   const blocks = useBlocks();
@@ -25,8 +25,7 @@ export const TableOfContents: TableOfContentsBlock = ({ block }) => {
       id={block.id}
       className={`notion-block notion-table-of-contents notion-color-${block.table_of_contents.color}`}
     >
-      {headings &&
-        headings.map((heading) => {
+      {headings?.map((heading) => {
           return (
             <div key={heading.id} className="notion-table-of-contents-item">
               <div className={`notion-table-of-contents-item-${heading.type}`}>

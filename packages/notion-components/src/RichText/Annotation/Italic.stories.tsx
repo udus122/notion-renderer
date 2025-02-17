@@ -1,7 +1,7 @@
-import { Italic } from "./Italic.js";
+import { Italic } from "./Italic";
 import italicRichText from "./Italic.json";
 
-import type { RichTextItemType } from "../../../types/notion/richText/richTextItem.js";
+import type { RichTextItemType } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Italic> = {

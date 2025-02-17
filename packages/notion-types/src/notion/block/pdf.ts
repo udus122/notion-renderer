@@ -1,8 +1,8 @@
-import type { BlockBlockProps } from "./block.js";
-import type { Overwrite } from "../../utils.js";
-import type { TextRequest } from "../common/common.js";
-import type { RichTextItemType } from "../richText/richTextItem.js";
-import type { PdfBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { BlockBlockProps } from "./block";
+import type { Overwrite } from "../../utils";
+import type { TextRequest } from "../common/common";
+import type { RichTextItemType } from "../richText/richTextItem";
+import type { PdfBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type PdfBlockObject = Overwrite<

@@ -1,11 +1,11 @@
 import EquationRichTextObject from "./RichTextItem.equation.json";
-import { RichTextItem } from "./RichTextItem.js";
+import { RichTextItem } from "./RichTextItem";
 import MentionRichTextObject from "./RichTextItem.mention.json";
 import TextRichTextObject from "./RichTextItem.text.json";
 
-import type { EquationRichTextItemObject } from "../../types/notion/richText/equation.js";
-import type { MentionRichTextItemObject } from "../../types/notion/richText/mention.js";
-import type { TextRichTextItemObject } from "../../types/notion/richText/text.js";
+import type { EquationRichTextItemObject } from "@udus/notion-types";
+import type { MentionRichTextItemObject } from "@udus/notion-types";
+import type { TextRichTextItemObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof RichTextItem> = {

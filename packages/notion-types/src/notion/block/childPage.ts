@@ -1,8 +1,8 @@
-import type { BlockBlockProps } from "./block.js";
+import type { BlockBlockProps } from "./block";
 import type {
   ChildPageBlockObjectResponse,
   PageObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+} from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type ChildPageBlockObject = ChildPageBlockObjectResponse & {

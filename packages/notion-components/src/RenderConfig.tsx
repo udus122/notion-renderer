@@ -1,14 +1,14 @@
-import { AnnotationItemProvider } from "./Mapper/Annotation.js";
-import { BlockProvider } from "./Mapper/Block.js";
-import { LinkProvider } from "./Mapper/Link.js";
-import { PropertyItemProvider } from "./Mapper/Property.js";
-import { RichTextItemProvider } from "./Mapper/RichText.js";
+import { AnnotationItemProvider } from "./Mapper/Annotation";
+import { BlockProvider } from "./Mapper/Block";
+import { LinkProvider } from "./Mapper/Link";
+import { PropertyItemProvider } from "./Mapper/Property";
+import { RichTextItemProvider } from "./Mapper/RichText";
 
-import type { LinkProps } from "../types/notion/common/link.js";
-import type { AnnotationItemMapper } from "../types/notion/mapper/annotationItem.js";
-import type { BlockMapper } from "../types/notion/mapper/block.js";
-import type { PropertyItemMapper } from "../types/notion/mapper/propertyItem.js";
-import type { RichTextItemMapper } from "../types/notion/mapper/richTextItem.js";
+import type { LinkProps } from "@udus/notion-types";
+import type { AnnotationItemMapper } from "@udus/notion-types";
+import type { BlockMapper } from "@udus/notion-types";
+import type { PropertyItemMapper } from "@udus/notion-types";
+import type { RichTextItemMapper } from "@udus/notion-types";
 import type { FC, ReactNode } from "react";
 
 type Props = {

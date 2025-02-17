@@ -4,16 +4,16 @@ import {
   ClientErrorCode,
 } from "@notionhq/client";
 
-import { exponentialBackoffFactory } from "./backoff.js";
+import { exponentialBackoffFactory } from "./backoff";
 
-import type { Result } from "../../types/utils.js";
+import type { Result } from "@udus/notion-types";
 
 const exponentialBackoff = exponentialBackoffFactory(64, undefined, 300);
 
 export const callAPIWithBackOff = async <Args, Item>(
   func: (args: Args) => Promise<Item>,
   args: Args,
-  retryCount: number = 5,
+  retryCount = 5,
 ): Promise<Result<Item>> => {
   try {
     const data = await func({ ...args });
@@ -45,10 +45,11 @@ export const callAPIWithBackOff = async <Args, Item>(
             };
           }
           await exponentialBackoff();
+          const newRetryCount = retryCount - 1;
           const { ok, data } = await callAPIWithBackOff(
             func,
             { ...args },
-            --retryCount,
+            newRetryCount,
           );
           if (ok) {
             return {

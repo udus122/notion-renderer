@@ -1,9 +1,9 @@
-import { fetchBlock } from "../fetch.js";
-import { fetchBlockList } from "../fetchBlockList.js";
+import { fetchBlock } from "../fetch";
+import { fetchBlockList } from "../fetchBlockList";
 
 import type { SyncedBlockBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { SyncedBlockBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { SyncedBlockBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertSyncedBlockResponseToBlock = async (
   block: SyncedBlockBlockObjectResponse,

@@ -1,6 +1,6 @@
-import { RichTextItemContext, useMapper } from "../hooks.js";
+import { RichTextItemContext, useMapper } from "../hooks";
 
-import type { RichTextItemMapper } from "../../types/notion/mapper/richTextItem.js";
+import type { RichTextItemMapper } from "@udus/notion-types";
 import type { FC, ReactNode } from "react";
 
 export const RichTextItemProvider: FC<{

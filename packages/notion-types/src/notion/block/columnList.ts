@@ -1,7 +1,7 @@
-import type { BlockBlockProps } from "./block.js";
-import type { ColumnBlockObject } from "./column.js";
-import type { Overwrite } from "../../utils.js";
-import type { ColumnListBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { BlockBlockProps } from "./block";
+import type { ColumnBlockObject } from "./column";
+import type { Overwrite } from "../../utils";
+import type { ColumnListBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type ColumnListBlockObject = Overwrite<

@@ -1,6 +1,6 @@
-import { Property } from "./Property.js";
+import { Property } from "./Property";
 
-import type { PropertiesType as PropertiesType } from "../../types/notion/property/properties.js";
+import type { PropertiesType } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

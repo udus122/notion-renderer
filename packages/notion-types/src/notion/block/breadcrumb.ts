@@ -1,10 +1,10 @@
-import type { BlockBlockProps } from "./block.js";
-import type { Overwrite } from "../../utils.js";
+import type { BlockBlockProps } from "./block";
+import type { Overwrite } from "../../utils";
 import type {
   BreadcrumbBlockObjectResponse,
   DatabaseObjectResponse,
   PageObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+} from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type BreadcrumbBlockObject = Overwrite<

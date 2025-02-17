@@ -1,1 +1,1 @@
-export * from "./notion/index.js";
+export * from "./notion/index";

@@ -1,8 +1,8 @@
 import FileExternalObject from "./File.External.json";
 import FileFileObject from "./File.File.json";
-import { File } from "./File.js";
+import { File } from "./File";
 
-import type { FileBlockObject } from "../../types/notion/block/file.js";
+import type { FileBlockObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof File> = {

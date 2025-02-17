@@ -1,11 +1,11 @@
-import { Client, isFullDatabase, isFullPage } from "@notionhq/client";
+import { type Client, isFullDatabase, isFullPage } from "@notionhq/client";
 
-import { listComments } from "../../comments.js";
-import { retrieveDatabase } from "../../database/retrieve.js";
-import { retrievePage } from "../../pages/retrieve.js";
+import { listComments } from "../../comments";
+import { retrieveDatabase } from "../../database/retrieve";
+import { retrievePage } from "../../pages/retrieve";
 
 import type { LinkToPageBlockObject } from "@udus/notion-types";
-import type { LinkToPageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { LinkToPageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertLinkToPageResponseToBlock = async (
   block: LinkToPageBlockObjectResponse,

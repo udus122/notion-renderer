@@ -1,6 +1,6 @@
-import { Client, isFullPage } from "@notionhq/client";
+import { type Client, isFullPage } from "@notionhq/client";
 
-import { retrievePage } from "../../pages/retrieve.js";
+import { retrievePage } from "../../pages/retrieve";
 
 import type {
   RelationItem,
@@ -11,7 +11,7 @@ import type {
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
   RelationPropertyItemObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+} from "@notionhq/client/build/src/api-endpoints";
 
 export const convertResponseToRelationPropertyItem = (
   property: RelationPropertyItemObjectResponse,

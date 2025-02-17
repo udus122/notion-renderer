@@ -1,15 +1,15 @@
-import { selectProperties } from "../../../../src/utils/index.js";
-import { Cover } from "../Common/Cover.js";
-import { Icon } from "../Common/Icon.js";
-import { Title } from "../Common/Title.js";
-import { RichText } from "../index.js";
+import { selectProperties } from "../../../../src/utils/index";
+import { Cover } from "../Common/Cover";
+import { Icon } from "../Common/Icon";
+import { Title } from "../Common/Title";
+import { RichText } from "../index";
 
-import { Gallery } from "./Gallery/Gallery.js";
-import { List } from "./List/List.js";
-import { Table } from "./Table/Table.js";
+import { Gallery } from "./Gallery/Gallery";
+import { List } from "./List/List";
+import { Table } from "./Table/Table";
 
-import type { DatabaseObject } from "../../types/notion/database.js";
-import type { PageObject } from "../../types/notion/page.js";
+import type { DatabaseObject } from "@udus/notion-types";
+import type { PageObject } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {
@@ -39,10 +39,9 @@ export const Database: FC<Props> = ({
       database.properties,
       displayProperties,
     );
-    pages.forEach((page) => {
+    for (const page of pages) {
       page.properties = selectProperties(page.properties, displayProperties);
-      return page;
-    });
+    }
   }
 
   return (

@@ -1,8 +1,8 @@
-import { BlocksContext } from "../hooks.js";
+import { BlocksContext } from "../hooks";
 
-import { Block } from "./Block.js";
+import { Block } from "./Block";
 
-import type { BlockBlockObject } from "../../types/notion/block/block.js";
+import type { BlockBlockObject } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

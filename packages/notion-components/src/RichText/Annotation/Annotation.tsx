@@ -1,9 +1,9 @@
-import { AnnotationItemProvider } from "../../Mapper/Annotation.js";
+import { AnnotationItemProvider } from "../../Mapper/Annotation";
 
-import { AnnotationItem } from "./AnnotationItem.js";
+import { AnnotationItem } from "./AnnotationItem";
 
-import type { AnnotationItemMapper } from "../../../types/notion/mapper/annotationItem.js";
-import type { RichTextItemType } from "../../../types/notion/richText/richTextItem.js";
+import type { AnnotationItemMapper } from "@udus/notion-types";
+import type { RichTextItemType } from "@udus/notion-types";
 import type { ReactNode } from "react";
 
 type Props = {

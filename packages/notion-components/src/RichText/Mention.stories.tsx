@@ -1,8 +1,8 @@
 import MentionDatabaseRichTextObject from "./Mention.database.json";
-import { Mention } from "./Mention.js";
+import { Mention } from "./Mention";
 import MentionPageRichTextObject from "./Mention.page.json";
 
-import type { MentionRichTextItemObject } from "../../types/notion/richText/mention.js";
+import type { MentionRichTextItemObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Mention> = {

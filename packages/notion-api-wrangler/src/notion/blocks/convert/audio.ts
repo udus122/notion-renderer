@@ -1,8 +1,8 @@
-import { convertResponseToRichText } from "../../richText/richText.js";
+import { convertResponseToRichText } from "../../richText/richText";
 
 import type { AudioBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { AudioBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { AudioBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertAudioResponseToBlock = async (
   block: AudioBlockObjectResponse,

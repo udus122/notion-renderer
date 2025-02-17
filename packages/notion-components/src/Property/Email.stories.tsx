@@ -1,7 +1,7 @@
-import { EmailProperty } from "./Email.js";
+import { EmailProperty } from "./Email";
 import EmailPropertyObject from "./Email.json";
 
-import type { EmailPropertyItemObject } from "../../types/notion/property/email.js";
+import type { EmailPropertyItemObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof EmailProperty> = {

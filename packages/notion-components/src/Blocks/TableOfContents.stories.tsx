@@ -1,11 +1,11 @@
-import { BlocksContext } from "../hooks.js";
+import { BlocksContext } from "../hooks";
 
 import BlockList from "./BlockList.json";
-import { TableOfContents } from "./TableOfContents.js";
+import { TableOfContents } from "./TableOfContents";
 import TableOfContentsObject from "./TableOfContents.json";
 
-import type { BlockBlockObject } from "../../types/notion/block/block.js";
-import type { TableOfContentsBlockObject } from "../../types/notion/block/tableOfContents.js";
+import type { BlockBlockObject } from "@udus/notion-types";
+import type { TableOfContentsBlockObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof TableOfContents> = {

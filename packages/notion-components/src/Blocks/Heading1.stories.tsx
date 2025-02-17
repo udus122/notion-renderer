@@ -1,8 +1,8 @@
-import { Heading1 } from "./Heading1.js";
+import { Heading1 } from "./Heading1";
 import Heading1Object from "./Heading1.json";
 import Heading1Toggleable from "./Heading1.Toggleable.json";
 
-import type { Heading1BlockObject } from "../../types/notion/block/heading1.js";
+import type { Heading1BlockObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Heading1> = {

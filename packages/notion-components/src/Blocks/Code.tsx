@@ -1,6 +1,6 @@
-import { RichText } from "../RichText/RichText.js";
+import { RichText } from "../RichText/RichText";
 
-import type { CodeBlock } from "../../types/notion/block/code.js";
+import type { CodeBlock } from "@udus/notion-types";
 
 export const Code: CodeBlock = ({ block }) => {
   return (

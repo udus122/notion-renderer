@@ -1,6 +1,6 @@
-import { type LinkProps } from "../../types/notion/common/link.js";
+import type { LinkProps } from "@udus/notion-types";
 
-import { LinkContext } from "../hooks.js";
+import { LinkContext } from "../hooks";
 
 import type { FC, ComponentType, ReactNode } from "react";
 

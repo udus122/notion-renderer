@@ -1,4 +1,4 @@
-import type { UrlPropertyItemComponent } from "../../types/notion/property/url.js";
+import type { UrlPropertyItemComponent } from "@udus/notion-types";
 
 export const UrlProperty: UrlPropertyItemComponent = ({ propertyItem }) => {
   return (

@@ -1,4 +1,4 @@
-import type { ColumnBlock } from "../../types/notion/block/column.js";
+import type { ColumnBlock } from "@udus/notion-types";
 
 export const Column: ColumnBlock = ({ block }) => {
   console.warn(`${block.type} is not supported`);

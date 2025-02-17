@@ -1,4 +1,4 @@
-import type { RichTextType } from "../../types/notion/richText/richText.js";
+import type { RichTextType } from "@udus/notion-types";
 
 type Props = {
   title: RichTextType;

@@ -1,10 +1,10 @@
 import BlocksObject from "../Blocks/BlockList.json";
 
-import { Page } from "./Page.js";
+import { Page } from "./Page";
 import PageObjectData from "./Page.json";
 
-import type { BlockBlockObject } from "../../types/notion/block/block.js";
-import type { PageObject } from "../../types/notion/page.js";
+import type { BlockBlockObject } from "@udus/notion-types";
+import type { PageObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Page> = {

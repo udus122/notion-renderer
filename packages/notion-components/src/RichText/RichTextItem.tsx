@@ -1,10 +1,10 @@
-import { useMapper } from "../hooks.js";
+import { useMapper } from "../hooks";
 
-import { InlineEquation } from "./InlineEquation.js";
-import { Mention } from "./Mention.js";
-import { Text } from "./Text.js";
+import { InlineEquation } from "./InlineEquation";
+import { Mention } from "./Mention";
+import { Text } from "./Text";
 
-import type { RichTextItemComponent } from "../../types/notion/richText/richTextItem.js";
+import type { RichTextItemComponent } from "@udus/notion-types";
 
 export const RichTextItem: RichTextItemComponent = (props) => {
   if (!props.richText) return null;

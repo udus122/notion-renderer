@@ -1,4 +1,4 @@
-import type { TextRichTextItemObject } from "../../types/notion/richText/text.js";
+import type { TextRichTextItemObject } from "@udus/notion-types";
 
 type Props = {
   richTextText: TextRichTextItemObject["text"];

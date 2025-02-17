@@ -1,6 +1,6 @@
-import { ListItem } from "./ListItem.js";
+import { ListItem } from "./ListItem";
 
-import type { PageObject } from "../../../types/notion/page.js";
+import type { PageObject } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

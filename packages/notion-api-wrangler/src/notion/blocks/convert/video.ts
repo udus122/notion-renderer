@@ -1,9 +1,9 @@
-import { fetchOembed } from "../../../utils/oembed.js";
-import { convertResponseToRichText } from "../../richText/richText.js";
+import { fetchOembed } from "../../../utils/oembed";
+import { convertResponseToRichText } from "../../richText/richText";
 
 import type { VideoBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { VideoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { VideoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertVideoResponseToBlock = async (
   block: VideoBlockObjectResponse,

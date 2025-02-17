@@ -1,7 +1,7 @@
-import { NumberProperty } from "./Number.js";
+import { NumberProperty } from "./Number";
 import NumberPropertyObject from "./Number.json";
 
-import type { NumberPropertyItemObject } from "../../types/notion/property/number.js";
+import type { NumberPropertyItemObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof NumberProperty> = {

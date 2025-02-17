@@ -1,8 +1,8 @@
-import { fetchBlockList } from "../fetchBlockList.js";
+import { fetchBlockList } from "../fetchBlockList";
 
 import type { NumberedListItemBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { NumberedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { NumberedListItemBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertNumberedListItemResponseToBlock = async (
   block: NumberedListItemBlockObjectResponse,

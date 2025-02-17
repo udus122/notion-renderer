@@ -1,5 +1,5 @@
-import type { BlockBlockProps } from "./block.js";
-import type { NumberedListItemBlockObject } from "./numberedListItem.js";
+import type { BlockBlockProps } from "./block";
+import type { NumberedListItemBlockObject } from "./numberedListItem";
 import type { ComponentType } from "react";
 
 export type NumberedListBlockObject = {

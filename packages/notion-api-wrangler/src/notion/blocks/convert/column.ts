@@ -1,8 +1,8 @@
-import { fetchBlockList } from "../fetchBlockList.js";
+import { fetchBlockList } from "../fetchBlockList";
 
 import type { ColumnBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { ColumnBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { ColumnBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertColumnResponseToBlock = async (
   block: ColumnBlockObjectResponse,

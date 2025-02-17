@@ -1,4 +1,4 @@
-import type { UniqueIdPropertyItemComponent } from "../../types/notion/property/uniqueId.js";
+import type { UniqueIdPropertyItemComponent } from "@udus/notion-types";
 
 export const UniqueIdProperty: UniqueIdPropertyItemComponent = ({
   propertyItem,

@@ -1,6 +1,6 @@
 "use client";
 
-export { RenderConfig } from "./RenderConfig.js";
+export { RenderConfig } from "./RenderConfig";
 export {
   Audio,
   Block,
@@ -35,16 +35,16 @@ export {
   Toggle,
   Unsupported,
   Video,
-} from "./Blocks/index.js";
+} from "./Blocks/index";
 
 export {
   OpenedHeading1,
   OpenedHeading2,
   OpenedHeading3,
   OpenedToggle,
-} from "./Blocks/Custom/index.js";
-export { Database } from "./Database/index.js";
-export { Page } from "./Page/index.js";
+} from "./Blocks/Custom/index";
+export { Database } from "./Database/index";
+export { Page } from "./Page/index";
 export {
   CheckboxProperty,
   CreatedByProperty,
@@ -68,13 +68,13 @@ export {
   TitleProperty,
   UniqueIdProperty,
   UrlProperty,
-} from "./Property/index.js";
+} from "./Property/index";
 export {
   AnnotationItemProvider,
   BlockProvider,
   LinkProvider,
   RichTextItemProvider,
-} from "./Mapper/index.js";
+} from "./Mapper/index";
 export {
   Annotation,
   AnnotationItem,
@@ -89,4 +89,4 @@ export {
   Strikethrough,
   Text,
   Underline,
-} from "./RichText/index.js";
+} from "./RichText/index";

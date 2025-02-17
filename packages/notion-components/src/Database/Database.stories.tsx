@@ -1,9 +1,9 @@
-import { Database } from "./Database.js";
+import { Database } from "./Database";
 import DatabaseObject from "./Database.json";
 import Pages from "./Pages.json";
 
-import type { DatabaseObject as DatabaseObjectType } from "../../types/notion/database.js";
-import type { PageObject } from "../../types/notion/page.js";
+import type { DatabaseObject as DatabaseObjectType } from "@udus/notion-types";
+import type { PageObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Database> = {

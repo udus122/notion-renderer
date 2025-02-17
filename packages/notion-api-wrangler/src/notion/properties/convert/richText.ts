@@ -5,7 +5,7 @@ import type {
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
   RichTextPropertyItemObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+} from "@notionhq/client/build/src/api-endpoints";
 
 export const convertResponseToRichTextPropertyItem = (
   property: RichTextPropertyItemObjectResponse,

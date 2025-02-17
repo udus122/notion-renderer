@@ -1,7 +1,7 @@
-import { InlineCode } from "./InlineCode.js";
+import { InlineCode } from "./InlineCode";
 import codeRichText from "./InlineCode.json";
 
-import type { RichTextItemType } from "../../../types/notion/richText/richTextItem.js";
+import type { RichTextItemType } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof InlineCode> = {

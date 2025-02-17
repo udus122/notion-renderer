@@ -1,8 +1,8 @@
 import SyncedBlockDuplicatedObject from "./SyncedBlock.Duplicated.json";
-import { SyncedBlock } from "./SyncedBlock.js";
+import { SyncedBlock } from "./SyncedBlock";
 import SyncedBlockOriginalObject from "./SyncedBlock.Original.json";
 
-import type { SyncedBlockBlockObject } from "../../types/notion/block/syncedBlock.js";
+import type { SyncedBlockBlockObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof SyncedBlock> = {

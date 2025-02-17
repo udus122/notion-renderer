@@ -1,4 +1,4 @@
-import type { CoverObject } from "../../types/notion/common/common.js";
+import type { CoverObject } from "@udus/notion-types";
 
 type Props = {
   cover: CoverObject;
@@ -16,7 +16,8 @@ export const Cover: React.FC<Props> = ({ cover }) => {
         alt="notion cover"
       />
     );
-  } else if (cover.type === "file") {
+  }
+  if (cover.type === "file") {
     return (
       <img className="notion-cover" src={cover.file.url} alt="notion cover" />
     );

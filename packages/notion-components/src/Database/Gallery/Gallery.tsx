@@ -1,6 +1,6 @@
-import { Card } from "./Card.js";
+import { Card } from "./Card";
 
-import type { PageObject } from "../../../types/notion/page.js";
+import type { PageObject } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

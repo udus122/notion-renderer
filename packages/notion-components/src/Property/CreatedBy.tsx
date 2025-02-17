@@ -1,6 +1,6 @@
 import { isFullUser } from "@notionhq/client";
 
-import type { CreatedByPropertyItemComponent } from "../../types/notion/property/createdBy.js";
+import type { CreatedByPropertyItemComponent } from "@udus/notion-types";
 
 export const CreatedByProperty: CreatedByPropertyItemComponent = ({
   propertyItem,

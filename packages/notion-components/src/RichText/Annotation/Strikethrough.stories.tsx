@@ -1,7 +1,7 @@
-import { Strikethrough } from "./Strikethrough.js";
+import { Strikethrough } from "./Strikethrough";
 import StrikethroughRichText from "./Strikethrough.json";
 
-import type { RichTextItemType } from "../../../types/notion/richText/richTextItem.js";
+import type { RichTextItemType } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Strikethrough> = {

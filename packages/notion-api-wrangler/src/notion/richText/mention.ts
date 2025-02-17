@@ -1,9 +1,9 @@
-import { Client, isFullDatabase, isFullPage } from "@notionhq/client";
+import { type Client, isFullDatabase, isFullPage } from "@notionhq/client";
 
-import { fetchSiteMeta } from "../../utils/sitemeta.js";
-import { generateUUID } from "../../utils/utils.js";
-import { retrieveDatabase } from "../database/retrieve.js";
-import { retrievePage } from "../index.js";
+import { fetchSiteMeta } from "../../utils/sitemeta";
+import { generateUUID } from "../../utils/utils";
+import { retrieveDatabase } from "../database/retrieve";
+import { retrievePage } from "../index";
 
 import type {
   MentionRichTextItemObject,
@@ -15,7 +15,7 @@ import type {
   UserMentionObject,
   MentionObject,
 } from "@udus/notion-types";
-import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertMentionObjectResponse = async (
   mention: MentionObject,

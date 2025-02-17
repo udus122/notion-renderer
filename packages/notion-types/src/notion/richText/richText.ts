@@ -1,7 +1,7 @@
-import type { RichTextItemType } from "./richTextItem.js";
-import type { LinkComponent } from "../common/link.js";
-import type { AnnotationItemMapper } from "../mapper/annotationItem.js";
-import type { RichTextItemMapper } from "../mapper/richTextItem.js";
+import type { RichTextItemType } from "./richTextItem";
+import type { LinkComponent } from "../common/link";
+import type { AnnotationItemMapper } from "../mapper/annotationItem";
+import type { RichTextItemMapper } from "../mapper/richTextItem";
 
 export type RichTextType = Array<RichTextItemType>;
 

@@ -1,7 +1,7 @@
-import { Block } from "./Block.js";
-import { BlockList } from "./BlockList.js";
+import { Block } from "./Block";
+import { BlockList } from "./BlockList";
 
-import type { SyncedBlockBlock } from "../../types/notion/block/syncedBlock.js";
+import type { SyncedBlockBlock } from "@udus/notion-types";
 
 export const SyncedBlock: SyncedBlockBlock = ({ block }) => {
   return (

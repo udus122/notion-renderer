@@ -1,7 +1,7 @@
-import { Bold } from "./Bold.js";
+import { Bold } from "./Bold";
 import boldRichText from "./Bold.json";
 
-import type { RichTextItemType } from "../../../types/notion/richText/richTextItem.js";
+import type { RichTextItemType } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Bold> = {

@@ -1,3 +1,3 @@
-export * from "./common.js";
-export * from "./icon.js";
-export * from "./link.js";
+export * from "./common";
+export * from "./icon";
+export * from "./link";

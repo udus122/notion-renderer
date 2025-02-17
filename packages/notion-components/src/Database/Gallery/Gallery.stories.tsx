@@ -1,8 +1,8 @@
 import Pages from "../Pages.json";
 
-import { Gallery } from "./Gallery.js";
+import { Gallery } from "./Gallery";
 
-import type { PageObject } from "../../../types/notion/page.js";
+import type { PageObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Gallery> = {

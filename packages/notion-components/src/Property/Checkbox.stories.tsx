@@ -1,8 +1,8 @@
 import CheckboxPropertyObjectChecked from "./Checkbox.checked.json";
-import { CheckboxProperty } from "./Checkbox.js";
+import { CheckboxProperty } from "./Checkbox";
 import CheckboxPropertyObject from "./Checkbox.json";
 
-import type { CheckboxPropertyItemObject } from "../../types/notion/property/checkbox.js";
+import type { CheckboxPropertyItemObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof CheckboxProperty> = {

@@ -1,7 +1,7 @@
-import { CreatedByProperty } from "./CreatedBy.js";
+import { CreatedByProperty } from "./CreatedBy";
 import CreatedByPropertyObject from "./CreatedBy.json";
 
-import type { CreatedByPropertyItemObject } from "../../types/notion/property/createdBy.js";
+import type { CreatedByPropertyItemObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof CreatedByProperty> = {

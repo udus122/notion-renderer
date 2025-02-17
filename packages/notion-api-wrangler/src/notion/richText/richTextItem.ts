@@ -1,10 +1,10 @@
-import { convertEquationRichTextItemResponse } from "./equation.js";
-import { convertMentionRichTextItemResponse } from "./mention.js";
-import { convertTextRichTextItemResponse } from "./text.js";
+import { convertEquationRichTextItemResponse } from "./equation";
+import { convertMentionRichTextItemResponse } from "./mention";
+import { convertTextRichTextItemResponse } from "./text";
 
 import type { RichTextItemType } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertResponseToRichTextItem = async (
   response: RichTextItemResponse,

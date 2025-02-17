@@ -1,3 +1,3 @@
-export * from "./convert/index.js";
-export * from "./fetch.js";
-export * from "./retrieve.js";
+export * from "./convert/index";
+export * from "./fetch";
+export * from "./retrieve";

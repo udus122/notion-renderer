@@ -1,7 +1,7 @@
-import type { BlockBlockProps } from "./block.js";
-import type { RichTextItemType } from "../richText/richTextItem.js";
+import type { BlockBlockProps } from "./block";
+import type { RichTextItemType } from "../richText/richTextItem";
 import type { ArticleData } from "@extractus/article-extractor";
-import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type BookmarkBlockObject = BookmarkBlockObjectResponse & {

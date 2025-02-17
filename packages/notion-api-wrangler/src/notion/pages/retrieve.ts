@@ -1,11 +1,11 @@
-import { callAPIWithBackOff } from "../../utils/api.js";
+import { callAPIWithBackOff } from "../../utils/api";
 
 import type { Result } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
 import type {
   GetPageParameters,
   GetPageResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+} from "@notionhq/client/build/src/api-endpoints";
 
 export const retrievePage = async (
   client: Client,

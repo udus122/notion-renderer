@@ -1,11 +1,11 @@
-import { RichText } from "../RichText/RichText.js";
+import { RichText } from "../RichText/RichText";
 
-import type { BookmarkBlock } from "../../types/notion/block/bookmark.js";
+import type { BookmarkBlock } from "@udus/notion-types";
 
 export const Bookmark: BookmarkBlock = ({ block }) => {
   return (
     <div id={block.id} className="notion-block notion-bookmark">
-      <a href={block.bookmark.url} target="_blank">
+      <a href={block.bookmark.url} target="_blank" rel="noreferrer">
         <div className="notion-bookmark-container">
           <div className="notion-bookmark-content">
             <div className="notion-bookmark-title">
@@ -38,7 +38,7 @@ export const Bookmark: BookmarkBlock = ({ block }) => {
             <div className="notion-bookmark-cover">
               <img
                 src={block.bookmark.site_meta.image}
-                alt="bookmark og image"
+                alt="bookmark cover"
               />
             </div>
           )}

@@ -1,11 +1,11 @@
 import { isFullUser } from "@notionhq/client";
 
-import { DateComponent } from "../Common/Date.js";
-import { Icon } from "../Common/Icon.js";
-import { useMapper } from "../hooks.js";
+import { DateComponent } from "../Common/Date";
+import { Icon } from "../Common/Icon";
+import { useMapper } from "../hooks";
 
-import type { MentionRichTextItemObject } from "../../types/notion/richText/mention.js";
-import type { RichTextItemProps } from "../../types/notion/richText/richTextItem.js";
+import type { MentionRichTextItemObject } from "@udus/notion-types";
+import type { RichTextItemProps } from "@udus/notion-types";
 
 type Props = Omit<
   RichTextItemProps<MentionRichTextItemObject>,
@@ -76,7 +76,7 @@ export const Mention: React.FC<Props> = ({ richText: richTextItem }) => {
         </span>
       );
     default:
-      console.error(`unknown mention type.`);
+      console.error("unknown mention type.");
       return null;
   }
 };

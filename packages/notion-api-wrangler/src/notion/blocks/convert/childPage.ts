@@ -1,9 +1,9 @@
-import { Client, isFullPage } from "@notionhq/client";
+import { type Client, isFullPage } from "@notionhq/client";
 
-import { retrievePage } from "../../pages/retrieve.js";
+import { retrievePage } from "../../pages/retrieve";
 
 import type { ChildPageBlockObject } from "@udus/notion-types";
-import type { ChildPageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { ChildPageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertChildPageResponseToBlock = async (
   block: ChildPageBlockObjectResponse,

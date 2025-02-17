@@ -1,8 +1,8 @@
-import { Header } from "./Header.js";
-import { Row } from "./Row.js";
+import { Header } from "./Header";
+import { Row } from "./Row";
 
-import type { DatabaseObject } from "../../../types/notion/database.js";
-import type { PageObject } from "../../../types/notion/page.js";
+import type { DatabaseObject } from "@udus/notion-types";
+import type { PageObject } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

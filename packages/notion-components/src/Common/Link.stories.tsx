@@ -1,4 +1,4 @@
-import { Link } from "./Link.js";
+import { Link } from "./Link";
 import TextObject from "./Link.json";
 
 import type { Meta, StoryObj } from "@storybook/react";

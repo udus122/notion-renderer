@@ -1,8 +1,8 @@
-import { convertResponseToRichText } from "../../richText/richText.js";
+import { convertResponseToRichText } from "../../richText/richText";
 
 import type { ImageBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { ImageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { ImageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertImageResponseToBlock = async (
   block: ImageBlockObjectResponse,

@@ -1,8 +1,8 @@
 import katex from "katex";
 
-import { Annotation } from "./Annotation/Annotation.js";
+import { Annotation } from "./Annotation/Annotation";
 
-import type { EquationRichTextItem } from "../../types/notion/richText/equation.js";
+import type { EquationRichTextItem } from "@udus/notion-types";
 
 export const InlineEquation: EquationRichTextItem = ({
   richText: richTextItem,
@@ -10,8 +10,8 @@ export const InlineEquation: EquationRichTextItem = ({
   <span className="notion-rich-text-type-equation">
     <Annotation richTextItem={richTextItem}>
       <span
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: This is a trusted value
         dangerouslySetInnerHTML={{
-          // eslint-disable-next-line import/no-named-as-default-member
           __html: katex.renderToString(richTextItem.equation.expression, {
             displayMode: false,
             throwOnError: false,

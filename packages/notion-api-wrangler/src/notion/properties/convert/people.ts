@@ -5,7 +5,7 @@ import type {
   PeoplePropertyItemObjectResponse,
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+} from "@notionhq/client/build/src/api-endpoints";
 
 export const convertResponseToPeoplePropertyItem = (
   property: PeoplePropertyItemObjectResponse,

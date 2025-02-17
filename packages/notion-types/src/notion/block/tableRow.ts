@@ -1,6 +1,6 @@
-import type { BlockBlockProps } from "./block.js";
-import type { RichTextItemType } from "../richText/richTextItem.js";
-import type { TableRowBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { BlockBlockProps } from "./block";
+import type { RichTextItemType } from "../richText/richTextItem";
+import type { TableRowBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type TableRowBlockObject = TableRowBlockObjectResponse & {

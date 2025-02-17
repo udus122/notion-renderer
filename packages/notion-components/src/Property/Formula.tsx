@@ -1,7 +1,7 @@
-import { Checkbox } from "../Common/Checkbox.js";
-import { DateComponent } from "../Common/Date.js";
+import { Checkbox } from "../Common/Checkbox";
+import { DateComponent } from "../Common/Date";
 
-import type { FormulaPropertyItemComponent } from "../../types/notion/property/formula.js";
+import type { FormulaPropertyItemComponent } from "@udus/notion-types";
 
 export const FormulaProperty: FormulaPropertyItemComponent = ({
   propertyItem,

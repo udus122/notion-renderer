@@ -1,5 +1,5 @@
-import type { BlockBlockProps } from "./block.js";
-import type { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { BlockBlockProps } from "./block";
+import type { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type DividerBlockObject = DividerBlockObjectResponse;

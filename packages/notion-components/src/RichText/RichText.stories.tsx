@@ -1,7 +1,7 @@
-import { RichText } from "./RichText.js";
+import { RichText } from "./RichText";
 import RichTextObject from "./RichText.json";
 
-import type { RichTextItemType } from "../../types/notion/richText/richTextItem.js";
+import type { RichTextItemType } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof RichText> = {

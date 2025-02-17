@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 
-import { RichText } from "../RichText/RichText.js";
+import { RichText } from "../RichText/RichText";
 
-import type { EmbedBlock } from "../../types/notion/block/embed.js";
+import type { EmbedBlock } from "@udus/notion-types";
 
 export const Embed: EmbedBlock = ({ block }) => {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "https://platform.twitter.com/widgets.js";
+    script.src = "https://platform.twitter.com/widgets";
     document.body.appendChild(script);
 
     return () => {
@@ -19,6 +19,7 @@ export const Embed: EmbedBlock = ({ block }) => {
     return (
       <div
         className="notion-block notion-embed"
+        // biome-ignore lint/security/noDangerouslySetInnerHtml: 機能として必要なため
         dangerouslySetInnerHTML={{
           __html:
             block.embed.oembed.type === "rich" ? block.embed.oembed.html : "",

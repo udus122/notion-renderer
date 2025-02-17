@@ -1,7 +1,7 @@
-import { PeopleProperty } from "./People.js";
+import { PeopleProperty } from "./People";
 import PeoplePropertyObject from "./People.json";
 
-import type { PeoplePropertyItemObject } from "../../types/notion/property/people.js";
+import type { PeoplePropertyItemObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof PeopleProperty> = {

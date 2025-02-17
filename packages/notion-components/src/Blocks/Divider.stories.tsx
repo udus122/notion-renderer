@@ -1,7 +1,7 @@
-import { Divider } from "./Divider.js";
+import { Divider } from "./Divider";
 import DividerObject from "./Divider.json";
 
-import type { DividerBlockObject } from "../../types/notion/block/divider.js";
+import type { DividerBlockObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Divider> = {

@@ -9,7 +9,7 @@
     ".": {
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
+        "default": "./dist/index"
       },
       "require": {
         "types": "./dist/index.d.cts",
@@ -17,18 +17,39 @@
       }
     }
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "devDependencies": {
-    "@udus/notion-types": "*",
     "@repo/typescript-config": "*",
-    "tsup": "^8.3.6",
-    "typescript": "latest"
+    "@udus/notion-types": "*",
+    "@types/katex": "^0.16.7",
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@storybook/addon-console": "^3.0.0",
+    "@storybook/addon-essentials": "^8.5.6",
+    "@storybook/addon-interactions": "^8.5.6",
+    "@storybook/addon-links": "^8.5.6",
+    "@storybook/addon-mdx-gfm": "^8.5.6",
+    "@storybook/blocks": "^8.5.6",
+    "@storybook/react": "^8.5.6",
+    "@storybook/react-vite": "^8.5.6",
+    "@storybook/testing-library": "^0.2.2",
+    "storybook": "^8.5.6",
+    "typescript": "latest",
+    "vite": "^6.1.0"
   },
   "dependencies": {
     "@extractus/article-extractor": "^8.0.17",
     "@extractus/oembed-extractor": "^4.0.6",
-    "@notionhq/client": "^2.2.15"
+    "@notionhq/client": "^2.2.15",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0"
+    },
+  "peerDependencies": {
+    "katex": "^0.16.9",
+    "react": "^19",
+    "react-dom": "^19"
   }
 }

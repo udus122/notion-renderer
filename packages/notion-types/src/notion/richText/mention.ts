@@ -1,11 +1,11 @@
-import type { RichTextItemProps } from "./richTextItem.js";
-import type { Overwrite } from "../../utils.js";
+import type { RichTextItemProps } from "./richTextItem";
+import type { Overwrite } from "../../utils";
 import type { ArticleData } from "@extractus/article-extractor";
 import type {
   DatabaseObjectResponse,
   MentionRichTextItemResponse,
   PageObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+} from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type MentionRichTextItemObject = Overwrite<

@@ -1,15 +1,15 @@
-import { RichText } from "../RichText/RichText.js";
+import { RichText } from "../RichText/RichText";
 
-import type { ImageBlock } from "../../types/notion/block/image.js";
+import type { ImageBlock } from "@udus/notion-types";
 
 export const Image: ImageBlock = ({ block }) => {
   return (
     <div id={block.id} className="notion-block notion-image">
       <img
         src={
-          block.image.type == "external"
+          block.image.type === "external"
             ? block.image.external.url
-            : block.image.type == "file"
+            : block.image.type === "file"
               ? block.image.file.url
               : ""
         }

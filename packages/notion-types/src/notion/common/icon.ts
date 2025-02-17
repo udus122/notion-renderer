@@ -1,4 +1,4 @@
-import type { EmojiRequest, TextRequest } from "./common.js";
+import type { EmojiRequest, TextRequest } from "./common";
 
 export type IconObject =
   | {

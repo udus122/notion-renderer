@@ -1,7 +1,7 @@
-import { AnnotationItem } from "./AnnotationItem.js";
+import { AnnotationItem } from "./AnnotationItem";
 import RichTextAnnotationObject from "./AnnotationItem.json";
 
-import type { RichTextItemType } from "../../../types/notion/richText/richTextItem.js";
+import type { RichTextItemType } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof AnnotationItem> = {

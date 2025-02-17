@@ -1,11 +1,11 @@
-import { callAPIWithBackOff } from "../../utils/api.js";
+import { callAPIWithBackOff } from "../../utils/api";
 import type { ListBlockChildrenResponseResults, Result } from "@udus/notion-types";
 
 import type { Client } from "@notionhq/client";
 import type {
   ListBlockChildrenParameters,
   ListBlockChildrenResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+} from "@notionhq/client/build/src/api-endpoints";
 
 export const listBlockChildren = async (
   client: Client,

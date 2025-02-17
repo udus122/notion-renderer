@@ -1,7 +1,7 @@
-import { notUndefined } from "../../utils/utils.js";
+import { notUndefined } from "../../utils/utils";
 
-import { convertResponseToBlock } from "./convert/convertResponseToBlock.js";
-import { wrapListItems } from "./wrapListItems.js";
+import { convertResponseToBlock } from "./convert/convertResponseToBlock";
+import { wrapListItems } from "./wrapListItems";
 
 import type { BlockBlockObject,ListBlockChildrenResponseResults  } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";

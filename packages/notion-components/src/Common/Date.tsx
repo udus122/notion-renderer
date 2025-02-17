@@ -1,6 +1,6 @@
 import { fromZonedTime, format as formatDate } from "date-fns-tz";
 
-import type { DateResponse } from "../../types/notion/common/common.js";
+import type { DateResponse } from "@udus/notion-types";
 
 type Props = {
   date: DateResponse;

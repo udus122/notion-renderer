@@ -1,5 +1,5 @@
-import type { PropertyItemProps } from "./properties.js";
-import type { CreatedByPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { PropertyItemProps } from "./properties";
+import type { CreatedByPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type CreatedByPropertyItemObject = CreatedByPropertyItemObjectResponse;

@@ -1,6 +1,6 @@
-import type { EquationRichTextItemObject } from "./equation.js";
-import type { MentionRichTextItemObject } from "./mention.js";
-import type { TextRichTextItemObject } from "./text.js";
+import type { EquationRichTextItemObject } from "./equation";
+import type { MentionRichTextItemObject } from "./mention";
+import type { TextRichTextItemObject } from "./text";
 import type { ComponentType } from "react";
 
 export type RichTextItemType =

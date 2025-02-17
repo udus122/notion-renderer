@@ -5,7 +5,7 @@ import type {
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
   TitlePropertyItemObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+} from "@notionhq/client/build/src/api-endpoints";
 
 export const convertResponseToTitlePropertyItem = (
   property: TitlePropertyItemObjectResponse,

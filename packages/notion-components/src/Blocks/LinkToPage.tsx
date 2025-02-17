@@ -1,9 +1,9 @@
-import { extractTitle } from "../../../../src/utils/index.js";
-import { Icon } from "../Common/Icon.js";
-import { useMapper } from "../hooks.js";
-import { RichText } from "../RichText/RichText.js";
+import { extractTitle } from "../../../../src/utils/index";
+import { Icon } from "../Common/Icon";
+import { useMapper } from "../hooks";
+import { RichText } from "../RichText/RichText";
 
-import type { LinkToPageBlock } from "../../types/notion/block/linkToPage.js";
+import type { LinkToPageBlock } from "@udus/notion-types";
 
 export const LinkToPage: LinkToPageBlock = ({ block }) => {
   const { Link } = useMapper();

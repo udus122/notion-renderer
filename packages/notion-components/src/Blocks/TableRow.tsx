@@ -1,4 +1,4 @@
-import type { TableRowBlock } from "../../types/notion/block/tableRow.js";
+import type { TableRowBlock } from "@udus/notion-types";
 
 export const TableRow: TableRowBlock = ({ block }) => {
   console.warn(`${block.type} is not supported`);

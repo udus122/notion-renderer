@@ -1,11 +1,11 @@
 import { Fragment } from "react";
 
-import { extractTitle } from "../../../../src/utils/index.js";
-import { Icon } from "../Common/Icon.js";
-import { useMapper } from "../hooks.js";
-import { RichText } from "../RichText/RichText.js";
+import { extractTitle } from "../../../../src/utils/index";
+import { Icon } from "../Common/Icon";
+import { useMapper } from "../hooks";
+import { RichText } from "../RichText/RichText";
 
-import type { BreadcrumbBlock } from "../../types/notion/block/breadcrumb.js";
+import type { BreadcrumbBlock } from "@udus/notion-types";
 
 export const Breadcrumb: BreadcrumbBlock = ({ block }) => {
   const { Link } = useMapper();

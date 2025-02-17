@@ -1,9 +1,9 @@
-import { Property } from "../../Property/Property.js";
-import { isTitleProperty } from "../../../../../src/utils/index.js";
+import { Property } from "../../Property/Property";
+import { isTitleProperty } from "../../../../../src/utils/index";
 
-import { TableTitle } from "./Title.js";
+import { TableTitle } from "./Title";
 
-import type { PageObject } from "../../../types/notion/page.js";
+import type { PageObject } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

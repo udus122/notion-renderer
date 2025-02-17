@@ -1,3 +1,3 @@
-export * from "./fetch.js";
-export * from "./query.js";
-export * from "./retrieve.js";
+export * from "./fetch";
+export * from "./query";
+export * from "./retrieve";

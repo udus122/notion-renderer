@@ -1,9 +1,9 @@
-import { convertResponseToPropertyItem } from "./convert/convertResponseToPropertyItem.js";
-import { retrievePageProperty } from "./retrieve.js";
+import { convertResponseToPropertyItem } from "./convert/convertResponseToPropertyItem";
+import { retrievePageProperty } from "./retrieve";
 
 import type { PropertyItemType ,Result} from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { GetPagePropertyParameters } from "@notionhq/client/build/src/api-endpoints.js";
+import type { GetPagePropertyParameters } from "@notionhq/client/build/src/api-endpoints";
 
 export const fetchPageProperty = async (
   client: Client,

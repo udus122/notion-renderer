@@ -1,6 +1,6 @@
-import { AnnotationContext, useMapper } from "../hooks.js";
+import { AnnotationContext, useMapper } from "../hooks";
 
-import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
+import type { AnnotationItemMapper } from "@udus/notion-types";
 import type { FC, ReactNode } from "react";
 
 export const AnnotationItemProvider: FC<{

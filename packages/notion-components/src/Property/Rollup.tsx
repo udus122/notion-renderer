@@ -1,6 +1,6 @@
-import { DateComponent } from "../Common/Date.js";
+import { DateComponent } from "../Common/Date";
 
-import type { RollupPropertyItemComponent } from "../../types/notion/property/rollup.js";
+import type { RollupPropertyItemComponent } from "@udus/notion-types";
 
 export const RollupProperty: RollupPropertyItemComponent = ({
   propertyItem,

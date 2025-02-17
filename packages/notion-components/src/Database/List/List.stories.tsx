@@ -1,8 +1,8 @@
 import Pages from "../Pages.json";
 
-import { List } from "./List.js";
+import { List } from "./List";
 
-import type { PageObject } from "../../../types/notion/page.js";
+import type { PageObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof List> = {

@@ -1,8 +1,8 @@
-import { RichText } from "../RichText/RichText.js";
+import { RichText } from "../RichText/RichText";
 
-import { BlockList } from "./BlockList.js";
+import { BlockList } from "./BlockList";
 
-import type { ParagraphBlock } from "../../types/notion/block/paragraph.js";
+import type { ParagraphBlock } from "@udus/notion-types";
 
 export const Paragraph: ParagraphBlock = ({ block }) => {
   return (

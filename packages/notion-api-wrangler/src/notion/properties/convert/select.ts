@@ -1,6 +1,6 @@
 import type { SelectPropertyItemObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { SelectPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { SelectPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertResponseToSelectPropertyItem = (
   property: SelectPropertyItemObjectResponse,

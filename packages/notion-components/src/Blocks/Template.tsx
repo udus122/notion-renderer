@@ -1,4 +1,4 @@
-import type { TemplateBlock } from "../../types/notion/block/template.js";
+import type { TemplateBlock } from "@udus/notion-types";
 
 export const Template: TemplateBlock = ({ block }) => {
   console.warn(`${block.type} is not supported`);

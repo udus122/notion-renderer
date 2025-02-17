@@ -1,6 +1,6 @@
 import type { FilesPropertyItemObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { FilesPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { FilesPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertResponseToFilesPropertyItem = (
   property: FilesPropertyItemObjectResponse,

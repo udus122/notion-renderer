@@ -1,7 +1,7 @@
-import { PropertyIcon } from "./PropertyIcon.js";
+import { PropertyIcon } from "./PropertyIcon";
 
-import type { DatabaseObject } from "../../types/notion/database.js";
-import type { PropertyItemType } from "../../types/notion/property/properties.js";
+import type { DatabaseObject } from "@udus/notion-types";
+import type { PropertyItemType } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

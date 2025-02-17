@@ -1,10 +1,10 @@
-import { notNullNorUndefined } from "../../../utils/utils.js";
-import { fetchBlockList } from "../fetchBlockList.js";
+import { notNullNorUndefined } from "../../../utils/utils";
+import { fetchBlockList } from "../fetchBlockList";
 
 import type { TableBlockObject } from "@udus/notion-types";
 import type { TableRowBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { TableBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { TableBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertTableResponseToBlock = async (
   block: TableBlockObjectResponse,

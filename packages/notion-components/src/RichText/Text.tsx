@@ -1,8 +1,8 @@
-import { Annotation } from "./Annotation/Annotation.js";
-import { LinkText } from "./LinkText.js";
+import { Annotation } from "./Annotation/Annotation";
+import { LinkText } from "./LinkText";
 
-import type { RichTextItemProps } from "../../types/notion/richText/richTextItem.js";
-import type { TextRichTextItemObject } from "../../types/notion/richText/text.js";
+import type { RichTextItemProps } from "@udus/notion-types";
+import type { TextRichTextItemObject } from "@udus/notion-types";
 
 type Props = Omit<
   RichTextItemProps<TextRichTextItemObject>,

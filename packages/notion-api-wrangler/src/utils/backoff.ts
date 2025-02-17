@@ -1,7 +1,7 @@
 export const exponentialBackoffFactory = (
-  initialDelay: number = 1,
-  factor: number = 2,
-  maxDelay: number = Infinity,
+  initialDelay = 1,
+  factor = 2,
+  maxDelay: number = Number.POSITIVE_INFINITY,
 ): (() => Promise<void>) => {
   let currentDelay: number = initialDelay;
 

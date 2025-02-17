@@ -1,15 +1,15 @@
 import {
   selectProperties,
   splitTitleAndOtherProperties,
-} from "../../../../src/utils/index.js";
-import { BlockList } from "../Blocks/BlockList.js";
-import { Cover } from "../Common/Cover.js";
-import { Icon } from "../Common/Icon.js";
-import { Title } from "../Common/Title.js";
-import { Properties } from "../Property/Properties.js";
+} from "../../../../src/utils/index";
+import { BlockList } from "../Blocks/BlockList";
+import { Cover } from "../Common/Cover";
+import { Icon } from "../Common/Icon";
+import { Title } from "../Common/Title";
+import { Properties } from "../Property/Properties";
 
-import type { BlockBlockObject } from "../../types/notion/block/block.js";
-import type { PageObject } from "../../types/notion/page.js";
+import type { BlockBlockObject } from "@udus/notion-types";
+import type { PageObject } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

@@ -1,9 +1,9 @@
-import { notUndefined } from "../../utils/utils.js";
-import { fetchPageProperty } from "../properties/fetch.js";
+import { notUndefined } from "../../utils/utils";
+import { fetchPageProperty } from "../properties/fetch";
 
 import type { PageObject, PropertyItemType } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { PageObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertResponseToPage = async (
   page: PageObjectResponse,

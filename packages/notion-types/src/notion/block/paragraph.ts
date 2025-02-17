@@ -1,6 +1,6 @@
-import type { BlockBlockObject, BlockBlockProps } from "./block.js";
-import type { RichTextType } from "../richText/richText.js";
-import type { ParagraphBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { BlockBlockObject, BlockBlockProps } from "./block";
+import type { RichTextType } from "../richText/richText";
+import type { ParagraphBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type ParagraphBlockObject = ParagraphBlockObjectResponse & {

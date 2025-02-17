@@ -1,7 +1,7 @@
-import { NumberedList } from "./NumberedList.js";
+import { NumberedList } from "./NumberedList";
 import NumberedListObject from "./NumberedList.json";
 
-import type { NumberedListBlockObject } from "../../types/notion/block/numberedList.js";
+import type { NumberedListBlockObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof NumberedList> = {

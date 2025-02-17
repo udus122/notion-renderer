@@ -1,6 +1,6 @@
-import type { BlockBlockObject, BlockBlockProps } from "./block.js";
-import type { RichTextItemType } from "../richText/richTextItem.js";
-import type { Heading2BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { BlockBlockObject, BlockBlockProps } from "./block";
+import type { RichTextItemType } from "../richText/richTextItem";
+import type { Heading2BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type Heading2BlockObject = Heading2BlockObjectResponse & {

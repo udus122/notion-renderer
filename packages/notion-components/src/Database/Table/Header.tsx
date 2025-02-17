@@ -1,6 +1,6 @@
-import { PropertyName } from "../../Property/PropertyName.js";
+import { PropertyName } from "../../Property/PropertyName";
 
-import type { DatabaseObject } from "../../../types/notion/database.js";
+import type { DatabaseObject } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

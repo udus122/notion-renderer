@@ -1,13 +1,13 @@
-import type { Heading1BlockObject } from "../block/heading1.js";
-import type { Heading2BlockObject } from "../block/heading2.js";
-import type { Heading3BlockObject } from "../block/heading3.js";
-import type { ToggleBlockObject } from "../block/toggle.js";
+import type { Heading1BlockObject } from "../block/heading1";
+import type { Heading2BlockObject } from "../block/heading2";
+import type { Heading3BlockObject } from "../block/heading3";
+import type { ToggleBlockObject } from "../block/toggle";
 import type {
   DatabaseObjectResponse,
   DatePropertyItemObjectResponse,
   ListBlockChildrenResponse,
   PageObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+} from "@notionhq/client/build/src/api-endpoints";
 
 export type TogglableBlockObjectComponent =
   | ToggleBlockObject

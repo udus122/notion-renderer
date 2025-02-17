@@ -1,6 +1,6 @@
 import type { DividerBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { DividerBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertDividerResponseToBlock = async (
   block: DividerBlockObjectResponse,

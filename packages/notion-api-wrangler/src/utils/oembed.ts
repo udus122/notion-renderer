@@ -7,7 +7,7 @@ import {
   extract,
 } from "@extractus/oembed-extractor";
 
-import type { Result } from "../../types/utils.js";
+import type { Result } from "@udus/notion-types";
 
 export const fetchOembed = async (
   url: string,

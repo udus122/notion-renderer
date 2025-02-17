@@ -1,9 +1,9 @@
 import VideoExternalObject from "./Video.External.json";
 import VideoFileObject from "./Video.File.json";
-import { Video } from "./Video.js";
+import { Video } from "./Video";
 import VideoYouTubeObject from "./Video.YouTube.json";
 
-import type { VideoBlockObject } from "../../types/notion/block/video.js";
+import type { VideoBlockObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Video> = {

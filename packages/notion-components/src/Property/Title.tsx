@@ -1,6 +1,6 @@
-import { RichText } from "../RichText/RichText.js";
+import { RichText } from "../RichText/RichText";
 
-import type { TitlePropertyItemComponent } from "../../types/notion/property/title.js";
+import type { TitlePropertyItemComponent } from "@udus/notion-types";
 
 export const TitleProperty: TitlePropertyItemComponent = ({ propertyItem }) => (
   <h1 id={propertyItem.id} className="notion-property-item notion-title">

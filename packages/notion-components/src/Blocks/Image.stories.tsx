@@ -1,7 +1,7 @@
-import { Image } from "./Image.js";
+import { Image } from "./Image";
 import ImageObject from "./Image.json";
 
-import type { ImageBlockObject } from "../../types/notion/block/image.js";
+import type { ImageBlockObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Image> = {

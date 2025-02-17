@@ -1,12 +1,11 @@
-import { BlockList } from "./BlockList.js";
+import { BlockList } from "./BlockList";
 
-import type { ColumnListBlock } from "../../types/notion/block/columnList.js";
+import type { ColumnListBlock } from "@udus/notion-types";
 
 export const ColumnList: ColumnListBlock = ({ block }) => {
   return (
     <div id={block.id} className="notion-block notion-column-list">
-      {block.column_list.columns &&
-        block.column_list.columns.map(
+      {block.column_list.columns?.map(
           (column) =>
             column.column.children && (
               <div key={column.id} className="notion-column">

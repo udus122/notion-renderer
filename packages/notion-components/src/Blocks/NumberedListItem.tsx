@@ -1,8 +1,8 @@
-import { RichText } from "../RichText/RichText.js";
+import { RichText } from "../RichText/RichText";
 
-import { BlockList } from "./BlockList.js";
+import { BlockList } from "./BlockList";
 
-import type { NumberedListItemBlock } from "../../types/notion/block/numberedListItem.js";
+import type { NumberedListItemBlock } from "@udus/notion-types";
 
 export const NumberedListItem: NumberedListItemBlock = ({ block }) => {
   return (

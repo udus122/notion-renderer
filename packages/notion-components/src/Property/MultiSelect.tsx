@@ -1,4 +1,4 @@
-import type { MultiSelectPropertyItemComponent } from "../../types/notion/property/multiSelect.js";
+import type { MultiSelectPropertyItemComponent } from "@udus/notion-types";
 
 export const MultiSelectProperty: MultiSelectPropertyItemComponent = ({
   propertyItem,
@@ -9,7 +9,7 @@ export const MultiSelectProperty: MultiSelectPropertyItemComponent = ({
       className="notion-property-item notion-multi-select"
     >
       {propertyItem.multi_select.map((select) => (
-        <div className={`notion-pill notion-pill-color-${select.color}`}>
+        <div key={select.id} className={`notion-pill notion-pill-color-${select.color}`}>
           {select.name}
         </div>
       ))}

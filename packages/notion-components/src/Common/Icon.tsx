@@ -1,4 +1,4 @@
-import type { IconObject } from "../../types/notion/common/icon.js";
+import type { IconObject } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

@@ -10,7 +10,7 @@
     ".": {
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/index.js"
+        "default": "./dist/index"
       },
       "require": {
         "types": "./dist/index.d.cts",
@@ -18,7 +18,7 @@
       }
     }
   },
-  "main": "./dist/index.js",
+  "main": "./dist/index",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "devDependencies": {

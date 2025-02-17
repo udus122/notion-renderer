@@ -1,9 +1,9 @@
-import { Icon } from "../Common/Icon.js";
-import { RichText } from "../RichText/RichText.js";
+import { Icon } from "../Common/Icon";
+import { RichText } from "../RichText/RichText";
 
-import { BlockList } from "./BlockList.js";
+import { BlockList } from "./BlockList";
 
-import type { CalloutBlock } from "../../types/notion/block/callout.js";
+import type { CalloutBlock } from "@udus/notion-types";
 
 export const Callout: CalloutBlock = ({ block }) => {
   return (

@@ -1,7 +1,7 @@
-import { Underline } from "./Underline.js";
+import { Underline } from "./Underline";
 import UnderlineRichText from "./Underline.json";
 
-import type { RichTextItemType } from "../../../types/notion/richText/richTextItem.js";
+import type { RichTextItemType } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Underline> = {

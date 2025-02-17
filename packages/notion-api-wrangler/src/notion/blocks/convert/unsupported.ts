@@ -1,6 +1,6 @@
 import type { UnsupportedBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { UnsupportedBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { UnsupportedBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertUnsupportedResponseToBlock = async (
   block: UnsupportedBlockObjectResponse,

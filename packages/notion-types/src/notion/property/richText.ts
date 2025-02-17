@@ -1,7 +1,7 @@
-import type { PropertyItemProps } from "./properties.js";
-import type { Overwrite, PartialBy } from "../../utils.js";
-import type { RichTextType } from "../richText/richText.js";
-import type { RichTextPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { PropertyItemProps } from "./properties";
+import type { Overwrite, PartialBy } from "../../utils";
+import type { RichTextType } from "../richText/richText";
+import type { RichTextPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type RichTextPropertyItemObject = PartialBy<

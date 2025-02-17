@@ -1,6 +1,6 @@
-import { BulletedListItem } from "./BulletedListItem.js";
+import { BulletedListItem } from "./BulletedListItem";
 
-import type { BulletedListBlock } from "../../types/notion/block/bulletedList.js";
+import type { BulletedListBlock } from "@udus/notion-types";
 
 export const BulletedList: BulletedListBlock = ({ block }) => {
   return (

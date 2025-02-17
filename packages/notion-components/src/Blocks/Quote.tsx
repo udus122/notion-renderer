@@ -1,8 +1,8 @@
-import { RichText } from "../RichText/RichText.js";
+import { RichText } from "../RichText/RichText";
 
-import { BlockList } from "./BlockList.js";
+import { BlockList } from "./BlockList";
 
-import type { QuoteBlock } from "../../types/notion/block/quote.js";
+import type { QuoteBlock } from "@udus/notion-types";
 
 export const Quote: QuoteBlock = ({ block }) => {
   return (

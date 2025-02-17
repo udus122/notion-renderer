@@ -1,10 +1,10 @@
-import { callAPIWithBackOff } from "../utils/api.js";
+import { callAPIWithBackOff } from "../utils/api";
 
 import type { Client } from "@notionhq/client";
 import type {
   ListCommentsParameters,
   ListCommentsResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+} from "@notionhq/client/build/src/api-endpoints";
 
 export const listComments = async (
   client: Client,

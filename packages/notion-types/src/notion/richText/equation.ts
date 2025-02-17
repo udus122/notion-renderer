@@ -1,5 +1,5 @@
-import type { RichTextItemProps } from "./richTextItem.js";
-import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { RichTextItemProps } from "./richTextItem";
+import type { EquationRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type EquationRichTextItemObject = EquationRichTextItemResponse & {

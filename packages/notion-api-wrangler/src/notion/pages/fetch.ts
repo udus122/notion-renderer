@@ -1,10 +1,10 @@
-import { Client, isFullPage } from "@notionhq/client";
+import { type Client, isFullPage } from "@notionhq/client";
 
-import { convertResponseToPage } from "./convert.js";
-import { retrievePage } from "./retrieve.js";
+import { convertResponseToPage } from "./convert";
+import { retrievePage } from "./retrieve";
 
 import type { PageObject, Result } from "@udus/notion-types";
-import type { GetPageParameters } from "@notionhq/client/build/src/api-endpoints.js";
+import type { GetPageParameters } from "@notionhq/client/build/src/api-endpoints";
 
 export const fetchPage = async (
   client: Client,

@@ -1,4 +1,4 @@
-import type { LinkComponent } from "../../types/notion/common/link.js";
+import type { LinkComponent } from "@udus/notion-types";
 
 export const Link: LinkComponent = ({ prefix = "", link, children = null }) => (
   <a href={`${prefix}${link}`} className="notion-internal-link">

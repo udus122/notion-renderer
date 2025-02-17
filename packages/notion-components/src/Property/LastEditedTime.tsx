@@ -1,6 +1,6 @@
 import { format as formatDate } from "date-fns";
 
-import type { LastEditedTimePropertyItemComponent } from "../../types/notion/property/lastEditedTime.js";
+import type { LastEditedTimePropertyItemComponent } from "@udus/notion-types";
 
 export const LastEditedTimeProperty: LastEditedTimePropertyItemComponent = ({
   propertyItem,

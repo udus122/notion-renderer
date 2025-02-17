@@ -1,4 +1,4 @@
-import type { UnsupportedBlock } from "../../types/notion/block/unsupported.js";
+import type { UnsupportedBlock } from "@udus/notion-types";
 
 export const Unsupported: UnsupportedBlock = ({ block }) => {
   console.warn(`${block.type} is not supported`);

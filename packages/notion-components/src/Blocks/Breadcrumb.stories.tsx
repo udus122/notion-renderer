@@ -1,7 +1,7 @@
-import { Breadcrumb } from "./Breadcrumb.js";
+import { Breadcrumb } from "./Breadcrumb";
 import BreadcrumbObject from "./Breadcrumb.json";
 
-import type { BreadcrumbBlockObject } from "../../types/notion/block/breadcrumb.js";
+import type { BreadcrumbBlockObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Breadcrumb> = {

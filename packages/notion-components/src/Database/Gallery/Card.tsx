@@ -1,10 +1,10 @@
-import { splitTitleAndOtherProperties } from "../../../../../src/utils/index.js";
-import { Cover } from "../../Common/Cover.js";
-import { Icon } from "../../Common/Icon.js";
-import { useMapper } from "../../hooks.js";
-import { Properties } from "../../Property/Properties.js";
+import { splitTitleAndOtherProperties } from "../../../../../src/utils/index";
+import { Cover } from "../../Common/Cover";
+import { Icon } from "../../Common/Icon";
+import { useMapper } from "../../hooks";
+import { Properties } from "../../Property/Properties";
 
-import type { PageObject } from "../../../types/notion/page.js";
+import type { PageObject } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

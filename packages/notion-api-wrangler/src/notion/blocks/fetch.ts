@@ -1,9 +1,9 @@
-import { convertResponseToBlock } from "./convert/convertResponseToBlock.js";
-import { retrieveBlock } from "./retrieve.js";
+import { convertResponseToBlock } from "./convert/convertResponseToBlock";
+import { retrieveBlock } from "./retrieve";
 
 import type { BlockBlockObject, Result } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { GetBlockParameters } from "@notionhq/client/build/src/api-endpoints.js";
+import type { GetBlockParameters } from "@notionhq/client/build/src/api-endpoints";
 
 export const fetchBlock = async (
   client: Client,

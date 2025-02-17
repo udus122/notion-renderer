@@ -1,6 +1,6 @@
-import type { BlockBlockProps } from "./block.js";
+import type { BlockBlockProps } from "./block";
 import type { ArticleData } from "@extractus/article-extractor";
-import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type LinkPreviewBlockObject = LinkPreviewBlockObjectResponse & {

@@ -1,15 +1,14 @@
-import { RichText } from "../RichText/RichText.js";
+import { RichText } from "../RichText/RichText";
 
-import type { TableBlock } from "../../types/notion/block/table.js";
-import type { TableCellBlockObjectComponent } from "../../types/notion/block/tableCell.js";
-import type { TableRowBlockObject } from "../../types/notion/block/tableRow.js";
+import type { TableBlock } from "@udus/notion-types";
+import type { TableCellBlockObjectComponent } from "@udus/notion-types";
+import type { TableRowBlockObject } from "@udus/notion-types";
 
 export const Table: TableBlock = ({ block }) => {
   return (
     <table id={block.id} className="notion-block notion-table-block">
       <tbody>
-        {block.table.table_rows &&
-          block.table.table_rows.map((table_row, index) => {
+        {block.table.table_rows?.map((table_row, index) => {
             if (block.table.has_row_header && index === 0) {
               return (
                 <TableRowRowHeader key={table_row.id} table_row={table_row} />

@@ -1,6 +1,6 @@
-import { BlockContext, useMapper } from "../hooks.js";
+import { BlockContext, useMapper } from "../hooks";
 
-import type { BlockMapper } from "../../types/notion/mapper/block.js";
+import type { BlockMapper } from "@udus/notion-types";
 import type { FC, ReactNode } from "react";
 
 export const BlockProvider: FC<{

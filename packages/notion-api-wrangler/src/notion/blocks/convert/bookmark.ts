@@ -1,9 +1,9 @@
-import { fetchSiteMeta } from "../../../utils/sitemeta.js";
-import { convertResponseToRichText } from "../../richText/richText.js";
+import { fetchSiteMeta } from "../../../utils/sitemeta";
+import { convertResponseToRichText } from "../../richText/richText";
 
 import type { BookmarkBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertBookmarkResponseToBlock = async (
   block: BookmarkBlockObjectResponse,

@@ -1,10 +1,10 @@
-import { AnnotationItemProvider } from "../Mapper/Annotation.js";
-import { LinkProvider } from "../Mapper/Link.js";
-import { RichTextItemProvider } from "../Mapper/RichText.js";
+import { AnnotationItemProvider } from "../Mapper/Annotation";
+import { LinkProvider } from "../Mapper/Link";
+import { RichTextItemProvider } from "../Mapper/RichText";
 
-import { RichTextItem } from "./RichTextItem.js";
+import { RichTextItem } from "./RichTextItem";
 
-import type { RichTextComponent } from "../../types/notion/richText/richText.js";
+import type { RichTextComponent } from "@udus/notion-types";
 
 export const RichText: RichTextComponent = ({
   richText,

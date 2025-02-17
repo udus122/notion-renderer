@@ -1,7 +1,7 @@
-import { generateUUID } from "../../utils/utils.js";
+import { generateUUID } from "../../utils/utils";
 
 import type { TextRichTextItemObject } from "@udus/notion-types";
-import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { TextRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertTextRichTextItemResponse = (
   response: TextRichTextItemResponse,

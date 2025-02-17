@@ -1,10 +1,10 @@
-import { extractTitle } from "../../../../src/utils/index.js";
-import { useMapper } from "../hooks.js";
-import { RichText } from "../RichText/RichText.js";
+import { extractTitle } from "../../../../src/utils/index";
+import { useMapper } from "../hooks";
+import { RichText } from "../RichText/RichText";
 
-import { Icon } from "./Icon.js";
+import { Icon } from "./Icon";
 
-import type { RelationItem as RelationItemType } from "../../types/notion/property/relation.js";
+import type { RelationItem as RelationItemType } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

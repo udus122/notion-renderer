@@ -1,6 +1,6 @@
-import { RelationItem } from "../Common/RelationItem.js";
+import { RelationItem } from "../Common/RelationItem";
 
-import type { RelationPropertyItemComponent } from "../../types/notion/property/relation.js";
+import type { RelationPropertyItemComponent } from "@udus/notion-types";
 
 export const RelationProperty: RelationPropertyItemComponent = ({
   propertyItem,

@@ -1,4 +1,4 @@
-import type { EmailPropertyItemComponent } from "../../types/notion/property/email.js";
+import type { EmailPropertyItemComponent } from "@udus/notion-types";
 
 export const EmailProperty: EmailPropertyItemComponent = ({ propertyItem }) => {
   return (

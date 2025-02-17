@@ -1,8 +1,8 @@
-import { fetchSiteMeta } from "../../../utils/sitemeta.js";
+import { fetchSiteMeta } from "../../../utils/sitemeta";
 
 import type { LinkPreviewBlockObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertLinkPreviewResponseToBlock = async (
   block: LinkPreviewBlockObjectResponse,

@@ -1,8 +1,8 @@
-import { DateProperty } from "./Date.js";
+import { DateProperty } from "./Date";
 import DatePropertyObject from "./Date.json";
 import DateWithEndPropertyObject from "./Date.WithEnd.json";
 
-import type { DatePropertyItemObject } from "../../types/notion/property/date.js";
+import type { DatePropertyItemObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof DateProperty> = {

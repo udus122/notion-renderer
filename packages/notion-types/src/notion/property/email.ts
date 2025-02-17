@@ -1,5 +1,5 @@
-import type { PropertyItemProps } from "./properties.js";
-import type { EmailPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { PropertyItemProps } from "./properties";
+import type { EmailPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 import type { ComponentType } from "react";
 
 export type EmailPropertyItemObject = EmailPropertyItemObjectResponse;

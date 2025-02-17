@@ -1,44 +1,44 @@
-import { convertResponseToCheckboxPropertyItem } from "./checkbox.js";
-import { convertResponseToCreatedByPropertyItem } from "./createdBy.js";
-import { convertResponseToCreatedTimePropertyItem } from "./createdTime.js";
-import { convertResponseToDatePropertyItem } from "./date.js";
-import { convertResponseToEmailPropertyItem } from "./email.js";
-import { convertResponseToFilesPropertyItem } from "./file.js";
-import { convertResponseToFormulaPropertyItem } from "./formula.js";
-import { convertResponseToLastEditedByPropertyItem } from "./lastEditedBy.js";
-import { convertResponseToLastEditedTimePropertyItem } from "./lastEditedTime.js";
-import { convertResponseToMultiSelectPropertyItem } from "./multiSelect.js";
-import { convertResponseToNumberPropertyItem } from "./number.js";
+import { convertResponseToCheckboxPropertyItem } from "./checkbox";
+import { convertResponseToCreatedByPropertyItem } from "./createdBy";
+import { convertResponseToCreatedTimePropertyItem } from "./createdTime";
+import { convertResponseToDatePropertyItem } from "./date";
+import { convertResponseToEmailPropertyItem } from "./email";
+import { convertResponseToFilesPropertyItem } from "./file";
+import { convertResponseToFormulaPropertyItem } from "./formula";
+import { convertResponseToLastEditedByPropertyItem } from "./lastEditedBy";
+import { convertResponseToLastEditedTimePropertyItem } from "./lastEditedTime";
+import { convertResponseToMultiSelectPropertyItem } from "./multiSelect";
+import { convertResponseToNumberPropertyItem } from "./number";
 import {
   convertListResponseToPeoplePropertyItem,
   convertResponseToPeoplePropertyItem,
-} from "./people.js";
-import { convertResponseToPhoneNumberPropertyItem } from "./phoneNumber.js";
+} from "./people";
+import { convertResponseToPhoneNumberPropertyItem } from "./phoneNumber";
 import {
   convertListResponseToRelationPropertyItem,
   convertResponseToRelationPropertyItem,
-} from "./relation.js";
+} from "./relation";
 import {
   convertListResponseToRichTextPropertyItem,
   convertResponseToRichTextPropertyItem,
-} from "./richText.js";
+} from "./richText";
 import {
   convertListResponseToRollupPropertyItem,
   convertResponseToRollupPropertyItem,
-} from "./rollup.js";
-import { convertResponseToSelectPropertyItem } from "./select.js";
-import { convertResponseToStatusPropertyItem } from "./status.js";
+} from "./rollup";
+import { convertResponseToSelectPropertyItem } from "./select";
+import { convertResponseToStatusPropertyItem } from "./status";
 import {
   convertListResponseToTitlePropertyItem,
   convertResponseToTitlePropertyItem,
-} from "./title.js";
-import { convertResponseToUniqueIdPropertyItem } from "./uniqueId.js";
-import { convertResponseToUrlPropertyItem } from "./url.js";
-import { convertResponseToVerificationPropertyItem } from "./verification.js";
+} from "./title";
+import { convertResponseToUniqueIdPropertyItem } from "./uniqueId";
+import { convertResponseToUrlPropertyItem } from "./url";
+import { convertResponseToVerificationPropertyItem } from "./verification";
 
 import type { PropertyItemType } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { GetPagePropertyResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { GetPagePropertyResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertResponseToPropertyItem = async (
   pageProperty: GetPagePropertyResponse,
@@ -115,7 +115,6 @@ export const convertResponseToPropertyItem = async (
       case "verification": {
         return convertResponseToVerificationPropertyItem(pageProperty, client);
       }
-      case "button": 
       default: {
         throw new Error(`Unsupported property type: ${pageProperty.type}`);
       }

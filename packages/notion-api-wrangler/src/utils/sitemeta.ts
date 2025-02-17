@@ -5,7 +5,7 @@ import {
   extract,
 } from "@extractus/article-extractor";
 
-import type { Result } from "../../types/utils.js";
+import type { Result } from "@udus/notion-types";
 
 export const fetchSiteMeta = async (
   url: string,

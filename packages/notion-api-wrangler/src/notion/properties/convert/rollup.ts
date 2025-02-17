@@ -5,7 +5,7 @@ import type {
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
   RollupPropertyItemObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints.js";
+} from "@notionhq/client/build/src/api-endpoints";
 
 export const convertResponseToRollupPropertyItem = (
   property: RollupPropertyItemObjectResponse,

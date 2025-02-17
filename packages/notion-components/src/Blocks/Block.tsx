@@ -40,11 +40,11 @@ import { Toggle } from "./Toggle.js";
 import { Unsupported } from "./Unsupported.js";
 import { Video } from "./Video.js";
 
-import type { BlockBlockObject } from "../../types/notion/block/block.js";
-import type { LinkProps } from "../../types/notion/common/link.js";
-import type { AnnotationItemMapper } from "../../types/notion/mapper/annotationItem.js";
-import type { BlockMapper } from "../../types/notion/mapper/block.js";
-import type { RichTextItemMapper } from "../../types/notion/mapper/richTextItem.js";
+import type { BlockBlockObject } from "@udus/notion-types";
+import type { LinkProps } from "@udus/notion-types";
+import type { AnnotationItemMapper } from "@udus/notion-types";
+import type { BlockMapper } from "@udus/notion-types";
+import type { RichTextItemMapper } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {
@@ -157,7 +157,7 @@ const BlockSwitcher: FC<{ block: BlockBlockObject }> = ({ block }) => {
     }
     case "column": {
       console.warn(
-        `top level column block is not supported. column block must be child of column_list block.`,
+        "top level column block is not supported. column block must be child of column_list block.",
       );
       const BlockComponent = mapper[block.type];
       return <BlockComponent block={block} />;
@@ -240,7 +240,7 @@ const BlockSwitcher: FC<{ block: BlockBlockObject }> = ({ block }) => {
     }
     case "table_row": {
       console.warn(
-        `top level table_row block is not supported. table_row block must be child of table block.`,
+        "top level table_row block is not supported. table_row block must be child of table block.",
       );
       const BlockComponent = mapper[block.type];
       return <BlockComponent block={block} />;

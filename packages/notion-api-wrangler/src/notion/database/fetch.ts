@@ -1,12 +1,12 @@
-import { Client, isFullDatabase } from "@notionhq/client";
+import { type Client, isFullDatabase } from "@notionhq/client";
 
-import { convertResponseToRichText } from "../richText/richText.js";
+import { convertResponseToRichText } from "../richText/richText";
 
-import { retrieveDatabase } from "./retrieve.js";
+import { retrieveDatabase } from "./retrieve";
 
 import type { DatabaseObject } from "@udus/notion-types";
 import type { Result } from "@udus/notion-types";
-import type { GetDatabaseParameters } from "@notionhq/client/build/src/api-endpoints.js";
+import type { GetDatabaseParameters } from "@notionhq/client/build/src/api-endpoints";
 
 export const fetchDatabase = async (
   client: Client,

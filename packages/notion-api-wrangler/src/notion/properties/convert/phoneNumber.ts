@@ -1,6 +1,6 @@
 import type { PhoneNumberPropertyItemObject } from "@udus/notion-types";
 import type { Client } from "@notionhq/client";
-import type { PhoneNumberPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints.js";
+import type { PhoneNumberPropertyItemObjectResponse } from "@notionhq/client/build/src/api-endpoints";
 
 export const convertResponseToPhoneNumberPropertyItem = (
   property: PhoneNumberPropertyItemObjectResponse,

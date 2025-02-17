@@ -1,4 +1,4 @@
-import type { LinkPreviewBlock } from "../../types/notion/block/linkPreview.js";
+import type { LinkPreviewBlock } from "@udus/notion-types";
 
 export const LinkPreview: LinkPreviewBlock = ({ block }) => {
   return (
@@ -36,7 +36,7 @@ export const LinkPreview: LinkPreviewBlock = ({ block }) => {
             <div className="notion-link-preview-cover">
               <img
                 src={block.link_preview.site_meta.image}
-                alt="link preview og image"
+                alt="link preview cover"
               />
             </div>
           )}

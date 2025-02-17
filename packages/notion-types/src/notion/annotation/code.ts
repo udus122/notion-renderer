@@ -1,4 +1,4 @@
-import type { RichTextItemType } from "../richText/richTextItem.js";
+import type { RichTextItemType } from "../richText/richTextItem";
 import type { ComponentProps, ComponentType } from "react";
 
 export type CodeAnnotationItemProps = ComponentProps<"code"> & {

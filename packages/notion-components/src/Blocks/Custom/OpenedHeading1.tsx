@@ -1,7 +1,7 @@
-import { RichText } from "../../RichText/RichText.js";
-import { BlockList } from "../BlockList.js";
+import { RichText } from "../../RichText/RichText";
+import { BlockList } from "../BlockList";
 
-import type { Heading1Block } from "../../../types/notion/block/heading1.js";
+import type { Heading1Block } from "@udus/notion-types";
 
 export const OpenedHeading1: Heading1Block = ({ block }) => {
   return (

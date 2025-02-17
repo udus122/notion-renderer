@@ -1,12 +1,12 @@
-import { RichText } from "../RichText/RichText.js";
+import { RichText } from "../RichText/RichText";
 
-import type { PdfBlock } from "../../types/notion/block/pdf.js";
+import type { PdfBlock } from "@udus/notion-types";
 
 export const Pdf: PdfBlock = ({ block }) => {
   const pdfUrl =
-    block.pdf.type == "external"
+    block.pdf.type === "external"
       ? block.pdf.external.url
-      : block.pdf.type == "file"
+      : block.pdf.type === "file"
         ? block.pdf.file.url
         : "";
   return (
@@ -14,9 +14,9 @@ export const Pdf: PdfBlock = ({ block }) => {
       <object
         type="application/pdf"
         data={
-          block.pdf.type == "external"
+          block.pdf.type === "external"
             ? block.pdf.external.url
-            : block.pdf.type == "file"
+            : block.pdf.type === "file"
               ? block.pdf.file.url
               : ""
         }

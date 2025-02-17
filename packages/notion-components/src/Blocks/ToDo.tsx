@@ -1,9 +1,9 @@
-import { Checkbox } from "../Common/Checkbox.js";
-import { RichText } from "../RichText/RichText.js";
+import { Checkbox } from "../Common/Checkbox";
+import { RichText } from "../RichText/RichText";
 
-import { BlockList } from "./BlockList.js";
+import { BlockList } from "./BlockList";
 
-import type { ToDoBlock } from "../../types/notion/block/toDo.js";
+import type { ToDoBlock } from "@udus/notion-types";
 
 export const ToDo: ToDoBlock = ({ block }) => {
   const { checked } = block.to_do;

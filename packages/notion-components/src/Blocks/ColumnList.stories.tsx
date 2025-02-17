@@ -1,7 +1,7 @@
-import { ColumnList } from "./ColumnList.js";
+import { ColumnList } from "./ColumnList";
 import ColumnListObject from "./ColumnList.json";
 
-import type { ColumnListBlockObject } from "../../types/notion/block/columnList.js";
+import type { ColumnListBlockObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof ColumnList> = {

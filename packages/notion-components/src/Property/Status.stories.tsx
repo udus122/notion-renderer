@@ -1,7 +1,7 @@
-import { StatusProperty } from "./Status.js";
+import { StatusProperty } from "./Status";
 import StatusPropertyObject from "./Status.json";
 
-import type { StatusPropertyItemObject } from "../../types/notion/property/status.js";
+import type { StatusPropertyItemObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof StatusProperty> = {

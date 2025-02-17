@@ -1,4 +1,4 @@
-import { generateUUID } from "../../utils/utils.js";
+import { generateUUID } from "../../utils/utils";
 
 import type { BlockBlockObject } from "@udus/notion-types";
 import type { BulletedListBlockObject } from "@udus/notion-types";
@@ -22,7 +22,8 @@ export const wrapListItems = (
         currBlock.type !== "bulleted_list_item" &&
         currBlock.type !== "numbered_list_item"
       ) {
-        return [...prevList, currBlock];
+        prevList.push(currBlock);
+        return prevList;
       }
       const prevBlock = prevList[prevList.length - 1];
 
@@ -39,7 +40,8 @@ export const wrapListItems = (
           type: "bulleted_list",
           bulleted_list: { items: [currBlock] },
         } satisfies BulletedListBlockObject;
-        return [...prevList, bulletedList];
+        prevList.push(bulletedList);
+        return prevList;
       }
       if (
         // numbered_list_item
@@ -51,7 +53,8 @@ export const wrapListItems = (
           type: "numbered_list",
           numbered_list: { items: [currBlock] },
         } satisfies NumberedListBlockObject;
-        return [...prevList, numberedList];
+        prevList.push(numberedList);
+        return prevList;
       }
 
       // Intermediate,

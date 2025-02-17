@@ -1,4 +1,4 @@
-import type { SelectPropertyItemComponent } from "../../types/notion/property/select.js";
+import type { SelectPropertyItemComponent } from "@udus/notion-types";
 
 export const SelectProperty: SelectPropertyItemComponent = ({
   propertyItem,
