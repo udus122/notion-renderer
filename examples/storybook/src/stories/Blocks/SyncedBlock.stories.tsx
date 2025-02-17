@@ -1,5 +1,5 @@
 import SyncedBlockDuplicatedObject from "./SyncedBlock.Duplicated.json";
-import { SyncedBlock } from "./SyncedBlock";
+import { SyncedBlock } from "@udus/notion-components";
 import SyncedBlockOriginalObject from "./SyncedBlock.Original.json";
 
 import type { SyncedBlockBlockObject } from "@udus/notion-types";

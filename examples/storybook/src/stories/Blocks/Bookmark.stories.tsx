@@ -1,4 +1,4 @@
-import { Bookmark } from "./Bookmark";
+import { Bookmark } from "@udus/notion-components";
 import BookmarkObject from "./Bookmark.json";
 import BookmarkNoOgMetaObject from "./Bookmark.NoOgMeta.json";
 

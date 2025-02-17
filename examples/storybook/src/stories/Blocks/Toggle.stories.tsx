@@ -1,4 +1,4 @@
-import { Toggle } from "./Toggle";
+import { Toggle } from "@udus/notion-components";
 import ToggleObject from "./Toggle.json";
 
 import type { ToggleBlockObject } from "@udus/notion-types";

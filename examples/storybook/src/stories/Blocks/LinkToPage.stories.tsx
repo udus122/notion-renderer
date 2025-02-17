@@ -1,4 +1,4 @@
-import { LinkToPage } from "./LinkToPage";
+import { LinkToPage } from "@udus/notion-components";
 import LinkToPageObject from "./LinkToPage.json";
 
 import type { LinkToPageBlockObject } from "@udus/notion-types";

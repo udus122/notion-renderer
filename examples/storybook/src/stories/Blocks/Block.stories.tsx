@@ -1,5 +1,5 @@
 import DividerObject from "./Block.Divider.json";
-import { Block } from "./Block";
+import { Block } from "@udus/notion-components";
 import ParagraphObject from "./Block.Paragraph.json";
 
 import type { ParagraphBlockObject } from "@udus/notion-types";

@@ -1,4 +1,4 @@
-import { Heading2 } from "./Heading2";
+import { Heading2 } from "@udus/notion-components";
 import Heading2Object from "./Heading2.json";
 import Heading2Toggleable from "./Heading2.Toggleable.json";
 

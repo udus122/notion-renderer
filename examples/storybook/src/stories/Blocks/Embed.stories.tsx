@@ -1,4 +1,4 @@
-import { Embed } from "./Embed";
+import { Embed } from "@udus/notion-components";
 import EmbedObject from "./Embed.json";
 import EmbedTwitterObject from "./Embed.Twitter.json";
 

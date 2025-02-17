@@ -1,4 +1,4 @@
-import { ColumnList } from "./ColumnList";
+import { ColumnList } from "@udus/notion-components";
 import ColumnListObject from "./ColumnList.json";
 
 import type { ColumnListBlockObject } from "@udus/notion-types";

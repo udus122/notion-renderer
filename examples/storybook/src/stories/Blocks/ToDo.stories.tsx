@@ -1,5 +1,5 @@
 import ToDoCheckedObject from "./ToDo.Checked.json";
-import { ToDo } from "./ToDo";
+import { ToDo } from "@udus/notion-components";
 import ToDoObject from "./Todo.json";
 
 import type { ToDoBlockObject } from "@udus/notion-types";

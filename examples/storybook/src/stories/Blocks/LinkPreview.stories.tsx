@@ -1,4 +1,4 @@
-import { LinkPreview } from "./LinkPreview";
+import { LinkPreview } from "@udus/notion-components";
 import LinkPreviewObject from "./LinkPreview.json";
 
 import type { LinkPreviewBlockObject } from "@udus/notion-types";

@@ -1,4 +1,4 @@
-import { BlockList } from "./BlockList";
+import { BlockList } from "@udus/notion-components";
 import BlocksObject from "./BlockList.json";
 
 import type { BlockBlockObject } from "@udus/notion-types";

@@ -1,4 +1,4 @@
-import { Table } from "./Table";
+import { Table } from "@udus/notion-components";
 import TableObject from "./Table.json";
 
 import type { TableBlockObject } from "@udus/notion-types";

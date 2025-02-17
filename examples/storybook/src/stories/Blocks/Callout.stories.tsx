@@ -1,4 +1,4 @@
-import { Callout } from "./Callout";
+import { Callout } from "@udus/notion-components";
 import CalloutObject from "./Callout.json";
 
 import type { CalloutBlockObject } from "@udus/notion-types";

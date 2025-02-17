@@ -1,4 +1,4 @@
-import { Image } from "./Image";
+import { Image } from "@udus/notion-components";
 import ImageObject from "./Image.json";
 
 import type { ImageBlockObject } from "@udus/notion-types";

@@ -1,4 +1,4 @@
-import { ChildPage } from "./ChildPage";
+import { ChildPage } from "@udus/notion-components";
 import ChildPageObject from "./ChildPage.json";
 
 import type { ChildPageBlockObject } from "@udus/notion-types";

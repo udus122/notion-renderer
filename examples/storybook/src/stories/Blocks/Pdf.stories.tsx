@@ -1,6 +1,6 @@
 import PdfExternalObject from "./Pdf.External.json";
 import PdfFileObject from "./Pdf.File.json";
-import { Pdf } from "./Pdf";
+import { Pdf } from "@udus/notion-components";
 
 import type { PdfBlockObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";

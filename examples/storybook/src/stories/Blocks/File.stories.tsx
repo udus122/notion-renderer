@@ -1,6 +1,6 @@
 import FileExternalObject from "./File.External.json";
 import FileFileObject from "./File.File.json";
-import { File } from "./File";
+import { File } from "@udus/notion-components";
 
 import type { FileBlockObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";

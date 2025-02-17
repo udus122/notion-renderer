@@ -1,4 +1,4 @@
-import { Equation } from "./Equation";
+import { Equation } from "@udus/notion-components";
 import EquationObject from "./Equation.json";
 
 import type { EquationBlockObject } from "@udus/notion-types";

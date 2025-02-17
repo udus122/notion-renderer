@@ -1,4 +1,4 @@
-import { BulletedList } from "./BulletedList";
+import { BulletedList } from "@udus/notion-components";
 import BulletedListObject from "./BulletedList.json";
 
 import type { BulletedListBlockObject } from "@udus/notion-types";

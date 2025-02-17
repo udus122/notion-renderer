@@ -1,4 +1,4 @@
-import { Quote } from "./Quote";
+import { Quote } from "@udus/notion-components";
 import QuoteObject from "./Quote.json";
 
 import type { QuoteBlockObject } from "@udus/notion-types";
