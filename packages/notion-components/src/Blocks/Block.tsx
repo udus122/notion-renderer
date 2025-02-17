@@ -40,11 +40,13 @@ import { Toggle } from "./Toggle.js";
 import { Unsupported } from "./Unsupported.js";
 import { Video } from "./Video.js";
 
-import type { BlockBlockObject } from "@udus/notion-types";
-import type { LinkProps } from "@udus/notion-types";
-import type { AnnotationItemMapper } from "@udus/notion-types";
-import type { BlockMapper } from "@udus/notion-types";
-import type { RichTextItemMapper } from "@udus/notion-types";
+import type {
+  BlockBlockObject,
+  LinkProps,
+  AnnotationItemMapper,
+  BlockMapper,
+  RichTextItemMapper,
+} from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

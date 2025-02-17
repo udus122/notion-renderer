@@ -1,4 +1,4 @@
-import { selectProperties } from "../../../../src/utils/index";
+import { selectProperties } from "@udus/notion-utils";
 import { Cover } from "../Common/Cover";
 import { Icon } from "../Common/Icon";
 import { Title } from "../Common/Title";
@@ -8,8 +8,8 @@ import { Gallery } from "./Gallery/Gallery";
 import { List } from "./List/List";
 import { Table } from "./Table/Table";
 
-import type { DatabaseObject } from "@udus/notion-types";
-import type { PageObject } from "@udus/notion-types";
+import type { DatabaseObject, PageObject } from "@udus/notion-types";
+import type {  } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

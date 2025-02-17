@@ -1,8 +1,7 @@
 import { Header } from "./Header";
 import { Row } from "./Row";
 
-import type { DatabaseObject } from "@udus/notion-types";
-import type { PageObject } from "@udus/notion-types";
+import type { DatabaseObject, PageObject } from "@udus/notion-types";
 import type { FC } from "react";
 
 type Props = {

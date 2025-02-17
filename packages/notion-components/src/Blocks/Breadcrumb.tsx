@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 
-import { extractTitle } from "../../../../src/utils/index";
+import { extractTitle } from "@udus/notion-utils";
 import { Icon } from "../Common/Icon";
 import { useMapper } from "../hooks";
 import { RichText } from "../RichText/RichText";

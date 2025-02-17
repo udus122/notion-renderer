@@ -1,8 +1,6 @@
 import { generateUUID } from "../../utils/utils";
 
-import type { BlockBlockObject } from "@udus/notion-types";
-import type { BulletedListBlockObject } from "@udus/notion-types";
-import type { NumberedListBlockObject } from "@udus/notion-types";
+import type { BlockBlockObject, BulletedListBlockObject,NumberedListBlockObject } from "@udus/notion-types";
 
 export const wrapListItems = (
   blocks: Array<BlockBlockObject>,

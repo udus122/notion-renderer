@@ -1,9 +1,11 @@
 import { useBlocks } from "../hooks";
 
-import type { Heading1BlockObject } from "@udus/notion-types";
-import type { Heading2BlockObject } from "@udus/notion-types";
-import type { Heading3BlockObject } from "@udus/notion-types";
-import type { TableOfContentsBlock } from "@udus/notion-types";
+import type {
+  Heading1BlockObject,
+  Heading2BlockObject,
+  Heading3BlockObject,
+  TableOfContentsBlock,
+} from "@udus/notion-types";
 
 export const TableOfContents: TableOfContentsBlock = ({ block }) => {
   const blocks = useBlocks();

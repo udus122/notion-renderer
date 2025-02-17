@@ -1,4 +1,4 @@
-import { extractTitle } from "../../../../src/utils/index";
+import { extractTitle } from "@udus/notion-utils";
 import { useMapper } from "../hooks";
 import { RichText } from "../RichText/RichText";
 

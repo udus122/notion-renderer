@@ -1,8 +1,7 @@
 import { Icon } from "../../Common/Icon";
 import { useMapper } from "../../hooks";
 
-import type { PageObject } from "@udus/notion-types";
-import type { TitlePropertyItemObject } from "@udus/notion-types";
+import type { PageObject, TitlePropertyItemObject } from "@udus/notion-types";
 
 export const TableTitle = (
   title: TitlePropertyItemObject,

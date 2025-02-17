@@ -2,8 +2,7 @@ import { Database } from "./Database";
 import DatabaseObject from "./Database.json";
 import Pages from "./Pages.json";
 
-import type { DatabaseObject as DatabaseObjectType } from "@udus/notion-types";
-import type { PageObject } from "@udus/notion-types";
+import type { DatabaseObject as DatabaseObjectType ,PageObject} from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Database> = {

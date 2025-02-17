@@ -1,5 +1,5 @@
 import { Property } from "../../Property/Property";
-import { isTitleProperty } from "../../../../../src/utils/index";
+import { isTitleProperty } from "@udus/notion-utils";
 
 import { TableTitle } from "./Title";
 

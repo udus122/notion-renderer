@@ -3,8 +3,7 @@ import Pages from "../Pages.json";
 
 import { Table } from "./Table";
 
-import type { DatabaseObject } from "@udus/notion-types";
-import type { PageObject } from "@udus/notion-types";
+import type { DatabaseObject, PageObject } from "@udus/notion-types";
 import type { Meta, StoryObj } from "@storybook/react";
 
 const meta: Meta<typeof Table> = {

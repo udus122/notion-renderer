@@ -1,7 +1,7 @@
 import {
   selectProperties,
   splitTitleAndOtherProperties,
-} from "../../../../src/utils/index";
+} from "@udus/notion-utils";
 import { BlockList } from "../Blocks/BlockList";
 import { Cover } from "../Common/Cover";
 import { Icon } from "../Common/Icon";

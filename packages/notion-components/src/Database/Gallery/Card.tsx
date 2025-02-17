@@ -1,4 +1,4 @@
-import { splitTitleAndOtherProperties } from "../../../../../src/utils/index";
+import { splitTitleAndOtherProperties } from "@udus/notion-utils";
 import { Cover } from "../../Common/Cover";
 import { Icon } from "../../Common/Icon";
 import { useMapper } from "../../hooks";
@@ -27,7 +27,7 @@ export const Card: FC<Props> = ({ page }) => {
           <Icon icon={page.icon} hideDefaultIcon />
         </span>
         <span className="notion-gallery-card-title-text">
-          {title?.title.map((text) => text.plain_text).join("") ?? "Annoymous"}
+          {title?.title.map((text) => text.plain_text).join("") ?? "Anonymous"}
         </span>
       </div>
       <div className="notion-gallery-card-properties">

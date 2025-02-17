@@ -1,4 +1,4 @@
-import { splitTitleAndOtherProperties } from "../../../../../src/utils/index";
+import { splitTitleAndOtherProperties } from "@udus/notion-utils";
 import { Icon } from "../../Common/Icon";
 import { useMapper } from "../../hooks";
 import { Properties } from "../../Property/Properties";

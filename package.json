@@ -13,13 +13,11 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "turbo run dev",
-    "lint": "turbo run lint",
     "build": "turbo run build",
-    "publish": "turbo run publish"
+    "dev": "turbo run dev",
+    "lint": "turbo run lint"
   },
   "devDependencies": {
-    "@changesets/cli": "^2.27.12",
     "turbo": "latest"
   }
 }
