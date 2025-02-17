@@ -9,7 +9,7 @@
   },
   "packageManager": "npm@10.9.2",
   "workspaces": [
-    "example/*",
+    "examples/*",
     "packages/*"
   ],
   "scripts": {

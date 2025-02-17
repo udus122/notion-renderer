@@ -35,16 +35,16 @@ export {
   Toggle,
   Unsupported,
   Video,
-} from "./Blocks/index";
+} from "./Blocks";
 
 export {
   OpenedHeading1,
   OpenedHeading2,
   OpenedHeading3,
   OpenedToggle,
-} from "./Blocks/Custom/index";
-export { Database } from "./Database/index";
-export { Page } from "./Page/index";
+} from "./Blocks/Custom";
+export { Database } from "./Database";
+export { Page } from "./Page";
 export {
   CheckboxProperty,
   CreatedByProperty,
@@ -68,13 +68,13 @@ export {
   TitleProperty,
   UniqueIdProperty,
   UrlProperty,
-} from "./Property/index";
+} from "./Property";
 export {
   AnnotationItemProvider,
   BlockProvider,
   LinkProvider,
   RichTextItemProvider,
-} from "./Mapper/index";
+} from "./Mapper";
 export {
   Annotation,
   AnnotationItem,
@@ -89,4 +89,4 @@ export {
   Strikethrough,
   Text,
   Underline,
-} from "./RichText/index";
+} from "./RichText";
