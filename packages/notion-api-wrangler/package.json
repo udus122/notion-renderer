@@ -9,6 +9,7 @@
   "exports": {
     ".": {
       "import": {
+        "@udus/src": "./src/index.ts",
         "types": "./dist/index.d.ts",
         "default": "./dist/index"
       },
@@ -25,7 +26,7 @@
     "@udus/notion-types": "*",
     "@repo/typescript-config": "*",
     "tsup": "^8.3.6",
-    "typescript": "latest"
+    "typescript": "^5.7.3"
   },
   "dependencies": {
     "@extractus/article-extractor": "^8.0.17",

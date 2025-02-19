@@ -9,7 +9,8 @@
     ".": {
       "import": {
         "types": "./dist/index.d.ts",
-        "default": "./dist/index"
+        "default": "./dist/index",
+        "@udus/src": "./src/index.ts"
       },
       "require": {
         "types": "./dist/index.d.cts",
