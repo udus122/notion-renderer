@@ -1,0 +1,52 @@
+{
+  "name": "@udus/notion-components",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "build": "npm run build:js && npm run build:css",
+    "build:js": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "build:css": "tsup styles/globals.css",
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index",
+        "@udus/src": "./src/index.ts"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "@repo/typescript-config": "*",
+    "@types/katex": "^0.16.7",
+    "@types/node": "^22.13.4",
+    "@types/react": "^19.0.8",
+    "@types/react-dom": "^19.0.3",
+    "@udus/notion-types": "*",
+    "@udus/notion-utils": "*",
+    "@vitejs/plugin-react-swc": "^3.8.0",
+    "postcss": "^8.5.2",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@extractus/article-extractor": "^8.0.17",
+    "@extractus/oembed-extractor": "^4.0.6",
+    "@notionhq/client": "^2.2.15",
+    "date-fns": "^4.1.0",
+    "date-fns-tz": "^3.2.0"
+  },
+  "peerDependencies": {
+    "katex": "^0.16.9",
+    "react": "^19",
+    "react-dom": "^19"
+  }
+}

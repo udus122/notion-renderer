@@ -1,0 +1,64 @@
+{
+  "object": "block",
+  "id": "a6cf0d65-d899-4bb0-9f54-878407f4dd3b",
+  "parent": {
+    "type": "page_id",
+    "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
+  },
+  "created_time": "2023-10-28T06:23:00.000Z",
+  "last_edited_time": "2023-10-28T06:23:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+  },
+  "has_children": false,
+  "archived": false,
+  "type": "code",
+  "code": {
+    "caption": [
+      {
+        "type": "text",
+        "text": {
+          "content": "This is code block.",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "This is code block.",
+        "href": null,
+        "id": "c0fc83cf-592a-44f4-a0ac-4eca2609abc9"
+      }
+    ],
+    "rich_text": [
+      {
+        "type": "text",
+        "text": {
+          "content": "console.log(\"Hello World!\")",
+          "link": null
+        },
+        "annotations": {
+          "bold": false,
+          "italic": false,
+          "strikethrough": false,
+          "underline": false,
+          "code": false,
+          "color": "default"
+        },
+        "plain_text": "console.log(\"Hello World!\")",
+        "href": null,
+        "id": "5e0706ce-da8a-408b-9337-7c52ae567ffa"
+      }
+    ],
+    "language": "typescript"
+  }
+}

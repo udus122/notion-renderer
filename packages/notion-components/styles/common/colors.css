@@ -1,0 +1,120 @@
+/* stylelint-disable selector-class-pattern */
+.notion-color-default {
+  color: unset;
+}
+
+.notion-color-gray {
+  color: var(--color-text-gray);
+}
+
+.notion-color-brown {
+  color: var(--color-text-brown);
+}
+
+.notion-color-orange {
+  color: var(--color-text-orange);
+}
+
+.notion-color-yellow {
+  color: var(--color-text-yellow);
+}
+
+.notion-color-green {
+  color: var(--color-text-green);
+}
+
+.notion-color-blue {
+  color: var(--color-text-blue);
+}
+
+.notion-color-purple {
+  color: var(--color-text-purple);
+}
+
+.notion-color-pink {
+  color: var(--color-text-pink);
+}
+
+.notion-color-red {
+  color: var(--color-text-red);
+}
+
+.notion-color-default_background {
+  background-color: unset;
+}
+
+.notion-color-gray_background {
+  background-color: var(--color-bg-gray);
+}
+
+.notion-color-brown_background {
+  background-color: var(--color-bg-brown);
+}
+
+.notion-color-orange_background {
+  background-color: var(--color-bg-orange);
+}
+
+.notion-color-yellow_background {
+  background-color: var(--color-bg-yellow);
+}
+
+.notion-color-green_background {
+  background-color: var(--color-bg-green);
+}
+
+.notion-color-blue_background {
+  background-color: var(--color-bg-blue);
+}
+
+.notion-color-purple_background {
+  background-color: var(--color-bg-purple);
+}
+
+.notion-color-pink_background {
+  background-color: var(--color-bg-pink);
+}
+
+.notion-color-red_background {
+  background-color: var(--color-bg-red);
+}
+
+.notion-pill-color-default {
+  background-color: var(--color-pill-default);
+}
+
+.notion-pill-color-gray {
+  background-color: var(--color-pill-gray);
+}
+
+.notion-pill-color-brown {
+  background-color: var(--color-pill-brown);
+}
+
+.notion-pill-color-orange {
+  background-color: var(--color-pill-orange);
+}
+
+.notion-pill-color-yellow {
+  background-color: var(--color-pill-yellow);
+}
+
+.notion-pill-color-green {
+  background-color: var(--color-pill-green);
+}
+
+.notion-pill-color-blue {
+  background-color: var(--color-pill-blue);
+}
+
+.notion-pill-color-purple {
+  background-color: var(--color-pill-purple);
+}
+
+.notion-pill-color-pink {
+  background-color: var(--color-pill-pink);
+}
+
+.notion-pill-color-red {
+  background-color: var(--color-pill-red);
+}

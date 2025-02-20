@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug TypeScript File with ts-node",
+      "type": "node",
+      "request": "launch",
+      // "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/ts-node",
+      "runtimeExecutable": "node",
+      "cwd": "${workspaceRoot}",
+      "resolveSourceMapLocations": [
+        "${workspaceFolder}/**",
+        "!**/node_modules/**"
+      ],
+      "args": [
+        "--loader",
+        "ts-node/esm",
+        "${file}"
+      ]
+    }
+  ]
+}

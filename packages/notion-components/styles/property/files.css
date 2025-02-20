@@ -1,0 +1,6 @@
+.notion-property-item.notion-file {
+  display: flex;
+  gap: 0.5rem 0.25rem;
+  flex-wrap: wrap;
+  word-break: break-all;
+}

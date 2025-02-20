@@ -1,0 +1,14 @@
+.notion-toggle-summary {
+  cursor: pointer;
+
+  h1,
+  h2,
+  h3 {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.notion-toggle-details {
+  padding-inline-start: 1.5rem;
+}

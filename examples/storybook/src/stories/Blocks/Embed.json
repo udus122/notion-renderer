@@ -1,0 +1,38 @@
+{
+  "object": "block",
+  "id": "b2806dfa-230c-47d4-9c85-baee888dbc51",
+  "parent": {
+    "type": "page_id",
+    "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
+  },
+  "created_time": "2023-10-28T06:31:00.000Z",
+  "last_edited_time": "2023-10-28T06:32:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+  },
+  "has_children": false,
+  "archived": false,
+  "type": "embed",
+  "embed": {
+    "caption": [],
+    "url": "https://speakerdeck.com/katiecoart/keep-going",
+    "oembed": {
+      "type": "rich",
+      "version": 1,
+      "provider_name": "Speaker Deck",
+      "provider_url": "https://speakerdeck.com/",
+      "title": "Keep Going",
+      "author_name": "Katie Cordina Lindsey",
+      "author_url": "https://speakerdeck.com/katiecoart",
+      "html": "<iframe id=\"talk_frame_1044843\" class=\"speakerdeck-iframe\" src=\"//speakerdeck.com/player/5bd162d95e02435586033eda689cfc62\" width=\"710\" height=\"372\" style=\"aspect-ratio:710/372; border:0; padding:0; margin:0; background:transparent;\" frameborder=\"0\" allowtransparency=\"true\" allowfullscreen=\"allowfullscreen\"></iframe>\n",
+      "width": 710,
+      "height": 372,
+      "ratio": 1.9047619047619047
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.notion-page {
+  display: grid;
+  grid-template-columns:
+    [full-start] var(--notion-margin)
+    [content-start] minmax(0, 1fr) [content-end] var(--notion-margin)
+    [full-end];
+  color: var(--color-text-default);
+  background-color: var(--color-bg-default);
+  line-height: var(--notion-line-height);
+  fill: var(--notion-fill);
+  overflow-wrap: var(--notion-overflow-wrap);
+
+  .notion-block-list {
+    grid-column: content;
+  }
+}
+
+.notion-page-cover {
+  grid-column: full;
+  block-size: 30vh;
+  inline-size: 100%;
+  object-position: center 0%;
+  object-fit: cover;
+
+  &:has(+ .notion-page-icon) {
+    margin-block-end: -5rem;
+  }
+}
+
+.notion-page-icon {
+  grid-column: content;
+  display: block;
+  font-size: 5rem;
+}
+
+.notion-page-title {
+  grid-column: content;
+}
+
+.notion-page-properties {
+  grid-column: content;
+}
+
+.notion-page-divider {
+  grid-column: content;
+  inline-size: 100%;
+  border: 1px solid var(--color-border);
+  margin-block: 2rem 1rem;
+}

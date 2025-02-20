@@ -1,0 +1,9 @@
+.notion-pdf {
+  object {
+    max-inline-size: 100%;
+
+    a {
+      color: revert;
+    }
+  }
+}

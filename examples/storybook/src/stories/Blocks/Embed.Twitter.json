@@ -1,0 +1,38 @@
+{
+  "object": "block",
+  "id": "5207c376-e14a-4b87-ab41-fd1abd509bc7",
+  "parent": {
+    "type": "page_id",
+    "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
+  },
+  "created_time": "2023-10-28T07:00:00.000Z",
+  "last_edited_time": "2023-10-28T07:00:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+  },
+  "has_children": false,
+  "archived": false,
+  "type": "embed",
+  "embed": {
+    "caption": [],
+    "url": "https://twitter.com/NotionHQ/status/1699828805408550971?s=20",
+    "oembed": {
+      "url": "https://twitter.com/NotionHQ/status/1699828805408550971",
+      "author_name": "Notion",
+      "author_url": "https://twitter.com/NotionHQ",
+      "html": "<blockquote class=\"twitter-tweet\"><p lang=\"en\" dir=\"ltr\">Introducing: Formulas 2.0 🦾<br><br>• Redesigned multi-line editor<br>• Syntax and error highlighting<br>• Colorful, rich data outputs<br>• Powerful new functions <a href=\"https://t.co/sbrLZxT31F\">pic.twitter.com/sbrLZxT31F</a></p>&mdash; Notion (@NotionHQ) <a href=\"https://twitter.com/NotionHQ/status/1699828805408550971?ref_src=twsrc%5Etfw\">September 7, 2023</a></blockquote>\n<script async src=\"https://platform.twitter.com/widgets.js\" charset=\"utf-8\"></script>\n",
+      "width": 550,
+      "height": null,
+      "type": "rich",
+      "cache_age": "3153600000",
+      "provider_name": "Twitter",
+      "provider_url": "https://twitter.com",
+      "version": "1.0"
+    }
+  }
+}

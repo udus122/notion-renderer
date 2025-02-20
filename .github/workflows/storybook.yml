@@ -1,0 +1,29 @@
+# name: deploy-storybook
+
+# on:
+#   push:
+#     branches:
+#       - alpha
+#       - beta
+#       - main
+
+# jobs:
+#   deploy-storybook:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v3
+#       - name: Setup Node.js
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: "18"
+#       - name: Install dependencies
+#         run: npm ci
+#       - name: Build storybook
+#         run: npm run build:sb
+#       - name: Deploy storybook
+#         uses: JamesIves/github-pages-deploy-action@4.1.0
+#         with:
+#           token: ${{ secrets.GITHUB_TOKEN }}
+#           branch: gh-pages
+#           folder: storybook-static

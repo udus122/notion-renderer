@@ -1,0 +1,28 @@
+{
+  "object": "block",
+  "id": "79b4c33b-f984-41a4-8da1-4b606193aae4",
+  "parent": {
+    "type": "page_id",
+    "page_id": "7ed3a6ee-bb5e-4cdf-a944-33684d7c56bf"
+  },
+  "created_time": "2023-10-28T06:38:00.000Z",
+  "last_edited_time": "2023-10-28T06:38:00.000Z",
+  "created_by": {
+    "object": "user",
+    "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+  },
+  "last_edited_by": {
+    "object": "user",
+    "id": "e0446ede-dde6-457c-b535-d2b19f40b45a"
+  },
+  "has_children": false,
+  "archived": false,
+  "type": "image",
+  "image": {
+    "caption": [],
+    "type": "external",
+    "external": {
+      "url": "https://i.gyazo.com/8bb9a4e65e8e56b674cfa044e2370080.png"
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.notion-paragraph {
+  min-block-size: 1.5rem;
+
+  p {
+    margin: 0;
+  }
+}
+
+.notion-paragraph-children {
+  margin-inline-start: 1.5rem;
+}

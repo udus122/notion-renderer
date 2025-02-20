@@ -1,0 +1,30 @@
+.notion-property {
+  display: flex;
+  padding-block: 0.25rem;
+}
+
+.notion-property-name {
+  flex: 0 0 10em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.notion-property-item {
+  flex: 1 1 auto;
+}
+
+.notion-pill {
+  padding-inline: 0.25rem;
+  border-radius: 3px;
+  white-space: nowrap;
+}
+
+.notion-property-icon {
+  width: 16px;
+  height: 16px;
+  display: inline-block;
+  vertical-align: text-top;
+  margin-inline-end: 0.25rem;
+  fill: var(--color-property-icon);
+}

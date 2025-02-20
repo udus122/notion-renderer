@@ -1,0 +1,9 @@
+{
+  "id": "%7BzcJ",
+  "type": "select",
+  "select": {
+    "id": "bc31eaa4-6f91-4833-b881-c33b69b28ad4",
+    "name": "select2",
+    "color": "red"
+  }
+}

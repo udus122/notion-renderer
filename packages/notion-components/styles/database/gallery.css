@@ -1,0 +1,58 @@
+.notion-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 20rem), 1fr));
+  gap: 1rem;
+}
+
+.notion-gallery-card {
+  grid-template-rows: subgrid;
+  grid-row: span 3;
+  display: grid;
+  grid-template-columns: [full-start] 1rem [content-start] 1fr [content-end] 1rem [full-end];
+  row-gap: 0.5rem;
+  overflow: hidden;
+  padding-bottom: 1rem;
+  border-radius: 0.3rem;
+  box-shadow:
+    rgb(15 15 15 / 10%) 0 0 0 1px,
+    rgb(15 15 15 / 10%) 0 2px 4px;
+  background: var(--color-bg-gallery-card);
+  position: relative;
+
+  & > .notion-internal-link {
+    position: absolute;
+    inset: 0;
+  }
+
+  .notion-relation .notion-internal-link {
+    z-index: 1;
+  }
+}
+
+.notion-gallery-card-cover {
+  grid-column: full;
+  aspect-ratio: 16/9;
+  overflow: hidden;
+  min-height: 10rem;
+}
+
+.notion-gallery-card-title-icon {
+  vertical-align: top;
+}
+
+.notion-gallery-card-title {
+  grid-column: 2 / span 1;
+  display: inline-flex;
+  align-items: flex-start;
+  font-size: 0.9rem;
+  font-weight: 500;
+
+  .notion-icon {
+    font-size: 1em;
+  }
+}
+
+.notion-gallery-card-properties {
+  grid-column: content;
+  font-size: 0.8rem;
+}

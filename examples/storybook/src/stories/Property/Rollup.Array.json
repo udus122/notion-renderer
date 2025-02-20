@@ -1,0 +1,10 @@
+{
+  "id": "HQw%7B",
+  "next_url": "https://api.notion.com/v1/pages/696a56fa0c6842709fe6165c403abc76/properties/HQw%257B?start_cursor=PT66fy&page_size=100",
+  "type": "rollup",
+  "rollup": {
+    "type": "array",
+    "array": [],
+    "function": "show_original"
+  }
+}

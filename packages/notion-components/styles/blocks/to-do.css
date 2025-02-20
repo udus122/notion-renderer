@@ -1,0 +1,53 @@
+.notion-to-do-content {
+  display: flex;
+  padding-block: 3px;
+}
+
+.notion-to-do-icon {
+  display: inline-flex;
+  width: 1.5em;
+  height: 1.5em;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.notion-checkbox {
+  display: inline-flex;
+  align-items: center;
+
+  svg {
+    width: 1rem;
+    height: 1rem;
+    fill: inherit;
+  }
+
+  &.checked {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 1rem;
+    height: 1rem;
+    background: rgb(35 131 226);
+
+    svg {
+      width: 0.75em;
+      height: 0.75em;
+      fill: #fff;
+    }
+  }
+}
+
+.notion-to-do-text {
+  display: inline-flex;
+  align-items: center;
+
+  &.checked {
+    opacity: 0.5;
+    text-decoration: line-through;
+  }
+}
+
+.notion-to-do-children {
+  padding-inline-start: 1.5rem;
+}

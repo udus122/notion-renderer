@@ -1,0 +1,6 @@
+.notion-image img {
+  display: block;
+  max-inline-size: 100%;
+  object-fit: contain;
+  border-radius: 1px;
+}

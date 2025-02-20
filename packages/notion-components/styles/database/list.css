@@ -1,0 +1,72 @@
+.notion-list {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+/* list-item */
+
+.notion-list-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  overflow: hidden;
+  min-block-size: 2rem;
+  background: 20ms ease-in 0s;
+
+  &:hover {
+    background-color: var(--color-link-hover);
+  }
+
+  & > a {
+    display: contents;
+  }
+}
+
+.notion-list-item-title {
+  display: flex;
+  align-items: center;
+  flex: 1 1 15em;
+  margin-inline-end: auto;
+  overflow: hidden;
+  font-weight: 500;
+  line-height: 1.75;
+
+  .notion-icon {
+    font-size: 1em;
+    inline-size: 1.25em;
+    block-size: 1.25em;
+
+    &:has(svg, img) {
+      display: block;
+    }
+  }
+}
+
+.notion-list-item-title-icon {
+  margin-inline-end: 0.25em;
+}
+
+.notion-list-item-title-text {
+  opacity: 0.7;
+  text-decoration-line: underline;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.notion-list-item-properties {
+  .notion-properties {
+    display: flex;
+    align-items: center;
+  }
+
+  .notion-property {
+    padding-inline: 0.5em;
+    font-size: 0.75em;
+    white-space: nowrap;
+  }
+
+  .notion-multi-select {
+    flex-wrap: nowrap;
+  }
+}

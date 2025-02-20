@@ -1,0 +1,6 @@
+.notion-quote {
+  margin: 0 1rem 0 0;
+  border-inline-start: 3px solid currentcolor;
+  padding-inline-start: 0.5rem;
+  padding-block: 3px;
+}

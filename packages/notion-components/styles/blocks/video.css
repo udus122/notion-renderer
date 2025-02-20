@@ -1,0 +1,12 @@
+.notion-video {
+  max-inline-size: 560px;
+
+  video {
+    block-size: auto;
+    max-inline-size: 100%;
+  }
+
+  iframe {
+    max-inline-size: 100%;
+  }
+}

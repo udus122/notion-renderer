@@ -1,0 +1,40 @@
+.notion-numbered-list {
+  padding-inline-start: 1.5em;
+  list-style-type: decimal;
+
+  ol {
+    list-style-type: lower-alpha;
+
+    ol {
+      list-style-type: lower-roman;
+
+      ol {
+        list-style-type: decimal;
+
+        ol {
+          list-style-type: lower-alpha;
+
+          ol {
+            list-style-type: lower-roman;
+
+            ol {
+              list-style-type: decimal;
+
+              ol {
+                list-style-type: lower-alpha;
+
+                ol {
+                  list-style-type: lower-roman;
+
+                  ol {
+                    list-style-type: decimal;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

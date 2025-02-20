@@ -1,0 +1,19 @@
+{
+  "type": "mention",
+  "mention": {
+    "type": "database",
+    "database": {
+      "id": "a1d8501e-1ac1-43e9-a6bd-ea9fe6c8822b"
+    }
+  },
+  "annotations": {
+    "bold": false,
+    "italic": false,
+    "strikethrough": false,
+    "underline": false,
+    "code": false,
+    "color": "default"
+  },
+  "plain_text": "Database with test things",
+  "href": "https://www.notion.so/a1d8501e1ac143e9a6bdea9fe6c8822b"
+}

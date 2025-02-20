@@ -1,0 +1,18 @@
+.notion-file {
+  display: flex;
+  color: inherit;
+  fill: inherit;
+  border-radius: 0.25rem;
+  padding-block: 0.1rem;
+  transition: background-color 20ms ease-in 0s;
+
+  &:hover {
+    background-color: var(--color-link-hover);
+  }
+}
+
+.notion-file-name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}

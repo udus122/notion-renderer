@@ -1,0 +1,40 @@
+/* stylelint-disable selector-class-pattern */
+
+.notion-callout {
+  display: flex;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  overflow: hidden;
+  padding: 1rem;
+  border-radius: 3px;
+  box-shadow: none;
+  align-items: flex-start;
+  background-color: var(--color-bg-callout);
+
+  .notion-block-list {
+    background-color: var(--color-bg-callout);
+  }
+}
+
+.notion-callout-icon {
+  .notion-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  img {
+    block-size: auto;
+    max-inline-size: 100%;
+    aspect-ratio: 1;
+    border-radius: 0.25em;
+  }
+}
+
+.notion-callout-content {
+  display: flex;
+  flex-direction: column;
+  margin-inline-start: 8px;
+  overflow: hidden;
+  width: 100%;
+}
