@@ -1,6 +1,6 @@
 import { type Client, isFullPage } from "@notionhq/client";
 
-import { notUndefined } from "../../utils/utils";
+import { notUndefined } from "../../utils";
 import { callAPIWithBackOff } from "../../utils/api";
 import { convertResponseToPage } from "../index";
 

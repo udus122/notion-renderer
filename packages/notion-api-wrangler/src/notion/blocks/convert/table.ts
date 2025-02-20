@@ -1,4 +1,4 @@
-import { notNullNorUndefined } from "../../../utils/utils";
+import { notNullNorUndefined } from "../../../utils";
 import { fetchBlockList } from "../fetchBlockList";
 
 import type { TableBlockObject } from "@udus/notion-types";

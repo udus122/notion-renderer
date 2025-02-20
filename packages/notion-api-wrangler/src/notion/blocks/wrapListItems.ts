@@ -1,4 +1,4 @@
-import { generateUUID } from "../../utils/utils";
+import { generateUUID } from "../../utils";
 
 import type { BlockBlockObject, BulletedListBlockObject,NumberedListBlockObject } from "@udus/notion-types";
 

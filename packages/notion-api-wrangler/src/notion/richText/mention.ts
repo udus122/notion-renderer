@@ -1,7 +1,7 @@
 import { type Client, isFullDatabase, isFullPage } from "@notionhq/client";
 
 import { fetchSiteMeta } from "../../utils/sitemeta";
-import { generateUUID } from "../../utils/utils";
+import { generateUUID } from "../../utils";
 import { retrieveDatabase } from "../database/retrieve";
 import { retrievePage } from "../index";
 

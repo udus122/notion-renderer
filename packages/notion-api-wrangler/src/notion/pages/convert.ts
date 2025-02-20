@@ -1,4 +1,4 @@
-import { notUndefined } from "../../utils/utils";
+import { notUndefined } from "../../utils";
 import { fetchPageProperty } from "../properties/fetch";
 
 import type { PageObject, PropertyItemType } from "@udus/notion-types";

@@ -1,4 +1,4 @@
-import { notUndefined } from "../../utils/utils";
+import { notUndefined } from "../../utils";
 
 import { convertResponseToBlock } from "./convert/convertResponseToBlock";
 import { wrapListItems } from "./wrapListItems";
