@@ -1,5 +1,5 @@
 {
-  "name": "example",
+  "name": "@udus/notion-renderer-nextjs-example",
   "version": "0.1.0",
   "private": true,
   "scripts": {

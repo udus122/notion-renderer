@@ -1,5 +1,6 @@
 {
   "name": "@udus/notion-components",
+  "version": "0.0.0",
   "type": "module",
   "scripts": {
     "build": "npm run build:js && npm run build:css",
