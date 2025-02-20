@@ -1,0 +1,37 @@
+{
+  "name": "@udus/notion-api-wrangler",
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "tsup src/index.ts --format cjs,esm --dts --watch",
+    "build": "tsup src/index.ts --format cjs,esm --dts",
+    "publish": "npm run build && changeset version && changeset publish"
+  },
+  "exports": {
+    ".": {
+      "import": {
+        "@udus/src": "./src/index.ts",
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "main": "./dist/index",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "devDependencies": {
+    "@udus/notion-types": "*",
+    "@repo/typescript-config": "*",
+    "tsup": "^8.3.6",
+    "typescript": "^5.7.3"
+  },
+  "dependencies": {
+    "@extractus/article-extractor": "^8.0.17",
+    "@extractus/oembed-extractor": "^4.0.6",
+    "@notionhq/client": "^2.2.15"
+  }
+}
