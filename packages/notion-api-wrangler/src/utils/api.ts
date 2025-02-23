@@ -2,18 +2,18 @@ import {
   isNotionClientError,
   APIErrorCode,
   ClientErrorCode,
-} from "@notionhq/client";
+} from '@notionhq/client';
 
-import { exponentialBackoffFactory } from "./backoff";
+import { exponentialBackoffFactory } from './backoff';
 
-import type { Result } from "@udus/notion-types";
+import type { Result } from '@udus/notion-types';
 
 const exponentialBackoff = exponentialBackoffFactory(64, undefined, 300);
 
 export const callAPIWithBackOff = async <Args, Item>(
   func: (args: Args) => Promise<Item>,
   args: Args,
-  retryCount = 5,
+  retryCount = 3,
 ): Promise<Result<Item>> => {
   try {
     const data = await func({ ...args });
@@ -23,7 +23,7 @@ export const callAPIWithBackOff = async <Args, Item>(
     };
   } catch (error) {
     console.error(
-      `error occured with this parameter: ${JSON.stringify({
+      `error occurred with this parameter: ${JSON.stringify({
         func: func.name,
         args,
         error,
@@ -37,11 +37,11 @@ export const callAPIWithBackOff = async <Args, Item>(
         case APIErrorCode.ServiceUnavailable:
         case ClientErrorCode.ResponseError:
         case ClientErrorCode.RequestTimeout: {
-          console.error("start retrying...");
+          console.error('start retrying...');
           if (retryCount < 1) {
             return {
               ok: false,
-              data: new Error("retry count exceeded.", { cause: error }),
+              data: new Error('retry count exceeded.', { cause: error }),
             };
           }
           await exponentialBackoff();
@@ -71,6 +71,12 @@ export const callAPIWithBackOff = async <Args, Item>(
 
   return {
     ok: false,
-    data: new Error("Notion api call was failed with unknown error."),
+    data: new Error('Notion api call was failed with unknown error.'),
   };
 };
+
+export const withBackOff =
+  <Args, Item>(func: (args: Args) => Promise<Item>, retryCount = 3) =>
+  async (args: Args): Promise<Result<Item>> => {
+    return callAPIWithBackOff(func, args, retryCount);
+  };

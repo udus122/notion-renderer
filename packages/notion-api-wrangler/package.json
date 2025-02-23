@@ -32,6 +32,8 @@
   "dependencies": {
     "@extractus/article-extractor": "^8.0.17",
     "@extractus/oembed-extractor": "^4.0.6",
-    "@notionhq/client": "^2.2.15"
+    "@notionhq/client": "^2.2.15",
+    "lru-cache": "^11.0.2",
+    "p-queue": "^8.1.0"
   }
 }

@@ -1,16 +1,16 @@
-import { convertResponseToRichText } from "../../richText/richText";
-import { fetchBlockList } from "../fetchBlockList";
+import { convertResponseToRichText } from '../../richText/richText';
+import { fetchBlockList } from '../fetchBlockList';
 
-import type { QuoteBlockObject } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { QuoteBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { QuoteBlockObject } from '@udus/notion-types';
+import type { QuoteBlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertQuoteResponseToBlock = async (
   block: QuoteBlockObjectResponse,
-  client: Client,
+  options: FetchOptions,
 ): Promise<QuoteBlockObject> => {
   if (block.has_children) {
-    const { ok, data } = await fetchBlockList(client, { block_id: block.id });
+    const { ok, data } = await fetchBlockList({ block_id: block.id }, options);
 
     if (ok) {
       return {
@@ -19,7 +19,7 @@ export const convertQuoteResponseToBlock = async (
           ...block.quote,
           rich_text: await convertResponseToRichText(
             block.quote.rich_text,
-            client,
+            options,
           ),
           children: data,
         },
@@ -31,7 +31,10 @@ export const convertQuoteResponseToBlock = async (
     ...block,
     quote: {
       ...block.quote,
-      rich_text: await convertResponseToRichText(block.quote.rich_text, client),
+      rich_text: await convertResponseToRichText(
+        block.quote.rich_text,
+        options,
+      ),
     },
   } satisfies QuoteBlockObject;
 };

@@ -1,16 +1,16 @@
-import { convertResponseToRichText } from "../../richText/richText";
-import { fetchBlockList } from "../fetchBlockList";
+import { convertResponseToRichText } from '../../richText/richText';
+import { fetchBlockList } from '../fetchBlockList';
 
-import type { CalloutBlockObject } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { CalloutBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { CalloutBlockObject } from '@udus/notion-types';
+import type { CalloutBlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertCalloutResponseToBlock = async (
   block: CalloutBlockObjectResponse,
-  client: Client,
+  options: FetchOptions,
 ): Promise<CalloutBlockObject> => {
   if (block.has_children) {
-    const { ok, data } = await fetchBlockList(client, { block_id: block.id });
+    const { ok, data } = await fetchBlockList({ block_id: block.id }, options);
 
     if (ok) {
       return {
@@ -19,7 +19,7 @@ export const convertCalloutResponseToBlock = async (
           ...block.callout,
           rich_text: await convertResponseToRichText(
             block.callout.rich_text,
-            client,
+            options,
           ),
           children: data,
         },
@@ -33,7 +33,7 @@ export const convertCalloutResponseToBlock = async (
       ...block.callout,
       rich_text: await convertResponseToRichText(
         block.callout.rich_text,
-        client,
+        options,
       ),
     },
   } satisfies CalloutBlockObject;

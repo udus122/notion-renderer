@@ -1,15 +1,16 @@
-import type { TitlePropertyItemObject } from "@udus/notion-types";
-import type { Overwrite } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
+import type { TitlePropertyItemObject } from '@udus/notion-types';
+import type { Overwrite } from '@udus/notion-types';
 import type {
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
   TitlePropertyItemObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+} from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertResponseToTitlePropertyItem = (
   property: TitlePropertyItemObjectResponse,
-  client: Client,
+  // biome-ignore lint/correctness/noUnusedVariables: Set to maintain consistency with other functions, but not used
+  options: FetchOptions,
 ): TitlePropertyItemObject => {
   return {
     ...property,
@@ -22,12 +23,13 @@ export const convertListResponseToTitlePropertyItem = (
     PropertyItemPropertyItemListResponse,
     {
       property_item: Extract<
-        PropertyItemPropertyItemListResponse["property_item"],
-        { type: "title" }
+        PropertyItemPropertyItemListResponse['property_item'],
+        { type: 'title' }
       >;
     }
   >,
-  client: Client,
+  // biome-ignore lint/correctness/noUnusedVariables: Set to maintain consistency with other functions, but not used
+  options: FetchOptions,
 ): TitlePropertyItemObject => {
   const titlePropertyItemObject = {
     ...list.property_item,
@@ -39,4 +41,4 @@ export const convertListResponseToTitlePropertyItem = (
 
 export const isTitleTypeObject = (
   obj: PropertyItemObjectResponse,
-): obj is TitlePropertyItemObjectResponse => obj.type === "title";
+): obj is TitlePropertyItemObjectResponse => obj.type === 'title';

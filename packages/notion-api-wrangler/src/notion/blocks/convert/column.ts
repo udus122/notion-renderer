@@ -1,15 +1,15 @@
-import { fetchBlockList } from "../fetchBlockList";
+import { fetchBlockList } from '../fetchBlockList';
 
-import type { ColumnBlockObject } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { ColumnBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { ColumnBlockObject } from '@udus/notion-types';
+import type { ColumnBlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertColumnResponseToBlock = async (
   block: ColumnBlockObjectResponse,
-  client: Client,
+  option: FetchOptions,
 ): Promise<ColumnBlockObject> => {
   if (block.has_children) {
-    const { ok, data } = await fetchBlockList(client, { block_id: block.id });
+    const { ok, data } = await fetchBlockList({ block_id: block.id }, option);
 
     if (ok) {
       return {

@@ -1,18 +1,18 @@
-import { convertResponseToRichText } from "../../richText/richText";
+import { convertResponseToRichText } from '../../richText/richText';
 
-import type { FileBlockObject } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { FileBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { FileBlockObject } from '@udus/notion-types';
+import type { FileBlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertFileResponseToBlock = async (
   block: FileBlockObjectResponse,
-  client: Client,
+  options: FetchOptions,
 ): Promise<FileBlockObject> => {
   return {
     ...block,
     file: {
       ...block.file,
-      caption: await convertResponseToRichText(block.file.caption, client),
+      caption: await convertResponseToRichText(block.file.caption, options),
     },
   } satisfies FileBlockObject;
 };

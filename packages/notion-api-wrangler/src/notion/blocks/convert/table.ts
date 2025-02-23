@@ -1,22 +1,22 @@
-import { notNullNorUndefined } from "../../../utils";
-import { fetchBlockList } from "../fetchBlockList";
+import { notNullish } from '../../../utils';
+import { fetchBlockList } from '../fetchBlockList';
 
-import type { TableBlockObject } from "@udus/notion-types";
-import type { TableRowBlockObject } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { TableBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { TableBlockObject } from '@udus/notion-types';
+import type { TableRowBlockObject } from '@udus/notion-types';
+import type { TableBlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertTableResponseToBlock = async (
   block: TableBlockObjectResponse,
-  client: Client,
+  options: FetchOptions,
 ): Promise<TableBlockObject> => {
   if (block.has_children) {
-    const { ok, data } = await fetchBlockList(client, { block_id: block.id });
+    const { ok, data } = await fetchBlockList({ block_id: block.id }, options);
 
     if (ok) {
       const table_rows = data.filter(
         (block): block is TableRowBlockObject =>
-          notNullNorUndefined(block) && block.type === "table_row",
+          notNullish(block) && block.type === 'table_row',
       );
 
       return {

@@ -1,9 +1,9 @@
-import { type Client, isFullDatabase, isFullPage } from "@notionhq/client";
+import { isFullDatabase, isFullPage } from '@notionhq/client';
 
-import { fetchSiteMeta } from "../../utils/sitemeta";
-import { generateUUID } from "../../utils";
-import { retrieveDatabase } from "../database/retrieve";
-import { retrievePage } from "../index";
+import { fetchSiteMeta } from '../../utils/sitemeta';
+import { generateUUID } from '../../utils';
+import { retrieveDatabase } from '../database/retrieve';
+import { retrievePage } from '../index';
 
 import type {
   MentionRichTextItemObject,
@@ -14,25 +14,26 @@ import type {
   DateMentionObject,
   UserMentionObject,
   MentionObject,
-} from "@udus/notion-types";
-import type { MentionRichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+} from '@udus/notion-types';
+import type { MentionRichTextItemResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../types';
 
 export const convertMentionObjectResponse = async (
   mention: MentionObject,
-  client: Client,
+  options: FetchOptions,
 ): Promise<MentionObject> => {
   switch (mention.type) {
-    case "user": {
+    case 'user': {
       return {
         ...mention,
       } satisfies UserMentionObject;
     }
-    case "date": {
+    case 'date': {
       return {
         ...mention,
       } satisfies DateMentionObject;
     }
-    case "link_preview": {
+    case 'link_preview': {
       const { ok, data } = await fetchSiteMeta(mention.link_preview.url);
       if (!ok) {
         return {
@@ -48,15 +49,18 @@ export const convertMentionObjectResponse = async (
         },
       } satisfies LinkPreviewMentionObject;
     }
-    case "template_mention": {
+    case 'template_mention': {
       return {
         ...mention,
       } satisfies TemplateMentionMentionObject;
     }
-    case "page": {
-      const { ok, data } = await retrievePage(client, {
-        page_id: mention.page.id,
-      });
+    case 'page': {
+      const { ok, data } = await retrievePage(
+        {
+          page_id: mention.page.id,
+        },
+        options,
+      );
       if (ok && isFullPage(data)) {
         return {
           ...mention,
@@ -70,10 +74,13 @@ export const convertMentionObjectResponse = async (
         ...mention,
       } satisfies PageMentionObject;
     }
-    case "database": {
-      const { ok, data } = await retrieveDatabase(client, {
-        database_id: mention.database.id,
-      });
+    case 'database': {
+      const { ok, data } = await retrieveDatabase(
+        {
+          database_id: mention.database.id,
+        },
+        options,
+      );
       if (ok && isFullDatabase(data)) {
         return {
           ...mention,
@@ -95,9 +102,9 @@ export const convertMentionObjectResponse = async (
 
 export const convertMentionRichTextItemResponse = async (
   item: MentionRichTextItemResponse,
-  client: Client,
+  options: FetchOptions,
 ): Promise<MentionRichTextItemObject> => {
-  const mention = await convertMentionObjectResponse(item.mention, client);
+  const mention = await convertMentionObjectResponse(item.mention, options);
   return {
     ...item,
     mention,

@@ -1,21 +1,23 @@
-import { type Client, isFullDatabase, isFullPage } from "@notionhq/client";
+import { isFullDatabase, isFullPage } from '@notionhq/client';
 
-import { listComments } from "../../comments";
-import { retrieveDatabase } from "../../database/retrieve";
-import { retrievePage } from "../../pages/retrieve";
+import { listComments } from '../../comments';
+import { retrieveDatabase } from '../../database/retrieve';
+import { retrievePage } from '../../pages/retrieve';
 
-import type { LinkToPageBlockObject } from "@udus/notion-types";
-import type { LinkToPageBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { LinkToPageBlockObject } from '@udus/notion-types';
+import type { LinkToPageBlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertLinkToPageResponseToBlock = async (
   block: LinkToPageBlockObjectResponse,
-  client: Client,
+  options: FetchOptions,
 ): Promise<LinkToPageBlockObject> => {
   switch (block.link_to_page.type) {
-    case "database_id": {
-      const { ok, data } = await retrieveDatabase(client, {
-        database_id: block.link_to_page.database_id,
-      });
+    case 'database_id': {
+      const { ok, data } = await retrieveDatabase(
+        { database_id: block.link_to_page.database_id },
+        options,
+      );
 
       if (!ok) {
         return block satisfies LinkToPageBlockObject;
@@ -33,10 +35,11 @@ export const convertLinkToPageResponseToBlock = async (
         },
       } satisfies LinkToPageBlockObject;
     }
-    case "page_id": {
-      const { ok, data } = await retrievePage(client, {
-        page_id: block.link_to_page.page_id,
-      });
+    case 'page_id': {
+      const { ok, data } = await retrievePage(
+        { page_id: block.link_to_page.page_id },
+        options,
+      );
 
       if (!ok) {
         return block satisfies LinkToPageBlockObject;
@@ -54,10 +57,11 @@ export const convertLinkToPageResponseToBlock = async (
         },
       } satisfies LinkToPageBlockObject;
     }
-    case "comment_id": {
-      const linkedComments = await listComments(client, {
-        block_id: block.link_to_page.comment_id,
-      });
+    case 'comment_id': {
+      const linkedComments = await listComments(
+        { block_id: block.link_to_page.comment_id },
+        options,
+      );
       return {
         ...block,
         link_to_page: {

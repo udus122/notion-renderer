@@ -1,20 +1,20 @@
-import { callAPIWithBackOff } from "../../utils/api";
+import { withBackOff } from '../../utils/api';
 
-import type { Result } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
+import type { Result } from '@udus/notion-types';
+
 import type {
   GetDatabaseParameters,
   GetDatabaseResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+} from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../types';
 
 export const retrieveDatabase = async (
-  client: Client,
   args: GetDatabaseParameters,
+  { client, queue }: FetchOptions,
 ): Promise<Result<GetDatabaseResponse>> => {
-  const result = await callAPIWithBackOff<
-    GetDatabaseParameters,
-    GetDatabaseResponse
-  >(client.databases.retrieve, args);
-
+  const result = await queue.add(
+    () => withBackOff(client.databases.retrieve)(args),
+    { throwOnTimeout: true },
+  );
   return result;
 };

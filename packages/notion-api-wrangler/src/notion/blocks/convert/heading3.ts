@@ -1,16 +1,16 @@
-import { convertResponseToRichText } from "../../richText/richText";
-import { fetchBlockList } from "../fetchBlockList";
+import { convertResponseToRichText } from '../../richText/richText';
+import { fetchBlockList } from '../fetchBlockList';
 
-import type { Heading3BlockObject } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { Heading3BlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { Heading3BlockObject } from '@udus/notion-types';
+import type { Heading3BlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertHeading3ResponseToBlock = async (
   block: Heading3BlockObjectResponse,
-  client: Client,
+  options: FetchOptions,
 ): Promise<Heading3BlockObject> => {
   if (block.has_children) {
-    const { ok, data } = await fetchBlockList(client, { block_id: block.id });
+    const { ok, data } = await fetchBlockList({ block_id: block.id }, options);
 
     if (ok) {
       return {
@@ -19,7 +19,7 @@ export const convertHeading3ResponseToBlock = async (
           ...block.heading_3,
           rich_text: await convertResponseToRichText(
             block.heading_3.rich_text,
-            client,
+            options,
           ),
           children: data,
         },
@@ -33,7 +33,7 @@ export const convertHeading3ResponseToBlock = async (
       ...block.heading_3,
       rich_text: await convertResponseToRichText(
         block.heading_3.rich_text,
-        client,
+        options,
       ),
     },
   } satisfies Heading3BlockObject;

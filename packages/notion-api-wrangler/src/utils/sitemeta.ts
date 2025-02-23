@@ -3,9 +3,9 @@ import {
   type FetchOptions,
   type ArticleData,
   extract,
-} from "@extractus/article-extractor";
+} from '@extractus/article-extractor';
 
-import type { Result } from "@udus/notion-types";
+import type { Result } from '../types';
 
 export const fetchSiteMeta = async (
   url: string,
@@ -20,5 +20,5 @@ export const fetchSiteMeta = async (
   } catch (error) {
     return { ok: false, data: error as Error };
   }
-  return { ok: false, data: new Error("article is null.") };
+  return { ok: false, data: new Error('article is null.') };
 };

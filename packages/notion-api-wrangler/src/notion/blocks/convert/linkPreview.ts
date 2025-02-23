@@ -1,12 +1,13 @@
-import { fetchSiteMeta } from "../../../utils/sitemeta";
+import { fetchSiteMeta } from '../../../utils/sitemeta';
 
-import type { LinkPreviewBlockObject } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { LinkPreviewBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { LinkPreviewBlockObject } from '@udus/notion-types';
+import type { LinkPreviewBlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertLinkPreviewResponseToBlock = async (
   block: LinkPreviewBlockObjectResponse,
-  client: Client,
+  // biome-ignore lint/correctness/noUnusedVariables: Set to maintain consistency with other functions, but not used
+  options: FetchOptions,
 ): Promise<LinkPreviewBlockObject> => {
   const { ok, data } = await fetchSiteMeta(block.link_preview.url);
   if (!ok) {

@@ -1,16 +1,17 @@
-import { convertResponseToRichTextItem } from "./richTextItem";
+import { convertResponseToRichTextItem } from './richTextItem';
 
-import type { RichTextType } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { RichTextType } from '@udus/notion-types';
+
+import type { RichTextItemResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../types';
 
 export const convertResponseToRichText = async (
   response: Array<RichTextItemResponse>,
-  client: Client,
+  options: FetchOptions,
 ): Promise<RichTextType> => {
   return (await Promise.all(
     response.map(async (item) => {
-      return await convertResponseToRichTextItem(item, client);
+      return await convertResponseToRichTextItem(item, options);
     }),
   )) satisfies RichTextType;
 };

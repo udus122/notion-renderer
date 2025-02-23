@@ -1,21 +1,21 @@
-import { listBlockChildren } from "./listBlocksChildren";
-import { resolveBlockChildren } from "./resolveBlockChildren";
+import { listBlockChildren } from './listBlocksChildren';
+import { resolveBlockChildren } from './resolveBlockChildren';
 
-import type { BlockBlockObject, Result } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { ListBlockChildrenParameters } from "@notionhq/client/build/src/api-endpoints";
+import type { BlockBlockObject } from '@udus/notion-types';
+import type { ListBlockChildrenParameters } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions, Result } from '../../types';
 
 export const fetchBlockList = async (
-  client: Client,
   args: ListBlockChildrenParameters,
+  options: FetchOptions,
 ): Promise<Result<BlockBlockObject[]>> => {
-  const { ok, data } = await listBlockChildren(client, args);
+  const { ok, data } = await listBlockChildren(args, options);
 
   if (!ok) {
     return { ok, data };
   }
 
-  const childrenBlockComponents = await resolveBlockChildren(data, client);
+  const childrenBlockComponents = await resolveBlockChildren(data, options);
 
   return { ok: true, data: childrenBlockComponents };
 };

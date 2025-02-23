@@ -1,15 +1,16 @@
-import type { PeoplePropertyItemObject } from "@udus/notion-types";
-import type { Overwrite } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
+import type { PeoplePropertyItemObject } from '@udus/notion-types';
+import type { Overwrite } from '@udus/notion-types';
 import type {
   PeoplePropertyItemObjectResponse,
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+} from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertResponseToPeoplePropertyItem = (
   property: PeoplePropertyItemObjectResponse,
-  client: Client,
+  // biome-ignore lint/correctness/noUnusedVariables: Set to maintain consistency with other functions, but not used
+  options: FetchOptions,
 ): PeoplePropertyItemObject => {
   const peoplePropertyItemObject = {
     ...property,
@@ -25,12 +26,13 @@ export const convertListResponseToPeoplePropertyItem = (
     PropertyItemPropertyItemListResponse,
     {
       property_item: Extract<
-        PropertyItemPropertyItemListResponse["property_item"],
-        { type: "people" }
+        PropertyItemPropertyItemListResponse['property_item'],
+        { type: 'people' }
       >;
     }
   >,
-  client: Client,
+  // biome-ignore lint/correctness/noUnusedVariables: Set to maintain consistency with other functions, but not used
+  options: FetchOptions,
 ): PeoplePropertyItemObject => {
   const peoplePropertyItemObject = {
     ...list.property_item,
@@ -44,4 +46,4 @@ export const convertListResponseToPeoplePropertyItem = (
 
 export const isPeopleTypeObject = (
   obj: PropertyItemObjectResponse,
-): obj is PeoplePropertyItemObjectResponse => obj.type === "people";
+): obj is PeoplePropertyItemObjectResponse => obj.type === 'people';

@@ -1,19 +1,19 @@
-import { callAPIWithBackOff } from "../../utils/api";
+import { withBackOff } from '../../utils/api';
 
-import type { Result } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
+import type { Result } from '@udus/notion-types';
 import type {
   GetBlockParameters,
   GetBlockResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+} from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../types';
 
 export const retrieveBlock = async (
-  client: Client,
   args: GetBlockParameters,
+  { queue, client }: FetchOptions,
 ): Promise<Result<GetBlockResponse>> => {
-  const result = await callAPIWithBackOff<GetBlockParameters, GetBlockResponse>(
-    client.blocks.retrieve,
-    args,
+  const result = await queue.add(
+    () => withBackOff(client.blocks.retrieve)(args),
+    { throwOnTimeout: true },
   );
 
   return result;

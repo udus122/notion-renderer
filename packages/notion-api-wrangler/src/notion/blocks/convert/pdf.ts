@@ -1,18 +1,18 @@
-import { convertResponseToRichText } from "../../richText/richText";
+import { convertResponseToRichText } from '../../richText/richText';
 
-import type { PdfBlockObject } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { PdfBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { PdfBlockObject } from '@udus/notion-types';
+import type { PdfBlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertPdfResponseToBlock = async (
   block: PdfBlockObjectResponse,
-  client: Client,
+  options: FetchOptions,
 ): Promise<PdfBlockObject> => {
   return {
     ...block,
     pdf: {
       ...block.pdf,
-      caption: await convertResponseToRichText(block.pdf.caption, client),
+      caption: await convertResponseToRichText(block.pdf.caption, options),
     },
   } satisfies PdfBlockObject;
 };

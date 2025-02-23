@@ -5,9 +5,9 @@ import {
   type VideoTypeData,
   type RichTypeData,
   extract,
-} from "@extractus/oembed-extractor";
+} from '@extractus/oembed-extractor';
 
-import type { Result } from "@udus/notion-types";
+import type { Result } from '../types';
 
 export const fetchOembed = async (
   url: string,

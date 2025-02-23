@@ -1,15 +1,16 @@
-import type { RichTextPropertyItemObject } from "@udus/notion-types";
-import type { Overwrite } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
+import type { RichTextPropertyItemObject } from '@udus/notion-types';
+import type { Overwrite } from '@udus/notion-types';
 import type {
   PropertyItemObjectResponse,
   PropertyItemPropertyItemListResponse,
   RichTextPropertyItemObjectResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+} from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertResponseToRichTextPropertyItem = (
   property: RichTextPropertyItemObjectResponse,
-  client: Client,
+  // biome-ignore lint/correctness/noUnusedVariables: Set to maintain consistency with other functions, but not used
+  options: FetchOptions,
 ): RichTextPropertyItemObject => {
   return {
     ...property,
@@ -24,12 +25,13 @@ export const convertListResponseToRichTextPropertyItem = (
     PropertyItemPropertyItemListResponse,
     {
       property_item: Extract<
-        PropertyItemPropertyItemListResponse["property_item"],
-        { type: "rich_text" }
+        PropertyItemPropertyItemListResponse['property_item'],
+        { type: 'rich_text' }
       >;
     }
   >,
-  client: Client,
+  // biome-ignore lint/correctness/noUnusedVariables: Set to maintain consistency with other functions, but not used
+  options: FetchOptions,
 ): RichTextPropertyItemObject => {
   const rich_textPropertyItemObject = {
     ...list.property_item,
@@ -43,4 +45,4 @@ export const convertListResponseToRichTextPropertyItem = (
 
 export const isRichTextTypeObject = (
   obj: PropertyItemObjectResponse,
-): obj is RichTextPropertyItemObjectResponse => obj.type === "rich_text";
+): obj is RichTextPropertyItemObjectResponse => obj.type === 'rich_text';

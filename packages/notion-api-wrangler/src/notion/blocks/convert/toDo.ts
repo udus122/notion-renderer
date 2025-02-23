@@ -1,16 +1,16 @@
-import { convertResponseToRichText } from "../../richText/richText";
-import { fetchBlockList } from "../fetchBlockList";
+import { convertResponseToRichText } from '../../richText/richText';
+import { fetchBlockList } from '../fetchBlockList';
 
-import type { ToDoBlockObject } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { ToDoBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { ToDoBlockObject } from '@udus/notion-types';
+import type { ToDoBlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertToDoResponseToBlock = async (
   block: ToDoBlockObjectResponse,
-  client: Client,
+  options: FetchOptions,
 ): Promise<ToDoBlockObject> => {
   if (block.has_children) {
-    const { ok, data } = await fetchBlockList(client, { block_id: block.id });
+    const { ok, data } = await fetchBlockList({ block_id: block.id }, options);
 
     if (ok) {
       return {
@@ -19,7 +19,7 @@ export const convertToDoResponseToBlock = async (
           ...block.to_do,
           rich_text: await convertResponseToRichText(
             block.to_do.rich_text,
-            client,
+            options,
           ),
           children: data,
         },
@@ -31,7 +31,10 @@ export const convertToDoResponseToBlock = async (
     ...block,
     to_do: {
       ...block.to_do,
-      rich_text: await convertResponseToRichText(block.to_do.rich_text, client),
+      rich_text: await convertResponseToRichText(
+        block.to_do.rich_text,
+        options,
+      ),
     },
   } satisfies ToDoBlockObject;
 };

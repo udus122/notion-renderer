@@ -1,21 +1,21 @@
-import { convertResponseToPropertyItem } from "./convert/convertResponseToPropertyItem";
-import { retrievePageProperty } from "./retrieve";
+import { convertResponseToPropertyItem } from './convert/convertResponseToPropertyItem';
+import { retrievePageProperty } from './retrieve';
 
-import type { PropertyItemType ,Result} from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { GetPagePropertyParameters } from "@notionhq/client/build/src/api-endpoints";
+import type { PropertyItemType, Result } from '@udus/notion-types';
+import type { GetPagePropertyParameters } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../types';
 
 export const fetchPageProperty = async (
-  client: Client,
   args: GetPagePropertyParameters,
+  options: FetchOptions,
 ): Promise<Result<PropertyItemType>> => {
-  const { ok, data } = await retrievePageProperty(client, args);
+  const { ok, data } = await retrievePageProperty(args, options);
 
   if (!ok) {
     return { ok, data };
   }
 
-  const pagePropertyObject = await convertResponseToPropertyItem(data, client);
+  const pagePropertyObject = await convertResponseToPropertyItem(data, options);
 
   return { ok: true, data: pagePropertyObject };
 };

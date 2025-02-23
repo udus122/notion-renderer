@@ -1,19 +1,23 @@
-import { notUndefined } from "../../utils";
+import { notUndefined } from '../../utils';
 
-import { convertResponseToBlock } from "./convert/convertResponseToBlock";
-import { wrapListItems } from "./wrapListItems";
+import { convertResponseToBlock } from './convert/convertResponseToBlock';
+import { wrapListItems } from './wrapListItems';
 
-import type { BlockBlockObject,ListBlockChildrenResponseResults  } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
+import type {
+  BlockBlockObject,
+  ListBlockChildrenResponseResults,
+} from '@udus/notion-types';
+
+import type { FetchOptions } from '../../types';
 
 export const resolveBlockChildren = async (
   blocks: ListBlockChildrenResponseResults,
-  client: Client,
+  options: FetchOptions,
 ): Promise<Array<BlockBlockObject>> => {
   const blockObjectList = (
     await Promise.all(
       blocks.map(async (child_block) => {
-        const { ok, data } = await convertResponseToBlock(child_block, client);
+        const { ok, data } = await convertResponseToBlock(child_block, options);
         if (!ok) {
           return;
         }

@@ -1,13 +1,13 @@
-import { fetchOembed } from "../../../utils/oembed";
-import { convertResponseToRichText } from "../../richText/richText";
+import { fetchOembed } from '../../../utils/oembed';
+import { convertResponseToRichText } from '../../richText/richText';
 
-import type { EmbedBlockObject } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { EmbedBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { EmbedBlockObject } from '@udus/notion-types';
+import type { EmbedBlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertEmbedResponseToBlock = async (
   block: EmbedBlockObjectResponse,
-  client: Client,
+  options: FetchOptions,
 ): Promise<EmbedBlockObject> => {
   const { ok, data } = await fetchOembed(block.embed.url);
   if (!ok) {
@@ -15,7 +15,7 @@ export const convertEmbedResponseToBlock = async (
       ...block,
       embed: {
         ...block.embed,
-        caption: await convertResponseToRichText(block.embed.caption, client),
+        caption: await convertResponseToRichText(block.embed.caption, options),
       },
     } satisfies EmbedBlockObject;
   }
@@ -24,7 +24,7 @@ export const convertEmbedResponseToBlock = async (
     embed: {
       ...block.embed,
       oembed: data,
-      caption: await convertResponseToRichText(block.embed.caption, client),
+      caption: await convertResponseToRichText(block.embed.caption, options),
     },
   } satisfies EmbedBlockObject;
 };

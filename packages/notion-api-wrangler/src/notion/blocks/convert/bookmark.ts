@@ -1,13 +1,13 @@
-import { fetchSiteMeta } from "../../../utils/sitemeta";
-import { convertResponseToRichText } from "../../richText/richText";
+import { fetchSiteMeta } from '../../../utils/sitemeta';
+import { convertResponseToRichText } from '../../richText/richText';
 
-import type { BookmarkBlockObject } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { BookmarkBlockObjectResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { BookmarkBlockObject } from '@udus/notion-types';
+import type { BookmarkBlockObjectResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../../types';
 
 export const convertBookmarkResponseToBlock = async (
   block: BookmarkBlockObjectResponse,
-  client: Client,
+  options: FetchOptions,
 ) => {
   const { ok, data } = await fetchSiteMeta(block.bookmark.url);
 
@@ -18,7 +18,7 @@ export const convertBookmarkResponseToBlock = async (
         ...block.bookmark,
         caption: await convertResponseToRichText(
           block.bookmark.caption,
-          client,
+          options,
         ),
       },
     } satisfies BookmarkBlockObject;
@@ -29,7 +29,7 @@ export const convertBookmarkResponseToBlock = async (
     bookmark: {
       ...block.bookmark,
       site_meta: data,
-      caption: await convertResponseToRichText(block.bookmark.caption, client),
+      caption: await convertResponseToRichText(block.bookmark.caption, options),
     },
   } satisfies BookmarkBlockObject;
 };

@@ -1,15 +1,15 @@
-import { convertResponseToBlock } from "./convert/convertResponseToBlock";
-import { retrieveBlock } from "./retrieve";
+import { convertResponseToBlock } from './convert/convertResponseToBlock';
+import { retrieveBlock } from './retrieve';
 
-import type { BlockBlockObject, Result } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { GetBlockParameters } from "@notionhq/client/build/src/api-endpoints";
+import type { BlockBlockObject, Result } from '@udus/notion-types';
+import type { GetBlockParameters } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../types';
 
 export const fetchBlock = async (
-  client: Client,
   args: GetBlockParameters,
+  options: FetchOptions,
 ): Promise<Result<BlockBlockObject>> => {
-  const retrievedResult = await retrieveBlock(client, args);
+  const retrievedResult = await retrieveBlock(args, options);
 
   if (!retrievedResult.ok) {
     return retrievedResult;
@@ -17,7 +17,7 @@ export const fetchBlock = async (
 
   const { ok, data } = await convertResponseToBlock(
     retrievedResult.data,
-    client,
+    options,
   );
 
   if (!ok) {

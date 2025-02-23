@@ -1,20 +1,23 @@
-import { callAPIWithBackOff } from "../../utils/api";
-import type { ListBlockChildrenResponseResults, Result } from "@udus/notion-types";
-
-import type { Client } from "@notionhq/client";
+import { withBackOff } from '../../utils/api';
 import type {
-  ListBlockChildrenParameters,
-  ListBlockChildrenResponse,
-} from "@notionhq/client/build/src/api-endpoints";
+  ListBlockChildrenResponseResults,
+  Result,
+} from '@udus/notion-types';
+
+import type { ListBlockChildrenParameters } from '@notionhq/client/build/src/api-endpoints';
+
+import type { FetchOptions } from '../../types';
 
 export const listBlockChildren = async (
-  client: Client,
   args: ListBlockChildrenParameters,
+  { client, queue }: FetchOptions,
 ): Promise<Result<ListBlockChildrenResponseResults>> => {
-  const result = await callAPIWithBackOff<
-    ListBlockChildrenParameters,
-    ListBlockChildrenResponse
-  >(client.blocks.children.list, args);
+  const result = await queue.add(
+    () => withBackOff(client.blocks.children.list)(args),
+    {
+      throwOnTimeout: true,
+    },
+  );
 
   if (!result.ok) {
     return result;
@@ -23,10 +26,10 @@ export const listBlockChildren = async (
   let blockList = result.data.results;
 
   if (result.data.next_cursor) {
-    const nextResults = await listBlockChildren(client, {
-      ...args,
-      start_cursor: result.data.next_cursor,
-    });
+    const nextResults = await listBlockChildren(
+      { ...args, start_cursor: result.data.next_cursor },
+      { client, queue },
+    );
 
     if (nextResults.ok) {
       blockList = [...blockList, ...nextResults.data];

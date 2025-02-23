@@ -1,24 +1,24 @@
-import { convertEquationRichTextItemResponse } from "./equation";
-import { convertMentionRichTextItemResponse } from "./mention";
-import { convertTextRichTextItemResponse } from "./text";
+import { convertEquationRichTextItemResponse } from './equation';
+import { convertMentionRichTextItemResponse } from './mention';
+import { convertTextRichTextItemResponse } from './text';
 
-import type { RichTextItemType } from "@udus/notion-types";
-import type { Client } from "@notionhq/client";
-import type { RichTextItemResponse } from "@notionhq/client/build/src/api-endpoints";
+import type { RichTextItemType } from '@udus/notion-types';
+import type { RichTextItemResponse } from '@notionhq/client/build/src/api-endpoints';
+import type { FetchOptions } from '../../types';
 
 export const convertResponseToRichTextItem = async (
   response: RichTextItemResponse,
-  client: Client,
+  options: FetchOptions,
 ): Promise<RichTextItemType> => {
   switch (response.type) {
-    case "text": {
+    case 'text': {
       return convertTextRichTextItemResponse(response);
     }
-    case "equation": {
+    case 'equation': {
       return await convertEquationRichTextItemResponse(response);
     }
-    case "mention": {
-      return await convertMentionRichTextItemResponse(response, client);
+    case 'mention': {
+      return await convertMentionRichTextItemResponse(response, options);
     }
     default: {
       return response;
