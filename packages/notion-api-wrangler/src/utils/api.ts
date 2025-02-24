@@ -8,75 +8,86 @@ import { exponentialBackoffFactory } from './backoff';
 
 import type { Result } from '@udus/notion-types';
 
-const exponentialBackoff = exponentialBackoffFactory(64, undefined, 300);
-
-export const callAPIWithBackOff = async <Args, Item>(
-  func: (args: Args) => Promise<Item>,
-  args: Args,
+const createWithBackOff = (
+  initialDelay = 1,
+  factor = 2,
+  maxDelay = 300,
   retryCount = 3,
-): Promise<Result<Item>> => {
-  try {
-    const data = await func({ ...args });
-    return {
-      ok: true,
-      data,
-    };
-  } catch (error) {
-    console.error(
-      `error occurred with this parameter: ${JSON.stringify({
-        func: func.name,
-        args,
-        error,
-      })}`,
-    );
-    if (isNotionClientError(error)) {
-      switch (error.code) {
-        case APIErrorCode.RateLimited:
-        case APIErrorCode.ConflictError:
-        case APIErrorCode.InternalServerError:
-        case APIErrorCode.ServiceUnavailable:
-        case ClientErrorCode.ResponseError:
-        case ClientErrorCode.RequestTimeout: {
-          console.error('start retrying...');
-          if (retryCount < 1) {
-            return {
-              ok: false,
-              data: new Error('retry count exceeded.', { cause: error }),
-            };
+) => {
+  const exponentialBackoff = exponentialBackoffFactory(
+    initialDelay,
+    factor,
+    maxDelay,
+  );
+
+  return <Args, Return>(func: (args: Args) => Promise<Return>) => {
+    const callAPIWithBackOff = async (
+      args: Args,
+      currentRetryCount = retryCount,
+    ): Promise<Result<Return>> => {
+      try {
+        const data = await func({ ...args });
+        return {
+          ok: true,
+          data,
+        };
+      } catch (error) {
+        console.error(
+          `error occurred with this parameter: ${JSON.stringify({
+            func: func.name,
+            args,
+            error,
+          })}`,
+        );
+        if (isNotionClientError(error)) {
+          switch (error.code) {
+            case APIErrorCode.RateLimited:
+            case APIErrorCode.ConflictError:
+            case APIErrorCode.InternalServerError:
+            case APIErrorCode.ServiceUnavailable:
+            case ClientErrorCode.ResponseError:
+            case ClientErrorCode.RequestTimeout: {
+              console.info('start retrying...');
+              if (currentRetryCount < 1) {
+                return {
+                  ok: false,
+                  data: new Error('retry count exceeded.', { cause: error }),
+                };
+              }
+              await exponentialBackoff();
+              const newRetryCount = currentRetryCount - 1;
+              const { ok, data } = await callAPIWithBackOff(
+                args,
+                newRetryCount,
+              );
+              if (ok) {
+                return {
+                  ok,
+                  data,
+                };
+              }
+              break;
+            }
+            default:
+              break;
           }
-          await exponentialBackoff();
-          const newRetryCount = retryCount - 1;
-          const { ok, data } = await callAPIWithBackOff(
-            func,
-            { ...args },
-            newRetryCount,
-          );
-          if (ok) {
-            return {
-              ok,
-              data,
-            };
-          }
-          break;
+          return {
+            ok: false,
+            data: error,
+          };
         }
-        default:
-          break;
       }
+
       return {
         ok: false,
-        data: error,
+        data: new Error('Notion api call was failed with unknown error.'),
       };
-    }
-  }
+    };
 
-  return {
-    ok: false,
-    data: new Error('Notion api call was failed with unknown error.'),
+    return async (args: Args): Promise<Result<Return>> => {
+      return callAPIWithBackOff(args);
+    };
   };
 };
 
-export const withBackOff =
-  <Args, Item>(func: (args: Args) => Promise<Item>, retryCount = 3) =>
-  async (args: Args): Promise<Result<Item>> => {
-    return callAPIWithBackOff(func, args, retryCount);
-  };
+export const withBackOff = createWithBackOff();
