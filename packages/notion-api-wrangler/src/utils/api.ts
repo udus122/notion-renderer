@@ -6,8 +6,6 @@ import {
 
 import { exponentialBackoffFactory } from './backoff';
 
-import type { Result } from '@udus/notion-types';
-
 const createWithBackOff = (
   initialDelay = 1,
   factor = 2,
@@ -24,13 +22,10 @@ const createWithBackOff = (
     const callAPIWithBackOff = async (
       args: Args,
       currentRetryCount = retryCount,
-    ): Promise<Result<Return>> => {
+    ): Promise<Return> => {
       try {
         const data = await func({ ...args });
-        return {
-          ok: true,
-          data,
-        };
+        return data;
       } catch (error) {
         console.error(
           `error occurred with this parameter: ${JSON.stringify({
@@ -49,45 +44,25 @@ const createWithBackOff = (
             case ClientErrorCode.RequestTimeout: {
               console.info('start retrying...');
               if (currentRetryCount < 1) {
-                return {
-                  ok: false,
-                  data: new Error('retry count exceeded.', { cause: error }),
-                };
+                throw new Error('retry count exceeded.', { cause: error });
               }
               await exponentialBackoff();
               const newRetryCount = currentRetryCount - 1;
-              const { ok, data } = await callAPIWithBackOff(
-                args,
-                newRetryCount,
-              );
-              if (ok) {
-                return {
-                  ok,
-                  data,
-                };
-              }
-              break;
+              const data = await callAPIWithBackOff(args, newRetryCount);
+              return data;
             }
             default:
               break;
           }
-          return {
-            ok: false,
-            data: error,
-          };
         }
       }
-
-      return {
-        ok: false,
-        data: new Error('Notion api call was failed with unknown error.'),
-      };
+      throw new Error('Notion api call was failed with unknown error.');
     };
 
-    return async (args: Args): Promise<Result<Return>> => {
+    return async (args: Args): Promise<Return> => {
       return callAPIWithBackOff(args);
     };
   };
 };
 
-export const withBackOff = createWithBackOff();
+export const withBackOff = createWithBackOff(1, 2, 300, 3);

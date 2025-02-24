@@ -11,27 +11,25 @@ export const retrievePageProperty = async (
   args: GetPagePropertyParameters,
   { client }: FetchOptions,
 ): Promise<Result<GetPagePropertyResponse>> => {
-  const result = await withQueue(withBackOff(client.pages.properties.retrieve))(
-    args,
-  );
+  try {
+    const response = await withQueue(
+      withBackOff(client.pages.properties.retrieve),
+    )(args);
 
-  if (!result.ok) {
-    return result;
-  }
-
-  if (result.data.object === 'list') {
-    if (result.data.next_cursor) {
-      const nextResult = await retrievePageProperty(
-        { ...args, start_cursor: result.data.next_cursor },
-        { client },
-      );
-
-      if (nextResult.ok && nextResult.data.object === 'list') {
-        const nextPropertyList = nextResult.data.results;
-        result.data.results = [...result.data.results, ...nextPropertyList];
+    if (response.object === 'list') {
+      if (response.next_cursor) {
+        const nextResult = await retrievePageProperty(
+          { ...args, start_cursor: response.next_cursor },
+          { client },
+        );
+        if (nextResult.ok && nextResult.data.object === 'list') {
+          const nextPropertyList = nextResult.data.results;
+          response.results = [...response.results, ...nextPropertyList];
+        }
       }
     }
+    return { ok: true, data: response };
+  } catch (error) {
+    return { ok: false, data: error as Error };
   }
-
-  return result;
 };

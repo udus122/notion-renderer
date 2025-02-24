@@ -13,26 +13,23 @@ export const listBlockChildren = async (
   args: ListBlockChildrenParameters,
   { client }: FetchOptions,
 ): Promise<Result<ListBlockChildrenResponseResults>> => {
-  const result = await withQueue(withBackOff(client.blocks.children.list))(
-    args,
-  );
-
-  if (!result.ok) {
-    return result;
-  }
-
-  let blockList = result.data.results;
-
-  if (result.data.next_cursor) {
-    const nextResults = await listBlockChildren(
-      { ...args, start_cursor: result.data.next_cursor },
-      { client },
+  try {
+    const response = await withQueue(withBackOff(client.blocks.children.list))(
+      args,
     );
 
-    if (nextResults.ok) {
-      blockList = [...blockList, ...nextResults.data];
+    let blockList = response.results;
+    if (response.next_cursor) {
+      const nextResults = await listBlockChildren(
+        { ...args, start_cursor: response.next_cursor },
+        { client },
+      );
+      if (nextResults.ok) {
+        blockList = [...blockList, ...nextResults.data];
+      }
     }
+    return { ok: true, data: blockList };
+  } catch (error) {
+    return { ok: false, data: error as Error };
   }
-
-  return { ok: true, data: blockList };
 };

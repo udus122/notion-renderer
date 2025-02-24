@@ -17,9 +17,12 @@ export const queryDatabase = async (
   args: QueryDatabaseParameters,
   { client }: FetchOptions,
 ): Promise<Result<QueryDatabaseResponse>> => {
-  const result = await withQueue(withBackOff(client.databases.query))(args);
-
-  return result;
+  try {
+    const response = await withQueue(withBackOff(client.databases.query))(args);
+    return { ok: true, data: response };
+  } catch (error) {
+    return { ok: false, data: error as Error };
+  }
 };
 
 export const fetchDatabaseItems = async (
@@ -36,7 +39,6 @@ export const fetchDatabaseItems = async (
     await Promise.all(
       data.results.map(async (page) => {
         if (!isFullPage(page)) return;
-
         const converted = convertResponseToPage(page, options);
         return converted;
       }),

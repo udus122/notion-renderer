@@ -11,18 +11,19 @@ export const listComments = async (
   args: ListCommentsParameters,
   { client }: FetchOptions,
 ): Promise<ListCommentsResponse['results']> => {
-  const { ok, data } = await withQueue(withBackOff(client.comments.list))(args);
+  try {
+    const response = await withQueue(withBackOff(client.comments.list))(args);
 
-  if (!ok) {
+    if (response.next_cursor) {
+      const nextResults = await listComments(
+        { ...args, start_cursor: response.next_cursor },
+        { client },
+      );
+      response.results = [...response.results, ...nextResults];
+    }
+    return response.results;
+  } catch (error) {
+    console.error(error);
     return [];
   }
-
-  if (data.next_cursor) {
-    const nextResults = await listComments(
-      { ...args, start_cursor: data.next_cursor },
-      { client },
-    );
-    data.results = [...data.results, ...nextResults];
-  }
-  return data.results;
 };

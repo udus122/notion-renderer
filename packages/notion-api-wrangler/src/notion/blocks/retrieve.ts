@@ -11,6 +11,10 @@ export const retrieveBlock = async (
   args: GetBlockParameters,
   { client }: FetchOptions,
 ): Promise<Result<GetBlockResponse>> => {
-  const result = await withQueue(withBackOff(client.blocks.retrieve))(args);
-  return result;
+  try {
+    const result = await withQueue(withBackOff(client.blocks.retrieve))(args);
+    return { ok: true, data: result };
+  } catch (error) {
+    return { ok: false, data: error as Error };
+  }
 };
