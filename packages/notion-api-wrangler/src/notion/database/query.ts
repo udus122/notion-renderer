@@ -11,15 +11,13 @@ import type {
   QueryDatabaseResponse,
 } from '@notionhq/client/build/src/api-endpoints';
 import type { FetchOptions } from '../../types';
+import { withQueue } from '../../utils/queue';
 
 export const queryDatabase = async (
   args: QueryDatabaseParameters,
-  { client, queue }: FetchOptions,
+  { client }: FetchOptions,
 ): Promise<Result<QueryDatabaseResponse>> => {
-  const result = await queue.add(
-    () => withBackOff(client.databases.query)(args),
-    { throwOnTimeout: true },
-  );
+  const result = await withQueue(withBackOff(client.databases.query))(args);
 
   return result;
 };

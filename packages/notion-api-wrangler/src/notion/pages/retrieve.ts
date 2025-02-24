@@ -6,15 +6,13 @@ import type {
   GetPageResponse,
 } from '@notionhq/client/build/src/api-endpoints';
 import type { FetchOptions } from '../../types';
+import { withQueue } from '../../utils/queue';
 
 export const retrievePage = async (
   args: GetPageParameters,
-  { client, queue }: FetchOptions,
+  { client }: FetchOptions,
 ): Promise<Result<GetPageResponse>> => {
-  const result = await queue.add(
-    () => withBackOff(client.pages.retrieve)(args),
-    { throwOnTimeout: true },
-  );
+  const result = await withQueue(withBackOff(client.pages.retrieve))(args);
 
   return result;
 };

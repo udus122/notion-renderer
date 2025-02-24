@@ -7,16 +7,14 @@ import type {
 import type { ListBlockChildrenParameters } from '@notionhq/client/build/src/api-endpoints';
 
 import type { FetchOptions } from '../../types';
+import { withQueue } from '../../utils/queue';
 
 export const listBlockChildren = async (
   args: ListBlockChildrenParameters,
-  { client, queue }: FetchOptions,
+  { client }: FetchOptions,
 ): Promise<Result<ListBlockChildrenResponseResults>> => {
-  const result = await queue.add(
-    () => withBackOff(client.blocks.children.list)(args),
-    {
-      throwOnTimeout: true,
-    },
+  const result = await withQueue(withBackOff(client.blocks.children.list))(
+    args,
   );
 
   if (!result.ok) {
@@ -28,7 +26,7 @@ export const listBlockChildren = async (
   if (result.data.next_cursor) {
     const nextResults = await listBlockChildren(
       { ...args, start_cursor: result.data.next_cursor },
-      { client, queue },
+      { client },
     );
 
     if (nextResults.ok) {

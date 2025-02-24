@@ -1,5 +1,3 @@
-import PQueue from 'p-queue';
-
 import { Client } from '@notionhq/client';
 import {
   type GetBlockParameters,
@@ -14,20 +12,11 @@ import { fetchBlockList } from './notion/blocks/fetchBlockList';
 export interface NotionAPIWranglerOptions {}
 
 export class NotionAPIWrangler {
-  // Notion APIを1秒に3回までに制限
-  private queue = new PQueue({
-    interval: 1000,
-    intervalCap: 3,
-    throwOnTimeout: true,
-  });
   constructor(private client: Client) {}
 
   public readonly blocks = {
     retrieve: async (args: GetBlockParameters): Promise<BlockBlockObject> => {
-      const { ok, data } = await fetchBlock(args, {
-        client: this.client,
-        queue: this.queue,
-      });
+      const { ok, data } = await fetchBlock(args, { client: this.client });
       if (!ok) {
         throw data;
       }
@@ -40,7 +29,6 @@ export class NotionAPIWrangler {
       ): Promise<BlockBlockObject[]> => {
         const { ok, data } = await fetchBlockList(args, {
           client: this.client,
-          queue: this.queue,
         });
         if (!ok) {
           throw data;

@@ -5,15 +5,13 @@ import type {
   ListCommentsResponse,
 } from '@notionhq/client/build/src/api-endpoints';
 import type { FetchOptions } from '../types';
+import { withQueue } from '../utils/queue';
 
 export const listComments = async (
   args: ListCommentsParameters,
-  { client, queue }: FetchOptions,
+  { client }: FetchOptions,
 ): Promise<ListCommentsResponse['results']> => {
-  const { ok, data } = await queue.add(
-    () => withBackOff(client.comments.list)(args),
-    { throwOnTimeout: true },
-  );
+  const { ok, data } = await withQueue(withBackOff(client.comments.list))(args);
 
   if (!ok) {
     return [];
@@ -22,7 +20,7 @@ export const listComments = async (
   if (data.next_cursor) {
     const nextResults = await listComments(
       { ...args, start_cursor: data.next_cursor },
-      { client, queue },
+      { client },
     );
     data.results = [...data.results, ...nextResults];
   }
