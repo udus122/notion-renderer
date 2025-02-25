@@ -8,15 +8,15 @@ import { BlockBlockObject } from '@udus/notion-types';
 
 import { fetchBlock } from './notion/blocks/fetch';
 import { fetchBlockList } from './notion/blocks/fetchBlockList';
-import { NotionApiQueue, type Queue } from './utils/queue';
-
-export interface NotionAPIWranglerOptions {}
+import { NotionApiQueue, type QueueOptions, type Queue } from './utils/queue';
 
 export class NotionAPIWrangler {
   private queue: Queue;
-  constructor(private client: Client) {
-    // 3 requests per second
-    this.queue = new NotionApiQueue(1000, 3);
+  constructor(
+    private client: Client,
+    options?: QueueOptions,
+  ) {
+    this.queue = new NotionApiQueue(options);
   }
 
   public readonly blocks = {

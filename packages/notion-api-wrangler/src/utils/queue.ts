@@ -4,6 +4,11 @@ export interface Queue {
   add: <Return>(func: () => Promise<Return>) => Promise<Return>;
 }
 
+export interface QueueOptions {
+  interval: number;
+  intervalCap: number;
+}
+
 export class NotionApiQueue implements Queue {
   private queue: PQueue;
 
@@ -14,7 +19,12 @@ export class NotionApiQueue implements Queue {
    * By default, it is set to 3 times per second to comply with the Notion API rules.
    * @see https://developers.notion.com/reference/request-limits#rate-limits
    */
-  constructor(interval = 1000, intervalCap = 3) {
+  constructor(
+    { interval, intervalCap }: QueueOptions = {
+      interval: 1000,
+      intervalCap: 3,
+    },
+  ) {
     this.queue = new PQueue({
       interval,
       intervalCap,
