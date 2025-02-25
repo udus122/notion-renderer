@@ -1,7 +1,7 @@
 import { isFullPage } from '@notionhq/client';
 
 import { notUndefined } from '../../utils';
-import { withBackOff } from '../../utils/api';
+import { withBackOff } from '../../utils/backoff';
 import { convertResponseToPage } from '../index';
 
 import type { QueryDatabaseObject } from '@udus/notion-types';

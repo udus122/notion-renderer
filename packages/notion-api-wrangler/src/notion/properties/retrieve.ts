@@ -1,4 +1,4 @@
-import { withBackOff } from '../../utils/api';
+import { withBackOff } from '../../utils/backoff';
 
 import type {
   GetPagePropertyParameters,

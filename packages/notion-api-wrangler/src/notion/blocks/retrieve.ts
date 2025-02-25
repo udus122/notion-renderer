@@ -4,7 +4,7 @@ import type {
   GetBlockResponse,
 } from '@notionhq/client/build/src/api-endpoints';
 import type { FetchOptions } from '../../types';
-import { withBackOff } from '../../utils/api';
+import { withBackOff } from '../../utils/backoff';
 
 export const retrieveBlock = async (
   args: GetBlockParameters,

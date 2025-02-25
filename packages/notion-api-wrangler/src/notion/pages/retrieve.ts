@@ -4,7 +4,7 @@ import type {
   GetPageResponse,
 } from '@notionhq/client/build/src/api-endpoints';
 import type { FetchOptions } from '../../types';
-import { withBackOff } from '../../utils/api';
+import { withBackOff } from '../../utils/backoff';
 
 export const retrievePage = async (
   args: GetPageParameters,
