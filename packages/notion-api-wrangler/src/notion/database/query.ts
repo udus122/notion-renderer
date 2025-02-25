@@ -12,6 +12,7 @@ import type {
 } from '@notionhq/client/build/src/api-endpoints';
 import type { FetchOptions } from '../../types';
 import { withQueue } from '../../utils/queue';
+import { withCache } from '../../utils/cache';
 
 export const queryDatabase = async (
   args: QueryDatabaseParameters,
@@ -29,7 +30,10 @@ export const fetchDatabaseItems = async (
   args: QueryDatabaseParameters,
   options: FetchOptions,
 ): Promise<Result<QueryDatabaseObject>> => {
-  const { ok, data } = await queryDatabase(args, options);
+  const { ok, data } = await withCache(
+    `${fetchDatabaseItems.name}-${args.database_id}`,
+    (x: QueryDatabaseParameters) => queryDatabase(x, options),
+  )(args);
 
   if (!ok) {
     return { ok, data };

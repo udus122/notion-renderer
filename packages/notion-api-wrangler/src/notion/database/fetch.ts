@@ -8,12 +8,16 @@ import type { DatabaseObject } from '@udus/notion-types';
 import type { Result } from '@udus/notion-types';
 import type { GetDatabaseParameters } from '@notionhq/client/build/src/api-endpoints';
 import type { FetchOptions } from '../../types';
+import { withCache } from '../../utils/cache';
 
 export const fetchDatabase = async (
   args: GetDatabaseParameters,
   options: FetchOptions,
 ): Promise<Result<DatabaseObject>> => {
-  const { ok, data } = await retrieveDatabase(args, options);
+  const { ok, data } = await withCache(
+    `${fetchDatabase.name}-${args.database_id}`,
+    (x: GetDatabaseParameters) => retrieveDatabase(x, options),
+  )(args);
 
   if (!ok) {
     return { ok, data };
