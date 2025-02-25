@@ -8,15 +8,23 @@ import { BlockBlockObject } from '@udus/notion-types';
 
 import { fetchBlock } from './notion/blocks/fetch';
 import { fetchBlockList } from './notion/blocks/fetchBlockList';
+import { NotionApiQueue, type Queue } from './utils/queue';
 
 export interface NotionAPIWranglerOptions {}
 
 export class NotionAPIWrangler {
-  constructor(private client: Client) {}
+  private queue: Queue;
+  constructor(private client: Client) {
+    // 3 requests per second
+    this.queue = new NotionApiQueue(1000, 3);
+  }
 
   public readonly blocks = {
     retrieve: async (args: GetBlockParameters): Promise<BlockBlockObject> => {
-      const { ok, data } = await fetchBlock(args, { client: this.client });
+      const { ok, data } = await fetchBlock(args, {
+        client: this.client,
+        queue: this.queue,
+      });
       if (!ok) {
         throw data;
       }
@@ -29,6 +37,7 @@ export class NotionAPIWrangler {
       ): Promise<BlockBlockObject[]> => {
         const { ok, data } = await fetchBlockList(args, {
           client: this.client,
+          queue: this.queue,
         });
         if (!ok) {
           throw data;

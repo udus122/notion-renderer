@@ -3,26 +3,23 @@ import type {
   ListBlockChildrenResponseResults,
   Result,
 } from '@udus/notion-types';
-
 import type { ListBlockChildrenParameters } from '@notionhq/client/build/src/api-endpoints';
-
 import type { FetchOptions } from '../../types';
-import { withQueue } from '../../utils/queue';
 
 export const listBlockChildren = async (
   args: ListBlockChildrenParameters,
-  { client }: FetchOptions,
+  { client, queue }: FetchOptions,
 ): Promise<Result<ListBlockChildrenResponseResults>> => {
   try {
-    const response = await withQueue(withBackOff(client.blocks.children.list))(
-      args,
+    const response = await queue.add(() =>
+      withBackOff(client.blocks.children.list)(args),
     );
 
     let blockList = response.results;
     if (response.next_cursor) {
       const nextResults = await listBlockChildren(
         { ...args, start_cursor: response.next_cursor },
-        { client },
+        { client, queue },
       );
       if (nextResults.ok) {
         blockList = [...blockList, ...nextResults.data];

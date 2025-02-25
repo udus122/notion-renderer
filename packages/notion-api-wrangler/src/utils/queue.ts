@@ -1,22 +1,31 @@
 import PQueue from 'p-queue';
 
-const createWithQueue = (interval: number, intervalCap: number) => {
-  const queue = new PQueue({
-    interval,
-    intervalCap,
-    throwOnTimeout: true,
-  });
+export interface Queue {
+  add: <Return>(func: () => Promise<Return>) => Promise<Return>;
+}
 
-  return <Args, Return>(func: (args: Args) => Return) => {
-    return async (args: Args) => {
-      const result = await queue.add(() => func(args), {
-        throwOnTimeout: true,
-      });
-      return result;
-    };
+export class NotionApiQueue implements Queue {
+  private queue: PQueue;
+
+  /**
+   * @param interval The length of time in milliseconds before the interval count resets. Must be finite.
+   * @param intervalCap The max number of runs in the given interval of time.
+   *
+   * By default, it is set to 3 times per second to comply with the Notion API rules.
+   * @see https://developers.notion.com/reference/request-limits#rate-limits
+   */
+  constructor(interval = 1000, intervalCap = 3) {
+    this.queue = new PQueue({
+      interval,
+      intervalCap,
+      throwOnTimeout: true,
+    });
+  }
+
+  public add: Queue['add'] = async (func) => {
+    const result = await this.queue.add(func, {
+      throwOnTimeout: true,
+    });
+    return result;
   };
-};
-
-// Limit Notion API to 3 times per second
-// ref. https://developers.notion.com/reference/request-limits#rate-limits
-export const withQueue = createWithQueue(1000, 3);
+}

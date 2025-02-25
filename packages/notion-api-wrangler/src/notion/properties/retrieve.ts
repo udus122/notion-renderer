@@ -5,22 +5,21 @@ import type {
   GetPagePropertyResponse,
 } from '@notionhq/client/build/src/api-endpoints';
 import type { Result, FetchOptions } from '../../types';
-import { withQueue } from '../../utils/queue';
 
 export const retrievePageProperty = async (
   args: GetPagePropertyParameters,
-  { client }: FetchOptions,
+  { client, queue }: FetchOptions,
 ): Promise<Result<GetPagePropertyResponse>> => {
   try {
-    const response = await withQueue(
-      withBackOff(client.pages.properties.retrieve),
-    )(args);
+    const response = await queue.add(() =>
+      withBackOff(client.pages.properties.retrieve)(args),
+    );
 
     if (response.object === 'list') {
       if (response.next_cursor) {
         const nextResult = await retrievePageProperty(
           { ...args, start_cursor: response.next_cursor },
-          { client },
+          { client, queue },
         );
         if (nextResult.ok && nextResult.data.object === 'list') {
           const nextPropertyList = nextResult.data.results;

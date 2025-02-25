@@ -5,15 +5,14 @@ import type {
 } from '@notionhq/client/build/src/api-endpoints';
 import type { FetchOptions } from '../../types';
 import { withBackOff } from '../../utils/api';
-import { withQueue } from '../../utils/queue';
 
 export const retrieveDatabase = async (
   args: GetDatabaseParameters,
-  { client }: FetchOptions,
+  { client, queue }: FetchOptions,
 ): Promise<Result<GetDatabaseResponse>> => {
   try {
-    const response = await withQueue(withBackOff(client.databases.retrieve))(
-      args,
+    const response = await queue.add(() =>
+      withBackOff(client.databases.retrieve)(args),
     );
     return { ok: true, data: response };
   } catch (error) {
