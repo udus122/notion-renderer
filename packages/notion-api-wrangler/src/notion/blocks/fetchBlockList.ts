@@ -4,13 +4,12 @@ import { resolveBlockChildren } from './resolveBlockChildren';
 import type { BlockBlockObject } from '@udus/notion-types';
 import type { ListBlockChildrenParameters } from '@notionhq/client/build/src/api-endpoints';
 import type { FetchOptions, Result } from '../../types';
-import { withCache } from '../../utils/cache';
 
 export const fetchBlockList = async (
   args: ListBlockChildrenParameters,
   options: FetchOptions,
 ): Promise<Result<BlockBlockObject[]>> => {
-  const { ok, data } = await withCache(
+  const { ok, data } = await options.cache.with(
     `${fetchBlockList.name}-${args.block_id}`,
     (x: ListBlockChildrenParameters) => listBlockChildren(x, options),
   )(args);

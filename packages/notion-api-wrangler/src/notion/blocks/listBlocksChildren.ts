@@ -8,18 +8,18 @@ import type { FetchOptions } from '../../types';
 
 export const listBlockChildren = async (
   args: ListBlockChildrenParameters,
-  { client, queue }: FetchOptions,
+  options: FetchOptions,
 ): Promise<Result<ListBlockChildrenResponseResults>> => {
   try {
-    const response = await queue.add(() =>
-      withBackOff(client.blocks.children.list)(args),
+    const response = await options.queue.add(() =>
+      withBackOff(options.client.blocks.children.list)(args),
     );
 
     let blockList = response.results;
     if (response.next_cursor) {
       const nextResults = await listBlockChildren(
         { ...args, start_cursor: response.next_cursor },
-        { client, queue },
+        options,
       );
       if (nextResults.ok) {
         blockList = [...blockList, ...nextResults.data];

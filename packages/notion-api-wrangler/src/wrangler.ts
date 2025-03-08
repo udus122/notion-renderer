@@ -9,14 +9,19 @@ import { BlockBlockObject } from '@udus/notion-types';
 import { fetchBlock } from './notion/blocks/fetch';
 import { fetchBlockList } from './notion/blocks/fetchBlockList';
 import { NotionApiQueue, type QueueOptions, type Queue } from './utils/queue';
+import { Cache, CacheOptions, InMemoryCache } from './utils/cache';
 
 export class NotionAPIWrangler {
   private queue: Queue;
+  private cache: Cache;
+
   constructor(
     private client: Client,
-    options?: QueueOptions,
+    queueOptions?: QueueOptions,
+    cacheOptions?: CacheOptions,
   ) {
-    this.queue = new NotionApiQueue(options);
+    this.queue = new NotionApiQueue(queueOptions);
+    this.cache = new InMemoryCache(cacheOptions);
   }
 
   public readonly blocks = {
@@ -24,6 +29,7 @@ export class NotionAPIWrangler {
       const { ok, data } = await fetchBlock(args, {
         client: this.client,
         queue: this.queue,
+        cache: this.cache,
       });
       if (!ok) {
         throw data;
@@ -38,6 +44,7 @@ export class NotionAPIWrangler {
         const { ok, data } = await fetchBlockList(args, {
           client: this.client,
           queue: this.queue,
+          cache: this.cache,
         });
         if (!ok) {
           throw data;
@@ -84,4 +91,4 @@ const wrangler = new NotionAPIWrangler(client);
 const block = await wrangler.blocks.children.list({
   block_id: '7ed3a6eebb5e4cdfa94433684d7c56bf',
 });
-console.log(block);
+// console.log(block);
