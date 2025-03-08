@@ -24,15 +24,18 @@
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
   "devDependencies": {
-    "@udus/notion-types": "*",
     "@repo/typescript-config": "*",
+    "@types/fs-extra": "^11.0.4",
+    "@udus/notion-types": "*",
     "tsup": "^8.3.6",
     "typescript": "^5.7.3"
   },
   "dependencies": {
+    "@aws-sdk/client-s3": "^3.758.0",
     "@extractus/article-extractor": "^8.0.17",
     "@extractus/oembed-extractor": "^4.0.6",
     "@notionhq/client": "^2.2.15",
+    "fs-extra": "^11.3.0",
     "lru-cache": "^11.0.2",
     "p-queue": "^8.1.0"
   }

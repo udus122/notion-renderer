@@ -9,7 +9,12 @@ import { BlockBlockObject } from '@udus/notion-types';
 import { fetchBlock } from './notion/blocks/fetch';
 import { fetchBlockList } from './notion/blocks/fetchBlockList';
 import { NotionApiQueue, type QueueOptions, type Queue } from './utils/queue';
-import { Cache, CacheOptions, InMemoryCache } from './utils/cache';
+import {
+  Cache,
+  CacheOptions,
+  InMemoryCache,
+  LocalFSCache,
+} from './utils/cache';
 
 export class NotionAPIWrangler {
   private queue: Queue;
@@ -21,7 +26,16 @@ export class NotionAPIWrangler {
     cacheOptions?: CacheOptions,
   ) {
     this.queue = new NotionApiQueue(queueOptions);
-    this.cache = new InMemoryCache(cacheOptions);
+    switch (cacheOptions?.type) {
+      case 's3':
+        throw new Error('Not implemented');
+      case 'local-fs':
+        this.cache = new LocalFSCache(cacheOptions.basePath);
+        break;
+      case 'in-memory':
+      default:
+        this.cache = new InMemoryCache(cacheOptions?.maxSize);
+    }
   }
 
   public readonly blocks = {
@@ -82,13 +96,3 @@ export class NotionAPIWrangler {
     throw new Error('Not implemented');
   }
 }
-
-// example usage of the NotionAPIWrangler class
-const client = new Client({
-  auth: process.env.NOTION_TOKEN,
-});
-const wrangler = new NotionAPIWrangler(client);
-const block = await wrangler.blocks.children.list({
-  block_id: '7ed3a6eebb5e4cdfa94433684d7c56bf',
-});
-// console.log(block);
